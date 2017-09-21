@@ -18,6 +18,6 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
     edit:
-      link: https://github.com/kbenoit/coursepack-bookdown/edit/master/%s
+      link: https://github.com/LSE-Methodology/MY451/edit/master/%s
   pandoc_args:
     - "--default-image-extension=png"
