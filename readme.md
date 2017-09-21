@@ -1,7 +1,7 @@
 ### In-house authoring and publishing process for the Department of Methodology at the London School of Economics and Political Science
 
 # Goal
-The goal of the project documented here was to develop and provide a new and improved in-house authoring and publishing process for the Department of Methodology at the LSE.
+The goal of the project documented here was to develop and provide a new and improved in-house authoring and publishing process for the Department of Methodology at the LSE. 
 
 Specifically, the new process should
 
