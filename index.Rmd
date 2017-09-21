@@ -8,7 +8,7 @@ date: "2016-17"
 site: bookdown::bookdown_site
 documentclass: book
 link-citations: yes
-github-repo: kbenoit/coursepack-bookdown
+github-repo: LSE-Methodology/MY451
 description: "This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models."
 ---
 
@@ -33,7 +33,7 @@ Department of Statistics courses on quantitative methods, such as MY454
 Measurement), MY456 (Survey Methodology), MY457 (Causal Inference for
 Observational and Experimental Studies), MY459 (Quantitative Text
 Analysis), ST416 (Multilevel Modelling), and ST442 (Longitudinal Data
-Analysis). 
+Analysis).
 
 Please note that up to 2010-11 the course was called MI451, so older
 materials will bear that code. For example, you will find past

@@ -6,16 +6,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MY451 Introduction to Quantitative Analysis</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models.">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="MY451 Introduction to Quantitative Analysis" />
   <meta property="og:type" content="book" />
   
   
   <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="kbenoit/coursepack-bookdown" />
+  <meta name="github-repo" content="LSE-Methodology/MY451" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="MY451 Introduction to Quantitative Analysis" />
@@ -28,11 +27,6 @@
 <meta name="author" content="London School of Economics and Political Science">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -40,7 +34,6 @@ MathJax.Hub.Config({
   
   
 <link rel="prev" href="c-more.html">
-
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -62,6 +55,7 @@ MathJax.Hub.Config({
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -239,7 +233,7 @@ MathJax.Hub.Config({
 </ul></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/kbenoit/coursepack-bookdown/" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
 
 </ul>
 
@@ -262,7 +256,7 @@ MathJax.Hub.Config({
 <h1>Appendix</h1>
 <div id="computer-classes" class="section level2 unnumbered">
 <h2>Computer classes</h2>
-<p></p>
+
 <p>Some general instructions on computing and the SPSS package are given first below. It makes most sense to read these together with the instructions for individual computer classes.</p>
 <div id="general-instructions" class="section level3 unnumbered">
 <h3>General instructions</h3>
@@ -465,7 +459,7 @@ Sex: Woman; Age: 16; Weight: 7 st 8lbs</p>
 <div id="week-2-homework" class="section level4 unnumbered">
 <h4>WEEK 2 HOMEWORK</h4>
 <p>The homework exercise for this week is to complete the multiple choice quiz which you can find in the Moodle resource for MY451. Answers to the questions are also included there, including feedback on why the incorrect answer are incorrect. The first part of the quiz asks for answers to the class exercise, and the second part asks you to identify the level of measurement of some different variables.</p>
-<p></p>
+
 </div>
 </div>
 <div id="week-3-class" class="section level3 unnumbered">
@@ -774,7 +768,7 @@ Sex: Woman; Age: 16; Weight: 7 st 8lbs</p>
 
 <div id="table-of-standard-normal-tail-probabilities" class="section level3 unnumbered">
 <h3>Table of standard normal tail probabilities</h3>
-<p></p>
+
 <table>
 <thead>
 <tr class="header">
@@ -2170,7 +2164,8 @@ Sex: Woman; Age: 16; Weight: 7 st 8lbs</p>
       </div>
 <a href="c-more.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -2179,9 +2174,10 @@ Sex: Woman; Age: 16; Weight: 7 st 8lbs</p>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
@@ -2196,8 +2192,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kbenoit/coursepack-bookdown/edit/master/11-MY451-appendix.Rmd",
-"text": null
+"link": "https://github.com/LSE-Methodology/MY451/edit/master/11-MY451-appendix.Rmd",
+"text": "Edit"
 },
 "download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
 "toc": {
@@ -2212,7 +2208,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

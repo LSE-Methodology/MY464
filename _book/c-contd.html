@@ -6,16 +6,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MY451 Introduction to Quantitative Analysis</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models.">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="MY451 Introduction to Quantitative Analysis" />
   <meta property="og:type" content="book" />
   
   
   <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="kbenoit/coursepack-bookdown" />
+  <meta name="github-repo" content="LSE-Methodology/MY451" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="MY451 Introduction to Quantitative Analysis" />
@@ -28,11 +27,6 @@
 <meta name="author" content="London School of Economics and Political Science">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,7 +35,6 @@ MathJax.Hub.Config({
   
 <link rel="prev" href="c-probs.html">
 <link rel="next" href="c-means.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -62,6 +55,7 @@ MathJax.Hub.Config({
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -239,7 +233,7 @@ MathJax.Hub.Config({
 </ul></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/kbenoit/coursepack-bookdown/" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
 
 </ul>
 
@@ -288,9 +282,9 @@ or, instead of the variance, the <strong>population standard deviation</strong>
 <span class="math display">\[\begin{equation}\sigma = \sqrt{\frac{\sum (Y_{i}-\mu)^{2}}{N}}.
 \label{eq:sigma}\end{equation}\]</span>
 <p>Here <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> are the lower-case Greek letters “mu” and “sigma” respectively, and <span class="math inline">\(\sigma^{2}\)</span> is read “sigma squared”. It is common to use Greek letters for population parameters, as we did also for the probability parameter <span class="math inline">\(\pi\)</span> in Chapter <a href="c-probs.html#c-probs">5</a>.</p>
-<p>In (\ref{eq:mu})–(\ref{eq:sigma}), <span class="math inline">\(N\)</span> is the number of units in a finite population and the sums indicated by <span class="math inline">\(\Sigma\)</span> are over all of these <span class="math inline">\(N\)</span> units. If we treat the data in Figure <a href="c-contd.html#fig:f-bp1">6.1</a> as a population, <span class="math inline">\(N=4489\)</span> and these population parameters are <span class="math inline">\(\mu=74.2\)</span>, <span class="math inline">\(\sigma^{2}=127.87\)</span> and <span class="math inline">\(\sigma=11.3\)</span>.</p>
-<p>Because the formulas (\ref{eq:mu})–(\ref{eq:sigma}) involve the population size <span class="math inline">\(N\)</span>, they apply in this exact form only to finite populations like the one in this example (and as discussed more generally in Section <a href="c-samples.html#s-samples-finpops">3.2</a>) but not to infinite ones of the kind discussed in Section <a href="c-samples.html#s-samples-infpops">3.4</a>. However, the definitions of <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma^{2}\)</span>, <span class="math inline">\(\sigma\)</span> and other parameters can be extended to apply also to infinite populations. These definitions, which will be omitted here, involve the concept of continuous probability distributions that is discussed in the next section. The interpretations of the population parameters turn out to be intuitively similar for both the finite and infinite-population cases, and the same methods of analysis apply to both, so we can here ignore the distinction without further comment.</p>
-<p>The population formulas (\ref{eq:mu})–(\ref{eq:sigma}) clearly resemble those of some sample statistics introduced in Chapter <a href="c-descr1.html#c-descr1">2</a>, specifically the <em>sample</em> mean, variance and standard deviation</p>
+<p>In (<a href="#eq:mu">(<strong>??</strong>)</a>)–(<a href="#eq:sigma">(<strong>??</strong>)</a>), <span class="math inline">\(N\)</span> is the number of units in a finite population and the sums indicated by <span class="math inline">\(\Sigma\)</span> are over all of these <span class="math inline">\(N\)</span> units. If we treat the data in Figure <a href="c-contd.html#fig:f-bp1">6.1</a> as a population, <span class="math inline">\(N=4489\)</span> and these population parameters are <span class="math inline">\(\mu=74.2\)</span>, <span class="math inline">\(\sigma^{2}=127.87\)</span> and <span class="math inline">\(\sigma=11.3\)</span>.</p>
+<p>Because the formulas (<a href="#eq:mu">(<strong>??</strong>)</a>)–(<a href="#eq:sigma">(<strong>??</strong>)</a>) involve the population size <span class="math inline">\(N\)</span>, they apply in this exact form only to finite populations like the one in this example (and as discussed more generally in Section <a href="c-samples.html#s-samples-finpops">3.2</a>) but not to infinite ones of the kind discussed in Section <a href="c-samples.html#s-samples-infpops">3.4</a>. However, the definitions of <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma^{2}\)</span>, <span class="math inline">\(\sigma\)</span> and other parameters can be extended to apply also to infinite populations. These definitions, which will be omitted here, involve the concept of continuous probability distributions that is discussed in the next section. The interpretations of the population parameters turn out to be intuitively similar for both the finite and infinite-population cases, and the same methods of analysis apply to both, so we can here ignore the distinction without further comment.</p>
+<p>The population formulas (<a href="#eq:mu">(<strong>??</strong>)</a>)–(<a href="#eq:sigma">(<strong>??</strong>)</a>) clearly resemble those of some sample statistics introduced in Chapter <a href="c-descr1.html#c-descr1">2</a>, specifically the <em>sample</em> mean, variance and standard deviation</p>
 <span class="math display">\[\begin{equation}\bar{Y}=\frac{\sum Y_{i}}{n}, \label{eq:Ybar-ch6}\end{equation}\]</span>
 <span class="math display">\[\begin{equation}s^{2} = \frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}\label{eq:s2-ch6}\end{equation}\]</span>
 <center>
@@ -298,7 +292,7 @@ and
 </center>
 <span class="math display">\[\begin{equation}s = \sqrt{\frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}}\label{eq:s-ch6}\end{equation}\]</span>
 <p>where the sums are now over the <span class="math inline">\(n\)</span> observations in a sample. These can be used as descriptions of the sample distribution as discussed in Chapter <a href="c-descr1.html#c-descr1">2</a>, but also as <em>point estimates</em> of the corresponding population parameters in the sense defined in Section <a href="c-probs.html#s-probs-pointest">5.4</a>. We may thus use the sample mean <span class="math inline">\(\bar{Y}\)</span> as a point estimate of the population mean <span class="math inline">\(\mu\)</span>, and the sample variance <span class="math inline">\(s^{2}\)</span> and sample standard deviation <span class="math inline">\(s\)</span> as point estimates of population variance <span class="math inline">\(\sigma^{2}\)</span> and standard deviation <span class="math inline">\(\sigma\)</span> respectively. These same estimates can be used for both finite and infinite population distributions.</p>
-<p>For further illustration of the connection between population and sample quantities, we have also drawn a simple random sample of <span class="math inline">\(n=50\)</span> observations from the finite population of <span class="math inline">\(N=4489\)</span> observations in Figure <a href="c-contd.html#fig:f-bp1">6.1</a>. Table <a href="c-contd.html#tab:t-bp-example">6.1</a> shows the summary statistics (\ref{eq:Ybar-ch6}–(\ref{eq:s-ch6}) in this sample and the corresponding parameters (\ref{eq:mu})–(\ref{eq:sigma}) in the population.</p>
+<p>For further illustration of the connection between population and sample quantities, we have also drawn a simple random sample of <span class="math inline">\(n=50\)</span> observations from the finite population of <span class="math inline">\(N=4489\)</span> observations in Figure <a href="c-contd.html#fig:f-bp1">6.1</a>. Table <a href="c-contd.html#tab:t-bp-example">6.1</a> shows the summary statistics (<a href="#eq:Ybar-ch6">(<strong>??</strong>)</a>–(<a href="#eq:s-ch6">(<strong>??</strong>)</a>) in this sample and the corresponding parameters (<a href="#eq:mu">(<strong>??</strong>)</a>)–(<a href="#eq:sigma">(<strong>??</strong>)</a>) in the population.</p>
 <table style="width:98%;">
 <caption><span id="tab:t-bp-example">Table 6.1: </span>Summary statistics for diastolic blood pressure in the population and a sample from it in the example used for illustration in Sections <a href="c-contd.html#s-contd-popdistrs">6.2</a>–<a href="c-contd.html#s-contd-clt">6.4</a>.</caption>
 <colgroup>
@@ -308,31 +302,36 @@ and
 <col width="20%" />
 <col width="26%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right"><br />
+Size</th>
+<th align="center"><br />
+Mean</th>
+<th align="right">Standard Deviation</th>
+<th align="right"><br />
+Variance</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td></td>
-<td>Size</td>
-<td>Mean</td>
-<td align="right">Standard Deviation</td>
-<td>Variance</td>
+<td>Population</td>
+<td align="right"><span class="math inline">\(N=4489\)</span></td>
+<td align="center"><span class="math inline">\(\mu=74.2\)</span></td>
+<td align="right"><span class="math inline">\(\sigma=11.3\)</span></td>
+<td align="right"><span class="math inline">\(\sigma^{2}=127.87\)</span></td>
 </tr>
 <tr class="even">
-<td>Population</td>
-<td><span class="math inline">\(N=4489\)</span></td>
-<td><span class="math inline">\(\mu=74.2\)</span></td>
-<td align="right"><span class="math inline">\(\sigma=11.3\)</span></td>
-<td><span class="math inline">\(\sigma^{2}=127.87\)</span></td>
-</tr>
-<tr class="odd">
 <td>Sample</td>
-<td><span class="math inline">\(n=50\)</span></td>
-<td><span class="math inline">\(\bar{Y}=72.6\)</span></td>
+<td align="right"><span class="math inline">\(n=50\)</span></td>
+<td align="center"><span class="math inline">\(\bar{Y}=72.6\)</span></td>
 <td align="right"><span class="math inline">\(s=12.7\)</span></td>
-<td><span class="math inline">\(s^{2}=161.19\)</span></td>
+<td align="right"><span class="math inline">\(s^{2}=161.19\)</span></td>
 </tr>
 </tbody>
 </table>
-You may have noticed that the formulas of the sample variance (\ref{eq:s2-ch6}) and sample standard deviation (\ref{eq:s-ch6}) involve the divisor <span class="math inline">\(n-1\)</span> rather than the <span class="math inline">\(n\)</span> which might seem more natural, while the population formulas (\ref{eq:sigma2}) and (\ref{eq:sigma}) do use <span class="math inline">\(N\)</span> rather than <span class="math inline">\(N-1\)</span>. The reason for this is that using <span class="math inline">\(n-1\)</span> gives the estimators certain mathematically desirable properties (<span class="math inline">\(s^{2}\)</span> is an <em>unbiased</em> estimate of <span class="math inline">\(\sigma^{2}\)</span>, but <span class="math inline">\(\hat{\sigma}^{2}\)</span> below is not). This detail need not concern us here. In fact, the statistics which use <span class="math inline">\(n\)</span> instead, i.e.
+You may have noticed that the formulas of the sample variance (<a href="#eq:s2-ch6">(<strong>??</strong>)</a>) and sample standard deviation (<a href="#eq:s-ch6">(<strong>??</strong>)</a>) involve the divisor <span class="math inline">\(n-1\)</span> rather than the <span class="math inline">\(n\)</span> which might seem more natural, while the population formulas (<a href="#eq:sigma2">(<strong>??</strong>)</a>) and (<a href="#eq:sigma">(<strong>??</strong>)</a>) do use <span class="math inline">\(N\)</span> rather than <span class="math inline">\(N-1\)</span>. The reason for this is that using <span class="math inline">\(n-1\)</span> gives the estimators certain mathematically desirable properties (<span class="math inline">\(s^{2}\)</span> is an <em>unbiased</em> estimate of <span class="math inline">\(\sigma^{2}\)</span>, but <span class="math inline">\(\hat{\sigma}^{2}\)</span> below is not). This detail need not concern us here. In fact, the statistics which use <span class="math inline">\(n\)</span> instead, i.e.
 <span class="math display">\[\begin{equation}\hat{\sigma}^{2}=\frac{\sum (Y_{i}-\bar{Y})^{2}}{n}
 \label{eq:s2b}\end{equation}\]</span>
 <p>for <span class="math inline">\(\sigma^{2}\)</span> and <span class="math inline">\(\hat{\sigma}=\sqrt{\hat{\sigma}^{2}}\)</span> for <span class="math inline">\(\sigma\)</span>, are also sensible estimates and very similar to <span class="math inline">\(s^{2}\)</span> and <span class="math inline">\(s\)</span> unless <span class="math inline">\(n\)</span> is very small. In general, there are often several possible sample statistics which could be used as estimates for the same population parameter.</p>
@@ -348,7 +347,7 @@ You may have noticed that the formulas of the sample variance (\ref{eq:s2-ch6}) 
 <p>The situation is very different for continuous variables. This is illustrated by Figure <a href="c-contd.html#fig:f-bp2">6.2</a>, which shows the same frequency polygon as in Figure <a href="c-contd.html#fig:f-bp1">6.1</a>, now supplemented by a smooth curve. This curve (“a probability density function”) describes a particular probability distribution. It can be thought of as a smoothed version of the shape of the frequency polygon. What we will do in the future is to use some such probability distribution to represent the population distribution. This means effectively arguing that we believe that the shape of the true population distribution is sufficiently regular to be well described by a smooth curve such as the one in Figure <a href="c-contd.html#fig:f-bp2">6.2</a>.</p>
 <p>In Figure <a href="c-contd.html#fig:f-bp2">6.2</a> the curve and the frequency polygon have reasonably similar shapes, so the assumption that the former is a good representation of the latter does not seem far-fetched. However, the two are clearly not exactly the same, nor do we expect that even the blood pressures of all English adults exactly match this curve or any other simple probability distribution. All we require is that a population distribution is close enough to a specified probability distribution for the results from analyses based on this assumption to be meaningful and not misleading.</p>
 <div class="figure"><span id="fig:f-bp2"></span>
-<img src="bloodp2.png" alt="The frequency polygon of Figure <a href="c-contd.html#fig:f-bp1">6.1</a>, together with a normal curve with the same mean and variance." width="434" />
+<img src="bloodp2.png" alt="The frequency polygon of Figure 6.1, together with a normal curve with the same mean and variance." width="434" />
 <p class="caption">Figure 6.2: The frequency polygon of Figure <a href="c-contd.html#fig:f-bp1">6.1</a>, together with a normal curve with the same mean and variance.</p>
 </div>
 <p> Such a simplifying assumption about the population distribution is known as a <strong>statistical model</strong> for the population. The reason for working with a model is that it leads to much simpler methods of analysis than would otherwise be required. For example, the shape of the distribution shown in Figure <a href="c-contd.html#fig:f-bp2">6.2</a> is entirely determined by just two parameters, its mean and variance. Under this model, all questions about the population distribution can thus be reduced to questions about these two population parameters, and inference can focus on tests and confidence intervals for them.</p>
@@ -363,7 +362,7 @@ You may have noticed that the formulas of the sample variance (\ref{eq:s2-ch6}) 
 <p class="caption">Figure 6.3: A portrait of Gauss and the normal curve on a former German 10-DM banknote.</p>
 </div>
 <p>The normal distribution is by far the most important probability distribution in statistics. The main reason for this is its use as a sampling distribution in a wide range of contexts, for reasons that are explained in Section <a href="c-contd.html#s-contd-clt">6.4</a>. However, the normal distribution is also useful for describing many approximately symmetric population distributions, and it is in this context that we introduce its properties first.</p>
-<p>A normal distribution is completely specified by two numbers, its mean (or “expected value”) <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^{2}\)</span>. This is sometimes expressed in notation as <span class="math inline">\(Y\sim N(\mu, \sigma^{2})\)</span>, which is read as “<span class="math inline">\(Y\)</span> is normally distributed with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^{2}\)</span>”. Different values for <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> give different distributions. For example, the curve in Figure <a href="c-contd.html#fig:f-bp2">6.2</a> is that of the <span class="math inline">\(N(74.2, \, 127.87)\)</span> distribution, where the mean <span class="math inline">\(\mu=74.2\)</span> and variance <span class="math inline">\(\sigma^{2}=127.87\)</span> are the same as the mean and variance calculated from formulas (\ref{eq:mu}) and (\ref{eq:sigma2}) for the 4489 observations of blood pressure. This ensures that this particular normal curve best matches the frequency polygon in Figure <a href="c-contd.html#fig:f-bp2">6.2</a>.</p>
+<p>A normal distribution is completely specified by two numbers, its mean (or “expected value”) <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^{2}\)</span>. This is sometimes expressed in notation as <span class="math inline">\(Y\sim N(\mu, \sigma^{2})\)</span>, which is read as “<span class="math inline">\(Y\)</span> is normally distributed with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^{2}\)</span>”. Different values for <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma^{2}\)</span> give different distributions. For example, the curve in Figure <a href="c-contd.html#fig:f-bp2">6.2</a> is that of the <span class="math inline">\(N(74.2, \, 127.87)\)</span> distribution, where the mean <span class="math inline">\(\mu=74.2\)</span> and variance <span class="math inline">\(\sigma^{2}=127.87\)</span> are the same as the mean and variance calculated from formulas (<a href="#eq:mu">(<strong>??</strong>)</a>) and (<a href="#eq:sigma2">(<strong>??</strong>)</a>) for the 4489 observations of blood pressure. This ensures that this particular normal curve best matches the frequency polygon in Figure <a href="c-contd.html#fig:f-bp2">6.2</a>.</p>
 <p>The mean <span class="math inline">\(\mu\)</span> describes the central tendency of the distribution, and the variance <span class="math inline">\(\sigma^{2}\)</span> its variability. This is illustrated by Figure <a href="c-contd.html#fig:f-3norms">6.4</a>, which shows the curves for three different normal distributions. The mean of a normal distribution is also equal to both its median and its mode. Thus <span class="math inline">\(\mu\)</span> is the central value in the sense that it divides the distribution into two equal halves, and it also indicates the peak of the curve (the highest probability, as discussed below). In Figure <a href="c-contd.html#fig:f-3norms">6.4</a>, the curves for <span class="math inline">\(N(0, 1)\)</span> and <span class="math inline">\(N(0, 9)\)</span> are both centered around <span class="math inline">\(\mu=0\)</span>; the mean of the <span class="math inline">\(N(5, 1)\)</span> distribution is <span class="math inline">\(\mu=5\)</span>, so the whole curve is shifted to the right and centered around 5.</p>
 <div class="figure"><span id="fig:f-3norms"></span>
 <img src="threenorms.png" alt="Three normal distributions with different means and/or variances." width="415" />
@@ -383,15 +382,16 @@ You may have noticed that the formulas of the sample variance (\ref{eq:s2-ch6}) 
 <li><p>the proportion of people with diastolic blood pressure below 60 (possibly indicating unusually low blood pressure or hypotension)</p></li>
 <li><p>the proportion of people in the normal pressure range of 60–90</p></li>
 </ul>
+<div class="figure"><span id="fig:f-normbp"></span>
+<img src="normbp.png" alt="Illustration of probabilities for a normal distribution in the blood pressure example, where \mu=74.2 and \sigma=11.3. The plot shows probabilities for the ranges of values at most 60 (Low), between 60 and 90 (Mid) and over 90 (High)." width="453" />
+<p class="caption">Figure 6.6: Illustration of probabilities for a normal distribution in the blood pressure example, where <span class="math inline">\(\mu=74.2\)</span> and <span class="math inline">\(\sigma=11.3\)</span>. The plot shows probabilities for the ranges of values at most 60 (“Low”), between 60 and 90 (“Mid”) and over 90 (“High”).</p>
+</div>
 <p>Such figures might be of interest for example for predicting health service needs for treating hypertension. Suppose that we were reasonably confident (perhaps from surveys like the one described above) that the distribution of diastolic blood pressure in the population of interest was approximately normally distributed with mean 74.2 and variance 127.87 (and thus standard deviation 11.3). The probabilities of interest are then the areas of the regions shown in Figure <a href="c-contd.html#fig:f-normbp">6.6</a>.</p>
 The remaining question is how to calculate such probabilities. The short answer is “with a computer”. However, to explain an approach which is required for this in some computer packages and also to provide an alternative method which does not require a computer, we need to introduce one more new quantity. This is the <strong>Z score</strong>, which is defined as
 <span class="math display">\[\begin{equation}Z = \frac{Y-\mu}{\sigma}
 \label{eq:Zscore}\end{equation}\]</span>
 <p>where <span class="math inline">\(Y\)</span> can be any value of the variable of interest. For example, in the blood pressure example the <span class="math inline">\(Z\)</span> scores corresponding to values 60 and 90 are <span class="math inline">\(Z=(60-74.2)/11.3=-1.26\)</span> and <span class="math inline">\(Z=(90-74.2)/11.3=1.40\)</span> respectively. The <span class="math inline">\(Z\)</span> score can be interpreted as the distance of the value <span class="math inline">\(Y\)</span> from the mean <span class="math inline">\(\mu\)</span>, measured in standard deviations <span class="math inline">\(\sigma\)</span>. Thus the blood pressure 60, with a <span class="math inline">\(Z\)</span> score of <span class="math inline">\(-1.26\)</span>, is 1.26 standard deviations <em>below</em> (hence the negative sign) the mean, while 90 (with <span class="math inline">\(Z\)</span> score 1.40) is 1.40 standard deviations <em>above</em> the mean.</p>
-<div class="figure"><span id="fig:f-normbp"></span>
-<img src="normbp.png" alt="Illustration of probabilities for a normal distribution in the blood pressure example, where \mu=74.2 and \sigma=11.3. The plot shows probabilities for the ranges of values at most 60 (Low), between 60 and 90 (Mid) and over 90 (High)." width="453" />
-<p class="caption">Figure 6.6: Illustration of probabilities for a normal distribution in the blood pressure example, where <span class="math inline">\(\mu=74.2\)</span> and <span class="math inline">\(\sigma=11.3\)</span>. The plot shows probabilities for the ranges of values at most 60 (“Low”), between 60 and 90 (“Mid”) and over 90 (“High”).</p>
-</div>
+<p>The probability distribution of the <span class="math inline">\(Z\)</span> scores is a normal distribution with mean 0 and variance 1, i.e. <span class="math inline">\(Z\sim N(0,1)\)</span>. This is known as the <strong>standard normal distribution</strong>. The usefulness of <span class="math inline">\(Z\)</span> scores lies in the fact that by transforming the original variable <span class="math inline">\(Y\)</span> from the <span class="math inline">\(N(\mu, \sigma^{2}\)</span>) distribution into the standard normal distribution they remove the specific values of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> from the calculation. With this trick, probabilities for any normal distribution can be calculated using a single table for <span class="math inline">\(Z\)</span> scores. Such a table is given in the Appendix, and an extract from it is shown in Table <a href="c-contd.html#tab:t-normtab">6.2</a> (note that it is not always presented exactly like this, as different books may use slightly different format or notation). The first column lists values of the <span class="math inline">\(Z\)</span> score (a full table would typically give all values from 0.00 to about 3.50). The second column, labelled “Tail Prob.”, gives the probability that a <span class="math inline">\(Z\)</span> score for a normal distribution is <em>larger than</em> the value given by <span class="math inline">\(z\)</span>, i.e. the area of the region to the right of <span class="math inline">\(z\)</span>.</p>
 <table>
 <caption><span id="tab:t-normtab">Table 6.2: </span>Extract from the table of right-hand tail probabilities for normal <span class="math inline">\(Z\)</span> scores. Here “Tail Prob.” is the probability that a value from the standard normal distribution is at least the value in the column labelled “<span class="math inline">\(z\)</span>”. The full table is shown in the Appendix.</caption>
 <thead>
@@ -402,8 +402,8 @@ The remaining question is how to calculate such probabilities. The short answer 
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right"><span class="math inline">\(\vdots\)</span></td>
-<td align="right"><span class="math inline">\(\vdots\)</span></td>
+<td align="right">…</td>
+<td align="right">…</td>
 </tr>
 <tr class="even">
 <td align="right">1.24</td>
@@ -422,8 +422,8 @@ The remaining question is how to calculate such probabilities. The short answer 
 <td align="right">0.1020</td>
 </tr>
 <tr class="even">
-<td align="right"><span class="math inline">\(\vdots\)</span></td>
-<td align="right"><span class="math inline">\(\vdots\)</span></td>
+<td align="right">…</td>
+<td align="right">…</td>
 </tr>
 <tr class="odd">
 <td align="right">1.38</td>
@@ -442,12 +442,11 @@ The remaining question is how to calculate such probabilities. The short answer 
 <td align="right">0.0793</td>
 </tr>
 <tr class="odd">
-<td align="right"><span class="math inline">\(\vdots\)</span></td>
-<td align="right"><span class="math inline">\(\vdots\)</span></td>
+<td align="right">…</td>
+<td align="right">…</td>
 </tr>
 </tbody>
 </table>
-<p>The probability distribution of the <span class="math inline">\(Z\)</span> scores is a normal distribution with mean 0 and variance 1, i.e. <span class="math inline">\(Z\sim N(0,1)\)</span>. This is known as the <strong>standard normal distribution</strong>. The usefulness of <span class="math inline">\(Z\)</span> scores lies in the fact that by transforming the original variable <span class="math inline">\(Y\)</span> from the <span class="math inline">\(N(\mu, \sigma^{2}\)</span>) distribution into the standard normal distribution they remove the specific values of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> from the calculation. With this trick, probabilities for any normal distribution can be calculated using a single table for <span class="math inline">\(Z\)</span> scores. Such a table is given in the Appendix, and an extract from it is shown in Table <a href="c-contd.html#tab:t-normtab">6.2</a> (note that it is not always presented exactly like this, as different books may use slightly different format or notation). The first column lists values of the <span class="math inline">\(Z\)</span> score (a full table would typically give all values from 0.00 to about 3.50). The second column, labelled “Tail Prob.”, gives the probability that a <span class="math inline">\(Z\)</span> score for a normal distribution is <em>larger than</em> the value given by <span class="math inline">\(z\)</span>, i.e. the area of the region to the right of <span class="math inline">\(z\)</span>.</p>
 <p>Consider first the probability that blood pressure is greater than 90, i.e. the area labelled “High” in Figure <a href="c-contd.html#fig:f-normbp">6.6</a>. We have seen that 90 corresponds to a <span class="math inline">\(Z\)</span> score of 1.40, so the probability of high blood pressure is the same as the probability that the normal <span class="math inline">\(Z\)</span> score is greater than 1.40. The row for <span class="math inline">\(z=1.40\)</span> in the table tells us that this probability is 0.0808, or 0.08 when rounded to two decimal places as in Figure <a href="c-contd.html#fig:f-normbp">6.6</a>.</p>
 <p>The second quantity of interest was the probability of a blood pressure at most 60, i.e. the area of the “Low” region in Figure <a href="c-contd.html#fig:f-normbp">6.6</a>. The corresponding <span class="math inline">\(Z\)</span> score is <span class="math inline">\(-1.26\)</span>. The table, however, shows only positive values of <span class="math inline">\(z\)</span>. This is because we can use the symmetry of the normal distribution to reduce all such questions to ones about positive values of <span class="math inline">\(z\)</span>. Because the distribution is symmetric, the probability that a <span class="math inline">\(Z\)</span> score is <em>at most</em> <span class="math inline">\(-1.26\)</span> (the area of the left-hand tail to the left of <span class="math inline">\(-1.26\)</span>) is the same as the probability that it is <em>at least</em> 1.26 (the area of the right-hand tail to the right of 1.26). This is the kind of quantity we calculated above.<a href="#fn25" class="footnoteRef" id="fnref25"><sup>25</sup></a> The required probability is thus equal to the right-hand tail probability for 1.26, which the table shows to be 0.1038 (rounded to 0.10 in Figure <a href="c-contd.html#fig:f-normbp">6.6</a>).</p>
 <p>Finally, the probability of the “Mid” range of blood pressure is the remaining probability not in the two other regions. Because the whole area under the curve (the total probability) is 1, the required probability is obtained by subtraction as <span class="math inline">\(1-(0.0808+0.1038)=0.8154\)</span>. In this example these values obtained from the normal approximation of the population distribution are very accurate. The exact proportions of the 4489 respondents who had diastolic blood pressure at most 60 or greater than 90 were 0.0996 and 0.0793 respectively, so rounded to two decimal places they were the same as the 0.10 and 0.08 obtained from the normal approximation.</p>
@@ -474,7 +473,7 @@ The remaining question is how to calculate such probabilities. The short answer 
 <p>The connection between sample size and the variability of a sampling distribution applies not only to the sample mean but to (almost) all estimates of population parameters. In general, (i) the task of statistical inference is to use information in a sample to draw conclusions about population parameters; (ii) the expected magnitude of the sampling error, i.e. the remaining uncertainty about population parameters resulting from having information only on a sample, is characterised by the variability of the sampling distributions of estimates of the parameters; and (iii) other things being equal, the variability of a sampling distribution decreases when the sample size increases. Thus data really are the currency of statistics and more data are better than less data. In practice data collection of course costs time and money, so we cannot always obtain samples which are as large as we might otherwise want. Apart from resource constraints, the choice of sample size depends also on such things as the aims of the analysis, the level of precision required, and guesses about the variability of variables in the population. Statistical considerations of the trade-offs between them in order to make decisions about sample sizes are known as <em>power</em> calculations. They will be discussed very briefly later, in Section <a href="c-means.html#ss-means-tests3-power">7.6.2</a>.</p>
 <p>In Figure <a href="c-contd.html#fig:f-sampld">6.8</a> we use a computer simulation rather than a mathematical theorem to examine the sampling distribution of a sample mean. Here 100,000 simple random samples of size <span class="math inline">\(n=50\)</span> were drawn from the <span class="math inline">\(N=4489\)</span> values of blood pressure that we are treating as the finite population in this illustration. The sample mean <span class="math inline">\(\bar{Y}\)</span> of blood pressure was calculated for each of these samples, and the histogram of these 100,000 values of <span class="math inline">\(\bar{Y}\)</span> is shown in Figure <a href="c-contd.html#fig:f-sampld">6.8</a>. Also shown is the curve of the normal distribution with the mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma/\sqrt{50}\)</span> determined by the theoretical result given above.</p>
 <div class="figure"><span id="fig:f-sampld"></span>
-<img src="sampld1_bp.png" alt="Example of the sampling distribution of the sample mean. The plot shows a histogram of the values of the sample mean in 100,000 samples of size n=50 drawn from the 4489 values of diastolic blood pressure shown in Figure <a href="c-contd.html#fig:f-bp1">6.1</a>, for which the mean is \mu=74.2 and standard deviation is \sigma=11.3. Superimposed on the histogram is the curve of the approximate sampling distribution, which is normal with mean \mu and standard deviation \sigma/\sqrt{n}." width="453" />
+<img src="sampld1_bp.png" alt="Example of the sampling distribution of the sample mean. The plot shows a histogram of the values of the sample mean in 100,000 samples of size n=50 drawn from the 4489 values of diastolic blood pressure shown in Figure 6.1, for which the mean is \mu=74.2 and standard deviation is \sigma=11.3. Superimposed on the histogram is the curve of the approximate sampling distribution, which is normal with mean \mu and standard deviation \sigma/\sqrt{n}." width="453" />
 <p class="caption">Figure 6.8: Example of the sampling distribution of the sample mean. The plot shows a histogram of the values of the sample mean in 100,000 samples of size <span class="math inline">\(n=50\)</span> drawn from the 4489 values of diastolic blood pressure shown in Figure <a href="c-contd.html#fig:f-bp1">6.1</a>, for which the mean is <span class="math inline">\(\mu=74.2\)</span> and standard deviation is <span class="math inline">\(\sigma=11.3\)</span>. Superimposed on the histogram is the curve of the approximate sampling distribution, which is normal with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma/\sqrt{n}\)</span>.</p>
 </div>
 <p>The match between the curve and the histogram in Figure <a href="c-contd.html#fig:f-sampld">6.8</a> is clearly very close. This is actually a nontrivial finding which illustrates a result which is of crucial importance for statistical inference. Recall that the normal curve shown in Figure <a href="c-contd.html#fig:f-sampld">6.8</a> is derived from the mathematical result stated above, which assumed that the population distribution of <span class="math inline">\(Y\)</span> is <em>exactly</em> normal. The histogram in Figure <a href="c-contd.html#fig:f-sampld">6.8</a>, on the other hand, is based on repeated samples from the actual population distribution of blood pressure, which, while quite close to a normal distribution as shown in Figure <a href="c-contd.html#fig:f-bp2">6.2</a>, is certainly not exactly normal. Despite this, it is clear that the normal curve describes the histogram essentially exactly.</p>
@@ -496,7 +495,7 @@ The remaining question is how to calculate such probabilities. The short answer 
 </ul>
 <p>This powerful result is illustrated in Figure <a href="c-contd.html#fig:f-cltbin">6.9</a>. It is similar to Figure <a href="c-contd.html#fig:f-sampld">6.8</a> in that it shows sampling distributions obtained from a computer simulation, together with the normal curve suggested by the CLT. For each plot, 5000 samples of size <span class="math inline">\(n\)</span> were simulated from a population where <span class="math inline">\(\pi\)</span> was 0.2. The sample proportion <span class="math inline">\(\hat{\pi}\)</span> was then calculated for each simulated sample, and the histogram of these 5000 values drawn. Four different sample sizes were used: <span class="math inline">\(n=10\)</span>, 30, 100, and 1000. It can be seen that the normal distribution is not a very good approximation of the sampling distribution of <span class="math inline">\(\hat{\pi}\)</span> when <span class="math inline">\(n\)</span> is as small as 10 or even 30. For the larger values of 100 and 1000, however, the normal approximation is already quite good, as expected from the CLT.</p>
 <div class="figure"><span id="fig:f-cltbin"></span>
-<img src="sampld_p.png" alt="Illustration of the Central Limit Theorem for the sample proportion of a dichotomous variable. Each plot shows the histogram of the sample proportions \hat{\pi} calculated for 5000 samples simulated from a population distribution with proportion \pi=0.2, together with the normal curve with mean \pi and variance \pi(1-\pi)/n. The samples sizes n are 10, 30, 100 and 1000." width="529" />
+<img src="sampld_p.png" alt="Illustration of the Central Limit Theorem for the sample proportion of a dichotomous variable. Each plot shows the histogram of the sample proportions \hat{\pi} calculated for 5000 samples simulated from a population distribution with proportion \pi=0.2, together with the normal curve with mean \pi and variance \pi(1-\pi)/n. The samples sizes n are 10, 30, 100 and 1000." width="510" />
 <p class="caption">Figure 6.9: Illustration of the Central Limit Theorem for the sample proportion of a dichotomous variable. Each plot shows the histogram of the sample proportions <span class="math inline">\(\hat{\pi}\)</span> calculated for 5000 samples simulated from a population distribution with proportion <span class="math inline">\(\pi=0.2\)</span>, together with the normal curve with mean <span class="math inline">\(\pi\)</span> and variance <span class="math inline">\(\pi(1-\pi)/n\)</span>. The samples sizes <span class="math inline">\(n\)</span> are 10, 30, 100 and 1000.</p>
 </div>
 <p>The variability of the sampling distribution will again depend on <span class="math inline">\(n\)</span>. In Figure <a href="c-contd.html#fig:f-cltbin">6.9</a>, the observed range of values of <span class="math inline">\(\hat{\pi}\)</span> decreases substantially as <span class="math inline">\(n\)</span> increases. When <span class="math inline">\(n=10\)</span>, values of between about 0 and 0.4 are quite common, whereas with <span class="math inline">\(n=1000\)</span>, essentially all of the samples give <span class="math inline">\(\hat{\pi}\)</span> between about 0.16 and 0.24, and a large majority are between 0.18 and 0.22. Thus increasing the sample size will again increase the precision with which we can estimate <span class="math inline">\(\pi\)</span>, and decrease the uncertainty in inference about its true value.</p>
@@ -510,7 +509,7 @@ The remaining question is how to calculate such probabilities. The short answer 
 <li id="fn24"><p>Carried out on behalf of The Department of Health by SCPR and the Department of Epidemiology and Public Health, UCL. Data used here were obtained from the UK Data Archive at <a href="http://www.data-archive.ac.uk" class="uri">http://www.data-archive.ac.uk</a>.<a href="c-contd.html#fnref24">↩</a></p></li>
 <li id="fn25"><p>Note that there we were looking for the probability of a Z score being “bigger than” rather than “at least” a certain value; for a continuous probability distribution this makes no difference, and both probabilities are the same.<a href="c-contd.html#fnref25">↩</a></p></li>
 <li id="fn26"><p>Ferguson, T. S. (1996). <em>A Course in Large Sample Theory</em>, Chapman &amp; Hall, London.<a href="c-contd.html#fnref26">↩</a></p></li>
-<li id="fn27"><p>The CLT does not hold in some rather weird cases which need not concern us here. Condition (\ref{eq:lindeberg}) is a mathematical expression for “not weird”.<a href="c-contd.html#fnref27">↩</a></p></li>
+<li id="fn27"><p>The CLT does not hold in some rather weird cases which need not concern us here. Condition (<a href="#eq:lindeberg">(<strong>??</strong>)</a>) is a mathematical expression for “not weird”.<a href="c-contd.html#fnref27">↩</a></p></li>
 </ol>
 </div>
             </section>
@@ -519,8 +518,9 @@ The remaining question is how to calculate such probabilities. The short answer 
         </div>
       </div>
 <a href="c-probs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-means.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="c-means.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -529,9 +529,10 @@ The remaining question is how to calculate such probabilities. The short answer 
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
@@ -546,8 +547,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kbenoit/coursepack-bookdown/edit/master/06-MY451-contd.Rmd",
-"text": null
+"link": "https://github.com/LSE-Methodology/MY451/edit/master/06-MY451-contd.Rmd",
+"text": "Edit"
 },
 "download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
 "toc": {
@@ -562,7 +563,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

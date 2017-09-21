@@ -6,16 +6,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MY451 Introduction to Quantitative Analysis</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models.">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="MY451 Introduction to Quantitative Analysis" />
   <meta property="og:type" content="book" />
   
   
   <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="kbenoit/coursepack-bookdown" />
+  <meta name="github-repo" content="LSE-Methodology/MY451" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="MY451 Introduction to Quantitative Analysis" />
@@ -28,11 +27,6 @@
 <meta name="author" content="London School of Economics and Political Science">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,7 +35,6 @@ MathJax.Hub.Config({
   
 <link rel="prev" href="c-samples.html">
 <link rel="next" href="c-probs.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -62,6 +55,7 @@ MathJax.Hub.Config({
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -239,7 +233,7 @@ MathJax.Hub.Config({
 </ul></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/kbenoit/coursepack-bookdown/" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
 
 </ul>
 
@@ -263,81 +257,83 @@ MathJax.Hub.Config({
 <div id="s-tables-intro" class="section level2">
 <h2><span class="header-section-number">4.1</span> Introduction</h2>
 <p>In this section we continue the discussion of methods of analysis for two-way contingency tables that was begun in Section <a href="c-descr1.html#ss-descr1-2cat-tables">2.4.1</a>. We will use again the example from the European Social Survey that was introduced early in Section <a href="c-descr1.html#s-descr1-examples">2.2</a>. The two variables in the example are a person’s sex and his or her attitude toward income redistribution measured as an ordinal variable with five levels. The two-way table of these variables in the sample is shown again for convenience in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>, including both the frequencies and the conditional proportions for attitude given sex.</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <caption><span id="tab:t-sex-attitude-ch4">Table 4.1: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Frequencies of respondents in the survey example, by sex and attitude towards income redistribution. The numbers in parentheses are conditional proportions of attitude given sex. Data: European Social Survey, Round 5, 2010, UK respondents only.</caption>
 <colgroup>
-<col width="35%" />
-<col width="35%" />
-<col width="4%" />
-<col width="7%" />
-<col width="5%" />
-<col width="5%" />
-<col width="3%" />
+<col width="14%" />
+<col width="18%" />
+<col width="11%" />
+<col width="18%" />
+<col width="12%" />
+<col width="12%" />
+<col width="8%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="center">Agree strongly</th>
+<th align="center">Agree</th>
+<th align="center">Neither agree nor disagree</th>
+<th align="center">Disagree</th>
+<th align="center">Disagree strongly</th>
+<th align="right">Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-Sex</td>
-<td align="center">Agree strongly</td>
-<td>Agree</td>
-<td align="center">Neither agree nor disagree</td>
-<td>Disagree</td>
-<td align="center">Disagree strongly</td>
-<td>Total</td>
-</tr>
-<tr class="even">
 <td align="left">Male</td>
 <td align="center">160</td>
-<td>439</td>
+<td align="center">439</td>
 <td align="center">187</td>
-<td>200</td>
+<td align="center">200</td>
 <td align="center">41</td>
-<td>1027</td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="center">(0.156)</td>
-<td>(0.428)</td>
-<td align="center">(0.182)</td>
-<td>(0.195)</td>
-<td align="center">(0.040)</td>
-<td>(1.0)</td>
+<td align="right">1027</td>
 </tr>
 <tr class="even">
+<td align="left"></td>
+<td align="center">(0.156)</td>
+<td align="center">(0.428)</td>
+<td align="center">(0.182)</td>
+<td align="center">(0.195)</td>
+<td align="center">(0.040)</td>
+<td align="right">(1.0)</td>
+</tr>
+<tr class="odd">
 <td align="left">Female</td>
 <td align="center">206</td>
-<td>651</td>
+<td align="center">651</td>
 <td align="center">239</td>
-<td>187</td>
+<td align="center">187</td>
 <td align="center">34</td>
-<td>1317</td>
-</tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="center">(0.156)</td>
-<td>(0.494)</td>
-<td align="center">(0.182)</td>
-<td>(0.142)</td>
-<td align="center">(0.026)</td>
-<td>(1.0)</td>
+<td align="right">1317</td>
 </tr>
 <tr class="even">
-<td align="left">Total</td>
-<td align="center">366</td>
-<td>1090</td>
-<td align="center">426</td>
-<td>387</td>
-<td align="center">75</td>
-<td>2344</td>
-</tr>
-<tr class="odd">
 <td align="left"></td>
 <td align="center">(0.156)</td>
-<td>(0.465)</td>
+<td align="center">(0.494)</td>
 <td align="center">(0.182)</td>
-<td>(0.165)</td>
+<td align="center">(0.142)</td>
+<td align="center">(0.026)</td>
+<td align="right">(1.0)</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="center">366</td>
+<td align="center">1090</td>
+<td align="center">426</td>
+<td align="center">387</td>
+<td align="center">75</td>
+<td align="right">2344</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.156)</td>
+<td align="center">(0.465)</td>
+<td align="center">(0.182)</td>
+<td align="center">(0.165)</td>
 <td align="center">(0.032)</td>
-<td>(1.0)</td>
+<td align="right">(1.0)</td>
 </tr>
 </tbody>
 </table>
@@ -372,9 +368,9 @@ In the context of this test, it is conventional to use alternative terminology w
 population}.
 \label{eq:H0-chi2}\end{equation}\]</span>
 <p>In our example the null hypothesis is thus that a person’s sex and his or her attitude toward income redistribution are independent in the population of adults in the UK.</p>
-<p>The null hypothesis (\ref{eq:H0-chi2}) and the <span class="math inline">\(\chi^{2}\)</span> test itself are symmetric in that there is no need to designate one of the variables as explanatory and the other as the response variable. The hypothesis can, however, also be expressed in a form which does make use of this distinction. This links it more clearly with the definition of associations in terms of conditional distributions. In this form, the null hypothesis (\ref{eq:H0-chi2}) can also be stated as the claim that the conditional distributions of the response variable are the same at all levels of the explanatory variable, i.e. in our example as <span class="math display">\[H_{0}: \;\text{The conditional distribution of attitude is the same for
+<p>The null hypothesis (<a href="#eq:H0-chi2">(<strong>??</strong>)</a>) and the <span class="math inline">\(\chi^{2}\)</span> test itself are symmetric in that there is no need to designate one of the variables as explanatory and the other as the response variable. The hypothesis can, however, also be expressed in a form which does make use of this distinction. This links it more clearly with the definition of associations in terms of conditional distributions. In this form, the null hypothesis (<a href="#eq:H0-chi2">(<strong>??</strong>)</a>) can also be stated as the claim that the conditional distributions of the response variable are the same at all levels of the explanatory variable, i.e. in our example as <span class="math display">\[H_{0}: \;\text{The conditional distribution of attitude is the same for
 men as for women}.\]</span> The hypothesis could also be expressed for the conditional distributions the other way round, i.e. here that the distribution of sex is the same at all levels of the attitude. All three versions of the null hypothesis mean the same thing for the purposes of the significance test. Describing the hypothesis in particular terms is useful purely for easy interpretation of the test and its conclusions in specific examples.</p>
-As well as the null hypothesis, a significance test usually involves an <strong>alternative hypothesis</strong>, often denoted <span class="math inline">\(H_{a}\)</span>. This is in some sense the opposite of the null hypothesis, which indicates the kinds of observations that will be taken as evidence against <span class="math inline">\(H_{0}\)</span>. For the <span class="math inline">\(\chi^{2}\)</span> test of independence this is simply the logical opposite of (\ref{eq:H0-chi2}), i.e.
+As well as the null hypothesis, a significance test usually involves an <strong>alternative hypothesis</strong>, often denoted <span class="math inline">\(H_{a}\)</span>. This is in some sense the opposite of the null hypothesis, which indicates the kinds of observations that will be taken as evidence against <span class="math inline">\(H_{0}\)</span>. For the <span class="math inline">\(\chi^{2}\)</span> test of independence this is simply the logical opposite of (<a href="#eq:H0-chi2">(<strong>??</strong>)</a>), i.e.
 <span class="math display">\[\begin{equation}H_{a}: \;\text{The variables are not statistically independent in the
 population}.
 \label{eq:Ha-chi2}\end{equation}\]</span>
@@ -395,7 +391,7 @@ population}.
 <h3><span class="header-section-number">4.3.2</span> Assumptions of a significance test</h3>
 <p>In the following discussion we will sometimes refer to Figure <a href="c-tables.html#fig:f-spsschi2">4.1</a>, which shows SPSS output for the <span class="math inline">\(\chi^{2}\)</span> test of independence for the data in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>. Output for the test is shown on the line labelled “Pearson Chi-Square”, and “N of valid cases” gives the sample size <span class="math inline">\(n\)</span>. The other entries in the table are output for other tests that are not discussed here, so they can be ignored.</p>
 <div class="figure"><span id="fig:f-spsschi2"></span>
-<img src="chi2test_ess.png" alt="SPSS output of the \chi^{2} test of independence (here labelled Pearson Chi-square) for the data in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>." width="377" />
+<img src="chi2test_ess.png" alt="SPSS output of the \chi^{2} test of independence (here labelled Pearson Chi-square) for the data in Table 4.1." width="377" />
 <p class="caption">Figure 4.1: SPSS output of the <span class="math inline">\(\chi^{2}\)</span> test of independence (here labelled “Pearson Chi-square”) for the data in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>.</p>
 </div>
 <p>When we apply any significance test, we need to be aware of its <strong>assumptions</strong>. These are conditions on the data which are not themselves being tested, but which need to be approximately satisfied for the conclusions from the test to be valid. Two broad types of such assumptions are particularly common. The first kind are assumptions about the measurement levels and population distributions of the variables. For the <span class="math inline">\(\chi^{2}\)</span> test of independence these are relatively mild. The two variables must be categorical variables. They can have any measurement level, although in most cases this will be either nominal or ordinal. The test makes no use of the ordering of the categories, so it effectively treats all variables as if they were nominal.</p>
@@ -420,25 +416,27 @@ population}.
 </ul>
 <table>
 <caption><span id="tab:t-sex-attitude-chi2">Table 4.2: </span>Calculating the <span class="math inline">\(\chi^{2}\)</span> test statistic for Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>. In the second column, SA, A, 0, D, and SD are abbreviations for Strongly agree, Agree, Neither agree nor disagree, Disagree and Strongly disagree respectively.</caption>
+<colgroup>
+<col width="8%" />
+<col width="10%" />
+<col width="9%" />
+<col width="9%" />
+<col width="15%" />
+<col width="20%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Sex</th>
+<th align="center">Attitude</th>
+<th align="right"><span class="math inline">\(f_{o}\)</span></th>
+<th align="right"><span class="math inline">\(f_{e}\)</span></th>
+<th align="right"><span class="math inline">\(f_{o}-f_{e}\)</span></th>
+<th align="right"><span class="math inline">\((f_{o}-f_{e})^{2}\)</span></th>
+<th align="right"><span class="math inline">\((f_{o}-f_{e})^{2}/f_{e}\)</span></th>
+</tr>
+</thead>
 <tbody>
-<tr class="odd">
-<td align="left">Cell</td>
-<td align="center">Cell</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="left">Sex</td>
-<td align="center">Attitude</td>
-<td align="right"><span class="math inline">\(f_{o}\)</span></td>
-<td align="right"><span class="math inline">\(f_{e}\)</span></td>
-<td align="right"><span class="math inline">\(f_{o}-f_{e}\)</span></td>
-<td align="right"><span class="math inline">\((f_{o}-f_{e})^{2}\)</span></td>
-<td align="right"><span class="math inline">\((f_{o}-f_{e})^{2}/f_{e}\)</span></td>
-</tr>
 <tr class="odd">
 <td align="left">Male</td>
 <td align="center">SA</td>
@@ -544,18 +542,18 @@ population}.
 </div>
 <div id="ss-tables-chi2test-sdist" class="section level3">
 <h3><span class="header-section-number">4.3.4</span> The sampling distribution of the test statistic</h3>
-<p>We now know that the value of the <span class="math inline">\(\chi^{2}\)</span> test statistic in the example is 18.86. But what does that mean? Why is the test statistic defined as (\ref{eq:chi2}) and not in some other form? And what does the number mean? Is 18.86 small or large, weak or strong evidence against the null hypothesis that sex and attitude are independent in the population?</p>
+<p>We now know that the value of the <span class="math inline">\(\chi^{2}\)</span> test statistic in the example is 18.86. But what does that mean? Why is the test statistic defined as (<a href="#eq:chi2">(<strong>??</strong>)</a>) and not in some other form? And what does the number mean? Is 18.86 small or large, weak or strong evidence against the null hypothesis that sex and attitude are independent in the population?</p>
 <p>In general, a test statistic for any null hypothesis should satisfy two requirements:</p>
 <ol style="list-style-type: decimal">
 <li><p>The value of the test statistic should be small when evidence against the null hypothesis is weak, and large when this evidence is strong.</p></li>
 <li><p>The sampling distribution of the test statistic should be known and of convenient form when the null hypothesis is true.</p></li>
 </ol>
-<p>Taking the first requirement first, consider the form of (\ref{eq:chi2}). The important part of this are the squared differences <span class="math inline">\((f_{o}-f_{e})^{2}\)</span> for each cell of the table. Here the expected frequencies <span class="math inline">\(f_{e}\)</span> reveal what the table would look like if the sample was in perfect agreement with the claim of independence in the population, while the observed frequencies <span class="math inline">\(f_{o}\)</span> show what the observed table actually does look like. If <span class="math inline">\(f_{o}\)</span> in a cell is close to <span class="math inline">\(f_{e}\)</span>, the squared difference is small and the cell contributes only a small addition to the test statistic. If <span class="math inline">\(f_{o}\)</span> is very different from <span class="math inline">\(f_{e}\)</span> — either much smaller or much larger than it — the squared difference and hence the cell’s contribution to the test statistic are large.</p>
+<p>Taking the first requirement first, consider the form of (<a href="#eq:chi2">(<strong>??</strong>)</a>). The important part of this are the squared differences <span class="math inline">\((f_{o}-f_{e})^{2}\)</span> for each cell of the table. Here the expected frequencies <span class="math inline">\(f_{e}\)</span> reveal what the table would look like if the sample was in perfect agreement with the claim of independence in the population, while the observed frequencies <span class="math inline">\(f_{o}\)</span> show what the observed table actually does look like. If <span class="math inline">\(f_{o}\)</span> in a cell is close to <span class="math inline">\(f_{e}\)</span>, the squared difference is small and the cell contributes only a small addition to the test statistic. If <span class="math inline">\(f_{o}\)</span> is very different from <span class="math inline">\(f_{e}\)</span> — either much smaller or much larger than it — the squared difference and hence the cell’s contribution to the test statistic are large.</p>
 <p>Summing the contributions over all the cells, this implies that the overall value of the test statistic is small when the observed frequencies are close to the expected frequencies under the null hypothesis, and large when at least some of the observed frequencies are far from the expected ones. (Note also that the smallest possible value of the statistic is 0, obtained when the observed and the expected frequency are exactly equal in each cell.) It is thus <em>large</em> values of <span class="math inline">\(\chi^{2}\)</span> which should be regarded as evidence <em>against</em> the null hypothesis, just as required by condition 1 above.</p>
 <p>Turning then to condition 2, we first need to explain what is meant by “sampling distribution of the test statistic … when the null hypothesis is true”. This is really the conceptual crux of significance testing. Because it is both so important and relatively abstract, we will introduce the concept of a sampling distribution in some detail, starting with a general definition and then focusing on the case of test statistics in general and the <span class="math inline">\(\chi^{2}\)</span> test in particular.</p>
 <div id="sampling-distribution-of-statistic-general-definition" class="section level4 unnumbered">
 <h4>Sampling distribution of statistic: General definition</h4>
-<p>The <span class="math inline">\(\chi^{2}\)</span> test statistic (\ref{eq:chi2}) is a <em>statistic</em> as defined defined at the beginning of Section <a href="c-descr1.html#s-descr1-nums">2.6</a>, that is a number calculated from data in a sample. Once we have observed a sample, the value of a statistic in that sample is known, such as the 18.862 for <span class="math inline">\(\chi^{2}\)</span> in our example.</p>
+<p>The <span class="math inline">\(\chi^{2}\)</span> test statistic (<a href="#eq:chi2">(<strong>??</strong>)</a>) is a <em>statistic</em> as defined defined at the beginning of Section <a href="c-descr1.html#s-descr1-nums">2.6</a>, that is a number calculated from data in a sample. Once we have observed a sample, the value of a statistic in that sample is known, such as the 18.862 for <span class="math inline">\(\chi^{2}\)</span> in our example.</p>
 <p>However, we also realise that this value would have been different if the sample had been different, and also that the sample could indeed have been different because the sampling is a process that involves randomness. For example, in the actually observed sample in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> we had 200 men who disagreed with the statement and 41 who strongly disagreed with it. It is easily imaginable that another random sample of 2344 respondents from the same population could have given us frequencies of, say, 195 and 46 for these cells instead. If that had happened, the value of the <span class="math inline">\(\chi^{2}\)</span> statistic would have been 19.75 instead of 18.86. Furthermore, it also seems intuitively plausible that not all such alternative values are equally likely for samples from a given population. For example, it seems quite improbable that the population from which the sample in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> was drawn would instead produce a sample which also had 1027 men and 1317 women but where all the men strongly disagreed with the statement (which would yield <span class="math inline">\(\chi^{2}=2210.3\)</span>).</p>
 <p>The ideas that different possible samples would give different values of a sample statistic, and that some such values are more likely than others, are formalised in the concept of a sampling distribution:</p>
 <ul>
@@ -570,34 +568,36 @@ population}.
 </div>
 <div id="sampling-distribution-of-the-chi2-test-statistic-under-independence" class="section level4 unnumbered">
 <h4>Sampling distribution of the <span class="math inline">\(\chi^{2}\)</span> test statistic under independence</h4>
-<p>For the <span class="math inline">\(\chi^{2}\)</span> test, we need the sampling distribution of the test statistic (\ref{eq:chi2}) under the independence null hypothesis (\ref{eq:H0-chi2}). To make these ideas a little more concrete, the upper part of Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a> shows the crosstabulation of sex and attitude in our example for a finite population where the null hypothesis holds. We can see that it does because the two conditional distributions for attitude, among men and among women, are the same (this is the only aspect of the distributions that matters for this demonstration; the exact values of the probabilities are otherwise irrelevant). These are of course hypothetical population distributions, as we do not know the true ones. We also do not claim that this hypothetical population is even close to the true one. The whole point of this step of hypothesis testing is to set up a population where the null hypothesis holds as a fixed point of comparison, to see what samples from such a population would look like and how they compare with the real sample that we have actually observed.</p>
+<p>For the <span class="math inline">\(\chi^{2}\)</span> test, we need the sampling distribution of the test statistic (<a href="#eq:chi2">(<strong>??</strong>)</a>) under the independence null hypothesis (<a href="#eq:H0-chi2">(<strong>??</strong>)</a>). To make these ideas a little more concrete, the upper part of Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a> shows the crosstabulation of sex and attitude in our example for a finite population where the null hypothesis holds. We can see that it does because the two conditional distributions for attitude, among men and among women, are the same (this is the only aspect of the distributions that matters for this demonstration; the exact values of the probabilities are otherwise irrelevant). These are of course hypothetical population distributions, as we do not know the true ones. We also do not claim that this hypothetical population is even close to the true one. The whole point of this step of hypothesis testing is to set up a population where the null hypothesis holds as a fixed point of comparison, to see what samples from such a population would look like and how they compare with the real sample that we have actually observed.</p>
 <p><em>Population (frequencies are in millions of people):</em></p>
-<table style="width:99%;">
+<table style="width:98%;">
 <caption><span id="tab:t-sex-attitude-H0pop">Table 4.3: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Attitude towards income redistribution by sex (with row proportions in parentheses), in a hypothetical population of 50 million people where sex and attitude are independent, and in one random sample from this population.</caption>
 <colgroup>
-<col width="6%" />
-<col width="52%" />
-<col width="7%" />
 <col width="11%" />
-<col width="7%" />
-<col width="7%" />
-<col width="5%" />
+<col width="17%" />
+<col width="12%" />
+<col width="20%" />
+<col width="13%" />
+<col width="13%" />
+<col width="8%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="center">Agree strongly</th>
+<th align="center"><br />
+Agree</th>
+<th align="center">Neither agree nor disagree</th>
+<th align="center"><br />
+Disagree</th>
+<th align="center">Disagree strongly</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-Sex</td>
-<td align="center">Agree strongly</td>
-<td align="center"><br />
-Agree</td>
-<td align="center">Neither agree nor disagree</td>
-<td align="center"><br />
-Disagree</td>
-<td align="center">Disagree strongly</td>
-<td align="right"><br />
-Total</td>
-</tr>
-<tr class="even">
 <td align="left">Male</td>
 <td align="center">3.744</td>
 <td align="center">11.160</td>
@@ -606,7 +606,7 @@ Total</td>
 <td align="center">0.768</td>
 <td align="right">24.00</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(0.156)</td>
 <td align="center">(0.465)</td>
@@ -615,7 +615,7 @@ Total</td>
 <td align="center">(0.032)</td>
 <td align="right">(1.0)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Female</td>
 <td align="center">4.056</td>
 <td align="center">12.090</td>
@@ -624,7 +624,7 @@ Total</td>
 <td align="center">0.832</td>
 <td align="right">26.00</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(0.156)</td>
 <td align="center">(0.465)</td>
@@ -633,7 +633,7 @@ Total</td>
 <td align="center">(0.032)</td>
 <td align="right">(1.0)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Total</td>
 <td align="center">7.800</td>
 <td align="center">23.250</td>
@@ -642,7 +642,7 @@ Total</td>
 <td align="center">1.600</td>
 <td align="right">50</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(0.156)</td>
 <td align="center">(0.465)</td>
@@ -654,32 +654,34 @@ Total</td>
 </tbody>
 </table>
 <p><em>Sample:</em></p>
-<table style="width:98%;">
+<table style="width:97%;">
 <caption><span id="tab:t-sex-attitude-H0pop">Table 4.3: </span><span class="math inline">\(\chi^{2}=2.8445\)</span></caption>
 <colgroup>
-<col width="40%" />
-<col width="9%" />
-<col width="8%" />
 <col width="13%" />
-<col width="9%" />
-<col width="9%" />
-<col width="6%" />
+<col width="13%" />
+<col width="12%" />
+<col width="20%" />
+<col width="13%" />
+<col width="13%" />
+<col width="8%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="center">Agree strongly</th>
+<th align="center"><br />
+Agree</th>
+<th align="center">Neither agree nor disagree</th>
+<th align="center"><br />
+Disagree</th>
+<th align="center">Disagree strongly</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-Sex</td>
-<td align="center">Agree strongly</td>
-<td align="center"><br />
-Agree</td>
-<td align="center">Neither agree nor disagree</td>
-<td align="center"><br />
-Disagree</td>
-<td align="center">Disagree strongly</td>
-<td align="right"><br />
-Total</td>
-</tr>
-<tr class="even">
 <td align="left">Male</td>
 <td align="center">181</td>
 <td align="center">505</td>
@@ -688,7 +690,7 @@ Total</td>
 <td align="center">41</td>
 <td align="right">1121</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(0.161)</td>
 <td align="center">(0.450)</td>
@@ -697,7 +699,7 @@ Total</td>
 <td align="center">(0.037)</td>
 <td align="right">(1.0)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Female</td>
 <td align="center">183</td>
 <td align="center">569</td>
@@ -706,7 +708,7 @@ Total</td>
 <td align="center">40</td>
 <td align="right">1223</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(0.150)</td>
 <td align="center">(0.465)</td>
@@ -715,7 +717,7 @@ Total</td>
 <td align="center">(0.033)</td>
 <td align="right">(1.0)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Total</td>
 <td align="center">364</td>
 <td align="center">1074</td>
@@ -724,7 +726,7 @@ Total</td>
 <td align="center">81</td>
 <td align="right">2344</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(0.155)</td>
 <td align="center">(0.458)</td>
@@ -739,17 +741,17 @@ Total</td>
 <p>Before we proceed with the discussion of the sampling distribution of the <span class="math inline">\(\chi^{2}\)</span> statistic, we should note that it will be a <em>continuous</em> probability distribution. In other words, the number of distinct values that the test statistic can have in different samples is so large that their distribution is clearly effectively continuous. This is true even though the two <em>variables</em> in the contingency table are themselves categorical. The two distributions, the population distribution of the variables and the sampling distribution of a test statistic, are quite separate entities and need not resemble each other. We will consider the nature of continuous probability distributions in more detail in Chapter <a href="c-means.html#c-means">7</a>. In this chapter we will discuss them relatively superficially and only to the extent that is absolutely necessary.</p>
 <p>Figure <a href="c-tables.html#fig:f-chisampld">4.2</a> shows what we observe if do a computer simulation to draw many more samples from the population in Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a>. The figure shows the histogram of the values of the <span class="math inline">\(\chi^{2}\)</span> test statistic calculated from 100,000 such samples. We can see, for example, that <span class="math inline">\(\chi^{2}\)</span> is between 0 and 10 for most of the samples, and larger than that for only a small proportion of them. In particular, we note already that the value <span class="math inline">\(\chi^{2}=18.8\)</span> that was actually observed in the real sample occurs very rarely if samples are drawn from a population where the null hypothesis of independence holds.</p>
 <div class="figure"><span id="fig:f-chisampld"></span>
-<img src="chi2sims.png" alt="Example of the sampling distribution of the \chi^{2} test statistic for independence. The plot shows a histogram of the values of the statistic in 100,000 simulated samples of size n=2344 drawn from the population distribution in the upper part of Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a>. Superimposed on the histogram is the curve of the approximate sampling distribution, which is the \chi^{2} distribution with 4 degrees of freedom." width="321" />
+<img src="chi2sims.png" alt="Example of the sampling distribution of the \chi^{2} test statistic for independence. The plot shows a histogram of the values of the statistic in 100,000 simulated samples of size n=2344 drawn from the population distribution in the upper part of Table 4.3. Superimposed on the histogram is the curve of the approximate sampling distribution, which is the \chi^{2} distribution with 4 degrees of freedom." width="321" />
 <p class="caption">Figure 4.2: Example of the sampling distribution of the <span class="math inline">\(\chi^{2}\)</span> test statistic for independence. The plot shows a histogram of the values of the statistic in 100,000 simulated samples of size <span class="math inline">\(n=2344\)</span> drawn from the population distribution in the upper part of Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a>. Superimposed on the histogram is the curve of the approximate sampling distribution, which is the <span class="math inline">\(\chi^{2}\)</span> distribution with 4 degrees of freedom.</p>
 </div>
-<p>The form of the sampling distribution can also be derived through mathematical arguments. These show that for any two-way contingency table, the approximate sampling distribution of the <span class="math inline">\(\chi^{2}\)</span> statistic is a member of a class of continuous probability distributions known as the <span class="math inline">\(\boldsymbol{\chi}^{2}\)</span> <strong>distributions</strong> (the same symbol <span class="math inline">\(\chi^{2}\)</span> is rather confusingly used to refer both to the test statistic and its sampling distribution). The <span class="math inline">\(\chi^{2}\)</span> distributions are a family of individual distributions, each of which is identified by a number known as the <strong>degrees of freedom</strong> of the distribution. Figure <a href="c-tables.html#fig:f-chi2dists">4.3</a> shows the probability curves of some <span class="math inline">\(\chi^{2}\)</span> distributions (what such curves mean is explained in more detail below, and in Chapter <a href="c-means.html#c-means">7</a>). All of the distributions are skewed to the right, and the shape of a particular curve depends on its degrees of feedom. All of the curves give non-zero probabilites only for positive values of the variable on the horizontal axis, indicating that the value of a <span class="math inline">\(\chi^{2}\)</span>-distributed variable can never be negative. This is appropriate for the <span class="math inline">\(\chi^{2}\)</span> test statistic (\ref{eq:chi2}), which is also always non-negative.</p>
+<p>The form of the sampling distribution can also be derived through mathematical arguments. These show that for any two-way contingency table, the approximate sampling distribution of the <span class="math inline">\(\chi^{2}\)</span> statistic is a member of a class of continuous probability distributions known as the <span class="math inline">\(\boldsymbol{\chi}^{2}\)</span> <strong>distributions</strong> (the same symbol <span class="math inline">\(\chi^{2}\)</span> is rather confusingly used to refer both to the test statistic and its sampling distribution). The <span class="math inline">\(\chi^{2}\)</span> distributions are a family of individual distributions, each of which is identified by a number known as the <strong>degrees of freedom</strong> of the distribution. Figure <a href="c-tables.html#fig:f-chi2dists">4.3</a> shows the probability curves of some <span class="math inline">\(\chi^{2}\)</span> distributions (what such curves mean is explained in more detail below, and in Chapter <a href="c-means.html#c-means">7</a>). All of the distributions are skewed to the right, and the shape of a particular curve depends on its degrees of feedom. All of the curves give non-zero probabilites only for positive values of the variable on the horizontal axis, indicating that the value of a <span class="math inline">\(\chi^{2}\)</span>-distributed variable can never be negative. This is appropriate for the <span class="math inline">\(\chi^{2}\)</span> test statistic (<a href="#eq:chi2">(<strong>??</strong>)</a>), which is also always non-negative.</p>
 <div class="figure"><span id="fig:f-chi2dists"></span>
 <img src="chi2dists.png" alt="Probability curves of some \chi^{2} distributions with different degrees of freedom (df)." width="434" />
 <p class="caption">Figure 4.3: Probability curves of some <span class="math inline">\(\chi^{2}\)</span> distributions with different degrees of freedom (df).</p>
 </div>
 <p>For the <span class="math inline">\(\chi^{2}\)</span> test statistic of independence we have the following result:</p>
 <ul>
-<li>When the null hypothesis (\ref{eq:H0-chi2}) is true in the population, the sampling distribution of the test statistic (\ref{eq:chi2}) calculated for a two-way table with <span class="math inline">\(R\)</span> rows and <span class="math inline">\(C\)</span> columns is approximately the <span class="math inline">\(\chi^{2}\)</span> distribution with <span class="math inline">\(df=(R-1)(C-1)\)</span> degrees of freedom.</li>
+<li>When the null hypothesis (<a href="#eq:H0-chi2">(<strong>??</strong>)</a>) is true in the population, the sampling distribution of the test statistic (<a href="#eq:chi2">(<strong>??</strong>)</a>) calculated for a two-way table with <span class="math inline">\(R\)</span> rows and <span class="math inline">\(C\)</span> columns is approximately the <span class="math inline">\(\chi^{2}\)</span> distribution with <span class="math inline">\(df=(R-1)(C-1)\)</span> degrees of freedom.</li>
 </ul>
 <p>The degrees of freedom are thus given by the number of rows in the table minus one, multiplied by the number of columns minus one. Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>, for example, has <span class="math inline">\(R=2\)</span> rows and <span class="math inline">\(C=5\)</span> columns, so its degrees of freedom are <span class="math inline">\(df=(2-1)\times(5-1)=4\)</span> (as indicated by the “df” column of the SPSS output of Figure <a href="c-tables.html#fig:f-spsschi2">4.1</a>). Figure <a href="c-tables.html#fig:f-chisampld">4.2</a> shows the curve of the <span class="math inline">\(\chi^{2}\)</span> distribution with <span class="math inline">\(df=4\)</span> superimposed on the histogram of the sampling distribution obtained from the computer simulation. The two are in essentially perfect agreement, as mathematical theory indicates they should be.</p>
 <p>These degrees of freedom can be given a further interpretation which relates to the structure of the table.<a href="#fn16" class="footnoteRef" id="fnref16"><sup>16</sup></a> We can, however, ignore this and treat <span class="math inline">\(df\)</span> simply as a number which identifies the appropriate <span class="math inline">\(\chi^{2}\)</span> distribution to be used for the <span class="math inline">\(\chi^{2}\)</span> test for a particular table. Often it is convenient to use the notation <span class="math inline">\(\chi^{2}_{df}\)</span> to refer to a specific distribution, e.g. <span class="math inline">\(\chi^{2}_{4}\)</span> for the <span class="math inline">\(\chi^{2}\)</span> distribution with 4 degrees of freedom.</p>
@@ -765,59 +767,61 @@ Total</td>
 </ul>
 <p>The relevance of the phrase “in the direction of the alternative hypothesis” is not apparent for the <span class="math inline">\(\chi^{2}\)</span> test, so we can ignore it for the moment. As argued above, for this test it is large values of the test statistic which indicate evidence against the null hypothesis of independence, so the values that correspond to “as strong or stronger evidence” against it are the ones that are as large or larger than the observed statistic. Their probability is evaluated from the <span class="math inline">\(\chi^{2}\)</span> sampling distribution defined above.</p>
 <p>Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a> illustrates this calculation. It shows the curve of the <span class="math inline">\(\chi^{2}_{4}\)</span> distribution, which is the relevant sampling distribution for the test for the <span class="math inline">\(2\times 5\)</span> table in our example. Suppose first, hypothetically, that we had actually observed the sample in the lower part of Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a>, for which the value of the test statistic is <span class="math inline">\(\chi^{2}=2.84\)</span>. The <span class="math inline">\(P\)</span>-value of the test for this sample would then be the probability of values of 2.84 or larger, evaluated from the <span class="math inline">\(\chi^{2}_{4}\)</span> distribution.</p>
-<p>For a probability curve like the one in Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a>, areas under the curve correspond to probabilities. For example, the area under the whole curve from 0 to infinity is 1, because a variable which follows the <span class="math inline">\(\chi^{2}_{4}\)</span> distribution is certain to have one of these values. Similarly, the probability that we need for the <span class="math inline">\(P\)</span>-value for <span class="math inline">\(\chi^{2}=2.84\)</span> is the area under the curve to the right of the value 2.84, which is shown in grey in Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a>. This is <span class="math inline">\(P=0.585\)</span>.</p>
-<p>The test statistic for the real sample in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> was <span class="math inline">\(\chi^{2}=18.86\)</span>, so the <span class="math inline">\(P\)</span>-value is the combined probability of this and all larger values. This is also shown in Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a>. However, this area is not really visible in the plot because 18.86 is far into the tail of the distribution where the probabilities are low. The <span class="math inline">\(P\)</span>-value is then also low, specifically <span class="math inline">\(P=0.0008\)</span>.</p>
 <div class="figure"><span id="fig:f-pvalchisq"></span>
 <img src="chi2_pval.png" alt="Illustration of the P-value for a \chi^{2} test statistic with 4 degrees of freedom and with values \chi^{2}=2.84 (area of the grey region under the curve) and \chi^{2}=18.86." width="302" />
 <p class="caption">Figure 4.4: Illustration of the <span class="math inline">\(P\)</span>-value for a <span class="math inline">\(\chi^{2}\)</span> test statistic with 4 degrees of freedom and with values <span class="math inline">\(\chi^{2}=2.84\)</span> (area of the grey region under the curve) and <span class="math inline">\(\chi^{2}=18.86\)</span>.</p>
 </div>
+<p>For a probability curve like the one in Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a>, areas under the curve correspond to probabilities. For example, the area under the whole curve from 0 to infinity is 1, because a variable which follows the <span class="math inline">\(\chi^{2}_{4}\)</span> distribution is certain to have one of these values. Similarly, the probability that we need for the <span class="math inline">\(P\)</span>-value for <span class="math inline">\(\chi^{2}=2.84\)</span> is the area under the curve to the right of the value 2.84, which is shown in grey in Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a>. This is <span class="math inline">\(P=0.585\)</span>.</p>
+<p>The test statistic for the real sample in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> was <span class="math inline">\(\chi^{2}=18.86\)</span>, so the <span class="math inline">\(P\)</span>-value is the combined probability of this and all larger values. This is also shown in Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a>. However, this area is not really visible in the plot because 18.86 is far into the tail of the distribution where the probabilities are low. The <span class="math inline">\(P\)</span>-value is then also low, specifically <span class="math inline">\(P=0.0008\)</span>.</p>
 <p>In practice the <span class="math inline">\(P\)</span>-value is usually calculated by a computer. In the SPSS output of Figure <a href="c-tables.html#fig:f-spsschi2">4.1</a> is is shown in the column labelled “Asymp. Sig. (2-sided)” which is short for “Asymptotic significance level” (you can ignore the “2-sided” for this test). The value is listed as 0.001. SPSS reports, by default, <span class="math inline">\(P\)</span>-values rounded to three decimal places. Sometimes even the smallest of these is zero, in which case the value is displayed as “.000”. This is bad practice, as the <span class="math inline">\(P\)</span>-value for most significance tests is never <em>exactly</em> zero. <span class="math inline">\(P\)</span>-values given by SPSS as “.000” should be reported instead as “<span class="math inline">\(P&lt;0.001\)</span>”.</p>
 <p>Before the widespread availablity of statistical software, <span class="math inline">\(P\)</span>-values had to be obtained approximately using tables of distributions. Since you may still see this approach described in many text books, it is briefly explained here. You may also need to use the table method in the examination, where computers are not allowed. Otherwise, however, this approach is now of little interest: if the <span class="math inline">\(P\)</span>-value is given in the computer output, there is no need to refer to distributional tables.</p>
 <p>All introductory statistical text books include a table of <span class="math inline">\(\chi^{2}\)</span> distributions, although its format may vary slightly form book to book. Such a table is also included in the Appendix of this coursepack. An extract from the table is shown in Table <a href="c-tables.html#tab:t-chi2table">4.4</a>. Each row of the table corresponds to a <span class="math inline">\(\chi^{2}\)</span> distribution with the degrees of freedom given in the first column. The other columns show so-called “critical values” for the probability levels given on the first row. Consider, for example, the row for 4 degrees of freedom. The figure 7.78 in the column for probability level 0.100 indicates that the probability of a value of 7.78 or larger is exactly 0.100 for this distribution. The 9.49 in the next column shows that the probability of 9.49 or larger is 0.050. Another way of saying this is that if the appropriate degrees of freedom were 4, and the test statistic was 7.78, the <span class="math inline">\(P\)</span>-value would be exactly 0.100, and if the statistic was 9.49, <span class="math inline">\(P\)</span> would be 0.050.</p>
 <table>
-<caption><span id="tab:t-chi2table">Table 4.4: </span>An extract from a table of critical values for <span class="math inline">\(\chi^{2}\)</span> distributions. Row 2-5 show the right-hand tail probability</caption>
+<caption><span id="tab:t-chi2table">Table 4.4: </span>An extract from a table of critical values for <span class="math inline">\(\chi^{2}\)</span> distributions. Row 2-5 show the right-hand tail probability.</caption>
+<thead>
+<tr class="header">
+<th align="left">df</th>
+<th align="right">0.100</th>
+<th align="right">0.050</th>
+<th align="right">0.010</th>
+<th align="right">0.001</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left">df</td>
-<td align="right">0.100</td>
-<td align="right">0.050</td>
-<td align="right">0.010</td>
-<td align="right">0.001</td>
-</tr>
-<tr class="even">
 <td align="left">1</td>
 <td align="right">2.71</td>
 <td align="right">3.84</td>
 <td align="right">6.63</td>
 <td align="right">10.83</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">2</td>
 <td align="right">4.61</td>
 <td align="right">5.99</td>
 <td align="right">9.21</td>
 <td align="right">13.82</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">3</td>
 <td align="right">6.25</td>
 <td align="right">7.81</td>
 <td align="right">11.34</td>
 <td align="right">16.27</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">4</td>
 <td align="right">7.78</td>
 <td align="right">9.49</td>
 <td align="right">13.28</td>
 <td align="right">18.47</td>
 </tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(\vdots\)</span></td>
-<td align="right"><span class="math inline">\(\vdots\)</span></td>
+<tr class="odd">
+<td align="left">…</td>
+<td align="right">…</td>
 <td align="right"></td>
 <td align="right"></td>
-<td align="right"><span class="math inline">\(\vdots\)</span></td>
+<td align="right">…</td>
 </tr>
 </tbody>
 </table>
@@ -883,8 +887,9 @@ Total</td>
         </div>
       </div>
 <a href="c-samples.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-probs.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="c-probs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -893,9 +898,10 @@ Total</td>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
@@ -910,8 +916,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kbenoit/coursepack-bookdown/edit/master/04-MY451-tables.Rmd",
-"text": null
+"link": "https://github.com/LSE-Methodology/MY451/edit/master/04-MY451-tables.Rmd",
+"text": "Edit"
 },
 "download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
 "toc": {
@@ -926,7 +932,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

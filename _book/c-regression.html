@@ -6,16 +6,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MY451 Introduction to Quantitative Analysis</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models.">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="MY451 Introduction to Quantitative Analysis" />
   <meta property="og:type" content="book" />
   
   
   <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="kbenoit/coursepack-bookdown" />
+  <meta name="github-repo" content="LSE-Methodology/MY451" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="MY451 Introduction to Quantitative Analysis" />
@@ -28,11 +27,6 @@
 <meta name="author" content="London School of Economics and Political Science">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,7 +35,6 @@ MathJax.Hub.Config({
   
 <link rel="prev" href="c-means.html">
 <link rel="next" href="c-3waytables.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -62,6 +55,7 @@ MathJax.Hub.Config({
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -239,7 +233,7 @@ MathJax.Hub.Config({
 </ul></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/kbenoit/coursepack-bookdown/" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
 
 </ul>
 
@@ -291,7 +285,7 @@ MathJax.Hub.Config({
 <h4>Scatterplots</h4>
 <p>The standard statistical graphic for summarising the association between two continuous variables is a <strong>scatterplot</strong>. An example of it is given in Figure <a href="c-regression.html#fig:f-corruption1">8.1</a>, which shows a scatterplot of Control of corruption against GDP per capita for 61 countries for which the corruption variable is at least 60 (the motivation of this restriction will be discussed later). The two axes of the plot show possible values of the two variables. The horizontal axis, here corresponding to Control of corruption, is conventionally used for the explanatory variable <span class="math inline">\(X\)</span>, and is often referred to as the <strong>X-axis</strong>. The vertical axis, here used for GDP per capita, then corresponds to the response variable <span class="math inline">\(Y\)</span>, and is known as the <strong>Y-axis</strong>.</p>
 <div class="figure"><span id="fig:f-corruption1"></span>
-<img src="corruption1.png" alt="A scatterplot of Control of corruption vs. GDP per capita in the Global Civil Society data set, for 61 countries with Control of corruption at least 60. The dotted lines are drawn to the point corresponding to the United Kingdom." width="529" />
+<img src="corruption1.png" alt="A scatterplot of Control of corruption vs. GDP per capita in the Global Civil Society data set, for 61 countries with Control of corruption at least 60. The dotted lines are drawn to the point corresponding to the United Kingdom." width="510" />
 <p class="caption">Figure 8.1: A scatterplot of Control of corruption vs. GDP per capita in the Global Civil Society data set, for 61 countries with Control of corruption at least 60. The dotted lines are drawn to the point corresponding to the United Kingdom.</p>
 </div>
 <p>The observed data are shown as points in the scatterplot, one for each of the <span class="math inline">\(n\)</span> units. The location of each point is determined by its values of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. For example, Figure <a href="c-regression.html#fig:f-corruption1">8.1</a> highlights the observation for the United Kingdom, for which the corruption measure (<span class="math inline">\(X\)</span>) is 94.3 and GDP per capita (<span class="math inline">\(Y\)</span>) is $24160. The point for UK is thus placed at the intersection of a vertical line drawn from 94.3 on the <span class="math inline">\(X\)</span>-axis and a horizontal line from 24160 on the <span class="math inline">\(Y\)</span>-axis, as shown in the plot.</p>
@@ -316,25 +310,26 @@ MathJax.Hub.Config({
 <h3><span class="header-section-number">8.2.3</span> Linear associations</h3>
 <p>Consider again statistically independent observations of <span class="math inline">\((X_{i}, Y_{i})\)</span>, such as those displayed in Figure <a href="c-regression.html#fig:f-corruption1">8.1</a>. Recall the definition that two variables are associated if the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span> is different for different values of <span class="math inline">\(X\)</span>. In the two-sample examples of Chapter <a href="c-means.html#c-means">7</a> this could be examined by comparing two conditional distributions, since <span class="math inline">\(X\)</span> had only two possible values. Now, however, <span class="math inline">\(X\)</span> has many (in principle, infinitely many) possible values, so we will need to somehow define and compare conditional distributions given each of them. We will begin with a rather informal discussion of how this might be done. This will lead directly to a more precise and formal definition introduced in Section <a href="c-regression.html#s-regression-simple">8.3</a>.</p>
 <div class="figure"><span id="fig:f-corruption2"></span>
-<img src="corruption2.png" alt="The same scatterplot of Control of corruption vs. GDP per capita as in Figure <a href="c-regression.html#fig:f-corruption1">8.1</a>, augmented by the best-fitting (least squares) straight line (solid line) and reference lines for two example values of Control of corruption (dotted lines)." width="510" />
+<img src="corruption2.png" alt="The same scatterplot of Control of corruption vs. GDP per capita as in Figure 8.1, augmented by the best-fitting (least squares) straight line (solid line) and reference lines for two example values of Control of corruption (dotted lines)." width="510" />
 <p class="caption">Figure 8.3: The same scatterplot of Control of corruption vs. GDP per capita as in Figure <a href="c-regression.html#fig:f-corruption1">8.1</a>, augmented by the best-fitting (least squares) straight line (solid line) and reference lines for two example values of Control of corruption (dotted lines).</p>
 </div>
 <p>Figure <a href="c-regression.html#fig:f-corruption2">8.3</a> shows the same scatterplot as Figure <a href="c-regression.html#fig:f-corruption1">8.1</a>. Consider first one value of <span class="math inline">\(X\)</span> (Control of corruption), say 65. To get a rough idea of the conditional distribution of <span class="math inline">\(Y\)</span> (GDP per capita) given this value of <span class="math inline">\(X\)</span>, we could examine the sample distribution of the values of <span class="math inline">\(Y\)</span> for the units for which the value of <span class="math inline">\(X\)</span> is close to 65. These correspond to the points near the vertical line drawn at <span class="math inline">\(X=65\)</span> in Figure <a href="c-regression.html#fig:f-corruption2">8.3</a>. This can be repeated for any value of <span class="math inline">\(X\)</span>; for example, Figure <a href="c-regression.html#fig:f-corruption2">8.3</a> also includes a vertical reference line at <span class="math inline">\(X=95\)</span>, for examining the conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=95\)</span>.<a href="#fn42" class="footnoteRef" id="fnref42"><sup>42</sup></a></p>
 <p>As in Chapter <a href="c-means.html#c-means">7</a>, associations between variables will here be considered almost solely in terms of differences in the <em>means</em> of the conditional distributions of <span class="math inline">\(Y\)</span> at different values of <span class="math inline">\(X\)</span>. For example, Figure <a href="c-regression.html#fig:f-corruption2">8.3</a> suggests that the conditional mean of <span class="math inline">\(Y\)</span> when X is 65 is around or just under 10000. At <span class="math inline">\(X=95\)</span>, on the other hand, the conditional mean seems to be between 20000 and 25000. The mean of <span class="math inline">\(Y\)</span> is thus higher at the larger value of X. More generally, this finding is consistent across the scatterplot, in that the conditional mean of <span class="math inline">\(Y\)</span> appears to increase when we consider increasingly large values of <span class="math inline">\(X\)</span>, indicating that higher levels of Control of corruption are associated with higher average levels of GDP. This is often expressed by saying that the conditional mean of <span class="math inline">\(Y\)</span> increases when we “increase” <span class="math inline">\(X\)</span>.<a href="#fn43" class="footnoteRef" id="fnref43"><sup>43</sup></a> This is the sense in which we will examine associations between continuous variables: does the conditional mean of <span class="math inline">\(Y\)</span> change (increase or decrease) when we increase <span class="math inline">\(X\)</span>? If it does, the two variables are associated; if it does not, there is no association of this kind. This definition also agrees with the one linking association with prediction: if the mean of <span class="math inline">\(Y\)</span> is different for different values of <span class="math inline">\(X\)</span>, knowing the value of <span class="math inline">\(X\)</span> will clearly help us in making predictions about likely values of <span class="math inline">\(Y\)</span>. Based on the information in Figure <a href="c-regression.html#fig:f-corruption2">8.3</a>, for example, our best guesses of the GDPs of two countries would clearly be different if we were told that the control of corruption measure was 65 for one country and 95 for the other.</p>
-<p>The <em>nature</em> of the association between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is characterised by <em>how</em> the values of <span class="math inline">\(Y\)</span> change when <span class="math inline">\(X\)</span> increases. First, it is almost always reasonable to conceive these changes as reasonably smooth and gradual. In other words, if two values of <span class="math inline">\(X\)</span> are close to each other, the conditional means of <span class="math inline">\(Y\)</span> will be similar too; for example, if the mean of <span class="math inline">\(Y\)</span> is 5 when <span class="math inline">\(X=10\)</span>, its mean when <span class="math inline">\(X=10.01\)</span> is likely to be quite close to 5 rather than, say, 405. In technical terms, this means that the conditional mean of <span class="math inline">\(Y\)</span> will be described by a smooth mathematical function of <span class="math inline">\(X\)</span>. Graphically, the means of <span class="math inline">\(Y\)</span> as <span class="math inline">\(X\)</span> increases will then trace a smooth curve in the scatterplot. The simplest possibility for such a curve is a straight line. This possibility is illustrated by plot (a) of Figure <a href="#fig:f-scatterplots">8.4</a> (this and the other five plots in the figure display artificial data, generated for this illustration). Here all of the points fall on a line, so that when <span class="math inline">\(X\)</span> increases, the values of <span class="math inline">\(Y\)</span> increase at a constant rate. A relationship like this is known as a <strong>linear association</strong> between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Linear associations are the starting point for examining associations between continuous variables, and often the only ones considered. In this chapter we too will focus almost completely on them.</p>
-<p><img src="olspl1.png" title="fig:" alt="Scatterplots of artificial data sets of two variables. Each plot also shows the best-fitting (least squares) straight line and the correlation coefficient r." width="302" /> <img src="olspl2.png" width="302" /><br />
-<img src="olspl3.png" width="302" /> <img src="olspl4.png" width="302" /><br />
-<img src="olspl5.png" width="302" /> <img src="olspl6.png" width="302" /><br />
-In plot (a) of Figure <a href="#fig:f-scatterplots">8.4</a> all the points are exactly on the straight line. This indicates a <em>perfect</em> linear association, where <span class="math inline">\(Y\)</span> can be predicted exactly if <span class="math inline">\(X\)</span> is known, so that the association is <em>deterministic</em>. Such a situation is neither realistic in practice, nor necessary for the association to be described as linear. All that is required for the latter is that the conditional <em>means</em> of <span class="math inline">\(Y\)</span> given different values of <span class="math inline">\(X\)</span> fall (approximately) on a straight line. This is illustrated by plot (b) of Figure <a href="#fig:f-scatterplots">8.4</a>, which shows a scatterplot of individual observations together with an approximation of the line of the means of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span> (how the line was drawn will be explained later). Here the linear association is not perfect, as the individual points are not all on the same line but scattered around it. Nevertheless, the line seems to capture an important systematic feature of the data, which is that the <em>average</em> values of <span class="math inline">\(Y\)</span> increase at an approximately constant rate as <span class="math inline">\(X\)</span> increases. This combination of systematic and random elements is characteristic of all statistical associations, and it is also central to the formal setting for statistical inference for linear associations described in Section <a href="c-regression.html#s-regression-simple">8.3</a> below.</p>
-<p>The <strong>direction</strong> of a linear association can be either <strong>positive</strong> or <strong>negative</strong>. Plots (a) and (b) of Figure <a href="#fig:f-scatterplots">8.4</a> show a positive association, because increasing <span class="math inline">\(X\)</span> is associated with increasing average values of <span class="math inline">\(Y\)</span>. This is indicated by the upward slope of the line describing the association. Plot (c) shows an example of a negative association, where the line slopes downwards and increasing values of <span class="math inline">\(X\)</span> are associated with decreasing values of <span class="math inline">\(Y\)</span>. The third possibility, illustrated by plot (d), is that the line slopes neither up nor down, so that the mean of <span class="math inline">\(Y\)</span> is the same for all values of <span class="math inline">\(X\)</span>. In this case there is no (linear) association between the variables.</p>
-<p>Not all associations between continuous variables are linear, as shown by the remaining two plots of Figure <a href="#fig:f-scatterplots">8.4</a>. These illustrate two kinds of <strong>nonlinear</strong> associations. In plot (e), the association is still clearly <em>monotonic</em>, meaning that average values of <span class="math inline">\(Y\)</span> change in the same direction — here increase — when <span class="math inline">\(X\)</span> increases. The rate of this increase, however, is not constant, as indicated by the slightly curved shape of the cloud of points. The values of <span class="math inline">\(Y\)</span> seem to increase faster for small values of <span class="math inline">\(X\)</span> than for large ones. A straight line drawn through the scatterplot captures the general direction of the increase, but misses its nonlinearity. One practical example of such a relationship is the one between years of job experience and salary: it is often found that salary increases fastest early on in a person’s career and more slowly later on.</p>
+<p>The <em>nature</em> of the association between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is characterised by <em>how</em> the values of <span class="math inline">\(Y\)</span> change when <span class="math inline">\(X\)</span> increases. First, it is almost always reasonable to conceive these changes as reasonably smooth and gradual. In other words, if two values of <span class="math inline">\(X\)</span> are close to each other, the conditional means of <span class="math inline">\(Y\)</span> will be similar too; for example, if the mean of <span class="math inline">\(Y\)</span> is 5 when <span class="math inline">\(X=10\)</span>, its mean when <span class="math inline">\(X=10.01\)</span> is likely to be quite close to 5 rather than, say, 405. In technical terms, this means that the conditional mean of <span class="math inline">\(Y\)</span> will be described by a smooth mathematical function of <span class="math inline">\(X\)</span>. Graphically, the means of <span class="math inline">\(Y\)</span> as <span class="math inline">\(X\)</span> increases will then trace a smooth curve in the scatterplot. The simplest possibility for such a curve is a straight line. This possibility is illustrated by plot (a) of Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a> (this and the other five plots in the figure display artificial data, generated for this illustration). Here all of the points fall on a line, so that when <span class="math inline">\(X\)</span> increases, the values of <span class="math inline">\(Y\)</span> increase at a constant rate. A relationship like this is known as a <strong>linear association</strong> between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Linear associations are the starting point for examining associations between continuous variables, and often the only ones considered. In this chapter we too will focus almost completely on them.</p>
+<div class="figure"><span id="fig:f-scatterplots"></span>
+<img src="scatterplots.png" alt="Scatterplots of artificial data sets of two variables. Each plot also shows the best-fitting (least squares) straight line and the correlation coefficient r." width="510" />
+<p class="caption">Figure 8.4: Scatterplots of artificial data sets of two variables. Each plot also shows the best-fitting (least squares) straight line and the correlation coefficient <span class="math inline">\(r\)</span>.</p>
+</div>
+<p>In plot (a) of Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a> all the points are exactly on the straight line. This indicates a <em>perfect</em> linear association, where <span class="math inline">\(Y\)</span> can be predicted exactly if <span class="math inline">\(X\)</span> is known, so that the association is <em>deterministic</em>. Such a situation is neither realistic in practice, nor necessary for the association to be described as linear. All that is required for the latter is that the conditional <em>means</em> of <span class="math inline">\(Y\)</span> given different values of <span class="math inline">\(X\)</span> fall (approximately) on a straight line. This is illustrated by plot (b) of Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a>, which shows a scatterplot of individual observations together with an approximation of the line of the means of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span> (how the line was drawn will be explained later). Here the linear association is not perfect, as the individual points are not all on the same line but scattered around it. Nevertheless, the line seems to capture an important systematic feature of the data, which is that the <em>average</em> values of <span class="math inline">\(Y\)</span> increase at an approximately constant rate as <span class="math inline">\(X\)</span> increases. This combination of systematic and random elements is characteristic of all statistical associations, and it is also central to the formal setting for statistical inference for linear associations described in Section <a href="c-regression.html#s-regression-simple">8.3</a> below.</p>
+<p>The <strong>direction</strong> of a linear association can be either <strong>positive</strong> or <strong>negative</strong>. Plots (a) and (b) of Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a> show a positive association, because increasing <span class="math inline">\(X\)</span> is associated with increasing average values of <span class="math inline">\(Y\)</span>. This is indicated by the upward slope of the line describing the association. Plot (c) shows an example of a negative association, where the line slopes downwards and increasing values of <span class="math inline">\(X\)</span> are associated with decreasing values of <span class="math inline">\(Y\)</span>. The third possibility, illustrated by plot (d), is that the line slopes neither up nor down, so that the mean of <span class="math inline">\(Y\)</span> is the same for all values of <span class="math inline">\(X\)</span>. In this case there is no (linear) association between the variables.</p>
+<p>Not all associations between continuous variables are linear, as shown by the remaining two plots of Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a>. These illustrate two kinds of <strong>nonlinear</strong> associations. In plot (e), the association is still clearly <em>monotonic</em>, meaning that average values of <span class="math inline">\(Y\)</span> change in the same direction — here increase — when <span class="math inline">\(X\)</span> increases. The rate of this increase, however, is not constant, as indicated by the slightly curved shape of the cloud of points. The values of <span class="math inline">\(Y\)</span> seem to increase faster for small values of <span class="math inline">\(X\)</span> than for large ones. A straight line drawn through the scatterplot captures the general direction of the increase, but misses its nonlinearity. One practical example of such a relationship is the one between years of job experience and salary: it is often found that salary increases fastest early on in a person’s career and more slowly later on.</p>
 <p>Plot (f) shows a nonlinear and nonmonotonic relationship: as <span class="math inline">\(X\)</span> increases, average values of <span class="math inline">\(Y\)</span> first decrease to a minimum, and then increase again, resulting in a U-shaped scatterplot. A straight line is clearly an entirely inadequate description of such a relationship. A nonmonotonic association of this kind might be seen, for example, when considering the dependence of the failure rates of some electrical components (<span class="math inline">\(Y\)</span>) on their age (<span class="math inline">\(X\)</span>). It might then be that the failure rates were high early (from quick failures of flawed components) and late on (from inevitable wear and tear) and lowest in between for “middle-aged but healthy” components.</p>
 <div class="figure"><span id="fig:f-corruption3"></span>
 <img src="corruption3.png" alt="A scatterplot of Control of corruption vs. GDP per capita for 163 countries in the Global Civil Society data set. The solid line is the best-fitting (least squares) straight line for the points." width="510" />
 <p class="caption">Figure 8.5: A scatterplot of Control of corruption vs. GDP per capita for 163 countries in the Global Civil Society data set. The solid line is the best-fitting (least squares) straight line for the points.</p>
 </div>
 <p>Returning to real data, recall that we have so far considered control of corruption and GDP per capita only among countries with a Control of corruption score of at least 60. The scatterplot for these, shown in Figure <a href="c-regression.html#fig:f-corruption2">8.3</a>, also includes a best-fitting straight line. The observed relationship is clearly positive, and seems to be fairly well described by a straight line. For countries with relatively low levels of corruption, the association between control of corruption and GDP can be reasonably well characterised as linear.</p>
-<p>Consider now the set of all countries, including also those with high levels of corruption (scores of less than 60). In a scatterplot for them, shown in Figure <a href="c-regression.html#fig:f-corruption3">8.5</a>, the points with at least 60 on the <span class="math inline">\(X\)</span>-axis are the same as those in Figure <a href="c-regression.html#fig:f-corruption2">8.3</a>, and the new points are to the left of them. The plot now shows a nonlinear relationship comparable to the one in plot (e) of Figure <a href="#fig:f-scatterplots">8.4</a>. The linear relationship which was a good description for the countries considered above is thus not adequate for the full set of countries. Instead, it seems that the association is much weaker for the countries with high levels of corruption, essentially all of which have fairly low values of GDP per capita. The straight line fitted to the plot identifies the overall positive association, but cannot describe its nonlinearity. This example further illustrates how scatterplots can be used to examine relationships between variables and to assess whether they can be best described as linear or nonlinear associations.<a href="#fn44" class="footnoteRef" id="fnref44"><sup>44</sup></a></p>
+<p>Consider now the set of all countries, including also those with high levels of corruption (scores of less than 60). In a scatterplot for them, shown in Figure <a href="c-regression.html#fig:f-corruption3">8.5</a>, the points with at least 60 on the <span class="math inline">\(X\)</span>-axis are the same as those in Figure <a href="c-regression.html#fig:f-corruption2">8.3</a>, and the new points are to the left of them. The plot now shows a nonlinear relationship comparable to the one in plot (e) of Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a>. The linear relationship which was a good description for the countries considered above is thus not adequate for the full set of countries. Instead, it seems that the association is much weaker for the countries with high levels of corruption, essentially all of which have fairly low values of GDP per capita. The straight line fitted to the plot identifies the overall positive association, but cannot describe its nonlinearity. This example further illustrates how scatterplots can be used to examine relationships between variables and to assess whether they can be best described as linear or nonlinear associations.<a href="#fn44" class="footnoteRef" id="fnref44"><sup>44</sup></a></p>
 <p>So far we have said nothing about how the exact location and direction of the straight lines shown in the figures have been selected. These are determined so that the fitted line is in a certain sense the best possible one for describing the data in the scatterplot. Because the calculations needed for this are also (and more importantly) used in the context of statistical inference for such data, we will postpone a description of them until Section <a href="c-regression.html#ss-regression-simple-est">8.3.4</a>. For now we can treat the line simply as a visual summary of the linear association in a scatterplot.</p>
 </div>
 <div id="ss-regression-descr-corr" class="section level3">
@@ -361,27 +356,29 @@ In theoretical statistics, covariance is the fundamental summary of sample and p
 }.
 \label{eq:corr}\end{equation}\]</span>
 <p>This is the (sample) <strong>correlation</strong> coefficient, or correlation for short, between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. It is also often (e.g. in SPSS) known as <em>Pearson’s</em> correlation coefficient after Karl Pearson (of the <span class="math inline">\(\chi^{2}\)</span> test, see first footnote in Chapter <a href="c-tables.html#c-tables">4</a>), although both the word and the statistic are really due to Sir Francis Galton.<a href="#fn45" class="footnoteRef" id="fnref45"><sup>45</sup></a></p>
-<p>The properties of the correlation coefficient can be described by going through the same list as for the <span class="math inline">\(\gamma\)</span> coefficient in Section <a href="c-descr1.html#ss-descr1-2cat-gamma">2.4.5</a>. While doing so, it is useful to refer to the examples in Figure <a href="#fig:f-scatterplots">8.4</a>, where the correlations are also shown.</p>
+<p>The properties of the correlation coefficient can be described by going through the same list as for the <span class="math inline">\(\gamma\)</span> coefficient in Section <a href="c-descr1.html#ss-descr1-2cat-gamma">2.4.5</a>. While doing so, it is useful to refer to the examples in Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a>, where the correlations are also shown.</p>
 <ul>
 <li><p><strong>Sign</strong>: Correlation is positive if the <em>linear</em> association between the variables is positive, i.e. if the best-fitting straight line slopes upwards (as in plots a, b and e) and negative if the association is negative (c). A zero correlation indicates complete lack of linear association (d and f).</p></li>
-<li><p><strong>Extreme values</strong>: The largest possible correlation is <span class="math inline">\(+1\)</span> (plot a) and the smallest <span class="math inline">\(-1\)</span>, indicating perfect positive and negative linear associations respectively. More generally, the magnitude of the correlation indicates the strength of the association, so that the closer to <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span> the correlation is, the stronger the association (e.g. compare plots a–d). It should again be noted that the correlation captures only the linear aspect of the association, as illustrated by the two nonlinear cases in Figure <a href="#fig:f-scatterplots">8.4</a>. In plot (e), there is curvature but also a strong positive trend, and the latter is reflected in a fairly high correlation. In plot (f), the trend is absent and the correlation is 0, even though there is an obvious nonlinear relationship. Thus the correlation coefficient is a reasonable initial summary of the strength of association in (e), but completely misleading in (f).</p></li>
+<li><p><strong>Extreme values</strong>: The largest possible correlation is <span class="math inline">\(+1\)</span> (plot a) and the smallest <span class="math inline">\(-1\)</span>, indicating perfect positive and negative linear associations respectively. More generally, the magnitude of the correlation indicates the strength of the association, so that the closer to <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span> the correlation is, the stronger the association (e.g. compare plots a–d). It should again be noted that the correlation captures only the linear aspect of the association, as illustrated by the two nonlinear cases in Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a>. In plot (e), there is curvature but also a strong positive trend, and the latter is reflected in a fairly high correlation. In plot (f), the trend is absent and the correlation is 0, even though there is an obvious nonlinear relationship. Thus the correlation coefficient is a reasonable initial summary of the strength of association in (e), but completely misleading in (f).</p></li>
 <li><p><strong>Formal interpretation</strong>: The correlation coefficient cannot be interpreted as a Proportional Reduction in Error (PRE) measure, but its square can. The latter statistic, so-called coefficient of determination or <span class="math inline">\(R^{2}\)</span>, is described in Section <a href="c-regression.html#ss-regression-simple-int">8.3.3</a>.</p></li>
 <li><p><strong>Substantive interpretation</strong>: As with any measure of association, the question of whether a particular sample correlation is high or low is not a purely statistical question, but depends on the nature of the variables. This can be judged properly only with the help of experience of correlations between similar variables in different contexts. As one very rough rule thumb it might be said that in many social science contexts correlations greater than 0.4 (or smaller than <span class="math inline">\(-0.4\)</span>) would typically be considered noteworthy and ones greater than 0.7 quite strong.</p></li>
 </ul>
 <p>Returning to real data, Table <a href="c-regression.html#tab:t-civilsoc-r">8.1</a> shows the correlation coefficients for all fifteen distinct pairs of the six continuous variables in the Global Civil Society data set mentioned in Example 8.1. This is an example of a <strong>correlation matrix</strong>, which is simply a table with the variables as both its rows and columns, and the correlation between each pair of variables given at the intersection of corresponding row and column. For example, the correlation of GDP per capita and School enrolment is here 0.42. This is shown at the intersection of the first row (GDP) and fifth column (School enrolment), and also of the fifth row and first column. In general, every correlation is shown twice in the matrix, once in its upper triangle and once in the lower. The triangles are separated by a list of ones on the diagonal of the matrix. This simply indicates that the correlation of any variable with itself is 1, which is true by definition and thus of no real interest.</p>
 <table>
 <caption><span id="tab:t-civilsoc-r">Table 8.1: </span>Correlation matrix of six continuous variables in the Global Civil Society data set. See Example 8.1 for more information on the variables.</caption>
+<thead>
+<tr class="header">
+<th align="right">Variable</th>
+<th align="right">GDP</th>
+<th align="right">Gini</th>
+<th align="right">Pol. </th>
+<th align="right">Corrupt. </th>
+<th align="right">School</th>
+<th align="right">IMR</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="right">Variable</td>
-<td align="right">GDP</td>
-<td align="right">Gini</td>
-<td align="right">Pol. </td>
-<td align="right">Corrupt. </td>
-<td align="right">School</td>
-<td align="right">IMR</td>
-</tr>
-<tr class="even">
 <td align="right">GDP per capita [GDP ]</td>
 <td align="right">1</td>
 <td align="right">-0.39</td>
@@ -390,7 +387,7 @@ In theoretical statistics, covariance is the fundamental summary of sample and p
 <td align="right">0.42</td>
 <td align="right">-0.62</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="right">Income inequality [Gini ]</td>
 <td align="right">-0.39</td>
 <td align="right">1</td>
@@ -399,7 +396,7 @@ In theoretical statistics, covariance is the fundamental summary of sample and p
 <td align="right">-0.27</td>
 <td align="right">0.42</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="right">Political rights [Pol. ]</td>
 <td align="right">0.51</td>
 <td align="right">-0.15</td>
@@ -408,7 +405,7 @@ In theoretical statistics, covariance is the fundamental summary of sample and p
 <td align="right">0.40</td>
 <td align="right">-0.44</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="right">Control of corruption [Corrupt. ]</td>
 <td align="right">0.77</td>
 <td align="right">-0.27</td>
@@ -417,7 +414,7 @@ In theoretical statistics, covariance is the fundamental summary of sample and p
 <td align="right">0.41</td>
 <td align="right">-0.64</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="right">School enrolment [School ]</td>
 <td align="right">0.42</td>
 <td align="right">-0.27</td>
@@ -426,7 +423,7 @@ In theoretical statistics, covariance is the fundamental summary of sample and p
 <td align="right">1</td>
 <td align="right">-0.73</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="right">Infant mortality [IMR ]</td>
 <td align="right">-0.62</td>
 <td align="right">0.42</td>
@@ -454,118 +451,119 @@ In theoretical statistics, covariance is the fundamental summary of sample and p
 <img src="imr1.png" alt="A scatterplot of net primary school enrolment ratio vs. Infant mortality rate for countries in the Global Civil Society data set (n=111). The solid line is the best-fitting (least squares) straight line for the points." width="510" />
 <p class="caption">Figure 8.6: A scatterplot of net primary school enrolment ratio vs. Infant mortality rate for countries in the Global Civil Society data set (<span class="math inline">\(n=111\)</span>). The solid line is the best-fitting (least squares) straight line for the points.</p>
 </div>
-<table style="width:99%;">
-<caption><span id="tab:t-imrvars">Table 8.2: </span>Summary statistics for Infant Mortality Rate (IMR)and explanatory variables for it considered in the examples of Sections <a href="c-regression.html#s-regression-simple">8.3</a> and <a href="c-regression.html#s-regression-multiple">8.5</a> (<span class="math inline">\(n=111\)</span>). See Example 8.1 for further information on the variables.</caption>
+<table style="width:98%;">
+<caption><span id="tab:t-imrvars">Table 8.2: </span>Summary statistics for Infant Mortality Rate (IMR) and explanatory variables for it considered in the examples of Sections <a href="c-regression.html#s-regression-simple">8.3</a> and <a href="c-regression.html#s-regression-multiple">8.5</a> (<span class="math inline">\(n=111\)</span>). See Example 8.1 for further information on the variables.</caption>
 <colgroup>
-<col width="48%" />
-<col width="23%" />
-<col width="8%" />
-<col width="9%" />
-<col width="9%" />
+<col width="53%" />
+<col width="7%" />
+<col width="11%" />
+<col width="12%" />
+<col width="12%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right"><br />
+IMR</th>
+<th align="right">School enrolment</th>
+<th align="right">Control of corruption</th>
+<th align="right">Income inequality</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-</td>
-<td align="right"><br />
-IMR</td>
-<td align="right">School enrolment</td>
-<td align="right">Control of corruption</td>
-<td align="right">Income inequality</td>
+<td><em>Summary statistics</em></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
 </tr>
 <tr class="even">
-<td align="left"><em>Summary statistics</em></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="odd">
-<td align="left">Mean</td>
+<td>Mean</td>
 <td align="right">4.3</td>
 <td align="right">86.1</td>
 <td align="right">50.1</td>
 <td align="right">40.5</td>
 </tr>
-<tr class="even">
-<td align="left">std. deviation</td>
+<tr class="odd">
+<td>std. deviation</td>
 <td align="right">4.0</td>
 <td align="right">16.7</td>
 <td align="right">28.4</td>
 <td align="right">10.2</td>
 </tr>
-<tr class="odd">
-<td align="left">Minimum</td>
+<tr class="even">
+<td>Minimum</td>
 <td align="right">0.3</td>
 <td align="right">30.0</td>
 <td align="right">3.6</td>
 <td align="right">24.4</td>
 </tr>
-<tr class="even">
-<td align="left">Maximum</td>
+<tr class="odd">
+<td>Maximum</td>
 <td align="right">15.6</td>
 <td align="right">109.0</td>
 <td align="right">100.0</td>
 <td align="right">70.7</td>
 </tr>
-<tr class="odd">
-<td align="left"><em>Correlation matrix</em></td>
+<tr class="even">
+<td><em>Correlation matrix</em></td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 </tr>
-<tr class="even">
-<td align="left">IMR</td>
+<tr class="odd">
+<td>IMR</td>
 <td align="right">1</td>
 <td align="right">-0.75</td>
 <td align="right">-0.60</td>
 <td align="right">0.39</td>
 </tr>
-<tr class="odd">
-<td align="left">School enrolment</td>
+<tr class="even">
+<td>School enrolment</td>
 <td align="right">-0.75</td>
 <td align="right">1</td>
 <td align="right">0.39</td>
 <td align="right">-0.27</td>
 </tr>
-<tr class="even">
-<td align="left">Control of corruption</td>
+<tr class="odd">
+<td>Control of corruption</td>
 <td align="right">-0.60</td>
 <td align="right">0.39</td>
 <td align="right">1</td>
 <td align="right">-0.27</td>
 </tr>
-<tr class="odd">
-<td align="left">Income inequality</td>
+<tr class="even">
+<td>Income inequality</td>
 <td align="right">0.39</td>
 <td align="right">-0.27</td>
 <td align="right">-0.27</td>
 <td align="right">1</td>
 </tr>
-<tr class="even">
-<td align="left"><em>Means for countries in different income categories</em></td>
+<tr class="odd">
+<td><em>Means for countries in different income categories</em></td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 </tr>
-<tr class="odd">
-<td align="left">Low income (<span class="math inline">\(n=41\)</span>)</td>
+<tr class="even">
+<td>Low income (<span class="math inline">\(n=41\)</span>)</td>
 <td align="right">8.2</td>
 <td align="right">72.1</td>
 <td align="right">27.5</td>
 <td align="right">41.7</td>
 </tr>
-<tr class="even">
-<td align="left">Middle income (<span class="math inline">\(n=48\)</span>)</td>
+<tr class="odd">
+<td>Middle income (<span class="math inline">\(n=48\)</span>)</td>
 <td align="right">2.8</td>
 <td align="right">92.5</td>
 <td align="right">50.8</td>
 <td align="right">43.3</td>
 </tr>
-<tr class="odd">
-<td align="left">High income (<span class="math inline">\(n=22\)</span>)</td>
+<tr class="even">
+<td>High income (<span class="math inline">\(n=22\)</span>)</td>
 <td align="right">0.5</td>
 <td align="right">98.4</td>
 <td align="right">90.7</td>
@@ -603,7 +601,7 @@ Often the model is expressed in an equivalent form where 2. and 3. are combine
 </div>
 <div id="ss-regression-simple-int" class="section level3">
 <h3><span class="header-section-number">8.3.3</span> Interpretation of the model parameters</h3>
-<p>The simple linear regression model (\ref{eq:slinmodel}) has three parameters, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\sigma^{2}\)</span>. Each of these has its own interpretation, which are explained in this section. Sometimes it will be useful to illustrate the definition with specific numerical values, for which we will use ones for the model for IMR given School enrolment in our example. SPSS output for this model is shown in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>. Note that although these values are first used here to illustrate the interpretation of the <em>population</em> parameters in the model, they are of course only estimates (of a kind explained in the next section) of those parameters. Other parts of the SPSS output will be explained later in this chapter.</p>
+<p>The simple linear regression model (<a href="#eq:slinmodel">(<strong>??</strong>)</a>) has three parameters, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\sigma^{2}\)</span>. Each of these has its own interpretation, which are explained in this section. Sometimes it will be useful to illustrate the definition with specific numerical values, for which we will use ones for the model for IMR given School enrolment in our example. SPSS output for this model is shown in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>. Note that although these values are first used here to illustrate the interpretation of the <em>population</em> parameters in the model, they are of course only estimates (of a kind explained in the next section) of those parameters. Other parts of the SPSS output will be explained later in this chapter.</p>
 <div class="figure"><span id="fig:f-spss-linreg"></span>
 <img src="spsslinreg.png" alt="SPSS output for a simple linear regression model for Infant mortality rate given School enrolment in the Global Civil Society data." width="585" />
 <p class="caption">Figure 8.7: SPSS output for a simple linear regression model for Infant mortality rate given School enrolment in the Global Civil Society data.</p>
@@ -658,8 +656,12 @@ Often the model is expressed in an equivalent form where 2. and 3. are combine
 <h3><span class="header-section-number">8.3.4</span> Estimation of the parameters</h3>
 <p>Since the regression coefficients <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> and the residual standard deviation <span class="math inline">\(\sigma\)</span> are unknown population parameters, we will need to use the observed data to obtain sensible estimates for them. How to do so is now less obvious than in the cases of simple means and proportions considered before. This section explains the standard method of estimation for the parameters of linear regression models.</p>
 <p>We will denote estimates of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> by <span class="math inline">\(\hat{\alpha}\)</span> and <span class="math inline">\(\hat{\beta}\)</span> (“alpha-hat” and “beta-hat”) respectively (other notations are also often used, e.g. <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>). Similarly, we can define <span class="math display">\[\hat{Y}=\hat{\alpha}+\hat{\beta} X\]</span> for <span class="math inline">\(Y\)</span> given any value of <span class="math inline">\(X\)</span>. These are the values on the estimated regression line. They are known as <strong>fitted values</strong> for <span class="math inline">\(Y\)</span>, and estimating the parameters of the regression model is often referred to as “fitting the model” to the observed data. The fitted values represent our predictions of expected values of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span>, so they are also known as <strong>predicted values</strong> of <span class="math inline">\(Y\)</span>.</p>
-<p>In particular, fitted values <span class="math inline">\(\hat{Y}_{i}=\hat{\alpha}+\hat{\beta}X_{i}\)</span> can be calculated at the values <span class="math inline">\(X_{i}\)</span> of the explanatory variable <span class="math inline">\(X\)</span> for each unit <span class="math inline">\(i\)</span> in the observed sample. These can then be compared to the correponding values <span class="math inline">\(Y_{i}\)</span> of the response variable. Their differences <span class="math inline">\(Y_{i}-\hat{Y}_{i}\)</span> are known as the (sample) <strong>residuals</strong>. These quantities are illustrated in Figure <a href="#fig:f-residuals">8.9</a>. This shows a fitted regression line, which is in fact the one for IMR given School enrolment also shown in Figure <a href="c-regression.html#fig:f-imr1">8.6</a>. Also shown are two points <span class="math inline">\((X_{i}, Y_{i})\)</span>. These are also from Figure <a href="c-regression.html#fig:f-imr1">8.6</a>; the rest have been omitted to simplify the plot. The point further to the left is the one for Mali, which has School enrolment <span class="math inline">\(X_{i}=43.0\)</span> and IMR <span class="math inline">\(Y_{i}=14.1\)</span>. Using the estimated coefficients <span class="math inline">\(\hat{\alpha}=19.736\)</span> and <span class="math inline">\(\hat{\beta}=-0.179\)</span> in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>, the fitted value for Mali is <span class="math inline">\(\hat{Y}_{i}=19.736-0.179\times 43.0=12.0\)</span>. Their difference is the residual <span class="math inline">\(Y_{i}-\hat{Y}_{i}=14.1-12.0=2.1\)</span>. Because the observed value is here larger than the fitted value, the residual is positive and the observed value is above the fitted line, as shown in Figure <a href="#fig:f-residuals">8.9</a>.</p>
-<p><img src="lmresids.png" alt="Illustration of the quantities involved in the definitions of least squares estimates and the coefficient of determination R^{2}. See the text for explanation." width="510" /> <!--
+<p>In particular, fitted values <span class="math inline">\(\hat{Y}_{i}=\hat{\alpha}+\hat{\beta}X_{i}\)</span> can be calculated at the values <span class="math inline">\(X_{i}\)</span> of the explanatory variable <span class="math inline">\(X\)</span> for each unit <span class="math inline">\(i\)</span> in the observed sample. These can then be compared to the correponding values <span class="math inline">\(Y_{i}\)</span> of the response variable. Their differences <span class="math inline">\(Y_{i}-\hat{Y}_{i}\)</span> are known as the (sample) <strong>residuals</strong>. These quantities are illustrated in Figure <a href="c-regression.html#fig:f-residuals">8.9</a>. This shows a fitted regression line, which is in fact the one for IMR given School enrolment also shown in Figure <a href="c-regression.html#fig:f-imr1">8.6</a>. Also shown are two points <span class="math inline">\((X_{i}, Y_{i})\)</span>. These are also from Figure <a href="c-regression.html#fig:f-imr1">8.6</a>; the rest have been omitted to simplify the plot. The point further to the left is the one for Mali, which has School enrolment <span class="math inline">\(X_{i}=43.0\)</span> and IMR <span class="math inline">\(Y_{i}=14.1\)</span>. Using the estimated coefficients <span class="math inline">\(\hat{\alpha}=19.736\)</span> and <span class="math inline">\(\hat{\beta}=-0.179\)</span> in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>, the fitted value for Mali is <span class="math inline">\(\hat{Y}_{i}=19.736-0.179\times 43.0=12.0\)</span>. Their difference is the residual <span class="math inline">\(Y_{i}-\hat{Y}_{i}=14.1-12.0=2.1\)</span>. Because the observed value is here larger than the fitted value, the residual is positive and the observed value is above the fitted line, as shown in Figure <a href="c-regression.html#fig:f-residuals">8.9</a>.</p>
+<div class="figure"><span id="fig:f-residuals"></span>
+<img src="lmresids.png" alt="Illustration of the quantities involved in the definitions of least squares estimates and the coefficient of determination R^{2}. See the text for explanation." width="510" />
+<p class="caption">Figure 8.9: Illustration of the quantities involved in the definitions of least squares estimates and the coefficient of determination <span class="math inline">\(R^{2}\)</span>. See the text for explanation.</p>
+</div>
+<!--
 $Y_{i}-\hat{Y}_{i}$
 
 $Y_{i}-\hat{Y}_{i}$
@@ -671,7 +673,8 @@ $\hat{Y}_{i}-\bar{Y}$
 $Y_{i}-\bar{Y}$
 
 $\hat{Y}=\hat{\alpha}+\hat{\beta} X$
---> The second point shown in Figure <a href="#fig:f-residuals">8.9</a> corresponds to the observation for Ghana, for which <span class="math inline">\(X_{i}=58.0\)</span> and <span class="math inline">\(Y_{i}=5.7\)</span>. The fitted value is then <span class="math inline">\(\hat{Y}_{i}=19.736-0.179\times 58.0=9.4\)</span> and the residual <span class="math inline">\(Y_{i}-\hat{Y}_{i}=5.7-9.4=-3.7\)</span>. Because the observed value is now smaller than the fitted value, the residual is negative and the observed <span class="math inline">\(Y_{i}\)</span> is below the fitted regression line.</p>
+-->
+<p>The second point shown in Figure <a href="c-regression.html#fig:f-residuals">8.9</a> corresponds to the observation for Ghana, for which <span class="math inline">\(X_{i}=58.0\)</span> and <span class="math inline">\(Y_{i}=5.7\)</span>. The fitted value is then <span class="math inline">\(\hat{Y}_{i}=19.736-0.179\times 58.0=9.4\)</span> and the residual <span class="math inline">\(Y_{i}-\hat{Y}_{i}=5.7-9.4=-3.7\)</span>. Because the observed value is now smaller than the fitted value, the residual is negative and the observed <span class="math inline">\(Y_{i}\)</span> is below the fitted regression line.</p>
 So far we have still not explained how the specific values of the parameter estimates in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a> were obtained. In doing so, we are faced with the task of identifying a regression line which provides the best fit to the observed points in a scatterplot like Figure <a href="c-regression.html#fig:f-imr1">8.6</a>. Each possible choice of <span class="math inline">\(\hat{\alpha}\)</span> and <span class="math inline">\(\hat{\beta}\)</span> corresponds to a different regression line, and some choices are clearly better than others. For example, it seems intuitively obvious that it would be better for the line to go through the cloud of points rather than stay completely outside it. To make such considerations explicit, the residuals can be used as a criterion of model fit. The aim will then be to make the total magnitude of the residuals as small as possible, so that the fitted line is as close as possible to the observed points <span class="math inline">\(Y_{i}\)</span> in some overall sense. This cannot be done simply by adding up the residuals, because they can have different signs, and positive and negative residuals could thus cancel out each other in the addition. As often before, the way around this is to remove the signs by considering the squares of the residuals. Summing these over all units <span class="math inline">\(i\)</span> in the sample leads to the sum of squared residuals <span class="math display">\[SSE = \sum (Y_{i}-\hat{Y}_{i})^{2}.\]</span> Here <span class="math inline">\(SSE\)</span> is short for Sum of Squares of Errors (it is also often called the Residual Sum of Squares or <span class="math inline">\(RSS\)</span>). This is the quantity used as the criterion in estimating regression coefficients for a linear model. Different candidate values for <span class="math inline">\(\hat{\alpha}\)</span> and <span class="math inline">\(\hat{\beta}\)</span> lead to different values of <span class="math inline">\(\hat{Y}_{i}\)</span> and thus of <span class="math inline">\(SSE\)</span>. The final estimates are the ones which give the smallest value of <span class="math inline">\(SSE\)</span>. Their formulas are
 <span class="math display">\[\begin{equation}\hat{\beta}=
 \frac{
@@ -693,21 +696,21 @@ The most common estimate of the remaining parameter of the model, the residual s
 \frac{SSE}{n-(k+1)}
 }
 \label{eq:sigma-linreg}\end{equation}\]</span>
-<p>where <span class="math inline">\(k\)</span> is here set equal to 1. This bears an obvious resemblance to the formula for the basic sample standard deviation, shown for <span class="math inline">\(Y_{i}\)</span> in (\ref{eq:sdyx}). One difference to that formula is that the denominator of (\ref{eq:sigma-linreg}) is shown as <span class="math inline">\(n-(k+1)\)</span> rather than <span class="math inline">\(n-1\)</span>. Here <span class="math inline">\(k=1\)</span> is the number of explanatory variables in the model, and <span class="math inline">\(k+1=2\)</span> is the number of regression coefficients (<span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>) including the constant term <span class="math inline">\(\alpha\)</span>. The quantity <span class="math inline">\(n-(k+1)\)</span>, i.e. here <span class="math inline">\(n-2\)</span>, is the <strong>degrees of freedom</strong> (<span class="math inline">\(df\)</span>) of the parameter estimates. We will need it again in the next section. It is here given in the general form involving the symbol <span class="math inline">\(k\)</span>, so that we can later refer to the same formula for models with more explanatory variables and thus <span class="math inline">\(k\)</span> greater than 1. In SPSS output, the degrees of freedom are shown in the “<strong>ANOVA</strong>” table under “df” for “Residual”. In the infant mortality example <span class="math inline">\(n=111\)</span>, <span class="math inline">\(k=1\)</span> and <span class="math inline">\(df=111-2=109\)</span>, as shown in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>.</p>
+<p>where <span class="math inline">\(k\)</span> is here set equal to 1. This bears an obvious resemblance to the formula for the basic sample standard deviation, shown for <span class="math inline">\(Y_{i}\)</span> in (<a href="#eq:sdyx">(<strong>??</strong>)</a>). One difference to that formula is that the denominator of (<a href="#eq:sigma-linreg">(<strong>??</strong>)</a>) is shown as <span class="math inline">\(n-(k+1)\)</span> rather than <span class="math inline">\(n-1\)</span>. Here <span class="math inline">\(k=1\)</span> is the number of explanatory variables in the model, and <span class="math inline">\(k+1=2\)</span> is the number of regression coefficients (<span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>) including the constant term <span class="math inline">\(\alpha\)</span>. The quantity <span class="math inline">\(n-(k+1)\)</span>, i.e. here <span class="math inline">\(n-2\)</span>, is the <strong>degrees of freedom</strong> (<span class="math inline">\(df\)</span>) of the parameter estimates. We will need it again in the next section. It is here given in the general form involving the symbol <span class="math inline">\(k\)</span>, so that we can later refer to the same formula for models with more explanatory variables and thus <span class="math inline">\(k\)</span> greater than 1. In SPSS output, the degrees of freedom are shown in the “<strong>ANOVA</strong>” table under “df” for “Residual”. In the infant mortality example <span class="math inline">\(n=111\)</span>, <span class="math inline">\(k=1\)</span> and <span class="math inline">\(df=111-2=109\)</span>, as shown in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>.</p>
 <p>Finally, two connections between previous topics and the parameters <span class="math inline">\(\hat{\alpha}\)</span>, <span class="math inline">\(\hat{\beta}\)</span> and <span class="math inline">\(\hat{\sigma}\)</span> are worth highlighting:</p>
 <ul>
-<li><p>The estimated slope <span class="math inline">\(\hat{\beta}\)</span> from (\ref{eq:ols-b}) is related to the sample correlation <span class="math inline">\(r\)</span> from (\ref{eq:corr}) by <span class="math inline">\(r=(s_{x}/s_{y})\,\hat{\beta}\)</span>. In both of these it is <span class="math inline">\(\hat{\beta}\)</span> which carries information about the association between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. The ratio <span class="math inline">\(s_{x}/s_{y}\)</span> serves only to standardise the correlation coefficient so that it is always between <span class="math inline">\(-1\)</span> and <span class="math inline">\(+1\)</span>. The slope coefficient <span class="math inline">\(\hat{\beta}\)</span> is not standardised, and the interpretation of its magnitude depends on the units of measurement of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> in the way defined in Section <a href="c-regression.html#ss-regression-simple-int">8.3.3</a>.</p></li>
-<li><p>Suppose we simplify the simple linear regression model (\ref{eq:slinmodel}) further by setting <span class="math inline">\(\beta=0\)</span>, thus removing <span class="math inline">\(\beta X\)</span> from the model. The new model states that all <span class="math inline">\(Y_{i}\)</span> are normally distributed with the same mean <span class="math inline">\(\alpha\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>. Apart from the purely notational difference of using <span class="math inline">\(\alpha\)</span> instead of <span class="math inline">\(\mu\)</span>, this is exactly the single-sample model considered in Section <a href="c-means.html#s-means-1sample">7.4</a>. Using the methods of this section to obtain estimates of the two parameters of this model also leads to exactly the same results as before. The least squares estimate of <span class="math inline">\(\alpha\)</span> is then <span class="math inline">\(\hat{\alpha}=\bar{Y}\)</span>, obtained by setting <span class="math inline">\(\hat{\beta}=0\)</span> in (\ref{eq:ols-a}). Since there is no <span class="math inline">\(\hat{\beta}\)</span> in this case, <span class="math inline">\(\hat{Y}_{i}=\bar{Y}\)</span> for all observations, <span class="math inline">\(k=0\)</span> and <span class="math inline">\(df=n-(k+1)=n-1\)</span>. Substituting these into (\ref{eq:sigma-linreg}) shows that <span class="math inline">\(\hat{\sigma}\)</span> is then equal to the usual sample standard deviation <span class="math inline">\(s_{y}\)</span> of <span class="math inline">\(Y_{i}\)</span>.</p></li>
+<li><p>The estimated slope <span class="math inline">\(\hat{\beta}\)</span> from (<a href="#eq:ols-b">(<strong>??</strong>)</a>) is related to the sample correlation <span class="math inline">\(r\)</span> from (<a href="#eq:corr">(<strong>??</strong>)</a>) by <span class="math inline">\(r=(s_{x}/s_{y})\,\hat{\beta}\)</span>. In both of these it is <span class="math inline">\(\hat{\beta}\)</span> which carries information about the association between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. The ratio <span class="math inline">\(s_{x}/s_{y}\)</span> serves only to standardise the correlation coefficient so that it is always between <span class="math inline">\(-1\)</span> and <span class="math inline">\(+1\)</span>. The slope coefficient <span class="math inline">\(\hat{\beta}\)</span> is not standardised, and the interpretation of its magnitude depends on the units of measurement of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> in the way defined in Section <a href="c-regression.html#ss-regression-simple-int">8.3.3</a>.</p></li>
+<li><p>Suppose we simplify the simple linear regression model (<a href="#eq:slinmodel">(<strong>??</strong>)</a>) further by setting <span class="math inline">\(\beta=0\)</span>, thus removing <span class="math inline">\(\beta X\)</span> from the model. The new model states that all <span class="math inline">\(Y_{i}\)</span> are normally distributed with the same mean <span class="math inline">\(\alpha\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>. Apart from the purely notational difference of using <span class="math inline">\(\alpha\)</span> instead of <span class="math inline">\(\mu\)</span>, this is exactly the single-sample model considered in Section <a href="c-means.html#s-means-1sample">7.4</a>. Using the methods of this section to obtain estimates of the two parameters of this model also leads to exactly the same results as before. The least squares estimate of <span class="math inline">\(\alpha\)</span> is then <span class="math inline">\(\hat{\alpha}=\bar{Y}\)</span>, obtained by setting <span class="math inline">\(\hat{\beta}=0\)</span> in (<a href="#eq:ols-a">(<strong>??</strong>)</a>). Since there is no <span class="math inline">\(\hat{\beta}\)</span> in this case, <span class="math inline">\(\hat{Y}_{i}=\bar{Y}\)</span> for all observations, <span class="math inline">\(k=0\)</span> and <span class="math inline">\(df=n-(k+1)=n-1\)</span>. Substituting these into (<a href="#eq:sigma-linreg">(<strong>??</strong>)</a>) shows that <span class="math inline">\(\hat{\sigma}\)</span> is then equal to the usual sample standard deviation <span class="math inline">\(s_{y}\)</span> of <span class="math inline">\(Y_{i}\)</span>.</p></li>
 </ul>
 <div id="coefficient-of-determination-r2" class="section level4 unnumbered">
 <h4>Coefficient of determination (<span class="math inline">\(R^{2}\)</span>)</h4>
 <!--{#p-R2}-->
-<p>The <strong>coefficient of determination</strong>, more commonly known as <span class="math inline">\(\mathbf{R^{2}}\)</span> (“R-squared”), is a measure of association very often used to describe the results of linear regression models. It is based on the same idea of sums of squared errors as least squares estimation, and on comparison of them between two models for <span class="math inline">\(Y\)</span>. The first of these models is the very simple one where the explanatory variable <span class="math inline">\(X\)</span> is not included at all. As discussed above, the estimate of the expected value of <span class="math inline">\(Y\)</span> is then the sample mean <span class="math inline">\(\bar{Y}\)</span>. This is the best prediction of <span class="math inline">\(Y\)</span> we can make, if the same predicted value is to be used for all observations. The error in the prediction of each value <span class="math inline">\(Y_{i}\)</span> in the observed data is then <span class="math inline">\(Y_{i}-\bar{Y}\)</span> (c.f. Figure <a href="#fig:f-residuals">8.9</a> for an illustration of this for one observation). The sum of squares of these errors is <span class="math inline">\(TSS=\sum (Y_{i}-\bar{Y})^{2}\)</span>, where <span class="math inline">\(TSS\)</span> is short for “Total Sum of Squares”. This can also be regarded as a measure of the <strong>total variation</strong> in <span class="math inline">\(Y_{i}\)</span> in the sample (note that <span class="math inline">\(TSS/(n-1)\)</span> is the usual sample variance <span class="math inline">\(s^{2}_{y}\)</span>).</p>
+<p>The <strong>coefficient of determination</strong>, more commonly known as <span class="math inline">\(\mathbf{R^{2}}\)</span> (“R-squared”), is a measure of association very often used to describe the results of linear regression models. It is based on the same idea of sums of squared errors as least squares estimation, and on comparison of them between two models for <span class="math inline">\(Y\)</span>. The first of these models is the very simple one where the explanatory variable <span class="math inline">\(X\)</span> is not included at all. As discussed above, the estimate of the expected value of <span class="math inline">\(Y\)</span> is then the sample mean <span class="math inline">\(\bar{Y}\)</span>. This is the best prediction of <span class="math inline">\(Y\)</span> we can make, if the same predicted value is to be used for all observations. The error in the prediction of each value <span class="math inline">\(Y_{i}\)</span> in the observed data is then <span class="math inline">\(Y_{i}-\bar{Y}\)</span> (c.f. Figure <a href="c-regression.html#fig:f-residuals">8.9</a> for an illustration of this for one observation). The sum of squares of these errors is <span class="math inline">\(TSS=\sum (Y_{i}-\bar{Y})^{2}\)</span>, where <span class="math inline">\(TSS\)</span> is short for “Total Sum of Squares”. This can also be regarded as a measure of the <strong>total variation</strong> in <span class="math inline">\(Y_{i}\)</span> in the sample (note that <span class="math inline">\(TSS/(n-1)\)</span> is the usual sample variance <span class="math inline">\(s^{2}_{y}\)</span>).</p>
 When an explanatory variable <span class="math inline">\(X\)</span> is included in the model, the predicted value for each <span class="math inline">\(Y_{i}\)</span> is <span class="math inline">\(\hat{Y}_{i}=\hat{\alpha}+\hat{\beta}X_{i}\)</span>, the error in this prediction is <span class="math inline">\(Y_{i}-\hat{Y}_{i}\)</span>, and the error sum of squares is <span class="math inline">\(SSE=\sum (Y_{i}-\hat{Y}_{i})^{2}\)</span>. The two sums of squares are related by
 <span class="math display">\[\begin{equation}\sum (Y_{i}-\bar{Y})^{2} =\sum (Y_{i}-\hat{Y}_{i})^{2} +\sum
 (\hat{Y}_{i}-\bar{Y})^{2}.
 \label{eq:ss-decomp}\end{equation}\]</span>
-<p>Here <span class="math inline">\(SSM=\sum (\hat{Y}_{i}-\bar{Y})^{2}=TSS-SSE\)</span> is the “Model sum of squares”. It is the reduction in squared prediction errors achieved when we make use of <span class="math inline">\(X_{i}\)</span> to predict values of <span class="math inline">\(Y_{i}\)</span> with the regression model, instead of predicting <span class="math inline">\(\bar{Y}\)</span> for all observations. In slightly informal language, <span class="math inline">\(SSM\)</span> is the part of the total variation <span class="math inline">\(TSS\)</span> “explained” by the fitted regression model. In this language, (\ref{eq:ss-decomp}) can be stated as</p>
+<p>Here <span class="math inline">\(SSM=\sum (\hat{Y}_{i}-\bar{Y})^{2}=TSS-SSE\)</span> is the “Model sum of squares”. It is the reduction in squared prediction errors achieved when we make use of <span class="math inline">\(X_{i}\)</span> to predict values of <span class="math inline">\(Y_{i}\)</span> with the regression model, instead of predicting <span class="math inline">\(\bar{Y}\)</span> for all observations. In slightly informal language, <span class="math inline">\(SSM\)</span> is the part of the total variation <span class="math inline">\(TSS\)</span> “explained” by the fitted regression model. In this language, (<a href="#eq:ss-decomp">(<strong>??</strong>)</a>) can be stated as</p>
 <table style="width:98%;">
 <colgroup>
 <col width="29%" />
@@ -753,24 +756,24 @@ The <span class="math inline">\(R^{2}\)</span> statistic is defined as
 The only parameter of the simple linear regression model for which we will describe methods of statistical inference is the slope coefficient <span class="math inline">\(\beta\)</span>. Tests and confidence intervals for population values of the intercept <span class="math inline">\(\alpha\)</span> are rarely and ones about the residual standard deviation <span class="math inline">\(\sigma\)</span> almost never substantively interesting, so they will not be considered. Similarly, the only null hypothesis on <span class="math inline">\(\beta\)</span> discussed here is that its value is zero, i.e.
 <span class="math display">\[\begin{equation}H_{0}:\; \beta=0.
 \label{eq:H0betasimple}\end{equation}\]</span>
-Recall that when <span class="math inline">\(\beta\)</span> is 0, there is no linear association between the explanatory variable <span class="math inline">\(X\)</span> and the response variable <span class="math inline">\(Y\)</span>. Graphically, this corresponds to a regression line in the population which is parallel to the <span class="math inline">\(X\)</span>-axis (see plot (d) of Figure <a href="#fig:f-scatterplots">8.4</a> for an illustration of such a line in a sample). The hypothesis (\ref{eq:H0betasimple}) can thus be expressed in words as
-<span class="math display">\[\begin{equation}H_{0}:\; \text{*There is no
-linear association
-between* X \text{*and* }Y\text{ *in the population*}}.
-\label{eq:H0betasimple2}\end{equation}\]</span>
+<p>Recall that when <span class="math inline">\(\beta\)</span> is 0, there is no linear association between the explanatory variable <span class="math inline">\(X\)</span> and the response variable <span class="math inline">\(Y\)</span>. Graphically, this corresponds to a regression line in the population which is parallel to the <span class="math inline">\(X\)</span>-axis (see plot (d) of Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a> for an illustration of such a line in a sample). The hypothesis (<a href="#eq:H0betasimple">(<strong>??</strong>)</a>) can thus be expressed in words as</p>
+<span class="math display">\[\begin{equation}
+H_{0}:\; \text{\emph{There is no linear association between }X \text{\emph{and }}Y\text{ \emph{in the population}}}.
+\label{eq:H0betasimple2}
+\end{equation}\]</span>
 <p>Tests of this are usually carried out against a two-sided alternative hypothesis <span class="math inline">\(H_{a}: \; \beta\ne 0\)</span>, and we will also concentrate on this case.</p>
-<p>Formulation (\ref{eq:H0betasimple2}) implies that the hypothesis that <span class="math inline">\(\beta=0\)</span> is equivalent to one that the population correlation <span class="math inline">\(\rho\)</span> between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is also 0. The test statistic presented below for testing (\ref{eq:H0betasimple}) is also identical to a common test statistic for <span class="math inline">\(\rho=0\)</span>. A test of <span class="math inline">\(\beta=0\)</span> can thus be interpreted also as a test of no correlation in the population.</p>
+<p>Formulation (<a href="#eq:H0betasimple2">(<strong>??</strong>)</a>) implies that the hypothesis that <span class="math inline">\(\beta=0\)</span> is equivalent to one that the population correlation <span class="math inline">\(\rho\)</span> between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is also 0. The test statistic presented below for testing (<a href="#eq:H0betasimple">(<strong>??</strong>)</a>) is also identical to a common test statistic for <span class="math inline">\(\rho=0\)</span>. A test of <span class="math inline">\(\beta=0\)</span> can thus be interpreted also as a test of no correlation in the population.</p>
 The tests and confidence intervals involve both the estimate <span class="math inline">\(\hat{\beta}\)</span> and its estimated standard error, which we will here denote <span class="math inline">\(\hat{\text{se}}(\hat{\beta})\)</span>.<a href="#fn50" class="footnoteRef" id="fnref50"><sup>50</sup></a> It is calculated as
 <span class="math display">\[\begin{equation}\hat{\text{se}}(\hat{\beta})=
 \frac{\hat{\sigma}}{\sqrt{\sum\left(X_{i}-\bar{X}\right)^{2}}}
 =\frac{\hat{\sigma}}{s_{x}\sqrt{n-1}}
 \label{eq:sebeta}\end{equation}\]</span>
-<p>where <span class="math inline">\(\hat{\sigma}\)</span> is the estimated residual standard deviation given by (\ref{eq:sigma-linreg}), and <span class="math inline">\(s_{x}\)</span> is the sample standard deviation of <span class="math inline">\(X\)</span>. The standard error indicates the level of precision with which <span class="math inline">\(\hat{\beta}\)</span> estimates the population parameter <span class="math inline">\(\beta\)</span>. The last expression in (\ref{eq:sebeta}) shows that the sample size <span class="math inline">\(n\)</span> appears in the denominator of the standard error formula. This means that the standard error becomes smaller as the sample size increases. In other words, the precision of estimation increases when the sample size increases, as with all the other estimates of population parameters we have considered before. In SPSS output, the estimated standard error is given under “Std. Error” in the “<strong>Coefficients</strong>” table. Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a> shows that <span class="math inline">\(\hat{\text{se}}(\hat{\beta})=0.015\)</span> for the estimated coefficient <span class="math inline">\(\hat{\beta}\)</span> of School enrolment.</p>
-The test statistic for the null hypothesis (\ref{eq:H0betasimple}) is once again of the general form (see the beginning of Section <a href="c-probs.html#ss-probs-test1sample-teststatistic">5.5.2</a>), i.e. a point estimate divided by its standard error. Here this gives
+<p>where <span class="math inline">\(\hat{\sigma}\)</span> is the estimated residual standard deviation given by (<a href="#eq:sigma-linreg">(<strong>??</strong>)</a>), and <span class="math inline">\(s_{x}\)</span> is the sample standard deviation of <span class="math inline">\(X\)</span>. The standard error indicates the level of precision with which <span class="math inline">\(\hat{\beta}\)</span> estimates the population parameter <span class="math inline">\(\beta\)</span>. The last expression in (<a href="#eq:sebeta">(<strong>??</strong>)</a>) shows that the sample size <span class="math inline">\(n\)</span> appears in the denominator of the standard error formula. This means that the standard error becomes smaller as the sample size increases. In other words, the precision of estimation increases when the sample size increases, as with all the other estimates of population parameters we have considered before. In SPSS output, the estimated standard error is given under “Std. Error” in the “<strong>Coefficients</strong>” table. Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a> shows that <span class="math inline">\(\hat{\text{se}}(\hat{\beta})=0.015\)</span> for the estimated coefficient <span class="math inline">\(\hat{\beta}\)</span> of School enrolment.</p>
+The test statistic for the null hypothesis (<a href="#eq:H0betasimple">(<strong>??</strong>)</a>) is once again of the general form (see the beginning of Section <a href="c-probs.html#ss-probs-test1sample-teststatistic">5.5.2</a>), i.e. a point estimate divided by its standard error. Here this gives
 <span class="math display">\[\begin{equation}t=\frac{\hat{\beta}}{\hat{\text{se}}(\hat{\beta})}.
 \label{eq:tbeta}\end{equation}\]</span>
-<p>The logic of this is the same as in previous applications of the same idea. Since the null hypothesis (\ref{eq:H0betasimple}) claims that the population <span class="math inline">\(\beta\)</span> is zero, values of its estimate <span class="math inline">\(\hat{\beta}\)</span> far from zero will be treated as evidence against the null hypothesis. What counts as “far from zero” depends on how precisely <span class="math inline">\(\beta\)</span> is estimated from the observed data by <span class="math inline">\(\hat{\beta}\)</span> (i.e. how much uncertainty there is in <span class="math inline">\(\hat{\beta}\)</span>), so <span class="math inline">\(\hat{\beta}\)</span> is standardised by dividing by its standard error to obtain the test statistic.</p>
-<p>When the null hypothesis (\ref{eq:H0betasimple}) is true, the sampling distribution of the test statistic (\ref{eq:tbeta}) is a <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n-2\)</span> degrees of freedom (i.e. <span class="math inline">\(n-(k+1)\)</span> where <span class="math inline">\(k=1\)</span> is the number of explanatory variables in the model). The <span class="math inline">\(P\)</span>-value for the test against a two-sided alternative hypothesis <span class="math inline">\(\beta\ne 0\)</span> is then the probability that a value from a <span class="math inline">\(t_{n-2}\)</span> distribution is at least as far from zero as the value of the observed test statistic. As for the tests of one and two means discussed in Chapter <a href="c-means.html#c-means">7</a>, it would again be possible to consider a large-sample version of the test which relaxes the assumption that <span class="math inline">\(Y_{i}\)</span> given <span class="math inline">\(X_{i}\)</span> are normally distributed, and uses (thanks to the Central Limit Theorem again) the standard normal distribution to obtain the <span class="math inline">\(P\)</span>-value. With linear regression models, however, the <span class="math inline">\(t\)</span> distribution version of the test is usually used and included in standard computer output, so only it will be discussed here. The difference between <span class="math inline">\(P\)</span>-values from the <span class="math inline">\(t_{n-2}\)</span> and standard normal distributions is in any case minimal when the sample size is reasonably large (at least 30, say).</p>
+<p>The logic of this is the same as in previous applications of the same idea. Since the null hypothesis (<a href="#eq:H0betasimple">(<strong>??</strong>)</a>) claims that the population <span class="math inline">\(\beta\)</span> is zero, values of its estimate <span class="math inline">\(\hat{\beta}\)</span> far from zero will be treated as evidence against the null hypothesis. What counts as “far from zero” depends on how precisely <span class="math inline">\(\beta\)</span> is estimated from the observed data by <span class="math inline">\(\hat{\beta}\)</span> (i.e. how much uncertainty there is in <span class="math inline">\(\hat{\beta}\)</span>), so <span class="math inline">\(\hat{\beta}\)</span> is standardised by dividing by its standard error to obtain the test statistic.</p>
+<p>When the null hypothesis (<a href="#eq:H0betasimple">(<strong>??</strong>)</a>) is true, the sampling distribution of the test statistic (<a href="#eq:tbeta">(<strong>??</strong>)</a>) is a <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n-2\)</span> degrees of freedom (i.e. <span class="math inline">\(n-(k+1)\)</span> where <span class="math inline">\(k=1\)</span> is the number of explanatory variables in the model). The <span class="math inline">\(P\)</span>-value for the test against a two-sided alternative hypothesis <span class="math inline">\(\beta\ne 0\)</span> is then the probability that a value from a <span class="math inline">\(t_{n-2}\)</span> distribution is at least as far from zero as the value of the observed test statistic. As for the tests of one and two means discussed in Chapter <a href="c-means.html#c-means">7</a>, it would again be possible to consider a large-sample version of the test which relaxes the assumption that <span class="math inline">\(Y_{i}\)</span> given <span class="math inline">\(X_{i}\)</span> are normally distributed, and uses (thanks to the Central Limit Theorem again) the standard normal distribution to obtain the <span class="math inline">\(P\)</span>-value. With linear regression models, however, the <span class="math inline">\(t\)</span> distribution version of the test is usually used and included in standard computer output, so only it will be discussed here. The difference between <span class="math inline">\(P\)</span>-values from the <span class="math inline">\(t_{n-2}\)</span> and standard normal distributions is in any case minimal when the sample size is reasonably large (at least 30, say).</p>
 <p>In the infant mortality example shown in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>, the estimated coefficient of School enrolment is <span class="math inline">\(\hat{\beta}=-0.179\)</span>, and its estimated standard error is <span class="math inline">\(\hat{\text{se}}(\hat{\beta})=0.015\)</span>, so the test statistic is <span class="math display">\[t=\frac{-0.179}{0.015}=-11.94\]</span> (up to some rounding error). This is shown in the “t” column of the “<strong>Coefficients</strong>” table. The <span class="math inline">\(P\)</span>-value, obtained from the <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n-2=109\)</span> degrees of freedom, is shown in the “Sig.” column. Here <span class="math inline">\(P&lt;0.001\)</span>, so the null hypothesis is clearly rejected. The data thus provide very strong evidence that primary school enrolment is associated with infant mortality rate in the population.</p>
 In many analyses, rejecting the null hypothesis of no association will be entirely unsurprising. The question of interest is then not <em>whether</em> there is an association in the population, but <em>how strong</em> it is. This question is addressed with the point estimate <span class="math inline">\(\hat{\beta}\)</span>, combined with a confidence interval which reflects the level of uncertainty in <span class="math inline">\(\hat{\beta}\)</span> as an estimate of the population parameter <span class="math inline">\(\beta\)</span>. A confidence interval for <span class="math inline">\(\beta\)</span> with the confidence level <span class="math inline">\(1-\alpha\)</span> is given by
 <span class="math display">\[\begin{equation}\hat{\beta} \pm t_{\alpha/2}^{(n-2)} \, \hat{\text{se}}(\hat{\beta})
@@ -820,29 +823,28 @@ translation by L. P. Wilkinson)</p>
 <h3><span class="header-section-number">8.5.1</span> Introduction</h3>
 <p>Simple linear regression becomes multiple linear regression when more than one explanatory variable is included in the model. How this is done is explained in Section <a href="c-regression.html#ss-regression-multiple-def">8.5.2</a> below. The definition of the model builds directly on that of the simple linear model, and most of the elements of the multiple model are either unchanged or minimally modified from the simple one. As a result, we can in Section <a href="c-regression.html#ss-regression-multiple-unchanged">8.5.3</a> cover much of the multiple linear model simply by referring back to the descriptions in Section <a href="c-regression.html#s-regression-simple">8.3</a>. One aspect of the model is, however, conceptually expanded when there are multiple explanatory variables, and requires a careful discussion. This is the meaning of the regression coefficients of the explanatory variables. The interpretation of and inference for these parameters are discussed in Section <a href="c-regression.html#ss-regression-multiple-beta">8.5.4</a>. The crucial part of this interpretation, and the main motivation for considering multiple regression models, is that it is one way of implementing the ideas of statistical control in analyses for continuous response variables.</p>
 <p>The concepts are be illustrated with a further example from the Global Civil Society data set. The response variable will still be the Infant mortality rate of a country, and there will be three explanatory variables: School enrolment, Control of corruption and Income inequality as measured by the Gini index (see Example 8.1). Results for this model are shown in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>, to which we will refer throughout this section. The table is also an example of the kind of format in which results of regression models are typically reported. Presenting raw computer output such as that in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a> is normally not appropriate in formal research reports.</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <caption><span id="tab:t-imr-m2">Table 8.3: </span>Response variable: Infant Mortality Rate (%). Results for a linear regression model for Infant mortality rate given three explanatory variables in the Global Civil Society data. <span class="math inline">\(\hat{\sigma}=2.23\)</span>; <span class="math inline">\(R^{2}=0.692\)</span>; <span class="math inline">\(n=111\)</span>; <span class="math inline">\(df=107\)</span></caption>
 <colgroup>
-<col width="54%" />
-<col width="9%" />
-<col width="7%" />
-<col width="5%" />
+<col width="28%" />
+<col width="15%" />
+<col width="11%" />
 <col width="8%" />
 <col width="13%" />
+<col width="20%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">Explanatory variable</th>
+<th align="right">Coefficient</th>
+<th align="right">Standard error</th>
+<th align="right"><span class="math inline">\(t\)</span></th>
+<th align="right"><span class="math inline">\(P\)</span>-value</th>
+<th align="center">95 % Confidence interval</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left">Explanatory variable</td>
-<td align="right"><br />
-Coefficient</td>
-<td align="right">Standard error</td>
-<td align="right"><br />
-<span class="math inline">\(t\)</span></td>
-<td align="right"><br />
-<span class="math inline">\(P\)</span>-value</td>
-<td align="center">95 % Confidence interval</td>
-</tr>
-<tr class="even">
 <td align="left">Constant</td>
 <td align="right">16.40</td>
 <td align="right"></td>
@@ -850,7 +852,7 @@ Coefficient</td>
 <td align="right"></td>
 <td align="center"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">School enrolment (%)</td>
 <td align="right">-0.139</td>
 <td align="right">0.014</td>
@@ -858,7 +860,7 @@ Coefficient</td>
 <td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
 <td align="center">(-0.167; -0.111 )</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Control of corruption</td>
 <td align="right">-0.046</td>
 <td align="right">0.008</td>
@@ -866,7 +868,7 @@ Coefficient</td>
 <td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
 <td align="center">(-0.062; -0.029)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Income inequality</td>
 <td align="right">0.055</td>
 <td align="right">0.022</td>
@@ -883,18 +885,18 @@ Coefficient</td>
 The multiple linear regression model is essentially the same as the simple linear model. The values <span class="math inline">\(Y_{i}\)</span> of the response variable in the sample are again assumed to be statistically independent, and each of them is regarded as an observation sampled from a normal distribution with mean <span class="math inline">\(\mu_{i}\)</span> and variance <span class="math inline">\(\sigma^{2}\)</span>. The crucial change is that the expected values <span class="math inline">\(\mu_{i}\)</span> now depend on the multiple explanatory variables through
 <span class="math display">\[\begin{equation}\mu_{i} = \alpha +\beta_{1}X_{1i}+\beta_{2}X_{2i}+\dots+\beta_{k}X_{ki}
 \label{eq:mu-multiple}\end{equation}\]</span>
-where the coefficients <span class="math inline">\(\beta_{1}, \beta_{2}, \dots, \beta_{k}\)</span> of individual explanatory variables are now also identified with subscripts. As in (\ref{eq:slinmodel}) for the simple linear model, the multiple model can also be expressed in the concise form
+where the coefficients <span class="math inline">\(\beta_{1}, \beta_{2}, \dots, \beta_{k}\)</span> of individual explanatory variables are now also identified with subscripts. As in (<a href="#eq:slinmodel">(<strong>??</strong>)</a>) for the simple linear model, the multiple model can also be expressed in the concise form
 <span class="math display">\[\begin{equation}Y_{i} = \alpha
 +\beta_{1}X_{1i}+\beta_{2}X_{2i}+\dots+\beta_{k}X_{ki}+\epsilon_{i}
 \label{eq:mlinmodel}\end{equation}\]</span>
 <p>where the error term (population residual) <span class="math inline">\(\epsilon_{i}\)</span> is normally distributed with mean 0 and variance <span class="math inline">\(\sigma^{2}\)</span>.</p>
-<p>The expected value of <span class="math inline">\(Y\)</span> as defined in (\ref{eq:mu-multiple}) is a linear function of <span class="math inline">\(X_{1}, X_{2}, \dots, X_{k}\)</span>. If there are two explanatory variables (<span class="math inline">\(k=2\)</span>), <span class="math inline">\(\mu\)</span> is described by a flat <em>plane</em> as <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{2}\)</span> take different values (think of a flat sheet of paper, at an angle and extended indefinitely in all directions, cutting across a room in the air). A plane is the two-dimensional generalisation of a one-dimensional straight line. The actual observations of <span class="math inline">\(Y_{i}\)</span> now correspond to points in a three-dimensional space, and they are generally not on the regression plane (think of them as a swarm of bees in the air, some perhaps sitting on that sheet of paper but most hovering above or below it). When <span class="math inline">\(k\)</span> is larger than 2, the regression surface is a higher-dimensional linear object known as a hyperplane. This is impossible to visualise in our three-dimensional world, but mathematically the idea of the model remains unchanged. In each case, the observed values of <span class="math inline">\(Y\)</span> exist in a yet higher dimension, so they cannot in general be predicted exactly even with multiple explanatory variables. A regression plane defined by several <span class="math inline">\(X\)</span>-variables does nevertheless allow for more flexibility for <span class="math inline">\(\mu_{i}\)</span> than a straight line, so it is in general possible to predict <span class="math inline">\(Y_{i}\)</span> more accurately with a multiple regression model than a simple one. This, however, is not usually the only or main criterion for selecting a good regression model, for reasons discussed in Section <a href="c-regression.html#ss-regression-multiple-beta">8.5.4</a> below.</p>
+<p>The expected value of <span class="math inline">\(Y\)</span> as defined in (<a href="#eq:mu-multiple">(<strong>??</strong>)</a>) is a linear function of <span class="math inline">\(X_{1}, X_{2}, \dots, X_{k}\)</span>. If there are two explanatory variables (<span class="math inline">\(k=2\)</span>), <span class="math inline">\(\mu\)</span> is described by a flat <em>plane</em> as <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{2}\)</span> take different values (think of a flat sheet of paper, at an angle and extended indefinitely in all directions, cutting across a room in the air). A plane is the two-dimensional generalisation of a one-dimensional straight line. The actual observations of <span class="math inline">\(Y_{i}\)</span> now correspond to points in a three-dimensional space, and they are generally not on the regression plane (think of them as a swarm of bees in the air, some perhaps sitting on that sheet of paper but most hovering above or below it). When <span class="math inline">\(k\)</span> is larger than 2, the regression surface is a higher-dimensional linear object known as a hyperplane. This is impossible to visualise in our three-dimensional world, but mathematically the idea of the model remains unchanged. In each case, the observed values of <span class="math inline">\(Y\)</span> exist in a yet higher dimension, so they cannot in general be predicted exactly even with multiple explanatory variables. A regression plane defined by several <span class="math inline">\(X\)</span>-variables does nevertheless allow for more flexibility for <span class="math inline">\(\mu_{i}\)</span> than a straight line, so it is in general possible to predict <span class="math inline">\(Y_{i}\)</span> more accurately with a multiple regression model than a simple one. This, however, is not usually the only or main criterion for selecting a good regression model, for reasons discussed in Section <a href="c-regression.html#ss-regression-multiple-beta">8.5.4</a> below.</p>
 </div>
 <div id="ss-regression-multiple-unchanged" class="section level3">
 <h3><span class="header-section-number">8.5.3</span> Unchanged elements from simple linear models</h3>
 <p>As mentioned at the beginning of this section, most elements of the multiple linear regression model are the same or very similar as for the simple model, and require little further explanation:</p>
 <ul>
-<li><p>The <strong>constant term</strong> (intercept) <span class="math inline">\(\alpha\)</span> is interpreted as the expected value of <span class="math inline">\(Y\)</span> when all of the explanatory variables have the value 0. This can be seen by setting <span class="math inline">\(X_{1i}, X_{2i}, \dots, X_{ki}\)</span> all to 0 in (\ref{eq:mu-multiple}). As before, <span class="math inline">\(\alpha\)</span> is rarely of any substantive interest. In the example in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>, the estimated value of <span class="math inline">\(\alpha\)</span> is 16.40.</p></li>
+<li><p>The <strong>constant term</strong> (intercept) <span class="math inline">\(\alpha\)</span> is interpreted as the expected value of <span class="math inline">\(Y\)</span> when all of the explanatory variables have the value 0. This can be seen by setting <span class="math inline">\(X_{1i}, X_{2i}, \dots, X_{ki}\)</span> all to 0 in (<a href="#eq:mu-multiple">(<strong>??</strong>)</a>). As before, <span class="math inline">\(\alpha\)</span> is rarely of any substantive interest. In the example in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>, the estimated value of <span class="math inline">\(\alpha\)</span> is 16.40.</p></li>
 <li><p>The <strong>residual standard deviation</strong> <span class="math inline">\(\sigma\)</span> is the standard deviation of the conditional distribution of <span class="math inline">\(Y\)</span> given the values of all of <span class="math inline">\(X_{1}, X_{2}, \dots, X_{k}\)</span>. It thus describes the magnitude of the variability of <span class="math inline">\(Y\)</span> around the regression plane. The model assumes that <span class="math inline">\(\sigma\)</span> is the same at all values of the explanatory variables. In Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>, the estimate of <span class="math inline">\(\sigma\)</span> is 2.23.</p></li>
 <li><strong>Estimates of the regression coefficients</strong> are here denoted with hats as <span class="math inline">\(\hat{\alpha}\)</span> and <span class="math inline">\(\hat{\beta}_{1}, \hat{\beta}_{2}, \dots, \hat{\beta}_{k}\)</span>, and fitted (predicted) values for <span class="math inline">\(Y_{i}\)</span> are given by
 <span class="math display">\[\begin{equation}\hat{Y}_{i}=\hat{\alpha}+\hat{\beta}_{1}X_{1i}+\hat{\beta}_{2}X_{2i}+\dots+
@@ -902,9 +904,9 @@ where the coefficients <span class="math inline">\(\beta_{1}, \beta_{2}, \dots, 
 \label{eq:Yhat}\end{equation}\]</span>
 <p>The estimated regression coefficients are again obtained with the method of <strong>least squares</strong> by finding the values for <span class="math inline">\(\hat{\alpha}, \hat{\beta}_{1}, \hat{\beta}_{2}, \dots, \hat{\beta}_{k}\)</span> which make the error sum of squares <span class="math inline">\(SSE=\sum (Y_{i}-\hat{Y}_{i})^{2}\)</span> as small as possible. This is both mathematically and intuitively the same exercise as least squares estimation for a simple linear model, except with more dimensions: here we are finding the best-fitting hyperplane through a high-dimensional cloud of points rather than the best-fitting straight line through a two-dimensional scatterplot.</p>
 <p>With more than one explanatory variable, the computational formulas for the estimates become difficult to write down<a href="#fn52" class="footnoteRef" id="fnref52"><sup>52</sup></a> and essentially impossible to calculate by hand. This is not a problem in practice, as they are easily computed by statistical software such as SPSS. In Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>, the least squares estimates of the regression coefficients are shown in the “Coefficient” column. Each row of the table gives the coefficient for one explanatory variable, identified in the first column. A similar format is adopted in SPSS output, where the “<strong>Coefficients</strong>” table looks very similar to the main part of Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>. The arrangement of other parts of SPSS output for multiple linear regression is essentially unchanged from the format shown in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>.</p></li>
-<li><p>Predicted values for <span class="math inline">\(Y\)</span> can be calculated from (\ref{eq:Yhat}) for any set of values of the explanatory variables (whether those observed in the data or not, as long as extrapolation outside their observed ranges is avoided). This is often very useful for illustrating the implications of a fitted model. For example, Table <a href="c-regression.html#tab:t-imrvars">8.2</a> shows that the sample averages of the explanatory variables in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a> are approximately 86 for School enrolment (<span class="math inline">\(X-{1}\)</span>), 50 for Control of corruption (<span class="math inline">\(X_{2}\)</span>) and 40 for Income inequality (<span class="math inline">\(X_{3}\)</span>). The predicted IMR for a hypothetical “average” country with all these values would be <span class="math display">\[\hat{Y}=16.4-0.139\times 86-0.046\times 50+0.055\times 40=4.35\]</span> using the estimated intercept <span class="math inline">\(\hat{\alpha}=16.4\)</span>, and the estimated regression coefficients <span class="math inline">\(\hat{\beta}_{1}=-0.139\)</span>, <span class="math inline">\(\hat{\beta}_{2}=-0.046\)</span> and <span class="math inline">\(\hat{\beta}_{3}=0.055\)</span> for <span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span> and <span class="math inline">\(X_{3}\)</span>. For further illustration, we might compare this to other predicted values calculated for, say, different combinations of large and/or small values of the explanatory variables.</p></li>
-<li><p>The estimated residual standard error <span class="math inline">\(\hat{\sigma}\)</span> is again calculated from (\ref{eq:sigma-linreg}), using the appropriate value of <span class="math inline">\(k\)</span>. Here <span class="math inline">\(n=111\)</span> and <span class="math inline">\(k=3\)</span>, and so the degrees of freedom are <span class="math inline">\(df=n-(k+1)=n-4=107\)</span>. The estimate is <span class="math inline">\(\hat{\sigma}=2.23\)</span>.</p></li>
-<li><p>The explanation of the coefficient of determination <span class="math inline">\(R^{2}\)</span> is entirely unchanged from the one given under “Coefficient of determination (<span class="math inline">\(R^{2}\)</span>)” in Section <a href="c-regression.html#ss-regression-simple-est">8.3.4</a>. It is still calculated with the formula (\ref{eq:R2}), and its interpretation is also the same. The <span class="math inline">\(R^{2}\)</span> statistic thus describes the proportion of the sample variation in <span class="math inline">\(Y\)</span> explained by the regression model, i.e. by the variation in the explanatory variables. Similarly, the multiple correlation coefficient <span class="math inline">\(R=\sqrt{R^{2}}\)</span> is again the correlation between the observed <span class="math inline">\(Y_{i}\)</span> and the fitted values <span class="math inline">\(\hat{Y}_{i}\)</span>. In our example, <span class="math inline">\(R^{2}=0.692\)</span> (and <span class="math inline">\(R=\sqrt{0.692}=0.832\)</span>), i.e. about 69.2% of the observed variation in IMR between countries is explained by the variation in levels of School enrolment, Control of corruption and Income inequality between them. Compared to the <span class="math inline">\(R^{2}=0.567\)</span> for the simple regression model in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>, adding the two new explanatory variables has increased <span class="math inline">\(R^{2}\)</span> by 12.5 percentage points, which seems like a reasonably large increase.</p></li>
+<li><p>Predicted values for <span class="math inline">\(Y\)</span> can be calculated from (<a href="#eq:Yhat">(<strong>??</strong>)</a>) for any set of values of the explanatory variables (whether those observed in the data or not, as long as extrapolation outside their observed ranges is avoided). This is often very useful for illustrating the implications of a fitted model. For example, Table <a href="c-regression.html#tab:t-imrvars">8.2</a> shows that the sample averages of the explanatory variables in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a> are approximately 86 for School enrolment (<span class="math inline">\(X-{1}\)</span>), 50 for Control of corruption (<span class="math inline">\(X_{2}\)</span>) and 40 for Income inequality (<span class="math inline">\(X_{3}\)</span>). The predicted IMR for a hypothetical “average” country with all these values would be <span class="math display">\[\hat{Y}=16.4-0.139\times 86-0.046\times 50+0.055\times 40=4.35\]</span> using the estimated intercept <span class="math inline">\(\hat{\alpha}=16.4\)</span>, and the estimated regression coefficients <span class="math inline">\(\hat{\beta}_{1}=-0.139\)</span>, <span class="math inline">\(\hat{\beta}_{2}=-0.046\)</span> and <span class="math inline">\(\hat{\beta}_{3}=0.055\)</span> for <span class="math inline">\(X_{1}\)</span>, <span class="math inline">\(X_{2}\)</span> and <span class="math inline">\(X_{3}\)</span>. For further illustration, we might compare this to other predicted values calculated for, say, different combinations of large and/or small values of the explanatory variables.</p></li>
+<li><p>The estimated residual standard error <span class="math inline">\(\hat{\sigma}\)</span> is again calculated from (<a href="#eq:sigma-linreg">(<strong>??</strong>)</a>), using the appropriate value of <span class="math inline">\(k\)</span>. Here <span class="math inline">\(n=111\)</span> and <span class="math inline">\(k=3\)</span>, and so the degrees of freedom are <span class="math inline">\(df=n-(k+1)=n-4=107\)</span>. The estimate is <span class="math inline">\(\hat{\sigma}=2.23\)</span>.</p></li>
+<li><p>The explanation of the coefficient of determination <span class="math inline">\(R^{2}\)</span> is entirely unchanged from the one given under “Coefficient of determination (<span class="math inline">\(R^{2}\)</span>)” in Section <a href="c-regression.html#ss-regression-simple-est">8.3.4</a>. It is still calculated with the formula (<a href="#eq:R2">(<strong>??</strong>)</a>), and its interpretation is also the same. The <span class="math inline">\(R^{2}\)</span> statistic thus describes the proportion of the sample variation in <span class="math inline">\(Y\)</span> explained by the regression model, i.e. by the variation in the explanatory variables. Similarly, the multiple correlation coefficient <span class="math inline">\(R=\sqrt{R^{2}}\)</span> is again the correlation between the observed <span class="math inline">\(Y_{i}\)</span> and the fitted values <span class="math inline">\(\hat{Y}_{i}\)</span>. In our example, <span class="math inline">\(R^{2}=0.692\)</span> (and <span class="math inline">\(R=\sqrt{0.692}=0.832\)</span>), i.e. about 69.2% of the observed variation in IMR between countries is explained by the variation in levels of School enrolment, Control of corruption and Income inequality between them. Compared to the <span class="math inline">\(R^{2}=0.567\)</span> for the simple regression model in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>, adding the two new explanatory variables has increased <span class="math inline">\(R^{2}\)</span> by 12.5 percentage points, which seems like a reasonably large increase.</p></li>
 </ul>
 </div>
 <div id="ss-regression-multiple-beta" class="section level3">
@@ -920,7 +922,7 @@ for any values of <span class="math inline">\(X_{1}\)</span>, <span class="math 
 <span class="math display">\[\begin{equation}\mu=\alpha+\beta_{1}X_{1}+\beta_{2}X_{2}+\beta_{3}(X_{3}+1)=
 \alpha+\beta_{1}X_{1}+\beta_{2}X_{2}+\beta_{3}X_{3}+\beta_{3}.
 \label{eq:mu2}\end{equation}\]</span>
-<p>Subtracting (\ref{eq:mu1}) from (\ref{eq:mu2}) leaves us with <span class="math inline">\(\beta_{3}\)</span>. In other words, <span class="math inline">\(\beta_{3}\)</span> is the change in expected value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X_{3}\)</span> is increased by one unit, while keeping the values of <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{2}\)</span> unchanged. The same result would obviously be obtained for <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{2}\)</span>, and for models with any number of explanatory variables. Thus in general</p>
+<p>Subtracting (<a href="#eq:mu1">(<strong>??</strong>)</a>) from (<a href="#eq:mu2">(<strong>??</strong>)</a>) leaves us with <span class="math inline">\(\beta_{3}\)</span>. In other words, <span class="math inline">\(\beta_{3}\)</span> is the change in expected value of <span class="math inline">\(Y\)</span> when <span class="math inline">\(X_{3}\)</span> is increased by one unit, while keeping the values of <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{2}\)</span> unchanged. The same result would obviously be obtained for <span class="math inline">\(X_{1}\)</span> and <span class="math inline">\(X_{2}\)</span>, and for models with any number of explanatory variables. Thus in general</p>
 <ul>
 <li>The regression coefficient of any explanatory variable in a multiple linear regression model shows the change in expected value of the response variable <span class="math inline">\(Y\)</span> when that explanatory variable is increased by one unit, while holding all other explanatory variables constant.</li>
 </ul>
@@ -940,24 +942,24 @@ for any values of <span class="math inline">\(X_{1}\)</span>, <span class="math 
 Inference for the regression coefficients in a multiple linear model differs from that for the simple model in interpretation but not in execution. Let <span class="math inline">\(\hat{\beta}_{j}\)</span> denote the estimated coefficient of an explanatory variable <span class="math inline">\(X_{j}\)</span> (where <span class="math inline">\(j\)</span> may be any of <span class="math inline">\(1,2,\dots,k\)</span>), and let <span class="math inline">\(\hat{\text{se}}(\hat{\beta}_{j})\)</span> denote its estimated standard error. The standard errors cannot now be calculated by hand, but they are routinely produced by computer packages and displayed as in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>. A <span class="math inline">\(t\)</span>-test statistic for the null hypothesis discussed below is given by
 <span class="math display">\[\begin{equation}t=\frac{\hat{\beta}_{j}}{\hat{\text{se}}(\hat{\beta}_{j})}.
 \label{eq:tbeta-m}\end{equation}\]</span>
-This is identical in form to statistic (\ref{eq:tbeta}) for the simple regression model. The corresponding null hypotheses are, however, subtly but crucially different in the two cases. In a multiple model, (\ref{eq:tbeta-m}) is a test statistic for the null hypothesis
+This is identical in form to statistic (<a href="#eq:tbeta">(<strong>??</strong>)</a>) for the simple regression model. The corresponding null hypotheses are, however, subtly but crucially different in the two cases. In a multiple model, (<a href="#eq:tbeta-m">(<strong>??</strong>)</a>) is a test statistic for the null hypothesis
 <span class="math display">\[\begin{equation}H_{0}:\; \beta_{j}=0, \text{other regression coefficients
 are unrestricted}
 \label{eq:H0beta-m}\end{equation}\]</span>
 <p>against the alternative hypothesis <span class="math display">\[H_{a}:\; \beta_{j}\ne0, \text{other regression coefficients
-are unrestricted}.\]</span> Here the statement about “unrestricted” other parameters implies that neither hypothesis makes any claims about the values of other coefficients than <span class="math inline">\(\beta_{j}\)</span>, and these are allowed to have any values. The null hypothesis is a claim about the association between <span class="math inline">\(X_{j}\)</span> and <span class="math inline">\(Y\)</span> when the other explanatory variables are already included in the model. In other words, (\ref{eq:tbeta-m}) tests <span class="math display">\[\begin{aligned}
+are unrestricted}.\]</span> Here the statement about “unrestricted” other parameters implies that neither hypothesis makes any claims about the values of other coefficients than <span class="math inline">\(\beta_{j}\)</span>, and these are allowed to have any values. The null hypothesis is a claim about the association between <span class="math inline">\(X_{j}\)</span> and <span class="math inline">\(Y\)</span> when the other explanatory variables are already included in the model. In other words, (<a href="#eq:tbeta-m">(<strong>??</strong>)</a>) tests <span class="math display">\[\begin{aligned}
 H_{0}:&amp; &amp; \text{There is no partial association between }
 X_{j} \text{ and } Y,\\
 &amp;&amp;  \text{controlling for the other explanatory
 variables.}\end{aligned}\]</span></p>
-<p>The sampling distribution of (\ref{eq:tbeta-m}) when the null hypothesis (\ref{eq:H0beta-m}) holds is a <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n-(k+1)\)</span> degrees of freedom, where <span class="math inline">\(k\)</span> is again the number of explanatory variables in the model. The test statistic and its <span class="math inline">\(P\)</span>-value from the <span class="math inline">\(t_{n-(k+1)}\)</span> distribution are shown in standard computer output, in a form similar to Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>.</p>
-<p>It is important to note two things about test results for multiple regression models, such as those in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>. First, (\ref{eq:H0beta-m}) implies that if the null hypothesis is not rejected, <span class="math inline">\(X_{j}\)</span> is not associated with <span class="math inline">\(Y\)</span>, <em>if</em> the other explanatory variables are already included in the model. We would typically react to this by removing <span class="math inline">\(X_{j}\)</span> from the model, while keeping the other variables in it. This is because of a general principle that models should usually be as simple (<em>parsimonious</em>) as possible, and not include variables which have no partial effect on the response variable. Second, the <span class="math inline">\(k\)</span> tests and <span class="math inline">\(P\)</span>-values actually refer to <span class="math inline">\(k\)</span> <em>different</em> hypotheses of the form (\ref{eq:H0beta-m}), one for each explanatory variable. This raises the question of what to do if, say, tests for two variables have large <span class="math inline">\(P\)</span>-values, suggesting that either of them could be removed from the model. The appropriate reaction is to remove one of the variables (perhaps the one with the larger <span class="math inline">\(P\)</span>-value) rather than both at once, and then see whether the other still remains nonsignificant (if so, it can then also be removed). This is part of the general area of <strong>model selection</strong>, principles and practice of which are mostly beyond the scope of this course; some further comments on it are given in Section <a href="c-regression.html#s-regression-rest">8.7</a>.</p>
+<p>The sampling distribution of (<a href="#eq:tbeta-m">(<strong>??</strong>)</a>) when the null hypothesis (<a href="#eq:H0beta-m">(<strong>??</strong>)</a>) holds is a <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n-(k+1)\)</span> degrees of freedom, where <span class="math inline">\(k\)</span> is again the number of explanatory variables in the model. The test statistic and its <span class="math inline">\(P\)</span>-value from the <span class="math inline">\(t_{n-(k+1)}\)</span> distribution are shown in standard computer output, in a form similar to Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>.</p>
+<p>It is important to note two things about test results for multiple regression models, such as those in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>. First, (<a href="#eq:H0beta-m">(<strong>??</strong>)</a>) implies that if the null hypothesis is not rejected, <span class="math inline">\(X_{j}\)</span> is not associated with <span class="math inline">\(Y\)</span>, <em>if</em> the other explanatory variables are already included in the model. We would typically react to this by removing <span class="math inline">\(X_{j}\)</span> from the model, while keeping the other variables in it. This is because of a general principle that models should usually be as simple (<em>parsimonious</em>) as possible, and not include variables which have no partial effect on the response variable. Second, the <span class="math inline">\(k\)</span> tests and <span class="math inline">\(P\)</span>-values actually refer to <span class="math inline">\(k\)</span> <em>different</em> hypotheses of the form (<a href="#eq:H0beta-m">(<strong>??</strong>)</a>), one for each explanatory variable. This raises the question of what to do if, say, tests for two variables have large <span class="math inline">\(P\)</span>-values, suggesting that either of them could be removed from the model. The appropriate reaction is to remove one of the variables (perhaps the one with the larger <span class="math inline">\(P\)</span>-value) rather than both at once, and then see whether the other still remains nonsignificant (if so, it can then also be removed). This is part of the general area of <strong>model selection</strong>, principles and practice of which are mostly beyond the scope of this course; some further comments on it are given in Section <a href="c-regression.html#s-regression-rest">8.7</a>.</p>
 <p>In the example shown in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>, the <span class="math inline">\(P\)</span>-values are small for the tests for all of the coefficients. Each of the three explanatory variables thus has a significant effect on the response even after controlling for the other two, so none of the variables should be removed from the model.</p>
 A confidence interval with confidence level <span class="math inline">\(1-\alpha\)</span> for any <span class="math inline">\(\beta_{j}\)</span> is given by
 <span class="math display">\[\begin{equation}\hat{\beta}_{j} \pm t_{\alpha/2}^{(n-(k+1))} \,
 \hat{\text{se}}(\hat{\beta}_{j}).
 \label{eq:cibeta-m}\end{equation}\]</span>
-<p>This is identical in form and interpretation to the interval (\ref{eq:cibeta}) for simple regression (except that the degrees of freedom are now <span class="math inline">\(df=n-(k+1)\)</span>), so no new issues arise. The confidence intervals for the coefficients in our example (where <span class="math inline">\(df=n-4=107\)</span> and <span class="math inline">\(t_{0.025}^{(107)}=1.98\)</span>) are shown in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>.</p>
+<p>This is identical in form and interpretation to the interval (<a href="#eq:cibeta">(<strong>??</strong>)</a>) for simple regression (except that the degrees of freedom are now <span class="math inline">\(df=n-(k+1)\)</span>), so no new issues arise. The confidence intervals for the coefficients in our example (where <span class="math inline">\(df=n-4=107\)</span> and <span class="math inline">\(t_{0.025}^{(107)}=1.98\)</span>) are shown in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>.</p>
 </div>
 </div>
 </div>
@@ -979,26 +981,25 @@ A confidence interval with confidence level <span class="math inline">\(1-\alpha
 <table style="width:98%;">
 <caption><span id="tab:t-imr-m3">Table 8.4: </span>Response variable: Infant Mortality Rate (%). Results for a linear regression model for Infant mortality rate in the Global Civil Society data, given the three explanatory variables in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a> and Income level in three groups. <span class="math inline">\(\hat{\sigma}=2.01\)</span>; <span class="math inline">\(R^{2}=0.753\)</span>; <span class="math inline">\(n=111\)</span>; <span class="math inline">\(df=105\)</span>.</caption>
 <colgroup>
-<col width="53%" />
-<col width="10%" />
-<col width="6%" />
-<col width="7%" />
+<col width="29%" />
+<col width="15%" />
 <col width="9%" />
-<col width="12%" />
+<col width="11%" />
+<col width="13%" />
+<col width="18%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">Explanatory variable</th>
+<th align="right">Coefficient</th>
+<th align="right">Std.  error</th>
+<th align="right"><span class="math inline">\(t\)</span></th>
+<th align="right"><span class="math inline">\(P\)</span>-value</th>
+<th align="center">95 % Conf.  interval</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left">Explanatory variable</td>
-<td align="right"><br />
-Coefficient</td>
-<td align="right">Std.  error</td>
-<td align="right"><br />
-<span class="math inline">\(t\)</span></td>
-<td align="right"><br />
-<span class="math inline">\(P\)</span>-value</td>
-<td align="center">95 % Conf.  interval</td>
-</tr>
-<tr class="even">
 <td align="left">Constant</td>
 <td align="right">12.00</td>
 <td align="right"></td>
@@ -1006,7 +1007,7 @@ Coefficient</td>
 <td align="right"></td>
 <td align="center"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">School enrolment (%)</td>
 <td align="right"><span class="math inline">\(-0.091\)</span></td>
 <td align="right">0.016</td>
@@ -1014,7 +1015,7 @@ Coefficient</td>
 <td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
 <td align="center"><span class="math inline">\((-0.123; -0.059)\)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Control of corruption</td>
 <td align="right"><span class="math inline">\(-0.020\)</span></td>
 <td align="right">0.011</td>
@@ -1022,7 +1023,7 @@ Coefficient</td>
 <td align="right"><span class="math inline">\(0.083\)</span></td>
 <td align="center"><span class="math inline">\((-0.043; 0.003)\)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Income inequality</td>
 <td align="right">0.080</td>
 <td align="right">0.021</td>
@@ -1030,7 +1031,7 @@ Coefficient</td>
 <td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
 <td align="center">(0.038; 0.122)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Income level (Reference group: Low)</td>
 <td align="right"></td>
 <td align="right"></td>
@@ -1038,16 +1039,16 @@ Coefficient</td>
 <td align="right"></td>
 <td align="center"></td>
 </tr>
-<tr class="odd">
-<td align="left">Middle</td>
+<tr class="even">
+<td align="left">  Middle</td>
 <td align="right"><span class="math inline">\(-3.210\)</span></td>
 <td align="right">0.631</td>
 <td align="right"><span class="math inline">\(-5.09\)</span></td>
 <td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
 <td align="center"><span class="math inline">\((-4.461; -1.958)\)</span></td>
 </tr>
-<tr class="even">
-<td align="left">High</td>
+<tr class="odd">
+<td align="left">  High</td>
 <td align="right"><span class="math inline">\(-3.296\)</span></td>
 <td align="right">1.039</td>
 <td align="right"><span class="math inline">\(-3.17\)</span></td>
@@ -1076,7 +1077,7 @@ Coefficient</td>
 <p>In cases like this where a categorical explanatory variable has more than two categories, <span class="math inline">\(t\)</span>-tests of individual coefficients are tests of hypotheses about no differences between individual categories, not the hypothesis that the variable has no effect overall. This is the hypothesis that the coefficients of the dummies for <em>all</em> of the categories are zero. This requires a slightly different test, which will not be considered here. In our example the low income category is so obviously different from the other two that it is clear that the hypothesis of no overall income effect would be rejected.</p>
 <p>The main reason for including income group in the example was not to study income effects themselves (it is after all not all that surprising that infant mortality is highest in poor countries), but to control for them when examining partial associations between IMR and the other explanatory variables. These describe the estimated effects of these continuous variables when comparing countries with similar income levels. Comparing the results in Tables <a href="c-regression.html#tab:t-imr-m2">8.3</a> and <a href="c-regression.html#tab:t-imr-m3">8.4</a>, it can be seen that the effect of School enrolment remains significant and negative (with higher enrolment associated with lower mortality), although its magnitude decreases somewhat after controlling for income group. Some but not all of its estimated effect in the first model is thus explained away by the fact that income is associated with both primary school enrolment and infant mortality, with richer countries having both higher enrolment and lower mortality.</p>
 <p>The effect of Income inequality also remains significant in the larger model, even with a slightly increased coefficient. Countries with larger income inequality tend to have higher levels of infant mortality, even when we compare countries with similar levels of income. The effect of Control of corruption, on the other hand, is no longer significant in Table <a href="c-regression.html#tab:t-imr-m3">8.4</a>. This variable is strongly associated with income (as seen in Table <a href="c-regression.html#tab:t-imrvars">8.2</a>), with the more corrupt countries typically being poor. Controlling for income, however, level of corruption appears to have little further effect on infant mortality. This also suggests that we might simplify the model by omitting the corruption variable.</p>
-<p>One final remark on dummy variables establishes a connection to the techniques discussed in Chapter <a href="c-means.html#c-means">7</a>. There we described statistical inference for comparisons of the population means of a continuous response variable <span class="math inline">\(Y\)</span> between two groups, denoted 1 and 2. Suppose now that we fit a simple linear regression model for <span class="math inline">\(Y\)</span>, with a dummy variable for group 2 as the only explanatory variable. This gives exactly the same results as the two-sample <span class="math inline">\(t\)</span>-tests and confidence intervals (under the assumption of equal variances in the groups) in Section <a href="c-means.html#s-means-inference">7.3</a>. Related to the notation of that section, the coefficients from the model are <span class="math inline">\(\hat{\alpha}=\bar{Y}_{1}\)</span>, <span class="math inline">\(\hat{\beta}=\bar{Y}_{2}-\bar{Y}_{1}\)</span>, and <span class="math inline">\(\hat{\sigma}\)</span> from (\ref{eq:sigma-linreg}) is equal to (see equation 11 in Section <a href="c-means.html#ss-means-inference-test">7.3.2</a>). Similarly, the standard error (\ref{eq:sebeta}) is the same as <span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span> in the standard error equation in Section <a href="c-means.html#ss-means-inference-test">7.3.2</a>, and the test statistic (\ref{eq:tbeta}) and confidence interval (\ref{eq:cibeta}) are identical with the t-test statistic in Section <a href="c-means.html#ss-means-inference-test">7.3.2</a> and the <span class="math inline">\(t\)</span> distribution version of the equation in Section <a href="c-means.html#ss-means-inference-ci">7.3.3</a> respectively.</p>
+<p>One final remark on dummy variables establishes a connection to the techniques discussed in Chapter <a href="c-means.html#c-means">7</a>. There we described statistical inference for comparisons of the population means of a continuous response variable <span class="math inline">\(Y\)</span> between two groups, denoted 1 and 2. Suppose now that we fit a simple linear regression model for <span class="math inline">\(Y\)</span>, with a dummy variable for group 2 as the only explanatory variable. This gives exactly the same results as the two-sample <span class="math inline">\(t\)</span>-tests and confidence intervals (under the assumption of equal variances in the groups) in Section <a href="c-means.html#s-means-inference">7.3</a>. Related to the notation of that section, the coefficients from the model are <span class="math inline">\(\hat{\alpha}=\bar{Y}_{1}\)</span>, <span class="math inline">\(\hat{\beta}=\bar{Y}_{2}-\bar{Y}_{1}\)</span>, and <span class="math inline">\(\hat{\sigma}\)</span> from (<a href="#eq:sigma-linreg">(<strong>??</strong>)</a>) is equal to (see equation 11 in Section <a href="c-means.html#ss-means-inference-test">7.3.2</a>). Similarly, the standard error (<a href="#eq:sebeta">(<strong>??</strong>)</a>) is the same as <span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span> in the standard error equation in Section <a href="c-means.html#ss-means-inference-test">7.3.2</a>, and the test statistic (<a href="#eq:tbeta">(<strong>??</strong>)</a>) and confidence interval (<a href="#eq:cibeta">(<strong>??</strong>)</a>) are identical with the t-test statistic in Section <a href="c-means.html#ss-means-inference-test">7.3.2</a> and the <span class="math inline">\(t\)</span> distribution version of the equation in Section <a href="c-means.html#ss-means-inference-ci">7.3.3</a> respectively.</p>
 <p>The connection between linear regression and the two-sample <span class="math inline">\(t\)</span>-test is an illustration of how statistical methods are not a series of separate tricks for different situations, but a set of connected procedures unified by common principles. Whenever possible, methods for more complex problems have been created by extending those for simpler ones, and simple analyses are in turn special cases of more general ones. Although these connections are unfortunately often somewhat obscured by changes in language and notation, trying to understand them is very useful for effective learning of statistics.</p>
 </div>
 <div id="ss-regression-dummies-example" class="section level3">
@@ -1085,15 +1086,15 @@ Coefficient</td>
 <p>A minimum wage of $5.05 per hour came into effect in the U.S. state of New Jersey on April 1 1992. This represented an increase from the previous, federally mandated minimum wage of $4.25 per hour. Conventional economic theory predicts that employers will react to such an increase by cutting their work force. Here the research hypothesis is thus that employment will be reduced among businesses affected by the new minimum wage. This can be addressed using suitable data, examining a statistical hypothesis of no association between measures of minimum wage increase and change of employment, controlling for other relevant explanatory variables.</p>
 <p>Card and Krueger collected data for 410 fast food restaurants at two times, about one month before and eight months after the mininum wage increase came into effect in New Jersey. Only the 368 restaurants with known values of all the variables used in the analyses are included here. Of them, 268 were in New Jersey and had starting wages below $5.05 at the time of the first interview, so that these had to be increased to meet the new minimum wage. The remaining 100 restaurants provide a control group which was not affected by the change: 75 of them were in neighbouring eastern Pennsylvania where the minimum wage remained at $4.25, and 25 were in New Jersey but had starting wages of at least $5.05 even before the increase. The theoretical prediction is that the control group should experience a smaller negative employment change than the restaurants affected by the wage increase, i.e. employment in the control restaurants should not decrease or at least decrease less than in the affected restaurants. Card and Krueger argue that fast food restaurants provide a good population for examining the research question, because they employ many low-wage workers, generally comply with minimum wage legislation, do not receive tips which would complicate wage calculations, and are relatively easy to sample and interview.</p>
 <p>The response variable considered here is the change between the two interviews in full-time equivalent employment at the restaurant, defined as the number of full-time workers (including managers) plus half the number of part-time workers. This will be called “Employment change” below. We consider two variables which indicate how the restaurant was affected by the minimum wage increase. The first is simply a dummy variable which is 1 for those New Jersey restaurants where wages needed to be raised because of the increase, and 0 for the other restaurants. These will be referred to as “Affected” and “Unaffected” restaurants respectively. The second variable is also 0 for the unaffected restaurants; for the affected ones, it is the proportion by which their previous starting wage had to be increased to meet the new minimum wage. For example, if the previous starting wage was the old minimum of $4.25, this “Wage gap” is <span class="math inline">\((5.05-4.25)/4.25=0.188\)</span>. Finally, we will also use information on the chain the restaurant belongs to (Burger King, Roy Rogers, Wendy’s or KFC) and whether it is owned by the parent company or the franchisee. These will be included in the analyses as partial control for other factors affecting the labour market, which might have had a differential impact on different types of restaurants over the study period. Summary statistics for the variables are shown in Table <a href="c-regression.html#tab:t-fastfood-descr">8.5</a>.</p>
-<table style="width:98%;">
+<table style="width:97%;">
 <caption><span id="tab:t-fastfood-descr">Table 8.5: </span>Summary statistics for the variables considered in the minimum wage example of Section <a href="c-regression.html#ss-regression-dummies-example">8.6.2</a>. Mean employment change: Among unaffected restaurants: <span class="math inline">\(-2.93\)</span>; Among affected restaurants: <span class="math inline">\(+0.68\)</span>.</caption>
 <colgroup>
-<col width="31%" />
-<col width="5%" />
-<col width="6%" />
-<col width="34%" />
-<col width="12%" />
-<col width="9%" />
+<col width="24%" />
+<col width="8%" />
+<col width="10%" />
+<col width="17%" />
+<col width="20%" />
+<col width="15%" />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -1103,10 +1104,9 @@ Coefficient</td>
 </td>
 <td align="right"><br />
 </td>
-<td align="right">Minimum</td>
+<td align="right">Minimum-</td>
 <td align="center">wage variable</td>
-<td align="center"><br />
-</td>
+<td align="center">Response variable:</td>
 </tr>
 <tr class="even">
 <td align="left">Group</td>
@@ -1114,7 +1114,7 @@ Coefficient</td>
 <td align="right"><span class="math inline">\((n)\)</span></td>
 <td align="right">Affected % (<span class="math inline">\(n\)</span>)</td>
 <td align="center">Wage gap (mean for affected restaurants)</td>
-<td align="center">Response variable: Employment change (mean)</td>
+<td align="center">Employment change (mean)</td>
 </tr>
 <tr class="odd">
 <td align="left">Overall</td>
@@ -1133,7 +1133,7 @@ Coefficient</td>
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td align="left">Franchisee</td>
+<td align="left"> Franchisee</td>
 <td align="right">64.7</td>
 <td align="right">(238)</td>
 <td align="right">71.8 (171)</td>
@@ -1141,7 +1141,7 @@ Coefficient</td>
 <td align="center"><span class="math inline">\(-0.17\)</span></td>
 </tr>
 <tr class="even">
-<td align="left">Company</td>
+<td align="left"> Company</td>
 <td align="right">35.3</td>
 <td align="right">(130)</td>
 <td align="right">74.6 (97)</td>
@@ -1157,7 +1157,7 @@ Coefficient</td>
 <td align="center"></td>
 </tr>
 <tr class="even">
-<td align="left">Burger King</td>
+<td align="left"> Burger King</td>
 <td align="right">41.0</td>
 <td align="right">(151)</td>
 <td align="right">73.5 (111)</td>
@@ -1165,7 +1165,7 @@ Coefficient</td>
 <td align="center"><span class="math inline">\(+0.02\)</span></td>
 </tr>
 <tr class="odd">
-<td align="left">Roy Rogers</td>
+<td align="left"> Roy Rogers</td>
 <td align="right">24.7</td>
 <td align="right">(91)</td>
 <td align="right">72.5 (66)</td>
@@ -1173,7 +1173,7 @@ Coefficient</td>
 <td align="center"><span class="math inline">\(-1.89\)</span></td>
 </tr>
 <tr class="even">
-<td align="left">Wendy’s</td>
+<td align="left"> Wendy’s</td>
 <td align="right">13.0</td>
 <td align="right">(48)</td>
 <td align="right">60.4 (29)</td>
@@ -1181,7 +1181,7 @@ Coefficient</td>
 <td align="center"><span class="math inline">\(-0.28\)</span></td>
 </tr>
 <tr class="odd">
-<td align="left">KFC</td>
+<td align="left"> KFC</td>
 <td align="right">21.2</td>
 <td align="right">(78)</td>
 <td align="right">79.5 (62)</td>
@@ -1190,139 +1190,141 @@ Coefficient</td>
 </tr>
 </tbody>
 </table>
-<table style="width:99%;">
+<table style="width:98%;">
 <caption><span id="tab:t-fastfood-models">Table 8.6: </span>Response variable: Change in Full-time equivalent employment. Two fitted models for Employment change given exposure to minimum wage increase and control variables. See the text for further details.</caption>
 <colgroup>
 <col width="36%" />
-<col width="22%" />
-<col width="22%" />
-<col width="9%" />
-<col width="7%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="12%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Variable</th>
+<th align="right">Model (1) Coefficient (std error)</th>
+<th align="right"><br />
+(<span class="math inline">\(t\)</span>) <span class="math inline">\(P\)</span>-value</th>
+<th align="right">Model (2) Coefficient (std error)</th>
+<th align="right"><br />
+(<span class="math inline">\(t\)</span>) <span class="math inline">\(P\)</span>-value</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-Variable</td>
-<td align="right">Model (1) Coefficient (std error)</td>
-<td align="right"><br />
-(<span class="math inline">\(t\)</span>) <span class="math inline">\(P\)</span>-value</td>
-<td align="right">Model (2) Coefficient (std error)</td>
-<td align="right"><br />
-(<span class="math inline">\(t\)</span>) <span class="math inline">\(P\)</span>-value</td>
-</tr>
-<tr class="even">
 <td align="left">Constant</td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">-2.63</td>
 <td align="right"></td>
 <td align="right">-1.54</td>
 <td align="right"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Affected by the increase</td>
 <td align="right">3.56</td>
 <td align="right">(3.50)</td>
 <td align="right">—</td>
 <td align="right">—</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">(1.02)</td>
 <td align="right">0.001</td>
 <td align="right">—</td>
 <td align="right">—</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Wage gap</td>
 <td align="right">—</td>
 <td align="right">—</td>
 <td align="right">15.88</td>
 <td align="right">(2.63)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">—</td>
 <td align="right">—</td>
 <td align="right">(6.04)</td>
 <td align="right">0.009</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Ownership (vs. Franchisee)</td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 </tr>
-<tr class="odd">
-<td align="left">Company</td>
+<tr class="even">
+<td align="left">  Company</td>
 <td align="right">0.22</td>
 <td align="right">(0.20)</td>
 <td align="right">0.43</td>
 <td align="right">(0.40)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"></td>
 <td align="right">(1.06)</td>
 <td align="right">0.84</td>
 <td align="right">(1.07)</td>
 <td align="right">0.69</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Chain (vs. Burger King)</td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 <td align="right"></td>
 </tr>
-<tr class="even">
-<td align="left">Roy Rogers</td>
+<tr class="odd">
+<td align="left">  Roy Rogers</td>
 <td align="right">-2.00</td>
 <td align="right">(-1.56)</td>
 <td align="right">-1.84</td>
 <td align="right">(-1.43)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">(1.28)</td>
 <td align="right">0.12</td>
 <td align="right">(1.29)</td>
 <td align="right">0.15</td>
 </tr>
-<tr class="even">
-<td align="left">Wendy’s</td>
+<tr class="odd">
+<td align="left">  Wendy’s</td>
 <td align="right">0.15</td>
 <td align="right">(0.11)</td>
 <td align="right">0.36</td>
 <td align="right">(0.24)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">(1.44)</td>
 <td align="right">0.92</td>
 <td align="right">(1.46)</td>
 <td align="right">0.81</td>
 </tr>
-<tr class="even">
-<td align="left">KFC</td>
+<tr class="odd">
+<td align="left">  KFC</td>
 <td align="right">0.64</td>
 <td align="right">(0.51)</td>
 <td align="right">0.81</td>
 <td align="right">(0.64)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">(1.25)</td>
 <td align="right">0.61</td>
 <td align="right">(1.26)</td>
 <td align="right">0.52</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"><span class="math inline">\(R^{2}\)</span></td>
 <td align="right">0.046</td>
 <td align="right"></td>
@@ -1388,8 +1390,9 @@ Variable</td>
         </div>
       </div>
 <a href="c-means.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-3waytables.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="c-3waytables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -1398,9 +1401,10 @@ Variable</td>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
@@ -1415,8 +1419,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kbenoit/coursepack-bookdown/edit/master/08-MY451-regression.Rmd",
-"text": null
+"link": "https://github.com/LSE-Methodology/MY451/edit/master/08-MY451-regression.Rmd",
+"text": "Edit"
 },
 "download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
 "toc": {
@@ -1431,7 +1435,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

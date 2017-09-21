@@ -45,9 +45,9 @@ Because the new process produces both paginated (pdf printable) and unpaginated 
 
 # How it works step by step
 
-The prototype of this in-house authoring and publishing process that is before you implements the course pack for the Department of Methodology's MY451 course "Introduction to Quantitative Analysis". The published course pack can be seen on <https://kbenoit.github.io/coursepack-bookdown/>.
+The prototype of this in-house authoring and publishing process that is before you implements the course pack for the Department of Methodology's MY451 course "Introduction to Quantitative Analysis". The published course pack can be seen on <https://lse-methodology.github.io/MY451/>.
 
-The project folder for that course pack containing the chapter manuscripts is stored online at <https://github.com/kbenoit/coursepack-bookdown>. To contribute to that manuscript you simply download the project folder, make your changes, and upload the project folder again.
+The project folder for that course pack containing the chapter manuscripts is stored online at <https://lse-methodology.github.io/MY451/>. To contribute to that manuscript you simply download the project folder, make your changes, and upload the project folder again.
 
 The downloading and uploading of the project folder requires a software called Git. Git affords the effective management of project folders and files by way of version control. One way to set up Git on your computer is to download GitHub Desktop [here](https://desktop.github.com/) and install it. Depending on your operating system you may have to restart your computer after installation.
 
@@ -352,7 +352,7 @@ To upload the changed files, which is also called "pushing" changes, go to your 
 
 ![](./images/commit-demo.png)
 
-Your changes will be in effect shortly. This can be within three minutes or thirty minutes depending on the workload of the Travis CI server that does the compiling. Check out <https://kbenoit.github.io/coursepack-bookdown/> and download the pdf printable and epub ebook to view your changes.
+Your changes will be in effect shortly. This can be within three minutes or thirty minutes depending on the workload of the Travis CI server that does the compiling. Check out <https://lse-methodology.github.io/MY451/> and download the pdf printable and epub ebook to view your changes.
 
 
 -- This prototype was developed by Tobias Pester, September 2016.

@@ -6,16 +6,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MY451 Introduction to Quantitative Analysis</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models.">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="MY451 Introduction to Quantitative Analysis" />
   <meta property="og:type" content="book" />
   
   
   <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="kbenoit/coursepack-bookdown" />
+  <meta name="github-repo" content="LSE-Methodology/MY451" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="MY451 Introduction to Quantitative Analysis" />
@@ -28,11 +27,6 @@
 <meta name="author" content="London School of Economics and Political Science">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,7 +35,6 @@ MathJax.Hub.Config({
   
 <link rel="prev" href="c-descr1.html">
 <link rel="next" href="c-tables.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -62,6 +55,7 @@ MathJax.Hub.Config({
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -239,7 +233,7 @@ MathJax.Hub.Config({
 </ul></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/kbenoit/coursepack-bookdown/" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
 
 </ul>
 
@@ -318,32 +312,34 @@ A political-science article considered the U.S. congressional election which to
 <p>We will introduce the idea of a population distribution first for finite populations, before extending it to infinite ones. The discussion in this section focuses on categorical variables, because the concepts are easiest to explain in that context; generalisations to continuous variables are discussed in Chapter <a href="c-means.html#c-means">7</a>.</p>
 <p>Suppose that we have drawn a sample of <span class="math inline">\(n\)</span> units from a finite population and determined the values of some variables for them. The units that are not in the sample also possess values of the variables, even though these are not observed. We can thus easily imagine how any of the methods which were in Chapter <a href="c-descr1.html#c-descr1">2</a> used to describe a sample could also be applied in the same way to the whole population, if only we knew all the values in it. In particular, we can, paralleling the sample distribution of a variable, define the <strong>population distribution</strong> as the set of values of the variable which appear in the population, together with the frequencies of each value.</p>
 <p>For illustration, consider again the example introduced early in Section <a href="c-descr1.html#s-descr1-examples">2.2</a>. The two variables there are a person’s sex and his or her attitude toward income redistribution. We have observed them for a sample <span class="math inline">\(n=2344\)</span> people drawn from the population of all UK residents aged 15 or over. The sample distributions are summarised by Table <a href="c-descr1.html#tab:t-attitude">2.3</a>.</p>
-<table style="width:99%;">
+<table style="width:98%;">
 <caption><span id="tab:t-sex-attitude-pop">Table 3.1: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Attitude towards income redistribution by sex, in a hypothetical population of 50 million people. The numbers in the table are frequencies in millions of people, row percentages (in parentheses) and overall percentages in square brackets.</caption>
 <colgroup>
-<col width="6%" />
-<col width="50%" />
-<col width="8%" />
-<col width="11%" />
-<col width="7%" />
-<col width="7%" />
-<col width="7%" />
+<col width="10%" />
+<col width="18%" />
+<col width="13%" />
+<col width="18%" />
+<col width="12%" />
+<col width="12%" />
+<col width="12%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="center">Agree strongly</th>
+<th align="center"><br />
+Agree</th>
+<th align="center">Neither agree nor disagree</th>
+<th align="center"><br />
+Disagree</th>
+<th align="center">Disagree strongly</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-Sex</td>
-<td align="center">Agree strongly</td>
-<td align="center"><br />
-Agree</td>
-<td align="center">Neither agree nor disagree</td>
-<td align="center"><br />
-Disagree</td>
-<td align="center">Disagree strongly</td>
-<td align="right"><br />
-Total</td>
-</tr>
-<tr class="even">
 <td align="left">Male</td>
 <td align="center">3.84</td>
 <td align="center">10.08</td>
@@ -352,7 +348,7 @@ Total</td>
 <td align="center">1.20</td>
 <td align="right">24.00</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(16.00)</td>
 <td align="center">(42.00)</td>
@@ -361,16 +357,16 @@ Total</td>
 <td align="center">(5.00)</td>
 <td align="right">(100)</td>
 </tr>
-<tr class="even">
-<td align="left"></td>
-<td align="center"><span class="math display">\[7.68\]</span></td>
-<td align="center"><span class="math display">\[20.16\]</span></td>
-<td align="center"><span class="math display">\[9.12\]</span></td>
-<td align="center"><span class="math display">\[8.64\]</span></td>
-<td align="center"><span class="math display">\[2.40\]</span></td>
-<td align="right"><span class="math display">\[48.00\]</span></td>
-</tr>
 <tr class="odd">
+<td align="left"></td>
+<td align="center">[7.68]</td>
+<td align="center">[20.16]</td>
+<td align="center">[9.12]</td>
+<td align="center">[8.64]</td>
+<td align="center">[2.40]</td>
+<td align="right">[48.00]</td>
+</tr>
+<tr class="even">
 <td align="left">Female</td>
 <td align="center">4.16</td>
 <td align="center">13.00</td>
@@ -379,7 +375,7 @@ Total</td>
 <td align="center">0.78</td>
 <td align="right">26.00</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"></td>
 <td align="center">(16.00)</td>
 <td align="center">(50.00)</td>
@@ -388,16 +384,16 @@ Total</td>
 <td align="center">(3.00)</td>
 <td align="right">(100)</td>
 </tr>
-<tr class="odd">
-<td align="left"></td>
-<td align="center"><span class="math display">\[8.32\]</span></td>
-<td align="center"><span class="math display">\[26.00\]</span></td>
-<td align="center"><span class="math display">\[9.36\]</span></td>
-<td align="center"><span class="math display">\[6.76\]</span></td>
-<td align="center"><span class="math display">\[1.56\]</span></td>
-<td align="right"><span class="math display">\[52.00\]</span></td>
-</tr>
 <tr class="even">
+<td align="left"></td>
+<td align="center">[8.32]</td>
+<td align="center">[26.00]</td>
+<td align="center">[9.36]</td>
+<td align="center">[6.76]</td>
+<td align="center">[1.56]</td>
+<td align="right">[52.00]</td>
+</tr>
+<tr class="odd">
 <td align="left">Total</td>
 <td align="center">8.00</td>
 <td align="center">23.08</td>
@@ -406,7 +402,7 @@ Total</td>
 <td align="center">1.98</td>
 <td align="right">50</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(16.00)</td>
 <td align="center">(46.16)</td>
@@ -456,8 +452,9 @@ Total</td>
         </div>
       </div>
 <a href="c-descr1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-tables.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="c-tables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -466,9 +463,10 @@ Total</td>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
@@ -483,8 +481,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kbenoit/coursepack-bookdown/edit/master/03-MY451-samples.Rmd",
-"text": null
+"link": "https://github.com/LSE-Methodology/MY451/edit/master/03-MY451-samples.Rmd",
+"text": "Edit"
 },
 "download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
 "toc": {
@@ -499,7 +497,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

@@ -6,16 +6,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MY451 Introduction to Quantitative Analysis</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models.">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="MY451 Introduction to Quantitative Analysis" />
   <meta property="og:type" content="book" />
   
   
   <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="kbenoit/coursepack-bookdown" />
+  <meta name="github-repo" content="LSE-Methodology/MY451" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="MY451 Introduction to Quantitative Analysis" />
@@ -28,11 +27,6 @@
 <meta name="author" content="London School of Economics and Political Science">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,7 +35,6 @@ MathJax.Hub.Config({
   
 <link rel="prev" href="index.html">
 <link rel="next" href="c-descr1.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -62,6 +55,7 @@ MathJax.Hub.Config({
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -239,7 +233,7 @@ MathJax.Hub.Config({
 </ul></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/kbenoit/coursepack-bookdown/" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
 
 </ul>
 
@@ -550,7 +544,7 @@ MathJax.Hub.Config({
 <div id="measurement-levels" class="section level4 unnumbered">
 <h4>Measurement levels</h4>
 <p>When a numerical value of a particular variable is allocated to a subject, it becomes possible to relate that value to the values assigned to other subjects. The <strong>measurement level</strong> of the variable indicates how much information the number provides for such comparisons. To introduce this concept, consider the variables obtained as answers to the following three questions in the former U.K. General Household Survey:</p>
-<p><span class="math display">\[1\]</span> <em>Are you</em></p>
+<p>[1] <em>Are you</em></p>
 <table>
 <tbody>
 <tr class="odd">
@@ -575,19 +569,19 @@ MathJax.Hub.Config({
 </tr>
 </tbody>
 </table>
-<p><span class="math display">\[2\]</span> <em>Over the last twelve months, would you say your health has on the whole been good, fairly good, or not good?</em><br />
+<p>[2] <em>Over the last twelve months, would you say your health has on the whole been good, fairly good, or not good?</em><br />
 (“Good” is coded as 1, “Fairly Good” as 2, and “Not Good” as 3.)</p>
-<p><span class="math display">\[3\]</span> <em>About how many cigaretters A DAY do you usually smoke on weekdays?</em><br />
+<p>[3] <em>About how many cigaretters A DAY do you usually smoke on weekdays?</em><br />
 (Recorded as the number of cigarettes)</p>
 <p>These variables illustrate three of the four possibilities in the most common classification of measurement levels:</p>
 <ul>
-<li><p>A variable is measured on a <strong>nominal scale</strong> if the numbers are simply labels for different possible values (<em>levels</em> or <em>categories</em>) of the variable. The only possible comparison is then to identify whether two subjects have the <em>same</em> or <em>different</em> values of the variable. The marital status variable <span class="math display">\[1\]</span> is measured on a nominal scale. The values of such <em>nominal-level variables</em> are not in any order, so we cannot talk about one subject having “more” or “less” of the variable than another subject; even though “divorced” is coded with a larger number (4) than “single” (1), divorced is not more or bigger than single in any relevant sense. We also cannot carry out arithmetical calculations on the values, as if they were numbers in the ordinary sense. For example, if one person is single and another widowed, it is obviously nonsensical to say that they are on average separated (even though <span class="math inline">\((1+5)/2=3\)</span>).</p>
+<li><p>A variable is measured on a <strong>nominal scale</strong> if the numbers are simply labels for different possible values (<em>levels</em> or <em>categories</em>) of the variable. The only possible comparison is then to identify whether two subjects have the <em>same</em> or <em>different</em> values of the variable. The marital status variable [1] is measured on a nominal scale. The values of such <em>nominal-level variables</em> are not in any order, so we cannot talk about one subject having “more” or “less” of the variable than another subject; even though “divorced” is coded with a larger number (4) than “single” (1), divorced is not more or bigger than single in any relevant sense. We also cannot carry out arithmetical calculations on the values, as if they were numbers in the ordinary sense. For example, if one person is single and another widowed, it is obviously nonsensical to say that they are on average separated (even though <span class="math inline">\((1+5)/2=3\)</span>).</p>
 <p>The only requirement for the codes assigned to the levels of a nominal-level variable is that different levels must receive different codes. Apart from that, the codes are arbitrary, so that we can use any set of numbers for them in any order. Indeed, the codes do not even need to be numbers, so they may instead be displayed in the data matrix as short words (“labels” for the categories). Using successive small whole numbers (<span class="math inline">\(1,2,3,\dots\)</span>) is just a simple and concise choice for the codes.</p>
 <p>Further examples of nominal-level variables are the variables <em>sex</em>, <em>wrkstat</em>, and <em>pres92</em> in Table <a href="c-intro.html#tab:t-datamatrix">1.1</a>.</p></li>
-<li><p>A variable is measured on an <strong>ordinal scale</strong> if its values do have a natural ordering. It is then possible to determine not only whether two subjects have the same value, but also whether one or the other has a <em>higher</em> value. For example, the self-reported health variable <span class="math display">\[2\]</span> is an ordinal-level variable, as larger values indicate worse states of health. The numbers assigned to the categories now have to be in the correct order, because otherwise information about the true ordering of the categories would be distorted. Apart from the order, the choice of the actual numbers is still arbitrary, and calculations on them are still not strictly speaking meaningful.</p>
+<li><p>A variable is measured on an <strong>ordinal scale</strong> if its values do have a natural ordering. It is then possible to determine not only whether two subjects have the same value, but also whether one or the other has a <em>higher</em> value. For example, the self-reported health variable [2] is an ordinal-level variable, as larger values indicate worse states of health. The numbers assigned to the categories now have to be in the correct order, because otherwise information about the true ordering of the categories would be distorted. Apart from the order, the choice of the actual numbers is still arbitrary, and calculations on them are still not strictly speaking meaningful.</p>
 <p>Further examples of ordinal-level variables are <em>life</em> and <em>income4</em> in Table <a href="c-intro.html#tab:t-datamatrix">1.1</a>.</p></li>
 <li><p>A variable is measured on an <strong>interval scale</strong> if <em>differences</em> in its values are comparable. One example is temperature measured on the Celsius (Centigrade) scale. It is now meaningful to state not only that 20<span class="math inline">\(^{\circ}\)</span>C is a <em>different</em> and <em>higher</em> temperature than 5<span class="math inline">\(^{\circ}\)</span>C, but also that the <em>difference</em> between them is 15<span class="math inline">\(^{\circ}\)</span>C, and that that difference is of the same size as the difference between, say, 40<span class="math inline">\(^{\circ}\)</span>C and 25<span class="math inline">\(^{\circ}\)</span>C. Interval-level measurements are “proper” numbers in that calculations such as the average noon temperature in London over a year are meaningful. What we <em>cannot</em> do is to compare <em>ratios</em> of interval-level variables. Thus 20<span class="math inline">\(^{\circ}\)</span>C is not four times as warm as 5<span class="math inline">\(^{\circ}\)</span>C, nor is their real ratio the same as that of 40<span class="math inline">\(^{\circ}\)</span>C and 10<span class="math inline">\(^{\circ}\)</span>C. This is because the zero value of the Celcius scale (0<span class="math inline">\(^{\circ}\)</span>C) is not the lowest possible temperature but an arbitrary point chosen for convenience of definition.</p></li>
-<li><p>A variable is measured on a <strong>ratio scale</strong> if it has all the properties of an interval-level variable and also a true zero point. For example, the smoking variable <span class="math display">\[3\]</span> is measured on a ratio level, with zero cigarettes as its point of origin. It is now possible to carry out all the comparisons possible for interval-level variables, and also to compare ratios. For example, it is meaningful to say that someone who smokes 20 cigarettes a day smokes <em>twice</em> as many cigarettes as one who smokes 10 cigarettes, and that that ratio is equal to the ratio of 30 and 15 cigarettes.</p>
+<li><p>A variable is measured on a <strong>ratio scale</strong> if it has all the properties of an interval-level variable and also a true zero point. For example, the smoking variable [3] is measured on a ratio level, with zero cigarettes as its point of origin. It is now possible to carry out all the comparisons possible for interval-level variables, and also to compare ratios. For example, it is meaningful to say that someone who smokes 20 cigarettes a day smokes <em>twice</em> as many cigarettes as one who smokes 10 cigarettes, and that that ratio is equal to the ratio of 30 and 15 cigarettes.</p>
 <p>Further examples of ratio-level variables are <em>age</em> and <em>educ</em> in Table <a href="c-intro.html#tab:t-datamatrix">1.1</a>.</p></li>
 </ul>
 <p>The distinction between interval-level and ratio-level variables is in practice mostly unimportant, as the same statistical methods can be applied to both. We will thus consider them together throughout this course, and will, for simplicity, refer to variables on either scale as interval level variables. Doing so is logically coherent, because ratio level variables have all the properties of interval level variables, as well the additional property of a true zero point.</p>
@@ -599,7 +593,7 @@ MathJax.Hub.Config({
 <h4>Continuous and discrete variables</h4>
 <p>This distinction is based on the possible values a variable can have:</p>
 <ul>
-<li><p>A variable is <strong>discrete</strong> if its basic unit of measurement cannot be subdivided. Thus a discrete variable can only have certain values, and the values between these are logically impossible. For example, the marital status variable <span class="math display">\[1\]</span> and the health variable <span class="math display">\[2\]</span> defined under “Measurement Levels” in Section <a href="c-intro.html#ss-intro-def-vartypes">1.2.2</a> are discrete, because values like marital status of 2.3 or self-reported health of 1.7 are impossible given the way the variables are defined.</p></li>
+<li><p>A variable is <strong>discrete</strong> if its basic unit of measurement cannot be subdivided. Thus a discrete variable can only have certain values, and the values between these are logically impossible. For example, the marital status variable [1] and the health variable [2] defined under “Measurement Levels” in Section <a href="c-intro.html#ss-intro-def-vartypes">1.2.2</a> are discrete, because values like marital status of 2.3 or self-reported health of 1.7 are impossible given the way the variables are defined.</p></li>
 <li><p>A variable is <strong>continuous</strong> if it can in principle take infinitely varied fractional values. The idea implies an unbroken scale or continuum of possible values. Age is an example of a continuous variable, as we can in principle measure it to any degree of accuracy we like — years, days, minutes, seconds, micro-seconds. Similarly, distance, weight and even income can be considered to be continuous.</p></li>
 </ul>
 <p>You should note the “in principle” in this definition of continuous variables above. Continuity is here a pragmatic concept, not a philosophical one. Thus we will treat age and income as continous even though they are in practice measured to the nearest year or the nearest hundred pounds, and not in microseconds or millionths of a penny (nor is the definition inviting you to start musing on quantum mechanics and arguing that nothing is fundamentally continuous). What the distinction between discrete and continuous really amounts to in practice is the difference between variables which in our data tend to take relatively few values (discrete variables) and ones which can take lots of different values (continuous variables). This also implies that we will sometimes treat variables which are undeniably discrete in the strict sense as if they were really continuous. For example, the number of people is clearly discrete when it refers to numbers of registered voters in households (with a limited number of possible values in practice), but effectively continuous when it refers to populations of countries (with very many possible values).</p>
@@ -616,12 +610,12 @@ MathJax.Hub.Config({
 <div id="relationships-between-the-two-distinctions" class="section level4 unnumbered">
 <h4>Relationships between the two distinctions</h4>
 <p>The distinctions between variables with different measurement levels on one hand, and continuous and discrete variables on the other, are partially related. Essentially all nominal/ordinal-level variables are discrete, and almost all continous variables are interval-level variables. This leaves one further possibility, namely a discrete interval-level variable; the most common example of this is a <strong>count</strong>, such as the number of children in a family or the population of a country. These connections are summarized in Table <a href="c-intro.html#tab:t-vartypes">1.2</a>.</p>
-<table style="width:99%;">
+<table style="width:96%;">
 <caption><span id="tab:t-vartypes">Table 1.2: </span>Relationships between the types of variables discussed in Section @ref(ss-intro-def-vartypes.</caption>
 <colgroup>
-<col width="24%" />
-<col width="44%" />
-<col width="29%" />
+<col width="23%" />
+<col width="38%" />
+<col width="33%" />
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -641,15 +635,10 @@ MathJax.Hub.Config({
 </tr>
 <tr class="even">
 <td></td>
-<td align="left">- Always <strong>categorical</strong>, i.e. having a fixed set of possible values (categories)</td>
+<td align="left">- Always <strong>categorical</strong>, i.e. having a fixed set of possible values (categories) - If only two categories, variable is <strong>binary</strong> (<strong>dichotomous</strong>)</td>
 <td align="left">- If many different observed values, often treated as effectively continuous</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td align="left">- If only two categories, variable is <strong>binary</strong> (<strong>dichotomous</strong>)</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
 <td><strong>Continuous</strong></td>
 <td align="left">None</td>
 <td align="left">Many</td>
@@ -738,8 +727,9 @@ MathJax.Hub.Config({
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-descr1.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="c-descr1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -748,9 +738,10 @@ MathJax.Hub.Config({
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
@@ -765,8 +756,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kbenoit/coursepack-bookdown/edit/master/01-MY451-intro.Rmd",
-"text": null
+"link": "https://github.com/LSE-Methodology/MY451/edit/master/01-MY451-intro.Rmd",
+"text": "Edit"
 },
 "download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
 "toc": {
@@ -781,7 +772,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);

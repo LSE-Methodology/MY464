@@ -6,16 +6,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>MY451 Introduction to Quantitative Analysis</title>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models.">
-  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
 
   <meta property="og:title" content="MY451 Introduction to Quantitative Analysis" />
   <meta property="og:type" content="book" />
   
   
   <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="kbenoit/coursepack-bookdown" />
+  <meta name="github-repo" content="LSE-Methodology/MY451" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="MY451 Introduction to Quantitative Analysis" />
@@ -28,11 +27,6 @@
 <meta name="author" content="London School of Economics and Political Science">
 
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
-</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,7 +35,6 @@ MathJax.Hub.Config({
   
 <link rel="prev" href="c-intro.html">
 <link rel="next" href="c-samples.html">
-
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -62,6 +55,7 @@ MathJax.Hub.Config({
 </head>
 
 <body>
+
 
 
   <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
@@ -239,7 +233,7 @@ MathJax.Hub.Config({
 </ul></li>
 </ul></li>
 <li class="divider"></li>
-<li><a href="https://github.com/kbenoit/coursepack-bookdown/" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
 
 </ul>
 
@@ -361,23 +355,28 @@ with five response options coded as “Agree strongly”=1, “Agree”=2, “Ne
 </tr>
 </tbody>
 </table>
-<table>
+<table style="width:78%;">
 <caption><span id="tab:t-democ">Table 2.2: </span>Frequency distribution of the democracy index in the country data.</caption>
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="18%" />
+<col width="9%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Democracy score</th>
+<th align="center"><br />
+Frequency</th>
+<th align="center"><br />
+Proportion</th>
+<th align="right"><br />
+%</th>
+<th align="right">Cumulative %</th>
+</tr>
+</thead>
 <tbody>
-<tr class="odd">
-<td align="left">Democracy</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="right"></td>
-<td align="right">Cumulative</td>
-</tr>
-<tr class="even">
-<td align="left">score</td>
-<td align="center">Frequency</td>
-<td align="center">Proportion</td>
-<td align="right">%</td>
-<td align="right">%</td>
-</tr>
 <tr class="odd">
 <td align="left">0</td>
 <td align="center">35</td>
@@ -466,50 +465,52 @@ with five response options coded as “Agree strongly”=1, “Agree”=2, “Ne
 </table>
 <table>
 <caption><span id="tab:t-attitude">Table 2.3: </span>Frequency distribution of responses to a question on attitude towards income redistribution in the survey example.</caption>
+<thead>
+<tr class="header">
+<th align="left">Response</th>
+<th align="right">Frequency</th>
+<th align="center">Proportion</th>
+<th align="right">%</th>
+<th align="right">Cumulative %</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left">Response</td>
-<td align="right">Frequency</td>
-<td align="center">Proportion</td>
-<td align="right">%</td>
-<td align="right">Cumulative %</td>
-</tr>
-<tr class="even">
 <td align="left">Agree strongly (1)</td>
 <td align="right">366</td>
 <td align="center">0.156</td>
 <td align="right">15.6</td>
 <td align="right">15.6</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Agree (2)</td>
 <td align="right">1090</td>
 <td align="center">0.465</td>
 <td align="right">46.5</td>
 <td align="right">62.1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Neither agree nor disagree (3)</td>
 <td align="right">426</td>
 <td align="center">0.182</td>
 <td align="right">18.2</td>
 <td align="right">80.3</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Disagree (4)</td>
 <td align="right">387</td>
 <td align="center">0.165</td>
 <td align="right">16.5</td>
 <td align="right">96.8</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Disagree strongly (5)</td>
 <td align="right">75</td>
 <td align="center">0.032</td>
 <td align="right">3.2</td>
 <td align="right">100.0</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Total</td>
 <td align="right">2344</td>
 <td align="center">1.00</td>
@@ -530,12 +531,12 @@ with five response options coded as “Agree strongly”=1, “Agree”=2, “Ne
 <p class="caption">Figure 2.1: Bar chart of regions in the country data.</p>
 </div>
 <div class="figure"><span id="fig:f-bars-democ"></span>
-<img src="democ.png" alt=" Bar chart of the democracy index in the country data." height="359" />
-<p class="caption">Figure 2.2:  Bar chart of the democracy index in the country data.</p>
+<img src="democ.png" alt="Bar chart of the democracy index in the country data." height="359" />
+<p class="caption">Figure 2.2: Bar chart of the democracy index in the country data.</p>
 </div>
 <div class="figure"><span id="fig:f-bars-attitude"></span>
-<img src="bar_attitude.png" alt=" Bar chart of the attitude variable in the survey data example. Agreement with statement: ``The government should take measures to reduce differences in income levels’’. European Social Survey, Round 5 (2010), UK respondents only." height="302" />
-<p class="caption">Figure 2.3:  Bar chart of the attitude variable in the survey data example. Agreement with statement: ``The government should take measures to reduce differences in income levels’’. European Social Survey, Round 5 (2010), UK respondents only.</p>
+<img src="bar_attitude.png" alt="Bar chart of the attitude variable in the survey data example. Agreement with statement: ``The government should take measures to reduce differences in income levels’’. European Social Survey, Round 5 (2010), UK respondents only." height="302" />
+<p class="caption">Figure 2.3: Bar chart of the attitude variable in the survey data example. Agreement with statement: ``The government should take measures to reduce differences in income levels’’. European Social Survey, Round 5 (2010), UK respondents only.</p>
 </div>
 <p>Some guidelines for drawing bar charts are:</p>
 <ul>
@@ -560,29 +561,31 @@ with five response options coded as “Agree strongly”=1, “Agree”=2, “Ne
 <table style="width:98%;">
 <caption><span id="tab:t-sex-attitude">Table 2.4: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Two-way table of frequencies of respondents in the survey example, by sex and attitude towards income redistribution. Data: European Social Survey, Round 5, 2010, UK respondents only.</caption>
 <colgroup>
-<col width="26%" />
-<col width="16%" />
+<col width="11%" />
+<col width="20%" />
+<col width="10%" />
+<col width="20%" />
+<col width="13%" />
+<col width="13%" />
 <col width="8%" />
-<col width="16%" />
-<col width="11%" />
-<col width="11%" />
-<col width="7%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="center">Agree strongly</th>
+<th align="center"><br />
+Agree</th>
+<th align="center">Neither agree nor disagree</th>
+<th align="center"><br />
+Disagree</th>
+<th align="center">Disagree strongly</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-Sex</td>
-<td align="center">Agree strongly</td>
-<td align="center"><br />
-Agree</td>
-<td align="center">Neither agree nor disagree</td>
-<td align="center"><br />
-Disagree</td>
-<td align="center">Disagree strongly</td>
-<td align="right"><br />
-Total</td>
-</tr>
-<tr class="even">
 <td align="left">Male</td>
 <td align="center">160</td>
 <td align="center">439</td>
@@ -591,7 +594,7 @@ Total</td>
 <td align="center">41</td>
 <td align="right">1027</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Female</td>
 <td align="center">206</td>
 <td align="center">651</td>
@@ -600,7 +603,7 @@ Total</td>
 <td align="center">34</td>
 <td align="right">1317</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Total</td>
 <td align="center">366</td>
 <td align="center">1090</td>
@@ -632,21 +635,22 @@ Total</td>
 <col width="12%" />
 <col width="8%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">Sex</th>
+<th align="center">Agree strongly</th>
+<th align="center"><br />
+Agree</th>
+<th align="center">Neither agree nor disagree</th>
+<th align="center"><br />
+Disagree</th>
+<th align="center">Disagree strongly</th>
+<th align="center"><br />
+Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-Sex</td>
-<td align="center">Agree strongly</td>
-<td align="center"><br />
-Agree</td>
-<td align="center">Neither agree nor disagree</td>
-<td align="center"><br />
-Disagree</td>
-<td align="center">Disagree strongly</td>
-<td align="center"><br />
-Total</td>
-</tr>
-<tr class="even">
 <td align="left">Male</td>
 <td align="center">0.068</td>
 <td align="center">0.187</td>
@@ -655,7 +659,7 @@ Total</td>
 <td align="center">0.017</td>
 <td align="center">0.438</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">Female</td>
 <td align="center">0.088</td>
 <td align="center">0.278</td>
@@ -664,7 +668,7 @@ Total</td>
 <td align="center">0.015</td>
 <td align="center">0.562</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Total</td>
 <td align="center">0.156</td>
 <td align="center">0.465</td>
@@ -691,21 +695,22 @@ Total</td>
 <col width="12%" />
 <col width="8%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">Sex</th>
+<th align="center">Agree strongly</th>
+<th align="center"><br />
+Agree</th>
+<th align="center">Neither agree nor disagree</th>
+<th align="center"><br />
+Disagree</th>
+<th align="center">Disagree strongly</th>
+<th align="center"><br />
+Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-Sex</td>
-<td align="center">Agree strongly</td>
-<td align="center"><br />
-Agree</td>
-<td align="center">Neither agree nor disagree</td>
-<td align="center"><br />
-Disagree</td>
-<td align="center">Disagree strongly</td>
-<td align="center"><br />
-Total</td>
-</tr>
-<tr class="even">
 <td align="left">Male</td>
 <td align="center">160</td>
 <td align="center">439</td>
@@ -714,7 +719,7 @@ Total</td>
 <td align="center">41</td>
 <td align="center">1027</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(0.156)</td>
 <td align="center">(0.428)</td>
@@ -723,7 +728,7 @@ Total</td>
 <td align="center">(0.040)</td>
 <td align="center">(1.0)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Female</td>
 <td align="center">206</td>
 <td align="center">651</td>
@@ -732,7 +737,7 @@ Total</td>
 <td align="center">34</td>
 <td align="center">1317</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(0.156)</td>
 <td align="center">(0.494)</td>
@@ -741,7 +746,7 @@ Total</td>
 <td align="center">(0.026)</td>
 <td align="center">(1.0)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Total</td>
 <td align="center">366</td>
 <td align="center">1090</td>
@@ -750,7 +755,7 @@ Total</td>
 <td align="center">75</td>
 <td align="center">2344</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="center">(0.156)</td>
 <td align="center">(0.465)</td>
@@ -790,30 +795,32 @@ Total</td>
 <p>In the previous example the explanatory variable (sex) had 2 categories and the response variable (attitude) had 5. A full examination of the individual conditional distributions of attitude given sex then involved comparisons of five pairs of proportions, one for each level of the attitude variable. This number gets larger still if the explanatory variable also has several levels, as in the following example:</p>
 <p><em>Example: Importance of short-term gains for investors</em></p>
 <p>Information on the behaviour and expectations of individual investors was collected by sending a questionnaire to a sample of customers of a U.S. brokerage house.<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> One of the questions asked the respondents to state how much importance they placed on quick profits (short-term gains) as an objective when they invested money. The responses were recorded in four categories as “Irrelevant”, “Slightly important”, “Important” or “Very important”. Table <a href="c-descr1.html#tab:t-investors">2.7</a> shows the crosstabulation of this variable with the age of the respondent in four age groups.</p>
-<table style="width:98%;">
+<table style="width:97%;">
 <caption><span id="tab:t-investors">Table 2.7: </span>Importance of short-term gains: Frequencies of respondents in the investment example, by age group and attitude towards short-term gains as investment goal. Conditional proportions of attitude given age group are shown in brackets. The value of the <span class="math inline">\(\gamma\)</span> measure of association is <span class="math inline">\(-0.377\)</span>.</caption>
 <colgroup>
-<col width="12%" />
-<col width="47%" />
+<col width="18%" />
+<col width="20%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
 <col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="6%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Age group</th>
+<th align="right"><br />
+Irrelevant</th>
+<th align="right">Slightly important</th>
+<th align="right"><br />
+Important</th>
+<th align="right">Very important</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-Age group</td>
-<td align="right"><br />
-Irrelevant</td>
-<td align="right">Slightly important</td>
-<td align="right"><br />
-Important</td>
-<td align="right">Very important</td>
-<td align="right"><br />
-Total</td>
-</tr>
-<tr class="even">
 <td align="left">Under 45</td>
 <td align="right">37</td>
 <td align="right">45</td>
@@ -821,7 +828,7 @@ Total</td>
 <td align="right">26</td>
 <td align="right">146</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">(0.253)</td>
 <td align="right">(0.308)</td>
@@ -829,7 +836,7 @@ Total</td>
 <td align="right">(0.178)</td>
 <td align="right">(1.00)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">45–54</td>
 <td align="right">111</td>
 <td align="right">77</td>
@@ -837,7 +844,7 @@ Total</td>
 <td align="right">37</td>
 <td align="right">282</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">(0.394)</td>
 <td align="right">(0.273)</td>
@@ -845,7 +852,7 @@ Total</td>
 <td align="right">(0.131)</td>
 <td align="right">(1.00)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">55–64</td>
 <td align="right">153</td>
 <td align="right">49</td>
@@ -853,7 +860,7 @@ Total</td>
 <td align="right">20</td>
 <td align="right">253</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">(0.605)</td>
 <td align="right">(0.194)</td>
@@ -861,7 +868,7 @@ Total</td>
 <td align="right">(0.079)</td>
 <td align="right">(1.00)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">65 and over</td>
 <td align="right">193</td>
 <td align="right">64</td>
@@ -869,7 +876,7 @@ Total</td>
 <td align="right">15</td>
 <td align="right">291</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right">(0.663)</td>
 <td align="right">(0.220)</td>
@@ -877,7 +884,7 @@ Total</td>
 <td align="right">(0.052)</td>
 <td align="right">(1.00)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Total</td>
 <td align="right">494</td>
 <td align="right">235</td>
@@ -896,17 +903,17 @@ The <span class="math inline">\(\gamma\)</span> measure of association is define
 <span class="math display">\[\begin{equation}\gamma=\frac{C-D}{C+D}
 \label{eq:gamma}\end{equation}\]</span>
 <p>where <span class="math inline">\(C\)</span> is the total number of concordant pairs in the table, and <span class="math inline">\(D\)</span> is the number of discordant pairs. For Table <a href="c-descr1.html#tab:t-investors">2.7</a>, the value of this is <span class="math inline">\(\gamma=-0.377\)</span>.</p>
-<p>Calculation of <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span> is straightforward but tedious and uninteresting, and can be left to a computer. Remembering the exact form of (\ref{eq:gamma}) is also not crucial. More important than the formula of <span class="math inline">\(\gamma\)</span> (or any other measure of association) is its interpretation. This can be considered on several levels of specificity, which are discussed separately below. The discussion is relatively detailed, as these considerations are relevant and useful not only for <span class="math inline">\(\gamma\)</span>, but also for all other measures of association in statistics.</p>
-<p>The <strong>sign</strong> of the statistic: It can be seen from (\ref{eq:gamma}) that <span class="math inline">\(\gamma\)</span> is positive (greater than zero) when there are more concordant pairs than discordant ones (i.e. <span class="math inline">\(C&gt;D\)</span>), and negative when there are more discordant than concordant pairs (<span class="math inline">\(C&lt;D\)</span>). This also implies that <span class="math inline">\(\gamma\)</span> will be positive when the association is positive in the sense discussed above, and negative when the association is negative. A value of <span class="math inline">\(\gamma=0\)</span> indicates a complete lack of association of this kind. In Table <a href="c-descr1.html#tab:t-investors">2.7</a> we have <span class="math inline">\(\gamma=-0.377\)</span>, indicating a negative association. This agrees with the conclusion obtained informally above.</p>
+<p>Calculation of <span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span> is straightforward but tedious and uninteresting, and can be left to a computer. Remembering the exact form of (<a href="#eq:gamma">(<strong>??</strong>)</a>) is also not crucial. More important than the formula of <span class="math inline">\(\gamma\)</span> (or any other measure of association) is its interpretation. This can be considered on several levels of specificity, which are discussed separately below. The discussion is relatively detailed, as these considerations are relevant and useful not only for <span class="math inline">\(\gamma\)</span>, but also for all other measures of association in statistics.</p>
+<p>The <strong>sign</strong> of the statistic: It can be seen from (<a href="#eq:gamma">(<strong>??</strong>)</a>) that <span class="math inline">\(\gamma\)</span> is positive (greater than zero) when there are more concordant pairs than discordant ones (i.e. <span class="math inline">\(C&gt;D\)</span>), and negative when there are more discordant than concordant pairs (<span class="math inline">\(C&lt;D\)</span>). This also implies that <span class="math inline">\(\gamma\)</span> will be positive when the association is positive in the sense discussed above, and negative when the association is negative. A value of <span class="math inline">\(\gamma=0\)</span> indicates a complete lack of association of this kind. In Table <a href="c-descr1.html#tab:t-investors">2.7</a> we have <span class="math inline">\(\gamma=-0.377\)</span>, indicating a negative association. This agrees with the conclusion obtained informally above.</p>
 <p>The <strong>extreme values</strong> of the statistic: Clearly <span class="math inline">\(\gamma=1\)</span> if there are no discordant pairs (<span class="math inline">\(D=0\)</span>), and <span class="math inline">\(\gamma=-1\)</span> if there are no concordant pairs (<span class="math inline">\(C=0\)</span>). The values <span class="math inline">\(\gamma=-1\)</span> and <span class="math inline">\(\gamma=1\)</span> are the smallest and largest possible values of <span class="math inline">\(\gamma\)</span>, and indicate the strongest possible levels of negative and positive association respectively. More generally, the closer <span class="math inline">\(\gamma\)</span> is to <span class="math inline">\(-1\)</span> or 1, the stronger is the (negative or positive) association.</p>
 <p>The <strong>formal interpretation</strong> of the statistic: This refers to any way of interpreting the value more understandably than just vaguely as a measure of “strength of association”. Most often, such an intepretation is expressed as a <em>proportion</em> of some kind. For <span class="math inline">\(\gamma\)</span>, this is done using a principle known as <strong>Proportional reduction of error</strong> (PRE). Because the PRE idea is also used to interpret many other measures of association in statistics, we will first describe it in general terms which are not limited to <span class="math inline">\(\gamma\)</span>.</p>
 <p>Suppose we consider an explanatory variable <span class="math inline">\(X\)</span> and a response variable <span class="math inline">\(Y\)</span>, and want to make predictions of the values of <span class="math inline">\(Y\)</span> in a data set. This is done twice, first in a way which makes no use of <span class="math inline">\(X\)</span>, and then in a way which predicts the value of <span class="math inline">\(Y\)</span> for each unit using information on the corresponding value of <span class="math inline">\(X\)</span> and on the strength and direction of the association between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Recalling the connection between association and prediction, it is clear that the second approach should result in better predictions if the two variables are associated. The comparison also reflects the <em>strength</em> of the association: the stronger it is, the bigger is the improvement in prediction gained by utilising information on <span class="math inline">\(X\)</span>.</p>
 A PRE measure describes the size of this improvement. Suppose that the magnitude or number of errors made in predicting the values of <span class="math inline">\(Y\)</span> in a data set using the first scheme, i.e. ignoring information on <span class="math inline">\(X\)</span>, is somehow measured by a single number <span class="math inline">\(E_{1}\)</span>, and that <span class="math inline">\(E_{2}\)</span> is the same measure of errors for the second prediction scheme which makes use of <span class="math inline">\(X\)</span>. The difference <span class="math inline">\(E_{1}-E_{2}\)</span> is thus the improvement in prediction achieved by the second scheme over the first. A PRE measure of association is the ratio
 <span class="math display">\[\begin{equation}\text{PRE}= \frac{E_{1}-E_{2}}{E_{1}},
 \label{eq:PRE}\end{equation}\]</span>
-<p>i.e. the improvement in predictions as a <em>proportion</em> of the number of errors <span class="math inline">\(E_{1}\)</span> under the first scheme. This formulation is convenient for interpretation, because a proportion is easily understandable even if <span class="math inline">\(E_{1}\)</span> and <span class="math inline">\(E_{2}\)</span> themselves are expressed in some unfamiliar units. The smallest possible value of (\ref{eq:PRE}) is clearly 0, obtained when <span class="math inline">\(E_{2}=E_{1}\)</span>, i.e. when using information on <span class="math inline">\(X\)</span> gives no improvement in predictions. The largest possible value of PRE is 1, obtained when <span class="math inline">\(E_{2}=0\)</span>, i.e. when <span class="math inline">\(Y\)</span> can be predicted perfectly from <span class="math inline">\(X\)</span>. The values 0 and 1 indicate no association and perfect association respectively.</p>
+<p>i.e. the improvement in predictions as a <em>proportion</em> of the number of errors <span class="math inline">\(E_{1}\)</span> under the first scheme. This formulation is convenient for interpretation, because a proportion is easily understandable even if <span class="math inline">\(E_{1}\)</span> and <span class="math inline">\(E_{2}\)</span> themselves are expressed in some unfamiliar units. The smallest possible value of (<a href="#eq:PRE">(<strong>??</strong>)</a>) is clearly 0, obtained when <span class="math inline">\(E_{2}=E_{1}\)</span>, i.e. when using information on <span class="math inline">\(X\)</span> gives no improvement in predictions. The largest possible value of PRE is 1, obtained when <span class="math inline">\(E_{2}=0\)</span>, i.e. when <span class="math inline">\(Y\)</span> can be predicted perfectly from <span class="math inline">\(X\)</span>. The values 0 and 1 indicate no association and perfect association respectively.</p>
 <p>The <span class="math inline">\(\gamma\)</span> statistic is a PRE measure, although with a somewhat convoluted explanation. Suppose that we consider a pair of observations which is known to be either concordant or discordant (the PRE interpretation of <span class="math inline">\(\gamma\)</span> ignores tied observations). One of the two observations thus has a higher value of <span class="math inline">\(X\)</span> than the other. For example, suppose that we consider two respondents in Table <a href="c-descr1.html#tab:t-investors">2.7</a> from different age groups. We are then asked to predict the <em>order</em> of the values of <span class="math inline">\(Y\)</span>, i.e. which of the two units has the higher value of <span class="math inline">\(Y\)</span>. In the example of Table <a href="c-descr1.html#tab:t-investors">2.7</a>, this means predicting whether the older respondent places a higher or lower level of importance on short-term gains than the younger respondent. Two sets of predictions are again compared. The first approach makes the prediction at random and with equal probabilities, essentially tossing a coin to guess whether the observation with the higher value of <span class="math inline">\(X\)</span> has the higher or lower value of <span class="math inline">\(Y\)</span>. The second prediction makes use of information on the direction of the association between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. If the association is known to be negative (i.e. there are more discordant than concordant pairs), every pair is predicted to be discordant; if it is positive, every pair is predicted to be concordant. For example, in Table <a href="c-descr1.html#tab:t-investors">2.7</a> the association is negative, so we would always predict that the older of two respondents places a lower value of importance on short-term gains.</p>
-<p>If these predictions are repeated for every non-tied pair in the table, the expected number of incorrect predictions under the first scheme is <span class="math inline">\(E_{1}=(C+D)/2\)</span>. Under the second scheme it is <span class="math inline">\(E_{2}=D\)</span> if the association is positive and <span class="math inline">\(E_{2}=C\)</span> if it is negative. Substituting these into the general formula (\ref{eq:PRE}) shows that the <span class="math inline">\(\gamma\)</span> statistic (\ref{eq:gamma}) is of the PRE form when <span class="math inline">\(\gamma\)</span> is positive; when it is negative, the absolute value of <span class="math inline">\(\gamma\)</span> (i.e. its value with the minus sign omitted) is a PRE measure, and the negative sign of <span class="math inline">\(\gamma\)</span> indicates that the association is in the negative direction. In our example <span class="math inline">\(\gamma=-0.377\)</span>, so age and attitude are negatively associated. Its absolute value <span class="math inline">\(0.377\)</span> shows that we will make 37.7% fewer errors if we predict for every non-tied pair that the older respondent places less importance on short-term gains, compared to predictions made by tossing a coin for each pair.</p>
+<p>If these predictions are repeated for every non-tied pair in the table, the expected number of incorrect predictions under the first scheme is <span class="math inline">\(E_{1}=(C+D)/2\)</span>. Under the second scheme it is <span class="math inline">\(E_{2}=D\)</span> if the association is positive and <span class="math inline">\(E_{2}=C\)</span> if it is negative. Substituting these into the general formula (<a href="#eq:PRE">(<strong>??</strong>)</a>) shows that the <span class="math inline">\(\gamma\)</span> statistic (<a href="#eq:gamma">(<strong>??</strong>)</a>) is of the PRE form when <span class="math inline">\(\gamma\)</span> is positive; when it is negative, the absolute value of <span class="math inline">\(\gamma\)</span> (i.e. its value with the minus sign omitted) is a PRE measure, and the negative sign of <span class="math inline">\(\gamma\)</span> indicates that the association is in the negative direction. In our example <span class="math inline">\(\gamma=-0.377\)</span>, so age and attitude are negatively associated. Its absolute value <span class="math inline">\(0.377\)</span> shows that we will make 37.7% fewer errors if we predict for every non-tied pair that the older respondent places less importance on short-term gains, compared to predictions made by tossing a coin for each pair.</p>
 <p>The final property of interest is the <strong>substantive interpretation</strong> of the strength of association indicated by <span class="math inline">\(\gamma\)</span> for a particular table. For example, should <span class="math inline">\(\gamma=-0.377\)</span> for Table <a href="c-descr1.html#tab:t-investors">2.7</a> be regarded as evidence of weak, moderate or strong negative association between age and attitude? Although this is usually the most (or only) interesting part of the interpretation, it is also the most difficult, and one to which a statistician’s response is likely to be a firm “it depends”. This is because the strength of associations we may expect to observe depends on the variables under consideration: a <span class="math inline">\(\gamma\)</span> of 0.5, say, might be commonplace for some types of variables but never observed for others. Considerations of the magnitude of <span class="math inline">\(\gamma\)</span> are most useful in comparisons of associations between the same two variables in different samples or groups. For example, in Chapter <a href="c-3waytables.html#c-3waytables">9</a> we will calculate <span class="math inline">\(\gamma\)</span> for the variables in Table <a href="c-descr1.html#tab:t-investors">2.7</a> separately for men and women (see Table <a href="c-3waytables.html#tab:t-investors3">9.4</a>). These turn out to be very similar, so the strength of the association appears to be roughly similar in these two groups.</p>
 <p>Three further observations complete our discussion of <span class="math inline">\(\gamma\)</span>:</p>
 <ul>
@@ -928,45 +935,47 @@ A PRE measure describes the size of this improvement. Suppose that the magnitude
 <col width="16%" />
 <col width="8%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">GDP (thousands of dollars)</th>
+<th align="center"><br />
+Frequency</th>
+<th align="right"><br />
+%</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left">GDP (thousands of dollars)</td>
-<td align="center"><br />
-Frequency</td>
-<td align="right"><br />
-%</td>
-</tr>
-<tr class="even">
 <td align="left">less than 2.0</td>
 <td align="center">49</td>
 <td align="right">31.6</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">2.0–4.9</td>
 <td align="center">32</td>
 <td align="right">20.6</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">5.0–9.9</td>
 <td align="center">29</td>
 <td align="right">18.7</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">10.0–19.9</td>
 <td align="center">21</td>
 <td align="right">13.5</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">20.0–29.9</td>
 <td align="center">19</td>
 <td align="right">12.3</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">30.0 or more</td>
 <td align="center">5</td>
 <td align="right">3.2</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Total</td>
 <td align="center">155</td>
 <td align="right">99.9</td>
@@ -1188,7 +1197,7 @@ Frequency</td>
 </tbody>
 </table>
 <div class="figure"><span id="fig:f-boxplot-gdp"></span>
-<img src="box_gdp.png" alt="An annotated box plot of GDP per capita in the country data (n=155)." width="566" />
+<img src="box_gdp.png" alt="An annotated box plot of GDP per capita in the country data (n=155)." width="510" />
 <p class="caption">Figure 2.5: An annotated box plot of GDP per capita in the country data (<span class="math inline">\(n=155\)</span>).</p>
 </div>
 </div>
@@ -1246,7 +1255,7 @@ Frequency</td>
 The <strong>mean</strong> is the best-known and most widely used measure of central tendency. It is also known as the <strong>average</strong>. To define the mean, we need to introduce our first pieces of mathematical notation. Suppose first that the variable of interest is denoted by <span class="math inline">\(Y\)</span>. In practice the variable is of course called something else, like GDP or Age or Income, but in the formulas below it is much more convenient to refer to any such variable generically by one letter (note also that the choice of the letter itself is arbitrary; for example, you may often see <span class="math inline">\(X\)</span> used instead of <span class="math inline">\(Y\)</span> when the mean is defined). Individual observations of <span class="math inline">\(Y\)</span> are denoted generically by <span class="math inline">\(Y_{i}\)</span>, where the subscript <span class="math inline">\(i\)</span> identifies a single subject. The values of <span class="math inline">\(i\)</span> range from <span class="math inline">\(1\)</span> to <span class="math inline">\(n\)</span>, so all of the observations in the sample are <span class="math inline">\(Y_{1}, Y_{2}, \dots, Y_{n}\)</span>, e.g. in the country example (with <span class="math inline">\(n=155\)</span>) <span class="math inline">\(Y_{1}, Y_{2}, \dots, Y_{155}\)</span>. The ordering of the observations is arbitrary here, so it might for example be the order in which they are listed in your SPSS data file. The mean <span class="math inline">\(\bar{Y}\)</span> (“Y-bar”) of the observations of <span class="math inline">\(Y\)</span> in the sample is defined as
 <span class="math display">\[\begin{equation}\bar{Y} = \frac{\sum Y_{i}}{n}.
 \label{eq:Ybar}\end{equation}\]</span>
-<p>Here <span class="math inline">\(n\)</span> is again the sample size. The symbol <span class="math inline">\(\Sigma\)</span> (upper-case Greek letter “Sigma”) is a <em>summation symbol</em>, which indicates that we calculate the sum of all <span class="math inline">\(Y_{i}\)</span> (often this is stated more explicitly by the notation <span class="math inline">\(\sum_{i} Y_{i}\)</span> or <span class="math inline">\(\sum_{i=1}^{n} Y_{i}\)</span> to make it clear that the summation is over all the values of <span class="math inline">\(i\)</span>). In other words, (\ref{eq:Ybar}) is a concise expression for <span class="math display">\[\bar{Y}= \frac{Y_{1}+Y_{2}+\dots+Y_{n}}{n}\]</span> or, in English, “calculate the sum of all the observations of the variable <span class="math inline">\(Y\)</span> in the sample, and divide this sum by the number of observations to obtain the mean of <span class="math inline">\(Y\)</span> in the sample”. For example, for GDP per capita this calculation gives <span class="math display">\[\bar{Y}= \frac{37.8+37.8+32.7+\dots+0.6+0.5+0.5}{155}
+<p>Here <span class="math inline">\(n\)</span> is again the sample size. The symbol <span class="math inline">\(\Sigma\)</span> (upper-case Greek letter “Sigma”) is a <em>summation symbol</em>, which indicates that we calculate the sum of all <span class="math inline">\(Y_{i}\)</span> (often this is stated more explicitly by the notation <span class="math inline">\(\sum_{i} Y_{i}\)</span> or <span class="math inline">\(\sum_{i=1}^{n} Y_{i}\)</span> to make it clear that the summation is over all the values of <span class="math inline">\(i\)</span>). In other words, (<a href="#eq:Ybar">(<strong>??</strong>)</a>) is a concise expression for <span class="math display">\[\bar{Y}= \frac{Y_{1}+Y_{2}+\dots+Y_{n}}{n}\]</span> or, in English, “calculate the sum of all the observations of the variable <span class="math inline">\(Y\)</span> in the sample, and divide this sum by the number of observations to obtain the mean of <span class="math inline">\(Y\)</span> in the sample”. For example, for GDP per capita this calculation gives <span class="math display">\[\bar{Y}= \frac{37.8+37.8+32.7+\dots+0.6+0.5+0.5}{155}
 =\frac{1335.1}{155}=8.6\]</span> (rounded to one decimal place), i.e. mean GDP among these countries is about $8600.</p>
 <p>Because the mean requires arithmetical calculations (summation and division) on the observations <span class="math inline">\(Y_{i}\)</span>, it is strictly speaking only appropriate for interval level variables, but not for ordinal ones, for which the numbers of the categories are ordered labels rather than real numbers. However, it is common to see this instruction ignored and means calculated for ordinal variables, especially when they have a large number of categories (see also the discussion under “Measurement Levels” in Section <a href="c-intro.html#ss-intro-def-vartypes">1.2.2</a>). For example, the mean democracy score in our sample (using the codes 0–10 as its values) is 5.4. This may be used as a summary of the central tendency of the variable, but it should not be overinterpreted as its meaning is not quite as clear as that of, say, mean GDP.</p>
 <p>For interval level variables the mean is by far the most commonly used measure of central tendency. It does, however, have one arguably undesirable feature. This is illustrated by the statistics for the GDP variable, as shown in Table <a href="c-descr1.html#tab:t-countries-sums">2.11</a>. Its mean ($8600) is clearly much larger than the median ($4700). This is due to the shape of the distribution of GDP, as revealed by Figure <a href="c-descr1.html#fig:f-hist-gdp">2.4</a> or even more clearly by the stem and leaf plot of Figure <a href="c-descr1.html#tab:t-stemgdp">2.9</a>. While most of the countries are concentrated around a fairly narrow range of GDPs, there are also a number of countries with much larger GDPs. The ranges of values in the small and large ends of the values in a distribution are (for fairly obvious visual reasons) called the <strong>tails</strong> of the distribution. A distribution with a (much) longer tail in one end than the other is said to be <strong>skewed</strong>. A distribution like that of GDP in Figure <a href="c-descr1.html#fig:f-hist-gdp">2.4</a>, with its long tail towards the large values, is said to be <strong>skewed to the right</strong> or <strong>positively skewed</strong>. A distribution shown in panel A of Figure <a href="c-descr1.html#fig:f-skews">2.6</a> is <strong>skewed to the left</strong> (<strong>negatively skewed</strong>): while the examination marks of most students are relatively high, there are some students with very low marks. A distribution which has no clear skewness in either direction, like the distribution of typical weekly working hours in panel B of Figure <a href="c-descr1.html#fig:f-skews">2.6</a> is (approximately) <strong>symmetric</strong>.</p>
@@ -1312,7 +1321,7 @@ The <strong>mean</strong> is the best-known and most widely used measure of cent
 </tbody>
 </table>
 <div class="figure"><span id="fig:f-skews"></span>
-<img src="twohists.png" title="fig:" alt="Examples of a negatively skewed and an approximately symmetric sample distribution. Panel A shows the distribution of examination marks for MY451 (2003; n=419), and B shows the distribution of the number of hours a person usually works in their main job in the 3 per cent Individual Sample of Anonymized Records from the 2001 U.K. Census (n=867,016, respondents with hours 0 or not applicable omitted) Source of the data for panel B: Cathie Marsh Centre for Census and Survey Research, University of Manchester, http://www.ccsr.ac.uk/sars/." width="529" />
+<img src="twohists.png" title="fig:" alt="Examples of a negatively skewed and an approximately symmetric sample distribution. Panel A shows the distribution of examination marks for MY451 (2003; n=419), and B shows the distribution of the number of hours a person usually works in their main job in the 3 per cent Individual Sample of Anonymized Records from the 2001 U.K. Census (n=867,016, respondents with hours 0 or not applicable omitted) Source of the data for panel B: Cathie Marsh Centre for Census and Survey Research, University of Manchester, http://www.ccsr.ac.uk/sars/." width="510" />
 <p class="caption">Figure 2.6: Examples of a negatively skewed and an approximately symmetric sample distribution. Panel A shows the distribution of examination marks for MY451 (2003; <span class="math inline">\(n=419\)</span>), and B shows the distribution of the number of hours a person usually works in their main job in the 3 per cent Individual Sample of Anonymized Records from the 2001 U.K. Census (<span class="math inline">\(n=867,016\)</span>, respondents with hours 0 or not applicable omitted) Source of the data for panel B: Cathie Marsh Centre for Census and Survey Research, University of Manchester, <a href="http://www.ccsr.ac.uk/sars/" class="uri">http://www.ccsr.ac.uk/sars/</a>.</p>
 </div>
 <p>The mean is almost always further in the direction of skewness than the median. That is why the mean of the positively skewed GDP variable is larger than its median. In general, a comparison between the two statistics will reveal the direction of any skewness, and give an indication of its magnitude. When the difference is large, as it is here, it is typically sensible to report both the mean and the median.</p>
@@ -1374,110 +1383,112 @@ Class 3: IQR <span class="math inline">\(= 9.25-2.75 =6.5\)</span></p>
 <p>The most commonly used measure of variation is based on the <strong>deviations</strong> <span class="math display">\[Y_{i}-\bar{Y}\]</span> where <span class="math inline">\(Y_{i}\)</span> again denotes an individual observation of a variable, and <span class="math inline">\(\bar{Y}\)</span> is its mean. A deviation is the difference between an individual observation and the average value in the sample. Table <a href="c-descr1.html#tab:t-sdex">2.13</a> shows the deviations for Class 3 in the class example, together with the other calculations discussed below. Here a negative deviation indicates that an observation is smaller than the mean of 6 (e.g. <span class="math inline">\(1-6=-5\)</span>), and a positive deviation that an observation is larger than the mean (e.g. <span class="math inline">\(10-6=+4\)</span>).</p>
 <table>
 <caption><span id="tab:t-sdex">Table 2.13: </span>Calculating the standard deviation of test marks for Class 3 in the class example at the beginning of Section <a href="c-descr1.html#ss-descr1-nums-variation">2.6.2</a>.</caption>
+<thead>
+<tr class="header">
+<th align="left">Student</th>
+<th align="right"><span class="math inline">\(Y_{i}\)</span></th>
+<th align="right"><span class="math inline">\(Y_{i}-\bar{Y}\)</span></th>
+<th align="right"><span class="math inline">\((Y_{i}-\bar{Y})^{2}\)</span></th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left">Student</td>
-<td align="right"><span class="math inline">\(Y_{i}\)</span></td>
-<td align="right"><span class="math inline">\(Y_{i}-\bar{Y}\)</span></td>
-<td align="right"><span class="math inline">\((Y_{i}-\bar{Y})^{2}\)</span></td>
-</tr>
-<tr class="even">
 <td align="left">1</td>
 <td align="right">1</td>
 <td align="right"><span class="math inline">\(-5\)</span></td>
 <td align="right">25</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">2</td>
 <td align="right">2</td>
 <td align="right"><span class="math inline">\(-4\)</span></td>
 <td align="right">16</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">3</td>
 <td align="right">2</td>
 <td align="right"><span class="math inline">\(-4\)</span></td>
 <td align="right">16</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">4</td>
 <td align="right">3</td>
 <td align="right"><span class="math inline">\(-3\)</span></td>
 <td align="right">9</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">5</td>
 <td align="right">4</td>
 <td align="right"><span class="math inline">\(-2\)</span></td>
 <td align="right">4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">6</td>
 <td align="right">4</td>
 <td align="right"><span class="math inline">\(-2\)</span></td>
 <td align="right">4</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">7</td>
 <td align="right">4</td>
 <td align="right"><span class="math inline">\(-2\)</span></td>
 <td align="right">4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">8</td>
 <td align="right">8</td>
 <td align="right">+2</td>
 <td align="right">4</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">9</td>
 <td align="right">8</td>
 <td align="right">+2</td>
 <td align="right">4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">10</td>
 <td align="right">9</td>
 <td align="right">+3</td>
 <td align="right">9</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">11</td>
 <td align="right">9</td>
 <td align="right">+3</td>
 <td align="right">9</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left">12</td>
 <td align="right">10</td>
 <td align="right">+4</td>
 <td align="right">16</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">13</td>
 <td align="right">10</td>
 <td align="right">+4</td>
 <td align="right">16</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"><span class="math inline">\(14=n\)</span></td>
 <td align="right">10</td>
 <td align="right">+4</td>
 <td align="right">16</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left">Sum</td>
 <td align="right"><span class="math inline">\(\sum Y_{i}=84\)</span></td>
 <td align="right"><span class="math inline">\(\sum(Y_{i}-\bar{Y})=0\)</span></td>
 <td align="right"><span class="math inline">\(\sum(Y_{i}-\bar{Y})^{2}=152\)</span></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td align="left"></td>
 <td align="right"><span class="math inline">\(\bar{Y}=84/14=6\)</span></td>
 <td align="right"><span class="math inline">\(\sum(Y_{i}-\bar{Y})/n=0\)</span></td>
 <td align="right"><span class="math inline">\(s^{2}=152/13=11.69\)</span></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td align="left"></td>
 <td align="right"></td>
 <td align="right"></td>
@@ -1496,10 +1507,10 @@ This is (apart from the <span class="math inline">\(n-1\)</span> rather than <sp
 <p>Like the mean, the standard deviation is sensitive to outliers and skewness of the distribution, so sometimes other measures of variation (e.g. IQR or MAD) should be reported instead of, or in addition to it. Nevertheless, the standard deviation is by far the most commonly used measure of variation. One reason for this is that it is very important not just as a descriptive statistic but also as an element in several forms of statistical inference. For description it is typically less immediately interpretable than measures of central tendency. Often the most revealing descriptive uses of the standard deviation are in comparisons between samples, like in the class example above. The following is a real example of this kind, where variation was in fact of more interest than central tendency:</p>
 <p><em>Example: Variation in rates of economic growth</em><br />
 In an article titled “Dancing in step” on November 13th 2004, <em>The Economist</em> discussed a set of data (collected by the J. P. Morgan Chase bank) on the annual growth rates (in percentage points) of the Gross Domestic Products (GDP) of 30 countries for each year since 1971. Measures of central tendency, such as average growth rates for each country and each year, are clearly interesting in this case. However, most of the discussion in the article concerned <em>variation</em> in growth rates, measured by their standard deviation across countries for each year, and especially changes in this variation over time. The standard deviation of growth rates was around 3–5 percentage points for every year until the early 1990s, had fallen to about 2 percentage points in 2003, and was forecast to decline further in subsequent years. There had thus previously been a fair amount of variation in rates of economic growth (with some economies growing faster and some slower, some perhaps being in recession), whereas recently the growth rates had become more similar across countries. The article summarized this in its subtitle as “The world’s economies are more synchronised than ever before”, and went on to discuss the implications of this development for global economy.</p>
-<p>The formula (\ref{eq:sd}) for the standard deviation involves the divisor <span class="math inline">\(n-1\)</span>, where the discussion leading up to it might make you expect <span class="math inline">\(n\)</span> instead. The reasons for this will be discussed briefly in Section <a href="c-contd.html#ss-contd-popdistrs-params">6.2.1</a>. The definition is not entirely consistent in that some textbooks do use <span class="math inline">\(n\)</span> instead of <span class="math inline">\(n-1\)</span>. The difference is of no great importance, and using either <span class="math inline">\(n\)</span> or <span class="math inline">\(n-1\)</span> would be fine for our purposes. Whenever <span class="math inline">\(n\)</span> is even moderately large, the difference between <span class="math inline">\(n\)</span> and <span class="math inline">\(n-1\)</span> is in any case small, and both definitions of standard deviation give very similar values.</p>
+<p>The formula (<a href="#eq:sd">(<strong>??</strong>)</a>) for the standard deviation involves the divisor <span class="math inline">\(n-1\)</span>, where the discussion leading up to it might make you expect <span class="math inline">\(n\)</span> instead. The reasons for this will be discussed briefly in Section <a href="c-contd.html#ss-contd-popdistrs-params">6.2.1</a>. The definition is not entirely consistent in that some textbooks do use <span class="math inline">\(n\)</span> instead of <span class="math inline">\(n-1\)</span>. The difference is of no great importance, and using either <span class="math inline">\(n\)</span> or <span class="math inline">\(n-1\)</span> would be fine for our purposes. Whenever <span class="math inline">\(n\)</span> is even moderately large, the difference between <span class="math inline">\(n\)</span> and <span class="math inline">\(n-1\)</span> is in any case small, and both definitions of standard deviation give very similar values.</p>
 <p>Finally, measures of central tendency and measures of variation, even though they summarise the two most important features of a sample distribution of a variable, may still miss some important features of the distribution. Consider, for example, the class marks in Classes 2 and 3 in our hypothetical example. These are summarized by the bar charts of Figure <a href="c-descr1.html#fig:f-classbars">2.7</a>. The distribution for Class 2 is symmetric and concentrated around the mean value of 6. The most noticeable feature of the marks in Class 3, on the other hand, is that there appear to be two distinct groups of students, one with very low scores and one with high scores. A similar feature was also noted in the distribution of the democracy index in the country data (c.f. Figure <a href="c-descr1.html#fig:f-bars-democ">2.2</a>). This property would not be revealed by measures of central tendency or variation, so it is an illustration of why it is always sensible to also examine the whole distribution of a variable using frequency tables or graphical methods.</p>
 <div class="figure"><span id="fig:f-classbars"></span>
-<img src="classbars.png" alt="Bar charts of the test marks in the class example at the beginning of Section <a href="c-descr1.html#ss-descr1-nums-variation">2.6.2</a> for Classes 2 (on the left) and 3 (on the right)." height="313" />
+<img src="classbars.png" alt="Bar charts of the test marks in the class example at the beginning of Section 2.6.2 for Classes 2 (on the left) and 3 (on the right)." height="313" />
 <p class="caption">Figure 2.7: Bar charts of the test marks in the class example at the beginning of Section <a href="c-descr1.html#ss-descr1-nums-variation">2.6.2</a> for Classes 2 (on the left) and 3 (on the right).</p>
 </div>
 </div>
@@ -1537,7 +1548,7 @@ In an article titled “Dancing in step” on November 13th 2004, <em>The Econom
 <p>One example of a lying graph already mentioned is the “cut” bar chart where the bars do not begin at zero. Another is the pseudo third dimension, an example of which is shown in Figure <a href="c-descr1.html#fig:f-yuk">2.8</a>. The information presented in this graph is the same as that of Figure <a href="c-descr1.html#fig:f-bars-region">2.1</a>, i.e. frequencies of different regions. These are represented by the heights of the bars. The additional information conveyed by the apparent thickness of the bars, represented in perspective to give an illusion of three-dimensional bars, is then — exactly nothing. The fake third dimension represents no data, and serves only to distort the real data that are being shown.</p>
 <p>We can thus give a simple instruction: using a fake third dimension like the one in Figure <a href="c-descr1.html#fig:f-yuk">2.8</a> is always wrong and not acceptable under any circumstances. This is true irrespective of the fact that such graphs are often seen and easily (often almost automatically) produced by software packages like Microsoft Excel. All this proves is that the programmers of those packages have little graphical sense, or perhaps that their companies have discovered that their customers are willing to pay for such “features” as colourful but pointless graphs. Indeed, many if not most of the graph styles provided by, say, Excel (exploding pie charts, doughnuts, cones, pyramids and so on) are entirely useless for accurate presentation of data.</p>
 <div class="figure"><span id="fig:f-yuk"></span>
-<img src="threeD.png" alt="An example of an unacceptable graph: a bar chart with a pseudo three-dimensional effect. The data are the same as in Figure <a href="c-descr1.html#fig:f-bars-region">2.1</a>." height="302" />
+<img src="threeD.png" alt="An example of an unacceptable graph: a bar chart with a pseudo three-dimensional effect. The data are the same as in Figure 2.1." height="302" />
 <p class="caption">Figure 2.8: An example of an unacceptable graph: a bar chart with a pseudo three-dimensional effect. The data are the same as in Figure <a href="c-descr1.html#fig:f-bars-region">2.1</a>.</p>
 </div>
 <p>An objection sometimes offered to such a severe rule is that bad graphs “look good”. This can be answered in two ways. First, a statistical graphic is not a decoration, but a tool for presenting information. Authors who confuse the two often end up displaying pretty colours and strange shapes to hide the lack of actual information in a graph. Second, even in an aesthetic sense a useful and accurate graph is preferable to a bad one, in the way that any well-designed object with a function tends to be more attractive than a badly designed one.</p>
@@ -2328,8 +2339,9 @@ In an article titled “Dancing in step” on November 13th 2004, <em>The Econom
         </div>
       </div>
 <a href="c-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-samples.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
-
+<a href="c-samples.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
@@ -2338,9 +2350,10 @@ In an article titled “Dancing in step” on November 13th 2004, <em>The Econom
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
 <script>
-require(["gitbook"], function(gitbook) {
+gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
+"github": false,
 "facebook": true,
 "twitter": true,
 "google": false,
@@ -2355,8 +2368,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/kbenoit/coursepack-bookdown/edit/master/02-MY451-descr1.Rmd",
-"text": null
+"link": "https://github.com/LSE-Methodology/MY451/edit/master/02-MY451-descr1.Rmd",
+"text": "Edit"
 },
 "download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
 "toc": {
@@ -2371,7 +2384,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(script.src))
       script.src  = script.src.replace(/^https?:/, '');
     document.getElementsByTagName("head")[0].appendChild(script);
