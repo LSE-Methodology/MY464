@@ -4,7 +4,7 @@ author:
     - "Jouni Kuha"
     - "Department of Methodology"
     - "London School of Economics and Political Science"
-date: "2016-17"
+date: "2017-2018"
 site: bookdown::bookdown_site
 documentclass: book
 link-citations: yes
