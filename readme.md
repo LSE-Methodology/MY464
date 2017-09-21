@@ -1,3 +1,21 @@
+# MY451 Coursepack source
+
+Live at: https://lse-methodology.github.io/MY451/
+
+## Workflow:
+
+1. Commit to the `master` branch of this repository.
+2. Push the commits.  This will cause the following, automagically:
+   a) The Travis build will be invoked.
+   b) Travis will generate a bookdown website and copy the contents to the `gh-pages` branch, and push
+      an updated github.io page (which is the content of gh-pages branch) will be published at https://lse-methodology.github.io/MY451/.
+      
+**That's it!**
+
+---
+## Notes on why we did it this way
+
+
 ### In-house authoring and publishing process for the Department of Methodology at the London School of Economics and Political Science
 
 # Goal
