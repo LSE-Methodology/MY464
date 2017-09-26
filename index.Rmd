@@ -44,15 +44,13 @@ some elementary techniques.
 
 #### Staff {-}
 
--   **Teachers responsible**: Dominik Hangartner in MT; Jonathan Jackson
-    in LT
+-   **Teachers responsible**: Jonathan Jackson (MT) and Ben Lauderdale (LT)
 
--   **Other Lecturers**: Benjamin Wilson (MT) and Matthew Mulford (LT)
+-   **Other Lecturers**: Ellie Power (LT)
 
 -   **Course Administrator**: Esther Heyhoe, email `e.heyhoe@lse.ac.uk`
 
--   **Class Teachers**: See the MY451 Moodle site for the list of
-    class teachers.
+-   **Class Teachers**: MT: Sophie Loup, Jenny Chanfraeu, Yan Wang, George Maier, Tamara Shengelia, Joel Suss, Vikas Chandra, Cong Peng, Nelson Ruiz-Guarin, Matt Sharp, Baris Ari, Tom Paskhalis and Thiago Oliveira
 
 \newpage
 
