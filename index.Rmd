@@ -10,11 +10,9 @@ github-repo: LSE-Methodology/MY451
 description: "This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models."
 ---
 
-# Course information {-}
-
 ![image](dept_of_methodology){height="2.2cm"}\hfill![image](lse){height="2.2cm"}
 
-<center>**MY451: Introduction to Quantitative Analysis**</center>
+# Course information {-}
 
 #### Course Description {-}
 
