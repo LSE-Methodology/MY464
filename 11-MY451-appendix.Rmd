@@ -611,9 +611,7 @@ the level of measurement of some different variables.
 
 \clearpage
 
-### WEEK 3 class {-}
-
-Descriptive statistics for continuous variables
+### WEEK 3 class: Descriptive statistics for continuous variables {-}
 
 **Data set:** The data file used today is
 **london-borough-profiles.sav**. It contains a selection of data on the
