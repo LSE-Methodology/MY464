@@ -7,9 +7,6 @@ env:
     - secure: kjn9Rj2ttgMaV5nOkJbEHXDz2lfDYk65iBN8Cjjw8OMBJTEWnJvFuGL29yMQyxR/RzIR3R/hb9faR9qzgs5gwzM3J/d/QSwhlRh6S44OAhwOuNxp+bD4skxIg8Kx2guc48x0YBAmrZ2pJCUvkbjZGbHQke51GKzXZ4cMrX1oyZDNZ5PSrdPoA3O7ihjnYhU1dpZ/VrDCcPahkfWZRJYrP3uh/yg++fe5mEruBse3wdcBp5EkpNEZfzqGQtaOhLTGWsBwPrtxCL2CXOOyakWzJ/oXybJexWU0+BrDay8tTJuhBsPBPIvP6xD0qv3n3RQxp2OFWR2Z19ZVHJSwrVwTXCRjArW1Z1EF9SQbUsY8JkuQ0woKchONHTVQUVHTCyZenE378O2fxtiKZpZTs5kfLXl/fpH5xXwYUo6nNIEUuP6L6K61DohQ9wPhO1zdVfVYEk7orErwExqDsqfiHe2Kzli7ownB3wkf/PSeQ5ImX76LQW/iyUKjEk12Lb+lIZmLYe4n/VE0OAJMq8X8bz7ds1EQjqkylOQiHmVjirI9j9QUdIVKtbBbfvn6s06V1sP/5VS24lRJDEUBguCtnpMEKs5AQzlPTFMrFolAsJlAd2ScbVCZWfYjboW8Ja2lg0HNMk+dIjRsbH84lZmw1aoifrtaWerP8cyq3gQuMUqnBVs=
 before_install:
   - tlmgr install eepic
-before_script:
-- chmod +x ./_build.sh
-- chmod +x ./_deploy.sh
 script:
 - "./_build.sh"
 - "./_deploy.sh"
