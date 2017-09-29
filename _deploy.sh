@@ -12,5 +12,5 @@ git clone -b gh-pages git@github.com:LSE-Methodology/MY451.git book-output
 cd book-output
 cp -r ../_book/* ./
 git add --all *
-git commit -m "Update the book" || true
+git commit -m "Update the book to ${TRAVIS_COMMIT}" || true
 git push origin gh-pages
