@@ -9,7 +9,12 @@ before_install:
   - tlmgr install eepic
 script:
 - "./_build.sh"
-- "./_deploy.sh"
+deploy:
+  provider: script
+  script: _deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
 notifications:
   email:
     on_success: change
