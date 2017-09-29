@@ -11,7 +11,7 @@ script:
 - "./_build.sh"
 deploy:
   provider: script
-  script: _deploy.sh
+  script: ./_deploy.sh
   skip_cleanup: true
   on:
     branch: master
