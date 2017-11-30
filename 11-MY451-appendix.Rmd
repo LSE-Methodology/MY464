@@ -1462,21 +1462,8 @@ explanatory variables for it:
 
 **HOMEWORK**
 
-1.  Write up your answers to the last three questions in the
-    class exercise.
+Write up your answers to the last three questions in the class exercise.
 
-2.  Finally, consider one more possible explanatory variable:
-    *INFANT\_MORTALITY*. Add this variable to the multiple linear
-    regression model fitted above. Is it statistically significant, at
-    the 1% level of significance? Interpret the value of its estimated
-    coefficient, and its 95% confidence interval. Take care to make
-    sense of the sign (positive or negative) of the coefficient.
-
-3.  Has the inclusion of *INFANT\_MORTALITY* modified the interpretation
-    of any of the other explanatory variables in the model? Are they all
-    statistically significant, at the 5% level of significance? Briefly
-    outline the similarities and differences between the results for
-    this final model and the model fitted in the class exercise.
 
 \newpage
 
