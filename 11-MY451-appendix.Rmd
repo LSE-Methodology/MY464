@@ -1129,7 +1129,7 @@ actually did. Answer the following questions:
 
 \newpage
 
-### WEEK 7 class: Correlation and simple linear regression 1 {-}
+### WEEK 8 class: Correlation and simple linear regression 1 {-}
 
 **Data set**: Files **decathlon2012.sav**.
 
@@ -1237,7 +1237,7 @@ final points total for each competitor.
 
 \newpage
 
-### WEEK 8 class: Simple linear regression and 3-way tables {-}
+### WEEK 9 class: Simple linear regression and 3-way tables {-}
 
 **Data set**: File **GSS2010.SAV**. This contains a selection of
 variables on attitudes and demographic characteristics for 2044
@@ -1352,7 +1352,7 @@ are these:
 
 \newpage
 
-### WEEK 9 class: Multiple linear regression {-}
+### WEEK 10 class: Multiple linear regression {-}
 
 **Data set**: File **humandevelopment2011.sav**.
 
@@ -1480,7 +1480,7 @@ explanatory variables for it:
 
 \newpage
 
-### WEEK 10 class: Review and Multiple linear regression {-}
+### WEEK 11 class: Review and Multiple linear regression {-}
 
 **Data set**: File **ESS5GB\_trust.sav**.
 
