@@ -258,7 +258,6 @@ than through the menus.
 
 #### SPSS session options {-}
 
-
 Various options for controlling the format of SPSS output and other
 features can be found under **Edit/Options**. For example, an often
 useful choice is **General/Variable Lists/Display
