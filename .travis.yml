@@ -17,6 +17,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   local_dir: _book
+  github_token: ""
   on:
     branch: master
 notifications:
