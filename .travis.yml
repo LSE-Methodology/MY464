@@ -12,9 +12,10 @@ script:
 before_deploy:
 - git config --global user.email "deploy@travis-ci.org"
 - git config --global user.name "Deployment Bot"
-- mkdir .ssh
-- openssl aes-256-cbc -K $encrypted_8142622f9176_key -iv $encrypted_8142622f9176_iv -in id_rsa.enc -out .ssh/id_rsa -d
-- chmod 600 .ssh/id_rsa
+- openssl aes-256-cbc -K $encrypted_8142622f9176_key -iv $encrypted_8142622f9176_iv -in id_rsa.enc -out id_rsa -d
+- chmod 600 id_rsa
+- mkdir ~/.ssh
+- mv id_rsa ~/.ssh
 deploy:
   provider: script
   skip_cleanup: true
