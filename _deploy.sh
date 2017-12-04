@@ -2,7 +2,7 @@
 
 set -e
 
-# Name of the folder to deploy
+# Name of the folder to deploy (use "." for root directory)
 DEPLOY_DIR=_book
 
 # Deploy with an empty history
