@@ -2,15 +2,12 @@
 
 set -e
 
-#[ -z "${GITHUB_PAT}" ] && exit 0
-#[ "${TRAVIS_BRANCH}" != "master" ] && exit 0
+# Name of the folder to deploy
+DEPLOY_DIR=_book
 
-# git config --global user.email "kbenoit@lse.ac.uk"
-# git config --global user.name "Travis CI"
-
-git clone -b gh-pages git@github.com:LSE-Methodology/MY451.git book-output
-cd book-output
-cp -r ../_book/* ./
-git add --all *
-git commit -m "Update the book to ${TRAVIS_COMMIT}" || true
-git push origin gh-pages
+# Deploy with an empty history
+cd ${DEPLOY_DIR}
+git init
+git add .
+git commit -m "Update the GitHub pages to ${TRAVIS_COMMIT}"
+git push --force --quiet "git@github.com:${GITHUB_REPO}.git" master:gh-pages
