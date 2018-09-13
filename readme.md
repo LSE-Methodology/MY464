@@ -1,6 +1,6 @@
-# MY451 Coursepack source
+# MY464 Coursepack source
 
-Live at: https://lse-methodology.github.io/MY451/
+Live at: https://lse-methodology.github.io/MY464/
 
 ## Workflow:
 
@@ -8,7 +8,7 @@ Live at: https://lse-methodology.github.io/MY451/
 2. Push the commits.  This will cause the following, automagically:
    a) The Travis build will be invoked.
    b) Travis will generate a bookdown website and copy the contents to the `gh-pages` branch, and push
-      an updated github.io page (which is the content of gh-pages branch) will be published at https://lse-methodology.github.io/MY451/.
+      an updated github.io page (which is the content of gh-pages branch) will be published at https://lse-methodology.github.io/MY464/.
       
 **That's it!**
 
@@ -63,16 +63,16 @@ Because the new process produces both paginated (pdf printable) and unpaginated 
 
 # How it works step by step
 
-The prototype of this in-house authoring and publishing process that is before you implements the course pack for the Department of Methodology's MY451 course "Introduction to Quantitative Analysis". The published course pack can be seen on <https://lse-methodology.github.io/MY451/>.
+The prototype of this in-house authoring and publishing process that is before you implements the course pack for the Department of Methodology's MY464 course "Introduction to Quantitative Analysis". The published course pack can be seen on <https://lse-methodology.github.io/MY464/>.
 
-The project folder for that course pack containing the chapter manuscripts is stored online at <https://lse-methodology.github.io/MY451/>. To contribute to that manuscript you simply download the project folder, make your changes, and upload the project folder again.
+The project folder for that course pack containing the chapter manuscripts is stored online at <https://lse-methodology.github.io/MY464/>. To contribute to that manuscript you simply download the project folder, make your changes, and upload the project folder again.
 
 The downloading and uploading of the project folder requires a software called Git. Git affords the effective management of project folders and files by way of version control. One way to set up Git on your computer is to download GitHub Desktop [here](https://desktop.github.com/) and install it. Depending on your operating system you may have to restart your computer after installation.
 
 No other software or application is needed to author books using this process. All of the compiling and publishing is done automatically and online -- with the help of GitHub Pages, Travis CI, Bookdown, Pandoc and TexLive.
 
 # Download project folder from online repository
-In order to make changes to the manuscript of the MY451 course pack you need to download the project folder that contains the manuscript files. To download a project folder is also called "to clone a repository". In order to do just that follow these steps:
+In order to make changes to the manuscript of the MY464 course pack you need to download the project folder that contains the manuscript files. To download a project folder is also called "to clone a repository". In order to do just that follow these steps:
 
 <!--^[Instructions taken verbatim from <https://help.github.com/desktop/guides/contributing/cloning-a-repository-from-github-to-github-desktop/>.]-->
 
@@ -94,7 +94,7 @@ The folder includes the content of the course pack as well as settings files. Th
 
 # Make changes
 
-The manuscript of class MY451 is stored in files with the extension `.Rmd`. One file per chapter. That means you'll find twelve Rmd files in your newly "cloned" project folder of this course pack. The very first chapter of a book project is always stored in `index.Rmd`. In this case that is the preface of this course pack, "Course information". The ten subject chapters plus the appendix are stored in numbered Rmd files. The number of these chapter manuscript files determine the order you want those chapters to be in.
+The manuscript of class MY464 is stored in files with the extension `.Rmd`. One file per chapter. That means you'll find twelve Rmd files in your newly "cloned" project folder of this course pack. The very first chapter of a book project is always stored in `index.Rmd`. In this case that is the preface of this course pack, "Course information". The ten subject chapters plus the appendix are stored in numbered Rmd files. The number of these chapter manuscript files determine the order you want those chapters to be in.
 
 ## Authoring in Atom Text Editor
 
@@ -352,7 +352,7 @@ Honeymoon salad is made from lettuce alone and no dressing.^[The Late Show with 
 
 ## Alternative authoring environments: R, R Markdown, and RStudio
 
-If you are familiar with the programming language R you can also use the RStudio application with the "knitr" expansion to author manuscripts. There is no R code used in this MY451 course pack. But you may find R useful for producing complex or dynamic tables or figures in your book project. You can even produce dynamic figures that readers of your book's website can interact with.
+If you are familiar with the programming language R you can also use the RStudio application with the "knitr" expansion to author manuscripts. There is no R code used in this MY464 course pack. But you may find R useful for producing complex or dynamic tables or figures in your book project. You can even produce dynamic figures that readers of your book's website can interact with.
 
 You can find documentation for a variation of Markdown that supports R code [here](http://rmarkdown.rstudio.com/lesson-1.html).
 
@@ -370,7 +370,7 @@ To upload the changed files, which is also called "pushing" changes, go to your 
 
 ![](./images/commit-demo.png)
 
-Your changes will be in effect shortly. This can be within three minutes or thirty minutes depending on the workload of the Travis CI server that does the compiling. Check out <https://lse-methodology.github.io/MY451/> and download the pdf printable and epub ebook to view your changes.
+Your changes will be in effect shortly. This can be within three minutes or thirty minutes depending on the workload of the Travis CI server that does the compiling. Check out <https://lse-methodology.github.io/MY464/> and download the pdf printable and epub ebook to view your changes.
 
 
 -- This prototype was developed by Tobias Pester, September 2016.

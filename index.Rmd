@@ -1,13 +1,13 @@
 ---
-title: "MY451 Introduction to Quantitative Analysis"
+title: "MY464 Introduction to Quantitative Analysis"
 author:
     - "Jouni Kuha, Department of Methodology, London School of Economics and Political Science"
 date: "2017-2018"
 site: bookdown::bookdown_site
 documentclass: book
 link-citations: yes
-github-repo: LSE-Methodology/MY451
-description: "This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models."
+github-repo: LSE-Methodology/MY464
+description: "This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models."
 ---
 
 # Course information {-}
@@ -19,7 +19,7 @@ description: "This course is intended for those with little or no past training 
 This course is intended for those with little or no past training in
 quantitative methods. The course is an intensive introduction to some of
 the principles and methods of statistical analysis in social research.
-Topics covered in MY451 include descriptive statistics, basic ideas of
+Topics covered in MY464 include descriptive statistics, basic ideas of
 inference and estimation, contingency tables and an introduction to
 linear regression models. For those with some quantitative training the
 slightly more advanced course MY452 (Applied Regression Analysis) would
@@ -58,10 +58,10 @@ some elementary techniques.
 
 -   **Lectures**: Ten two-hour lectures in weeks 1 - 5 and 7 - 11:
 
-    -   Michaelmas Term (MY451M): Thu 2.00pm - 4.00pm in the Peacock
+    -   Michaelmas Term (MY464M): Thu 2.00pm - 4.00pm in the Peacock
         Theatre
 
-    -   Lent Term (MY451L): Wed 2.00pm - 4.00pm in the Hong Kong
+    -   Lent Term (MY464L): Wed 2.00pm - 4.00pm in the Hong Kong
         Theatre (CLM.G.02)
 
 -   **Computer classes**: Each student will attend a one-hour class each
@@ -69,7 +69,7 @@ some elementary techniques.
     times and places of the class groups. The allocation of students to
     classes is done through LSE for You or the Moodle system (see
     below), depending on your status. This will be exaplained in the
-    first lecture and on the MY451 Moodle page. Please do not change the
+    first lecture and on the MY464 Moodle page. Please do not change the
     classes allocated to you without our consent.
 
 #### Course Materials {-}
@@ -77,12 +77,12 @@ some elementary techniques.
 -   **Coursepack**: This coursepack is the main course text. Printed
     copies of this coursepack will be available for purchase at the
     beginning of each term, and instructions on how to obtain a hard
-    copy will be given at the first lecture and on the MY451 Moodle
+    copy will be given at the first lecture and on the MY464 Moodle
     page. Digital copies of this coursepack are available for download
     for free from the Moodle page.
 
 -   **Lecture slides**: Copies of most of the slides displayed during
-    the lectures can be downloaded from the MY451 Moodle page.
+    the lectures can be downloaded from the MY464 Moodle page.
 
 -   **Recommended course texts**:
 
@@ -122,14 +122,14 @@ There will be homework assignments each week. These are your opportunity
 to practice interpreting the results of the types of analyses that are
 introduced in the lectures and then carried out in the computer classes.
 The homework questions are also broadly similar in style to typical
-examination questions for MY451. The questions are based on results of
+examination questions for MY464. The questions are based on results of
 the computer class exercises or of further similar analyses. For the
 homework, you can use output that you produced yourself in the class or
 afterwards. Alternatively, all the computer outputs that are required to
 answer the homework questions can be downloaded from the Moodle page.
 
 Homework should be submitted by Monday after its distribution in class,
-at the latest by 5pm in MT and by 10am in LT. Please see the MY451
+at the latest by 5pm in MT and by 10am in LT. Please see the MY464
 Moodle page for instructions on how to submit your homeworks. Homework
 submitted in time will be corrected and returned at the next class.
 Please make sure to clearly indicate your name, and the time, class
@@ -137,14 +137,14 @@ number and class teacher of your computer class on all homework
 assignments. For the homework assignments, students are encouraged to
 work together.
 
-#### MY451 on Moodle {-}
+#### MY464 on Moodle {-}
 <!-- {#sss-moodle} -->
 
 The course materials are all available on Moodle. Go to
 <http://moodle.lse.ac.uk/> and login using your *username* and
 *password* (the same as for your LSE e-mail). Then in the *select
-courses* dialogue box type in MY451, and in *search results* click on
-MY451. The site contains the structure of the course week by week, the
+courses* dialogue box type in MY464, and in *search results* click on
+MY464. The site contains the structure of the course week by week, the
 readings, weekly computer class assignments and the associated data
 sets, coursepack and other materials, as well as a section on news and
 announcements.
@@ -195,9 +195,9 @@ revision purposes at the LSE library web site. Students should
 understand that past examinations should only be used as rough guides to
 the types of questions that are likely to appear on the examination.
 
-For many of you, MY451 is only one part of a package of methods training
+For many of you, MY464 is only one part of a package of methods training
 with a course code such as MC4M1 or MY4M1. If this is the case, your
-result for MY451 will contribute only part of the final mark for the
+result for MY464 will contribute only part of the final mark for the
 package, with a weight determined by the regulations.
 
 #### Computing {-}
@@ -334,13 +334,13 @@ widely available at sites both within and outside the UK.
 Yes, for a small fee from IT Services helpdesk, not from the Department
 of Methodology.
 
-**I’m taking MY451 because I want to learn how to use SPSS but we don’t
-seem to learn very much about the program. Why is that?** MY451 is not a
+**I’m taking MY464 because I want to learn how to use SPSS but we don’t
+seem to learn very much about the program. Why is that?** MY464 is not a
 course about learning to use SPSS. We use the program merely to
 facilitate data analysis and interpretation. Some options for learning
 more about SPSS will be mentioned in the first lecture.
 
-**I’m taking MY451 to help me analyse data for my dissertation. Can I
+**I’m taking MY464 to help me analyse data for my dissertation. Can I
 discuss my data and my specific problems with the lecturers?** Yes, but
 not during the course. Staff of the Department of Methodology will be
 happy to talk to you about problems specific to your dissertation during
@@ -358,7 +358,7 @@ The lectures will not introduce any genuinely new material not included
 in the course pack. However, sometimes the lecturer may of course use
 different words or a different example to further explain some topic.
 Copies of the most relevant notes displayed at the lectures will be
-posted in the MY451 Moodle site. All of the material required for the
+posted in the MY464 Moodle site. All of the material required for the
 exam is contained in the coursepack, with the posted lecture notes as
 additional clarification.
 
@@ -405,13 +405,13 @@ colleagues. If you do this, please submit **one** copy to be marked
 rather than multiple copies of the same answers.
 
 **If I get less than 50% in the exam what happens now?** Candidates sit
-MY451 under different examination regulations depending on which
+MY464 under different examination regulations depending on which
 department they are in and what degree they are registered for. For some
-degrees a pass in MY451 is required, for others the mark from MY451 is
+degrees a pass in MY464 is required, for others the mark from MY464 is
 just one component of an overall course mark (implying a “pass” mark in
-MY451 is not required). The regulations for your degree are not set by
+MY464 is not required). The regulations for your degree are not set by
 Methodology, but by your home department. To find out whether a pass in
-MY451 is required, consult your degree regulations or ask the tutor
+MY464 is required, consult your degree regulations or ask the tutor
 responsible for your program in your home department. Candidates who
 fail at the first attempt and whose degree regulations require a pass
 are, as per the usual School examination rules, entitled, at the next
@@ -438,7 +438,7 @@ script was worth more marks than the examiners did.
 
 **The class teachers are always very busy during class helping people
 with problems and I can’t get enough personal attention. Why can’t there
-be more class teachers in the classroom?** For MY451 there will usually
+be more class teachers in the classroom?** For MY464 there will usually
 be two class teachers per classroom i.e. double the normal complement.
 Even so we realise that you may not be able to get attention at the
 exact moment you want it. Please be patient and if help is not
@@ -453,6 +453,6 @@ complete an intercollegiate enrolment form.
 OK?** Yes, you are welcome to attend the lectures providing you are an
 LSE/University of London student and there is room for you.
 
-**MY451 is not challenging enough for me. Is there a more difficult
+**MY464 is not challenging enough for me. Is there a more difficult
 course?** Yes, MY452 and numerous other courses offered by the
 Department of Methodology and the Statistics department.

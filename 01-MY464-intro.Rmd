@@ -7,7 +7,7 @@
 The title of any course should be descriptive of its contents. This one
 is called
 
-<center>**MY451: Introduction to Quantitative Analysis**</center>
+<center>**MY464: Introduction to Quantitative Analysis**</center>
 
 Every part of this tells us something about the nature of the course:
 
@@ -81,7 +81,7 @@ randomness and probability play an essential role in them; some of the
 ways in which they do so will become apparent later, others need not
 concern us here. The title of the course could thus also have included
 the word *statistics*. However, the Department of Methodology courses on
-statistical methods (e.g. MY451, MY465, MY452, MY455 and MY459) have
+statistical methods (e.g. MY464, MY465, MY452, MY455 and MY459) have
 traditionally been labelled as courses on “quantitative analysis” rather
 than “statistics”. This is done to indicate that they differ from
 classical introductory statistics courses in some ways, especially in
@@ -89,10 +89,10 @@ the presentation being less mathematical.
 
 The course is called an “**Introduction** to Quantitative Analysis”
 because it is an introductory course which does not assume that you have
-learned any statistics before. MY451 or a comparable course should be
+learned any statistics before. MY464 or a comparable course should be
 taken before more advanced courses on quantitative methods. Statistics
 is a cumulative subject where later courses build on material learned on
-earlier ones. Because MY451 is introductory, it will start with very
+earlier ones. Because MY464 is introductory, it will start with very
 simple methods, and many of the more advanced (and powerful) ones will
 only be covered on the later courses. This does not, however, mean that
 you are wasting your time here even if it is methods from, say, MY452
@@ -100,7 +100,7 @@ that you will eventually need most: understanding the material of this
 course is essential for learning more advanced methods.
 
 Finally, the course has an **MY** code, rather than GV, MC, PS, SO, SP,
-or whatever is the code of your own department. MY451 is taken by
+or whatever is the code of your own department. MY464 is taken by
 students from many different degrees and departments, and thus cannot be
 tailored to any one of them specifically. For example, we will use
 examples from many different social sciences. However, this generality
@@ -131,7 +131,7 @@ consumer of statistics:
     this course.
 
 Another pair of different but complementary aims of the course is that
-MY451 is both a self-contained unit and a prerequisite for courses that
+MY464 is both a self-contained unit and a prerequisite for courses that
 follow it:
 
 -   If this is the last statistics course you will take, it will enable

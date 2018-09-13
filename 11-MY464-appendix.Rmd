@@ -39,7 +39,7 @@ need to download the file to your H: space (i.e. your personal file
 storage space on the LSE network, shown as disk drive H: on a networked
 computer once you have logged on). You can download all the data files
 for the course, as well as other course-related material, from the
-web-based **Moodle** system. See instructions in the beginning of this book for how to register for MY451 on Moodle.
+web-based **Moodle** system. See instructions in the beginning of this book for how to register for MY464 on Moodle.
 
 ### Introduction to SPSS {-}
 
@@ -602,7 +602,7 @@ Sex: Woman; Age: 16; Weight: 7 st 8lbs
 #### WEEK 2 HOMEWORK {-}
 
 The homework exercise for this week is to complete the multiple choice
-quiz which you can find in the Moodle resource for MY451. Answers to the
+quiz which you can find in the Moodle resource for MY464. Answers to the
 questions are also included there, including feedback on why the
 incorrect answer are incorrect. The first part of the quiz asks for
 answers to the class exercise, and the second part asks you to identify

@@ -826,7 +826,7 @@ correctness of this assumption.]
 Which methods should we then use, the ones with or without the
 assumption of equal population variances? In practice the choice rarely
 makes much difference, and the $P$-values and conclusions from the two
-versions of the test are typically very similar.^[In the MY451 examination and homework, for example, both variants
+versions of the test are typically very similar.^[In the MY464 examination and homework, for example, both variants
 of the test are equally acceptable, unless a question explicitly
 states otherwise.] Not assuming the
 variances to be equal has the advantage of making fewer restrictive
