@@ -3,7 +3,7 @@ pandoc_version: 1.17.2
 cache: packages
 env:
   global:
-  - GITHUB_REPO="LSE-Methodology/MY451"
+  - GITHUB_REPO="LSE-Methodology/MY464"
 before_install:
 - tlmgr install eepic
 script:

@@ -31,9 +31,8 @@ Observational and Experimental Studies), MY459 (Quantitative Text
 Analysis), ST416 (Multilevel Modelling), and ST442 (Longitudinal Data
 Analysis).
 
-Please note that up to 2010-11 the course was called MI451, so older
-materials will bear that code. For example, you will find past
-examination papers on the Library website under MI451.
+Please note that up to 2010-11 the course was called MI451, and the course was subsequently called MY451 through 2017-18, so some older materials will bear those course codes. For example, you will find past
+examination papers on the Library website under MI451 and MY451.
 
 #### Course Objectives {-}
 
