@@ -31,9 +31,6 @@ Observational and Experimental Studies), MY459 (Quantitative Text
 Analysis), ST416 (Multilevel Modelling), and ST442 (Longitudinal Data
 Analysis).
 
-Please note that up to 2010-11 the course was called MI451, and the course was subsequently called MY451 through 2017-18, so some older materials will bear those course codes. For example, you will find past
-examination papers on the Library website under MI451 and MY451.
-
 #### Course Objectives {-}
 
 This course aims to impart a level of familiarity suitable for a
@@ -41,46 +38,30 @@ moderately critical understanding of the statistical material in the
 journals commonly used by students in their work and the ability to use
 some elementary techniques.
 
-#### Staff {-}
-
--   **Teachers responsible**: Jonathan Jackson (MT) & Ben Lauderdale (LT)
-
--   **Other Lecturers**: Ellie Power (LT)
-
--   **Course Administrator**: Esther Heyhoe, email `e.heyhoe@lse.ac.uk`
-
--   **Class Teachers**: MT: Sophie Loup, Jenny Chanfraeu, Yan Wang, George Maier, Tamara Shengelia, Joel Suss, Vikas Chandra, Cong Peng, Nelson Ruiz-Guarin, Matt Sharp, Baris Ari, Tom Paskhalis and Thiago Oliveira
-
 \newpage
 
 #### Teaching {-}
 
 -   **Lectures**: Ten two-hour lectures in weeks 1 - 5 and 7 - 11:
 
-    -   Michaelmas Term (MY464M): Thu 2.00pm - 4.00pm in the Peacock
-        Theatre
-
-    -   Lent Term (MY464L): Wed 2.00pm - 4.00pm in the Hong Kong
-        Theatre (CLM.G.02)
-
 -   **Computer classes**: Each student will attend a one-hour class each
-    week, **starting in Week 2**. Please see on-line timetables for the
+    week, **starting after the Week 2 lecture**. Thus, classes meeting
+    later in the week than the lecture will meet in Weeks 2-5 and 7-10, while
+    classes meeting earlier in the week than the lecture will meet in Weeks 3-5
+    and 7-11.  Please see on-line timetables for the
     times and places of the class groups. The allocation of students to
-    classes is done through LSE for You or the Moodle system (see
-    below), depending on your status. This will be exaplained in the
-    first lecture and on the MY464 Moodle page. Please do not change the
-    classes allocated to you without our consent.
+    classes is done through LSE for You. This will be explained in the
+    first lecture and on the Moodle page. Please contact the course
+    administrator listed on the Moodle page if you have any issues.
 
 #### Course Materials {-}
 
--   **Coursepack**: This coursepack is the main course text. Printed
-    copies of this coursepack will be available for purchase at the
-    beginning of each term, and instructions on how to obtain a hard
-    copy will be given at the first lecture and on the MY464 Moodle
-    page. Digital copies of this coursepack are available for download
-    for free from the Moodle page.
+-   **Coursepack**: This coursepack is the main course text.  It is available
+    to be viewed online at https://lse-methodology.github.io/MY464/  You can
+    view the coursepack in HTML form, or download it as a PDF or ePub to view
+    offline.
 
--   **Lecture slides**: Copies of most of the slides displayed during
+-   **Lecture slides**: Copies of the slides displayed during
     the lectures can be downloaded from the MY464 Moodle page.
 
 -   **Recommended course texts**:
@@ -91,12 +72,10 @@ some elementary techniques.
     -   Alan Agresti and Barbara Finlay (2013). *Statistical Methods for
         the Social Sciences* (Fourth Ed.). Pearson
 
-    Earlier editions are also suitable. While neither of these books is
-    absolutely required, we recommend that you purchase one if you would
+    Earlier/later editions are also suitable. While neither of these books is
+    absolutely required, you may wish to purchase one if you would
     like to have additional explanation, examples and exercises to
-    supplement the coursepack. Please note that during the examination
-    you will be allowed to use the coursepack and any other notes or
-    books that you find useful. Of these two, Agresti and Finlay is a
+    supplement the coursepack.  Of these two, Agresti and Finlay is a
     bit more advanced. It is also the recommended additional course text
     for MY452 (which also has a coursepack similar to this one), so you
     may want to purchase it if you are planning to also take
@@ -107,7 +86,7 @@ some elementary techniques.
     identical material. If you have one which you would like to use, and
     which looks as if it covers the same material at about the same
     level as this course, then it is probably suitable as
-    additional reading. If in doubt, please ask one of the lecturers.
+    additional reading.
 
     -   There are also many books which focus on the SPSS statistical
         software package used in the computer classes. We do not
@@ -117,7 +96,8 @@ some elementary techniques.
 
 #### Homework {-}
 
-There will be homework assignments each week. These are your opportunity
+There will be homework assignments associated with each computer class.
+These are your opportunity
 to practice interpreting the results of the types of analyses that are
 introduced in the lectures and then carried out in the computer classes.
 The homework questions are also broadly similar in style to typical
@@ -127,8 +107,8 @@ homework, you can use output that you produced yourself in the class or
 afterwards. Alternatively, all the computer outputs that are required to
 answer the homework questions can be downloaded from the Moodle page.
 
-Homework should be submitted by Monday after its distribution in class,
-at the latest by 5pm in MT and by 10am in LT. Please see the MY464
+Homework should be submitted by 5pm, two weekdays after your computer class (eg Monday for a Thursday class, Wednesday for a Monday class).
+Please see the MY464
 Moodle page for instructions on how to submit your homeworks. Homework
 submitted in time will be corrected and returned at the next class.
 Please make sure to clearly indicate your name, and the time, class
@@ -148,28 +128,11 @@ readings, weekly computer class assignments and the associated data
 sets, coursepack and other materials, as well as a section on news and
 announcements.
 
-#### Advisory Sessions {-}
-
-There will be a time each week during the Michaelmas and Lent terms
-during which a member of the teaching team will be available at the
-Department of Methodology in Columbia House to answer questions about
-the course. Information on the times of the advisory hours will be given
-at the first lecture. These sessions are not intended to be private
-tutorials and you will be expected to have made a genuine attempt to
-work through the relevant sections of the coursepack prior to coming to
-an advisory session. Also, questions addressing material from that
-week’s lecture will be given priority. If you are having difficulty with
-a topic, come and see us at that time. If you wait until the end of
-term, when the advisory sessions can be very busy, we cannot guarantee
-that your questions from earlier sessions will be covered. **There will
-be no advisory sessions after the end of Lent Term.**
-
 #### Notes on studying for the course {-}
 
 To learn the material from this course you must do the work every week
-since it is cumulative; if you miss a week or two (or sleep through it!)
-there is a chance that you will find yourself hopelessly lost. So this
-is definitely not a “pick and choose” course! Also bear in mind that
+since it is cumulative; if you miss a week or two
+there is a chance that you will struggle to catch up. Also bear in mind that
 most people cannot learn quantitative techniques passively by just
 turning up to the lectures and reading the occasional chapter in a
 textbook. To learn statistics you have to do it; there are no shortcuts.
@@ -178,26 +141,24 @@ computer classes (in which you do some data analysis and interpretation
 using SPSS - instructions will be provided) and there will be weekly
 homework (which will be corrected but not graded by your class teacher).
 Doing the assignments in the computer classes and the homework
-demonstrate whether you have understood and can apply what was covered
+is the best way to make sure you have understood and can apply what was covered
 in the lectures. If you are having any trouble this will reveal what the
 problem is. Thus the course is designed to have multiple, reinforcing
-ways of helping you get to grips with this material.
+ways of helping you learn this material.
 
 #### Examinations/assessment {-}
 
-There will be a **two-hour examination in the Summer Term 2016**. This
+There will be a **two-hour examination in the Summer Term**. This
 is an **open-book examination**, to which you are allowed to bring in
-any written material, including the coursepack and any text book with
-your notes. You are required to bring your own calculators for the
+one A4 sheet of reference material.  This can be typed or handwritten, prepared yourself or in collaboration with others. You are required to bring your own calculators for the
 examination. Examination papers from previous years are available for
-revision purposes at the LSE library web site. Students should
+revision purposes at the LSE library web site.  2018-19 is the first year that
+MY464 has existed, but the past exams for MY451 provide a good guide to the kinds of
+questions that we ask.  Exams vary from year to year.  Some questions closely follow
+questions that you will have answered in the homeworks or have seen on past exam papers.
+Other require you to apply the principles you have learned in new ways. Students should
 understand that past examinations should only be used as rough guides to
 the types of questions that are likely to appear on the examination.
-
-For many of you, MY464 is only one part of a package of methods training
-with a course code such as MC4M1 or MY4M1. If this is the case, your
-result for MY464 will contribute only part of the final mark for the
-package, with a weight determined by the regulations.
 
 #### Computing {-}
 
@@ -211,9 +172,9 @@ computing class of the course.
 
 #### Software availability {-}
 
-A personal copy of the program SPSS for Windows can be bought by course
+A personal copy of the program SPSS can be bought by course
 participants (maximum 1 copy per person) for the price of £10 from IT
-services, **not** the Department of Methodology.
+services, see https://info.lse.ac.uk/staff/divisions/imt/services/hardware-software/purchasing 
 
 #### Feedback {-}
 
@@ -222,17 +183,13 @@ problems that we can deal with, we will attempt to do so as quickly as
 possible. Speak to any member of the course team, or to your
 departmental supervisor if you feel that would be easier for you. Also
 please let us know if you find any errors or omissions in the
-coursepack, so that we can correct them for next year.
+coursepack, so that we can correct them.
 
 #### Acknowledgements {-}
 
-The computer classes were extensively revised for 2012-13. The hard work
-of designing the new exercises and writing the revised instructions was
-done by Sally Stares.
-
 This coursepack bears many traces of previous materials and all of their
 authors, Colm O’Muircheartaigh, Colin Mills, Matt Mulford, Fiona Steele,
-Paul Mitchell, and Sally Stares. Many thanks to Farimah Daftary, Sue
+Paul Mitchell, Sally Stares and Jouni Kuha. Many thanks to Farimah Daftary, Sue
 Howard, Jon Jackson, Paul Mitchell, Indraneel Sircar, and many students
 of previous years for comments and suggestions which are incorporated in
 the current revision.
@@ -361,79 +318,10 @@ posted in the MY464 Moodle site. All of the material required for the
 exam is contained in the coursepack, with the posted lecture notes as
 additional clarification.
 
-**Do I need to bring my coursepack to lectures and classes?** Yes,
-because some of the material displayed during the lectures will be
-graphs or tables straight from the coursepack. However, an even more
-important way of using the coursepack is to read the relevant parts of
-it *before* each lecture. In addition, you will find the instructions
-for the class exercises at the end of the coursepack.
-
-**I can’t make it to the advisory hour. Why aren’t there more of them?**
-Advisory hours are offered in addition to the normal support
-arrangements for School courses and rely on the goodwill and enthusiasm
-of the course team. Given that most team members also offer their time
-to support advisory hours for other courses there is a limit to how much
-time they can volunteer. If you genuinely are unable to attend an
-advisory hour, but desperately need advice, lecturers will always see
-you in their personal office hours. If these are inconvenient you may be
-able to set up an appointment at another time by special arrangement.
-
-\newpage
-
-**There was a long queue at advisory and I didn’t get much/any time to
-discuss my particular problem. Isn’t there a better way to arrange
-things?** Advisory sessions are meant for quick feedback and
-clarification of problems on a first-come first served basis. They are
-not meant to be personal tutorials, seminars or impromptu lectures. They
-are also not meant to be a substitute for attending the lectures;
-reading the course-pack; doing the homework; thinking. Priority is
-always given to problems related to the previous week’s lecture
-material. If several people have the same problem it will usually be
-possible to talk to everyone together, but there is a finite limit to
-how many people can be crammed into an office at the same time!
-
-**I want to bring my homework to the advisory session because I couldn’t
-understand the class teacher’s comments. Is that OK?** Yes, but it is
-unlikely that the person that wrote the comments on your homework will
-be taking the advisory hour. Usually it will be much better to discuss
-homework comments directly with your class teacher in class.
-
 **Can I work together on the homework with my friends?** Yes, we
 positively encourage you to discuss the homework assignments with your
 colleagues. If you do this, please submit **one** copy to be marked
 rather than multiple copies of the same answers.
-
-**If I get less than 50% in the exam what happens now?** Candidates sit
-MY464 under different examination regulations depending on which
-department they are in and what degree they are registered for. For some
-degrees a pass in MY464 is required, for others the mark from MY464 is
-just one component of an overall course mark (implying a “pass” mark in
-MY464 is not required). The regulations for your degree are not set by
-Methodology, but by your home department. To find out whether a pass in
-MY464 is required, consult your degree regulations or ask the tutor
-responsible for your program in your home department. Candidates who
-fail at the first attempt and whose degree regulations require a pass
-are, as per the usual School examination rules, entitled, at the next
-available opportunity, to ONE more attempt. This will be in the Summer
-Term of the next Session.
-
-**Why don’t we get our examination scripts returned after they have been
-marked?** Written work is of two sorts, formative and summative. The
-former, for example the homework exercises, is meant to give you
-feedback on how you are doing and will, where appropriate, be returned
-with comments. The latter, for example the examination, is meant to
-evaluate your performance, not explain to you where you have gone wrong,
-or for that matter where you have done exceptionally well.
-
-**If I don’t agree with the mark, how do I appeal?** The cultural norm
-in the UK is that marks are not arrived at by a process of
-teacher-student negotiation. You can make a formal appeal through the
-School’s appeal process (see the appropriate section of the website for
-details). NB: appeals cannot be made on grounds of academic substance,
-only on grounds of procedural irregularities. In other words an appeal
-will not be allowed if the only grounds you have for appealing is that
-you/your friend/your personal advisor/your spiritual guru think your
-script was worth more marks than the examiners did.
 
 **The class teachers are always very busy during class helping people
 with problems and I can’t get enough personal attention. Why can’t there
