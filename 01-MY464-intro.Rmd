@@ -48,9 +48,7 @@ for step 5, the *analysis* of such data.
 Methods of analysis, however competently used, will not be very useful
 unless other parts of the research process have also been carried out
 well. These other parts, which (especially steps 2–4 above) can be
-broadly termed *research design*, are covered on other courses, such as
-MY400 (Fundamentals of Social Science Research Design) or comparable
-courses at your own department. Here we will mostly not consider
+broadly termed *research design* are covered on other courses. Here we will mostly not consider
 research design, in effect assuming that we start at a point where we
 want to analyse some data which have been collected in a sensible way to
 answer meaningful research questions. However, you should bear in mind
@@ -98,22 +96,6 @@ only be covered on the later courses. This does not, however, mean that
 you are wasting your time here even if it is methods from, say, MY452
 that you will eventually need most: understanding the material of this
 course is essential for learning more advanced methods.
-
-Finally, the course has an **MY** code, rather than GV, MC, PS, SO, SP,
-or whatever is the code of your own department. MY464 is taken by
-students from many different degrees and departments, and thus cannot be
-tailored to any one of them specifically. For example, we will use
-examples from many different social sciences. However, this generality
-is definitely a good thing: the reason we *can* teach all of you
-together is that statistical methods (just like the principles of
-research design or qualitative research) are generic and applicable to
-the analysis of quantitative data in all fields of social research.
-There is not, apart from differences in emphases and priorities, one
-kind of statistics for sociology and another for political science or
-economics, but one coherent set of principles and methods for all of
-them (as well as for psychiatry, epidemiology, biology, astrophysics and
-so on). After this course you will have taken the first steps in
-learning about all of that.
 
 At the end of the course you should be familiar with certain methods of
 statistical analysis. This will enable you to be both a user and a
