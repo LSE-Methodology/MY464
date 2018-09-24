@@ -1,8 +1,8 @@
 ---
-title: "MY464 Introduction to Quantitative Analysis"
+title: "MY464 Introduction to Quantitative Analysis for Media and Communications"
 author:
     - "Department of Methodology, London School of Economics and Political Science"
-date: "2017-2018"
+date: ""
 site: bookdown::bookdown_site
 documentclass: book
 link-citations: yes
