@@ -1479,14 +1479,9 @@ explanatory variables for it:
 
 \newpage
 
-### WEEK 11 class: Review and Multiple linear regression {-}
+### Revision exercise: Review and Multiple linear regression {-}
 
 **Data set**: File **ESS5GB\_trust.sav**.
-
-This class is for you to revisit any topics of your choosing. Make the
-most of the opportunity to ask your class teachers any questions you
-have about any of the course material, and to practise any of the
-analyses you have learned during the course.
 
 As an optional exercise, the data file **ESS5GB\_trust.sav** is
 provided. This contains a selection of variables from the survey of
@@ -1529,12 +1524,6 @@ each variable is coded. Note: we suggest that it is not too much of a
 compromise to treat the variables on television, radio and newspaper
 consumption as continuous, interval level variables. Note also: we have
 provided dummy variables for the categorical variables in the data set.
-
-**HOMEWORK**
-
-As this is the last week of the course, there is no homework. You can
-find further information on this and the other class exercises and
-homeworks in the model answers, which will be posted in the Moodle site.
 
 \newpage
 
