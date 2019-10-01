@@ -45,10 +45,7 @@ some elementary techniques.
 -   **Lectures**: Ten two-hour lectures in weeks 1 - 5 and 7 - 11:
 
 -   **Computer classes**: Each student will attend a one-hour class each
-    week, **starting after the Week 2 lecture**. Thus, classes meeting
-    later in the week than the lecture will meet in Weeks 2-5 and 7-10, while
-    classes meeting earlier in the week than the lecture will meet in Weeks 3-5
-    and 7-11.  Please see on-line timetables for the
+    week, **starting in Week 2**. Please see on-line timetables for the
     times and places of the class groups. The allocation of students to
     classes is done through LSE for You. This will be explained in the
     first lecture and on the Moodle page. Please contact the course
@@ -107,7 +104,7 @@ homework, you can use output that you produced yourself in the class or
 afterwards. Alternatively, all the computer outputs that are required to
 answer the homework questions can be downloaded from the Moodle page.
 
-Homework should be submitted by 5pm, two weekdays after your computer class (eg Monday for a Thursday class, Wednesday for a Monday class).
+Homework should be submitted by 5pm, two weekdays after your computer class (eg Monday for a Thursday class, Tuesday for a Friday class).
 Please see the MY464
 Moodle page for instructions on how to submit your homeworks. Homework
 submitted in time will be corrected and returned at the next class.
@@ -148,9 +145,9 @@ ways of helping you learn this material.
 
 #### Examinations/assessment {-}
 
-There will be a **two-hour examination in the Summer Term**. You may bring one, two-sided A4 sheet of reference material to consult during the exam. This can be typed or handwritten, and prepared yourself or in collaboration with others. You are required to bring your own calculators for the
+There will be a **two-hour examination in the LENT Term**. You may bring one, two-sided A4 sheet of reference material to consult during the exam. This can be typed or handwritten, and prepared yourself or in collaboration with others. You are required to bring your own calculators for the
 examination. Examination papers from previous years are available for
-revision purposes at the LSE library web site.  2018-19 is the first year that
+revision purposes at the LSE library web site.  2018-19 was the first year that
 MY464 has existed, but the past exams for MY451 provide a good guide to the kinds of
 questions that we ask.  Exams vary from year to year.  Some questions closely follow
 questions that you will have answered in the homeworks or have seen on past exam papers.
@@ -176,7 +173,7 @@ services, see https://info.lse.ac.uk/staff/divisions/imt/services/hardware-softw
 
 #### Feedback {-}
 
-We would welcome any comments you have on the course. If there are any
+We welcome any comments you have on the course. If there are any
 problems that we can deal with, we will attempt to do so as quickly as
 possible. Speak to any member of the course team, or to your
 departmental supervisor if you feel that would be easier for you. Also
@@ -209,25 +206,31 @@ Coursepack                      Chapter \@ref(c-intro)
 
 Lecture                         Descriptive statistics for categorical variables
 
-Class                           Introduction to SPSS. Descriptive statistics for categorical variables
+Class                           Introduction to SPSS 
 
 Coursepack                      Sections \@ref(s-descr1-intro)–\@ref(s-descr1-2cat) and \@ref(s-descr1-presentation)
 
 **Week 3**
 
-Lecture & Class                 Descriptive statistics for continuous variables
+Lecture                         Descriptive statistics for continuous variables
+
+Class                           Descriptive statistics for categorical variables
 
 Coursepack                      Sections \@ref(s-descr1-1cont)–\@ref(s-descr1-2cont)
 
 **Week 4**
 
-Lecture & Class                 Analysis of two-way contingency tables
+Lecture                         Analysis of two-way contingency tables
+
+Class                           Descriptive statistics for continuous variables
 
 Coursepack                      Chapters \@ref(c-samples) and \@ref(c-tables)
 
 **Week 5**
 
-Lecture & Class                 Inference for means in two populations
+Lecture                         Inference for means in two populations
+
+Class                           Analysis of two-way contingency tables
 
 Coursepack                      Chapters \@ref(c-contd) and \@ref(c-means)
 
@@ -237,13 +240,17 @@ Reading Week                    **No lecture, no class**. Revision quiz availabl
 
 **Week 7**
 
-Lecture & Class                 Inference for proportions in one and two populations
+Lecture                         Inference for proportions in one and two populations
+
+Class                           Inference for means in two populations
 
 Coursepack                      Chapter \@ref(c-probs)
 
 **Week 8**
 
-Lecture & Class                 Correlation and simple linear regression as descriptive methods
+Lecture                         Correlation and simple linear regression as descriptive methods
+
+Class                           Inference for proportions in one and two populations
 
 Coursepack                      Sections \@ref(s-regression-intro)–\@ref(ss-regression-simple-est)
 
@@ -255,21 +262,23 @@ Hour 1                          Inference for the simple linear regression model
 
 Hour 2                          Three-way contingency tables
 
-Class                           Simple linear regression
+Class                           Correlation and simple linear regression
 
 Coursepack                      Section \@ref(ss-regression-simple-inf) (Hour 1); Section \@ref(s-regression-causality) and Chapter \@ref(c-3waytables) (Hour 2)
 
 **Week 10**
 
-Lecture & Class                 Multiple linear regression
+Lecture                         Multiple linear regression
+
+Class                           More on linear regression
 
 Coursepack                      Sections \@ref(s-regression-multiple)–\@ref(s-regression-rest)
 
 **Week 11**
 
-Lecture                         Review and further statistical methods
+Lecture                         Review and exam preparation
 
-Class                           Discussion and additional exercise on multiple linear regression
+Class                           multiple linear regression
 
 Coursepack                      Chapter \@ref(c-more)
 ------------------------------- ----------------------------------------------------------------------------------------------------------------------------------
