@@ -16,7 +16,7 @@ refers to activities aimed at obtaining new knowledge about the world,
 in the case of the social sciences the *social* world of people and
 their institutions and interactions. Here we are concerned solely with
 *empirical* research, where such knowledge is based on information
-obtained by *observing* what goes on in that world. There are many
+obtained by making *observations* on what goes on in that world. There are many
 different ways (*methods*) of making such observations, some better than
 others for deriving valid knowledge. “Methodology” refers both to the
 methods used in particular studies, and the study of research methods in
