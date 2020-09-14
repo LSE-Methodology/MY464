@@ -42,7 +42,7 @@ some elementary techniques.
 
 #### Teaching {-}
 
--   **Lectures**: Ten two-hour lectures in weeks 1 - 5 and 7 - 11:
+-   **Lectures**: Video recorded lectures released each Monday morning in weeks 1 - 5 and 7 - 11:
 
 -   **Computer classes**: Each student will attend a one-hour class each
     week, **starting in Week 2**. Please see on-line timetables for the
