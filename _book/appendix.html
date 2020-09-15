@@ -1,0 +1,2219 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MY451 Introduction to Quantitative Analysis</title>
+  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="MY451 Introduction to Quantitative Analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="github-repo" content="LSE-Methodology/MY451" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MY451 Introduction to Quantitative Analysis" />
+  
+  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  
+
+<meta name="author" content="Jouni Kuha">
+<meta name="author" content="Department of Methodology">
+<meta name="author" content="London School of Economics and Political Science">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="c-more.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MY451 Introduction to Quantitative Analysis</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information</a></li>
+<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?</a></li>
+<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables</a></li>
+<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables</a></li>
+<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference</a></li>
+<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course</a></li>
+<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation</a></li>
+<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics</a><ul>
+<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets</a></li>
+<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution</a></li>
+<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies</a></li>
+<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts</a></li>
+<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables</a></li>
+<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions</a></li>
+<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations</a></li>
+<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions</a></li>
+<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods</a></li>
+<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency</a></li>
+<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables</a></li>
+<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs</a></li>
+<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations</a><ul>
+<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations</a></li>
+<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations</a></li>
+<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations</a></li>
+<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions</a></li>
+<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables</a><ul>
+<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests</a></li>
+<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses</a></li>
+<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test</a></li>
+<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic</a></li>
+<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic</a></li>
+<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value</a></li>
+<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions</a><ul>
+<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples</a></li>
+<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable</a></li>
+<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability</a></li>
+<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses</a></li>
+<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic</a></li>
+<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values</a></li>
+<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test</a></li>
+<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval</a></li>
+<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals</a></li>
+<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions</a><ul>
+<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments</a></li>
+<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means</a><ul>
+<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples</a></li>
+<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions</a></li>
+<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis</a></li>
+<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test</a></li>
+<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means</a></li>
+<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean</a></li>
+<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples</a></li>
+<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests</a><ul>
+<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error</a></li>
+<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests</a></li>
+<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models</a><ul>
+<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods</a></li>
+<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations</a></li>
+<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model</a></li>
+<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters</a></li>
+<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters</a></li>
+<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality</a></li>
+<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model</a></li>
+<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models</a></li>
+<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables</a></li>
+<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables</a></li>
+<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a><ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#computer-classes"><i class="fa fa-check"></i>Computer classes</a><ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#general-instructions"><i class="fa fa-check"></i>General instructions</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#introduction-to-spss"><i class="fa fa-check"></i>Introduction to SPSS</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-2-class-descriptive-statistics-for-categorical-data-and-entering-data"><i class="fa fa-check"></i>WEEK 2 class: Descriptive statistics for categorical data, and entering data</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-3-class"><i class="fa fa-check"></i>WEEK 3 class</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-4-class-two-way-contingency-tables"><i class="fa fa-check"></i>WEEK 4 class: Two-way contingency tables</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-5-class-inference-for-two-population-means"><i class="fa fa-check"></i>WEEK 5 class: Inference for two population means</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-7-class-inference-for-population-proportions"><i class="fa fa-check"></i>WEEK 7 class: Inference for population proportions</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-7-class-correlation-and-simple-linear-regression-1"><i class="fa fa-check"></i>WEEK 7 class: Correlation and simple linear regression 1</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-8-class-simple-linear-regression-and-3-way-tables"><i class="fa fa-check"></i>WEEK 8 class: Simple linear regression and 3-way tables</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-9-class-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 9 class: Multiple linear regression</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-10-class-review-and-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 10 class: Review and Multiple linear regression</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables</a><ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY451 Introduction to Quantitative Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix" class="section level1 unnumbered">
+<h1>Appendix</h1>
+<div id="computer-classes" class="section level2 unnumbered">
+<h2>Computer classes</h2>
+
+<p>Some general instructions on computing and the SPSS package are given first below. It makes most sense to read these together with the instructions for individual computer classes.</p>
+<div id="general-instructions" class="section level3 unnumbered">
+<h3>General instructions</h3>
+<div id="using-the-networked-computers-at-lse" class="section level4 unnumbered">
+<h4>Using the networked computers at LSE</h4>
+<ul>
+<li><p>To access IT facilities at LSE you need an IT account with its <strong>Username</strong> and <strong>Password</strong>. Please see <a href="http://www.lse.ac.uk/intranet/LSEServices/IMT/guides/accounts/activateAccount.aspx" class="uri">http://www.lse.ac.uk/intranet/LSEServices/IMT/guides/accounts/activateAccount.aspx</a> for instructions on how to activate your account. In case of any problems, please ask for assistance at the IT help desk (Library 1st floor).</p></li>
+<li><p>Various introductory <strong>documents</strong> can be accessed through the IMT services web pages at <a href="http://www.lse.ac.uk/intranet/LSEServices/IMT/home.aspx" class="uri">http://www.lse.ac.uk/intranet/LSEServices/IMT/home.aspx</a>.</p></li>
+<li><p><strong>Logging in</strong> to use Windows: When you arrive at a networked computer, wait for Windows to start up (if the machine is not already on). Type in <strong>CTRL + ALT + Delete</strong> and the <strong>Enter Network Password</strong> screen will appear. Type in your username and your password and press <strong>Enter</strong> or click on the <strong>OK</strong> button. This will log you on to the computer.</p></li>
+</ul>
+</div>
+<div id="data-downloading" class="section level4 unnumbered">
+<h4>Data downloading</h4>
+<p>The instructions for each class will give the name of a file or files which will be used for that exercise. In order to do the class, you will need to download the file to your H: space (i.e. your personal file storage space on the LSE network, shown as disk drive H: on a networked computer once you have logged on). You can download all the data files for the course, as well as other course-related material, from the web-based <strong>Moodle</strong> system. See instructions in the beginning of this book for how to register for MY451 on Moodle.</p>
+</div>
+</div>
+<div id="introduction-to-spss" class="section level3 unnumbered">
+<h3>Introduction to SPSS</h3>
+<div id="general-information-and-documentation" class="section level4 unnumbered">
+<h4>General information and documentation</h4>
+<p>SPSS (formerly Statistical Package for the Social Sciences) is a widely used general-purpose statistical software package. It will be used for all the computer classes on this course. The current version on the LSE network is SPSS 21. This section gives some general information on the structure and use of SPSS. The discussion is brief and not meant to be comprehensive. The instructions given here and in the descriptions of individual computer classes below will be sufficient for the purposes of this course. If, however, you wish to find out more about SPSS, more information and examples can be found in the SPSS help files and tutorials found under the <strong>Help</strong> menu of the program, and in introductory guide books such as</p>
+<p>Field, A. (2013). <em>Discovering Statistics using IBM SPSS Statistics</em> (4th ed). Sage. Kinnear, P. R. and Gray, C. D. (2012). <em>SPSS 19 Made Simple</em>. Psychology Press. Pallant, J. (2013). <em>SPSS Survival Manual</em> (5th ed). Open University Press.</p>
+<p>These are given here purely as examples (there are many others) and not as recommendations. We have not reviewed any of these books in detail and so cannot make any comparisons between them.</p>
+</div>
+<div id="starting-spss" class="section level4 unnumbered">
+<h4>Starting SPSS</h4>
+<p>To start SPSS, double-click on the SPSS icon on the Windows desktop. Alternatively, click on the <strong>Start</strong> button at the bottom left corner, and select <strong>All Programs</strong>, then <strong>Specialist and teaching software</strong>, <strong>Statistics</strong>, <strong>SPSS</strong>, and finally <strong>SPSS 21</strong> (or some obvious variant of these, in case the exact wording on your desktop is slightly different).</p>
+<p>An initial screen for opening data files appears. Click on <strong>Cancel</strong> to get rid of this and to enter the data editor (which will be discussed further below).</p>
+</div>
+<div id="exiting-from-spss" class="section level4 unnumbered">
+<h4>Exiting from SPSS</h4>
+<p>Select <strong>Exit</strong> from the <strong>File</strong> menu or click on the X at the upper right corner of the SPSS data editor window. You may then be prompted to save the information in the open windows; in particular, you should save the contents of the data editor in a file (see below) if you have made any changes to it.</p>
+</div>
+<div id="spss-windows" class="section level4 unnumbered">
+<h4>SPSS windows</h4>
+<p>There are several different types of windows in SPSS. The two most important are</p>
+<ul>
+<li><p><strong>Data editor</strong>: A data set is displayed in the Data Editor window. Several of these can be open at a time. The data editor which you have selected (clicked on) most recently defines the active data set, and the procedures you request from the menus are applied to this data set until you select a different active data set. The data editor window has two parts, accessed by clicking on the two tabs at the bottom of the window:</p>
+<ul>
+<li><p><strong>Data view</strong>, which shows the data matrix in the spreadsheet-like form discussed in Section <a href="c-intro.html#ss-intro-def-subj">1.2.1</a>, with units in the rows and variables in the columns.</p></li>
+<li><p><strong>Variable view</strong>, which shows information about the variables.</p></li>
+</ul>
+<p>Working with the data editor will be practised in the first computer class. The contents of the data editor, i.e.the data matrix and associated information, can be saved in an SPSS data file. Such files have names with the extension <strong>.sav</strong>.</p></li>
+<li><p><strong>Output viewer</strong>: Output from statistical analyses carried out on the data will appear here. The output can be printed directly from the viewer or copied and pasted to other programs. The contents of the viewer can also be saved in a file, with a name with the extension <strong>.spv</strong> (since version 17; in previous versions of SPSS the extension was <strong>.spo</strong>).</p></li>
+</ul>
+<p>There are also other windows, for example for editing SPSS graphs. They will be discussed in the instructions to individual computer classes where necessary.</p>
+</div>
+<div id="menus" class="section level4 unnumbered">
+<h4>Menus</h4>
+<p>SPSS has a menu-based interface, which can be used to access most of its features for statistical analysis, manipulation of data, loading, saving and printing files, and so on.</p>
+<ul>
+<li><p>The procedures for statistical analysis are found under the <strong>Analyze</strong> menu, which provides further drop-down menus for choosing different methods.</p>
+<ul>
+<li>Similarly, procedures for various statistical graphics are found under <strong>Graphs</strong>. We will be using procedures found under <strong>Graphs / Legacy Dialogs</strong>. Here “legacy” means that these are the graphics menus which were included also in previous versions of SPSS. The current version also contains a second, new set of menus for the same graphs, under <strong>Graphs / Chart Builder</strong>. We do not regard these as an improvement in usability, so we will continue to use the old menus. You are welcome to explore the cababilities of the “Chart Builder” on your own.</li>
+</ul></li>
+<li><p>Eventually the menu choices lead to a <strong>dialog box</strong> with various boxes and buttons for specifying details of the required analysis. Most dialog boxes contain buttons which open new dialog boxes for further options. The details of these choices for the methods covered on this course are described in the instructions to individual computer classes.</p></li>
+<li><p>Almost all of the dialog boxes have options which are not needed for our classes and never mentioned in the instructions. Some of these simply modify the output, others request variants of the statistical methods which will not be used in these classes. All such options have default values which can be left untouched here. You are, however, welcome to experiment with these additional choices to see what they do. Further information on them can be accessed through the <strong>Help</strong> button in each dialog box.</p></li>
+</ul>
+</div>
+<div id="notational-conventions-for-the-instructions" class="section level4 unnumbered">
+<h4>Notational conventions for the instructions</h4>
+<p>Because analyses in SPSS are carried out by making choices from the menus, the instructions for the computer classes need to describe these choices somehow. To reduce the length and tedium of the instructions, we will throughout present them in a particular format explained below. Because this information is rather abstract if read in isolation, it is best to go through it while carrying out specific instructions for the first few computer classes.</p>
+<ul>
+<li><p>The appropriate menu choices for obtaining the dialog box for the required analysis are first given in bold, for example as follows:</p>
+<p><strong>Analyze/Descriptive statistics/Frequencies</strong></p>
+<p>This is short for “Click on the menu item <strong>Analyze</strong> at the top of the window; from the drop-down menu, select <strong>Descriptive statistics</strong> and then click on <strong>Frequencies</strong>.” This particular choice opens a dialog box for constructing various descriptive statistics and graphs (as discussed in Chapter <a href="c-descr1.html#c-descr1">2</a>).</p>
+<p>Unless otherwise mentioned, subsequent instructions then refer to choices in the most recently opened dialog box, without repeating the full path to it.</p></li>
+<li><p>For all of the statistical analyses, we need first to specify which variables the analyses should be applied to. This is done by entering the names of those variables in appropriate boxes in the dialog boxes. For example, the dialog box opened above has a box labelled <strong>Variable(s)</strong> for this purpose. The dialog box also includes a separate box containing a list of all the variables in the data set. The required variables are selected from this list and moved to the choice boxes (and back again, when choices are changed) by clicking on an arrow button between the boxes. For example, suppose that a data set contains a grouped age variable called <em>AGEGROUP</em>, for which we want to construct a frequency table. The class instructions may then state in words “Place <em>AGEGROUP</em> in the <strong>Variable(s)</strong> box”, or sometimes just</p>
+<p><strong>Variable(s)/</strong><em>AGEGROUP</em></p>
+<p>both of which are short for “In the dialog box opened above, click on the name <em>AGEGROUP</em> in the list of variables, and then click on the arrow button to move the name into the <strong>Variable(s)</strong> box”. Sometimes we may also use a generic instruction of the form</p>
+<p><strong>Variable(s)/</strong><em><span class="math inline">\(&lt;\)</span>Variables<span class="math inline">\(&gt;\)</span></em></p>
+<p>where <em><span class="math inline">\(&lt;\)</span>Variables<span class="math inline">\(&gt;\)</span></em> indicates that this is where we would put the name of any variables for which we want to obtain a frequency table. Note that here and in many other procedures, it is possible to select several variables at once. For the Frequencies procedure used as an example here, this simply means that a separate frequency table is constructed for each selected variable.</p></li>
+<li><p>Other choices in a dialog box determine details of the analysis and its output. In most cases the selection is made from a fixed list of possibilities provided by SPSS, by clicking on the appropriate box or button. In the instructions, the choice is indicated by listing a path to it, for example as</p>
+<p><strong>Charts/Chart Type/Bar charts</strong></p>
+<p>in the above example (this requests the so-called bar chart). The items on such a list are labels for various items in the dialog boxes. For example, here <strong>Charts</strong> is a button which opens a new subsidiary dialog box, <strong>Chart Type</strong> is the title of a list of options in this new dialog box, and <strong>Bar charts</strong> is the choice we want to select. In other words, the above instruction is short for “In the dialog box opened above, click on the button <strong>Charts</strong> to open a new dialog box. Under <strong>Chart type</strong>, select <strong>Bar charts</strong> by clicking on a button next to it.”</p></li>
+<li><p>Some choices need to be made by typing in some information rather than selecting from a list of options. Specific instructions for this will be given when needed.</p></li>
+<li><p>After choices are made in subsidiary dialog boxes, we return to the main dialog box by clicking on <strong>Continue</strong>. Once all the required choices have been made, the analysis is executed by clicking on <strong>OK</strong> in the main dialog box. This should be reasonably obvious, so we will omit explicit instructions to do so.</p></li>
+</ul>
+<p>A useful feature of SPSS is the <strong>dialog recall</strong> button, which is typically sixth from the left in the top row of buttons in the Output viewer window; the button shows a rectangle with a green arrow pointing down from it. Clicking on this gives a menu of recently used procedures, and choosing one of these brings up the relevant dialog box, with the previously used choices selected. This is useful when you want to rerun a procedure, e.g. to try different choices for its options. It is usually quicker to reopen a dialog box using the dialog recall button than through the menus.</p>
+</div>
+<div id="spss-session-options" class="section level4 unnumbered">
+<h4>SPSS session options</h4>
+<p>Various options for controlling the format of SPSS output and other features can be found under <strong>Edit/Options</strong>. For example, an often useful choice is <strong>General/Variable Lists/Display names</strong>. This instructs SPSS to display the names of variables in the variable lists of all procedures, instead of the (typically much longer) descriptive labels of the variables. In large data sets this may make it easier to find the right variables from the list. This may be further helped by selecting <strong>General/Variable Lists/Alphabetical</strong>, which causes the names to be listed in an alphabetical order rather than the order in which the variables are included in the data set.</p>
+</div>
+<div id="printing-from-spss" class="section level4 unnumbered">
+<h4>Printing from SPSS</h4>
+<p>All the computers in the public rooms are connected to one of the laser printers. When you print a document or a part of it, you need to have credit on your printing account. See <a href="http://www.lse.ac.uk/intranet/LSEServices/IMT/guides/printing.aspx" class="uri">http://www.lse.ac.uk/intranet/LSEServices/IMT/guides/printing.aspx</a> for further information.</p>
+<ul>
+<li><p>You can print your results from the Output Viewer either by selecting <strong>File/Print</strong> or by clicking on Print on the toolbar (the button with a little picture of a printer). Please note that SPSS output is often quite long, so this may result in much more printout than you really want.</p></li>
+<li><p>Alternatively, in the Output Viewer, select the objects to be printed, select <strong>Edit / Copy</strong>, open a Word or Excel document and <strong>Paste</strong>. You can make any changes or corrections in this document before printing it. This method gives you more control over what gets printed than printing directly from SPSS.</p></li>
+<li><p>At the printer terminal, type in your username and password. The files sent for printing are then listed. Select the appropriate file number and follow the instructions given by the computer.</p></li>
+</ul>
+</div>
+<div id="spss-control-language" class="section level4 unnumbered">
+<h4>SPSS control language</h4>
+<p>Early versions of SPSS had no menu-based interface. Instead, commands were executed by specifying them in SPSS command language. This language is still there, underlying the menus, and each choice of commands and options from the menus can also be specified in the control language. We will not use this approach on this course, so you can ignore this section if you wish. However, there are some very good reasons why you might want to learn about the control language if you need to work with SPSS for, say, analyses for your thesis or dissertation:</p>
+<ul>
+<li><p>Because the control language commands can be saved in a file, they preserve a record of how an analysis was done. This may be important for checking that there were no errors, and for rerunning the analyses later if needed.</p></li>
+<li><p>For repetitive analyses, modifying and rerunning commands in the control language is quicker and less tedious than using the menus repeatedly.</p></li>
+<li><p>Some advanced SPSS procedures are not included in the menus, and can only be accessed through the control language.</p></li>
+</ul>
+<p>The main cost of using the control language is learning its syntax. This is initially much harder than using the menus, but becomes easier with experience. The easiest way to begin learning the syntax is to request SPSS to print out the commands corresponding to choices made from the menus. Two easy ways of doing so are</p>
+<ul>
+<li><p>Selecting the session option (i.e. under <strong>Edit/Options</strong>) <strong>Viewer/Display commands in the log</strong>. This causes the commands corresponding to the menu choices to be displayed in the output window.</p></li>
+<li><p>Clicking on the <strong>Paste</strong> button in a dialog box (instead of <strong>OK</strong>) after selecting an analysis. This opens a <em>Syntax window</em> where the corresponding commands are now displayed. The commands in a syntax window can be edited and executed, and also saved in a file (with the extension <strong>.sps</strong>) for future use.</p></li>
+</ul>
+
+</div>
+</div>
+<div id="week-2-class-descriptive-statistics-for-categorical-data-and-entering-data" class="section level3 unnumbered">
+<h3>WEEK 2 class: Descriptive statistics for categorical data, and entering data</h3>
+<div id="data-set" class="section level4 unnumbered">
+<h4>Data set</h4>
+<p>The data file <strong>ESS5_sample.sav</strong> will be used today. It contains a simplified sample of data from UK respondents in the 2010 European Social Survey (Round 5). The questions in the survey that you see here were designed By Dr Jonathan Jackson and his team as part of a module investigating public trust in the criminal justice system. Further information about the study can be found at<br />
+<a href="http://www.lse.ac.uk/methodology/whosWho/Jackson/jackson_ESS.aspx" class="uri">http://www.lse.ac.uk/methodology/whosWho/Jackson/jackson_ESS.aspx</a><a href="#fn59" class="footnoteRef" id="fnref59"><sup>59</sup></a></p>
+<p>The main purpose of today’s class is to introduce you to the layout of SPSS and to show you how to produce some basic tables and graphs for categorical variables. Additionally, we provide instructions on how to enter data into a new SPSS data file, using the Data Editor. This exercise is not strictly needed for the course, but we include it for two purposes. Firstly, students often find this a helpful way of learning how the software works. Secondly, this exercise may be a useful introduction for students who go on to collect or collate data for their own empirical research.</p>
+</div>
+<div id="classwork" class="section level4 unnumbered">
+<h4>Classwork</h4>
+</div>
+<div id="part-1-the-layout-of-an-spss-data-file" class="section level4 unnumbered">
+<h4>Part 1: The layout of an SPSS data file</h4>
+<ol style="list-style-type: decimal">
+<li><p><strong>Opening an SPSS data file</strong>: this is done from <strong>File/Open/Data</strong>, selecting the required file from whichever folder it is saved in in the usual Windows way. Do this to open ESS5_sample.sav.</p></li>
+<li><p><strong>Information in the Variable View window.</strong> The data file is now displayed in the Data Editor. Its Data View window shows the data as a spreadsheet (i.e. a data matrix). We will first consider the information in the Variable View window, accessed by clicking on the Variable View tab at the bottom left corner of the window. The columns of this window show various pieces of information about the variables. Take a little while familiarising yourself with them. The most important of the columns in Variable View are</p>
+<ul>
+<li><p><strong>Name</strong> of the variable in the SPSS data file. The names in this column (also shown as the column headings in Data View) will be used to refer to specific variables in all of the instructions for these computer classes.</p></li>
+<li><p><strong>Type</strong> of the variable. Here most of the variables are <em>Numeric</em>, i.e. numbers, and a few are <em>String</em>, which means text. Clicking on the entry for a variable in this column and then on the button (with three dots on it) revealed by this shows a list of other possibilities.</p></li>
+<li><p><strong>Width</strong> and <strong>Decimals</strong> control the total number of digits and the number of decimal places displayed in Data View. Clicking on an entry in these columns reveals buttons which can be used to increase or decrease these values. Here all but two of the numeric variables are coded as whole numbers, so Decimals has been set to 0 for them.</p></li>
+<li><p><strong>Label</strong> is used to enter a longer description of the variable. Double-clicking on an entry allows you to edit the text.</p></li>
+<li><p><strong>Values</strong> shows labels for individual values of a variable. This is mostly relevant for categorical variables, such as most of the ones in these data. Such variables are coded in the data set as numbers, and the Values entry maintains a record of the meanings of the categories the numbers correspond to. You can see examples of this by clicking on some of the entries in the Values column and then on the resulting button. The value labels can also be displayed for each observation in Data View by selecting <strong>View/Value Labels</strong> in that window.</p></li>
+<li><p><strong>Missing</strong> specifies <em>missing data codes</em>, i.e. values which are not actual measurements but indicators that an observation should be treated as missing. There may be several such codes. For example, variables in these data often have separate missing data codes for cases where a respondent was never asked a question (“Not applicable”, often abbreviated NAP), replied “Don’t know” (DK) or otherwise failed to provide an answer (“Refusal” or “No answer”; NA); the explanations of these values are found in the Values column. An alternative to using missing data codes (so-called <em>User missing</em> values) is to enter no value (a <em>System missing</em> value) for an observation in the data matrix. This is displayed as a full stop (.) in Data View. There are no such values in these data.</p></li>
+<li><p><strong>Measure</strong> indicates the measurement level of a variable, as <em>Nominal</em>, <em>Ordinal</em> or <em>Scale</em> (meaning interval). This is mostly for the user’s information, as SPSS makes little use of this specification.</p></li>
+</ul></li>
+<li><p>Any changes made to the data file are preserved by saving it again from <strong>File/Save</strong> (or by clicking on the Save File button of the toolbar, which the one with the picture of a diskette). You will also be prompted to do so when exiting SPSS or when trying to open a new data file. Today you should not save any changes you may have made to ESS5_sample.sav, so click <strong>No</strong> if prompted to do so below.</p></li>
+</ol>
+</div>
+<div id="part-2-descriptive-statistics-for-categorical-variables" class="section level4 unnumbered">
+<h4>Part 2: Descriptive statistics for categorical variables</h4>
+<p>Most of the statistics required for this class are found in SPSS under <strong>Analyze/Descriptive Statistics/Frequencies</strong> as follows:</p>
+<ul>
+<li><p>Names of the variables for which the statistics are requested are placed in the <strong>Variable(s)</strong> box. To make it easy to find variables in the list box on the left, you may find it convenient to change the way the variables are displayed in the list; see under “SPSS Session Options” for instructions.</p></li>
+<li><p>Tables of frequencies: select <strong>Display frequency tables</strong></p></li>
+<li><p>Bar charts: <strong>Charts/Chart Type/Bar charts</strong>. Note that under <strong>Chart Values</strong> you can choose between frequencies or percentage labels on the vertical axis.</p></li>
+<li><p>Pie charts: <strong>Charts/Chart Type/Pie charts</strong></p></li>
+</ul>
+<p>In addition, we will construct some two-way tables or cross-tabulations, by selecting <strong>Analyze/Descriptive Statistics/Crosstabs</strong>. In the dialog box that opens, request a contingency table between two variables by entering</p>
+<ul>
+<li><p>The name of the row variable into the <strong>Row(s)</strong> box, and</p></li>
+<li><p>The name of the column variable into the <strong>Column(s)</strong> box.</p></li>
+<li><p><strong>Cells/Percentages</strong> for percentages within the table: <strong>Row</strong> gives percentages within each row (i.e. frequencies divided by row totals), <strong>Column</strong> percentages within columns, and <strong>Total</strong> percentages out of the total sample size.</p></li>
+</ul>
+<p>The labels in the SPSS output should be self-explanatory. Note that in this and all subsequent classes, the output may also include some entries corresponding to methods and statistics not discussed on this course. They can be ignored here.</p>
+<ol style="list-style-type: decimal">
+<li><p>The first variable in the data set, GOODJOB, asks respondents whether they generally feel that the police are doing a good job in their country. There are three response categories for this item: “a good job”, “neither a good job nor a bad job”, or “a bad job”. Obtain a frequency table and bar chart to investigate the distribution of responses to this question.</p>
+<p>Check that you understand how to interpret the output you obtain. In particular, make sure that you understand the information displayed in each of the columns in the main table, and that you can see the connection between the information in the table and the information represented in the bar chart.</p></li>
+<li><p>The last variable in the set, AGE_GRP, records in which of the following age groups each respondent falls: up to 29 years of age, 30-49, or 50+ years. Let us consider the association between age group and opinions of the police. Obtain a two-way contingency table of GOODJOB by AGE_GRP. To make interpretation easier, request percentages within each of the age groups. If you use AGE_GRP as the row variable, then include row percentages in the output.</p>
+<p>Interpret the resulting table. Are opinions of the police distributed differently among the three different age groups? Does there appear to be an association between age group and attitude?</p></li>
+<li><p>If you have time after completing the data entry exercise (below), you may wish to return to this data set and explore frequencies and contingency tables for some of the other variables in the set.</p></li>
+</ol>
+
+</div>
+<div id="part-3-entering-data-directly-into-data-editor" class="section level4 unnumbered">
+<h4>Part 3: Entering data directly into Data Editor</h4>
+<p>This procedure may be useful to know if the data you are analysing are not in any electronic form at the beginning of the analysis, for example if you start with a pile of filled-in questionnaires from a survey. For practice, we will enter the following small, artificial data set:</p>
+<p>Sex: Man; Age: 45; Weight: 11 st 3 lbs<br />
+Sex: Woman; Age: 68; Weight: 8 st 2 lbs<br />
+Sex: Woman; Age: 17; Weight: 9 st 6 lbs<br />
+Sex: Man; Age: 28; Weight: 13 st 8 lbs<br />
+Sex: Woman; Age: 16; Weight: 7 st 8lbs</p>
+<ol style="list-style-type: decimal">
+<li><p>Select <strong>File/New/Data</strong> to clear the Data Editor. Go to Variable View and enter into the first four rows of the Name column names for the variables, for example <em>sex</em>, <em>age</em>, <em>wstones</em> and <em>wpounds</em>.</p></li>
+<li><p>Switch to Data View and type the data above into the appropriate columns, one unit (respondent) per row. Note that the person’s weight is entered into two columns, one for stones and one for pounds. Enter sex using numerical codes, e.g. 1 for women and 2 for men.</p></li>
+<li><p>Save the file as a new SPSS data file (<strong>File/Save as</strong>), giving it a name of your choice. You should also resave the file (from <strong>File/Save</strong> or by clicking the File Save button) after each of the changes made below.</p></li>
+<li><p>Practise modifying the information in Variable View by adding the following information for the sex variable:</p>
+<ul>
+<li><p>Enter the label <em>Sex of the respondent</em> into the Label column.</p></li>
+<li><p>Click on the Values cell and then on the resulting button to open a dialog box for entering value labels. Enter <strong>Value:</strong> <em>1</em>; <strong>Value Label</strong>: <em>Woman</em>; <strong>Add</strong>. Repeat for men, and click <strong>OK</strong> when finished.</p></li>
+</ul></li>
+<li><p><strong>Transforming variables</strong>: It is often necessary to derive new variables from existing ones. We will practise the two most common examples of this:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Creating a grouped variable</strong>: Suppose, for example, that we want to define a grouped age variable with three categories: less than 25 years, 25–54 and 55 or over. This is done as follows:</p>
+<ul>
+<li><p>Select <strong>Transform/Recode into Different Variables</strong>. This opens a dialog box which is used to define the rule for how values of the existing variable are to be grouped into categories of the new one.</p></li>
+<li><p>Move the name of the age variable to the <strong>Input Variable –<span class="math inline">\(&gt;\)</span> Output Variable</strong> box.</p></li>
+<li><p>Under <strong>Output Variable</strong>, enter the <strong>Name</strong> of the new variable, for example <em>agegroup</em>, and click <strong>Change</strong>.</p></li>
+<li><p>Click on <strong>Old and New Values</strong>. Enter <strong>Old Value/Range: Lowest through</strong> <em>24</em> and <strong>New Value/Value:</strong> <em>1</em>, and click <strong>Add</strong>.</p></li>
+<li><p>Repeat for the other two categories, selecting <strong>Range:</strong> <em>25</em> <strong>through</strong> <strong>54</strong> and <strong>Range:</strong> <em>55</em> <strong>through highest</strong> for <strong>Old value</strong>, and <em>2</em> and <em>3</em> respectively for <strong>New value</strong>.</p></li>
+<li><p>You should now see the correct grouping instructions in the <strong>Old –<span class="math inline">\(\mathbf{&gt;}\)</span> New</strong> box. Click <strong>Continue</strong> and <strong>OK</strong> to create the new variable.</p></li>
+<li><p>Check the new variable in Data View. At this stage you should normally enter in Variable View the value labels of the age groups.</p></li>
+</ul></li>
+<li><p><strong>Calculations on variables</strong>: Some new variables are obtained through mathematical calculations on existing ones. For example, suppose we want to include weight in kilograms as well as stones and pounds. Using the information that one stone is equal to 6.35 kg and one pound is about 0.45 kg, the transformation is carried out as follows:</p>
+<ul>
+<li><p>Select <strong>Transform/Compute Variable</strong>. This opens a dialog box which is used to define the rule for calculating the values of the new variable.</p></li>
+<li><p>Enter <strong>Target variable:</strong> <em>weightkg</em> (for example; this is the name of the new variable) and <strong>Numeric Expression:</strong> <em>6.35 * wstones + 0.45 * wpounds</em>; for the latter, you can either type in the formula or use the variable list and calculator buttons in a fairly obvious way.</p></li>
+</ul></li>
+</ol></li>
+</ol>
+</div>
+<div id="week-2-homework" class="section level4 unnumbered">
+<h4>WEEK 2 HOMEWORK</h4>
+<p>The homework exercise for this week is to complete the multiple choice quiz which you can find in the Moodle resource for MY451. Answers to the questions are also included there, including feedback on why the incorrect answer are incorrect. The first part of the quiz asks for answers to the class exercise, and the second part asks you to identify the level of measurement of some different variables.</p>
+
+</div>
+</div>
+<div id="week-3-class" class="section level3 unnumbered">
+<h3>WEEK 3 class</h3>
+<p>Descriptive statistics for continuous variables</p>
+<p><strong>Data set:</strong> The data file used today is <strong>london-borough-profiles.sav</strong>. It contains a selection of data on the 33 London boroughs obtained from the <em>London Datastore</em>, which publishes a range of statistical data about the city, collated by the Greater London Authority’s <em>GLA Intelligence Unit</em>.^[The data were obtained from <a href="http://data.london.gov.uk/datastore/package/london-borough-profiles" class="uri">http://data.london.gov.uk/datastore/package/london-borough-profiles</a>.</p>
+<p>If you download the “Profiles in Excel” workbook, you will find that one of the pages contains a map of the boroughs, and a tool for visualising the data on that map. A regular map of the boroughs can be found at for example at</p>
+<p><a href="http://www.londoncouncils.gov.uk/londonfacts/londonlocalgovernment/londonmapandlinks/default.htm" class="uri">http://www.londoncouncils.gov.uk/londonfacts/londonlocalgovernment/londonmapandlinks/default.htm</a>.]</p>
+<div id="descriptive-statistics-in-spss" class="section level4 unnumbered">
+<h4>Descriptive statistics in SPSS</h4>
+<p>This week you will produce and examine descriptive statistics for a number of individual variables. As for last week, almost all of the statistics required for this class can be obtained in SPSS under <strong>Analyze/Descriptive Statistics/Frequencies</strong>. Note that you will probably not find the tables of frequencies very useful, because continuous variables can take so many different values. So for this class, uncheck the <strong>Display frequency tables</strong> option in the dialog box.</p>
+<ul>
+<li><p>Measures of central tendency: <strong>Mean</strong>, <strong>Median</strong> and <strong>Mode</strong> under <strong>Statistics / Central Tendency</strong></p></li>
+<li><p>Measures of variation: <strong>Range</strong>, <strong>Std. deviation</strong> and <strong>Variance</strong> under <strong>Statistics/Dispersion</strong>. For the Interquartile range, select <strong>Statistics/ Percentile values/Quartiles</strong> and calculate by hand the difference between the third and first quartiles given (as Percentiles 75 and 25 respectively) in the output.</p></li>
+<li><p>Histograms: <strong>Charts/Chart Type/Histograms</strong></p></li>
+</ul>
+<p>Two charts needed today are not found under the Frequencies procedure:</p>
+<ul>
+<li><p><strong>Stem and leaf plots</strong>, which are obtained from <strong>Analyze/Descriptive Statistics/Explore</strong> by entering variable(s) under <strong>Dependent list</strong> and selecting <strong>Display/Plots</strong> and <strong>Plots/Descriptive/Stem-and-leaf</strong>. You can place more than one variable under the <strong>Dependent list</strong> in order to compare variables.</p></li>
+<li><p><strong>Box plots</strong> are also automatically generated through this dialog box, regardless of whether you want to see them! So this is the simplest way to produce them.</p></li>
+</ul>
+<p>Most of these statistics and charts can be obtained in other ways as well, for example from <strong>Analyze/ Descriptive Statistics/Descriptives</strong> or <strong>Graphs/Legacy Dialogs/Histogram</strong>, or <strong>Graphs/Legacy Dialogs/Boxplot</strong>, but we will not use these alternatives today. Feel free to investigate them in your own time if you wish.</p>
+<p>The labels in the SPSS output should be self-explanatory. Note that in this and all subsequent classes, the output may also include some entries corresponding to methods and statistics not discussed on this course. They can be ignored here.</p>
+</div>
+<div id="classwork-1" class="section level4 unnumbered">
+<h4>Classwork</h4>
+<ol style="list-style-type: decimal">
+<li><p>The variable <em>YOUTH_DEPRIVATION</em> records for each borough the percentage of children who live in out-of-work families. This is an indicator of deprivation, with higher values indicating a worse situation for each borough. Investigate the distribution of this variable across London boroughs by obtaining its mean, median, minimum and maximum, quartiles and standard deviation, and a histogram. Obtain also a stem and leaf plot and a box plot. Note that double-clicking on a histogram (or any other SPSS graph) opens it in a new window, where the graph can be further edited by changing titles, colours etc. The graph can also be exported from SPSS into other software. Check that you understand how to find the measures of central tendency and dispersion from the output. Does the distribution of YOUTH_DEPRIVATION appear to be symmetrically distributed or skewed?</p></li>
+<li><p>Consider now the variable <em>CRIME</em>, which records the numbers of reported crimes for every 1000 inhabitants, over the years 2011-12. Obtain some summary descriptive statistics, a histogram and a box plot for this variable. Is the distribution of the variable symmetric or skewed to the left or right? <em>CRIME</em> is one of many variables in this data set which have outliers, i.e. boroughs with unusually large or small values of the variable. Normally statistical analysis focuses on the whole data rather than individual observations, but the identities of individual outliers are often also of interest. The outliers can be seen most easily in the box plots, where SPSS labels them with their case numbers, so that you can identify them easily in the data set. For example, 1 would indicate the 1st case in the data set. If you click on to the Data View you can see that this 1st case is the City of London. Which borough is the outlier for CRIME?</p></li>
+</ol>
+</div>
+<div id="homework-1" class="section level4 unnumbered">
+<h4>HOMEWORK</h4>
+<p>For the questions below, select the relevant SPSS output to include in your homework and write brief answers to the specific questions. Remember SPSS produces some outputs that you do not need. Feel free to transcribe tables or modify charts if you wish to improve their presentation.</p>
+<ol style="list-style-type: decimal">
+<li><p>The variable <em>VOTING</em> records voter turnout in a borough, specifically the percentage of eligible voters who voted in the local elections in 2010. Obtain descriptive statistics, a histogram and a box plot for this variable. What is the range of the variable, and what is its inter-quartile range? Are there any outliers? Is the distribution of voter turnout symmetrical or skewed? How you can you tell?</p></li>
+<li><p>In the data set employment rates are given overall, but also separately for males and females. The employment rate is the percentage of working age population who are in employment. Compare and contrast male and female employment rates across the boroughs, using the variables <em>MALE_EMPLOYMENT</em> and <em>FEMALE_EMPLOYMENT</em>. Comment on the differences and/or similarities in their descriptive statistics: minimum and maximum, mean, median and standard deviation. Obtain histograms for these two variables. Are the distributions of male employment and female employment symmetrical or skewed?</p></li>
+</ol>
+
+</div>
+</div>
+<div id="week-4-class-two-way-contingency-tables" class="section level3 unnumbered">
+<h3>WEEK 4 class: Two-way contingency tables</h3>
+<p><strong>Data set</strong>: The data file used today is <strong>GSS2010.sav</strong>. It contains a selection of variables on attitudes and demographic characteristics for 2044 respondents in the 2010 U.S. General Social Survey (GSS).<a href="#fn60" class="footnoteRef" id="fnref60"><sup>60</sup></a> The full data set contains 790 variables. For convenience the version you are analysing today contains just a selection of those items.</p>
+<div id="analysing-two-way-contingency-tables-in-spss" class="section level4 unnumbered">
+<h4>Analysing two-way contingency tables in SPSS</h4>
+<p>All of the analyses needed for this week’s class are found under <strong>Analyze/Descriptive Statistics/Crosstabs</strong>. We will be obtaining contingency tables between two variables, as in Week 2 class, with the following commands:</p>
+<ul>
+<li><p>The name of the row variable into the <strong>Row(s)</strong> box, and</p></li>
+<li><p>The name of the column variable into the <strong>Column(s)</strong> box.</p></li>
+<li><p><strong>Cells/Percentages</strong> for percentages within the table: <strong>Row</strong> gives percentages within each row (i.e. frequencies divided by row totals), <strong>Column</strong> percentages within columns, and <strong>Total</strong> percentages out of the total sample size.</p></li>
+</ul>
+<p>The only additional output we will need today is obtained by selecting</p>
+<ul>
+<li><p><strong>Statistics/Chi-square</strong> for the <span class="math inline">\(\chi^{2}\)</span> test of independence</p></li>
+<li><p>(If you are interested in the <span class="math inline">\(\gamma\)</span> measure of association for ordinal variables, outlined in the coursepack, you may obtain it using <strong>Statistics/Ordinal/Gamma</strong>. In the output the <span class="math inline">\(\gamma\)</span> statistic is shown in the “Symmetric measures” table in the “Value” column for “Gamma”. We will not use this measure today, but feel free to ask if you are interested in it.)</p></li>
+</ul>
+</div>
+<div id="classwork-2" class="section level4 unnumbered">
+<h4>Classwork</h4>
+<p>Suppose we want to use the GSS data to investigate whether in the U.S. population sex and age are associated with attitudes towards women’s roles. The respondent’s sex is included in the data as the variable <em>SEX</em>, and age as <em>AGEGROUP</em> in three groups: 18-34, 35-54, and 55 or over. The three attitude variables we consider are</p>
+<ul>
+<li><p><em>FEFAM</em>: Level of agreement with the following statement: “It is much better for everyone involved if the man is the achiever outside the home and the woman takes care of the home and family”. Available response options are Strongly agree, Agree, Disagree, and Strongly disagree.</p></li>
+<li><p>FEPOL: Level of agreement with the following statement: “Most men are better suited emotionally for politics than are most women”. Available response options are: Agree and Disagree.</p></li>
+<li><p><em>FEPRES</em>: Response to the following statement: “If your party nominated a woman for President, would you vote for her if she were qualified for the job?” Available response options are Yes and No.</p></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>Consider first the association between sex and attitude towards male and female work roles, by constructing a contingency table between <em>SEX</em> and <em>FEFAM</em>. To make interpretation of the results easier, include also appropriate percentages. Here it makes most sense to treat sex as an explanatory variable for attitude, so we want to examine percentages of attitudes within categories of male and female. If you use <em>SEX</em> as the row variable, this means including the Row percentages in the output. Request also the <span class="math inline">\(\chi^{2}\)</span>-test statistic. In SPSS output, results for the <span class="math inline">\(\chi^{2}\)</span> test are given below the two-way table itself in a table labelled “Chi-Square Tests”, in the row “Pearson Chi-Square”. The test statistic itself is given under “Value” and its <span class="math inline">\(P\)</span>-value under “Asymp. Sig. (2-sided)”. By considering the <span class="math inline">\(\chi^{2}\)</span> test statistic and its <span class="math inline">\(P\)</span>-value, do you think there is enough evidence to conclude that males and females differ in their views on male and female work roles? If there is, how would you describe the association?</p></li>
+<li><p>Consider now the association between age and attitude towards male and female work roles, by constructing a table between <em>AGEGROUP</em> and <em>FEFAM</em>. Interpret the results, and compare them to your findings in Exercise 1.</p></li>
+<li><p>Examine differences between men and women in their views about women’s suitability for politics, using a table between <em>SEX</em> and <em>FEPOL</em>. Interpret the results. (Note: ignore the last two columns of the <span class="math inline">\(\chi^{2}\)</span> test output, labelled ‘Exact Sig. (2-sided)’’ and ‘Exact Sig. (1-sided)’’, and use the result under “Asymp. Sig. (2-sided)” as in the other tables.)</p></li>
+</ol>
+</div>
+<div id="homework-2" class="section level4 unnumbered">
+<h4>HOMEWORK</h4>
+<ol style="list-style-type: decimal">
+<li><p>What is the null hypothesis for the <span class="math inline">\(\chi^{2}\)</span> test that you carried out in analysis 2 in the class, for the table of <em>AGEGROUP</em> by <em>FEFAM</em>?</p></li>
+<li><p>State the <span class="math inline">\(\chi^{2}\)</span> test statistic, degrees of freedom and <span class="math inline">\(P\)</span>-value for this table, and interpret these results.</p></li>
+<li><p>Interpret the table of percentages to describe the nature of the association between <em>AGEGROUP</em> and <em>FEFAM</em>.</p></li>
+<li><p>Consider now the association between age and attitude towards voting for a female President, by constructing a table between <em>AGEGROUP</em> and <em>FEPRES</em>. In the population, do people in different age groups differ in their willingness to vote for a female President? Interpret the results of the <span class="math inline">\(\chi^{2}\)</span> test and illustrate your answer with one or two percentages from the two-way table.</p></li>
+</ol>
+
+</div>
+</div>
+<div id="week-5-class-inference-for-two-population-means" class="section level3 unnumbered">
+<h3>WEEK 5 class: Inference for two population means</h3>
+<p><strong>Data set</strong>: The data file used today is <strong>ESS5_GBFR.sav</strong>. It contains data for a selection of variables from the 2010 European Social Survey for respondents in Great Britain and France.<a href="#fn61" class="footnoteRef" id="fnref61"><sup>61</sup></a> Only a few of the variables are used in the exercises; the rest are included in the data set as examples of the kinds of information obtained from this survey.</p>
+<p><strong>Two-sample inference for means in SPSS</strong></p>
+<ul>
+<li><p><span class="math inline">\(t\)</span>-tests and confidence intervals for two independent samples for inference on the difference of the population means: <strong>Analyze/Compare Means/Independent-Samples T Test</strong>. The variable of interest <span class="math inline">\(Y\)</span> is placed under <strong>Test Variable(s)</strong> and the explanatory variable <span class="math inline">\(X\)</span> under <strong>Grouping Variable</strong>. The values of <span class="math inline">\(X\)</span> identifying the two groups being compared are defined under <strong>Define Groups</strong>.</p></li>
+<li><p><em>Box plots</em> for descriptive purposes are obtained from <strong>Analyze/Descriptive Statistics/Explore</strong>. Here we want to draw side-by-side box plots for values of a response variable <span class="math inline">\(Y\)</span>, one plot for each distinct value of an explanatory variable <span class="math inline">\(X\)</span>. The name of <span class="math inline">\(Y\)</span> is placed under <strong>Dependent List</strong> and that of <span class="math inline">\(X\)</span> under <strong>Factor List</strong>. Box plots are obtained by selecting <strong>Plots/Boxplots/Factor levels together</strong>.</p></li>
+<li><p>Tests and confidence intervals for single means (c.f. Section <a href="c-means.html#s-means-1sample">7.4</a>) are not considered today. These are obtained from <strong>Analyze/Compare Means/One-Sample T Test</strong>. They can also be used to carry out inference for comparisons of means between two <em>dependent</em> samples (c.f. Section <a href="c-means.html#s-means-dependent">7.5</a>).</p></li>
+</ul>
+<p><strong>Classwork</strong> Consider the survey data in the file <em>ESS5_GBFR.sav</em>. We will examine two variables, and carry out statistical inference to compare their means among the survey populations of adults in Great Britain and France.<a href="#fn62" class="footnoteRef" id="fnref62"><sup>62</sup></a></p>
+<ol style="list-style-type: decimal">
+<li><p>The variable <em>WKHTOT</em> shows the number of hours per week the respondent normally works in his or her main job. Obtain box plots and descriptive statistics for this variable separately for each country (identified by the variable <em>CNTRY</em>). Compare measures of central tendency and variation for <em>WKHTOT</em> between the two countries. What do you observe?</p></li>
+<li><p>Obtain a <span class="math inline">\(t\)</span>-test and confidence interval for the difference of weekly working hours between Britain and France (specify the values of the country variable as <strong>Define Groups/Group 1:</strong> <em>GB</em> and <strong>Group 2:</strong> <em>FR</em> as coded in the data). Details of SPSS output for this are explained in Chapter <a href="c-means.html#c-means">7</a>; you can use the results under the assumption of equal population variances. What do you conclude? Is there a statistically significant difference in the average values of <em>WKHTOT</em> between the two countries? What does the confidence interval suggest about the size of the difference?</p></li>
+<li><p>The variable <em>STFJBOT</em> asks those in paid work, “How satisfied are you with the balance between the time you spend on your paid work and the time you spend on other aspects of your life?”. Respondents are asked to rate their level of satisfaction on a scale from 0-10, where 0 means “Extremely dissatisfied” and 10 means “Extremely satisfied”. Repeat exercises 1 and 2 for this variable, and compare also histograms of <em>STFJBOT</em> for each country. What do you observe?</p></li>
+</ol>
+<p><strong>HOMEWORK</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Write up your answers to the second class exercise, answering these specific questions:</p>
+<ol style="list-style-type: decimal">
+<li><p>What are the observed sample means for <em>WKHTOT</em> for French and British respondents?</p></li>
+<li><p>Is there a statistically significant difference in the average values of <em>WKHTOT</em> between the two countries? State the value of the test statistic and its corresponding <span class="math inline">\(P\)</span>-value. You may assume equal population variances for this test.</p></li>
+<li><p>Interpret the 95% confidence interval for the difference.</p></li>
+</ol></li>
+<li><p>The variable <em>WKHSCH</em> asks respondents, “How many hours a week, if any, would you choose to work, bearing in mind that your earnings would go up or down according to how many hours you work?”. Is there a statistically significant difference between ideal (rather than actual) work hours for French and British respondents? Carry out a t-test and report and interpret the results.</p></li>
+<li><p>The variable <em>STFMJOB</em> asks respondents, “How satisfied are you in your main job?”. Respondents are asked to rate their level of satisfaction on a scale from 0-10, where 0 means “Extremely dissatisfied” and 10 means “Extremely satisfied”. Is there a statistically significant difference, at the 5% level of significance, between mean levels of job satisfaction for French and British respondents? Answer this question by using the 95% confidence interval for the difference in means (you need the full t-test output to obtain the confidence interval, but you need not report the results of the t-test itself for this question).</p></li>
+</ol>
+
+</div>
+<div id="week-7-class-inference-for-population-proportions" class="section level3 unnumbered">
+<h3>WEEK 7 class: Inference for population proportions</h3>
+<p><strong>Data sets</strong>: Files <strong>BES2010post_lastdebate.sav</strong> and <strong>BES2010pre_lastdebate.sav</strong>.</p>
+<p><strong>Inference on proportions in SPSS</strong></p>
+<ul>
+<li><p>SPSS menus do not provide procedures for calculating the tests and confidence intervals for proportions discussed in Chapter <a href="c-probs.html#c-probs">5</a>. This is not a serious limitation, as the calculations are quite simple.</p></li>
+<li><p>It is probably easiest to use a pocket calculator for the calculations, and this is the approach we recommend for this class. The only part of the analysis it cannot do is calculating the precise <span class="math inline">\(P\)</span>-value for the tests, but even this can be avoided by using critical values from a statistical table such as the one at the end of this Coursepack to determine approximate <span class="math inline">\(P\)</span>-values (or by using an online <span class="math inline">\(P\)</span>-value calculator — see “About Week 4 class” on the Moodle page for suggested links).</p></li>
+</ul>
+<div id="classwork-3" class="section level4 unnumbered">
+<h4>Classwork</h4>
+<p>The survey data set <em>BES2010post_lastdebate.sav</em> contains part of the information collected by the British Election Study, an ongoing research programme designed to understand voter choices in the UK.<a href="#fn63" class="footnoteRef" id="fnref63"><sup>63</sup></a></p>
+<p>In the run-up to the UK General Election on 6 May 2010, opinion polls reported quite dramatic changes in popularity of the Liberal Democrat party. Key to their increasing popularity was the performance of their party leader, Nick Clegg, in a series of three televised debates between the leaders of the three main political parties (the other participants were Gordon Brown for Labour and David Cameron for the Conservative party). The debates were broadcast between 15 and 29 April 2010.</p>
+<p>The data in <em>BES2010post_lastdebate.sav</em> contain information on respondents’ voting intentions, obtained after the debates had ended (i.e. between 30 April and 6 May).</p>
+<ol style="list-style-type: decimal">
+<li><p><em>VOTE_LIBDEM</em> is a dichotomous variable indicating whether a respondent intended to vote for the Liberal Democrats (value 1) or some other party (0) in the 2010 General Election. The value of this variable is by definition missing for those who had not decided which way they would vote or who did not intend to vote at all, so they are automatically excluded from the analysis. The parameter of interest <span class="math inline">\(\pi\)</span> is now the population proportion of those who <em>say</em> they would vote Liberal Democrat. We will compare it to 0.23, the proportion of the vote the party actually received in 2010. The analysis is thus one-sample inference on a population proportion, and the relevant formulas are (11) for the test statistic and (15) for the confidence interval that can be found in Section <a href="c-probs.html#ss-probs-test1sample-teststatistic">5.5.2</a> and <a href="c-probs.html#s-probs-1sampleci-calc">5.6.2</a> respectively.</p>
+<ul>
+<li><p>Begin by creating a frequency table of <em>VOTE_LIBDEM</em>. This should show that the sample estimate of <span class="math inline">\(\pi\)</span> is 0.260, out of <span class="math inline">\(3226\)</span> non-missing responses. Thus <span class="math inline">\(n=3226\)</span> and <span class="math inline">\(\hat{\pi}=0.260\)</span> in the notation of Chapter <a href="c-probs.html#c-probs">5</a>.</p></li>
+<li><p>For the one-sample significance test, the value of <span class="math inline">\(\pi\)</span> under the null hypothesis is <span class="math inline">\(\pi_{0}=0.230\)</span>. Using the specific formula of the test statistic in Section <a href="c-probs.html#ss-probs-test1sample-teststatistic">5.5.2</a>, the value of the test statistic <span class="math inline">\(z\)</span> is thus given by the calculation <span class="math display">\[z = \frac{0.260-0.230}{\sqrt{0.230\times (1-0.230)/3226}}\]</span> Calculate this using a calculator. The result should be <span class="math inline">\(z=4.049\)</span>.</p></li>
+<li><p>The (two-sided) <span class="math inline">\(P\)</span>-value for this is the probability that a value from the standard normal distribution is at most <span class="math inline">\(-4.049\)</span> or at least 4.049. Evaluate this approximately by comparing the value of <span class="math inline">\(z\)</span> to critical values from the standard normal distribution (c.f. Table <a href="c-probs.html#tab:t-ttable">5.2</a>) as explained in Section <a href="c-probs.html#ss-probs-test1sample-samplingd">5.5.3</a>. Here, for example, <span class="math inline">\(z\)</span> is larger than 1.96, so the two-sided <span class="math inline">\(P\)</span>-value must be smaller than 0.05. Convince yourself that you understand this statement.</p></li>
+<li><p>Calculate a 95% confidence interval for the population proportion of prospective Liberal Democrat voters, using equation (15) at the end of Section <a href="c-probs.html#s-probs-1sampleci-calc">5.6.2</a>.</p></li>
+</ul>
+<p>What do you conclude about the proportions of prospective and actual Liberal Democrat voters? Why might the two differ from each other?</p></li>
+<li><p>The variable <em>TVDEBATE</em> indicates whether the respondent reports having watched any of the three televised debates (1 for Yes, at least one watched, 0 otherwise - this includes “no” and “don’t know” responses). We will compare the proportion of people intending to vote Liberal Democrat amongst those who watched some or all of the debates with those who did not, using the two-sample methods of analysis discussed in Section <a href="c-probs.html#s-probs-2samples">5.7</a>. The formula of the <span class="math inline">\(z\)</span>-test statistic for testing the hypothesis of equal population proportions is thus the two-sample <span class="math inline">\(z\)</span>-test statistic for proportions (see middle of Section <a href="c-probs.html#s-probs-2samples">5.7</a>), and a confidence interval for the difference of the porportions is (25) in Section <a href="c-probs.html#s-probs-2samples">5.7</a>.</p>
+<ul>
+<li><p>Begin by calculating the relevant sample proportions. The easiest way to do this is by creating a two-way contingency table between <em>TVDEBATE</em> and <em>VOTE_LIBDEM</em> as you did in the Week 2 and 4 classes. The results required for the analysis considered here are all shown in the resulting table. Convince yourself that these show that, in the notation of Section <a href="c-probs.html#s-probs-2samples">5.7</a>,</p>
+<ul>
+<li><p><span class="math inline">\(n_{1}=930\)</span> and <span class="math inline">\(\hat{\pi}_{1}=0.218\; (=203/930)\)</span>,</p></li>
+<li><p><span class="math inline">\(n_{2}=2296\)</span> and <span class="math inline">\(\hat{\pi}_{2}=0.277\; (=636/2296)\)</span>,</p></li>
+</ul>
+<p>where 1 denotes respondents who did not watch any of the debates and 2 those who watched at least some. The pooled estimated proportion <span class="math inline">\(\hat{\pi}\)</span> (formula 21 in Section <a href="c-probs.html#s-probs-2samples">5.7</a>) used in the test statistic (23) is here <span class="math inline">\(\hat{\pi}=0.260\)</span>, shown on the “Total” row.</p></li>
+<li><p>Calculate the test statistic, its <span class="math inline">\(P\)</span>-value and a 95% confidence for the difference in population proportions, using the relevant formulas. For example, the test statistic is here given by <span class="math display">\[z= \frac{0.277-0.218}{\sqrt{0.260\times (1-0.260)\times
+(1/2296+1/930)}}.\]</span></p></li>
+</ul>
+<p>What do you conclude? Is there evidence that those who watched at least some of the leaders’ debates were more likely to declare an intention to vote Liberal Democrat? If there is, how big is the difference in proportions of prospective Liberal Democrat voters between the debate-watchers and debate-non-watchers?</p></li>
+</ol>
+</div>
+<div id="homework-3" class="section level4 unnumbered">
+<h4>HOMEWORK</h4>
+<p>Write up your answers to the second class exercise. In particular, answer the following specific questions:</p>
+<ol style="list-style-type: decimal">
+<li><p>What proportion of respondents say that they did watch at least some of the leaders’ debates? And what proportion did not? Of those who watched at least some of the leaders’ debates, what proportion said they intended to vote Liberal Democrat? And what proportion of those who did <em>not</em> watch any of the leaders’ debates said they intended to vote Liberal Democrat?</p></li>
+<li><p>Calculate the test statistic and find its corresponding approximate <span class="math inline">\(P\)</span>-value for the difference in population proportions of prospective Liberal Democrat voters among those who did and did not watch the leaders’ debates. Show your working. State the conclusion from the test.</p></li>
+<li><p>Calculate a 95% confidence interval around this difference. State its lower and upper limits.</p></li>
+<li><p>Write a brief substantive interpretation of your results.</p></li>
+</ol>
+<p>The data set <em>BES2010pre_lastdebate.sav</em> contains responses to the same question - whether respondents intended to vote Liberal Democrat or not - but asked before the last of the party leaders’ debates. Repeat the analysis you carried out for the first class exercise, but using this data set. In other words carry out a one-sample analysis, of the kind done in exercise 1 above, to compare the proportion of respondents who said they intended to vote Liberal Democrat with the proportion who actually did. Answer the following questions:</p>
+<ol style="list-style-type: decimal">
+<li><p>State the null hypothesis for the test.</p></li>
+<li><p>Calculate the test statistic and find its corresponding approximate <span class="math inline">\(P\)</span>-value. Show your workings.</p></li>
+<li><p>Give a brief interpretation of the results. Do they differ from the other data set? Can you think of any reasons for this? (This last question invites some speculation - do not worry if you don’t have any ideas! But see the sample answer if you are interested in our speculation.)</p></li>
+</ol>
+
+</div>
+</div>
+<div id="week-7-class-correlation-and-simple-linear-regression-1" class="section level3 unnumbered">
+<h3>WEEK 7 class: Correlation and simple linear regression 1</h3>
+<p><strong>Data set</strong>: Files <strong>decathlon2012.sav</strong>.</p>
+<div id="scatterplots-correlation-and-simple-linear-regression-in-spss" class="section level4 unnumbered">
+<h4>Scatterplots, correlation and simple linear regression in SPSS</h4>
+<ul>
+<li><p>A scatterplot is obtained from <strong>Graphs/Legacy Dialogs/“Scatter/Dot”/ Simple Scatter/Define</strong>. The variables for the <span class="math inline">\(X\)</span>-axis and <span class="math inline">\(Y\)</span>-axis are placed in the <strong>X Axis</strong> and <strong>Y Axis</strong> boxes respectively. Double-clicking on the plot in the Output window opens it in a <em>Chart Editor</em>, where various additions to the graph can be made. A fitted straight line is added from <strong>Elements/Fit Line at Total</strong>. A least squares fitted line is the default under this option, so it is drawn immediately and you can just click <strong>Close</strong>. Closing the Chart Editor commits the changes to the Output window.</p></li>
+<li><p>A correlation matrix is obtained from <strong>Analyze/Correlate/Bivariate</strong>, when <strong>Correlation Coefficients/Pearson</strong> is selected (which is the default, so you should not need to change it). The variables included in the correlation matrix are placed into the <strong>Variables</strong> box. The output also includes a test for the hypothesis that the population correlation is 0, but we will ignore it.</p></li>
+<li><p>Linear regression models are obtained from <strong>Analyze/Regression/Linear</strong>. The response variable is placed under <strong>Dependent</strong> and the explanatory variable under <strong>Independent(s)</strong>. The dialog box has many options for various additional choices. Today you can leave all of them at their default values, except that you should select <strong>Statistics/Regression Coefficients/Confidence intervals</strong> to include also 95% confidence intervals for the regression coefficients in the output.</p></li>
+</ul>
+</div>
+<div id="classwork-4" class="section level4 unnumbered">
+<h4>Classwork</h4>
+<p>Decathlon is a sport where the participants complete ten different athletics events over two days. Their results in each are then translated into points, and the winner is the competitor with the highest points total for the ten events. The file <em>decathlon2012.sav</em> contains the results of the decathlon competition at the 2012 Olympics in London for the 26 athletes who finished the competition.<a href="#fn64" class="footnoteRef" id="fnref64"><sup>64</sup></a> The results for each event are given both in their original units (variables with names beginning with “mark_”) and in decathlon points (names beginning with “points_”). The ten events are identified by the variable labels in Variable View. The variable <em>points_total</em> gives the final points total for each competitor.</p>
+<ol style="list-style-type: decimal">
+<li><p>Create a scatterplot between the result (<span class="math inline">\(X\)</span>-axis) and points (<span class="math inline">\(Y\)</span>-axis) for one event, the 100-metre sprint (variables <em>MARK_100M</em> and <em>POINTS_100M</em>), and add a fitted line. This simply provides information on the calculation used to transform the result into points. Clearly a linear calculation is used for this, at least over the range of results in these data. Notice the downward slope of the line: the faster the result, the higher the number of points. From now on, for simplicity we will consider only the points variables for each event.</p></li>
+<li><p>Obtain the correlation matrix for all pairs of variables among the ten individual points scores and the total score. Consider first correlations between the individual events only. Which correlations tend to be high (say over 0.5), which ones close to zero and which ones even negative? Can you think of any reasons for this? Draw scatterplots and fitted lines for a few pairs of variables with different sizes of correlations (here the variables are treated symmetrically, so it does not matter which one is placed on the <span class="math inline">\(X\)</span>-axis). Can these associations be reasonably described as linear?</p></li>
+<li><p>Consider now the correlations between the ten event scores and the final score <em>POINTS_TOTAL</em>. Which of them is highest, and which one lowest? Examine the scatterplot and fitted line between points for 100 metres (<em>POINTS_100M</em>) and the total score (POINTS_TOTAL). Fit a line to this scatterplot variables, with <em>POINTS_100M</em> as the explanatory variable. Interpret the results. Does there appear to be an association between the points for 100 metres and the total score? What is the nature of the association?</p>
+<p>Suppose you were told that a competitor received 800 points (a time of about 11.3 seconds) for 100 metres, the first event of the decathlon. Based on the fitted model, what final points score would you predict for him? You can calculate this fitted value with a pocket calculator. What would be the predicted value if the 100-metre score was 950 points (about 10.6 s) instead?</p></li>
+</ol>
+<p><strong>HOMEWORK</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Briefly discuss the correlation matrix produced in the class. Pick out a few examples for illustration - which correlations are highest, and which ones lowest, and which ones negative? You may comment on correlations between individual events, as well as on correlations between the final score and individual events.</p></li>
+<li><p>Obtain the scatterplot and linear regression model for the total score given points for the long jump, one of the field events (POINTS_LONGJUMP). Is the score for long jump strongly or weakly associated with the final score? Interpret the slope coefficient. Suppose you were told that a competitor received 900 points (a jump of about 7.4 metres) for the long jump. Based on the fitted model, what final points score would you predict for him?</p></li>
+<li><p>Obtain the scatterplot and linear regression model for the total score given points for throwing the discus, another of the field events (POINTS_DISCUS). Interpret the slope coefficient. Is the score for discus strongly or weakly associated with the final score?</p></li>
+</ol>
+
+</div>
+</div>
+<div id="week-8-class-simple-linear-regression-and-3-way-tables" class="section level3 unnumbered">
+<h3>WEEK 8 class: Simple linear regression and 3-way tables</h3>
+<p><strong>Data set</strong>: File <strong>GSS2010.SAV</strong>. This contains a selection of variables on attitudes and demographic characteristics for 2044 respondents in the 2010 U.S. General Social Survey (GSS).<a href="#fn65" class="footnoteRef" id="fnref65"><sup>65</sup></a> Only a few of the variables are used in the exercises.</p>
+<div id="classwork---linear-regression" class="section level4 unnumbered">
+<h4>Classwork - linear regression</h4>
+<p>Here we will focus on the variables <em>EDUC</em>, <em>PAEDUC</em>, <em>MAEDUC</em> and <em>SPEDUC</em>. These show the number of years of education completed by, respectively, the survey respondent him/herself, and the respondent’s father, mother and spouse.</p>
+<ol style="list-style-type: decimal">
+<li><p>Obtain basic descriptive statistics for the variables. Here they can be compared directly, because the meaning of the variable is similar in each case. We can even draw side-by-side box plots for the variables (rather than for values of a single variable at different levels of another, as before). These can be obtained from <strong>Analyze/Descriptive Statistics/Explore</strong> by placing all the variables under <strong>Dependent List</strong> and selecting <strong>Plots/Boxplots/Dependents together</strong>. You should then also select <strong>Options/Missing Values/Exclude cases pairwise</strong> to include all non-missing values for each variable (here <em>SPEDUC</em> has for obvious reasons more missing values than the others).</p></li>
+<li><p>Obtain the correlation matrix of the four variables. Which correlations are highest, and which ones lowest?</p></li>
+<li><p>Draw a scatterplot with fitted line for <em>EDUC</em> given <em>PAEDUC</em>. Fit a linear regression model between these variables, regressiong <em>EDUC</em> (response variable) on <em>PAEDUC</em> (explanatory variable). Interpret the results. Is there a statistically significant linear association between a person’s years of schooling and those of his/her father? Interpret the estimated regression coefficient, <span class="math inline">\(t\)</span>-statistic and <span class="math inline">\(P\)</span>-value, and 95 per cent confidence interval.</p></li>
+<li><p>Based on the fitted model, what is the predicted number of years of education for a respondent whose father completed 12 years of education?</p></li>
+</ol>
+</div>
+<div id="homework-simple-linear-regression-and-three-way-tables" class="section level4 unnumbered">
+<h4>HOMEWORK: Simple linear regression and three-way tables</h4>
+<p>The homework exercise uses the same data set for two different types of analysis.</p>
+</div>
+<div id="linear-regression" class="section level4 unnumbered">
+<h4>Linear regression</h4>
+<p>Draw a scatterplot with fitted line for <em>EDUC</em> given <em>MAEDUC</em>. Fit a linear regression model between these variables, regressiong <em>EDUC</em> (response variable) on <em>MAEDUC</em> (explanatory variable).</p>
+<ol style="list-style-type: decimal">
+<li><p>Interpret the results: Is there a statistically significant linear association between a person’s years of schooling and those of his/her mother? Interpret the estimated regression coefficient, <span class="math inline">\(t\)</span>-statistic and <span class="math inline">\(P\)</span>-value, and 95 per cent confidence interval.</p></li>
+<li><p>Based on the fitted model, what is the predicted number of years of education for a respondent whose mother completed 10 years of education?</p></li>
+<li><p>Interpret the R-squared statistic for the model.</p></li>
+</ol>
+</div>
+<div id="analysing-multiway-contingency-tables-in-spss" class="section level4 unnumbered">
+<h4>Analysing multiway contingency tables in SPSS</h4>
+<p>Three-way contingency tables are again obtained from <strong>Analyze/Descriptive Statistics/Crosstabs</strong>. The only change from Week 4 class is that the conditioning variable is now placed in the <strong>Layer 1 of 1</strong> box. This produces a series of partial two-way tables between the row and column variables specified in the <strong>Row(s)</strong> and <strong>Column(s)</strong> boxes, one for each category of the <strong>Layer</strong> variable. Percentages and <span class="math inline">\(\chi^{2}\)</span> test are similarly calculated separately for each partial table. For this example we elaborate on the first two exercises from Week 4 class. To remind you, the categorical variables we are analysing are these:</p>
+<ul>
+<li><p>The respondent’s sex, recorded as the variable <em>SEX</em>.</p></li>
+<li><p>age as <em>AGEGROUP</em> in three groups: 18-34, 35-54 and 55 or over.</p></li>
+<li><p><em>FEFAM</em>: Level of agreement with the following statement: “It is much better for everyone involved if the man is the achiever outside the home and the woman takes care of the home and family”, with response options Strongly agree, Agree, Disagree, and Strongly disagree.</p></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>First remind yourself of the associations between SEX and FEFAM and between AGEGROUP and FEFAM. Obtain the two-way contingency table between <em>FEFAM</em> and <em>SEX</em>, including appropriate percentages and <span class="math inline">\(\chi^{2}\)</span> test of independence. Repeat the procedure for <em>FEFAM</em> by <em>AGEGROUP</em>. What do you learn about the associations between attitude and sex, and between attitude and age?</p></li>
+<li><p>Sociologists would suggest that the relationship between sex and attitude towards male and female work roles might be different for different age groups. In other words, age might modify the association between sex and attitude. Investigate this possible interaction between the three variables. Create a three-way table where <em>FEFAM</em> is the column variable, <em>SEX</em> the row variable and <em>AGEGROUP</em> the layer (conditioning) variable. Study the SPSS output, and make sure you understand how this shows three partial tables of <em>FEFAM</em> vs.<em>SEX</em>, one for each possible value of <em>AGEGROUP</em>. Examine and interpret the associations in the three partial tables. State the results of the <span class="math inline">\(\chi^{2}\)</span> test for each partial table, and illustrate your interpretations with some appropriate percentages. Finally, summarise your findings: are there differences in the nature, strength or significance of the association between sex and attitude, depending on the age group? Comment on how this interpretation differs from the initial two-way table of <em>FEFAM</em> and <em>SEX</em>.</p></li>
+</ol>
+
+</div>
+</div>
+<div id="week-9-class-multiple-linear-regression" class="section level3 unnumbered">
+<h3>WEEK 9 class: Multiple linear regression</h3>
+<p><strong>Data set</strong>: File <strong>humandevelopment2011.sav</strong>.</p>
+<div id="multiple-linear-regression-in-spss" class="section level4 unnumbered">
+<h4>Multiple linear regression in SPSS</h4>
+<ul>
+<li><p>Multiple linear regression is obtained from <strong>Analyze/Regression/Linear</strong>, by placing all of the required explanatory variables in the <strong>Independent(s)</strong> box. No other changes from last week are required.</p></li>
+<li><p>To include categorical explanatory variables, the necessary dummy variables have to be created first. The ones for today’s class are already included in the data set. If you need to create dummy variables for your own analyses in the future, it is usually easiest to do so from <strong>Transform/Compute Variable</strong>. Some of the buttons on the keypad shown in that dialog box are <em>logical operators</em> for defining conditions for which the outcome is either 1 (True) or 0 (False), as required by a dummy variable. For example, the categorical variable <em>INCOME_GROUP</em> in today’s data set has the value 3 if the country is in the high income group. The dummy variable <em>HIGH_INCOME</em> was created from this by entering <strong>Target Variable:</strong> <em>HIGH_INCOME</em> and <strong>Numeric Expression:</strong> <em>INCOME_GROUP=3</em>. This means that the new variable <em>HIGH_INCOME</em> will have the value 1 for countries for which <em>INCOME_GROUP</em> is equal to 3, and will be 0 otherwise. Other logical operators may also be used: for example, <em>urban_pop$&lt;$50</em> would produce 1 if the variable <em>URBAN_POP</em> was less than 50 and 0 otherwise.</p></li>
+</ul>
+</div>
+<div id="classwork-5" class="section level4 unnumbered">
+<h4>Classwork</h4>
+<p>The file <em>humandevelopment2011.sav</em> contains data on a number of indicators of what might broadly be called development, for 194 countries in 2011. These were collated from two international data agency sources.<a href="#fn66" class="footnoteRef" id="fnref66"><sup>66</sup></a> The response variable considered today is <em>SCHOOL_YEARS</em>, which records for each country the mean number of years of schooling taken by the adult population. We treat it here as a general indicator of the educational situation in a country, which is an important aspect of development. We will consider the following explanatory variables for it:</p>
+<ul>
+<li><p><em>URBAN_POP</em>: the degree of urbanisation of the country, specifically the percentage of the country’s population living in urban areas variable</p></li>
+<li><p><em>GOVERNANCE</em>, a continuous variable contructed from expert opinion surveys to reflect the perceived effectiveness of government in delivering services.</p></li>
+<li><p><em>INFANT_MORTALITY</em>, number of infants dying before 1 year old, per 1,000 live births — a “proxy” indicator representing the health of the population</p></li>
+<li><p><em>INCOME_GROUP</em>, classified as low, middle or high income economies. This is also provided in the form of three dummy variables: <em>LOW_INCOME</em>, <em>MIDDLE_INCOME</em> and <em>HIGH_INCOME</em>.</p></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p>Obtain some descriptive statistics for the continuous variables, to gain and impression of their ranges. A quick way of doing this is via <strong>Analyze/Descriptive Statistics/Frequencies</strong>, unchecking the “Display frequency tables” and requesting minimum and maximum values.</p></li>
+<li><p>Investigate the idea that increased urbanisation is linked to greater availability of schooling for people. Obtain a scatterplot and a simple linear regression model for <em>SCHOOL_YEARS</em> given <em>URBAN_POP</em>. What do you observe in the scatterplot? Interpret the regression output.</p></li>
+<li><p>Now consider the possibility that schooling may also be explained by the effectiveness of governments in providing public services (such as education). Fit a multiple linear regression model for <em>SCHOOL_YEARS</em> given both <em>URBAN_POP</em> and <em>GOVERNANCE</em>. Compare the the estimated coefficient of <em>URBAN_POP</em> for this model with the coefficient of the same variable in the model in Question 2. What do you conclude? Does the association between schooling and urbanisation change when we control for government effectiveness? If so, in what way? Interpret the estimate coefficient of <em>GOVERNANCE</em> in the fitted model, the results of its <span class="math inline">\(t\)</span>-test and its 95% confidence interval.</p></li>
+<li><p>Next consider the possible explanatory value of the income wealth of a country for understanding variation in schooling years. Include income by entering two of the three dummy variables for income group. For the most convenient interpretation, we suggest that you leave “low income” as the reference group, and enter the dummies for <em>MIDDLE_INCOME</em> and <em>HIGH_INCOME</em> in the model. Interpret the values of the estimated regression coefficients for the two income dummy variables. In addition, for each one state the null hypothesis for its <span class="math inline">\(t\)</span>-test, and interpret the result of the test and 95% confidence intervals.</p></li>
+<li><p>Using this model, what level of schooling would you predict for a country with 70% urban population, a score of 1.5 on governance, and a high income economy?</p></li>
+<li><p>Using this model, what level of schooling would you predict for a country with 30% urban population, a score of -0.2 on governance, and a low income economy?</p></li>
+</ol>
+<p><strong>HOMEWORK</strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Write up your answers to the last three questions in the class exercise.</p></li>
+<li><p>Finally, consider one more possible explanatory variable: <em>INFANT_MORTALITY</em>. Add this variable to the multiple linear regression model fitted above. Is it statistically significant, at the 1% level of significance? Interpret the value of its estimated coefficient, and its 95% confidence interval. Take care to make sense of the sign (positive or negative) of the coefficient.</p></li>
+<li><p>Has the inclusion of <em>INFANT_MORTALITY</em> modified the interpretation of any of the other explanatory variables in the model? Are they all statistically significant, at the 5% level of significance? Briefly outline the similarities and differences between the results for this final model and the model fitted in the class exercise.</p></li>
+</ol>
+
+</div>
+</div>
+<div id="week-10-class-review-and-multiple-linear-regression" class="section level3 unnumbered">
+<h3>WEEK 10 class: Review and Multiple linear regression</h3>
+<p><strong>Data set</strong>: File <strong>ESS5GB_trust.sav</strong>.</p>
+<p>This class is for you to revisit any topics of your choosing. Make the most of the opportunity to ask your class teachers any questions you have about any of the course material, and to practise any of the analyses you have learned during the course.</p>
+<p>As an optional exercise, the data file <strong>ESS5GB_trust.sav</strong> is provided. This contains a selection of variables from the survey of British respondents that forms the 2010 wave of the European Social Survey.<a href="#fn67" class="footnoteRef" id="fnref67"><sup>67</sup></a></p>
+<p>We suggest that you use the data to practise multiple linear regression modelling on one or more of the variables capturing people’s levels of trust in institutions. For these questions, respondents were asked the following: “Using this card, please tell me on a score of 0-10 how much you personally trust each of the institutions I read out. 0 means you do not trust an institution at all, and 10 means you have complete trust.” The institutions (and their variable names) are:</p>
+<ul>
+<li><p><em>trstprl</em>: Trust in country’s parliament</p></li>
+<li><p><em>trstlgl</em>: Trust in the legal system</p></li>
+<li><p><em>trstplc</em>: Trust in the police</p></li>
+<li><p><em>trstplt</em>: Trust in politicians</p></li>
+<li><p><em>trstprt</em>: Trust in political parties</p></li>
+<li><p><em>trstep</em>: Trust in the European Parliament</p></li>
+<li><p><em>trstun</em>: Trust in the United Nations</p></li>
+</ul>
+<p>After you choose a response variable that interests you, you will need to select some potential explanatory variables to test. The data set contains a number of variables. Some are socio-demographic, such as age and gender. Some are attitudinal or behavioural, such as amount of time spent reading newspapers. You will need to make a judgement about the levels of measurement of the variables, and how to enter them into the model. Use the “Values” column in the SPSS Variable View to check how each variable is coded. Note: we suggest that it is not too much of a compromise to treat the variables on television, radio and newspaper consumption as continuous, interval level variables. Note also: we have provided dummy variables for the categorical variables in the data set.</p>
+<p><strong>HOMEWORK</strong></p>
+<p>As this is the last week of the course, there is no homework. You can find further information on this and the other class exercises and homeworks in the model answers, which will be posted in the Moodle site.</p>
+
+</div>
+</div>
+<div id="statistical-tables" class="section level2 unnumbered">
+<h2>Statistical tables</h2>
+<p>Explanation of the “Table of standard normal tail probabilities” in Section @ref(s_disttables_Z):</p>
+<ul>
+<li><p>The table shows, for values of <span class="math inline">\(Z\)</span> between 0 and 3.5, the probability that a value from the standard normal distribution is <em>larger than</em> <span class="math inline">\(Z\)</span> (i.e. the “right-hand” tail probabilities).</p>
+<ul>
+<li>For example, the probability of values larger than 0.50 is 0.3085.</li>
+</ul></li>
+<li><p>For negative values of <span class="math inline">\(Z\)</span>, the probability of values <em>smaller than</em> <span class="math inline">\(Z\)</span> (the “left-hand” tail probability) is equal to the right-hand tail probability for the corresponding positive value of <span class="math inline">\(Z\)</span>.</p>
+<ul>
+<li>For example, the probability of values smaller than <span class="math inline">\(-0.50\)</span> is also 0.3085.</li>
+</ul></li>
+</ul>
+
+<div id="table-of-standard-normal-tail-probabilities" class="section level3 unnumbered">
+<h3>Table of standard normal tail probabilities</h3>
+
+<table>
+<thead>
+<tr class="header">
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0.00</td>
+<td align="left">0.5000</td>
+<td align="left">0.50</td>
+<td align="left">0.3085</td>
+<td align="left">1.00</td>
+<td align="left">0.1587</td>
+<td align="left">1.50</td>
+<td align="left">0.0668</td>
+<td align="left">2.00</td>
+<td align="left">0.0228</td>
+<td align="left">2.50</td>
+<td align="left">0.0062</td>
+</tr>
+<tr class="even">
+<td align="left">0.01</td>
+<td align="left">0.4960</td>
+<td align="left">0.51</td>
+<td align="left">0.3050</td>
+<td align="left">1.01</td>
+<td align="left">0.1562</td>
+<td align="left">1.51</td>
+<td align="left">0.0655</td>
+<td align="left">2.01</td>
+<td align="left">0.0222</td>
+<td align="left">2.52</td>
+<td align="left">0.0059</td>
+</tr>
+<tr class="odd">
+<td align="left">0.02</td>
+<td align="left">0.4920</td>
+<td align="left">0.52</td>
+<td align="left">0.3015</td>
+<td align="left">1.02</td>
+<td align="left">0.1539</td>
+<td align="left">1.52</td>
+<td align="left">0.0643</td>
+<td align="left">2.02</td>
+<td align="left">0.0217</td>
+<td align="left">2.54</td>
+<td align="left">0.0055</td>
+</tr>
+<tr class="even">
+<td align="left">0.03</td>
+<td align="left">0.4880</td>
+<td align="left">0.53</td>
+<td align="left">0.2981</td>
+<td align="left">1.03</td>
+<td align="left">0.1515</td>
+<td align="left">1.53</td>
+<td align="left">0.0630</td>
+<td align="left">2.03</td>
+<td align="left">0.0212</td>
+<td align="left">2.56</td>
+<td align="left">0.0052</td>
+</tr>
+<tr class="odd">
+<td align="left">0.04</td>
+<td align="left">0.4840</td>
+<td align="left">0.54</td>
+<td align="left">0.2946</td>
+<td align="left">1.04</td>
+<td align="left">0.1492</td>
+<td align="left">1.54</td>
+<td align="left">0.0618</td>
+<td align="left">2.04</td>
+<td align="left">0.0207</td>
+<td align="left">2.58</td>
+<td align="left">0.0049</td>
+</tr>
+<tr class="even">
+<td align="left">0.05</td>
+<td align="left">0.4801</td>
+<td align="left">0.55</td>
+<td align="left">0.2912</td>
+<td align="left">1.05</td>
+<td align="left">0.1469</td>
+<td align="left">1.55</td>
+<td align="left">0.0606</td>
+<td align="left">2.05</td>
+<td align="left">0.0202</td>
+<td align="left">2.60</td>
+<td align="left">0.0047</td>
+</tr>
+<tr class="odd">
+<td align="left">0.06</td>
+<td align="left">0.4761</td>
+<td align="left">0.56</td>
+<td align="left">0.2877</td>
+<td align="left">1.06</td>
+<td align="left">0.1446</td>
+<td align="left">1.56</td>
+<td align="left">0.0594</td>
+<td align="left">2.06</td>
+<td align="left">0.0197</td>
+<td align="left">2.62</td>
+<td align="left">0.0044</td>
+</tr>
+<tr class="even">
+<td align="left">0.07</td>
+<td align="left">0.4721</td>
+<td align="left">0.57</td>
+<td align="left">0.2843</td>
+<td align="left">1.07</td>
+<td align="left">0.1423</td>
+<td align="left">1.57</td>
+<td align="left">0.0582</td>
+<td align="left">2.07</td>
+<td align="left">0.0192</td>
+<td align="left">2.64</td>
+<td align="left">0.0041</td>
+</tr>
+<tr class="odd">
+<td align="left">0.08</td>
+<td align="left">0.4681</td>
+<td align="left">0.58</td>
+<td align="left">0.2810</td>
+<td align="left">1.08</td>
+<td align="left">0.1401</td>
+<td align="left">1.58</td>
+<td align="left">0.0571</td>
+<td align="left">2.08</td>
+<td align="left">0.0188</td>
+<td align="left">2.66</td>
+<td align="left">0.0039</td>
+</tr>
+<tr class="even">
+<td align="left">0.09</td>
+<td align="left">0.4641</td>
+<td align="left">0.59</td>
+<td align="left">0.2776</td>
+<td align="left">1.09</td>
+<td align="left">0.1379</td>
+<td align="left">1.59</td>
+<td align="left">0.0559</td>
+<td align="left">2.09</td>
+<td align="left">0.0183</td>
+<td align="left">2.68</td>
+<td align="left">0.0037</td>
+</tr>
+<tr class="odd">
+<td align="left">0.10</td>
+<td align="left">0.4602</td>
+<td align="left">0.60</td>
+<td align="left">0.2743</td>
+<td align="left">1.10</td>
+<td align="left">0.1357</td>
+<td align="left">1.60</td>
+<td align="left">0.0548</td>
+<td align="left">2.10</td>
+<td align="left">0.0179</td>
+<td align="left">2.70</td>
+<td align="left">0.0035</td>
+</tr>
+<tr class="even">
+<td align="left">0.11</td>
+<td align="left">0.4562</td>
+<td align="left">0.61</td>
+<td align="left">0.2709</td>
+<td align="left">1.11</td>
+<td align="left">0.1335</td>
+<td align="left">1.61</td>
+<td align="left">0.0537</td>
+<td align="left">2.11</td>
+<td align="left">0.0174</td>
+<td align="left">2.72</td>
+<td align="left">0.0033</td>
+</tr>
+<tr class="odd">
+<td align="left">0.12</td>
+<td align="left">0.4522</td>
+<td align="left">0.62</td>
+<td align="left">0.2676</td>
+<td align="left">1.12</td>
+<td align="left">0.1314</td>
+<td align="left">1.62</td>
+<td align="left">0.0526</td>
+<td align="left">2.12</td>
+<td align="left">0.0170</td>
+<td align="left">2.74</td>
+<td align="left">0.0031</td>
+</tr>
+<tr class="even">
+<td align="left">0.13</td>
+<td align="left">0.4483</td>
+<td align="left">0.63</td>
+<td align="left">0.2643</td>
+<td align="left">1.13</td>
+<td align="left">0.1292</td>
+<td align="left">1.63</td>
+<td align="left">0.0516</td>
+<td align="left">2.13</td>
+<td align="left">0.0166</td>
+<td align="left">2.76</td>
+<td align="left">0.0029</td>
+</tr>
+<tr class="odd">
+<td align="left">0.14</td>
+<td align="left">0.4443</td>
+<td align="left">0.64</td>
+<td align="left">0.2611</td>
+<td align="left">1.14</td>
+<td align="left">0.1271</td>
+<td align="left">1.64</td>
+<td align="left">0.0505</td>
+<td align="left">2.14</td>
+<td align="left">0.0162</td>
+<td align="left">2.78</td>
+<td align="left">0.0027</td>
+</tr>
+<tr class="even">
+<td align="left">0.15</td>
+<td align="left">0.4404</td>
+<td align="left">0.65</td>
+<td align="left">0.2578</td>
+<td align="left">1.15</td>
+<td align="left">0.1251</td>
+<td align="left">1.65</td>
+<td align="left">0.0495</td>
+<td align="left">2.15</td>
+<td align="left">0.0158</td>
+<td align="left">2.80</td>
+<td align="left">0.0026</td>
+</tr>
+<tr class="odd">
+<td align="left">0.16</td>
+<td align="left">0.4364</td>
+<td align="left">0.66</td>
+<td align="left">0.2546</td>
+<td align="left">1.16</td>
+<td align="left">0.1230</td>
+<td align="left">1.66</td>
+<td align="left">0.0485</td>
+<td align="left">2.16</td>
+<td align="left">0.0154</td>
+<td align="left">2.82</td>
+<td align="left">0.0024</td>
+</tr>
+<tr class="even">
+<td align="left">0.17</td>
+<td align="left">0.4325</td>
+<td align="left">0.67</td>
+<td align="left">0.2514</td>
+<td align="left">1.17</td>
+<td align="left">0.1210</td>
+<td align="left">1.67</td>
+<td align="left">0.0475</td>
+<td align="left">2.17</td>
+<td align="left">0.0150</td>
+<td align="left">2.84</td>
+<td align="left">0.0023</td>
+</tr>
+<tr class="odd">
+<td align="left">0.18</td>
+<td align="left">0.4286</td>
+<td align="left">0.68</td>
+<td align="left">0.2483</td>
+<td align="left">1.18</td>
+<td align="left">0.1190</td>
+<td align="left">1.68</td>
+<td align="left">0.0465</td>
+<td align="left">2.18</td>
+<td align="left">0.0146</td>
+<td align="left">2.86</td>
+<td align="left">0.0021</td>
+</tr>
+<tr class="even">
+<td align="left">0.19</td>
+<td align="left">0.4247</td>
+<td align="left">0.69</td>
+<td align="left">0.2451</td>
+<td align="left">1.19</td>
+<td align="left">0.1170</td>
+<td align="left">1.69</td>
+<td align="left">0.0455</td>
+<td align="left">2.19</td>
+<td align="left">0.0143</td>
+<td align="left">2.88</td>
+<td align="left">0.0020</td>
+</tr>
+<tr class="odd">
+<td align="left">0.20</td>
+<td align="left">0.4207</td>
+<td align="left">0.70</td>
+<td align="left">0.2420</td>
+<td align="left">1.20</td>
+<td align="left">0.1151</td>
+<td align="left">1.70</td>
+<td align="left">0.0446</td>
+<td align="left">2.20</td>
+<td align="left">0.0139</td>
+<td align="left">2.90</td>
+<td align="left">0.0019</td>
+</tr>
+<tr class="even">
+<td align="left">0.21</td>
+<td align="left">0.4168</td>
+<td align="left">0.71</td>
+<td align="left">0.2389</td>
+<td align="left">1.21</td>
+<td align="left">0.1131</td>
+<td align="left">1.71</td>
+<td align="left">0.0436</td>
+<td align="left">2.21</td>
+<td align="left">0.0136</td>
+<td align="left">2.92</td>
+<td align="left">0.0018</td>
+</tr>
+<tr class="odd">
+<td align="left">0.22</td>
+<td align="left">0.4129</td>
+<td align="left">0.72</td>
+<td align="left">0.2358</td>
+<td align="left">1.22</td>
+<td align="left">0.1112</td>
+<td align="left">1.72</td>
+<td align="left">0.0427</td>
+<td align="left">2.22</td>
+<td align="left">0.0132</td>
+<td align="left">2.94</td>
+<td align="left">0.0016</td>
+</tr>
+<tr class="even">
+<td align="left">0.23</td>
+<td align="left">0.4090</td>
+<td align="left">0.73</td>
+<td align="left">0.2327</td>
+<td align="left">1.23</td>
+<td align="left">0.1093</td>
+<td align="left">1.73</td>
+<td align="left">0.0418</td>
+<td align="left">2.23</td>
+<td align="left">0.0129</td>
+<td align="left">2.96</td>
+<td align="left">0.0015</td>
+</tr>
+<tr class="odd">
+<td align="left">0.24</td>
+<td align="left">0.4052</td>
+<td align="left">0.74</td>
+<td align="left">0.2296</td>
+<td align="left">1.24</td>
+<td align="left">0.1075</td>
+<td align="left">1.74</td>
+<td align="left">0.0409</td>
+<td align="left">2.24</td>
+<td align="left">0.0125</td>
+<td align="left">2.98</td>
+<td align="left">0.0014</td>
+</tr>
+<tr class="even">
+<td align="left">0.25</td>
+<td align="left">0.4013</td>
+<td align="left">0.75</td>
+<td align="left">0.2266</td>
+<td align="left">1.25</td>
+<td align="left">0.1056</td>
+<td align="left">1.75</td>
+<td align="left">0.0401</td>
+<td align="left">2.25</td>
+<td align="left">0.0122</td>
+<td align="left">3.00</td>
+<td align="left">0.0013</td>
+</tr>
+<tr class="odd">
+<td align="left">0.26</td>
+<td align="left">0.3974</td>
+<td align="left">0.76</td>
+<td align="left">0.2236</td>
+<td align="left">1.26</td>
+<td align="left">0.1038</td>
+<td align="left">1.76</td>
+<td align="left">0.0392</td>
+<td align="left">2.26</td>
+<td align="left">0.0119</td>
+<td align="left">3.02</td>
+<td align="left">0.0013</td>
+</tr>
+<tr class="even">
+<td align="left">0.27</td>
+<td align="left">0.3936</td>
+<td align="left">0.77</td>
+<td align="left">0.2206</td>
+<td align="left">1.27</td>
+<td align="left">0.1020</td>
+<td align="left">1.77</td>
+<td align="left">0.0384</td>
+<td align="left">2.27</td>
+<td align="left">0.0116</td>
+<td align="left">3.04</td>
+<td align="left">0.0012</td>
+</tr>
+<tr class="odd">
+<td align="left">0.28</td>
+<td align="left">0.3897</td>
+<td align="left">0.78</td>
+<td align="left">0.2177</td>
+<td align="left">1.28</td>
+<td align="left">0.1003</td>
+<td align="left">1.78</td>
+<td align="left">0.0375</td>
+<td align="left">2.28</td>
+<td align="left">0.0113</td>
+<td align="left">3.06</td>
+<td align="left">0.0011</td>
+</tr>
+<tr class="even">
+<td align="left">0.29</td>
+<td align="left">0.3859</td>
+<td align="left">0.79</td>
+<td align="left">0.2148</td>
+<td align="left">1.29</td>
+<td align="left">0.0985</td>
+<td align="left">1.79</td>
+<td align="left">0.0367</td>
+<td align="left">2.29</td>
+<td align="left">0.0110</td>
+<td align="left">3.08</td>
+<td align="left">0.0010</td>
+</tr>
+<tr class="odd">
+<td align="left">0.30</td>
+<td align="left">0.3821</td>
+<td align="left">0.80</td>
+<td align="left">0.2119</td>
+<td align="left">1.30</td>
+<td align="left">0.0968</td>
+<td align="left">1.80</td>
+<td align="left">0.0359</td>
+<td align="left">2.30</td>
+<td align="left">0.0107</td>
+<td align="left">3.10</td>
+<td align="left">0.0010</td>
+</tr>
+<tr class="even">
+<td align="left">0.31</td>
+<td align="left">0.3783</td>
+<td align="left">0.81</td>
+<td align="left">0.2090</td>
+<td align="left">1.31</td>
+<td align="left">0.0951</td>
+<td align="left">1.81</td>
+<td align="left">0.0351</td>
+<td align="left">2.31</td>
+<td align="left">0.0104</td>
+<td align="left">3.12</td>
+<td align="left">0.0009</td>
+</tr>
+<tr class="odd">
+<td align="left">0.32</td>
+<td align="left">0.3745</td>
+<td align="left">0.82</td>
+<td align="left">0.2061</td>
+<td align="left">1.32</td>
+<td align="left">0.0934</td>
+<td align="left">1.82</td>
+<td align="left">0.0344</td>
+<td align="left">2.32</td>
+<td align="left">0.0102</td>
+<td align="left">3.14</td>
+<td align="left">0.0008</td>
+</tr>
+<tr class="even">
+<td align="left">0.33</td>
+<td align="left">0.3707</td>
+<td align="left">0.83</td>
+<td align="left">0.2033</td>
+<td align="left">1.33</td>
+<td align="left">0.0918</td>
+<td align="left">1.83</td>
+<td align="left">0.0336</td>
+<td align="left">2.33</td>
+<td align="left">0.0099</td>
+<td align="left">3.16</td>
+<td align="left">0.0008</td>
+</tr>
+<tr class="odd">
+<td align="left">0.34</td>
+<td align="left">0.3669</td>
+<td align="left">0.84</td>
+<td align="left">0.2005</td>
+<td align="left">1.34</td>
+<td align="left">0.0901</td>
+<td align="left">1.84</td>
+<td align="left">0.0329</td>
+<td align="left">2.34</td>
+<td align="left">0.0096</td>
+<td align="left">3.18</td>
+<td align="left">0.0007</td>
+</tr>
+<tr class="even">
+<td align="left">0.35</td>
+<td align="left">0.3632</td>
+<td align="left">0.85</td>
+<td align="left">0.1977</td>
+<td align="left">1.35</td>
+<td align="left">0.0885</td>
+<td align="left">1.85</td>
+<td align="left">0.0322</td>
+<td align="left">2.35</td>
+<td align="left">0.0094</td>
+<td align="left">3.20</td>
+<td align="left">0.0007</td>
+</tr>
+<tr class="odd">
+<td align="left">0.36</td>
+<td align="left">0.3594</td>
+<td align="left">0.86</td>
+<td align="left">0.1949</td>
+<td align="left">1.36</td>
+<td align="left">0.0869</td>
+<td align="left">1.86</td>
+<td align="left">0.0314</td>
+<td align="left">2.36</td>
+<td align="left">0.0091</td>
+<td align="left">3.22</td>
+<td align="left">0.0006</td>
+</tr>
+<tr class="even">
+<td align="left">0.37</td>
+<td align="left">0.3557</td>
+<td align="left">0.87</td>
+<td align="left">0.1922</td>
+<td align="left">1.37</td>
+<td align="left">0.0853</td>
+<td align="left">1.87</td>
+<td align="left">0.0307</td>
+<td align="left">2.37</td>
+<td align="left">0.0089</td>
+<td align="left">3.24</td>
+<td align="left">0.0006</td>
+</tr>
+<tr class="odd">
+<td align="left">0.38</td>
+<td align="left">0.3520</td>
+<td align="left">0.88</td>
+<td align="left">0.1894</td>
+<td align="left">1.38</td>
+<td align="left">0.0838</td>
+<td align="left">1.88</td>
+<td align="left">0.0301</td>
+<td align="left">2.38</td>
+<td align="left">0.0087</td>
+<td align="left">3.26</td>
+<td align="left">0.0006</td>
+</tr>
+<tr class="even">
+<td align="left">0.39</td>
+<td align="left">0.3483</td>
+<td align="left">0.89</td>
+<td align="left">0.1867</td>
+<td align="left">1.39</td>
+<td align="left">0.0823</td>
+<td align="left">1.89</td>
+<td align="left">0.0294</td>
+<td align="left">2.39</td>
+<td align="left">0.0084</td>
+<td align="left">3.28</td>
+<td align="left">0.0005</td>
+</tr>
+<tr class="odd">
+<td align="left">0.40</td>
+<td align="left">0.3446</td>
+<td align="left">0.90</td>
+<td align="left">0.1841</td>
+<td align="left">1.40</td>
+<td align="left">0.0808</td>
+<td align="left">1.90</td>
+<td align="left">0.0287</td>
+<td align="left">2.40</td>
+<td align="left">0.0082</td>
+<td align="left">3.30</td>
+<td align="left">0.0005</td>
+</tr>
+<tr class="even">
+<td align="left">0.41</td>
+<td align="left">0.3409</td>
+<td align="left">0.91</td>
+<td align="left">0.1814</td>
+<td align="left">1.41</td>
+<td align="left">0.0793</td>
+<td align="left">1.91</td>
+<td align="left">0.0281</td>
+<td align="left">2.41</td>
+<td align="left">0.0080</td>
+<td align="left">3.32</td>
+<td align="left">0.0005</td>
+</tr>
+<tr class="odd">
+<td align="left">0.42</td>
+<td align="left">0.3372</td>
+<td align="left">0.92</td>
+<td align="left">0.1788</td>
+<td align="left">1.42</td>
+<td align="left">0.0778</td>
+<td align="left">1.92</td>
+<td align="left">0.0274</td>
+<td align="left">2.42</td>
+<td align="left">0.0078</td>
+<td align="left">3.34</td>
+<td align="left">0.0004</td>
+</tr>
+<tr class="even">
+<td align="left">0.43</td>
+<td align="left">0.3336</td>
+<td align="left">0.93</td>
+<td align="left">0.1762</td>
+<td align="left">1.43</td>
+<td align="left">0.0764</td>
+<td align="left">1.93</td>
+<td align="left">0.0268</td>
+<td align="left">2.43</td>
+<td align="left">0.0075</td>
+<td align="left">3.36</td>
+<td align="left">0.0004</td>
+</tr>
+<tr class="odd">
+<td align="left">0.44</td>
+<td align="left">0.3300</td>
+<td align="left">0.94</td>
+<td align="left">0.1736</td>
+<td align="left">1.44</td>
+<td align="left">0.0749</td>
+<td align="left">1.94</td>
+<td align="left">0.0262</td>
+<td align="left">2.44</td>
+<td align="left">0.0073</td>
+<td align="left">3.38</td>
+<td align="left">0.0004</td>
+</tr>
+<tr class="even">
+<td align="left">0.45</td>
+<td align="left">0.3264</td>
+<td align="left">0.95</td>
+<td align="left">0.1711</td>
+<td align="left">1.45</td>
+<td align="left">0.0735</td>
+<td align="left">1.95</td>
+<td align="left">0.0256</td>
+<td align="left">2.45</td>
+<td align="left">0.0071</td>
+<td align="left">3.40</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="odd">
+<td align="left">0.46</td>
+<td align="left">0.3228</td>
+<td align="left">0.96</td>
+<td align="left">0.1685</td>
+<td align="left">1.46</td>
+<td align="left">0.0721</td>
+<td align="left">1.96</td>
+<td align="left">0.0250</td>
+<td align="left">2.46</td>
+<td align="left">0.0069</td>
+<td align="left">3.42</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="even">
+<td align="left">0.47</td>
+<td align="left">0.3192</td>
+<td align="left">0.97</td>
+<td align="left">0.1660</td>
+<td align="left">1.47</td>
+<td align="left">0.0708</td>
+<td align="left">1.97</td>
+<td align="left">0.0244</td>
+<td align="left">2.47</td>
+<td align="left">0.0068</td>
+<td align="left">3.44</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="odd">
+<td align="left">0.48</td>
+<td align="left">0.3156</td>
+<td align="left">0.98</td>
+<td align="left">0.1635</td>
+<td align="left">1.48</td>
+<td align="left">0.0694</td>
+<td align="left">1.98</td>
+<td align="left">0.0239</td>
+<td align="left">2.48</td>
+<td align="left">0.0066</td>
+<td align="left">3.46</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="even">
+<td align="left">0.49</td>
+<td align="left">0.3121</td>
+<td align="left">0.99</td>
+<td align="left">0.1611</td>
+<td align="left">1.49</td>
+<td align="left">0.0681</td>
+<td align="left">1.99</td>
+<td align="left">0.0233</td>
+<td align="left">2.49</td>
+<td align="left">0.0064</td>
+<td align="left">3.48</td>
+<td align="left">0.0003</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div id="table-of-critical-values-for-t-distributions" class="section level3 unnumbered">
+<h3>Table of critical values for t-distributions</h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">df</td>
+<td align="right">0.100</td>
+<td align="right">0.050</td>
+<td align="right">0.025</td>
+<td align="right">0.010</td>
+<td align="right">0.005</td>
+<td align="right">0.001</td>
+<td align="right">0.0005</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="right">3.078</td>
+<td align="right">6.314</td>
+<td align="right">12.706</td>
+<td align="right">31.821</td>
+<td align="right">63.657</td>
+<td align="right">318.309</td>
+<td align="right">636.619</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="right">1.886</td>
+<td align="right">2.920</td>
+<td align="right">4.303</td>
+<td align="right">6.965</td>
+<td align="right">9.925</td>
+<td align="right">22.327</td>
+<td align="right">31.599</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="right">1.638</td>
+<td align="right">2.353</td>
+<td align="right">3.182</td>
+<td align="right">4.541</td>
+<td align="right">5.841</td>
+<td align="right">10.215</td>
+<td align="right">12.924</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="right">1.533</td>
+<td align="right">2.132</td>
+<td align="right">2.776</td>
+<td align="right">3.747</td>
+<td align="right">4.604</td>
+<td align="right">7.173</td>
+<td align="right">8.610</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="right">1.476</td>
+<td align="right">2.015</td>
+<td align="right">2.571</td>
+<td align="right">3.365</td>
+<td align="right">4.032</td>
+<td align="right">5.893</td>
+<td align="right">6.869</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="right">1.440</td>
+<td align="right">1.943</td>
+<td align="right">2.447</td>
+<td align="right">3.143</td>
+<td align="right">3.707</td>
+<td align="right">5.208</td>
+<td align="right">5.959</td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="right">1.415</td>
+<td align="right">1.895</td>
+<td align="right">2.365</td>
+<td align="right">2.998</td>
+<td align="right">3.499</td>
+<td align="right">4.785</td>
+<td align="right">5.408</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="right">1.397</td>
+<td align="right">1.860</td>
+<td align="right">2.306</td>
+<td align="right">2.896</td>
+<td align="right">3.355</td>
+<td align="right">4.501</td>
+<td align="right">5.041</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="right">1.383</td>
+<td align="right">1.833</td>
+<td align="right">2.262</td>
+<td align="right">2.821</td>
+<td align="right">3.250</td>
+<td align="right">4.297</td>
+<td align="right">4.781</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="right">1.372</td>
+<td align="right">1.812</td>
+<td align="right">2.228</td>
+<td align="right">2.764</td>
+<td align="right">3.169</td>
+<td align="right">4.144</td>
+<td align="right">4.587</td>
+</tr>
+<tr class="even">
+<td align="left">11</td>
+<td align="right">1.363</td>
+<td align="right">1.796</td>
+<td align="right">2.201</td>
+<td align="right">2.718</td>
+<td align="right">3.106</td>
+<td align="right">4.025</td>
+<td align="right">4.437</td>
+</tr>
+<tr class="odd">
+<td align="left">12</td>
+<td align="right">1.356</td>
+<td align="right">1.782</td>
+<td align="right">2.179</td>
+<td align="right">2.681</td>
+<td align="right">3.055</td>
+<td align="right">3.930</td>
+<td align="right">4.318</td>
+</tr>
+<tr class="even">
+<td align="left">13</td>
+<td align="right">1.350</td>
+<td align="right">1.771</td>
+<td align="right">2.160</td>
+<td align="right">2.650</td>
+<td align="right">3.012</td>
+<td align="right">3.852</td>
+<td align="right">4.221</td>
+</tr>
+<tr class="odd">
+<td align="left">14</td>
+<td align="right">1.345</td>
+<td align="right">1.761</td>
+<td align="right">2.145</td>
+<td align="right">2.624</td>
+<td align="right">2.977</td>
+<td align="right">3.787</td>
+<td align="right">4.140</td>
+</tr>
+<tr class="even">
+<td align="left">15</td>
+<td align="right">1.341</td>
+<td align="right">1.753</td>
+<td align="right">2.131</td>
+<td align="right">2.602</td>
+<td align="right">2.947</td>
+<td align="right">3.733</td>
+<td align="right">4.073</td>
+</tr>
+<tr class="odd">
+<td align="left">16</td>
+<td align="right">1.337</td>
+<td align="right">1.746</td>
+<td align="right">2.120</td>
+<td align="right">2.583</td>
+<td align="right">2.921</td>
+<td align="right">3.686</td>
+<td align="right">4.015</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="right">1.333</td>
+<td align="right">1.740</td>
+<td align="right">2.110</td>
+<td align="right">2.567</td>
+<td align="right">2.898</td>
+<td align="right">3.646</td>
+<td align="right">3.965</td>
+</tr>
+<tr class="odd">
+<td align="left">18</td>
+<td align="right">1.330</td>
+<td align="right">1.734</td>
+<td align="right">2.101</td>
+<td align="right">2.552</td>
+<td align="right">2.878</td>
+<td align="right">3.610</td>
+<td align="right">3.922</td>
+</tr>
+<tr class="even">
+<td align="left">19</td>
+<td align="right">1.328</td>
+<td align="right">1.729</td>
+<td align="right">2.093</td>
+<td align="right">2.539</td>
+<td align="right">2.861</td>
+<td align="right">3.579</td>
+<td align="right">3.883</td>
+</tr>
+<tr class="odd">
+<td align="left">20</td>
+<td align="right">1.325</td>
+<td align="right">1.725</td>
+<td align="right">2.086</td>
+<td align="right">2.528</td>
+<td align="right">2.845</td>
+<td align="right">3.552</td>
+<td align="right">3.850</td>
+</tr>
+<tr class="even">
+<td align="left">21</td>
+<td align="right">1.323</td>
+<td align="right">1.721</td>
+<td align="right">2.080</td>
+<td align="right">2.518</td>
+<td align="right">2.831</td>
+<td align="right">3.527</td>
+<td align="right">3.819</td>
+</tr>
+<tr class="odd">
+<td align="left">22</td>
+<td align="right">1.321</td>
+<td align="right">1.717</td>
+<td align="right">2.074</td>
+<td align="right">2.508</td>
+<td align="right">2.819</td>
+<td align="right">3.505</td>
+<td align="right">3.792</td>
+</tr>
+<tr class="even">
+<td align="left">23</td>
+<td align="right">1.319</td>
+<td align="right">1.714</td>
+<td align="right">2.069</td>
+<td align="right">2.500</td>
+<td align="right">2.807</td>
+<td align="right">3.485</td>
+<td align="right">3.768</td>
+</tr>
+<tr class="odd">
+<td align="left">24</td>
+<td align="right">1.318</td>
+<td align="right">1.711</td>
+<td align="right">2.064</td>
+<td align="right">2.492</td>
+<td align="right">2.797</td>
+<td align="right">3.467</td>
+<td align="right">3.745</td>
+</tr>
+<tr class="even">
+<td align="left">25</td>
+<td align="right">1.316</td>
+<td align="right">1.708</td>
+<td align="right">2.060</td>
+<td align="right">2.485</td>
+<td align="right">2.787</td>
+<td align="right">3.450</td>
+<td align="right">3.725</td>
+</tr>
+<tr class="odd">
+<td align="left">26</td>
+<td align="right">1.315</td>
+<td align="right">1.706</td>
+<td align="right">2.056</td>
+<td align="right">2.479</td>
+<td align="right">2.779</td>
+<td align="right">3.435</td>
+<td align="right">3.707</td>
+</tr>
+<tr class="even">
+<td align="left">27</td>
+<td align="right">1.314</td>
+<td align="right">1.703</td>
+<td align="right">2.052</td>
+<td align="right">2.473</td>
+<td align="right">2.771</td>
+<td align="right">3.421</td>
+<td align="right">3.690</td>
+</tr>
+<tr class="odd">
+<td align="left">28</td>
+<td align="right">1.313</td>
+<td align="right">1.701</td>
+<td align="right">2.048</td>
+<td align="right">2.467</td>
+<td align="right">2.763</td>
+<td align="right">3.408</td>
+<td align="right">3.674</td>
+</tr>
+<tr class="even">
+<td align="left">29</td>
+<td align="right">1.311</td>
+<td align="right">1.699</td>
+<td align="right">2.045</td>
+<td align="right">2.462</td>
+<td align="right">2.756</td>
+<td align="right">3.396</td>
+<td align="right">3.659</td>
+</tr>
+<tr class="odd">
+<td align="left">30</td>
+<td align="right">1.310</td>
+<td align="right">1.697</td>
+<td align="right">2.042</td>
+<td align="right">2.457</td>
+<td align="right">2.750</td>
+<td align="right">3.385</td>
+<td align="right">3.646</td>
+</tr>
+<tr class="even">
+<td align="left">40</td>
+<td align="right">1.303</td>
+<td align="right">1.684</td>
+<td align="right">2.021</td>
+<td align="right">2.423</td>
+<td align="right">2.704</td>
+<td align="right">3.307</td>
+<td align="right">3.551</td>
+</tr>
+<tr class="odd">
+<td align="left">60</td>
+<td align="right">1.296</td>
+<td align="right">1.671</td>
+<td align="right">2.000</td>
+<td align="right">2.390</td>
+<td align="right">2.660</td>
+<td align="right">3.232</td>
+<td align="right">3.460</td>
+</tr>
+<tr class="even">
+<td align="left">120</td>
+<td align="right">1.289</td>
+<td align="right">1.658</td>
+<td align="right">1.980</td>
+<td align="right">2.358</td>
+<td align="right">2.617</td>
+<td align="right">3.160</td>
+<td align="right">3.373</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+<td align="right">1.282</td>
+<td align="right">1.645</td>
+<td align="right">1.960</td>
+<td align="right">2.326</td>
+<td align="right">2.576</td>
+<td align="right">3.090</td>
+<td align="right">3.291</td>
+</tr>
+</tbody>
+</table>
+<p><em>Explanation</em>: For example, the value 3.078 in the top left corner indicates that for a <span class="math inline">\(t\)</span>-distribution with 1 degree of freedom the probability of values greater than 3.078 is 0.100. The last row shows critical values for the standard normal distribution.</p>
+
+</div>
+<div id="table-of-critical-values-for-chi-square-distributions" class="section level3 unnumbered">
+<h3>Table of critical values for chi-square distributions</h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">df</td>
+<td align="right">0.100</td>
+<td align="right">0.050</td>
+<td align="right">0.010</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="right">2.71</td>
+<td align="right">3.84</td>
+<td align="right">6.63</td>
+<td align="right">10.828</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="right">4.61</td>
+<td align="right">5.99</td>
+<td align="right">9.21</td>
+<td align="right">13.816</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="right">6.25</td>
+<td align="right">7.81</td>
+<td align="right">11.34</td>
+<td align="right">16.266</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="right">7.78</td>
+<td align="right">9.49</td>
+<td align="right">13.28</td>
+<td align="right">18.467</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="right">9.24</td>
+<td align="right">11.07</td>
+<td align="right">15.09</td>
+<td align="right">20.515</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="right">10.64</td>
+<td align="right">12.59</td>
+<td align="right">16.81</td>
+<td align="right">22.458</td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="right">12.02</td>
+<td align="right">14.07</td>
+<td align="right">18.48</td>
+<td align="right">24.322</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="right">13.36</td>
+<td align="right">15.51</td>
+<td align="right">20.09</td>
+<td align="right">26.124</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="right">14.68</td>
+<td align="right">16.92</td>
+<td align="right">21.67</td>
+<td align="right">27.877</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="right">15.99</td>
+<td align="right">18.31</td>
+<td align="right">23.21</td>
+<td align="right">29.588</td>
+</tr>
+<tr class="even">
+<td align="left">11</td>
+<td align="right">17.28</td>
+<td align="right">19.68</td>
+<td align="right">24.72</td>
+<td align="right">31.264</td>
+</tr>
+<tr class="odd">
+<td align="left">12</td>
+<td align="right">18.55</td>
+<td align="right">21.03</td>
+<td align="right">26.22</td>
+<td align="right">32.909</td>
+</tr>
+<tr class="even">
+<td align="left">13</td>
+<td align="right">19.81</td>
+<td align="right">22.36</td>
+<td align="right">27.69</td>
+<td align="right">34.528</td>
+</tr>
+<tr class="odd">
+<td align="left">14</td>
+<td align="right">21.06</td>
+<td align="right">23.68</td>
+<td align="right">29.14</td>
+<td align="right">36.123</td>
+</tr>
+<tr class="even">
+<td align="left">15</td>
+<td align="right">22.31</td>
+<td align="right">25.00</td>
+<td align="right">30.58</td>
+<td align="right">37.697</td>
+</tr>
+<tr class="odd">
+<td align="left">16</td>
+<td align="right">23.54</td>
+<td align="right">26.30</td>
+<td align="right">32.00</td>
+<td align="right">39.252</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="right">24.77</td>
+<td align="right">27.59</td>
+<td align="right">33.41</td>
+<td align="right">40.790</td>
+</tr>
+<tr class="odd">
+<td align="left">18</td>
+<td align="right">25.99</td>
+<td align="right">28.87</td>
+<td align="right">34.81</td>
+<td align="right">42.312</td>
+</tr>
+<tr class="even">
+<td align="left">19</td>
+<td align="right">27.20</td>
+<td align="right">30.14</td>
+<td align="right">36.19</td>
+<td align="right">43.820</td>
+</tr>
+<tr class="odd">
+<td align="left">20</td>
+<td align="right">28.41</td>
+<td align="right">31.41</td>
+<td align="right">37.57</td>
+<td align="right">45.315</td>
+</tr>
+<tr class="even">
+<td align="left">25</td>
+<td align="right">34.38</td>
+<td align="right">37.65</td>
+<td align="right">44.31</td>
+<td align="right">52.620</td>
+</tr>
+<tr class="odd">
+<td align="left">30</td>
+<td align="right">40.26</td>
+<td align="right">43.77</td>
+<td align="right">50.89</td>
+<td align="right">59.703</td>
+</tr>
+<tr class="even">
+<td align="left">40</td>
+<td align="right">51.81</td>
+<td align="right">55.76</td>
+<td align="right">63.69</td>
+<td align="right">73.402</td>
+</tr>
+<tr class="odd">
+<td align="left">50</td>
+<td align="right">63.17</td>
+<td align="right">67.50</td>
+<td align="right">76.15</td>
+<td align="right">86.661</td>
+</tr>
+<tr class="even">
+<td align="left">60</td>
+<td align="right">74.40</td>
+<td align="right">79.08</td>
+<td align="right">88.38</td>
+<td align="right">99.607</td>
+</tr>
+<tr class="odd">
+<td align="left">70</td>
+<td align="right">85.53</td>
+<td align="right">90.53</td>
+<td align="right">100.43</td>
+<td align="right">112.317</td>
+</tr>
+<tr class="even">
+<td align="left">80</td>
+<td align="right">96.58</td>
+<td align="right">101.88</td>
+<td align="right">112.33</td>
+<td align="right">124.839</td>
+</tr>
+<tr class="odd">
+<td align="left">90</td>
+<td align="right">107.57</td>
+<td align="right">113.15</td>
+<td align="right">124.12</td>
+<td align="right">137.208</td>
+</tr>
+<tr class="even">
+<td align="left">100</td>
+<td align="right">118.50</td>
+<td align="right">124.34</td>
+<td align="right">135.81</td>
+<td align="right">149.449</td>
+</tr>
+</tbody>
+</table>
+<p><em>Explanation</em>: For example, the value 2.71 in the top left corner indicates that for a <span class="math inline">\(\chi^{2}\)</span> distribution with 1 degree of freedom the probability of values greater than 2.71 is 0.100.</p>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="59">
+<li id="fn59"><p>ESS Round 5: European Social Survey Round 5 Data (2010). Data file edition 2.0. Norwegian Social Science Data Services, Norway - Data Archive and distributor of ESS data. The full data can be obtained from <a href="http://ess.nsd.uib.no/ess/round5/" class="uri">http://ess.nsd.uib.no/ess/round5/</a>.<a href="appendix.html#fnref59">↩</a></p></li>
+<li id="fn60"><p>The data can be obtained from <a href="http://www3.norc.org/gss+website/" class="uri">http://www3.norc.org/gss+website/</a>, which gives further information on the survey, including the full text of the questionnaires.<a href="appendix.html#fnref60">↩</a></p></li>
+<li id="fn61"><p>ESS Round 5: European Social Survey Round 5 Data (2010). Data file edition 2.0. Norwegian Social Science Data Services, Norway - Data Archive and distributor of ESS data. The full data can be obtained from <a href="http://ess.nsd.uib.no/ess/round5/" class="uri">http://ess.nsd.uib.no/ess/round5/</a>.<a href="appendix.html#fnref61">↩</a></p></li>
+<li id="fn62"><p>Strictly speaking, the analysis should incorporate sampling weights (variable <em>DWEIGHT</em>) to adjust for different sampling probabilities for different types of respondents. Here the weights are ignored. Using them would not change the main conclusions for these variables.<a href="appendix.html#fnref62">↩</a></p></li>
+<li id="fn63"><p>The data can be obtained from <a href="http://bes2009-10.org/" class="uri">http://bes2009-10.org/</a>, which gives further information on the survey, including the full text of the questionnaires. The data analysed in this class and homework are from the BES Campaign Internet Panel Survey, which has been divided into two data sets corresponding to two time periods leading up to the General Election.<a href="appendix.html#fnref63">↩</a></p></li>
+<li id="fn64"><p>Official results obtained from <a href="http://www.olympic.org/london-2012-summer-olympics" class="uri">http://www.olympic.org/london-2012-summer-olympics</a>.<a href="appendix.html#fnref64">↩</a></p></li>
+<li id="fn65"><p>The data can be obtained from <a href="http://www..norc.org/GSS+Website/" class="uri">http://www..norc.org/GSS+Website/</a>, which gives further information on the survey, including the full text of the questionnaires.<a href="appendix.html#fnref65">↩</a></p></li>
+<li id="fn66"><p>United Nations Development Programme <em>International Human Development Indicators</em>, <a href="http://hdr.undp.org/en/data/" class="uri">http://hdr.undp.org/en/data/</a>; World Bank <em>Worldwide Governance Indicators</em>, <a href="http://info.worldbank.org/governance/wgi/pdf/wgidataset.xlsx" class="uri">http://info.worldbank.org/governance/wgi/pdf/wgidataset.xlsx</a>; World Bank <em>World Development Indicators</em>, <a href="http://data.worldbank.org/indicator/SP.DYN.IMRT.IN" class="uri">http://data.worldbank.org/indicator/SP.DYN.IMRT.IN</a>.<a href="appendix.html#fnref66">↩</a></p></li>
+<li id="fn67"><p>ESS Round 5: European Social Survey Round 5 Data (2010). Data file edition 2.0. Norwegian Social Science Data Services, Norway - Data Archive and distributor of ESS data. The full data can be obtained from <a href="http://ess.nsd.uib.no/ess/round5/" class="uri">http://ess.nsd.uib.no/ess/round5/</a>.<a href="appendix.html#fnref67">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c-more.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/LSE-Methodology/MY451/edit/master/11-MY451-appendix.Rmd",
+"text": "Edit"
+},
+"download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
