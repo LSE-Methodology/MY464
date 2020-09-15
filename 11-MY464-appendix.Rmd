@@ -122,8 +122,8 @@ Explanation of the “Table of standard normal tail probabilities” in Section
   $\infty$                                                       1.282   1.645    1.960    2.326    2.576     3.090     3.291
   ---------------- --------------------------------------------------- ------- -------- -------- -------- --------- ---------
 
-*Explanation*: For example, the value 3.078 in the top left corner
-indicates that for a $t$-distribution with 1 degree of freedom the
+*Explanation*: An example, consider the value 3.078 in the top left corner.
+This indicates that for a $t$-distribution with 1 degree of freedom the
 probability of values greater than 3.078 is 0.100. The last row shows
 critical values for the standard normal distribution.
 
