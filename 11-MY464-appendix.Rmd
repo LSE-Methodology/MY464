@@ -1,7 +1,7 @@
 \backmatter
 
 
-##  Statistical tables {-}
+##   Statistical tables {-}
 
 
 Explanation of the “Table of standard normal tail probabilities” in Section
