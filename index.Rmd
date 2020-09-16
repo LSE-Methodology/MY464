@@ -42,11 +42,18 @@ some elementary techniques.
 
 #### Teaching {-}
 
--   **Lectures**: Video recorded lectures released each Monday morning in weeks 1 - 5 and 7 - 11:
+-   **Lectures**: Video recorded lectures released each Monday morning in weeks 1 - 5 and 7 - 11
 
--   **Computer classes**: Each student will attend a one-hour class each
-    week, **starting in Week 2**. Please see on-line timetables for the
-    times and places of the class groups. The allocation of students to
+_   **Applied exercises**: Each week there will be an exercise for students to complete 
+    in which the ideas covered in the lecture for that week will be applied to a real
+    data set using the software package R/RStudio. Each class will have an accompanying
+    explanatory video and a multiple-choice quiz to be completed on Moodle to check
+    your learning. 
+
+-   **Classes**: Students will attend a one-hour class each
+    week, **starting in Week 2**. Classes will be available to attend in person
+    and online. Please consult the on-line timetables for the
+    times and locations of the class groups. The allocation of students to
     classes is done through LSE for You. This will be explained in the
     first lecture and on the Moodle page. Please contact the course
     administrator listed on the Moodle page if you have any issues.
@@ -85,33 +92,11 @@ some elementary techniques.
     level as this course, then it is probably suitable as
     additional reading.
 
-    -   There are also many books which focus on the SPSS statistical
-        software package used in the computer classes. We do not
-        consider them necessary for this course, or for learning
-        statistics or SPSS. If, however, you feel otherwise, some such
-        books are mentioned in the Appendix.
+    -   There are also many books and online resources which focus on 
+        the R/RStudio software package used in the computer classes. 
+        We do not consider them necessary for this course, or for learning
+        statistics. 
 
-#### Homework {-}
-
-There will be homework assignments associated with each computer class.
-These are your opportunity
-to practice interpreting the results of the types of analyses that are
-introduced in the lectures and then carried out in the computer classes.
-The homework questions are also broadly similar in style to typical
-examination questions for MY464. The questions are based on results of
-the computer class exercises or of further similar analyses. For the
-homework, you can use output that you produced yourself in the class or
-afterwards. Alternatively, all the computer outputs that are required to
-answer the homework questions can be downloaded from the Moodle page.
-
-Homework should be submitted by 5pm, two weekdays after your computer class (eg Monday for a Thursday class, Tuesday for a Friday class).
-Please see the MY464
-Moodle page for instructions on how to submit your homeworks. Homework
-submitted in time will be corrected and returned at the next class.
-Please make sure to clearly indicate your name, and the time, class
-number and class teacher of your computer class on all homework
-assignments. For the homework assignments, students are encouraged to
-work together.
 
 #### MY464 on Moodle {-}
 <!-- {#sss-moodle} -->
@@ -121,7 +106,7 @@ The course materials are all available on Moodle. Go to
 *password* (the same as for your LSE e-mail). Then in the *select
 courses* dialogue box type in MY464, and in *search results* click on
 MY464. The site contains the structure of the course week by week, the
-readings, weekly computer class assignments and the associated data
+readings, weekly applied exercises and the associated data
 sets, coursepack and other materials, as well as a section on news and
 announcements.
 
@@ -131,13 +116,12 @@ To learn the material from this course you must do the work every week
 since it is cumulative; if you miss a week or two
 there is a chance that you will struggle to catch up. Also bear in mind that
 most people cannot learn quantitative techniques passively by just
-turning up to the lectures and reading the occasional chapter in a
+watching the lectures and reading the occasional chapter in a
 textbook. To learn statistics you have to do it; there are no shortcuts.
-Thus in addition to a two-hour weekly lecture there will be one-hour
-computer classes (in which you do some data analysis and interpretation
-using SPSS - instructions will be provided) and there will be weekly
-homework (which will be corrected but not graded by your class teacher).
-Doing the assignments in the computer classes and the homework
+Thus in addition to a  lecture there will be a weekly applied exercise
+(in which you do some data analysis and interpretation
+using R/RStudio - instructions will be provided).
+Doing the exercises and discussing them in the weekly class
 is the best way to make sure you have understood and can apply what was covered
 in the lectures. If you are having any trouble this will reveal what the
 problem is. Thus the course is designed to have multiple, reinforcing
@@ -145,8 +129,9 @@ ways of helping you learn this material.
 
 #### Examinations/assessment {-}
 
-There will be a **two-hour examination in the LENT Term**. You may bring one, two-sided A4 sheet of reference material to consult during the exam. This can be typed or handwritten, and prepared yourself or in collaboration with others. You are required to bring your own calculators for the
-examination. Examination papers from previous years are available for
+There will be a **two-hour examination in January in the LENT Term**. 
+The exam will be completed online during a three hour window. 
+Examination papers from previous years are available for
 revision purposes at the LSE library web site.  2018-19 was the first year that
 MY464 has existed, but the past exams for MY451 provide a good guide to the kinds of
 questions that we ask.  Exams vary from year to year.  Some questions closely follow
@@ -158,18 +143,13 @@ the types of questions that are likely to appear on the examination.
 #### Computing {-}
 
 Students must know their Username and Password in time for the first
-class. This information can be obtained from IT Help Desk (Library, 1st
-floor). The course uses Microsoft Windows-based software. If you are not
-familiar with the program, you might want to attend introductory courses
-in Windows during the first two weeks of the term. The statistical
-package being used is SPSS, which will be introduced in the first
-computing class of the course.
+applied exercise in week 1. This information can be obtained from IT Help Desk (Library, 1st
+floor). The software package used for MY464 is R/RStudio, which will be introduced in the first
+applied exercise in week 1.
 
 #### Software availability {-}
 
-A personal copy of the program SPSS can be bought by course
-participants (maximum 1 copy per person) for the price of £10 from IT
-services, see https://info.lse.ac.uk/staff/divisions/imt/services/hardware-software/purchasing 
+R/RStudio is free to download and does not require a licence.
 
 #### Feedback {-}
 
@@ -184,10 +164,10 @@ coursepack, so that we can correct them.
 
 This coursepack bears many traces of previous materials and all of their
 authors, Colm O’Muircheartaigh, Colin Mills, Matt Mulford, Fiona Steele,
-Paul Mitchell, Sally Stares and Jouni Kuha. Many thanks to Farimah Daftary, Sue
-Howard, Jon Jackson, Paul Mitchell, Indraneel Sircar, and many students
-of previous years for comments and suggestions which are incorporated in
-the current revision.
+Paul Mitchell, Sally Stares, Jouni Kuha, and Ben Lauderdale. 
+Many thanks to Farimah Daftary, Sue Howard, Jon Jackson, Paul Mitchell, 
+Indraneel Sircar, and many students of previous years for comments and 
+suggestions which are incorporated in the current revision.
 
 \newpage
 
@@ -206,7 +186,7 @@ Coursepack                      Chapter \@ref(c-intro)
 
 Lecture                         Descriptive statistics for categorical variables
 
-Class                           Introduction to SPSS 
+Class                           Introduction to R/RStudio 
 
 Coursepack                      Sections \@ref(s-descr1-intro)–\@ref(s-descr1-2cat) and \@ref(s-descr1-presentation)
 
@@ -236,7 +216,7 @@ Coursepack                      Chapters \@ref(c-contd) and \@ref(c-means)
 
 **Week 6**
 
-Reading Week                    **No lecture, no class**. Revision quiz available on Moodle.
+Reading Week                    **No lecture, no class**
 
 **Week 7**
 
@@ -287,21 +267,19 @@ Coursepack                      Chapter \@ref(c-more)
 
 #### FAQ: Frequently Asked Questions {-}
 
-**Why do we use SPSS? I’ve heard that SAS/STATA/MINITAB/R/LIMDEP is much
+**Why do we use R/RStudio? I’ve heard that SAS/STATA/MINITAB/SPSS/LIMDEP is much
 better.** At this level it does not matter which program you use since
 we are learning standard procedures that are common to all programs. In
-favour of SPSS is that it has an easy to learn interface and that it is
-widely available at sites both within and outside the UK.
+favour of R/RStudio is that it is free, flexible and extremely powerful.
 
-**Can I get a copy of the SPSS software to use on my home computer?**
-Yes, for a small fee from IT Services helpdesk, not from the Department
-of Methodology.
+**Can I get a copy of the R/RStudio software to use on my home computer?**
+Yes, this will be explained in weeks 1 and 2 applied exercises and classes.
 
-**I’m taking MY464 because I want to learn how to use SPSS but we don’t
+**I’m taking MY464 because I want to learn how to use R/RStudio but we don’t
 seem to learn very much about the program. Why is that?** MY464 is not a
-course about learning to use SPSS. We use the program merely to
+course about learning to use R/RStudio. We use the program merely to
 facilitate data analysis and interpretation. Some options for learning
-more about SPSS will be mentioned in the first lecture.
+more about R/RStudio will be mentioned in the first lecture.
 
 **I’m taking MY464 to help me analyse data for my dissertation. Can I
 discuss my data and my specific problems with the lecturers?** Yes, but
@@ -325,19 +303,10 @@ posted in the MY464 Moodle site. All of the material required for the
 exam is contained in the coursepack, with the posted lecture notes as
 additional clarification.
 
-**Can I work together on the homework with my friends?** Yes, we
-positively encourage you to discuss the homework assignments with your
-colleagues. If you do this, please submit **one** copy to be marked
-rather than multiple copies of the same answers.
-
-**The class teachers are always very busy during class helping people
-with problems and I can’t get enough personal attention. Why can’t there
-be more class teachers in the classroom?** For MY464 there will usually
-be two class teachers per classroom i.e. double the normal complement.
-Even so we realise that you may not be able to get attention at the
-exact moment you want it. Please be patient and if help is not
-immediately available you can always try asking the person who is
-sitting next to you!
+**Can I work together on the applied exercises with my friends?** Yes, we
+positively encourage you to discuss the exercises with your
+colleagues. If you do this, please make sure you complete the multiple-choice
+quiz yourself.
 
 **I’m not registered at the LSE but at another University of London
 college. Can I attend this course?** Normally yes, but you will have to
