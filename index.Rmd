@@ -181,7 +181,7 @@ suggestions which are incorporated in the current revision.
 
 Lecture                         Course overview and organisation. Introduction to basic concepts
 
-Exercise/seminar                 Familiarisation with R/RStudio
+Exercise                        Familiarisation with R/RStudio (no seminar week 1)
 
 Coursepack                      Chapter \@ref(c-intro)
 
@@ -189,7 +189,7 @@ Coursepack                      Chapter \@ref(c-intro)
 
 Lecture                         Descriptive statistics for categorical variables
 
-Exercise/seminar                  Loading data into R/RStudio 
+Exercise/seminar                Loading data into R/RStudio, descriptive statistics 
 
 Coursepack                      Sections \@ref(s-descr1-intro)–\@ref(s-descr1-2cat) and \@ref(s-descr1-presentation)
 
@@ -205,7 +205,7 @@ Coursepack                      Sections \@ref(s-descr1-1cont)–\@ref(s-descr1-
 
 Lecture                         Analysis of two-way contingency tables
 
-Exercise/seminar                 Descriptive statistics for continuous variables
+Exercise/seminar                Descriptive statistics for continuous variables
 
 Coursepack                      Chapters \@ref(c-samples) and \@ref(c-tables)
 
@@ -213,7 +213,7 @@ Coursepack                      Chapters \@ref(c-samples) and \@ref(c-tables)
 
 Lecture                         Inference for means in two populations
 
-Exercise/seminar                 Analysis of two-way contingency tables
+Exercise/seminar                Analysis of two-way contingency tables
 
 Coursepack                      Chapters \@ref(c-contd) and \@ref(c-means)
 
@@ -225,7 +225,7 @@ Reading Week                    **No lecture, no exercise/seminar**
 
 Lecture                         Inference for proportions in one and two populations
 
-Exercise/seminar                  Inference for means in two populations
+Exercise/seminar                Inference for means in two populations
 
 Coursepack                      Chapter \@ref(c-probs)
 
@@ -233,7 +233,7 @@ Coursepack                      Chapter \@ref(c-probs)
 
 Lecture                         Correlation and simple linear regression as descriptive methods
 
-Exercise/seminar                  Inference for proportions in one and two populations
+Exercise/seminar                Inference for proportions in one and two populations
 
 Coursepack                      Sections \@ref(s-regression-intro)–\@ref(ss-regression-simple-est)
 
@@ -241,7 +241,7 @@ Coursepack                      Sections \@ref(s-regression-intro)–\@ref(ss-re
 
 Lecture                          Inference for the simple linear regression model, 3-way contingency tables
 
-Exercise/seminar                  Correlation and simple linear regression
+Exercise/seminar                 Correlation and simple linear regression
 
 Coursepack                      Section \@ref(ss-regression-simple-inf) (Hour 1); Section \@ref(s-regression-causality) and Chapter \@ref(c-3waytables) (Hour 2)
 
@@ -249,7 +249,7 @@ Coursepack                      Section \@ref(ss-regression-simple-inf) (Hour 1)
 
 Lecture                         Multiple linear regression
 
-Exercise/seminar                  More on linear regression
+Exercise/seminar                More on linear regression
 
 Coursepack                      Sections \@ref(s-regression-multiple)–\@ref(s-regression-rest)
 
@@ -257,7 +257,7 @@ Coursepack                      Sections \@ref(s-regression-multiple)–\@ref(s-
 
 Lecture                         Review and exam preparation
 
-Exercise/seminar                  Multiple linear regression
+Exercise/seminar                Multiple linear regression
 
 Coursepack                      Chapter \@ref(c-more)
 ------------------------------- ----------------------------------------------------------------------------------------------------------------------------------
