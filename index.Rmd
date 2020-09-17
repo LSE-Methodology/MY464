@@ -44,19 +44,22 @@ some elementary techniques.
 
 -   **Lectures**: Video recorded lectures released each Monday morning in weeks 1 - 5 and 7 - 11
 
-_   **Applied exercises**: Each week there will be an exercise for students to complete 
+-   **Applied exercises**: Each week there will be an exercise for students to complete 
     in which the ideas covered in the lecture for that week will be applied to a real
-    data set using the software package R/RStudio. Each class will have an accompanying
+    data set using the software package R/RStudio. Each exercise will have an accompanying
     explanatory video and a multiple-choice quiz to be completed on Moodle to check
     your learning. 
 
--   **Classes**: Students will attend a one-hour class each
-    week, **starting in Week 2**. Classes will be available to attend in person
-    and online. Please consult the on-line timetables for the
-    times and locations of the class groups. The allocation of students to
-    classes is done through LSE for You. This will be explained in the
-    first lecture and on the Moodle page. Please contact the course
-    administrator listed on the Moodle page if you have any issues.
+-   **Seminars**: Students will attend a one-hour seminar each
+    week, **starting in Week 2**. The seminars will go over the material covered
+    in that week's lecture, the corresponding applied exercise and provide a forum
+    for students to ask questions and discuss the material covered in the course. 
+    Seminars will be available to attend in person and online. 
+    Please consult the on-line timetables for the times and locations of the class groups. 
+    The allocation of students to seminars is done through LSE for You. 
+    This will be explained in the first lecture and on the Moodle page. 
+    Please contact the course administrator listed on the Moodle
+    page if you have any issues.
 
 #### Course Materials {-}
 
@@ -178,7 +181,7 @@ suggestions which are incorporated in the current revision.
 
 Lecture                         Course overview and organisation. Introduction to basic concepts
 
-Class                           **No class**
+Exercise/seminar                 Familiarisation with R/RStudio
 
 Coursepack                      Chapter \@ref(c-intro)
 
@@ -186,7 +189,7 @@ Coursepack                      Chapter \@ref(c-intro)
 
 Lecture                         Descriptive statistics for categorical variables
 
-Class                           Introduction to R/RStudio 
+Exercise/seminar                  Loading data into R/RStudio 
 
 Coursepack                      Sections \@ref(s-descr1-intro)–\@ref(s-descr1-2cat) and \@ref(s-descr1-presentation)
 
@@ -194,7 +197,7 @@ Coursepack                      Sections \@ref(s-descr1-intro)–\@ref(s-descr1-
 
 Lecture                         Descriptive statistics for continuous variables
 
-Class                           Descriptive statistics for categorical variables
+Exercise/seminar                 Descriptive statistics for categorical variables
 
 Coursepack                      Sections \@ref(s-descr1-1cont)–\@ref(s-descr1-2cont)
 
@@ -202,7 +205,7 @@ Coursepack                      Sections \@ref(s-descr1-1cont)–\@ref(s-descr1-
 
 Lecture                         Analysis of two-way contingency tables
 
-Class                           Descriptive statistics for continuous variables
+Exercise/seminar                 Descriptive statistics for continuous variables
 
 Coursepack                      Chapters \@ref(c-samples) and \@ref(c-tables)
 
@@ -210,19 +213,19 @@ Coursepack                      Chapters \@ref(c-samples) and \@ref(c-tables)
 
 Lecture                         Inference for means in two populations
 
-Class                           Analysis of two-way contingency tables
+Exercise/seminar                 Analysis of two-way contingency tables
 
 Coursepack                      Chapters \@ref(c-contd) and \@ref(c-means)
 
 **Week 6**
 
-Reading Week                    **No lecture, no class**
+Reading Week                    **No lecture, no exercise/seminar**
 
 **Week 7**
 
 Lecture                         Inference for proportions in one and two populations
 
-Class                           Inference for means in two populations
+Exercise/seminar                  Inference for means in two populations
 
 Coursepack                      Chapter \@ref(c-probs)
 
@@ -230,19 +233,15 @@ Coursepack                      Chapter \@ref(c-probs)
 
 Lecture                         Correlation and simple linear regression as descriptive methods
 
-Class                           Inference for proportions in one and two populations
+Exercise/seminar                  Inference for proportions in one and two populations
 
 Coursepack                      Sections \@ref(s-regression-intro)–\@ref(ss-regression-simple-est)
 
 **Week 9**
 
-Lectures          
+Lecture                          Inference for the simple linear regression model, 3-way contingency tables
 
-Hour 1                          Inference for the simple linear regression model
-
-Hour 2                          Three-way contingency tables
-
-Class                           Correlation and simple linear regression
+Exercise/seminar                  Correlation and simple linear regression
 
 Coursepack                      Section \@ref(ss-regression-simple-inf) (Hour 1); Section \@ref(s-regression-causality) and Chapter \@ref(c-3waytables) (Hour 2)
 
@@ -250,7 +249,7 @@ Coursepack                      Section \@ref(ss-regression-simple-inf) (Hour 1)
 
 Lecture                         Multiple linear regression
 
-Class                           More on linear regression
+Exercise/seminar                  More on linear regression
 
 Coursepack                      Sections \@ref(s-regression-multiple)–\@ref(s-regression-rest)
 
@@ -258,7 +257,7 @@ Coursepack                      Sections \@ref(s-regression-multiple)–\@ref(s-
 
 Lecture                         Review and exam preparation
 
-Class                           multiple linear regression
+Exercise/seminar                  Multiple linear regression
 
 Coursepack                      Chapter \@ref(c-more)
 ------------------------------- ----------------------------------------------------------------------------------------------------------------------------------
@@ -267,7 +266,7 @@ Coursepack                      Chapter \@ref(c-more)
 
 #### FAQ: Frequently Asked Questions {-}
 
-**Why do we use R/RStudio? I’ve heard that SAS/STATA/MINITAB/SPSS/LIMDEP is much
+**Why do we use R/RStudio? I’ve heard that SAS/STATA/MINITAB/SPSS/LIMDEP is
 better.** At this level it does not matter which program you use since
 we are learning standard procedures that are common to all programs. In
 favour of R/RStudio is that it is free, flexible and extremely powerful.
