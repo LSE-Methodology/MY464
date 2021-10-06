@@ -839,20 +839,20 @@ that follow the computer classes contain examples of both of these types
 of questions.
 
 The software package used in the computer classes of this course is
-called SPSS. There are other comparable packages, for example SAS,
-Minitab, Stata and R. Any one of them could be used for the analyses on
-this course, and the exact choice does not matter very much. SPSS is
-convenient for our purposes, because it is widely used, has a reasonably
-user-friendly menu interface, and is available on a cheap licence even
-for the personal computers of LSE students.
+called R/RStudio. There are other statistics packages, for example SAS,
+Minitab, Stata and SPSS. Any one of them could be used for the analyses on
+this course, and the exact choice does not matter very much. R/RStudio is
+convenient for our purposes, because it is free, open source, widely used, has a reasonably
+user-friendly menu interface, and is capable of powerful extenstions for those
+who wish to pursue things further.
 
-Sometimes you may see a phrase such as “SPSS course” used apparently as
+Sometimes you may see a phrase such as “R Course” used apparently as
 a synonym for “Statistics course”. This makes as little sense as
 treating an introduction to Microsoft Word as a course on how to write
 good English. It is not possible to learn quantitative data analysis
-well by just sitting down in front of SPSS or any other statistics
+well by just sitting down in front of R or any other statistics
 package and trying to figure out what all those menus are for. On the
-other hand, using SPSS to apply statistical methods to analyse real data
+other hand, using R/RStudio to apply statistical methods to analyse real data
 is an effective way of strengthening the understanding of those methods
 *after* they have first been introduced in lectures. That is why this
 course has weekly computer classes.
@@ -860,23 +860,21 @@ course has weekly computer classes.
 The software-specific questions on how to carry out statistical analyses
 are typically of a lesser order of difficulty once the methods
 themselves are reasonably well understood. In other words, once you have
-a clear idea of what you want to do, finding out how to do it in SPSS
+a clear idea of what you want to do, finding out how to do it in R/RStudio
 tends not to be that difficult. For example, in the next chapter we will
 discuss the mean, one simple tool of descriptive statistics. Suppose
 that you then want to calculate the mean of a variable called *Age* in a
-data set. Learning how to do this in SPSS is then a matter of (1)
-finding the menu item where SPSS can be told to calculate a mean, (2)
-finding out which part of that menu is used to tell SPSS that you want
-the mean of *Age* specifically, and (3) finding the part of the SPSS
+data set. Learning how to do this in R is then a matter of (1)
+finding a package and command to calculate a mean and (2) finding the part of the R
 output where the calculated mean of *Age* is reported. Instructions for
 steps like this for techniques covered on this course are given in the
 descriptions of the corresponding computer classes.
 
 There are, however, some tasks which have more to do with specific
 software packages than with statistics in general. For example, the fact
-that SPSS has a menu interface, and the general style of those menus,
-need to be understood first. You also need to learn how to get data into
-SPSS in the first place, how to manipulate the data in various ways, and
+that R/RStudio uses text commands rather than drop down menus , and the
+general style of those menus,need to be understood first. You also need to 
+learn how to get data into R in the first place, how to manipulate the data in various ways, and
 how to export output from the analyses to other packages. Some
 instructions on how to do such things are given in the first computer
 class. The introduction to the computer classes also includes details of some SPSS guidebooks and
