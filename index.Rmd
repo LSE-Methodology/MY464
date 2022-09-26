@@ -42,7 +42,7 @@ some elementary techniques.
 
 #### Teaching {-}
 
--   **Lectures**: Video recorded lectures released each Monday morning in weeks 1 - 5 and 7 - 11
+-   **Lectures**: 2-hour in-person lecture every week.
 
 -   **Applied exercises**: Each week there will be an exercise for students to complete 
     in which the ideas covered in the lecture for that week will be applied to a real
