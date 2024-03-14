@@ -5,7 +5,7 @@ env:
   global:
   - GITHUB_REPO="LSE-Methodology/MY464"
 before_install:
-- tlmgr install eepic
+- travis_retry tlmgr install eepic
 script:
 - "./_build.sh"
 before_deploy:
