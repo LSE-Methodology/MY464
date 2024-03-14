@@ -1,13 +1,6 @@
 Package: placeholder
+Type: Website
 Title: Does not matter.
 Version: 0.0.1
-Imports:
-    markdown (== 0.7.7),
-    rmarkdown (== 1.1),
-    knitr (== 1.14),
-    bookdown (== 0.1)
-Remotes:
-    rstudio/markdown@v0.7.7,
-    rstudio/rmarkdown@79a741b1c10f6fcf4f1e835812647eb7166c94e1,
-    yihui/knitr@v1.14,
-    rstudio/bookdown@v0.1
+Imports: blogdown
+Remotes: rstudio/blogdown
