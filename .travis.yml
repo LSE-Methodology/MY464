@@ -5,6 +5,7 @@ env:
   global:
   - GITHUB_REPO="LSE-Methodology/MY464"
 before_install:
+- tlmgr set repository http://mirror.ctan.org/systems/texlive/tlnet
 - tlmgr update --all
 - travis_retry tlmgr install eepic
 script:
