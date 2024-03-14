@@ -1,5 +1,5 @@
 language: r
-pandoc_version: 1.17.2
+pandoc_version: 2.2
 cache: packages
 env:
   global:
