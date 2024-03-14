@@ -7,7 +7,6 @@ env:
 before_install:
 - tlmgr option repository http://mirror.ctan.org/systems/texlive/tlnet
 - tlmgr update --self
-- tlmgr update --all
 - travis_retry tlmgr install eepic
 script:
 - "./_build.sh"
