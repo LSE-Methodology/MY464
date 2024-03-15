@@ -5,15 +5,13 @@ env:
   global:
   - GITHUB_REPO="LSE-Methodology/MY464"
 before_install:
-- openssl aes-256-cbc -K $encrypted_f217180e22ee_key -iv $encrypted_f217180e22ee_iv
-  -in id_rsa.enc -out id_rsa -d
 - tlmgr option repository http://mirror.ctan.org/systems/texlive/tlnet
 - tlmgr update --self
 - travis_retry tlmgr install eepic
 script:
 - "./_build.sh"
 before_deploy:
-- chmod 600 id_rsa
+- openssl aes-256-cbc -K $encrypted_f217180e22ee_key -iv $encrypted_f217180e22ee_iv -in id_rsa.enc -out id_rsa -d- chmod 600 id_rsa
 - mkdir -p $HOME/.ssh
 - mv id_rsa $HOME/.ssh
 - git config --global user.email "deploy@travis-ci.org"
