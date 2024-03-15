@@ -7,3 +7,5 @@ _bookdown_files
 rsconnect
 *.Rproj
 book-output/
+id_rsa
+id_rsa.pub
