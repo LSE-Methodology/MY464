@@ -48,12 +48,12 @@ for step 5, the *analysis* of such data.
 Methods of analysis, however competently used, will not be very useful
 unless other parts of the research process have also been carried out
 well. These other parts, which (especially steps 2–4 above) can be
-broadly termed *research design* are covered on other courses. Here we will mostly not consider
-research design, in effect assuming that we start at a point where we
-want to analyse some data which have been collected in a sensible way to
-answer meaningful research questions. However, you should bear in mind
-throughout the course that in a real research situation both good design
-and good analysis are essential for success.
+broadly termed *research design* are covered on other courses. Here we
+will mostly not consider research design, in effect assuming that we start
+at a point where we want to analyse some data which have been collected in
+a sensible way to answer meaningful research questions. However, you
+should bear in mind throughout the course that in a real research
+situation both good design and good analysis are essential for success.
 
 The word **quantitative** in the title of the course indicates that the
 methods you will learn here are used to analyse quantitative data. This
