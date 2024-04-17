@@ -41,6 +41,8 @@ involve at least the following stages:
 
 6.  *Reporting* the findings
 
+
+
 The empirical information collected in the research process is often
 referred to as *data*. This course is mostly about some basic methods
 for step 5, the *analysis* of such data.
