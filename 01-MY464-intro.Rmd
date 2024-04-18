@@ -22,7 +22,7 @@ others for deriving valid knowledge. “Methodology” refers both to the
 methods used in particular studies, and the study of research methods in
 general.
 
-The word **analysis** indicates the area of research methodology that
+The word *analysis* indicates the area of research methodology that
 the course is about. In general, any empirical research project will
 involve at least the following stages:
 

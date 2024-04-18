@@ -2,7 +2,7 @@
 
 ## Introduction {#s-contd-intro}
 
-This chapter serves both as an explanation of some topics that were
+*This* chapter serves both as an explanation of some topics that were
 skimmed over previously, and as preparation for later chapters. Its
 central theme is probability distributions of continuous variables.
 These may appear in two distinct roles:
