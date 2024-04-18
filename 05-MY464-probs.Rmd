@@ -87,7 +87,7 @@ surrounding areas) between May and October, 2001. We will consider the
 dichotomous variable of whether a respondent to the survey identified
 his or her own race as Black (African American) or some other race
 category. Of the $n=4950$ respondents, 226 (4.57%) identified themselves
-as black. This will be compared to the the percentage of blacks in the
+as black. This will be compared to the the percentage of black people in the
 whole population of people aged 18 and over (those eligible for jury
 service) in the county, which is 12.4% (this is a census estimate which
 will here be treated as a known population quantity, ignoring any
@@ -307,7 +307,7 @@ specific interest or in some other sense a suitable benchmark in a given
 application. For example, in the voting example 5.1 we could consider
 $\pi_{0}=0.5$, i.e. that the referendum was too close to call. In the
 jury example 5.2 the value of interest would be $\pi_{0}=0.124$, the
-proportion of blacks in the general adult population of the county.
+proportion of black people in the general adult population of the county.
 
 An alternative but equivalent form of (\@ref(eq:H0p)) is expressed in terms
 of the difference \begin{equation}\Delta=\pi-\pi_{0}
@@ -352,7 +352,7 @@ intend to vote Yes is *greater* than one half. Similarly, in the jury
 example 5.2, with $\pi_{0}=0.124$, (\@ref(eq:Haonelt)) is the hypothesis
 $H_{a}:\; \pi<0.124$, i.e. that the probability that an eligible black
 person is selected to a jury panel is *smaller* than the proportion of
-blacks in the general population.
+black people in the general population.
 
 Whether we choose to consider a one-sided or a two-sided alternative
 hypothesis depends largely on the research questions. In general, a
@@ -720,7 +720,7 @@ examples are as follows:
     $\pi=0.124$. The null hypothesis is thus overwhelmingly rejected at
     any conventional level of significance. There is very strong
     evidence that the probability of a black person being selected to
-    the jury pool differs from the proportion of blacks in the
+    the jury pool differs from the proportion of black people in the
     population of the county.
 
 ### Summary of the test {#ss-probs-test1sample-summary}
@@ -1052,7 +1052,7 @@ interest. In the jury example the 95% confidence interval ranges from
 4.0% to 5.2%, which suggests that the population probability is
 estimated fairly precisely by this survey. The interval also reveals
 that even its upper bound is less than half of the figure of 12.4% which
-would correspond to proportional representation of blacks in the jury
+would correspond to proportional representation of black people in the jury
 pool, a result which suggests quite substantial underrepresentation in
 the pool.
 
