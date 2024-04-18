@@ -78,7 +78,7 @@ UK. Two variables are considered:
 Both of these are discrete, categorical variables. Sex is binary and
 attitude is ordinal.
 
-Attitudes towards income redistribution are an example of the broader
+Attitudes towards *income redistribution* are an example of the broader
 topic of public opinion on welfare state policies. This is a large topic
 of classic and current interest in the social sciences, and questions on
 it have been included in many public opinion surveys.^[For recent findings, see for example Svallfors, S. (ed.) (2012),
