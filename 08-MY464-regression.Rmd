@@ -1060,7 +1060,7 @@ extrapolation beyond these values should be avoided.
 
 The most common estimate of the remaining parameter of the model, the
 residual standard deviation $\sigma$, is \begin{equation}
-\hat{\sigma}=\sqrt{\frac{\sum (Y_{i}-\hat{Y}_{i})^{2}}{n-(k+1)}}=\sqrt{\frac{SSE}{n-(k+1)}}
+\hat{\sigma}=\sqrt{\frac{\sum \left ( Y_{i}-\hat{Y}_{i}\right ) ^{2}}{n- \left ( k+1 \right )}}=\sqrt{\frac{SSE}{n- \left ( k+1 \right )}}
 (\#eq:sigma-linreg)
 \end{equation}
 where $k$ is here set equal to 1. This bears an
