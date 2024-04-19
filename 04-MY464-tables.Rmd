@@ -167,9 +167,11 @@ independent** when there is no association between them, and
 “statistically” is omitted, and we talk simply of variables being
 independent or dependent. In this language, the null hypothesis of the
 $\chi^{2}$ test of independence is that
-\begin{equation}H_{0}: \;\text{The variables are statistically independent in the
+\begin{equation}
+H_{0}: \;\text{The variables are statistically independent in the
 population}.
-\label{eq:H0-chi2}\end{equation} In our example the null hypothesis is thus that a
+(\#eq:H0-chi2)
+\end{equation} In our example the null hypothesis is thus that a
 person’s sex and his or her attitude toward income redistribution are
 independent in the population of adults in the UK.
 
@@ -197,9 +199,11 @@ the opposite of the null hypothesis, which indicates the kinds of
 observations that will be taken as evidence against $H_{0}$. For the
 $\chi^{2}$ test of independence this is simply the logical opposite of
 (\@ref(eq:H0-chi2)),
-i.e. \begin{equation}H_{a}: \;\text{The variables are not statistically independent in the
+i.e. \begin{equation}
+H_{a}: \;\text{The variables are not statistically independent in the
 population}.
-\label{eq:Ha-chi2}\end{equation} In terms of conditional distributions, $H_{a}$ is that
+(\#eq:Ha-chi2)
+\end{equation} In terms of conditional distributions, $H_{a}$ is that
 the conditional distributions of one variable given the other are not
 all identical, i.e. that for at least one pair of levels of the
 explanatory variable the conditional probabilities of at least one
@@ -388,8 +392,10 @@ test statistic for this example are shown in Table
     $f_{e}$ themselves.
 
 -   Finally, aggregating these quantities to get the $\chi^{2}$ test
-    statistic \begin{equation}\chi^{2} = \sum \frac{(f_{o}-f_{e})^{2}}{f_{e}}.
-    \label{eq:chi2}\end{equation} Here the summation sign $\Sigma$ indicates that
+    statistic \begin{equation}
+    \chi^{2} = \sum \frac{(f_{o}-f_{e})^{2}}{f_{e}}.
+    (\#eq:chi2)
+    \end{equation} Here the summation sign $\Sigma$ indicates that
     $\chi^{2}$ is obtained by adding up the quantities
     $(f_{o}-f_{e})^{2}/f_{e}$ across all the cells of the table.
 

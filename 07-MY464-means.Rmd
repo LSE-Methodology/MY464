@@ -454,8 +454,10 @@ This situation is illustrated by Example 7.2, where $Y$ is the number of
 hours a person spends doing housework in a week, and the two groups are
 men (group 1) and women (group 2).
 
-The quantity of main interest is here the difference of population means \begin{equation} \Delta=\mu_{2}-\mu_{1}.
-\label{eq:DeltaB} \end{equation} In particular, if $\Delta=0$, the population means in
+The quantity of main interest is here the difference of population means \begin{equation}
+\Delta=\mu_{2}-\mu_{1}.
+(\#eq:DeltaB)
+ \end{equation} In particular, if $\Delta=0$, the population means in
 the two groups are the same. If $\Delta\ne 0$, they are not the same,
 which implies that there is an association between $Y$ and the group in
 the population.
@@ -463,12 +465,16 @@ the population.
 Inference on $\Delta$ can be carried out using methods which are
 straightforward modifications of the ones introduced first in Chapter
 \@ref(c-probs). For significance testing, the null hypothesis of interest
-is \begin{equation}H_{0}: \; \Delta=0,
-\label{eq:mH0a}\end{equation} to be tested against a two-sided ($H_{a}:\; \Delta\ne 0$)
+is \begin{equation}
+H_{0}: \; \Delta=0,
+(\#eq:mH0a)
+\end{equation} to be tested against a two-sided ($H_{a}:\; \Delta\ne 0$)
 or one-sided ($H_{a}:\; \Delta> 0$ or $H_{a}:\; \Delta< 0$) alternative
 hypothesis. The test statistic used to test (\@ref(eq:mH0a)) is again of the
-form \begin{equation}t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}
-\label{eq:tma}\end{equation} where $\hat{\Delta}$ is a sample estimate of $\Delta$, and
+form \begin{equation}
+t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}
+(\#eq:tma)
+\end{equation} where $\hat{\Delta}$ is a sample estimate of $\Delta$, and
 $\hat{\sigma}_{\hat{\Delta}}$ its estimated standard error. Here the
 statistic is conventionally labelled $t$ rather than $z$ and called the
 *t-test statistic* because sometimes the $t$-distribution rather than
@@ -478,8 +484,10 @@ ignore it until then.
 
 Confidence intervals for the differences $\Delta$ are also of the
 familiar form
-\begin{equation}\hat{\Delta} \pm z_{\alpha/2}\, \hat{\sigma}_{\hat{\Delta}}
-\label{eq:ciDpa}\end{equation} where $z_{\alpha/2}$ is the appropriate multiplier from
+\begin{equation}
+\hat{\Delta} \pm z_{\alpha/2}\, \hat{\sigma}_{\hat{\Delta}}
+(\#eq:ciDpa)
+\end{equation} where $z_{\alpha/2}$ is the appropriate multiplier from
 the standard normal distribution to obtain the required confidence
 level, e.g. $z_{0.025}=1.96$ for 95% confidence intervals. The
 multiplier is replaced with a slightly different one if the
@@ -495,11 +503,16 @@ confidence interval.
 
 For tests of the difference of means $\Delta=\mu_{2}-\mu_{1}$ between
 two population distributions, we consider the null hypothesis of no
-difference \begin{equation}H_{0}: \; \Delta=0.
-\label{eq:H0m}\end{equation} In the housework example, this is the hypothesis that
+difference \begin{equation}
+H_{0}: \; \Delta=0.
+(\#eq:H0m)
+\end{equation} In the housework example, this is the hypothesis that
 average weekly hours of housework in the population are the same for men
 and women. It is tested against an alternative hypothesis, either the
-two-sided alternative hypotheses \begin{equation}H_{a}: \; \Delta\ne 0\label{eq:Hatwom}\end{equation} or one of the one-sided alternative hypotheses
+two-sided alternative hypotheses \begin{equation}
+H_{a}: \; \Delta\ne 0
+(\#eq:Hatwom)
+\end{equation} or one of the one-sided alternative hypotheses
 $$H_{a}:  \Delta> 0 \text{ or } H_{a}:  \Delta< 0$$ In the discussion below, we concentrate on the more
 common two-sided alternative.
 
@@ -507,34 +520,46 @@ The test statistic for testing (\@ref(eq:H0m)) is of the general form
 (\@ref(eq:tma)). Here it depends on the data only through the sample means
 $\bar{Y}_{1}$ and $\bar{Y}_{2}$ and sample variances $s_{1}^{2}$ and
 $s_{2}^{2}$ of $Y$ in the two groups. A point estimate of $\Delta$ is
-\begin{equation}\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}.
-\label{eq:Dhatmu}\end{equation} In terms of the population parameters, the standard
-error of $\hat{\Delta}$ is \begin{equation}\sigma_{\hat{\Delta}}=
+\begin{equation}
+\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}.
+(\#eq:Dhatmu)
+\end{equation} In terms of the population parameters, the standard
+error of $\hat{\Delta}$ is \begin{equation}
+\sigma_{\hat{\Delta}}=
 \sqrt{\sigma^{2}_{\bar{Y}_{2}}+
 \sigma^{2}_{\bar{Y}_{1}}}=
 \sqrt{
 \frac{\sigma^{2}_{2}}{n_{2}}+
 \frac{\sigma^{2}_{1}}{n_{1}}
 }.
-\label{eq:sigmaDmu}\end{equation} When we assume that the population standard
+(\#eq:sigmaDmu)
+\end{equation} When we assume that the population standard
 deviations $\sigma_{1}$ and $\sigma_{2}$ are equal, with a common value
-$\sigma$, (\@ref(eq:sigmaDmu)) simplifies to \begin{equation}\sigma_{\hat{\Delta}} =
+$\sigma$, (\@ref(eq:sigmaDmu)) simplifies to \begin{equation}
+\sigma_{\hat{\Delta}} =
 \sigma\; \sqrt{
 \frac{1}{n_{2}}+
 \frac{1}{n_{1}}
 }.
-\label{eq:seDpop}\end{equation} The formula of the test statistic uses an estimate of
-this standard error, given by \begin{equation}\hat{\sigma}_{\hat{\Delta}} =
+(\#eq:seDpop)
+\end{equation} The formula of the test statistic uses an estimate of
+this standard error, given by \begin{equation}
+\hat{\sigma}_{\hat{\Delta}} =
 \hat{\sigma} \; \sqrt{\frac{1}{n_{2}}+\frac{1}{n_{1}}}
-\label{eq:seD2}\end{equation} where $\hat{\sigma}$ is an estimate of $\sigma$,
-calculated from \begin{equation}\hat{\sigma}=
+(\#eq:seD2)
+\end{equation} where $\hat{\sigma}$ is an estimate of $\sigma$,
+calculated from \begin{equation}
+\hat{\sigma}=
 \sqrt{\frac{(n_{2}-1)s^{2}_{2}+(n_{1}-1)s^{2}_{1}}{n_{1}+n_{2}-2}}.
-\label{eq:sehatjoint}\end{equation} Substituting (\@ref(eq:Dhatmu)) and (\@ref(eq:seD2)) into
+(\#eq:sehatjoint)
+\end{equation} Substituting (\@ref(eq:Dhatmu)) and (\@ref(eq:seD2)) into
 the general formula (\@ref(eq:tma)) gives the **two-sample t-test statistic
-for means** \begin{equation}t=
+for means** \begin{equation}
+t=
 \frac{\bar{Y}_{2}-\bar{Y}_{1}}
 {\hat{\sigma}\, \sqrt{1/n_{2}+1/n_{1}}}
-\label{eq:ztestmuDb}\end{equation} where $\hat{\sigma}$ is given by (\@ref(eq:sehatjoint)).
+(\#eq:ztestmuDb)
+\end{equation} where $\hat{\sigma}$ is given by (\@ref(eq:sehatjoint)).
 
 For an illustration of the calculations, consider again the housework
 Example 7.2. Here, denoting men by 1 and women by 2, $n_{1}=635$,
@@ -712,11 +737,13 @@ A confidence interval for the mean difference $\Delta=\mu_{1}-\mu_{2}$
 is obtained by substituting appropriate expressions into the general
 formula (\@ref(eq:ciDpa)). Specifically, here
 $\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}$ and a 95% confidence interval for
-$\Delta$ is \begin{equation}(\bar{Y}_{2}-\bar{Y}_{1}) \pm 1.96\;  \hat{\sigma} \;
+$\Delta$ is \begin{equation}
+(\bar{Y}_{2}-\bar{Y}_{1}) \pm 1.96\;  \hat{\sigma} \;
 \sqrt{
 \frac{1}{n_{2}}+\frac{1}{n_{1}}
 }
-\label{eq:ciDmu2}\end{equation} where $\hat{\sigma}$ is obtained from equation
+(\#eq:ciDmu2)
+\end{equation} where $\hat{\sigma}$ is obtained from equation
 \@ref(eq:sehatjoint). The validity of this again requires that the sample
 sizes $n_{1}$ and $n_{2}$ from both groups are reasonably large, say
 both at least 20. For the housework Example 7.2, the 95% confidence
@@ -765,17 +792,21 @@ $\hat{\Delta}$, the formula of which is given by equation
 of $\sigma_{1}$ and $\sigma_{2}$. The obvious choices for these are the
 corresponding sample standard deviations, $s_{1}$ for $\sigma_{1}$ and
 $s_{2}$ for $\sigma_{2}$. This gives the estimated standard error as
-\begin{equation}\hat{\sigma}_{\hat{\Delta}}=
+\begin{equation}
+\hat{\sigma}_{\hat{\Delta}}=
 \sqrt{
 \frac{s_{2}^{2}}{n_{2}}+
 \frac{s_{1}^{2}}{n_{1}}
 }.
-\label{eq:seDmu-ne}\end{equation} Substituting this to the formula of the test
+(\#eq:seDmu-ne)
+\end{equation} Substituting this to the formula of the test
 statistic yields the two-sample $t$-test statistic without the
-assumption of equal population standard deviations, \begin{equation}t=
+assumption of equal population standard deviations, \begin{equation}
+t=
 \frac{\bar{Y}_{2}-\bar{Y}_{1}}
 {\sqrt{s^{2}_{2}/n_{2}+s^{2}_{1}/n_{1}}}.
-\label{eq:ztestmuD}\end{equation} The sampling distribution of this under the null
+(\#eq:ztestmuD)
+\end{equation} The sampling distribution of this under the null
 hypothesis is again approximately a standard normal distribution when
 the sample sizes $n_{1}$ and $n_{2}$ are both at least 20. The $P$-value
 for the test is obtained in exactly the same way as before, and the
@@ -784,11 +815,13 @@ principles of interpreting the result of the test are also unchanged.
 For the confidence interval, the only change from Section
 \@ref(ss-means-inference-ci) is again that the estimated standard error
 is changed, so for a 95% confidence interval we use
-\begin{equation}(\bar{Y}_{2}-\bar{Y}_{1}) \pm 1.96 \;
+\begin{equation}
+(\bar{Y}_{2}-\bar{Y}_{1}) \pm 1.96 \;
 \sqrt{
 \frac{s^{2}_{2}}{n_{2}}+\frac{s^{2}_{1}}{n_{1}}
 }.
-\label{eq:ciDmu}\end{equation}
+(\#eq:ciDmu)
+\end{equation}
 
 In the housework example 7.2, the estimated standard error
 (\@ref(eq:seDmu-ne)) is $$\hat{\sigma}_{\hat{\Delta}}=
@@ -960,7 +993,8 @@ when the population distributions are normal. One way of dealing with
 this complication (which is known as the Behrens–Fisher problem) is to
 find a $t$ distribution which is a good approximation of the true
 sampling distribution. The degrees of freedom of this approximating
-distribution are given by \begin{equation}df=\frac{\left(
+distribution are given by \begin{equation}
+df=\frac{\left(
 \frac{s^{2}_{1}}{n_{1}}+
 \frac{s^{2}_{2}}{n_{2}}
 \right)^{2}}
@@ -971,7 +1005,8 @@ distribution are given by \begin{equation}df=\frac{\left(
 \left(\frac{s_{2}^{2}}{n_{2}}\right)^{2}\;
 \left(\frac{1}{n_{2}-1}\right)
 }.
-\label{eq:satter-df}\end{equation} This formula, which is known as the
+(\#eq:satter-df)
+\end{equation} This formula, which is known as the
 Welch-Satterthwaite approximation, is not particularly interesting or
 worth learning in itself. It is presented here purely for completeness,
 and to give an idea of how the degrees of freedom given in the SPSS
@@ -1158,15 +1193,25 @@ average level of consumption in the population is at the recommended
 level.
 
 In this setting, the null hypothesis for a significance test will be of
-the form \begin{equation}H_{0}: \; \mu=\mu_{0},
-\label{eq:H01}\end{equation} i.e. it claims that the unknown population mean $\mu$ is
+the form \begin{equation}
+H_{0}: \; \mu=\mu_{0},
+(\#eq:H01)
+\end{equation} i.e. it claims that the unknown population mean $\mu$ is
 equal to the value $\mu_{0}$ specified by the null hypothesis. This will
 be tested against the two-sided alternative hypothesis
-\begin{equation}H_{a}: \; \mu\ne \mu_{0}
-\label{eq:Ha1two}\end{equation} or one of the one-sided alternative hypotheses
-\begin{equation}H_{a}:  \mu> \mu_{0} \label{eq:Ha1onegt}\end{equation}
+\begin{equation}
+H_{a}: \; \mu\ne \mu_{0}
+(\#eq:Ha1two)
+\end{equation} or one of the one-sided alternative hypotheses
+\begin{equation}
+H_{a}:  \mu> \mu_{0}
+(\#eq:Ha1onegt)
+\end{equation}
 or
-\begin{equation}H_{a}:  \mu< \mu_{0}.\label{eq:Ha1onelt}\end{equation}
+\begin{equation}
+H_{a}:  \mu< \mu_{0}.
+(\#eq:Ha1onelt)
+\end{equation}
 For example, we might consider the one-sided alternative hypotheses $H_{a}:\; \mu<5$ for portions of fruit and vegetables and $H_{a}:\;\mu>35$ for the percentage of energy from fat. For both of these, the
 alternative corresponds to a difference from $\mu_{0}$ in the unhealthy
 direction, i.e. less fruit and vegetables and more fat than are
@@ -1174,18 +1219,33 @@ recommended.
 
 To establish a connection to the general formulas that have been stated
 previously, it is again useful to express these hypotheses in terms of
-\begin{equation}\Delta=\mu-\mu_{0},\label{eq:D1mu}\end{equation}
+\begin{equation}
+\Delta=\mu-\mu_{0},
+(\#eq:D1mu)
+\end{equation}
 i.e. the difference between the unknown true mean $\mu$
 and the value $\mu_{0}$ claimed by the null hypothesis. Because this is
 0 if and only if $\mu$ and $\mu_{0}$ are equal, the null hypothesis
 (\@ref(eq:H01)) can also be expressed as
-\begin{equation}H_{0}: \; \Delta=0,\label{eq:H0D}\end{equation}
+\begin{equation}
+H_{0}: \; \Delta=0,
+(\#eq:H0D)
+\end{equation}
 and possible alternative hypotheses as
-\begin{equation}H_{0}: \Delta\ne0, \label{eq:HaDtwo}\end{equation}
+\begin{equation}
+H_{0}: \Delta\ne0, 
+(\#eq:HaDtwo)
+\end{equation}
 
-\begin{equation}H_{0}: \Delta>0 \label{eq:HaDonegt}\end{equation}
+\begin{equation}
+H_{0}: \Delta>0 
+(\#eq:HaDonegt)
+\end{equation}
 and
-\begin{equation}H_{0}:  \Delta< 0,   \label{eq:HaDonelt}\end{equation}
+\begin{equation}
+H_{0}:  \Delta< 0,   
+(\#eq:HaDonelt)
+\end{equation}
 corresponding to
 (\@ref(eq:Ha1two)), (\@ref(eq:Ha1onegt)) and (\@ref(eq:Ha1onelt)) respectively.
 
@@ -1196,8 +1256,10 @@ resulting formulas are listed briefly below, and then illustrated using
 the data from the diet survey:
 
 -   The point estimate of the difference $\Delta=\mu-\mu_{0}$ is
-    \begin{equation}\hat{\Delta}=\bar{Y}-\mu_{0}.
-    \label{eq:Dhat1}\end{equation}
+    \begin{equation}
+    \hat{\Delta}=\bar{Y}-\mu_{0}.
+    (\#eq:Dhat1)
+    \end{equation}
 
 -   The standard error of $\hat{\Delta}$, i.e. the standard deviation of
     its sampling distribution, is
@@ -1207,13 +1269,17 @@ the data from the diet survey:
     $\hat{\Delta}=\bar{Y}-\mu_{0}$ is a known number rather a
     data-dependent statistic, which means that it does not affect the
     standard error.] This is estimated by
-    \begin{equation}\hat{\sigma}_{\hat{\Delta}} = \frac{s}{\sqrt{n}}.
-    \label{eq:seDhat1}\end{equation}
+    \begin{equation}
+    \hat{\sigma}_{\hat{\Delta}} = \frac{s}{\sqrt{n}}.
+    (\#eq:seDhat1)
+    \end{equation}
 
 -   The $t$-test statistic for testing the null hypothesis (\@ref(eq:H0D))
-    is \begin{equation}t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}} =
+    is \begin{equation}
+    t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}} =
     \frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}.
-    \label{eq:tD1}\end{equation}
+    (\#eq:tD1)
+    \end{equation}
 
 -   The sampling distribution of the $t$-statistic, when the null
     hypothesis is true, is approximately a standard normal distribution,
@@ -1236,10 +1302,12 @@ the data from the diet survey:
 
 -   A confidence interval for $\Delta$, with confidence level $1-\alpha$
     and based on the approximate normal sampling distribution, is given
-    by \begin{equation}\hat{\Delta}\pm z_{\alpha/2}\, \hat{\sigma}_{\hat{\Delta}}
+    by \begin{equation}
+    \hat{\Delta}\pm z_{\alpha/2}\, \hat{\sigma}_{\hat{\Delta}}
     =
     (\bar{Y}-\mu_{0}) \pm z_{\alpha/2} \, \frac{s}{\sqrt{n}}
-    \label{eq:ciD1}\end{equation} where $z_{\alpha/2}$ is the multiplier from the
+    (\#eq:ciD1)
+    \end{equation} where $z_{\alpha/2}$ is the multiplier from the
     standard normal distribution for the required significance level
     (see Table \@ref(tab:t-ciq)), most often 1.96 for
     a 95% confidence interval. If an interval based on the $t$
@@ -1250,8 +1318,10 @@ the data from the diet survey:
     Instead of the interval (\@ref(eq:ciD1)) for the difference
     $\Delta=\mu-\mu_{0}$, it is usually more sensible to report a
     confidence interval for $\mu$ itself. This is given by
-    \begin{equation}\bar{Y} \pm z_{\alpha/2} \, \frac{s}{\sqrt{n}},
-    \label{eq:cimu1}\end{equation} which is obtained by adding $\mu_{0}$ to both end
+    \begin{equation}
+    \bar{Y} \pm z_{\alpha/2} \, \frac{s}{\sqrt{n}},
+    (\#eq:cimu1)
+    \end{equation} which is obtained by adding $\mu_{0}$ to both end
     points of (\@ref(eq:ciD1)).
 
 For the fruit and vegetable variable in the diet example, the mean under
@@ -1470,23 +1540,32 @@ The population mean of the differences $D$ is also
 $\Delta=\mu_{2}-\mu_{1}$, so the observed values $D_{i}$ can be used for
 inference on $\Delta$. An estimate of $\Delta$ is the sample average of
 $D_{i}$,
-i.e. \begin{equation}\hat{\Delta}=\overline{D}=\frac{1}{n}\sum_{i=1}^{n} D_{i}.
-\label{eq:Dbar-dep}\end{equation} In other words, this is the average of the
+i.e. \begin{equation}
+\hat{\Delta}=\overline{D}=\frac{1}{n}\sum_{i=1}^{n} D_{i}.
+(\#eq:Dbar-dep)
+\end{equation} In other words, this is the average of the
 within-pair differences between the two measurements of $Y$. Its
-standard error is estimated by \begin{equation}\hat{\sigma}_{\hat{\Delta}} =
+standard error is estimated by \begin{equation}
+\hat{\sigma}_{\hat{\Delta}} =
 \frac{s_{D}}{\sqrt{n}}
-\label{eq:sDbar-dep}\end{equation} where $s_{D}$ is the sample standard deviation of
-$D$, i.e. \begin{equation}s_{D} = \sqrt{\frac{\sum (D_{i}-\overline{D})^{2}}{n-1}}.
-\label{eq:s2D-dep}\end{equation} A test statistic for the null hypothesis
-$H_{0}: \Delta=0$ is given by \begin{equation}t=
-\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}=
+(\#eq:sDbar-dep)
+\end{equation} where $s_{D}$ is the sample standard deviation of
+$D$, i.e. \begin{equation}
+s_{D} = \sqrt{\frac{\sum (D_{i}-\overline{D})^{2}}{n-1}}.
+(\#eq:s2D-dep)
+\end{equation} A test statistic for the null hypothesis
+$H_{0}: \Delta=0$ is given by \begin{equation}
+t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}=
 \frac{\overline{D}}{s_{D}/\sqrt{n}}
-\label{eq:zD-dep}\end{equation} and its $P$-value is obtained either from the standard
+(\#eq:zD-dep)
+\end{equation} and its $P$-value is obtained either from the standard
 normal distribution or the $t_{n-1}$ distribution. A confidence interval
 for $\Delta$ with confidence level $1-\alpha$ is given by
-\begin{equation}\hat{\Delta} \pm q_{\alpha/2} \times \hat{\sigma}_{\hat{\Delta}}
+\begin{equation}
+\hat{\Delta} \pm q_{\alpha/2} \times \hat{\sigma}_{\hat{\Delta}}
 =\overline{D} \pm q_{\alpha/2} \times \frac{s_{D}}{\sqrt{n}}
-\label{eq:ciD-dep}\end{equation} where the multiplier $q_{\alpha/2}$ is either
+(\#eq:ciD-dep)
+\end{equation} where the multiplier $q_{\alpha/2}$ is either
 $z_{\alpha/2}$ or $t_{\alpha/2}^{(n-1)}$. These formulas are obtained by
 noting that this is simply a one-sample analysis with the differences
 $D$ in place of the variable $Y$, and applying the formulas of Section
