@@ -724,7 +724,8 @@ $(Y_{1},X_{1}), (Y_{2}, X_{2}), \dots, (Y_{n}, X_{n})$ becomes
     X_{i}$.
 
 Often the model is expressed in an equivalent form where 2. and 3. are
-combined as \begin{equation}
+combined as
+begin{equation}
 Y_{i}=\alpha+\beta X_{i} +\epsilon_{i}
 (\#eq:slinmodel)
 \end{equation}
@@ -1031,7 +1032,8 @@ ones which give the smallest value of $SSE$. Their formulas are
 \hat{\beta}=\frac{\sum (X_{i}-\bar{X})(Y_{i}-\bar{Y})}{\sum (X_{i}-\bar{X})^{2}}=\frac{s_{xy}}{s_{x}^{2}}
 (\#eq:ols-b)
 \end{equation}
-and \begin{equation}
+and
+\begin{equation}
 \hat{\alpha}=\bar{Y}-\hat{\beta}\bar{X}
 (\#eq:ols-a)
 \end{equation}
@@ -1243,7 +1245,8 @@ $\beta$. Tests and confidence intervals for population values of the
 intercept $\alpha$ are rarely and ones about the residual standard
 deviation $\sigma$ almost never substantively interesting, so they will
 not be considered. Similarly, the only null hypothesis on $\beta$
-discussed here is that its value is zero, i.e. \begin{equation}
+discussed here is that its value is zero, i.e.
+begin{equation}
 H_{0}:\; \beta=0.
 (\#eq:H0betasimple)
 \end{equation}
@@ -1598,7 +1601,8 @@ where the coefficients
 $\beta_{1}, \beta_{2}, \dots, \beta_{k}$ of individual explanatory
 variables are now also identified with subscripts. As in
 (\@ref(eq:slinmodel)) for the simple linear model, the multiple model can
-also be expressed in the concise form \begin{equation}
+also be expressed in the concise form
+begin{equation}
 Y_{i} = \alpha+\beta_{1}X_{1i}+\beta_{2}X_{2i}+\dots+\beta_{k}X_{ki}+\epsilon_{i}
 (\#eq:mlinmodel)
 \end{equation}
