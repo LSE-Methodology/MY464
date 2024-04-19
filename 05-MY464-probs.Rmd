@@ -302,7 +302,7 @@ sample mean of $Y$, since \begin{equation}\bar{Y}=\frac{Y_{1}+Y_{2}+\dots+Y_{n}}
 
 A null hypothesis about a single population probability $\pi$ is of the
 form \begin{equation}H_{0}:\; \pi=\pi_{0}
-\label{eq:H0p}\end{equation} where $\pi_{0}$ is a given number which is either of
+(\#eq:H0p)\end{equation} where $\pi_{0}$ is a given number which is either of
 specific interest or in some other sense a suitable benchmark in a given
 application. For example, in the voting example 5.1 we could consider
 $\pi_{0}=0.5$, i.e. that the referendum was too close to call. In the
