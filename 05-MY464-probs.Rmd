@@ -293,9 +293,7 @@ examples 5.3 and 5.4 separately for the two groups.
 When $Y$ is coded with values 0 and 1, $\hat{\pi}$ is also equal to the
 sample mean of $Y$, since
 \begin{equation}
-\bar{Y}=\frac{Y_{1}+Y_{2}+\dots+Y_{n}}{n}=
-\frac{0+0+\dots+0+\overbrace{1+1+\dots+1}^{m \text{ ones}}}{n}=
-\frac{m}{n}=\hat{\pi}.
+\bar{Y}=\frac{Y_{1}+Y_{2}+\dots+Y_{n}}{n}=\frac{0+0+\dots+0+\overbrace{1+1+\dots+1}^{m \text{ ones}}}{n}=\frac{m}{n}=\hat{\pi}.
 (\#eq:pihat-as-ybar)
 \end{equation}
 
@@ -317,12 +315,18 @@ jury example 5.2 the value of interest would be $\pi_{0}=0.124$, the
 proportion of black people in the general adult population of the county.
 
 An alternative but equivalent form of (\@ref(eq:H0p)) is expressed in terms
-of the difference \begin{equation}\Delta=\pi-\pi_{0}
+of the difference
+\begin{equation}
+\Delta=\pi-\pi_{0}
 (\#eq:Dp)
-\end{equation} ($\Delta$ is the upper-case Greek letter “Delta"). Then
-(@\@ref(eq:H0p)) can also be written as \begin{equation}H_{0}: \; \Delta=0,
+\end{equation}
+ ($\Delta$ is the upper-case Greek letter “Delta"). Then
+(@\@ref(eq:H0p)) can also be written as
+\begin{equation}
+H_{0}: \; \Delta=0,
 (\#eq:H0p2)
-\end{equation} i.e. that there is no difference between the true
+\end{equation}
+ i.e. that there is no difference between the true
 population probability and the hypothesised value $\pi_{0}$. This
 version of the notation allows us later to draw attention to the
 similarities between different analyses in this chapter and in
@@ -336,9 +340,12 @@ some further comments, because there are some new possibilities that did
 not arise for the $\chi^{2}$ test of independence in Chapter
 \@ref(c-tables). For the difference $\Delta$, we may consider two basic
 kinds of alternative hypotheses. The first is a **two-sided alternative
-hypothesis** \begin{equation}H_{a}: \; \Delta\ne 0
+hypothesis**
+\begin{equation}
+H_{a}: \; \Delta\ne 0
 (\#eq:Hatwo)
-\end{equation} (where “$\ne$” means “not equal to”). This claims that
+\end{equation}
+ (where “$\ne$” means “not equal to”). This claims that
 the true value of the population difference $\Delta$ is some unknown
 value which is *not* 0 as claimed by the null hypothesis. With a
 two-sided $H_{a}$, sample evidence that the true difference differs from
@@ -350,14 +357,17 @@ different from the claimed value $\pi_{0}$, but without any expectations
 about whether $\pi$ might be smaller or larger than $\pi_{0}$.
 
 The second main possibility is one of the two **one-sided alternative
-hypotheses** \begin{equation}
+hypotheses**
+\begin{equation}
 H_{a}:  \Delta> 0
 (\#eq:Haonegt)
 \end{equation}
-<center>or</center>
-\begin{equation}H_{a}:  \Delta < 0
+or
+\begin{equation}
+H_{a}:  \Delta < 0
 (\#eq:Haonelt)
-\end{equation} Such a hypothesis is only interested in
+\end{equation}
+ Such a hypothesis is only interested in
 values of $\Delta$ to one side of 0, either larger or smaller than it.
 For example, hypothesis (\@ref(eq:Haonegt)) in the referendum example 5.1,
 with $\pi_{0}=0.5$, is $H_{a}:\; \pi>0.5$, i.e. that the proportion who
@@ -406,12 +416,13 @@ which is explicitly either two-sided or one-sided.
 ### The test statistic {#ss-probs-test1sample-teststatistic}
 
 The test statistic used to test hypotheses of the form (\@ref(eq:H0p)) is
-the **z-test statistic** \begin{equation}z=
-\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}=
-\frac{\text{Estimate of the population difference $\Delta$}}
-{\text{Estimated standard error
-of the estimate of $\Delta$}}.
-\label{eq:ttest-gen}\end{equation} The statistic is introduced first in this form in
+the **z-test statistic**[^
+]
+\begin{equation}
+z=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}=\frac{\text{Estimate of the population difference $\Delta$}}{\text{Estimated standard error of the estimate of $\Delta$}}.
+(\#eq:ttest-gen)
+\end{equation}
+ The statistic is introduced first in this form in
 order to draw attention to its generality. Null hypotheses in many
 ostensibly different situations can be formulated as hypotheses of the
 form (\@ref(eq:H0p2)) about population differences of some kind, and each
@@ -429,9 +440,11 @@ of the $z$-test statistic, but its basic idea is still the same.
 
 In (\@ref(eq:ttest-gen)), $\hat{\Delta}$ denotes a sample estimate of
 $\Delta$. For a test of a single proportion, this is
-\begin{equation}\hat{\Delta} = \hat{\pi}-\pi_{0},
+\begin{equation}
+\hat{\Delta} = \hat{\pi}-\pi_{0},
 (\#eq:Dhatp)
-\end{equation} i.e. the difference between the sample proportion and
+\end{equation}
+ i.e. the difference between the sample proportion and
 $\pi_{0}$. This is the core of the test statistic. Although the forms of
 the two statistics seem rather different, (\@ref(eq:Dhatp)) contains the
 comparison of the observed and expected sample values that was also at
@@ -468,13 +481,18 @@ distribution discussed in the next section will be of a convenient form.
 
 For a test of the hypothesis (\@ref(eq:H0p)) about a single proportion, the
 estimated standard error under the null hypothesis is
-\begin{equation}\hat{\sigma}_{\hat{\Delta}} = \sqrt{\frac{\pi_{0}(1-\pi_{0})}{n}},
+\begin{equation}
+\hat{\sigma}_{\hat{\Delta}} = \sqrt{\frac{\pi_{0}(1-\pi_{0})}{n}},
 (\#eq:seDhatp)
-\end{equation} and the specific formula of the test statistic
-(\@ref(eq:ttest-gen)) is then \begin{equation}z=\frac{\hat{\pi}-\pi_{0}}
-{\sqrt{\pi_{0}(1-\pi_{0})/n}}.
+\end{equation}
+ and the specific formula of the test statistic
+(\@ref(eq:ttest-gen)) is then[^
+]
+\begin{equation}
+z=\frac{\hat{\pi}-\pi_{0}}{\sqrt{\pi_{0}(1-\pi_{0})/n}}.
 (\#eq:ztestp)
-\end{equation} This is the **one-sample $z$-test statistic for a
+\end{equation}
+ This is the **one-sample $z$-test statistic for a
 population proportion**.
 
 In Example 5.1 we have $\hat{\pi}=0.47$, $\pi_{0}=0.5$, and $n=702$, so
@@ -836,18 +854,17 @@ A confidence interval essentially turns this around, into a statement
 about the unknown true value of $\Delta$ in the population, even in
 cases where $\Delta$ is not 0. This is done by substituting
 $\hat{\Delta}$ for $\Delta$ above, to create the interval
-\begin{equation}\text{from  }
-\hat{\Delta} -1.96\times \hat{\sigma}_{\hat{\Delta}}
-\text{  to  }
-\hat{\Delta}
-+1.96\times \hat{\sigma}_{\hat{\Delta}}.
+\begin{equation}
+\text{from  }\hat{\Delta} -1.96\times \hat{\sigma}_{\hat{\Delta}}\text{  to  }\hat{\Delta}+1.96\times \hat{\sigma}_{\hat{\Delta}}.
 (\#eq:cim0)
-\end{equation} This is the **95 % confidence interval** for the
+\end{equation}
+ This is the **95 % confidence interval** for the
 population difference $\Delta$. It is usually written more concisely as
-\begin{equation}\hat{\Delta}
-\pm 1.96\, \hat{\sigma}_{\hat{\Delta}}
+\begin{equation}
+\hat{\Delta}\pm 1.96\, \hat{\sigma}_{\hat{\Delta}}
 (\#eq:cim1)
-\end{equation} where the “plusminus” symbol $\pm$ indicates that we
+\end{equation}
+ where the “plusminus” symbol $\pm$ indicates that we
 calculate the two endpoints of the interval as in (\@ref(eq:cim0)), one
 below and one above $\hat{\Delta}$.
 
@@ -859,20 +876,22 @@ the $z$-test, but not the same. This is because the confidence interval
 is not calculated under the null hypothesis $H_{0}:\; \pi=\pi_{0}$, so
 we cannot use $\pi_{0}$ for $\pi$ in the standard error. Instead, $\pi$
 is estimated by the sample proportion $\hat{\pi}$, giving the estimated
-standard error \begin{equation}\hat{\sigma}_{\hat{\Delta}} = \sqrt{
-\frac{\hat{\pi}(1-\hat{\pi})}{n}
-}
+standard error[^
+]
+\begin{equation}
+\hat{\sigma}_{\hat{\Delta}} = \sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}}
 (\#eq:sephat2)
-\end{equation} and thus the 95% confidence interval
+\end{equation}
+ and thus the 95% confidence interval
 $$(\hat{\pi}-\pi_{0}) \pm 1.96 \;
 \sqrt{
 \frac{\hat{\pi}(1-\hat{\pi})}{n}}$$ for $\Delta=\pi-\pi_{0}$.
 Alternatively, a confidence interval for $\pi$ itself is given by
-\begin{equation}\hat{\pi} \pm 1.96 \;
-\sqrt{
-\frac{\hat{\pi}(1-\hat{\pi})}{n}}.
+\begin{equation}
+\hat{\pi} \pm 1.96 \;\sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}}.
 (\#eq:cip2)
-\end{equation} This is typically the most useful interval for use in
+\end{equation}
+ This is typically the most useful interval for use in
 practice. For instance, in the referendum example 5.1 this gives a 95%
 confidence interval of
 $$0.470\pm 1.96\times \sqrt{\frac{0.470\times(1-0.470)}{702}}
@@ -914,8 +933,11 @@ speaking even meaningful, in the statistical framework considered here.
 
 In place of the 1.96 in (\@ref(eq:cim1)), we may also use other numbers. To
 allow for this in the notation, we can also write
-\begin{equation}\hat{\Delta} \pm z_{\alpha/2}\; \hat{\sigma}_{\hat{\Delta}}.
-\label{eq:ci-D-gen}\end{equation} where the multiplier $z_{\alpha/2}$ is a number which
+\begin{equation}
+\hat{\Delta} \pm z_{\alpha/2}\; \hat{\sigma}_{\hat{\Delta}}.
+(\#eq:ci-D-gen)
+\end{equation}
+ where the multiplier $z_{\alpha/2}$ is a number which
 depends on two things. One of them is the sampling distribution of
 $\hat{\Delta}$, which is here assumed to be the normal distribution
 (another possibility is discussed in Section
@@ -1090,13 +1112,18 @@ explanatory variable $X$:
     ($\pi_{2}$).
 
 The quantity of interest is then the population difference
-\begin{equation}\Delta=\pi_{2}-\pi_{1}.
+\begin{equation}
+\Delta=\pi_{2}-\pi_{1}.
 (\#eq:Dp2sample)
-\end{equation} For a significance test of this, the null hypothesis
+\end{equation}
+ For a significance test of this, the null hypothesis
 will again be $H_{0}:\; \Delta=0$, which is in this case equivalent to
-the hypothesis of equal proportions \begin{equation}H_{0}:\; \pi_{1} = \pi_{2}.
+the hypothesis of equal proportions
+\begin{equation}
+H_{0}:\; \pi_{1} = \pi_{2}.
 (\#eq:H0pD)
-\end{equation} The null hypothesis thus claims that there is no
+\end{equation}
+ The null hypothesis thus claims that there is no
 association between the group variable $X$ and the dichotomous response
 variable $Y$, while the alternative hypothesis (e.g.  the two-sided one
 $H_{a}:\; \pi_{1}\ne \pi_{2}$, i.e. $H_{a}:\; \Delta\ne
@@ -1105,9 +1132,12 @@ $H_{a}:\; \pi_{1}\ne \pi_{2}$, i.e. $H_{a}:\; \Delta\ne
 The obvious estimates of $\pi_{1}$ and $\pi_{2}$ are the corresponding
 sample proportions $\hat{\pi}_{1}$ and $\hat{\pi}_{2}$, calculated from
 samples of sizes $n_{1}$ and $n_{2}$ respectively, and the estimate of
-$\Delta$ is then \begin{equation}\hat{\Delta}=\hat{\pi}_{2} - \hat{\pi}_{1}.
+$\Delta$ is then
+\begin{equation}
+\hat{\Delta}=\hat{\pi}_{2} - \hat{\pi}_{1}.
 (\#eq:Dhatpi)
-\end{equation} This gives $\hat{\Delta}=0.000284-0.000706=-0.000422$
+\end{equation}
+ This gives $\hat{\Delta}=0.000284-0.000706=-0.000422$
 in Example 5.3 and $\hat{\Delta}=0.364-0.279=0.085$ in Example 5.4. In
 the samples, the proportion of polio cases is thus lower in the
 vaccinated group, and the proportion of optimistic answers is higher in
@@ -1146,13 +1176,12 @@ overall sample sizes $n_{1}$ and $n_{2}$ large enough. That is why the
 trial had to be very large, involving hundreds of thousands of
 participants.
 
-The standard error of $\hat{\Delta}$ is \begin{equation}\sigma_{\hat{\Delta}} =
-\sqrt{
-\frac{\pi_{2}(1-\pi_{2})}{n_{2}}
-+\frac{\pi_{1}(1-\pi_{1})}{n_{1}}
-}.
+The standard error of $\hat{\Delta}$ is
+\begin{equation}
+\sigma_{\hat{\Delta}} =\sqrt{\frac{\pi_{2}(1-\pi_{2})}{n_{2}}+\frac{\pi_{1}(1-\pi_{1})}{n_{1}}}.
 (\#eq:sigmaDpi)
-\end{equation} As in the one-sample case above, the best way to
+\end{equation}
+ As in the one-sample case above, the best way to
 estimate this is different for a significance test than for a confidence
 interval. For a test, the standard error can be estimated under
 assumption that the null hypothesis (\@ref(eq:H0pD)) is true, in which case
@@ -1161,46 +1190,42 @@ this common proportion, denoted below by $\hat{\pi}$, is the proportion
 of observations with value 1 for $Y$ in the total sample of
 $n_{1}+n_{2}$ observations, pooling observations from both groups
 together; expressed in terms of the group-specific estimates, this is
-\begin{equation}\hat{\pi} = \frac{n_{1}\hat{\pi}_{1}+n_{2}\hat{\pi}_{2}}{n_{1}+n_{2}}.
+\begin{equation}
+\hat{\pi} = \frac{n_{1}\hat{\pi}_{1}+n_{2}\hat{\pi}_{2}}{n_{1}+n_{2}}.
 (\#eq:phat2sample)
-\end{equation} Using this for both $\pi_{1}$ and $\pi_{2}$ in
+\end{equation}
+ Using this for both $\pi_{1}$ and $\pi_{2}$ in
 (\@ref(eq:sigmaDpi)) gives the estimated standard error
-\begin{equation}\hat{\sigma}_{\hat{\Delta}}=
-\sqrt{
-\hat{\pi}(1-\hat{\pi}) \; \left(
-\frac{1}{n_{2}}+
-\frac{1}{n_{1}}
-\right),
-}
+\begin{equation}
+\hat{\sigma}_{\hat{\Delta}}=\sqrt{\hat{\pi}(1-\hat{\pi}) \; \left(\frac{1}{n_{2}}+\frac{1}{n_{1}}\right),}
 (\#eq:seDpi)
-\end{equation} and using (\@ref(eq:Dhatpi)) and (\@ref(eq:seDpi)) in the
+\end{equation}
+ and using (\@ref(eq:Dhatpi)) and (\@ref(eq:seDpi)) in the
 general formula (\@ref(eq:ttest-gen)) gives the **two-sample $z$-test
-statistic for proportions** \begin{equation}z=
-\frac{\hat{\pi}_{2}-\hat{\pi}_{1}}
-{\sqrt{\hat{\pi}(1-\hat{\pi})(1/n_{2}+1/n_{1})}}
+statistic for proportions**
+\begin{equation}
+z=\frac{\hat{\pi}_{2}-\hat{\pi}_{1}}{\sqrt{\hat{\pi}(1-\hat{\pi})(1/n_{2}+1/n_{1})}}
 (\#eq:ztestDpi)
-\end{equation} where $\hat{\pi}$ is given by (\@ref(eq:phat2sample)).
+\end{equation}
+ where $\hat{\pi}$ is given by (\@ref(eq:phat2sample)).
 When the null hypothesis is true, the sampling distribution of this test
 statistic is approximately standard normal when the sample sizes are
 large enough.
 
 For a confidence interval, the calculation of the estimated standard
 error cannot assume that (\@ref(eq:H0pD)) is true. Instead, we use the
-estimate \begin{equation}\hat{\sigma}_{\hat{\Delta}} =
-\sqrt{
-\frac{\hat{\pi}_{2}(1-\hat{\pi}_{2})}{n_{2}} +
-\frac{\hat{\pi}_{1}(1-\hat{\pi}_{1})}{n_{1}}
-}
+estimate
+\begin{equation}
+\hat{\sigma}_{\hat{\Delta}} =\sqrt{\frac{\hat{\pi}_{2}(1-\hat{\pi}_{2})}{n_{2}}\frac{\hat{\pi}_{1}(1-\hat{\pi}_{1})}{n_{1}}}
 (\#eq:seDpi2)
-\end{equation} and, substituting this to the general formula
+\end{equation}
+ and, substituting this to the general formula
 (\@ref(eq:ci-D-gen)), we get
-\begin{equation}(\hat{\pi}_{2}-\hat{\pi}_{1}) \pm z_{\alpha/2} \;
-\sqrt{
-\frac{\hat{\pi}_{2}(1-\hat{\pi}_{2})}{n_{2}} +
-\frac{\hat{\pi}_{1}(1-\hat{\pi}_{1})}{n_{1}}
-}
+\begin{equation}
+(\hat{\pi}_{2}-\hat{\pi}_{1}) \pm z_{\alpha/2} \;\sqrt{\frac{\hat{\pi}_{2}(1-\hat{\pi}_{2})}{n_{2}} +\frac{\hat{\pi}_{1}(1-\hat{\pi}_{1})}{n_{1}}}
 (\#eq:ciDpi)
-\end{equation} as the confidence interval for $\Delta=\pi_{2}-\pi_{1}$,
+\end{equation}
+ as the confidence interval for $\Delta=\pi_{2}-\pi_{1}$,
 with confidence level $1-\alpha$.
 
 For an illustration of the calculations, consider Example 5.4. Denoting

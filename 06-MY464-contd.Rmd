@@ -107,7 +107,7 @@ specifically the *sample* mean, variance and standard deviation
 s^{2} = \frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}
 (\#eq:s2-ch6)
 \end{equation}
-<center>and</center>
+and
 \begin{equation}
 s = \sqrt{\frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}}
 (\#eq:s-ch6)
