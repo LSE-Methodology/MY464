@@ -442,4 +442,10 @@ s_{x} = \sqrt{\frac{\sum(X_{i}-\bar{X})^{2}}{n-1}} \text{and} s_{y} = \sqrt{\fra
 where the subscripts $x$ and $y$ identify the two
 variables, and $\bar{X}$ and $\bar{Y}$ are their sample means. A new
 statistic is the **sample covariance** between $X$ and $Y$, defined as
-
+\begin{equation}
+s_{xy} = \frac{\sum (X_{i}-\bar{X})(Y_{i}-\bar{Y})}{n-1}.
+(\#eq:sxy)
+\end{equation}
+This is a measure of linear association between $X$ and
+$Y$. It is positive if the sample association is positive and negative
+if the association is negative.
