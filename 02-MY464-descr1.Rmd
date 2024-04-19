@@ -714,10 +714,8 @@ known as *tied* pairs. They are not used in the calculations discussed
 below.
 
 The $\gamma$ measure of association is defined as
-\begin{equation}
-\gamma=\frac{C-D}{C+D}
-(\#eq:gamma)
-\end{equation} where $C$ is the total number of concordant pairs in the
+\begin{equation}\gamma=\frac{C-D}{C+D}
+\label{eq:gamma}\end{equation} where $C$ is the total number of concordant pairs in the
 table, and $D$ is the number of discordant pairs. For Table
 \@ref(tab:t-investors), the value of this is $\gamma=-0.377$.
 
@@ -776,10 +774,8 @@ somehow measured by a single number $E_{1}$, and that $E_{2}$ is the
 same measure of errors for the second prediction scheme which makes use
 of $X$. The difference $E_{1}-E_{2}$ is thus the improvement in
 prediction achieved by the second scheme over the first. A PRE measure
-of association is the ratio \begin{equation}
-\text{PRE}= \frac{E_{1}-E_{2}}{E_{1}},
-(\#eq:PRE)
-\end{equation} i.e. the improvement in predictions as a *proportion* of
+of association is the ratio \begin{equation}\text{PRE}= \frac{E_{1}-E_{2}}{E_{1}},
+\label{eq:PRE}\end{equation} i.e. the improvement in predictions as a *proportion* of
 the number of errors $E_{1}$ under the first scheme. This formulation is
 convenient for interpretation, because a proportion is easily
 understandable even if $E_{1}$ and $E_{2}$ themselves are expressed in
@@ -1305,10 +1301,8 @@ Y_{2}, \dots, Y_{n}$, e.g. in the country example (with $n=155$) $Y_{1},
 Y_{2}, \dots, Y_{155}$. The ordering of the observations is arbitrary
 here, so it might for example be the order in which they are listed in
 your SPSS data file. The mean $\bar{Y}$ (“Y-bar”) of the observations of
-$Y$ in the sample is defined as \begin{equation}
-\bar{Y} = \frac{\sum Y_{i}}{n}.
-(\#eq:Ybar)
-\end{equation} Here $n$ is again the sample size. The symbol $\Sigma$
+$Y$ in the sample is defined as \begin{equation}\bar{Y} = \frac{\sum Y_{i}}{n}.
+\label{eq:Ybar}\end{equation} Here $n$ is again the sample size. The symbol $\Sigma$
 (upper-case Greek letter “Sigma”) is a *summation symbol*, which
 indicates that we calculate the sum of all $Y_{i}$ (often this is stated
 more explicitly by the notation $\sum_{i} Y_{i}$ or
@@ -1592,10 +1586,8 @@ function has no derivative at zero.] Instead, we eliminate the signs of the devi
 their squares $(Y_{i}-\bar{Y})^{2}$, i.e. by multiplying each deviation
 by itself (c.f. the third column of Table \@ref(tab:t-sdex) for an
 illustration). These are used to calculate the **variance**, denoted
-$s^{2}$ and defined as \begin{equation}
-s^{2} = \frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}.
-(\#eq:samplevar)
-\end{equation} This is (apart from the $n-1$ rather than $n$ as the
+$s^{2}$ and defined as \begin{equation}s^{2} = \frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}.
+\label{eq:samplevar}\end{equation} This is (apart from the $n-1$ rather than $n$ as the
 divisor) essentially the mean of the squared deviations. Its units of
 measurement are also squares of the units of the original measurements.
 For example, the variance of the GDP variable, which is itself measured
@@ -1605,10 +1597,8 @@ measure of variation expressed in the original units, we can take the
 square root (indicated below by $\sqrt{\; \; }$) of the variance. This
 statistic is the **standard deviation**, often abbreviated as S.D.,
 denoted by $s$ and defined as
-\begin{equation}
-s = \sqrt{\frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}.}
-(\#eq:sd)
-\end{equation} For the class example, this is 0 for Class 1, 1.3 for Class
+\begin{equation}s = \sqrt{\frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}.}
+\label{eq:sd}\end{equation} For the class example, this is 0 for Class 1, 1.3 for Class
 2, and 3.4 for class 3. In the country data, the standard deviation of
 GDP is \$9450 and that of the democracy score (if it is treated as an
 interval-level variable) is 3.9, as shown in Table
