@@ -1658,7 +1658,12 @@ simple model, and require little further explanation:
 -   **Estimates of the regression coefficients** are here denoted with
     hats as $\hat{\alpha}$ and $\hat{\beta}_{1}, \hat{\beta}_{2}, \dots,
     \hat{\beta}_{k}$, and fitted (predicted) values for $Y_{i}$ are
-    given by The estimated regression coefficients are again
+    given by
+    \begin{equation}
+    \hat{Y}_{i}=\hat{\alpha}+\hat{\beta}_{1}X_{1i}+\hat{\beta}_{2}X_{2i}+\dots+\hat{\beta}_{k}X_{ki}.
+    (\#eq:Yhat)
+    \end{equation}
+    The estimated regression coefficients are again
     obtained with the method of **least squares** by finding the values
     for $\hat{\alpha},
     \hat{\beta}_{1}, \hat{\beta}_{2}, \dots, \hat{\beta}_{k}$ which make
