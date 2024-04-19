@@ -291,17 +291,25 @@ other examples are shown in Table \@ref(tab:t-probex), in the two-sample
 examples 5.3 and 5.4 separately for the two groups.
 
 When $Y$ is coded with values 0 and 1, $\hat{\pi}$ is also equal to the
-sample mean of $Y$, since \begin{equation}\bar{Y}=\frac{Y_{1}+Y_{2}+\dots+Y_{n}}{n}=
+sample mean of $Y$, since
+\begin{equation}
+\bar{Y}=\frac{Y_{1}+Y_{2}+\dots+Y_{n}}{n}=
 \frac{0+0+\dots+0+\overbrace{1+1+\dots+1}^{m \text{ ones}}}{n}=
 \frac{m}{n}=\hat{\pi}.
-\label{eq:pihat-as-ybar}\end{equation}
+(\#eq:pihat-as-ybar)
+\end{equation}
 
 ## Significance test of a single proportion {#s-probs-test1sample}
 
 ### Null and alternative hypotheses {#ss-probs-test1sample-hypotheses}
 
 A null hypothesis about a single population probability $\pi$ is of the
-form \begin{equation}H_{0}:\; \pi=\pi_{0} \end{equation}{\#eq:H0p} where $\pi_{0}$ is a given number which is either of
+form
+\begin{equation}
+H_{0}:\; \pi=\pi_{0}
+(\#eq:H0p)
+\end{equation}
+where $\pi_{0}$ is a given number which is either of
 specific interest or in some other sense a suitable benchmark in a given
 application. For example, in the voting example 5.1 we could consider
 $\pi_{0}=0.5$, i.e. that the referendum was too close to call. In the
