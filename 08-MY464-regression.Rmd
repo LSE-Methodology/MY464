@@ -1264,12 +1264,10 @@ variable $Y$. Graphically, this corresponds to a regression line in the
 population which is parallel to the $X$-axis (see plot (d) of Figure
 \@ref(fig:f-scatterplots) for an illustration of such a line in a sample).
 The hypothesis (\@ref(eq:H0betasimple)) can thus be expressed in words as
-
 \begin{equation}
 H_{0}:\; \text{\emph{There is no linear association between }}X \text{\emph{and }}Y\text{ \emph{in the population}}.
 (\#eq:H0betasimple2)
 \end{equation}
-
 Tests of this are usually carried out against a two-sided alternative hypothesis $H_{a}: \; \beta\ne 0$, and we will also concentrate on this case.
 
 Formulation (\@ref(eq:H0betasimple2)) implies that the hypothesis that
@@ -1666,12 +1664,7 @@ simple model, and require little further explanation:
 -   **Estimates of the regression coefficients** are here denoted with
     hats as $\hat{\alpha}$ and $\hat{\beta}_{1}, \hat{\beta}_{2}, \dots,
     \hat{\beta}_{k}$, and fitted (predicted) values for $Y_{i}$ are
-    given by
-    \begin{equation}
-    \hat{Y}_{i}=\hat{\alpha}+\hat{\beta}_{1}X_{1i}+\hat{\beta}_{2}X_{2i}+\dots+
-    \hat{\beta}_{k}X_{ki}.
-    (\#eq:Yhat)
-    \end{equation} The estimated regression coefficients are again
+    given by The estimated regression coefficients are again
     obtained with the method of **least squares** by finding the values
     for $\hat{\alpha},
     \hat{\beta}_{1}, \hat{\beta}_{2}, \dots, \hat{\beta}_{k}$ which make
