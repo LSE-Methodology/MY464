@@ -24,7 +24,7 @@ These may appear in two distinct roles:
     \@ref(c-tables) and the standard normal distribution in Chapter
     \@ref(c-probs). Their origins are explained in more detail below.
 
- To illustrate the concepts, we use data from the
+To illustrate the concepts, we use data from the
 Health Survey for England 2002 (HES).^[Carried out on behalf of The Department of Health by SCPR and the
 Department of Epidemiology and Public Health, UCL. Data used here
 were obtained from the UK Data Archive at <http://www.data-archive.ac.uk>.] One part of the survey was a
@@ -57,12 +57,22 @@ consider specific characteristics of the distribution, i.e. its
 *parameters* in the sense introduced in Section
 \@ref(s-probs-distribution). For the distribution of a continuous
 variable, the most important parameters are the **population mean**
-\begin{equation}\mu=\frac{\sum Y_{i}}{N}
-\label{eq:mu}\end{equation} and the **population variance**
-\begin{equation}\sigma^{2} = \frac{\sum (Y_{i}-\mu)^{2}}{N}
-\label{eq:sigma2}\end{equation} or, instead of the variance, the **population standard
-deviation** \begin{equation}\sigma = \sqrt{\frac{\sum (Y_{i}-\mu)^{2}}{N}}.
-\label{eq:sigma}\end{equation} Here $\mu$ and $\sigma$ are the lower-case Greek letters
+\begin{equation}
+\mu=\frac{\sum Y_{i}}{N}
+(\#eq:mu)
+\end{equation}
+ and the **population variance**
+\begin{equation}
+\sigma^{2} = \frac{\sum (Y_{i}-\mu)^{2}}{N}
+(\#eq:sigma2)
+\end{equation}
+ or, instead of the variance, the **population standard
+deviation**
+\begin{equation}
+\sigma = \sqrt{\frac{\sum (Y_{i}-\mu)^{2}}{N}}.
+(\#eq:sigma)
+\end{equation}
+ Here $\mu$ and $\sigma$ are the lower-case Greek letters
 “mu” and “sigma” respectively, and $\sigma^{2}$ is read “sigma squared”.
 It is common to use Greek letters for population parameters, as we did
 also for the probability parameter $\pi$ in Chapter \@ref(c-probs).
@@ -90,13 +100,25 @@ The population formulas (\@ref(eq:mu))–(\@ref(eq:sigma)) clearly resemble thos
 of some sample statistics introduced in Chapter \@ref(c-descr1),
 specifically the *sample* mean, variance and standard deviation
 
-\begin{equation}\bar{Y}=\frac{\sum Y_{i}}{n}, \label{eq:Ybar-ch6}\end{equation}
+\begin{equation}
+\bar{Y}=\frac{\sum Y_{i}}{n}, 
+(\#eq:Ybar-ch6)
+\end{equation}
 
-\begin{equation}s^{2} = \frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}\label{eq:s2-ch6}\end{equation}
+
+\begin{equation}
+s^{2} = \frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}
+(\#eq:s2-ch6)
+\end{equation}
+
 
 <center>and</center>
 
-\begin{equation}s = \sqrt{\frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}}\label{eq:s-ch6}\end{equation}
+\begin{equation}
+s = \sqrt{\frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}}
+(\#eq:s-ch6)
+\end{equation}
+
 
 where the sums are now over the $n$
 observations in a sample. These can be used as descriptions of the
@@ -138,8 +160,12 @@ estimators certain mathematically desirable properties ($s^{2}$ is an
 *unbiased* estimate of $\sigma^{2}$, but $\hat{\sigma}^{2}$ below is
 not). This detail need not concern us here. In fact, the statistics
 which use $n$ instead,
-i.e. \begin{equation}\hat{\sigma}^{2}=\frac{\sum (Y_{i}-\bar{Y})^{2}}{n}
-\label{eq:s2b}\end{equation} for $\sigma^{2}$ and
+i.e.
+\begin{equation}
+\hat{\sigma}^{2}=\frac{\sum (Y_{i}-\bar{Y})^{2}}{n}
+(\#eq:s2b)
+\end{equation}
+ for $\sigma^{2}$ and
 $\hat{\sigma}=\sqrt{\hat{\sigma}^{2}}$ for $\sigma$, are also sensible
 estimates and very similar to $s^{2}$ and $s$ unless $n$ is very small.
 In general, there are often several possible sample statistics which
@@ -368,8 +394,12 @@ answer is “with a computer”. However, to explain an approach which is
 required for this in some computer packages and also to provide an
 alternative method which does not require a computer, we need to
 introduce one more new quantity. This is the **Z score**, which is
-defined as \begin{equation}Z = \frac{Y-\mu}{\sigma}
-\label{eq:Zscore}\end{equation} where $Y$ can be any value of the variable of interest.
+defined as
+\begin{equation}
+Z = \frac{Y-\mu}{\sigma}
+(\#eq:Zscore)
+\end{equation}
+ where $Y$ can be any value of the variable of interest.
 For example, in the blood pressure example the $Z$ scores corresponding
 to values 60 and 90 are $Z=(60-74.2)/11.3=-1.26$ and
 $Z=(90-74.2)/11.3=1.40$ respectively. The $Z$ score can be interpreted
@@ -612,10 +642,11 @@ variables with $\text{E}(Y_{nj})=0$ and
 $\text{var}(Y_{nj})=\sigma^{2}_{nj}$. Let $Z_{n}=\sum_{j=1}^{n} Y_{nj}$,
 and let $B^{2}_{n}=\text{var}(Z_{n})=\sum_{j=1}^{n} \sigma^{2}_{nj}$.
 Suppose also that the following condition holds: for every $\epsilon>0$,
-\begin{equation}\frac{1}{B_{n}^{2}}\,
-\sum_{j=1}^{n} \, \text{E}\{ Y_{nj}^{2} I(|Y_{nj}|\ge \epsilon B_{n})\}
-\rightarrow 0 \; \text{  as  } \; n\rightarrow \infty.
-\label{eq:lindeberg}\end{equation} Then
+\begin{equation}
+\frac{1}{B_{n}^{2}}\,\sum_{j=1}^{n} \, \text{E}\{ Y_{nj}^{2} I(|Y_{nj}|\ge \epsilon B_{n})\}\rightarrow 0 \; \text{  as  } \; n\rightarrow \infty.
+(\#eq:lindeberg)
+\end{equation}
+ Then
 $Z_{n}/B_{n} \stackrel{\mathcal{L}}{\longrightarrow} N(0,1)$.
 
 No, that will not come up in the examination. The theorem is given here
