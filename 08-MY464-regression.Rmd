@@ -456,9 +456,3 @@ makes it difficult to judge whether a value of the covariance for
 particular variables should be regarded as large or small. To remove
 this complication, we can standardise the sample covariance by dividing
 it by the standard deviations, to obtain the statistic
-\begin{equation}
-r = \frac{s_{xy}}{s_{x}s_{y}} = \frac{\sum\left(X_{i}-\bar{X}\right)\left(Y_{i}-\bar{Y}\right)}{\sqrt{\sum\left(X_{i}-\bar{X}\right)^{2} \sum\left(Y_{i}-\bar{Y}\right)^{2}}}
-\end{equation} This is the (sample) **correlation** coefficient, or
-correlation for short, between $X$ and $Y$. It is also often (e.g. in
-SPSS) known as *Pearson’s* correlation coefficient after Karl Pearson
-(of the $\chi^{2}$ test, see first footnote in Chapter 
