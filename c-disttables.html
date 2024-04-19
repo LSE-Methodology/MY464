@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MY451 Introduction to Quantitative Analysis</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="MY451 Introduction to Quantitative Analysis">
+  <meta name="generator" content="bookdown 0.1.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="MY451 Introduction to Quantitative Analysis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  <meta name="github-repo" content="kbenoit/MY451" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MY451 Introduction to Quantitative Analysis" />
+  
+  
+  
+
+<meta name="author" content="Jouni Kuha">
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="c-class0.html">
+
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Course information</a></li>
+<li class="chapter" data-level="2" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>2.1</b> What is the purpose of this course?</a></li>
+<li class="chapter" data-level="2.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>2.2</b> Some basic definitions</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>2.2.1</b> Subjects and variables</a></li>
+<li class="chapter" data-level="2.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>2.2.2</b> Types of variables</a></li>
+<li class="chapter" data-level="2.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>2.2.3</b> Description and inference</a></li>
+<li class="chapter" data-level="2.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>2.2.4</b> Association and causation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>2.3</b> Outline of the course</a></li>
+<li class="chapter" data-level="2.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>2.4</b> The use of mathematics and computing</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>2.4.1</b> Symbolic mathematics and mathematical notation</a></li>
+<li class="chapter" data-level="2.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>2.4.2</b> Computing</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>3</b> Descriptive statistics</a><ul>
+<li class="chapter" data-level="3.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>3.2</b> Example data sets</a></li>
+<li class="chapter" data-level="3.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>3.3</b> Single categorical variable</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>3.3.1</b> Describing the sample distribution</a></li>
+<li class="chapter" data-level="3.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>3.3.2</b> Tabular methods: Tables of frequencies</a></li>
+<li class="chapter" data-level="3.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>3.3.3</b> Graphical methods: Bar charts</a></li>
+<li class="chapter" data-level="3.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>3.3.4</b> Simple descriptive statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>3.4</b> Two categorical variables</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>3.4.1</b> Two-way contingency tables</a></li>
+<li class="chapter" data-level="3.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>3.4.2</b> Conditional proportions</a></li>
+<li class="chapter" data-level="3.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>3.4.3</b> Conditional distributions and associations</a></li>
+<li class="chapter" data-level="3.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>3.4.4</b> Describing an association using conditional proportions</a></li>
+<li class="chapter" data-level="3.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>3.4.5</b> A measure of association for ordinal variables</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>3.5</b> Sample distributions of a single continuous variable</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>3.5.1</b> Tabular methods</a></li>
+<li class="chapter" data-level="3.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>3.5.2</b> Graphical methods</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>3.6</b> Numerical descriptive statistics</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>3.6.1</b> Measures of central tendency</a></li>
+<li class="chapter" data-level="3.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>3.6.2</b> Measures of variation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>3.7</b> Associations which involve continuous variables</a></li>
+<li class="chapter" data-level="3.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>3.8</b> Presentation of tables and graphs</a></li>
+<li class="chapter" data-level="3.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>3.9</b> Appendix: Country data</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>4</b> Samples and populations</a><ul>
+<li class="chapter" data-level="4.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="c-samples.html"><a href="c-samples.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>4.1.1</b> Interpretation of confidence intervals</a></li>
+<li class="chapter" data-level="4.1.2" data-path="c-samples.html"><a href="c-samples.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>4.1.2</b> Confidence intervals vs. significance tests</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="c-samples.html"><a href="c-samples.html#s-probs-2samples"><i class="fa fa-check"></i><b>4.2</b> Inference for comparing two proportions</a></li>
+<li class="chapter" data-level="4.3" data-path="c-samples.html"><a href="c-samples.html#s-regression-dummies"><i class="fa fa-check"></i><b>4.3</b> Including categorical explanatory variables</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="c-samples.html"><a href="c-samples.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>4.3.1</b> Dummy variables</a></li>
+<li class="chapter" data-level="4.3.2" data-path="c-samples.html"><a href="c-samples.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>4.3.2</b> A second example</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="c-samples.html"><a href="c-samples.html#s-regression-rest"><i class="fa fa-check"></i><b>4.4</b> Other issues in linear regression modelling</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>5</b> Analysis of 3-way contingency tables</a></li>
+<li class="chapter" data-level="6" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>6</b> More statistics…</a></li>
+<li class="chapter" data-level="7" data-path="c-class0.html"><a href="c-class0.html"><i class="fa fa-check"></i><b>7</b> Computer classes</a><ul>
+<li class="chapter" data-level="7.1" data-path="c-class0.html"><a href="c-class0.html#general-instructions"><i class="fa fa-check"></i><b>7.1</b> General instructions</a></li>
+<li class="chapter" data-level="7.2" data-path="c-class0.html"><a href="c-class0.html#s-intro-SPSS"><i class="fa fa-check"></i><b>7.2</b> Introduction to SPSS</a></li>
+<li class="chapter" data-level="7.3" data-path="c-class0.html"><a href="c-class0.html#p-class1"><i class="fa fa-check"></i><b>7.3</b> WEEK 2 class: Descriptive statistics for categorical data, and entering data</a></li>
+<li><a href="c-class0.html#week-3-class-descriptive-statistics-for-continuous-variables"><span class="toc-section-number">7.4</span> WEEK 3 class:<br />
+Descriptive statistics for continuous variables</a></li>
+<li class="chapter" data-level="7.5" data-path="c-class0.html"><a href="c-class0.html#week-4-class-two-way-contingency-tables"><i class="fa fa-check"></i><b>7.5</b> WEEK 4 class: Two-way contingency tables</a></li>
+<li class="chapter" data-level="7.6" data-path="c-class0.html"><a href="c-class0.html#week-5-class-inference-for-two-population-means"><i class="fa fa-check"></i><b>7.6</b> WEEK 5 class: Inference for two population means</a></li>
+<li class="chapter" data-level="7.7" data-path="c-class0.html"><a href="c-class0.html#week-7-class-inference-for-population-proportions"><i class="fa fa-check"></i><b>7.7</b> WEEK 7 class: Inference for population proportions</a></li>
+<li class="chapter" data-level="7.8" data-path="c-class0.html"><a href="c-class0.html#week-7-class-correlation-and-simple-linear-regression-1"><i class="fa fa-check"></i><b>7.8</b> WEEK 7 class: Correlation and simple linear regression 1</a></li>
+<li class="chapter" data-level="7.9" data-path="c-class0.html"><a href="c-class0.html#week-8-class-simple-linear-regression-and-3-way-tables"><i class="fa fa-check"></i><b>7.9</b> WEEK 8 class: Simple linear regression and 3-way tables</a></li>
+<li class="chapter" data-level="7.10" data-path="c-class0.html"><a href="c-class0.html#week-9-class-multiple-linear-regression"><i class="fa fa-check"></i><b>7.10</b> WEEK 9 class: Multiple linear regression</a></li>
+<li class="chapter" data-level="7.11" data-path="c-class0.html"><a href="c-class0.html#week-10-class-review-and-multiple-linear-regression"><i class="fa fa-check"></i><b>7.11</b> WEEK 10 class: Review and Multiple linear regression</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="c-disttables.html"><a href="c-disttables.html"><i class="fa fa-check"></i><b>8</b> Statistical tables</a><ul>
+<li class="chapter" data-level="8.1" data-path="c-disttables.html"><a href="c-disttables.html#s-disttables-Z"><i class="fa fa-check"></i><b>8.1</b> Table of standard normal tail probabilities</a></li>
+<li class="chapter" data-level="8.2" data-path="c-disttables.html"><a href="c-disttables.html#s-disttables-t"><i class="fa fa-check"></i><b>8.2</b> Table of critical values for <span class="math inline">\(t\)</span>-distributions</a></li>
+<li class="chapter" data-level="8.3" data-path="c-disttables.html"><a href="c-disttables.html#s-disttables-chi2"><i class="fa fa-check"></i><b>8.3</b> Table of critical values for <span class="math inline">\(\chi^{2}\)</span> distributions</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY451 Introduction to Quantitative Analysis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="c-disttables" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Statistical tables</h1>
+<p>Explanation of the “Table of standard normal tail probabilities” in Section @ref(s_disttables_Z):</p>
+<ul>
+<li><p>The table shows, for values of <span class="math inline">\(Z\)</span> between 0 and 3.5, the probability that a value from the standard normal distribution is <em>larger than</em> <span class="math inline">\(Z\)</span> (i.e. the “right-hand” tail probabilities).</p>
+<ul>
+<li>For example, the probability of values larger than 0.50 is 0.3085.</li>
+</ul></li>
+<li><p>For negative values of <span class="math inline">\(Z\)</span>, the probability of values <em>smaller than</em> <span class="math inline">\(Z\)</span> (the “left-hand” tail probability) is equal to the right-hand tail probability for the corresponding positive value of <span class="math inline">\(Z\)</span>.</p>
+<ul>
+<li>For example, the probability of values smaller than <span class="math inline">\(-0.50\)</span> is also 0.3085.</li>
+</ul></li>
+</ul>
+
+<div id="s-disttables-Z" class="section level2">
+<h2><span class="header-section-number">8.1</span> Table of standard normal tail probabilities</h2>
+<p></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0.00</td>
+<td align="left">0.5000</td>
+<td align="left">0.50</td>
+<td align="left">0.3085</td>
+<td align="left">1.00</td>
+<td align="left">0.1587</td>
+<td align="left">1.50</td>
+<td align="left">0.0668</td>
+<td align="left">2.00</td>
+<td align="left">0.0228</td>
+<td align="left">2.50</td>
+<td align="left">0.0062</td>
+</tr>
+<tr class="even">
+<td align="left">0.01</td>
+<td align="left">0.4960</td>
+<td align="left">0.51</td>
+<td align="left">0.3050</td>
+<td align="left">1.01</td>
+<td align="left">0.1562</td>
+<td align="left">1.51</td>
+<td align="left">0.0655</td>
+<td align="left">2.01</td>
+<td align="left">0.0222</td>
+<td align="left">2.52</td>
+<td align="left">0.0059</td>
+</tr>
+<tr class="odd">
+<td align="left">0.02</td>
+<td align="left">0.4920</td>
+<td align="left">0.52</td>
+<td align="left">0.3015</td>
+<td align="left">1.02</td>
+<td align="left">0.1539</td>
+<td align="left">1.52</td>
+<td align="left">0.0643</td>
+<td align="left">2.02</td>
+<td align="left">0.0217</td>
+<td align="left">2.54</td>
+<td align="left">0.0055</td>
+</tr>
+<tr class="even">
+<td align="left">0.03</td>
+<td align="left">0.4880</td>
+<td align="left">0.53</td>
+<td align="left">0.2981</td>
+<td align="left">1.03</td>
+<td align="left">0.1515</td>
+<td align="left">1.53</td>
+<td align="left">0.0630</td>
+<td align="left">2.03</td>
+<td align="left">0.0212</td>
+<td align="left">2.56</td>
+<td align="left">0.0052</td>
+</tr>
+<tr class="odd">
+<td align="left">0.04</td>
+<td align="left">0.4840</td>
+<td align="left">0.54</td>
+<td align="left">0.2946</td>
+<td align="left">1.04</td>
+<td align="left">0.1492</td>
+<td align="left">1.54</td>
+<td align="left">0.0618</td>
+<td align="left">2.04</td>
+<td align="left">0.0207</td>
+<td align="left">2.58</td>
+<td align="left">0.0049</td>
+</tr>
+<tr class="even">
+<td align="left">0.05</td>
+<td align="left">0.4801</td>
+<td align="left">0.55</td>
+<td align="left">0.2912</td>
+<td align="left">1.05</td>
+<td align="left">0.1469</td>
+<td align="left">1.55</td>
+<td align="left">0.0606</td>
+<td align="left">2.05</td>
+<td align="left">0.0202</td>
+<td align="left">2.60</td>
+<td align="left">0.0047</td>
+</tr>
+<tr class="odd">
+<td align="left">0.06</td>
+<td align="left">0.4761</td>
+<td align="left">0.56</td>
+<td align="left">0.2877</td>
+<td align="left">1.06</td>
+<td align="left">0.1446</td>
+<td align="left">1.56</td>
+<td align="left">0.0594</td>
+<td align="left">2.06</td>
+<td align="left">0.0197</td>
+<td align="left">2.62</td>
+<td align="left">0.0044</td>
+</tr>
+<tr class="even">
+<td align="left">0.07</td>
+<td align="left">0.4721</td>
+<td align="left">0.57</td>
+<td align="left">0.2843</td>
+<td align="left">1.07</td>
+<td align="left">0.1423</td>
+<td align="left">1.57</td>
+<td align="left">0.0582</td>
+<td align="left">2.07</td>
+<td align="left">0.0192</td>
+<td align="left">2.64</td>
+<td align="left">0.0041</td>
+</tr>
+<tr class="odd">
+<td align="left">0.08</td>
+<td align="left">0.4681</td>
+<td align="left">0.58</td>
+<td align="left">0.2810</td>
+<td align="left">1.08</td>
+<td align="left">0.1401</td>
+<td align="left">1.58</td>
+<td align="left">0.0571</td>
+<td align="left">2.08</td>
+<td align="left">0.0188</td>
+<td align="left">2.66</td>
+<td align="left">0.0039</td>
+</tr>
+<tr class="even">
+<td align="left">0.09</td>
+<td align="left">0.4641</td>
+<td align="left">0.59</td>
+<td align="left">0.2776</td>
+<td align="left">1.09</td>
+<td align="left">0.1379</td>
+<td align="left">1.59</td>
+<td align="left">0.0559</td>
+<td align="left">2.09</td>
+<td align="left">0.0183</td>
+<td align="left">2.68</td>
+<td align="left">0.0037</td>
+</tr>
+<tr class="odd">
+<td align="left">0.10</td>
+<td align="left">0.4602</td>
+<td align="left">0.60</td>
+<td align="left">0.2743</td>
+<td align="left">1.10</td>
+<td align="left">0.1357</td>
+<td align="left">1.60</td>
+<td align="left">0.0548</td>
+<td align="left">2.10</td>
+<td align="left">0.0179</td>
+<td align="left">2.70</td>
+<td align="left">0.0035</td>
+</tr>
+<tr class="even">
+<td align="left">0.11</td>
+<td align="left">0.4562</td>
+<td align="left">0.61</td>
+<td align="left">0.2709</td>
+<td align="left">1.11</td>
+<td align="left">0.1335</td>
+<td align="left">1.61</td>
+<td align="left">0.0537</td>
+<td align="left">2.11</td>
+<td align="left">0.0174</td>
+<td align="left">2.72</td>
+<td align="left">0.0033</td>
+</tr>
+<tr class="odd">
+<td align="left">0.12</td>
+<td align="left">0.4522</td>
+<td align="left">0.62</td>
+<td align="left">0.2676</td>
+<td align="left">1.12</td>
+<td align="left">0.1314</td>
+<td align="left">1.62</td>
+<td align="left">0.0526</td>
+<td align="left">2.12</td>
+<td align="left">0.0170</td>
+<td align="left">2.74</td>
+<td align="left">0.0031</td>
+</tr>
+<tr class="even">
+<td align="left">0.13</td>
+<td align="left">0.4483</td>
+<td align="left">0.63</td>
+<td align="left">0.2643</td>
+<td align="left">1.13</td>
+<td align="left">0.1292</td>
+<td align="left">1.63</td>
+<td align="left">0.0516</td>
+<td align="left">2.13</td>
+<td align="left">0.0166</td>
+<td align="left">2.76</td>
+<td align="left">0.0029</td>
+</tr>
+<tr class="odd">
+<td align="left">0.14</td>
+<td align="left">0.4443</td>
+<td align="left">0.64</td>
+<td align="left">0.2611</td>
+<td align="left">1.14</td>
+<td align="left">0.1271</td>
+<td align="left">1.64</td>
+<td align="left">0.0505</td>
+<td align="left">2.14</td>
+<td align="left">0.0162</td>
+<td align="left">2.78</td>
+<td align="left">0.0027</td>
+</tr>
+<tr class="even">
+<td align="left">0.15</td>
+<td align="left">0.4404</td>
+<td align="left">0.65</td>
+<td align="left">0.2578</td>
+<td align="left">1.15</td>
+<td align="left">0.1251</td>
+<td align="left">1.65</td>
+<td align="left">0.0495</td>
+<td align="left">2.15</td>
+<td align="left">0.0158</td>
+<td align="left">2.80</td>
+<td align="left">0.0026</td>
+</tr>
+<tr class="odd">
+<td align="left">0.16</td>
+<td align="left">0.4364</td>
+<td align="left">0.66</td>
+<td align="left">0.2546</td>
+<td align="left">1.16</td>
+<td align="left">0.1230</td>
+<td align="left">1.66</td>
+<td align="left">0.0485</td>
+<td align="left">2.16</td>
+<td align="left">0.0154</td>
+<td align="left">2.82</td>
+<td align="left">0.0024</td>
+</tr>
+<tr class="even">
+<td align="left">0.17</td>
+<td align="left">0.4325</td>
+<td align="left">0.67</td>
+<td align="left">0.2514</td>
+<td align="left">1.17</td>
+<td align="left">0.1210</td>
+<td align="left">1.67</td>
+<td align="left">0.0475</td>
+<td align="left">2.17</td>
+<td align="left">0.0150</td>
+<td align="left">2.84</td>
+<td align="left">0.0023</td>
+</tr>
+<tr class="odd">
+<td align="left">0.18</td>
+<td align="left">0.4286</td>
+<td align="left">0.68</td>
+<td align="left">0.2483</td>
+<td align="left">1.18</td>
+<td align="left">0.1190</td>
+<td align="left">1.68</td>
+<td align="left">0.0465</td>
+<td align="left">2.18</td>
+<td align="left">0.0146</td>
+<td align="left">2.86</td>
+<td align="left">0.0021</td>
+</tr>
+<tr class="even">
+<td align="left">0.19</td>
+<td align="left">0.4247</td>
+<td align="left">0.69</td>
+<td align="left">0.2451</td>
+<td align="left">1.19</td>
+<td align="left">0.1170</td>
+<td align="left">1.69</td>
+<td align="left">0.0455</td>
+<td align="left">2.19</td>
+<td align="left">0.0143</td>
+<td align="left">2.88</td>
+<td align="left">0.0020</td>
+</tr>
+<tr class="odd">
+<td align="left">0.20</td>
+<td align="left">0.4207</td>
+<td align="left">0.70</td>
+<td align="left">0.2420</td>
+<td align="left">1.20</td>
+<td align="left">0.1151</td>
+<td align="left">1.70</td>
+<td align="left">0.0446</td>
+<td align="left">2.20</td>
+<td align="left">0.0139</td>
+<td align="left">2.90</td>
+<td align="left">0.0019</td>
+</tr>
+<tr class="even">
+<td align="left">0.21</td>
+<td align="left">0.4168</td>
+<td align="left">0.71</td>
+<td align="left">0.2389</td>
+<td align="left">1.21</td>
+<td align="left">0.1131</td>
+<td align="left">1.71</td>
+<td align="left">0.0436</td>
+<td align="left">2.21</td>
+<td align="left">0.0136</td>
+<td align="left">2.92</td>
+<td align="left">0.0018</td>
+</tr>
+<tr class="odd">
+<td align="left">0.22</td>
+<td align="left">0.4129</td>
+<td align="left">0.72</td>
+<td align="left">0.2358</td>
+<td align="left">1.22</td>
+<td align="left">0.1112</td>
+<td align="left">1.72</td>
+<td align="left">0.0427</td>
+<td align="left">2.22</td>
+<td align="left">0.0132</td>
+<td align="left">2.94</td>
+<td align="left">0.0016</td>
+</tr>
+<tr class="even">
+<td align="left">0.23</td>
+<td align="left">0.4090</td>
+<td align="left">0.73</td>
+<td align="left">0.2327</td>
+<td align="left">1.23</td>
+<td align="left">0.1093</td>
+<td align="left">1.73</td>
+<td align="left">0.0418</td>
+<td align="left">2.23</td>
+<td align="left">0.0129</td>
+<td align="left">2.96</td>
+<td align="left">0.0015</td>
+</tr>
+<tr class="odd">
+<td align="left">0.24</td>
+<td align="left">0.4052</td>
+<td align="left">0.74</td>
+<td align="left">0.2296</td>
+<td align="left">1.24</td>
+<td align="left">0.1075</td>
+<td align="left">1.74</td>
+<td align="left">0.0409</td>
+<td align="left">2.24</td>
+<td align="left">0.0125</td>
+<td align="left">2.98</td>
+<td align="left">0.0014</td>
+</tr>
+<tr class="even">
+<td align="left">0.25</td>
+<td align="left">0.4013</td>
+<td align="left">0.75</td>
+<td align="left">0.2266</td>
+<td align="left">1.25</td>
+<td align="left">0.1056</td>
+<td align="left">1.75</td>
+<td align="left">0.0401</td>
+<td align="left">2.25</td>
+<td align="left">0.0122</td>
+<td align="left">3.00</td>
+<td align="left">0.0013</td>
+</tr>
+<tr class="odd">
+<td align="left">0.26</td>
+<td align="left">0.3974</td>
+<td align="left">0.76</td>
+<td align="left">0.2236</td>
+<td align="left">1.26</td>
+<td align="left">0.1038</td>
+<td align="left">1.76</td>
+<td align="left">0.0392</td>
+<td align="left">2.26</td>
+<td align="left">0.0119</td>
+<td align="left">3.02</td>
+<td align="left">0.0013</td>
+</tr>
+<tr class="even">
+<td align="left">0.27</td>
+<td align="left">0.3936</td>
+<td align="left">0.77</td>
+<td align="left">0.2206</td>
+<td align="left">1.27</td>
+<td align="left">0.1020</td>
+<td align="left">1.77</td>
+<td align="left">0.0384</td>
+<td align="left">2.27</td>
+<td align="left">0.0116</td>
+<td align="left">3.04</td>
+<td align="left">0.0012</td>
+</tr>
+<tr class="odd">
+<td align="left">0.28</td>
+<td align="left">0.3897</td>
+<td align="left">0.78</td>
+<td align="left">0.2177</td>
+<td align="left">1.28</td>
+<td align="left">0.1003</td>
+<td align="left">1.78</td>
+<td align="left">0.0375</td>
+<td align="left">2.28</td>
+<td align="left">0.0113</td>
+<td align="left">3.06</td>
+<td align="left">0.0011</td>
+</tr>
+<tr class="even">
+<td align="left">0.29</td>
+<td align="left">0.3859</td>
+<td align="left">0.79</td>
+<td align="left">0.2148</td>
+<td align="left">1.29</td>
+<td align="left">0.0985</td>
+<td align="left">1.79</td>
+<td align="left">0.0367</td>
+<td align="left">2.29</td>
+<td align="left">0.0110</td>
+<td align="left">3.08</td>
+<td align="left">0.0010</td>
+</tr>
+<tr class="odd">
+<td align="left">0.30</td>
+<td align="left">0.3821</td>
+<td align="left">0.80</td>
+<td align="left">0.2119</td>
+<td align="left">1.30</td>
+<td align="left">0.0968</td>
+<td align="left">1.80</td>
+<td align="left">0.0359</td>
+<td align="left">2.30</td>
+<td align="left">0.0107</td>
+<td align="left">3.10</td>
+<td align="left">0.0010</td>
+</tr>
+<tr class="even">
+<td align="left">0.31</td>
+<td align="left">0.3783</td>
+<td align="left">0.81</td>
+<td align="left">0.2090</td>
+<td align="left">1.31</td>
+<td align="left">0.0951</td>
+<td align="left">1.81</td>
+<td align="left">0.0351</td>
+<td align="left">2.31</td>
+<td align="left">0.0104</td>
+<td align="left">3.12</td>
+<td align="left">0.0009</td>
+</tr>
+<tr class="odd">
+<td align="left">0.32</td>
+<td align="left">0.3745</td>
+<td align="left">0.82</td>
+<td align="left">0.2061</td>
+<td align="left">1.32</td>
+<td align="left">0.0934</td>
+<td align="left">1.82</td>
+<td align="left">0.0344</td>
+<td align="left">2.32</td>
+<td align="left">0.0102</td>
+<td align="left">3.14</td>
+<td align="left">0.0008</td>
+</tr>
+<tr class="even">
+<td align="left">0.33</td>
+<td align="left">0.3707</td>
+<td align="left">0.83</td>
+<td align="left">0.2033</td>
+<td align="left">1.33</td>
+<td align="left">0.0918</td>
+<td align="left">1.83</td>
+<td align="left">0.0336</td>
+<td align="left">2.33</td>
+<td align="left">0.0099</td>
+<td align="left">3.16</td>
+<td align="left">0.0008</td>
+</tr>
+<tr class="odd">
+<td align="left">0.34</td>
+<td align="left">0.3669</td>
+<td align="left">0.84</td>
+<td align="left">0.2005</td>
+<td align="left">1.34</td>
+<td align="left">0.0901</td>
+<td align="left">1.84</td>
+<td align="left">0.0329</td>
+<td align="left">2.34</td>
+<td align="left">0.0096</td>
+<td align="left">3.18</td>
+<td align="left">0.0007</td>
+</tr>
+<tr class="even">
+<td align="left">0.35</td>
+<td align="left">0.3632</td>
+<td align="left">0.85</td>
+<td align="left">0.1977</td>
+<td align="left">1.35</td>
+<td align="left">0.0885</td>
+<td align="left">1.85</td>
+<td align="left">0.0322</td>
+<td align="left">2.35</td>
+<td align="left">0.0094</td>
+<td align="left">3.20</td>
+<td align="left">0.0007</td>
+</tr>
+<tr class="odd">
+<td align="left">0.36</td>
+<td align="left">0.3594</td>
+<td align="left">0.86</td>
+<td align="left">0.1949</td>
+<td align="left">1.36</td>
+<td align="left">0.0869</td>
+<td align="left">1.86</td>
+<td align="left">0.0314</td>
+<td align="left">2.36</td>
+<td align="left">0.0091</td>
+<td align="left">3.22</td>
+<td align="left">0.0006</td>
+</tr>
+<tr class="even">
+<td align="left">0.37</td>
+<td align="left">0.3557</td>
+<td align="left">0.87</td>
+<td align="left">0.1922</td>
+<td align="left">1.37</td>
+<td align="left">0.0853</td>
+<td align="left">1.87</td>
+<td align="left">0.0307</td>
+<td align="left">2.37</td>
+<td align="left">0.0089</td>
+<td align="left">3.24</td>
+<td align="left">0.0006</td>
+</tr>
+<tr class="odd">
+<td align="left">0.38</td>
+<td align="left">0.3520</td>
+<td align="left">0.88</td>
+<td align="left">0.1894</td>
+<td align="left">1.38</td>
+<td align="left">0.0838</td>
+<td align="left">1.88</td>
+<td align="left">0.0301</td>
+<td align="left">2.38</td>
+<td align="left">0.0087</td>
+<td align="left">3.26</td>
+<td align="left">0.0006</td>
+</tr>
+<tr class="even">
+<td align="left">0.39</td>
+<td align="left">0.3483</td>
+<td align="left">0.89</td>
+<td align="left">0.1867</td>
+<td align="left">1.39</td>
+<td align="left">0.0823</td>
+<td align="left">1.89</td>
+<td align="left">0.0294</td>
+<td align="left">2.39</td>
+<td align="left">0.0084</td>
+<td align="left">3.28</td>
+<td align="left">0.0005</td>
+</tr>
+<tr class="odd">
+<td align="left">0.40</td>
+<td align="left">0.3446</td>
+<td align="left">0.90</td>
+<td align="left">0.1841</td>
+<td align="left">1.40</td>
+<td align="left">0.0808</td>
+<td align="left">1.90</td>
+<td align="left">0.0287</td>
+<td align="left">2.40</td>
+<td align="left">0.0082</td>
+<td align="left">3.30</td>
+<td align="left">0.0005</td>
+</tr>
+<tr class="even">
+<td align="left">0.41</td>
+<td align="left">0.3409</td>
+<td align="left">0.91</td>
+<td align="left">0.1814</td>
+<td align="left">1.41</td>
+<td align="left">0.0793</td>
+<td align="left">1.91</td>
+<td align="left">0.0281</td>
+<td align="left">2.41</td>
+<td align="left">0.0080</td>
+<td align="left">3.32</td>
+<td align="left">0.0005</td>
+</tr>
+<tr class="odd">
+<td align="left">0.42</td>
+<td align="left">0.3372</td>
+<td align="left">0.92</td>
+<td align="left">0.1788</td>
+<td align="left">1.42</td>
+<td align="left">0.0778</td>
+<td align="left">1.92</td>
+<td align="left">0.0274</td>
+<td align="left">2.42</td>
+<td align="left">0.0078</td>
+<td align="left">3.34</td>
+<td align="left">0.0004</td>
+</tr>
+<tr class="even">
+<td align="left">0.43</td>
+<td align="left">0.3336</td>
+<td align="left">0.93</td>
+<td align="left">0.1762</td>
+<td align="left">1.43</td>
+<td align="left">0.0764</td>
+<td align="left">1.93</td>
+<td align="left">0.0268</td>
+<td align="left">2.43</td>
+<td align="left">0.0075</td>
+<td align="left">3.36</td>
+<td align="left">0.0004</td>
+</tr>
+<tr class="odd">
+<td align="left">0.44</td>
+<td align="left">0.3300</td>
+<td align="left">0.94</td>
+<td align="left">0.1736</td>
+<td align="left">1.44</td>
+<td align="left">0.0749</td>
+<td align="left">1.94</td>
+<td align="left">0.0262</td>
+<td align="left">2.44</td>
+<td align="left">0.0073</td>
+<td align="left">3.38</td>
+<td align="left">0.0004</td>
+</tr>
+<tr class="even">
+<td align="left">0.45</td>
+<td align="left">0.3264</td>
+<td align="left">0.95</td>
+<td align="left">0.1711</td>
+<td align="left">1.45</td>
+<td align="left">0.0735</td>
+<td align="left">1.95</td>
+<td align="left">0.0256</td>
+<td align="left">2.45</td>
+<td align="left">0.0071</td>
+<td align="left">3.40</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="odd">
+<td align="left">0.46</td>
+<td align="left">0.3228</td>
+<td align="left">0.96</td>
+<td align="left">0.1685</td>
+<td align="left">1.46</td>
+<td align="left">0.0721</td>
+<td align="left">1.96</td>
+<td align="left">0.0250</td>
+<td align="left">2.46</td>
+<td align="left">0.0069</td>
+<td align="left">3.42</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="even">
+<td align="left">0.47</td>
+<td align="left">0.3192</td>
+<td align="left">0.97</td>
+<td align="left">0.1660</td>
+<td align="left">1.47</td>
+<td align="left">0.0708</td>
+<td align="left">1.97</td>
+<td align="left">0.0244</td>
+<td align="left">2.47</td>
+<td align="left">0.0068</td>
+<td align="left">3.44</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="odd">
+<td align="left">0.48</td>
+<td align="left">0.3156</td>
+<td align="left">0.98</td>
+<td align="left">0.1635</td>
+<td align="left">1.48</td>
+<td align="left">0.0694</td>
+<td align="left">1.98</td>
+<td align="left">0.0239</td>
+<td align="left">2.48</td>
+<td align="left">0.0066</td>
+<td align="left">3.46</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="even">
+<td align="left">0.49</td>
+<td align="left">0.3121</td>
+<td align="left">0.99</td>
+<td align="left">0.1611</td>
+<td align="left">1.49</td>
+<td align="left">0.0681</td>
+<td align="left">1.99</td>
+<td align="left">0.0233</td>
+<td align="left">2.49</td>
+<td align="left">0.0064</td>
+<td align="left">3.48</td>
+<td align="left">0.0003</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div id="s-disttables-t" class="section level2">
+<h2><span class="header-section-number">8.2</span> Table of critical values for <span class="math inline">\(t\)</span>-distributions</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">df</td>
+<td align="right">0.100</td>
+<td align="right">0.050</td>
+<td align="right">0.025</td>
+<td align="right">0.010</td>
+<td align="right">0.005</td>
+<td align="right">0.001</td>
+<td align="right">0.0005</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="right">3.078</td>
+<td align="right">6.314</td>
+<td align="right">12.706</td>
+<td align="right">31.821</td>
+<td align="right">63.657</td>
+<td align="right">318.309</td>
+<td align="right">636.619</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="right">1.886</td>
+<td align="right">2.920</td>
+<td align="right">4.303</td>
+<td align="right">6.965</td>
+<td align="right">9.925</td>
+<td align="right">22.327</td>
+<td align="right">31.599</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="right">1.638</td>
+<td align="right">2.353</td>
+<td align="right">3.182</td>
+<td align="right">4.541</td>
+<td align="right">5.841</td>
+<td align="right">10.215</td>
+<td align="right">12.924</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="right">1.533</td>
+<td align="right">2.132</td>
+<td align="right">2.776</td>
+<td align="right">3.747</td>
+<td align="right">4.604</td>
+<td align="right">7.173</td>
+<td align="right">8.610</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="right">1.476</td>
+<td align="right">2.015</td>
+<td align="right">2.571</td>
+<td align="right">3.365</td>
+<td align="right">4.032</td>
+<td align="right">5.893</td>
+<td align="right">6.869</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="right">1.440</td>
+<td align="right">1.943</td>
+<td align="right">2.447</td>
+<td align="right">3.143</td>
+<td align="right">3.707</td>
+<td align="right">5.208</td>
+<td align="right">5.959</td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="right">1.415</td>
+<td align="right">1.895</td>
+<td align="right">2.365</td>
+<td align="right">2.998</td>
+<td align="right">3.499</td>
+<td align="right">4.785</td>
+<td align="right">5.408</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="right">1.397</td>
+<td align="right">1.860</td>
+<td align="right">2.306</td>
+<td align="right">2.896</td>
+<td align="right">3.355</td>
+<td align="right">4.501</td>
+<td align="right">5.041</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="right">1.383</td>
+<td align="right">1.833</td>
+<td align="right">2.262</td>
+<td align="right">2.821</td>
+<td align="right">3.250</td>
+<td align="right">4.297</td>
+<td align="right">4.781</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="right">1.372</td>
+<td align="right">1.812</td>
+<td align="right">2.228</td>
+<td align="right">2.764</td>
+<td align="right">3.169</td>
+<td align="right">4.144</td>
+<td align="right">4.587</td>
+</tr>
+<tr class="even">
+<td align="left">11</td>
+<td align="right">1.363</td>
+<td align="right">1.796</td>
+<td align="right">2.201</td>
+<td align="right">2.718</td>
+<td align="right">3.106</td>
+<td align="right">4.025</td>
+<td align="right">4.437</td>
+</tr>
+<tr class="odd">
+<td align="left">12</td>
+<td align="right">1.356</td>
+<td align="right">1.782</td>
+<td align="right">2.179</td>
+<td align="right">2.681</td>
+<td align="right">3.055</td>
+<td align="right">3.930</td>
+<td align="right">4.318</td>
+</tr>
+<tr class="even">
+<td align="left">13</td>
+<td align="right">1.350</td>
+<td align="right">1.771</td>
+<td align="right">2.160</td>
+<td align="right">2.650</td>
+<td align="right">3.012</td>
+<td align="right">3.852</td>
+<td align="right">4.221</td>
+</tr>
+<tr class="odd">
+<td align="left">14</td>
+<td align="right">1.345</td>
+<td align="right">1.761</td>
+<td align="right">2.145</td>
+<td align="right">2.624</td>
+<td align="right">2.977</td>
+<td align="right">3.787</td>
+<td align="right">4.140</td>
+</tr>
+<tr class="even">
+<td align="left">15</td>
+<td align="right">1.341</td>
+<td align="right">1.753</td>
+<td align="right">2.131</td>
+<td align="right">2.602</td>
+<td align="right">2.947</td>
+<td align="right">3.733</td>
+<td align="right">4.073</td>
+</tr>
+<tr class="odd">
+<td align="left">16</td>
+<td align="right">1.337</td>
+<td align="right">1.746</td>
+<td align="right">2.120</td>
+<td align="right">2.583</td>
+<td align="right">2.921</td>
+<td align="right">3.686</td>
+<td align="right">4.015</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="right">1.333</td>
+<td align="right">1.740</td>
+<td align="right">2.110</td>
+<td align="right">2.567</td>
+<td align="right">2.898</td>
+<td align="right">3.646</td>
+<td align="right">3.965</td>
+</tr>
+<tr class="odd">
+<td align="left">18</td>
+<td align="right">1.330</td>
+<td align="right">1.734</td>
+<td align="right">2.101</td>
+<td align="right">2.552</td>
+<td align="right">2.878</td>
+<td align="right">3.610</td>
+<td align="right">3.922</td>
+</tr>
+<tr class="even">
+<td align="left">19</td>
+<td align="right">1.328</td>
+<td align="right">1.729</td>
+<td align="right">2.093</td>
+<td align="right">2.539</td>
+<td align="right">2.861</td>
+<td align="right">3.579</td>
+<td align="right">3.883</td>
+</tr>
+<tr class="odd">
+<td align="left">20</td>
+<td align="right">1.325</td>
+<td align="right">1.725</td>
+<td align="right">2.086</td>
+<td align="right">2.528</td>
+<td align="right">2.845</td>
+<td align="right">3.552</td>
+<td align="right">3.850</td>
+</tr>
+<tr class="even">
+<td align="left">21</td>
+<td align="right">1.323</td>
+<td align="right">1.721</td>
+<td align="right">2.080</td>
+<td align="right">2.518</td>
+<td align="right">2.831</td>
+<td align="right">3.527</td>
+<td align="right">3.819</td>
+</tr>
+<tr class="odd">
+<td align="left">22</td>
+<td align="right">1.321</td>
+<td align="right">1.717</td>
+<td align="right">2.074</td>
+<td align="right">2.508</td>
+<td align="right">2.819</td>
+<td align="right">3.505</td>
+<td align="right">3.792</td>
+</tr>
+<tr class="even">
+<td align="left">23</td>
+<td align="right">1.319</td>
+<td align="right">1.714</td>
+<td align="right">2.069</td>
+<td align="right">2.500</td>
+<td align="right">2.807</td>
+<td align="right">3.485</td>
+<td align="right">3.768</td>
+</tr>
+<tr class="odd">
+<td align="left">24</td>
+<td align="right">1.318</td>
+<td align="right">1.711</td>
+<td align="right">2.064</td>
+<td align="right">2.492</td>
+<td align="right">2.797</td>
+<td align="right">3.467</td>
+<td align="right">3.745</td>
+</tr>
+<tr class="even">
+<td align="left">25</td>
+<td align="right">1.316</td>
+<td align="right">1.708</td>
+<td align="right">2.060</td>
+<td align="right">2.485</td>
+<td align="right">2.787</td>
+<td align="right">3.450</td>
+<td align="right">3.725</td>
+</tr>
+<tr class="odd">
+<td align="left">26</td>
+<td align="right">1.315</td>
+<td align="right">1.706</td>
+<td align="right">2.056</td>
+<td align="right">2.479</td>
+<td align="right">2.779</td>
+<td align="right">3.435</td>
+<td align="right">3.707</td>
+</tr>
+<tr class="even">
+<td align="left">27</td>
+<td align="right">1.314</td>
+<td align="right">1.703</td>
+<td align="right">2.052</td>
+<td align="right">2.473</td>
+<td align="right">2.771</td>
+<td align="right">3.421</td>
+<td align="right">3.690</td>
+</tr>
+<tr class="odd">
+<td align="left">28</td>
+<td align="right">1.313</td>
+<td align="right">1.701</td>
+<td align="right">2.048</td>
+<td align="right">2.467</td>
+<td align="right">2.763</td>
+<td align="right">3.408</td>
+<td align="right">3.674</td>
+</tr>
+<tr class="even">
+<td align="left">29</td>
+<td align="right">1.311</td>
+<td align="right">1.699</td>
+<td align="right">2.045</td>
+<td align="right">2.462</td>
+<td align="right">2.756</td>
+<td align="right">3.396</td>
+<td align="right">3.659</td>
+</tr>
+<tr class="odd">
+<td align="left">30</td>
+<td align="right">1.310</td>
+<td align="right">1.697</td>
+<td align="right">2.042</td>
+<td align="right">2.457</td>
+<td align="right">2.750</td>
+<td align="right">3.385</td>
+<td align="right">3.646</td>
+</tr>
+<tr class="even">
+<td align="left">40</td>
+<td align="right">1.303</td>
+<td align="right">1.684</td>
+<td align="right">2.021</td>
+<td align="right">2.423</td>
+<td align="right">2.704</td>
+<td align="right">3.307</td>
+<td align="right">3.551</td>
+</tr>
+<tr class="odd">
+<td align="left">60</td>
+<td align="right">1.296</td>
+<td align="right">1.671</td>
+<td align="right">2.000</td>
+<td align="right">2.390</td>
+<td align="right">2.660</td>
+<td align="right">3.232</td>
+<td align="right">3.460</td>
+</tr>
+<tr class="even">
+<td align="left">120</td>
+<td align="right">1.289</td>
+<td align="right">1.658</td>
+<td align="right">1.980</td>
+<td align="right">2.358</td>
+<td align="right">2.617</td>
+<td align="right">3.160</td>
+<td align="right">3.373</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+<td align="right">1.282</td>
+<td align="right">1.645</td>
+<td align="right">1.960</td>
+<td align="right">2.326</td>
+<td align="right">2.576</td>
+<td align="right">3.090</td>
+<td align="right">3.291</td>
+</tr>
+</tbody>
+</table>
+<p><em>Explanation</em>: For example, the value 3.078 in the top left corner indicates that for a <span class="math inline">\(t\)</span>-distribution with 1 degree of freedom the probability of values greater than 3.078 is 0.100. The last row shows critical values for the standard normal distribution.</p>
+
+</div>
+<div id="s-disttables-chi2" class="section level2">
+<h2><span class="header-section-number">8.3</span> Table of critical values for <span class="math inline">\(\chi^{2}\)</span> distributions</h2>
+<hr />
+<p>df 0.100 0.050 0.010 0.001 1 2.71 3.84 6.63 10.828 2 4.61 5.99 9.21 13.816 3 6.25 7.81 11.34 16.266 4 7.78 9.49 13.28 18.467 5 9.24 11.07 15.09 20.515 6 10.64 12.59 16.81 22.458 7 12.02 14.07 18.48 24.322 8 13.36 15.51 20.09 26.124 9 14.68 16.92 21.67 27.877 10 15.99 18.31 23.21 29.588 11 17.28 19.68 24.72 31.264 12 18.55 21.03 26.22 32.909 13 19.81 22.36 27.69 34.528 14 21.06 23.68 29.14 36.123 15 22.31 25.00 30.58 37.697 16 23.54 26.30 32.00 39.252 17 24.77 27.59 33.41 40.790 18 25.99 28.87 34.81 42.312 19 27.20 30.14 36.19 43.820 20 28.41 31.41 37.57 45.315 25 34.38 37.65 44.31 52.620 30 40.26 43.77 50.89 59.703 40 51.81 55.76 63.69 73.402 50 63.17 67.50 76.15 86.661 60 74.40 79.08 88.38 99.607 70 85.53 90.53 100.43 112.317 80 96.58 101.88 112.33 124.839 90 107.57 113.15 124.12 137.208 100 118.50 124.34 135.81 149.449</p>
+<p><em>Explanation</em>: For example, the value 2.71 in the top left corner indicates that for a <span class="math inline">\(\chi^{2}\)</span> distribution with 1 degree of freedom the probability of values greater than 2.71 is 0.100.</p>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c-class0.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/11-MY451_A.rmd",
+"text": null
+},
+"download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

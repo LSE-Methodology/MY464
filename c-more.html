@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 More statistics… | MY464 Introduction to Quantitative Analysis for Media and Communications</title>
+  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 More statistics… | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="github-repo" content="LSE-Methodology/MY464" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 More statistics… | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  
+  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  
+
+<meta name="author" content="Department of Methodology, London School of Economics and Political Science" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="c-3waytables.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction<a href="c-intro.html#c-intro" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?<a href="c-intro.html#s-intro-purpose" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions<a href="c-intro.html#s-intro-definitions" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables<a href="c-intro.html#ss-intro-def-subj" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables<a href="c-intro.html#ss-intro-def-vartypes" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference<a href="c-intro.html#ss-intro-def-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation<a href="c-intro.html#ss-intro-def-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course<a href="c-intro.html#s-intro-outline" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing<a href="c-intro.html#s-intro-maths" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation<a href="c-intro.html#symbolic-mathematics-and-mathematical-notation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing<a href="c-intro.html#computing-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables<a href="c-more.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities<a href="c-more.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions<a href="c-more.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions<a href="c-more.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="c-more" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 10</span> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>You will no doubt be pleased to learn that the topics covered on this
+course have not quite exhausted the list of available statistical
+methods. In this chapter we outline some of the most important further
+areas of statistics, so that you are at least aware of their existence
+and titles. For some of them, codes of LSE courses which cover these
+methods are given in parentheses.</p>
+<p>A very large part of advanced statistics is devoted to further types of
+<strong>regression models</strong>. The basic idea of them is the same as for
+multiple linear regression, i.e. modelling expected values of response
+variables given several explanatory variables. The issues involved in
+the form and treatment of explanatory variables are usually almost
+exactly the same as for linear models. Different classes of regression
+models are needed mainly to accommodate different types of response
+variables:</p>
+<ul>
+<li><p>Models for <strong>categorical response variables</strong>. These exist for
+situations where the response variable is dichotomous (<strong>binary
+regression</strong>, especially <strong>logistic models</strong>), has more than two
+unordered (<strong>multinomial logistic models</strong>) or ordered (<strong>ordinal
+regression models</strong>) categories, or is a count, for example in a
+contingency table (<strong>Poisson regression</strong>, <strong>loglinear models</strong>).
+Despite the many different titles, all of these models are closely
+connected (MY452)</p></li>
+<li><p>Models for cases where the response is a length of time to some
+event, such as a spell of unemployment, interval between births of
+children or survival of a patient in a medical study. These
+techniques are known as <strong>event history analysis</strong>, <strong>survival
+analysis</strong> or <strong>lifetime data analysis</strong>. Despite the different
+terms, all refer to the same statistical models.</p></li>
+</ul>
+<p>Techniques for the analysis of <strong>dependent data</strong>, which do not require
+the assumption of statistically independent observations used by almost
+all the methods on this course:</p>
+<ul>
+<li><p><strong>Time series analysis</strong> for one or more long sequence of
+observations of the same quantity over time. For example, each of
+the five temperature sequencies in Figure <a href="c-regression.html#fig:f-temperatures">8.2</a> is a
+time series of this kind.</p></li>
+<li><p>Regression models for <strong>hierarchical data</strong>, where some sets of
+observations are not independent of each other. There are two main
+types of such data: <strong>longitudinal</strong> or <strong>panel data</strong> which consist
+of short time series for many units (e.g. answers by respondents in
+successive waves of a panel survey), and <strong>nested</strong> or <strong>multilevel
+data</strong> where basic units are grouped in natural groups or clusters
+(e.g. pupils in classes and schools in an educational study). Both
+of these can be analysed using the same general classes of models,
+which in turn are generalisations of linear and other regression
+models used for independent data (ST416 for models for multilevel
+data and ST442 for models for longitudinal data).</p></li>
+</ul>
+<p>Methods for <strong>multivariate data</strong>. Roughly speaking, this means data
+with several variables for comparable quantities treated on an equal
+footing, so that none of them is obviously a response to the others. For
+example, results for the ten events in the decathlon data of the week 7
+computer class or, more seriously, the responses to a series of related
+attitude items in a survey are multivariate data of this kind.</p>
+<ul>
+<li><p>Various methods of <strong>descriptive multivariate analysis</strong> for jointly
+summarising and presenting information on the many variables,
+e.g. <strong>cluster analysis</strong>, <strong>multidimensional scaling</strong> and
+<strong>principal component analysis</strong> (MY455 for principal
+components analysis).</p></li>
+<li><p>Model-based methods for multivariate data. These are typically
+<strong>latent variable models</strong>, which also involve variables which can
+never be directly observed. The simplest latent variable technique
+is <strong>exploratory factor analysis</strong>, and others include
+<strong>confirmatory factor analysis</strong>, <strong>structural equation models</strong>,
+and <strong>latent trait</strong> and <strong>latent class</strong> models (MY455).</p></li>
+</ul>
+<p>Some types of <strong>research design</strong> may also involve particular
+statistical considerations:</p>
+<ul>
+<li><p><strong>Sampling theory</strong> for the design of probability samples, e.g.  for
+surveys (part of MY456, which also covers methodology of surveys
+in general).</p></li>
+<li><p><strong>Design of experiments</strong> for more complex randomized experiments.</p></li>
+</ul>
+<p>Finally, some areas of statistics are concerned with broader and more
+fundamental aspects of statistical analysis, such as alternative forms
+of model specification and inference (e.g. <strong>nonparametric methods</strong>) or
+the basic ideas of inference itself (e.g. <strong>Bayesian statistics</strong>).
+These and the more specific tools further build on the foundations of
+all statistical methods, which are the subject of <strong>probability theory</strong>
+and <strong>mathematical statistics</strong>. However, you are welcome, if you wish,
+to leave the details of these fields to professional statisticians, if
+only to keep them too in employment.</p>
+
+
+<div id="statistical-tables" class="section level2 unnumbered hasAnchor">
+<h2>Statistical tables<a href="c-more.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Explanation of the “Table of standard normal tail probabilities” in Section
+@ref(s_disttables_Z):</p>
+<ul>
+<li><p>The table shows, for values of <span class="math inline">\(Z\)</span> between 0 and 3.5, the
+probability that a value from the standard normal distribution is
+<em>larger than</em> <span class="math inline">\(Z\)</span> (i.e. the “right-hand” tail probabilities).</p>
+<ul>
+<li>For example, the probability of values larger than 0.50
+is 0.3085.</li>
+</ul></li>
+<li><p>For negative values of <span class="math inline">\(Z\)</span>, the probability of values <em>smaller than</em>
+<span class="math inline">\(Z\)</span> (the “left-hand” tail probability) is equal to the right-hand
+tail probability for the corresponding positive value of <span class="math inline">\(Z\)</span>.</p>
+<ul>
+<li>For example, the probability of values smaller than <span class="math inline">\(-0.50\)</span> is
+also 0.3085.</li>
+</ul></li>
+</ul>
+<div style="page-break-after: always;"></div>
+<div id="table-of-standard-normal-tail-probabilities" class="section level3 unnumbered hasAnchor">
+<h3>Table of standard normal tail probabilities<a href="c-more.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+<table>
+<thead>
+<tr class="header">
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+<th align="left"><span class="math inline">\(z\)</span></th>
+<th align="left">Prob. </th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">0.00</td>
+<td align="left">0.5000</td>
+<td align="left">0.50</td>
+<td align="left">0.3085</td>
+<td align="left">1.00</td>
+<td align="left">0.1587</td>
+<td align="left">1.50</td>
+<td align="left">0.0668</td>
+<td align="left">2.00</td>
+<td align="left">0.0228</td>
+<td align="left">2.50</td>
+<td align="left">0.0062</td>
+</tr>
+<tr class="even">
+<td align="left">0.01</td>
+<td align="left">0.4960</td>
+<td align="left">0.51</td>
+<td align="left">0.3050</td>
+<td align="left">1.01</td>
+<td align="left">0.1562</td>
+<td align="left">1.51</td>
+<td align="left">0.0655</td>
+<td align="left">2.01</td>
+<td align="left">0.0222</td>
+<td align="left">2.52</td>
+<td align="left">0.0059</td>
+</tr>
+<tr class="odd">
+<td align="left">0.02</td>
+<td align="left">0.4920</td>
+<td align="left">0.52</td>
+<td align="left">0.3015</td>
+<td align="left">1.02</td>
+<td align="left">0.1539</td>
+<td align="left">1.52</td>
+<td align="left">0.0643</td>
+<td align="left">2.02</td>
+<td align="left">0.0217</td>
+<td align="left">2.54</td>
+<td align="left">0.0055</td>
+</tr>
+<tr class="even">
+<td align="left">0.03</td>
+<td align="left">0.4880</td>
+<td align="left">0.53</td>
+<td align="left">0.2981</td>
+<td align="left">1.03</td>
+<td align="left">0.1515</td>
+<td align="left">1.53</td>
+<td align="left">0.0630</td>
+<td align="left">2.03</td>
+<td align="left">0.0212</td>
+<td align="left">2.56</td>
+<td align="left">0.0052</td>
+</tr>
+<tr class="odd">
+<td align="left">0.04</td>
+<td align="left">0.4840</td>
+<td align="left">0.54</td>
+<td align="left">0.2946</td>
+<td align="left">1.04</td>
+<td align="left">0.1492</td>
+<td align="left">1.54</td>
+<td align="left">0.0618</td>
+<td align="left">2.04</td>
+<td align="left">0.0207</td>
+<td align="left">2.58</td>
+<td align="left">0.0049</td>
+</tr>
+<tr class="even">
+<td align="left">0.05</td>
+<td align="left">0.4801</td>
+<td align="left">0.55</td>
+<td align="left">0.2912</td>
+<td align="left">1.05</td>
+<td align="left">0.1469</td>
+<td align="left">1.55</td>
+<td align="left">0.0606</td>
+<td align="left">2.05</td>
+<td align="left">0.0202</td>
+<td align="left">2.60</td>
+<td align="left">0.0047</td>
+</tr>
+<tr class="odd">
+<td align="left">0.06</td>
+<td align="left">0.4761</td>
+<td align="left">0.56</td>
+<td align="left">0.2877</td>
+<td align="left">1.06</td>
+<td align="left">0.1446</td>
+<td align="left">1.56</td>
+<td align="left">0.0594</td>
+<td align="left">2.06</td>
+<td align="left">0.0197</td>
+<td align="left">2.62</td>
+<td align="left">0.0044</td>
+</tr>
+<tr class="even">
+<td align="left">0.07</td>
+<td align="left">0.4721</td>
+<td align="left">0.57</td>
+<td align="left">0.2843</td>
+<td align="left">1.07</td>
+<td align="left">0.1423</td>
+<td align="left">1.57</td>
+<td align="left">0.0582</td>
+<td align="left">2.07</td>
+<td align="left">0.0192</td>
+<td align="left">2.64</td>
+<td align="left">0.0041</td>
+</tr>
+<tr class="odd">
+<td align="left">0.08</td>
+<td align="left">0.4681</td>
+<td align="left">0.58</td>
+<td align="left">0.2810</td>
+<td align="left">1.08</td>
+<td align="left">0.1401</td>
+<td align="left">1.58</td>
+<td align="left">0.0571</td>
+<td align="left">2.08</td>
+<td align="left">0.0188</td>
+<td align="left">2.66</td>
+<td align="left">0.0039</td>
+</tr>
+<tr class="even">
+<td align="left">0.09</td>
+<td align="left">0.4641</td>
+<td align="left">0.59</td>
+<td align="left">0.2776</td>
+<td align="left">1.09</td>
+<td align="left">0.1379</td>
+<td align="left">1.59</td>
+<td align="left">0.0559</td>
+<td align="left">2.09</td>
+<td align="left">0.0183</td>
+<td align="left">2.68</td>
+<td align="left">0.0037</td>
+</tr>
+<tr class="odd">
+<td align="left">0.10</td>
+<td align="left">0.4602</td>
+<td align="left">0.60</td>
+<td align="left">0.2743</td>
+<td align="left">1.10</td>
+<td align="left">0.1357</td>
+<td align="left">1.60</td>
+<td align="left">0.0548</td>
+<td align="left">2.10</td>
+<td align="left">0.0179</td>
+<td align="left">2.70</td>
+<td align="left">0.0035</td>
+</tr>
+<tr class="even">
+<td align="left">0.11</td>
+<td align="left">0.4562</td>
+<td align="left">0.61</td>
+<td align="left">0.2709</td>
+<td align="left">1.11</td>
+<td align="left">0.1335</td>
+<td align="left">1.61</td>
+<td align="left">0.0537</td>
+<td align="left">2.11</td>
+<td align="left">0.0174</td>
+<td align="left">2.72</td>
+<td align="left">0.0033</td>
+</tr>
+<tr class="odd">
+<td align="left">0.12</td>
+<td align="left">0.4522</td>
+<td align="left">0.62</td>
+<td align="left">0.2676</td>
+<td align="left">1.12</td>
+<td align="left">0.1314</td>
+<td align="left">1.62</td>
+<td align="left">0.0526</td>
+<td align="left">2.12</td>
+<td align="left">0.0170</td>
+<td align="left">2.74</td>
+<td align="left">0.0031</td>
+</tr>
+<tr class="even">
+<td align="left">0.13</td>
+<td align="left">0.4483</td>
+<td align="left">0.63</td>
+<td align="left">0.2643</td>
+<td align="left">1.13</td>
+<td align="left">0.1292</td>
+<td align="left">1.63</td>
+<td align="left">0.0516</td>
+<td align="left">2.13</td>
+<td align="left">0.0166</td>
+<td align="left">2.76</td>
+<td align="left">0.0029</td>
+</tr>
+<tr class="odd">
+<td align="left">0.14</td>
+<td align="left">0.4443</td>
+<td align="left">0.64</td>
+<td align="left">0.2611</td>
+<td align="left">1.14</td>
+<td align="left">0.1271</td>
+<td align="left">1.64</td>
+<td align="left">0.0505</td>
+<td align="left">2.14</td>
+<td align="left">0.0162</td>
+<td align="left">2.78</td>
+<td align="left">0.0027</td>
+</tr>
+<tr class="even">
+<td align="left">0.15</td>
+<td align="left">0.4404</td>
+<td align="left">0.65</td>
+<td align="left">0.2578</td>
+<td align="left">1.15</td>
+<td align="left">0.1251</td>
+<td align="left">1.65</td>
+<td align="left">0.0495</td>
+<td align="left">2.15</td>
+<td align="left">0.0158</td>
+<td align="left">2.80</td>
+<td align="left">0.0026</td>
+</tr>
+<tr class="odd">
+<td align="left">0.16</td>
+<td align="left">0.4364</td>
+<td align="left">0.66</td>
+<td align="left">0.2546</td>
+<td align="left">1.16</td>
+<td align="left">0.1230</td>
+<td align="left">1.66</td>
+<td align="left">0.0485</td>
+<td align="left">2.16</td>
+<td align="left">0.0154</td>
+<td align="left">2.82</td>
+<td align="left">0.0024</td>
+</tr>
+<tr class="even">
+<td align="left">0.17</td>
+<td align="left">0.4325</td>
+<td align="left">0.67</td>
+<td align="left">0.2514</td>
+<td align="left">1.17</td>
+<td align="left">0.1210</td>
+<td align="left">1.67</td>
+<td align="left">0.0475</td>
+<td align="left">2.17</td>
+<td align="left">0.0150</td>
+<td align="left">2.84</td>
+<td align="left">0.0023</td>
+</tr>
+<tr class="odd">
+<td align="left">0.18</td>
+<td align="left">0.4286</td>
+<td align="left">0.68</td>
+<td align="left">0.2483</td>
+<td align="left">1.18</td>
+<td align="left">0.1190</td>
+<td align="left">1.68</td>
+<td align="left">0.0465</td>
+<td align="left">2.18</td>
+<td align="left">0.0146</td>
+<td align="left">2.86</td>
+<td align="left">0.0021</td>
+</tr>
+<tr class="even">
+<td align="left">0.19</td>
+<td align="left">0.4247</td>
+<td align="left">0.69</td>
+<td align="left">0.2451</td>
+<td align="left">1.19</td>
+<td align="left">0.1170</td>
+<td align="left">1.69</td>
+<td align="left">0.0455</td>
+<td align="left">2.19</td>
+<td align="left">0.0143</td>
+<td align="left">2.88</td>
+<td align="left">0.0020</td>
+</tr>
+<tr class="odd">
+<td align="left">0.20</td>
+<td align="left">0.4207</td>
+<td align="left">0.70</td>
+<td align="left">0.2420</td>
+<td align="left">1.20</td>
+<td align="left">0.1151</td>
+<td align="left">1.70</td>
+<td align="left">0.0446</td>
+<td align="left">2.20</td>
+<td align="left">0.0139</td>
+<td align="left">2.90</td>
+<td align="left">0.0019</td>
+</tr>
+<tr class="even">
+<td align="left">0.21</td>
+<td align="left">0.4168</td>
+<td align="left">0.71</td>
+<td align="left">0.2389</td>
+<td align="left">1.21</td>
+<td align="left">0.1131</td>
+<td align="left">1.71</td>
+<td align="left">0.0436</td>
+<td align="left">2.21</td>
+<td align="left">0.0136</td>
+<td align="left">2.92</td>
+<td align="left">0.0018</td>
+</tr>
+<tr class="odd">
+<td align="left">0.22</td>
+<td align="left">0.4129</td>
+<td align="left">0.72</td>
+<td align="left">0.2358</td>
+<td align="left">1.22</td>
+<td align="left">0.1112</td>
+<td align="left">1.72</td>
+<td align="left">0.0427</td>
+<td align="left">2.22</td>
+<td align="left">0.0132</td>
+<td align="left">2.94</td>
+<td align="left">0.0016</td>
+</tr>
+<tr class="even">
+<td align="left">0.23</td>
+<td align="left">0.4090</td>
+<td align="left">0.73</td>
+<td align="left">0.2327</td>
+<td align="left">1.23</td>
+<td align="left">0.1093</td>
+<td align="left">1.73</td>
+<td align="left">0.0418</td>
+<td align="left">2.23</td>
+<td align="left">0.0129</td>
+<td align="left">2.96</td>
+<td align="left">0.0015</td>
+</tr>
+<tr class="odd">
+<td align="left">0.24</td>
+<td align="left">0.4052</td>
+<td align="left">0.74</td>
+<td align="left">0.2296</td>
+<td align="left">1.24</td>
+<td align="left">0.1075</td>
+<td align="left">1.74</td>
+<td align="left">0.0409</td>
+<td align="left">2.24</td>
+<td align="left">0.0125</td>
+<td align="left">2.98</td>
+<td align="left">0.0014</td>
+</tr>
+<tr class="even">
+<td align="left">0.25</td>
+<td align="left">0.4013</td>
+<td align="left">0.75</td>
+<td align="left">0.2266</td>
+<td align="left">1.25</td>
+<td align="left">0.1056</td>
+<td align="left">1.75</td>
+<td align="left">0.0401</td>
+<td align="left">2.25</td>
+<td align="left">0.0122</td>
+<td align="left">3.00</td>
+<td align="left">0.0013</td>
+</tr>
+<tr class="odd">
+<td align="left">0.26</td>
+<td align="left">0.3974</td>
+<td align="left">0.76</td>
+<td align="left">0.2236</td>
+<td align="left">1.26</td>
+<td align="left">0.1038</td>
+<td align="left">1.76</td>
+<td align="left">0.0392</td>
+<td align="left">2.26</td>
+<td align="left">0.0119</td>
+<td align="left">3.02</td>
+<td align="left">0.0013</td>
+</tr>
+<tr class="even">
+<td align="left">0.27</td>
+<td align="left">0.3936</td>
+<td align="left">0.77</td>
+<td align="left">0.2206</td>
+<td align="left">1.27</td>
+<td align="left">0.1020</td>
+<td align="left">1.77</td>
+<td align="left">0.0384</td>
+<td align="left">2.27</td>
+<td align="left">0.0116</td>
+<td align="left">3.04</td>
+<td align="left">0.0012</td>
+</tr>
+<tr class="odd">
+<td align="left">0.28</td>
+<td align="left">0.3897</td>
+<td align="left">0.78</td>
+<td align="left">0.2177</td>
+<td align="left">1.28</td>
+<td align="left">0.1003</td>
+<td align="left">1.78</td>
+<td align="left">0.0375</td>
+<td align="left">2.28</td>
+<td align="left">0.0113</td>
+<td align="left">3.06</td>
+<td align="left">0.0011</td>
+</tr>
+<tr class="even">
+<td align="left">0.29</td>
+<td align="left">0.3859</td>
+<td align="left">0.79</td>
+<td align="left">0.2148</td>
+<td align="left">1.29</td>
+<td align="left">0.0985</td>
+<td align="left">1.79</td>
+<td align="left">0.0367</td>
+<td align="left">2.29</td>
+<td align="left">0.0110</td>
+<td align="left">3.08</td>
+<td align="left">0.0010</td>
+</tr>
+<tr class="odd">
+<td align="left">0.30</td>
+<td align="left">0.3821</td>
+<td align="left">0.80</td>
+<td align="left">0.2119</td>
+<td align="left">1.30</td>
+<td align="left">0.0968</td>
+<td align="left">1.80</td>
+<td align="left">0.0359</td>
+<td align="left">2.30</td>
+<td align="left">0.0107</td>
+<td align="left">3.10</td>
+<td align="left">0.0010</td>
+</tr>
+<tr class="even">
+<td align="left">0.31</td>
+<td align="left">0.3783</td>
+<td align="left">0.81</td>
+<td align="left">0.2090</td>
+<td align="left">1.31</td>
+<td align="left">0.0951</td>
+<td align="left">1.81</td>
+<td align="left">0.0351</td>
+<td align="left">2.31</td>
+<td align="left">0.0104</td>
+<td align="left">3.12</td>
+<td align="left">0.0009</td>
+</tr>
+<tr class="odd">
+<td align="left">0.32</td>
+<td align="left">0.3745</td>
+<td align="left">0.82</td>
+<td align="left">0.2061</td>
+<td align="left">1.32</td>
+<td align="left">0.0934</td>
+<td align="left">1.82</td>
+<td align="left">0.0344</td>
+<td align="left">2.32</td>
+<td align="left">0.0102</td>
+<td align="left">3.14</td>
+<td align="left">0.0008</td>
+</tr>
+<tr class="even">
+<td align="left">0.33</td>
+<td align="left">0.3707</td>
+<td align="left">0.83</td>
+<td align="left">0.2033</td>
+<td align="left">1.33</td>
+<td align="left">0.0918</td>
+<td align="left">1.83</td>
+<td align="left">0.0336</td>
+<td align="left">2.33</td>
+<td align="left">0.0099</td>
+<td align="left">3.16</td>
+<td align="left">0.0008</td>
+</tr>
+<tr class="odd">
+<td align="left">0.34</td>
+<td align="left">0.3669</td>
+<td align="left">0.84</td>
+<td align="left">0.2005</td>
+<td align="left">1.34</td>
+<td align="left">0.0901</td>
+<td align="left">1.84</td>
+<td align="left">0.0329</td>
+<td align="left">2.34</td>
+<td align="left">0.0096</td>
+<td align="left">3.18</td>
+<td align="left">0.0007</td>
+</tr>
+<tr class="even">
+<td align="left">0.35</td>
+<td align="left">0.3632</td>
+<td align="left">0.85</td>
+<td align="left">0.1977</td>
+<td align="left">1.35</td>
+<td align="left">0.0885</td>
+<td align="left">1.85</td>
+<td align="left">0.0322</td>
+<td align="left">2.35</td>
+<td align="left">0.0094</td>
+<td align="left">3.20</td>
+<td align="left">0.0007</td>
+</tr>
+<tr class="odd">
+<td align="left">0.36</td>
+<td align="left">0.3594</td>
+<td align="left">0.86</td>
+<td align="left">0.1949</td>
+<td align="left">1.36</td>
+<td align="left">0.0869</td>
+<td align="left">1.86</td>
+<td align="left">0.0314</td>
+<td align="left">2.36</td>
+<td align="left">0.0091</td>
+<td align="left">3.22</td>
+<td align="left">0.0006</td>
+</tr>
+<tr class="even">
+<td align="left">0.37</td>
+<td align="left">0.3557</td>
+<td align="left">0.87</td>
+<td align="left">0.1922</td>
+<td align="left">1.37</td>
+<td align="left">0.0853</td>
+<td align="left">1.87</td>
+<td align="left">0.0307</td>
+<td align="left">2.37</td>
+<td align="left">0.0089</td>
+<td align="left">3.24</td>
+<td align="left">0.0006</td>
+</tr>
+<tr class="odd">
+<td align="left">0.38</td>
+<td align="left">0.3520</td>
+<td align="left">0.88</td>
+<td align="left">0.1894</td>
+<td align="left">1.38</td>
+<td align="left">0.0838</td>
+<td align="left">1.88</td>
+<td align="left">0.0301</td>
+<td align="left">2.38</td>
+<td align="left">0.0087</td>
+<td align="left">3.26</td>
+<td align="left">0.0006</td>
+</tr>
+<tr class="even">
+<td align="left">0.39</td>
+<td align="left">0.3483</td>
+<td align="left">0.89</td>
+<td align="left">0.1867</td>
+<td align="left">1.39</td>
+<td align="left">0.0823</td>
+<td align="left">1.89</td>
+<td align="left">0.0294</td>
+<td align="left">2.39</td>
+<td align="left">0.0084</td>
+<td align="left">3.28</td>
+<td align="left">0.0005</td>
+</tr>
+<tr class="odd">
+<td align="left">0.40</td>
+<td align="left">0.3446</td>
+<td align="left">0.90</td>
+<td align="left">0.1841</td>
+<td align="left">1.40</td>
+<td align="left">0.0808</td>
+<td align="left">1.90</td>
+<td align="left">0.0287</td>
+<td align="left">2.40</td>
+<td align="left">0.0082</td>
+<td align="left">3.30</td>
+<td align="left">0.0005</td>
+</tr>
+<tr class="even">
+<td align="left">0.41</td>
+<td align="left">0.3409</td>
+<td align="left">0.91</td>
+<td align="left">0.1814</td>
+<td align="left">1.41</td>
+<td align="left">0.0793</td>
+<td align="left">1.91</td>
+<td align="left">0.0281</td>
+<td align="left">2.41</td>
+<td align="left">0.0080</td>
+<td align="left">3.32</td>
+<td align="left">0.0005</td>
+</tr>
+<tr class="odd">
+<td align="left">0.42</td>
+<td align="left">0.3372</td>
+<td align="left">0.92</td>
+<td align="left">0.1788</td>
+<td align="left">1.42</td>
+<td align="left">0.0778</td>
+<td align="left">1.92</td>
+<td align="left">0.0274</td>
+<td align="left">2.42</td>
+<td align="left">0.0078</td>
+<td align="left">3.34</td>
+<td align="left">0.0004</td>
+</tr>
+<tr class="even">
+<td align="left">0.43</td>
+<td align="left">0.3336</td>
+<td align="left">0.93</td>
+<td align="left">0.1762</td>
+<td align="left">1.43</td>
+<td align="left">0.0764</td>
+<td align="left">1.93</td>
+<td align="left">0.0268</td>
+<td align="left">2.43</td>
+<td align="left">0.0075</td>
+<td align="left">3.36</td>
+<td align="left">0.0004</td>
+</tr>
+<tr class="odd">
+<td align="left">0.44</td>
+<td align="left">0.3300</td>
+<td align="left">0.94</td>
+<td align="left">0.1736</td>
+<td align="left">1.44</td>
+<td align="left">0.0749</td>
+<td align="left">1.94</td>
+<td align="left">0.0262</td>
+<td align="left">2.44</td>
+<td align="left">0.0073</td>
+<td align="left">3.38</td>
+<td align="left">0.0004</td>
+</tr>
+<tr class="even">
+<td align="left">0.45</td>
+<td align="left">0.3264</td>
+<td align="left">0.95</td>
+<td align="left">0.1711</td>
+<td align="left">1.45</td>
+<td align="left">0.0735</td>
+<td align="left">1.95</td>
+<td align="left">0.0256</td>
+<td align="left">2.45</td>
+<td align="left">0.0071</td>
+<td align="left">3.40</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="odd">
+<td align="left">0.46</td>
+<td align="left">0.3228</td>
+<td align="left">0.96</td>
+<td align="left">0.1685</td>
+<td align="left">1.46</td>
+<td align="left">0.0721</td>
+<td align="left">1.96</td>
+<td align="left">0.0250</td>
+<td align="left">2.46</td>
+<td align="left">0.0069</td>
+<td align="left">3.42</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="even">
+<td align="left">0.47</td>
+<td align="left">0.3192</td>
+<td align="left">0.97</td>
+<td align="left">0.1660</td>
+<td align="left">1.47</td>
+<td align="left">0.0708</td>
+<td align="left">1.97</td>
+<td align="left">0.0244</td>
+<td align="left">2.47</td>
+<td align="left">0.0068</td>
+<td align="left">3.44</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="odd">
+<td align="left">0.48</td>
+<td align="left">0.3156</td>
+<td align="left">0.98</td>
+<td align="left">0.1635</td>
+<td align="left">1.48</td>
+<td align="left">0.0694</td>
+<td align="left">1.98</td>
+<td align="left">0.0239</td>
+<td align="left">2.48</td>
+<td align="left">0.0066</td>
+<td align="left">3.46</td>
+<td align="left">0.0003</td>
+</tr>
+<tr class="even">
+<td align="left">0.49</td>
+<td align="left">0.3121</td>
+<td align="left">0.99</td>
+<td align="left">0.1611</td>
+<td align="left">1.49</td>
+<td align="left">0.0681</td>
+<td align="left">1.99</td>
+<td align="left">0.0233</td>
+<td align="left">2.49</td>
+<td align="left">0.0064</td>
+<td align="left">3.48</td>
+<td align="left">0.0003</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="table-of-critical-values-for-t-distributions" class="section level3 unnumbered hasAnchor">
+<h3>Table of critical values for t-distributions<a href="c-more.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">df</td>
+<td align="right">0.100</td>
+<td align="right">0.050</td>
+<td align="right">0.025</td>
+<td align="right">0.010</td>
+<td align="right">0.005</td>
+<td align="right">0.001</td>
+<td align="right">0.0005</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="right">3.078</td>
+<td align="right">6.314</td>
+<td align="right">12.706</td>
+<td align="right">31.821</td>
+<td align="right">63.657</td>
+<td align="right">318.309</td>
+<td align="right">636.619</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="right">1.886</td>
+<td align="right">2.920</td>
+<td align="right">4.303</td>
+<td align="right">6.965</td>
+<td align="right">9.925</td>
+<td align="right">22.327</td>
+<td align="right">31.599</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="right">1.638</td>
+<td align="right">2.353</td>
+<td align="right">3.182</td>
+<td align="right">4.541</td>
+<td align="right">5.841</td>
+<td align="right">10.215</td>
+<td align="right">12.924</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="right">1.533</td>
+<td align="right">2.132</td>
+<td align="right">2.776</td>
+<td align="right">3.747</td>
+<td align="right">4.604</td>
+<td align="right">7.173</td>
+<td align="right">8.610</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="right">1.476</td>
+<td align="right">2.015</td>
+<td align="right">2.571</td>
+<td align="right">3.365</td>
+<td align="right">4.032</td>
+<td align="right">5.893</td>
+<td align="right">6.869</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="right">1.440</td>
+<td align="right">1.943</td>
+<td align="right">2.447</td>
+<td align="right">3.143</td>
+<td align="right">3.707</td>
+<td align="right">5.208</td>
+<td align="right">5.959</td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="right">1.415</td>
+<td align="right">1.895</td>
+<td align="right">2.365</td>
+<td align="right">2.998</td>
+<td align="right">3.499</td>
+<td align="right">4.785</td>
+<td align="right">5.408</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="right">1.397</td>
+<td align="right">1.860</td>
+<td align="right">2.306</td>
+<td align="right">2.896</td>
+<td align="right">3.355</td>
+<td align="right">4.501</td>
+<td align="right">5.041</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="right">1.383</td>
+<td align="right">1.833</td>
+<td align="right">2.262</td>
+<td align="right">2.821</td>
+<td align="right">3.250</td>
+<td align="right">4.297</td>
+<td align="right">4.781</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="right">1.372</td>
+<td align="right">1.812</td>
+<td align="right">2.228</td>
+<td align="right">2.764</td>
+<td align="right">3.169</td>
+<td align="right">4.144</td>
+<td align="right">4.587</td>
+</tr>
+<tr class="even">
+<td align="left">11</td>
+<td align="right">1.363</td>
+<td align="right">1.796</td>
+<td align="right">2.201</td>
+<td align="right">2.718</td>
+<td align="right">3.106</td>
+<td align="right">4.025</td>
+<td align="right">4.437</td>
+</tr>
+<tr class="odd">
+<td align="left">12</td>
+<td align="right">1.356</td>
+<td align="right">1.782</td>
+<td align="right">2.179</td>
+<td align="right">2.681</td>
+<td align="right">3.055</td>
+<td align="right">3.930</td>
+<td align="right">4.318</td>
+</tr>
+<tr class="even">
+<td align="left">13</td>
+<td align="right">1.350</td>
+<td align="right">1.771</td>
+<td align="right">2.160</td>
+<td align="right">2.650</td>
+<td align="right">3.012</td>
+<td align="right">3.852</td>
+<td align="right">4.221</td>
+</tr>
+<tr class="odd">
+<td align="left">14</td>
+<td align="right">1.345</td>
+<td align="right">1.761</td>
+<td align="right">2.145</td>
+<td align="right">2.624</td>
+<td align="right">2.977</td>
+<td align="right">3.787</td>
+<td align="right">4.140</td>
+</tr>
+<tr class="even">
+<td align="left">15</td>
+<td align="right">1.341</td>
+<td align="right">1.753</td>
+<td align="right">2.131</td>
+<td align="right">2.602</td>
+<td align="right">2.947</td>
+<td align="right">3.733</td>
+<td align="right">4.073</td>
+</tr>
+<tr class="odd">
+<td align="left">16</td>
+<td align="right">1.337</td>
+<td align="right">1.746</td>
+<td align="right">2.120</td>
+<td align="right">2.583</td>
+<td align="right">2.921</td>
+<td align="right">3.686</td>
+<td align="right">4.015</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="right">1.333</td>
+<td align="right">1.740</td>
+<td align="right">2.110</td>
+<td align="right">2.567</td>
+<td align="right">2.898</td>
+<td align="right">3.646</td>
+<td align="right">3.965</td>
+</tr>
+<tr class="odd">
+<td align="left">18</td>
+<td align="right">1.330</td>
+<td align="right">1.734</td>
+<td align="right">2.101</td>
+<td align="right">2.552</td>
+<td align="right">2.878</td>
+<td align="right">3.610</td>
+<td align="right">3.922</td>
+</tr>
+<tr class="even">
+<td align="left">19</td>
+<td align="right">1.328</td>
+<td align="right">1.729</td>
+<td align="right">2.093</td>
+<td align="right">2.539</td>
+<td align="right">2.861</td>
+<td align="right">3.579</td>
+<td align="right">3.883</td>
+</tr>
+<tr class="odd">
+<td align="left">20</td>
+<td align="right">1.325</td>
+<td align="right">1.725</td>
+<td align="right">2.086</td>
+<td align="right">2.528</td>
+<td align="right">2.845</td>
+<td align="right">3.552</td>
+<td align="right">3.850</td>
+</tr>
+<tr class="even">
+<td align="left">21</td>
+<td align="right">1.323</td>
+<td align="right">1.721</td>
+<td align="right">2.080</td>
+<td align="right">2.518</td>
+<td align="right">2.831</td>
+<td align="right">3.527</td>
+<td align="right">3.819</td>
+</tr>
+<tr class="odd">
+<td align="left">22</td>
+<td align="right">1.321</td>
+<td align="right">1.717</td>
+<td align="right">2.074</td>
+<td align="right">2.508</td>
+<td align="right">2.819</td>
+<td align="right">3.505</td>
+<td align="right">3.792</td>
+</tr>
+<tr class="even">
+<td align="left">23</td>
+<td align="right">1.319</td>
+<td align="right">1.714</td>
+<td align="right">2.069</td>
+<td align="right">2.500</td>
+<td align="right">2.807</td>
+<td align="right">3.485</td>
+<td align="right">3.768</td>
+</tr>
+<tr class="odd">
+<td align="left">24</td>
+<td align="right">1.318</td>
+<td align="right">1.711</td>
+<td align="right">2.064</td>
+<td align="right">2.492</td>
+<td align="right">2.797</td>
+<td align="right">3.467</td>
+<td align="right">3.745</td>
+</tr>
+<tr class="even">
+<td align="left">25</td>
+<td align="right">1.316</td>
+<td align="right">1.708</td>
+<td align="right">2.060</td>
+<td align="right">2.485</td>
+<td align="right">2.787</td>
+<td align="right">3.450</td>
+<td align="right">3.725</td>
+</tr>
+<tr class="odd">
+<td align="left">26</td>
+<td align="right">1.315</td>
+<td align="right">1.706</td>
+<td align="right">2.056</td>
+<td align="right">2.479</td>
+<td align="right">2.779</td>
+<td align="right">3.435</td>
+<td align="right">3.707</td>
+</tr>
+<tr class="even">
+<td align="left">27</td>
+<td align="right">1.314</td>
+<td align="right">1.703</td>
+<td align="right">2.052</td>
+<td align="right">2.473</td>
+<td align="right">2.771</td>
+<td align="right">3.421</td>
+<td align="right">3.690</td>
+</tr>
+<tr class="odd">
+<td align="left">28</td>
+<td align="right">1.313</td>
+<td align="right">1.701</td>
+<td align="right">2.048</td>
+<td align="right">2.467</td>
+<td align="right">2.763</td>
+<td align="right">3.408</td>
+<td align="right">3.674</td>
+</tr>
+<tr class="even">
+<td align="left">29</td>
+<td align="right">1.311</td>
+<td align="right">1.699</td>
+<td align="right">2.045</td>
+<td align="right">2.462</td>
+<td align="right">2.756</td>
+<td align="right">3.396</td>
+<td align="right">3.659</td>
+</tr>
+<tr class="odd">
+<td align="left">30</td>
+<td align="right">1.310</td>
+<td align="right">1.697</td>
+<td align="right">2.042</td>
+<td align="right">2.457</td>
+<td align="right">2.750</td>
+<td align="right">3.385</td>
+<td align="right">3.646</td>
+</tr>
+<tr class="even">
+<td align="left">40</td>
+<td align="right">1.303</td>
+<td align="right">1.684</td>
+<td align="right">2.021</td>
+<td align="right">2.423</td>
+<td align="right">2.704</td>
+<td align="right">3.307</td>
+<td align="right">3.551</td>
+</tr>
+<tr class="odd">
+<td align="left">60</td>
+<td align="right">1.296</td>
+<td align="right">1.671</td>
+<td align="right">2.000</td>
+<td align="right">2.390</td>
+<td align="right">2.660</td>
+<td align="right">3.232</td>
+<td align="right">3.460</td>
+</tr>
+<tr class="even">
+<td align="left">120</td>
+<td align="right">1.289</td>
+<td align="right">1.658</td>
+<td align="right">1.980</td>
+<td align="right">2.358</td>
+<td align="right">2.617</td>
+<td align="right">3.160</td>
+<td align="right">3.373</td>
+</tr>
+<tr class="odd">
+<td align="left"><span class="math inline">\(\infty\)</span></td>
+<td align="right">1.282</td>
+<td align="right">1.645</td>
+<td align="right">1.960</td>
+<td align="right">2.326</td>
+<td align="right">2.576</td>
+<td align="right">3.090</td>
+<td align="right">3.291</td>
+</tr>
+</tbody>
+</table>
+<p><em>Explanation</em>: An example, consider the value 3.078 in the top left corner.
+This indicates that for a <span class="math inline">\(t\)</span>-distribution with 1 degree of freedom the
+probability of values greater than 3.078 is 0.100. The last row shows
+critical values for the standard normal distribution.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="table-of-critical-values-for-chi-square-distributions" class="section level3 unnumbered hasAnchor">
+<h3>Table of critical values for chi-square distributions<a href="c-more.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">df</td>
+<td align="right">0.100</td>
+<td align="right">0.050</td>
+<td align="right">0.010</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="right">2.71</td>
+<td align="right">3.84</td>
+<td align="right">6.63</td>
+<td align="right">10.828</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="right">4.61</td>
+<td align="right">5.99</td>
+<td align="right">9.21</td>
+<td align="right">13.816</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="right">6.25</td>
+<td align="right">7.81</td>
+<td align="right">11.34</td>
+<td align="right">16.266</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="right">7.78</td>
+<td align="right">9.49</td>
+<td align="right">13.28</td>
+<td align="right">18.467</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="right">9.24</td>
+<td align="right">11.07</td>
+<td align="right">15.09</td>
+<td align="right">20.515</td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="right">10.64</td>
+<td align="right">12.59</td>
+<td align="right">16.81</td>
+<td align="right">22.458</td>
+</tr>
+<tr class="even">
+<td align="left">7</td>
+<td align="right">12.02</td>
+<td align="right">14.07</td>
+<td align="right">18.48</td>
+<td align="right">24.322</td>
+</tr>
+<tr class="odd">
+<td align="left">8</td>
+<td align="right">13.36</td>
+<td align="right">15.51</td>
+<td align="right">20.09</td>
+<td align="right">26.124</td>
+</tr>
+<tr class="even">
+<td align="left">9</td>
+<td align="right">14.68</td>
+<td align="right">16.92</td>
+<td align="right">21.67</td>
+<td align="right">27.877</td>
+</tr>
+<tr class="odd">
+<td align="left">10</td>
+<td align="right">15.99</td>
+<td align="right">18.31</td>
+<td align="right">23.21</td>
+<td align="right">29.588</td>
+</tr>
+<tr class="even">
+<td align="left">11</td>
+<td align="right">17.28</td>
+<td align="right">19.68</td>
+<td align="right">24.72</td>
+<td align="right">31.264</td>
+</tr>
+<tr class="odd">
+<td align="left">12</td>
+<td align="right">18.55</td>
+<td align="right">21.03</td>
+<td align="right">26.22</td>
+<td align="right">32.909</td>
+</tr>
+<tr class="even">
+<td align="left">13</td>
+<td align="right">19.81</td>
+<td align="right">22.36</td>
+<td align="right">27.69</td>
+<td align="right">34.528</td>
+</tr>
+<tr class="odd">
+<td align="left">14</td>
+<td align="right">21.06</td>
+<td align="right">23.68</td>
+<td align="right">29.14</td>
+<td align="right">36.123</td>
+</tr>
+<tr class="even">
+<td align="left">15</td>
+<td align="right">22.31</td>
+<td align="right">25.00</td>
+<td align="right">30.58</td>
+<td align="right">37.697</td>
+</tr>
+<tr class="odd">
+<td align="left">16</td>
+<td align="right">23.54</td>
+<td align="right">26.30</td>
+<td align="right">32.00</td>
+<td align="right">39.252</td>
+</tr>
+<tr class="even">
+<td align="left">17</td>
+<td align="right">24.77</td>
+<td align="right">27.59</td>
+<td align="right">33.41</td>
+<td align="right">40.790</td>
+</tr>
+<tr class="odd">
+<td align="left">18</td>
+<td align="right">25.99</td>
+<td align="right">28.87</td>
+<td align="right">34.81</td>
+<td align="right">42.312</td>
+</tr>
+<tr class="even">
+<td align="left">19</td>
+<td align="right">27.20</td>
+<td align="right">30.14</td>
+<td align="right">36.19</td>
+<td align="right">43.820</td>
+</tr>
+<tr class="odd">
+<td align="left">20</td>
+<td align="right">28.41</td>
+<td align="right">31.41</td>
+<td align="right">37.57</td>
+<td align="right">45.315</td>
+</tr>
+<tr class="even">
+<td align="left">25</td>
+<td align="right">34.38</td>
+<td align="right">37.65</td>
+<td align="right">44.31</td>
+<td align="right">52.620</td>
+</tr>
+<tr class="odd">
+<td align="left">30</td>
+<td align="right">40.26</td>
+<td align="right">43.77</td>
+<td align="right">50.89</td>
+<td align="right">59.703</td>
+</tr>
+<tr class="even">
+<td align="left">40</td>
+<td align="right">51.81</td>
+<td align="right">55.76</td>
+<td align="right">63.69</td>
+<td align="right">73.402</td>
+</tr>
+<tr class="odd">
+<td align="left">50</td>
+<td align="right">63.17</td>
+<td align="right">67.50</td>
+<td align="right">76.15</td>
+<td align="right">86.661</td>
+</tr>
+<tr class="even">
+<td align="left">60</td>
+<td align="right">74.40</td>
+<td align="right">79.08</td>
+<td align="right">88.38</td>
+<td align="right">99.607</td>
+</tr>
+<tr class="odd">
+<td align="left">70</td>
+<td align="right">85.53</td>
+<td align="right">90.53</td>
+<td align="right">100.43</td>
+<td align="right">112.317</td>
+</tr>
+<tr class="even">
+<td align="left">80</td>
+<td align="right">96.58</td>
+<td align="right">101.88</td>
+<td align="right">112.33</td>
+<td align="right">124.839</td>
+</tr>
+<tr class="odd">
+<td align="left">90</td>
+<td align="right">107.57</td>
+<td align="right">113.15</td>
+<td align="right">124.12</td>
+<td align="right">137.208</td>
+</tr>
+<tr class="even">
+<td align="left">100</td>
+<td align="right">118.50</td>
+<td align="right">124.34</td>
+<td align="right">135.81</td>
+<td align="right">149.449</td>
+</tr>
+</tbody>
+</table>
+<p><em>Explanation</em>: For example, the value 2.71 in the top left corner
+indicates that for a <span class="math inline">\(\chi^{2}\)</span> distribution with 1 degree of freedom
+the probability of values greater than 2.71 is 0.100.</p>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c-3waytables.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/LSE-Methodology/MY464/edit/master/10-MY464-more.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Coursepack-MY464.pdf", "Coursepack-MY464.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

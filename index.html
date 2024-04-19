@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>MY464 Introduction to Quantitative Analysis for Media and Communications</title>
+  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="github-repo" content="LSE-Methodology/MY464" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  
+  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  
+
+<meta name="author" content="Department of Methodology, London School of Economics and Political Science" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="c-intro.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction<a href="c-intro.html#c-intro" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?<a href="c-intro.html#s-intro-purpose" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions<a href="c-intro.html#s-intro-definitions" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables<a href="c-intro.html#ss-intro-def-subj" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables<a href="c-intro.html#ss-intro-def-vartypes" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference<a href="c-intro.html#ss-intro-def-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation<a href="c-intro.html#ss-intro-def-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course<a href="c-intro.html#s-intro-outline" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing<a href="c-intro.html#s-intro-maths" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation<a href="c-intro.html#symbolic-mathematics-and-mathematical-notation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing<a href="c-intro.html#computing-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables<a href="c-more.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities<a href="c-more.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions<a href="c-more.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions<a href="c-more.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">MY464 Introduction to Quantitative Analysis for Media and Communications</h1>
+<p class="author"><em>Department of Methodology, London School of Economics and Political Science</em></p>
+</div>
+<div id="course-information" class="section level1 unnumbered hasAnchor">
+<h1>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><img src="dept_of_methodology.png" alt="image" style="height:2.2cm" /><img src="lse.png" alt="image" style="height:2.2cm" /></p>
+<div id="course-description" class="section level4 unnumbered hasAnchor">
+<h4>Course Description<a href="index.html#course-description" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This course is intended for those with little or no past training in
+quantitative methods. The course is an intensive introduction to some of
+the principles and methods of statistical analysis in social research.
+Topics covered in MY464 include descriptive statistics, basic ideas of
+inference and estimation, contingency tables and an introduction to
+linear regression models. For those with some quantitative training the
+slightly more advanced course MY452 (Applied Regression Analysis) would
+be more appropriate, followed by other Department of Methodology and
+Department of Statistics courses on quantitative methods, such as MY454
+(Applied Statistical Computing), MY455 (Multivariate Analysis and
+Measurement), MY456 (Survey Methodology), MY457 (Causal Inference for
+Observational and Experimental Studies), MY459 (Quantitative Text
+Analysis), ST416 (Multilevel Modelling), and ST442 (Longitudinal Data
+Analysis).</p>
+</div>
+<div id="course-objectives" class="section level4 unnumbered hasAnchor">
+<h4>Course Objectives<a href="index.html#course-objectives" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This course aims to impart a level of familiarity suitable for a
+moderately critical understanding of the statistical material in the
+journals commonly used by students in their work and the ability to use
+some elementary techniques.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="teaching" class="section level4 unnumbered hasAnchor">
+<h4>Teaching<a href="index.html#teaching" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p><strong>Lectures</strong>: 2-hour in-person lecture every week.</p></li>
+<li><p><strong>Applied exercises</strong>: Each week there will be an exercise for students to complete
+in which the ideas covered in the lecture for that week will be applied to a real
+data set using the software package R/RStudio. Each exercise will have an accompanying
+explanatory video and a multiple-choice quiz to be completed on Moodle to check
+your learning.</p></li>
+<li><p><strong>Seminars</strong>: Students will attend a one-hour seminar each
+week, <strong>starting in Week 2</strong>. The seminars will go over the material covered
+in that week’s lecture, the corresponding applied exercise and provide a forum
+for students to ask questions and discuss the material covered in the course.
+Seminars will be available to attend in person and online.
+Please consult the on-line timetables for the times and locations of the class groups.
+The allocation of students to seminars is done through LSE for You.
+This will be explained in the first lecture and on the Moodle page.
+Please contact the course administrator listed on the Moodle
+page if you have any issues.</p></li>
+</ul>
+</div>
+<div id="course-materials" class="section level4 unnumbered hasAnchor">
+<h4>Course Materials<a href="index.html#course-materials" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p><strong>Coursepack</strong>: This coursepack is the main course text. It is available
+to be viewed online at <a href="https://lse-methodology.github.io/MY464/" class="uri">https://lse-methodology.github.io/MY464/</a> You can
+view the coursepack in HTML form, or download it as a PDF or ePub to view
+offline.</p></li>
+<li><p><strong>Lecture slides</strong>: Copies of the slides displayed during
+the lectures can be downloaded from the MY464 Moodle page.</p></li>
+<li><p><strong>Recommended course texts</strong>:</p>
+<ul>
+<li><p>Alan Agresti and Christine Franklin (2013). <em>Statistics: The Art
+and Science of Learning from Data</em> (Third Ed.). Pearson.</p></li>
+<li><p>Alan Agresti and Barbara Finlay (2013). <em>Statistical Methods for
+the Social Sciences</em> (Fourth Ed.). Pearson</p></li>
+</ul>
+<p>Earlier/later editions are also suitable. While neither of these books is
+absolutely required, you may wish to purchase one if you would
+like to have additional explanation, examples and exercises to
+supplement the coursepack. Of these two, Agresti and Finlay is a
+bit more advanced. It is also the recommended additional course text
+for MY452 (which also has a coursepack similar to this one), so you
+may want to purchase it if you are planning to also take
+that course.</p></li>
+<li><p><strong>Other text books</strong>: There are hundreds of introductory textbooks
+on statistics and quantitative methods, many of them covering almost
+identical material. If you have one which you would like to use, and
+which looks as if it covers the same material at about the same
+level as this course, then it is probably suitable as
+additional reading.</p>
+<ul>
+<li>There are also many books and online resources which focus on
+the R/RStudio software package used in the computer classes.
+We do not consider them necessary for this course, or for learning
+statistics.</li>
+</ul></li>
+</ul>
+</div>
+<div id="my464-on-moodle" class="section level4 unnumbered hasAnchor">
+<h4>MY464 on Moodle<a href="index.html#my464-on-moodle" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<!-- {#sss-moodle} -->
+<p>The course materials are all available on Moodle. Go to
+<a href="http://moodle.lse.ac.uk/" class="uri">http://moodle.lse.ac.uk/</a> and login using your <em>username</em> and
+<em>password</em> (the same as for your LSE e-mail). Then in the <em>select
+courses</em> dialogue box type in MY464, and in <em>search results</em> click on
+MY464. The site contains the structure of the course week by week, the
+readings, weekly applied exercises and the associated data
+sets, coursepack and other materials, as well as a section on news and
+announcements.</p>
+</div>
+<div id="notes-on-studying-for-the-course" class="section level4 unnumbered hasAnchor">
+<h4>Notes on studying for the course<a href="index.html#notes-on-studying-for-the-course" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>To learn the material from this course you must do the work every week
+since it is cumulative; if you miss a week or two
+there is a chance that you will struggle to catch up. Also bear in mind that
+most people cannot learn quantitative techniques passively by just
+watching the lectures and reading the occasional chapter in a
+textbook. To learn statistics you have to do it; there are no shortcuts.
+Thus in addition to a lecture there will be a weekly applied exercise
+(in which you do some data analysis and interpretation
+using R/RStudio - instructions will be provided).
+Doing the exercises and discussing them in the weekly class
+is the best way to make sure you have understood and can apply what was covered
+in the lectures. If you are having any trouble this will reveal what the
+problem is. Thus the course is designed to have multiple, reinforcing
+ways of helping you learn this material.</p>
+</div>
+<div id="examinationsassessment" class="section level4 unnumbered hasAnchor">
+<h4>Examinations/assessment<a href="index.html#examinationsassessment" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>There will be a <strong>two-hour examination in January in the LENT Term</strong>.
+The exam will be completed online during a three hour window.
+Examination papers from previous years are available for
+revision purposes at the LSE library web site. 2018-19 was the first year that
+MY464 has existed, but the past exams for MY451 provide a good guide to the kinds of
+questions that we ask. Exams vary from year to year. Some questions closely follow
+questions that you will have answered in the homeworks or have seen on past exam papers.
+Other require you to apply the principles you have learned in new ways. Students should
+understand that past examinations should only be used as rough guides to
+the types of questions that are likely to appear on the examination.</p>
+</div>
+<div id="computing" class="section level4 unnumbered hasAnchor">
+<h4>Computing<a href="index.html#computing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Students must know their Username and Password in time for the first
+applied exercise in week 1. This information can be obtained from IT Help Desk (Library, 1st
+floor). The software package used for MY464 is R/RStudio, which will be introduced in the first
+applied exercise in week 1.</p>
+</div>
+<div id="software-availability" class="section level4 unnumbered hasAnchor">
+<h4>Software availability<a href="index.html#software-availability" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>R/RStudio is free to download and does not require a licence.</p>
+</div>
+<div id="feedback" class="section level4 unnumbered hasAnchor">
+<h4>Feedback<a href="index.html#feedback" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We welcome any comments you have on the course. If there are any
+problems that we can deal with, we will attempt to do so as quickly as
+possible. Speak to any member of the course team, or to your
+departmental supervisor if you feel that would be easier for you. Also
+please let us know if you find any errors or omissions in the
+coursepack, so that we can correct them.</p>
+</div>
+<div id="acknowledgements" class="section level4 unnumbered hasAnchor">
+<h4>Acknowledgements<a href="index.html#acknowledgements" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This coursepack bears many traces of previous materials and all of their
+authors, Colm O’Muircheartaigh, Colin Mills, Matt Mulford, Fiona Steele,
+Paul Mitchell, Sally Stares, Jouni Kuha, and Ben Lauderdale.
+Many thanks to Farimah Daftary, Sue Howard, Jon Jackson, Paul Mitchell,
+Indraneel Sircar, and many students of previous years for comments and
+suggestions which are incorporated in the current revision.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="course-programme" class="section level4 unnumbered hasAnchor">
+<h4>Course Programme<a href="index.html#course-programme" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table>
+<colgroup>
+<col width="19%" />
+<col width="80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Week 1</strong></td>
+<td align="left"><br />
+</td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Course overview and organisation. Introduction to basic concepts</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise</td>
+<td align="left">Familiarisation with R/RStudio (no seminar week 1)</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Chapter <a href="c-intro.html#c-intro">1</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 2</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Descriptive statistics for categorical variables</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise/seminar</td>
+<td align="left">Loading data into R/RStudio, descriptive statistics</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Sections <a href="c-descr1.html#s-descr1-intro">2.1</a>–<a href="c-descr1.html#s-descr1-2cat">2.4</a> and <a href="c-descr1.html#s-descr1-presentation">2.8</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 3</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Descriptive statistics for continuous variables</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise/seminar</td>
+<td align="left">Descriptive statistics for categorical variables</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Sections <a href="c-descr1.html#s-descr1-1cont">2.5</a>–<a href="c-descr1.html#s-descr1-2cont">2.7</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 4</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Analysis of two-way contingency tables</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise/seminar</td>
+<td align="left">Descriptive statistics for continuous variables</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Chapters <a href="c-samples.html#c-samples">3</a> and <a href="c-tables.html#c-tables">4</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 5</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Inference for means in two populations</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise/seminar</td>
+<td align="left">Analysis of two-way contingency tables</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Chapters <a href="c-contd.html#c-contd">6</a> and <a href="c-means.html#c-means">7</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 6</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Reading Week</td>
+<td align="left"><strong>No lecture, no exercise/seminar</strong></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 7</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Inference for proportions in one and two populations</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise/seminar</td>
+<td align="left">Inference for means in two populations</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Chapter <a href="c-probs.html#c-probs">5</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 8</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Correlation and simple linear regression as descriptive methods</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise/seminar</td>
+<td align="left">Inference for proportions in one and two populations</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Sections <a href="c-regression.html#s-regression-intro">8.1</a>–<a href="c-regression.html#ss-regression-simple-est">8.3.4</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 9</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Inference for the simple linear regression model, 3-way contingency tables</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise/seminar</td>
+<td align="left">Correlation and simple linear regression</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Section <a href="c-regression.html#ss-regression-simple-inf">8.3.5</a> (Hour 1); Section <a href="c-regression.html#s-regression-causality">8.4</a> and Chapter <a href="c-3waytables.html#c-3waytables">9</a> (Hour 2)</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 10</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Multiple linear regression</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise/seminar</td>
+<td align="left">More on linear regression</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Sections <a href="c-regression.html#s-regression-multiple">8.5</a>–<a href="c-regression.html#s-regression-rest">8.7</a></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Week 11</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Lecture</td>
+<td align="left">Review and exam preparation</td>
+</tr>
+<tr class="odd">
+<td align="left">Exercise/seminar</td>
+<td align="left">Multiple linear regression</td>
+</tr>
+<tr class="even">
+<td align="left">Coursepack</td>
+<td align="left">Chapter <a href="c-more.html#c-more">10</a></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="faq-frequently-asked-questions" class="section level4 unnumbered hasAnchor">
+<h4>FAQ: Frequently Asked Questions<a href="index.html#faq-frequently-asked-questions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Why do we use R/RStudio? I’ve heard that SAS/STATA/MINITAB/SPSS/LIMDEP is
+better.</strong> At this level it does not matter which program you use since
+we are learning standard procedures that are common to all programs. In
+favour of R/RStudio is that it is free, flexible and extremely powerful.</p>
+<p><strong>Can I get a copy of the R/RStudio software to use on my home computer?</strong>
+Yes, this will be explained in weeks 1 and 2 applied exercises and classes.</p>
+<p><strong>I’m taking MY464 because I want to learn how to use R/RStudio but we don’t
+seem to learn very much about the program. Why is that?</strong> MY464 is not a
+course about learning to use R/RStudio. We use the program merely to
+facilitate data analysis and interpretation. Some options for learning
+more about R/RStudio will be mentioned in the first lecture.</p>
+<p><strong>I’m taking MY464 to help me analyse data for my dissertation. Can I
+discuss my data and my specific problems with the lecturers?</strong> Yes, but
+not during the course. Staff of the Department of Methodology will be
+happy to talk to you about problems specific to your dissertation during
+the weekly sessions of the Methodology Surgery (see the website of the
+department for more information).</p>
+<p><strong>Does the coursepack contain everything I need to know for the exam?</strong>
+Yes. However, you will stand by far the best chance in the exam if you
+also attend the lectures, where the lecturers emphasise and explain the
+key parts of the material.</p>
+<p><strong>The lecturer introduced some material that was not in the coursepack.
+Do I need to know that material?</strong> This is almost certainly an illusion.
+The lectures will not introduce any genuinely new material not included
+in the course pack. However, sometimes the lecturer may of course use
+different words or a different example to further explain some topic.
+Copies of the most relevant notes displayed at the lectures will be
+posted in the MY464 Moodle site. All of the material required for the
+exam is contained in the coursepack, with the posted lecture notes as
+additional clarification.</p>
+<p><strong>Can I work together on the applied exercises with my friends?</strong> Yes, we
+positively encourage you to discuss the exercises with your
+colleagues. If you do this, please make sure you complete the multiple-choice
+quiz yourself.</p>
+<p><strong>I’m not registered at the LSE but at another University of London
+college. Can I attend this course?</strong> Normally yes, but you will have to
+complete an intercollegiate enrolment form.</p>
+<p><strong>I would like to audit the course without taking the exam. Is that
+OK?</strong> Yes, you are welcome to attend the lectures providing you are an
+LSE/University of London student and there is room for you.</p>
+<p><strong>MY464 is not challenging enough for me. Is there a more difficult
+course?</strong> Yes, MY452 and numerous other courses offered by the
+Department of Methodology and the Statistics department.</p>
+
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="c-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/LSE-Methodology/MY464/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Coursepack-MY464.pdf", "Coursepack-MY464.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

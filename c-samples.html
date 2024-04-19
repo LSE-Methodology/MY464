@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Samples and populations | MY464 Introduction to Quantitative Analysis for Media and Communications</title>
+  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Samples and populations | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="github-repo" content="LSE-Methodology/MY464" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Samples and populations | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  
+  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  
+
+<meta name="author" content="Department of Methodology, London School of Economics and Political Science" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="c-descr1.html"/>
+<link rel="next" href="c-tables.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction<a href="c-intro.html#c-intro" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?<a href="c-intro.html#s-intro-purpose" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions<a href="c-intro.html#s-intro-definitions" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables<a href="c-intro.html#ss-intro-def-subj" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables<a href="c-intro.html#ss-intro-def-vartypes" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference<a href="c-intro.html#ss-intro-def-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation<a href="c-intro.html#ss-intro-def-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course<a href="c-intro.html#s-intro-outline" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing<a href="c-intro.html#s-intro-maths" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation<a href="c-intro.html#symbolic-mathematics-and-mathematical-notation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing<a href="c-intro.html#computing-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables<a href="c-more.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities<a href="c-more.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions<a href="c-more.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions<a href="c-more.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="c-samples" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 3</span> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="s-samples-intro" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.1</span> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>So far we have discussed statistical description, which is concerned
+with summarizing features of a sample of observed data. From now on,
+most of the attention will be on statistical inference. As noted in
+Section <a href="c-intro.html#ss-intro-def-descr">1.2.3</a>, the purpose of inference is to draw
+conclusions about the characteristics of some larger population based on
+what is observed in a sample. In this chapter we will first give more
+careful definitions of the concepts of populations and samples, and of
+the connections between them. In Section <a href="c-samples.html#s-samples-popdistrs">3.5</a> we
+then consider the idea of a population distribution, which is the target
+of statistical inference. The discussion of statistical inference will
+continue in Chapters <a href="c-tables.html#c-tables">4</a>–<a href="c-means.html#c-means">7</a> where we gradually
+introduce the basic elements of inference in the contexts of different
+types of analyses.</p>
+</div>
+<div id="s-samples-finpops" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.2</span> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In many cases the population of interest is a particular group of real
+people or other units. Consider, for example, the European Social Survey
+(ESS) which we used in Chapter <a href="c-descr1.html#c-descr1">2</a> (see early in Section <a href="c-descr1.html#s-descr1-examples">2.2</a>).<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a> The ESS is a cross-national survey carried
+out biennially in around 30 European countries. It is an
+academically-driven social survey which is designed to measure a wide
+range attitudes, beliefs and behaviour patterns among the European
+population, especially for purposes for cross-national comparisons.</p>
+<p>The target population of ESS is explicitly stated as being “all persons
+aged 15 and over resident within private households, regardless of their
+nationality, citizenship, language or legal status” in each of the
+participating countries. This is, once “private household” has been
+defined carefully, and notwithstanding the inevitable ambiguity in that
+the precise number and composition of households are constantly
+changing, a well-defined, existing group. It is also a large group: in
+the UK, for example, there are around 50 million such people.
+Nevertheless, we have no conceptual difficulty with imagining this
+collection of individuals. We will call any such population a <em>finite
+population</em>.</p>
+<p>The main problem with studying a large finite population is that it is
+usually not feasible to collect data on all of its members. A <strong>census</strong>
+is a study where some variables <em>are</em> in fact measured for the entire
+population. The best-known example is the Census of Population, which at
+least aims to be a complete evaluation of all persons living in a
+country on a particular date with respect to basic demographic data.
+Similarly, we have the Census of Production, Census of Distribution etc.
+For most research, however, a census is not feasible. Even when one is
+attempted, it is rarely truly comprehensive. For example, all population
+censuses which involve collecting the data from the people themselves
+end up missing a substantial (and non-random) proportion of the
+population. For most purposes a well-executed sample of the kind
+described below is actually preferable to an unsuccessful census.</p>
+</div>
+<div id="s-samples-samples" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.3</span> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When a census is not possible, information on the population is obtained
+by observing only a subset of units from it, i.e. a sample. This is
+meant to be <em>representative</em> of the population, so that we can
+<em>generalise</em> findings from the sample to the population. To be
+representative in a sense appropriate for statistical inference, a
+sample from a finite population must be a <em>probability sample</em>, obtained
+using</p>
+<ul>
+<li><strong>probability sampling</strong>: a sampling method where every unit in the
+population has a <strong>known</strong>, <strong>non-zero</strong> probability of being
+selected to the sample.</li>
+</ul>
+<p>Probability sampling requires first a <strong>sampling frame</strong>, essentially
+one or more lists of units or collections of units which make it
+possible to select and contact members of the sample. For example, the
+first stage of sampling for many UK surveys uses the Postcode Address
+File, a list of postal addresses in the country. A <strong>sampling design</strong>
+is then created in such a way that it assigns a <strong>sampling probability</strong>
+for each unit, and the sample is drawn so that each unit’s probability
+of being selected into the sample is given by their sampling
+probability. The selection of the specific set of units actually
+included in the sample thus involves <em>randomness</em>, usually implemented
+with the help of random number generators on computers.</p>
+<p>The simplest form of probability sampling is</p>
+<ul>
+<li><strong>simple random sampling</strong>, where every unit in the population has
+the <em>same</em> probability of selection.</li>
+</ul>
+<p>This requirement of equal selection probabilities is by no means
+essential. Other probability sampling methods which relax it include</p>
+<ul>
+<li><p><strong>stratified sampling</strong>, where the selection probabilities are set
+separately for different groups (<em>strata</em>) in the population, for
+example separately for men and women, different ethnic groups or
+people living in different regions.</p></li>
+<li><p><strong>cluster sampling</strong>, where the units of interest are not sampled
+individually but in groups (<em>clusters</em>). For example, a school
+survey might involve sampling entire classes and then interviewing
+every pupil in each selected class.</p></li>
+<li><p><strong>multistage sampling</strong>, which employs a sequence of steps, often
+with a combination of stratification, clustering and simple
+random sampling. For example, many social surveys use a <em>multistage
+area sampling</em> design which begins with one or more stages of
+sampling areas, then households (addresses) within selected small
+areas, and finally individuals within selected households.</p></li>
+</ul>
+<p>These more complex sampling methods are in fact used for most
+large-scale social surveys to improve their accuracy and/or
+cost-efficiency compared to simple random sampling. For example, the UK
+component of the European Social Survey uses a design of three stages:
+(1) a stratified sample of postcode sectors, stratified by region, level
+of deprivation, percentage of privately rented households, and
+percentage of pensioners; (2) simple random sample of addresses within
+the selected sectors; and (3) simple random sample of one adult from
+each selected address.</p>
+<p>Some analyses of such data require the use of <em>survey weights</em> to adjust
+for the fact that some units were more likely than others to end up in
+the sample. The questions of how and when the weights should be used
+are, however, beyond the scope of this course. Here we will omit the
+weights even in examples where they might normally be used.<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
+<p>Not all sampling methods satisfy the requirements of probability
+sampling. Such techniques of <strong>non-probability sampling</strong> include</p>
+<ul>
+<li><p><em>purposive sampling</em>, where the investigator uses his or her own
+“expert” judgement to select units considered to be representative
+of the population. It is very difficult to do this well, and very
+easy to introduce conscious or unconscious biases into
+the selection. In general, it is better to leave the task to the
+random processes of probability sampling.</p></li>
+<li><p><em>haphazard</em> or <em>convenience</em> sampling, as when a researcher simply
+uses the first <span class="math inline">\(n\)</span> passers-by who happen to be available and willing
+to answer questions. One version of this is <em>volunteer</em> sampling,
+familiar from call-in “polls” carried out by morning television
+shows and newspapers on various topics of current interest. All we
+learn from such exercises are the opinions of those readers or
+viewers who felt strongly enough about the issue to send in their
+response, but these tell us essentially nothing about the average
+attitudes of the general population.</p></li>
+<li><p><em>quota sampling</em>, where interviewers are required to select a
+certain number (quota) of respondents in each of a set of categories
+(defined, for example, by sex, age group and income group). The
+selection of specific respondents within each group is left to the
+interviewer, and is usually done using some (unstated) form of
+purposive or convenience sampling. Quota sampling is quite common,
+especially in market research, and can sometimes give
+reasonable results. However, it is easy to introduce biases in the
+selection stage, and almost impossible to know whether the resulting
+sample is a representative one.</p></li>
+</ul>
+<p>A famous example of the dangers of non-probability sampling is the
+survey by the <em>Literary Digest</em> magazine to predict the results of the
+1936 U.S. presidential election. The magazine sent out about 10 million
+questionnaires on post cards to potential respondents, and based its
+conclusions on those that were returned. This introduced biases in at
+least two ways. First, the list of those who were sent the questionnaire
+was based on registers such as the subscribers to the magazine, and of
+people with telephones, cars and various club memberships. In 1936 these
+were mainly wealthier people who were more likely to be Republican
+voters, and the typically poorer people not on the source lists had no
+chance of being included. Second, only about 25% of the questionnaires
+were actually returned, effectively rendering the sample into a
+volunteer sample. The magazine predicted that the Republican candidate
+Alf Landon would receive 57% of the vote, when in fact his Democratic
+opponent F. D. Roosevelt gained an overwhelming victory with 62% of the
+vote. The outcome of the election was predicted correctly by a much
+smaller probability sample collected by George Gallup.</p>
+<p>A more recent example is the “GM Nation” public consultation exercise on
+attitudes to genetically modified (GM) agricultural products, carried
+out in the U.K. in 2002–3.<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> This involved various activities,
+including national, regional and local events where interested members
+of the public were invited to take part in discussions on GM foods. At
+all such events the participants also completed a questionnaire, which
+was also available on the GM Nation website. In all, around 37000 people
+completed the questionnaire, and around 90% of those expressed
+opposition to GM foods. While the authors of the final report of the
+consultation drew some attention to the unrepresentative nature of this
+sample, this fact had certainly been lost by the time the results were
+reported in the national newspapers as “5 to 1 against GM crops in
+biggest ever public survey”. At the same time, probability samples
+suggested that the British public is actually about evenly split between
+supporters and opponents of GM foods.</p>
+</div>
+<div id="s-samples-infpops" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.4</span> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Even a cursory inspection of academic journals in the social sciences
+will reveal that a finite population of the kind discussed above is not
+always clearly defined, nor is there often any reference to probability
+sampling. Instead, the study designs may for example resemble the
+following two examples:</p>
+<p><em>Example: A psychological experiment</em><br />
+Fifty-nine undegraduate students from a large U.S. university took part
+in a psychological experiment, either as part of a class project or
+for extra credit on a psychology course.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> The participants were randomly
+assigned to listen to one of two songs, one with clearly violent lyrics
+and one with no violent content. One of the variables of interest was a
+measure (from a 35-item attitude scale) of state hostility
+(i.e. temporary hostile feelings), obtained after the participants had
+listened to a song, and the researchers were interested in comparing
+levels of hostility between the two groups.</p>
+<p><em>Example: Voting in a congressional election</em><br />
+A political-science article considered the U.S. congressional
+election which took place between June 1862 and November 1863,
+i.e. during a crucial period in the American Civil War.<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> The units of
+analysis were the districts in the House of Representatives. One part of
+the analysis examined whether the likelihood of the candidate of the
+Republican Party (the party of the sitting president Abraham Lincoln)
+being elected from a district was associated with such explanatory
+variables as whether the Republican was the incumbent, a measure of the
+quality of the other main candidate, number of military casualties for
+the district, and the timing of the election in the district (especially
+in relation to the Union armies’ changing fortunes over the period).</p>
+<p>There is no reference here to the kinds of finite populations and
+probability samples discussed Sections <a href="c-samples.html#s-samples-finpops">3.2</a> and
+<a href="c-samples.html#s-samples-samples">3.3</a>. In the experiment, the participants were a
+convenience sample of respondents easily available to the researcher,
+while in the election study the units represent (nearly) all the
+districts in a single (and historically unique) election. Yet both
+articles contain plenty of statistical inference, so the language and
+concepts of samples and populations are clearly being used. How is this
+to be justified?</p>
+<p>In the example of the psychological experiment the subjects will clearly
+not be representative of a general (non-student) population in many
+respects, e.g. in age and education level. However, it is not really
+such characteristics that the study is concerned with, nor is the
+population of interest really a population of people. Instead, the
+implicit “population” being considered is that of possible values of
+level of hostility after a person has listened to one of the songs in
+the experiment. In this extended framework, these possible values
+include not just the levels of hostitility possibly obtained for
+different people, but also those that a single person might have after
+listening to the song at different times or in different moods etc. The
+generalisation from the observed data in the experiment is to this
+hypothetical population of possible reactions.</p>
+<p>In the political science example the population is also a hypothetical
+one, namely those election results that <em>could</em> have been obtained if
+something had happened differently, i.e. if different people turned up
+to vote, if some voters had made different decisions, and so on (or if
+we considered a different election in the same conditions, although that
+is less realistic in this example, since other elections have not taken
+place in the middle of a civil war). In other words, votes that actually
+took place are treated as a sample from the population of votes that
+could conceivably have taken place.</p>
+<p>In both cases the “population” is in some sense a hypothetical or
+conceptual one, a population of possible realisations of events, and the
+data actually observed are a sample from that population. Sometimes it
+is useful to apply similar thinking even to samples from ostensibly
+quite finite populations. Any such population, say the residents of a
+country, is exactly fixed at one moment only, and was and will be
+slightly different at any other time, or would be even now if any one of
+a myriad of small events had happened slightly differently in the past.
+We could thus view the finite population itself at a single moment as a
+sample from a conceptual population of possible realisations. This is
+known in survey literature as a <em>superpopulation</em>. The data actually
+observed are then also a sample from the superpopulation. With this
+extension, it is possible to regard almost any set of data as a sample
+from some conceptual superpopulation.</p>
+<p>The highly hypothetical notion of a conceptual population of possible
+events is clearly going to be less easy both to justify and to
+understand than the concept of a large but finite population of real
+subjects defined in Section <a href="c-samples.html#s-samples-finpops">3.2</a>. If you find the
+whole idea distracting, you can focus in your mind on the more
+understandable latter case, at least if you are willing to believe that
+the idea of a conceptual population is also meaningful. Its main
+justification is that much of the time it works, in the sense that
+useful decision rules and methods of analysis are obtained based on the
+idea. Most of the motivation and ideas of statistical inference are
+essentially the same for both kinds of populations.</p>
+<p>Even when the idea of a conceptual population is invoked, questions of
+representativeness of and generalisability to real, finite populations
+will still need to be kept in mind in most applications. For example,
+the assumption behind the psychological experiment described above is
+that the findings about how hearing a violent song affects levels of
+hostility are generalisable to some larger population, beyond the 59
+participants in the experiment and beyond the body of students in a
+particular university. This may well be the case at least to some
+extent, but it is still open to questioning. For this reason findings
+from studies like this only become really convincing when they are
+<em>replicated</em> in comparable experiments among different kinds of
+participants.</p>
+<p>Because the kinds of populations discussed in this section are
+hypothetical, there is no sense of them having a particular fixed number
+of members. Instead, they are considered to be <em>infinite</em> in size. This
+also implies (although it may not be obvious why) that we can
+essentially always treat samples from such populations as if they were
+obtained using simple random sampling.</p>
+</div>
+<div id="s-samples-popdistrs" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.5</span> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will introduce the idea of a population distribution first for finite
+populations, before extending it to infinite ones. The discussion in
+this section focuses on categorical variables, because the concepts are
+easiest to explain in that context; generalisations to continuous
+variables are discussed in Chapter <a href="c-means.html#c-means">7</a>.</p>
+<p>Suppose that we have drawn a sample of <span class="math inline">\(n\)</span> units from a finite
+population and determined the values of some variables for them. The
+units that are not in the sample also possess values of the variables,
+even though these are not observed. We can thus easily imagine how any
+of the methods which were in Chapter <a href="c-descr1.html#c-descr1">2</a> used to describe a
+sample could also be applied in the same way to the whole population, if
+only we knew all the values in it. In particular, we can, paralleling
+the sample distribution of a variable, define the <strong>population
+distribution</strong> as the set of values of the variable which appear in the
+population, together with the frequencies of each value.</p>
+<p>For illustration, consider again the example introduced early in Section <a href="c-descr1.html#s-descr1-examples">2.2</a>. The two variables there are a person’s sex and
+his or her attitude toward income redistribution. We have observed them
+for a sample <span class="math inline">\(n=2344\)</span> people drawn from the population of all UK
+residents aged 15 or over. The sample distributions are summarised by
+Table <a href="c-descr1.html#tab:t-attitude">2.3</a>.</p>
+<table style="width:98%;">
+<caption><span id="tab:t-sex-attitude-pop">Table 3.1: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Attitude towards income redistribution by sex, in a hypothetical
+population of 50 million people. The numbers in the table are
+frequencies in millions of people, row percentages (in parentheses)
+and overall percentages in square brackets.</caption>
+<colgroup>
+<col width="10%" />
+<col width="17%" />
+<col width="13%" />
+<col width="17%" />
+<col width="12%" />
+<col width="12%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="center">Agree
+strongly</th>
+<th align="center"><br />
+Agree</th>
+<th align="center">Neither agree
+nor disagree</th>
+<th align="center"><br />
+Disagree</th>
+<th align="center">Disagree
+strongly</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Male</td>
+<td align="center">3.84</td>
+<td align="center">10.08</td>
+<td align="center">4.56</td>
+<td align="center">4.32</td>
+<td align="center">1.20</td>
+<td align="right">24.00</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(16.00)</td>
+<td align="center">(42.00)</td>
+<td align="center">(19.00)</td>
+<td align="center">(18.00)</td>
+<td align="center">(5.00)</td>
+<td align="right">(100)</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="center">[7.68]</td>
+<td align="center">[20.16]</td>
+<td align="center">[9.12]</td>
+<td align="center">[8.64]</td>
+<td align="center">[2.40]</td>
+<td align="right">[48.00]</td>
+</tr>
+<tr class="even">
+<td align="left">Female</td>
+<td align="center">4.16</td>
+<td align="center">13.00</td>
+<td align="center">4.68</td>
+<td align="center">3.38</td>
+<td align="center">0.78</td>
+<td align="right">26.00</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="center">(16.00)</td>
+<td align="center">(50.00)</td>
+<td align="center">(18.00)</td>
+<td align="center">(13.00)</td>
+<td align="center">(3.00)</td>
+<td align="right">(100)</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">[8.32]</td>
+<td align="center">[26.00]</td>
+<td align="center">[9.36]</td>
+<td align="center">[6.76]</td>
+<td align="center">[1.56]</td>
+<td align="right">[52.00]</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="center">8.00</td>
+<td align="center">23.08</td>
+<td align="center">9.24</td>
+<td align="center">7.70</td>
+<td align="center">1.98</td>
+<td align="right">50</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(16.00)</td>
+<td align="center">(46.16)</td>
+<td align="center">(18.48)</td>
+<td align="center">(15.40)</td>
+<td align="center">(3.96)</td>
+<td align="right">(100)</td>
+</tr>
+</tbody>
+</table>
+<p>Imagine now that the full population consisted of 50 million people, and
+that the values of the two variables for them were as shown in Table
+<a href="c-samples.html#tab:t-sex-attitude-pop">3.1</a>. The frequencies in this table desribe the
+population distribution of the variables in this hypothetical
+population, with the joint distribution of sex and attitude shown by the
+internal cells of the table and the marginal distributions by its
+margins. So there are for example 3.84 million men and 4.16 million
+women in the population who strongly agree with the attitude statement,
+and 1.98 million people overall who strongly disagree with it.</p>
+<p>Rather than the frequencies, it is more helpful to discuss population
+distributions in terms of proportions. Table <a href="c-samples.html#tab:t-sex-attitude-pop">3.1</a>
+shows two sets of them, the overall proportions in square brackets
+out of the total population size, and the two rows of conditional
+proportions of attitude given sex (in parentheses). Either of these can
+be used to introduce the ideas of population distributions, but we focus
+on the conditional proportions because they will be more convenient for
+the discussion in later chapters. In this population we observe, for
+example, that the conditional proportion of “Strongly disagree” given
+that a person is a woman is 0.03, i.e. 3% of women strongly disagree
+with the statement, while among men the corresponding conditional
+proportion is 0.05.</p>
+<p>Instead of “proportions”, when we discuss population distributions we
+will usually talk of “probabilities”. The two terms are equivalent when
+the population is finite and the variables are categorical, as in Table
+<a href="c-samples.html#tab:t-sex-attitude-pop">3.1</a>, but the language of probabilities is more
+appropriate in other cases. We can then say that Table
+<a href="c-samples.html#tab:t-sex-attitude-pop">3.1</a> shows two sets of <strong>conditional probabilities</strong>
+in the population, which define two conditional <strong>probability
+distributions</strong> for attitude given sex.</p>
+<p>The notion of a probability distribution creates a conceptual connection
+between population distributions and sampling from them. This is that
+the probabilities of the population distribution can also be thought of
+as sampling probabilities in (simple random) sampling from the
+population. For example, here the conditional probability of “Strongly
+disagree” among men is 0.05, while the probability of “Strongly agree”
+is 0.16. The sampling interpretation of this is that if we sample a man
+at random from the population, the probability is 0.05 that he strongly
+disagrees and 0.16 that he strongly agrees with the attitude statement.</p>
+<p>The view of population distributions as probability distributions works
+also in other cases than the kind that is illustrated by Table
+<a href="c-samples.html#tab:t-sex-attitude-pop">3.1</a>. First, it applies also for continuous
+variables, where proportions of individual values are less useful (this
+is discussed further in Chapter <a href="c-means.html#c-means">7</a>). Second, it is also
+appropriate when the population is regarded as an infinite
+superpopulation, in which case the idea of population <em>frequencies</em> is
+not meaningful. With this device we have thus reached a formulation of a
+population distribution which is flexible enough to cover all the
+situations where we will need it.</p>
+</div>
+<div id="s-samples-inference" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.6</span> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have now introduced the first key concepts that are involved in
+statistical inference:</p>
+<ul>
+<li><p>The population, which may regarded as finite or infinite.
+Distributions of variables in the population are the population
+distributions, which are formulated as probability distributions of
+the possible values of the variables.</p></li>
+<li><p>Random samples from the population, and sample distributions of
+variables in the sample.</p></li>
+</ul>
+<p>Substantive research questions are most often questions about population
+distributions. This raises the fundamental challenge of inference: what
+we are interested in — the population — is not fully observed, while
+what we do observe — the sample — is not of main interest for itself.
+The sample is, however, what information we do have to draw on for
+conclusions about the population. Here a second challenge arises:
+because of random variation in the sampling, sample distributions will
+not be identical to population distributions, so inference will not be
+as simple as concluding that whatever is true of the sample is also true
+of the population. Something cleverer is needed to weigh the evidence in
+the sample, and that something is statistical inference.</p>
+<p>The next three chapters are mostly about statistical inference. Each of
+them discusses a particular type of analysis and inferential and
+decriptive statistical methods for it. These methods are some of the
+most commonly used in basic statistical analyses of empirical data. In
+addition, we will also use them as contexts in which to introduce the
+general concepts of statistical inference. This will be done gradually,
+with each chapter both building on previous concepts and introducing new
+ones, as follows:</p>
+<ul>
+<li><p>Chapter <a href="c-tables.html#c-tables">4</a>: Associations in two-way contingency tables
+(significance testing, sampling distributions of statistics).</p></li>
+<li><p>Chapter <a href="c-probs.html#c-probs">5</a>: Single proportions and comparisons of
+proportions (probability distributions, parameters, point
+estimation, confidence intervals).</p></li>
+<li><p>Chapter <a href="c-means.html#c-means">7</a>: Means of continuous variables (probability
+distributions of continuous variables, and inference for
+such variables).</p></li>
+</ul>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="10">
+<li id="fn10"><p>European Social Survey (2012). ESS Round 5 (2010/2011) Technical
+Report. London: Centre for Comparative Social Surveys, City
+University London. See <a href="http://www.europeansocialsurvey.org" class="uri">http://www.europeansocialsurvey.org</a> for more on
+the ESS.<a href="c-samples.html#fnref10" class="footnote-back">↩</a></p></li>
+<li id="fn11"><p>For more on survey weights and the design and analysis of surveys
+in general, please see MY456 (Survey Methodology) in the Lent Term.<a href="c-samples.html#fnref11" class="footnote-back">↩</a></p></li>
+<li id="fn12"><p>For more information, see Gaskell, G. (2004). “Science policy and
+society: the British debate over GM agriculture”, <em>Current Opinion
+in Biotechnology</em> <strong>15</strong>, 241–245.<a href="c-samples.html#fnref12" class="footnote-back">↩</a></p></li>
+<li id="fn13"><p>Experiment 1 in Anderson, C. A., Carnagey, N. L., and Eubanks,
+J. (2003). “Exposure to violent media: the effects of songs with
+violent lyrics on aggressive thoughts and feelings”. <em>Journal of
+Personality and Social Psychology</em> <strong>84</strong>, 960–971.<a href="c-samples.html#fnref13" class="footnote-back">↩</a></p></li>
+<li id="fn14"><p>Carson, J. L. et al. (2001). “The impact of national tides and
+district-level effects on electoral outcomes: the U.S. congressional
+elections of 1862–63”. <em>American J. of Political Science</em> <strong>45</strong>,
+887–898.<a href="c-samples.html#fnref14" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c-descr1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="c-tables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/LSE-Methodology/MY464/edit/master/03-MY464-samples.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Coursepack-MY464.pdf", "Coursepack-MY464.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

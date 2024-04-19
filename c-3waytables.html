@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Analysis of 3-way contingency tables | MY464 Introduction to Quantitative Analysis for Media and Communications</title>
+  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Analysis of 3-way contingency tables | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="github-repo" content="LSE-Methodology/MY464" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Analysis of 3-way contingency tables | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  
+  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  
+
+<meta name="author" content="Department of Methodology, London School of Economics and Political Science" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="c-regression.html"/>
+<link rel="next" href="c-more.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction<a href="c-intro.html#c-intro" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?<a href="c-intro.html#s-intro-purpose" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions<a href="c-intro.html#s-intro-definitions" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables<a href="c-intro.html#ss-intro-def-subj" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables<a href="c-intro.html#ss-intro-def-vartypes" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference<a href="c-intro.html#ss-intro-def-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation<a href="c-intro.html#ss-intro-def-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course<a href="c-intro.html#s-intro-outline" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing<a href="c-intro.html#s-intro-maths" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation<a href="c-intro.html#symbolic-mathematics-and-mathematical-notation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing<a href="c-intro.html#computing-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables<a href="c-more.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities<a href="c-more.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions<a href="c-more.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions<a href="c-more.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="c-3waytables" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 9</span> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In Section <a href="c-descr1.html#s-descr1-2cat">2.4</a> and Chapter <a href="c-tables.html#c-tables">4</a> we discussed
+the analysis of two-way contingency tables (crosstabulations) for
+examining the associations between two categorical variables. In this
+section we extend this by introducing the basic ideas of <strong>multiway
+contingency tables</strong> which include more than two categorical variables.
+We focus solely on the simplest instance of them, a <strong>three-way table</strong>
+of three variables.</p>
+<p>This topic is thematically related also to some of Chapter
+<a href="c-regression.html#c-regression">8</a>, in that a multiway contingency table can be seen as
+a way of implementing for categorical variables the ideas of statistical
+control that were also a feature of the multiple linear regression model
+of Section <a href="c-regression.html#s-regression-multiple">8.5</a>. Here, however, we will not
+consider formal regression models for categorical variables (these are
+mentioned only briefly at the end of the chapter). Instead, we give
+examples of analyses which simply apply familiar methods for two-way
+tables repeatedly for tables of two variables at fixed values of a third
+variable.</p>
+<p>The discussion is organised arond three examples. In each case we start
+with a two-way table, and then introduce a third variable which we want
+to control for. This reveals various features in the examples, to
+illustrate the types of findings that may be uncovered by statistical
+control.</p>
+<p><strong>Example 9.1: Berkeley admissions</strong></p>
+<p>Table <a href="c-3waytables.html#tab:t-berkeley1">9.1</a> summarises data on applications for admission to
+graduate study at the University of California, Berkeley, for the fall
+quarter 1973.<a href="#fn55" class="footnote-ref" id="fnref55"><sup>55</sup></a> The data are for five of the six departments with the
+largest number of applications, labelled below Departments 2–5
+(Department 1 will be discussed at the end of this section). Table
+<a href="c-3waytables.html#tab:t-berkeley1">9.1</a> shows the two-way contingency table of the sex of the
+applicant and whether he or she was admitted to the university.</p>
+<table style="width:75%;">
+<caption><span id="tab:t-berkeley1">Table 9.1: </span>Table of sex of applicant vs. admission in the Berkeley admissions
+data. The column labelled ‘% Yes’ is the percentage of applicants
+admitted within each row. <span class="math inline">\(\chi^{2}=38.4\)</span>, <span class="math inline">\(df=1\)</span>, <span class="math inline">\(P&lt;0.001\)</span>.</caption>
+<colgroup>
+<col width="19%" />
+<col width="18%" />
+<col width="15%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="right">Admitted
+No</th>
+<th align="right">Admitted
+Yes</th>
+<th align="right"><br />
+% Yes</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Male</td>
+<td align="right">1180</td>
+<td align="right">686</td>
+<td align="right">36.8</td>
+<td align="right">1866</td>
+</tr>
+<tr class="even">
+<td align="left">Female</td>
+<td align="right">1259</td>
+<td align="right">468</td>
+<td align="right">27.1</td>
+<td align="right">1727</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="right">2439</td>
+<td align="right">1154</td>
+<td align="right">32.1</td>
+<td align="right">3593</td>
+</tr>
+</tbody>
+</table>
+<p>The percentages in Table <a href="c-3waytables.html#tab:t-berkeley1">9.1</a> show that men were more
+likely to be admitted, with a 36.8% success rate compared to 27.1% for
+women. The difference is strongly significant, with <span class="math inline">\(P&lt;0.001\)</span> for the
+<span class="math inline">\(\chi^{2}\)</span> test of independence. If this association was interpreted
+causally, it might be regarded as evidence of sex bias in the admissions
+process. However, other important variables may also need to be
+considered in the analysis. One of them is the academic department to
+which an applicant had applied. Information on the department as well as
+sex and admission is shown in Table <a href="c-3waytables.html#tab:t-berkeley2">9.2</a>.</p>
+<table style="width:97%;">
+<caption><span id="tab:t-berkeley2">Table 9.2: </span>Sex of applicant vs. admission by academic department in the
+Berkeley admissions data.</caption>
+<colgroup>
+<col width="36%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Department</th>
+<th align="left"><br />
+Sex</th>
+<th align="right">Admitted
+No</th>
+<th align="right">Admitted
+Yes</th>
+<th align="right"><br />
+% Yes</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2</td>
+<td align="left">Male</td>
+<td align="right">207</td>
+<td align="right">353</td>
+<td align="right">63.0</td>
+<td align="right">560</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Female</td>
+<td align="right">8</td>
+<td align="right">17</td>
+<td align="right">68.0</td>
+<td align="right">25</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Total</td>
+<td align="right">215</td>
+<td align="right">370</td>
+<td align="right">63.2</td>
+<td align="right">585</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\chi^{2}=0.25\)</span>, <span class="math inline">\(P=0.61\)</span></td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">Male</td>
+<td align="right">205</td>
+<td align="right">120</td>
+<td align="right">36.9</td>
+<td align="right">325</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Female</td>
+<td align="right">391</td>
+<td align="right">202</td>
+<td align="right">34.1</td>
+<td align="right">593</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Total</td>
+<td align="right">596</td>
+<td align="right">322</td>
+<td align="right">35.1</td>
+<td align="right">918</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\chi^{2}=0.75\)</span>, <span class="math inline">\(P=0.39\)</span></td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="left">Male</td>
+<td align="right">279</td>
+<td align="right">138</td>
+<td align="right">33.1</td>
+<td align="right">417</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Female</td>
+<td align="right">244</td>
+<td align="right">131</td>
+<td align="right">34.9</td>
+<td align="right">375</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Total</td>
+<td align="right">523</td>
+<td align="right">269</td>
+<td align="right">34.0</td>
+<td align="right">792</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\chi^{2}=0.30\)</span>, <span class="math inline">\(P=0.59\)</span></td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">Male</td>
+<td align="right">138</td>
+<td align="right">53</td>
+<td align="right">27.7</td>
+<td align="right">191</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Female</td>
+<td align="right">299</td>
+<td align="right">94</td>
+<td align="right">23.9</td>
+<td align="right">393</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Total</td>
+<td align="right">437</td>
+<td align="right">147</td>
+<td align="right">25.2</td>
+<td align="right">584</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\chi^{2}=1.00\)</span>, <span class="math inline">\(P=0.32\)</span></td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">6</td>
+<td align="left">Male</td>
+<td align="right">351</td>
+<td align="right">22</td>
+<td align="right">5.9</td>
+<td align="right">373</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Female</td>
+<td align="right">317</td>
+<td align="right">24</td>
+<td align="right">7.0</td>
+<td align="right">341</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Total</td>
+<td align="right">668</td>
+<td align="right">46</td>
+<td align="right">6.4</td>
+<td align="right">714</td>
+</tr>
+<tr class="even">
+<td align="left"><span class="math inline">\(\chi^{2}=0.38\)</span>, <span class="math inline">\(P=0.54\)</span></td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left"></td>
+<td align="right">2439</td>
+<td align="right">1154</td>
+<td align="right">32.1</td>
+<td align="right">3593</td>
+</tr>
+</tbody>
+</table>
+<p>Table <a href="c-3waytables.html#tab:t-berkeley2">9.2</a> is a <em>three-way</em> contingency table, because each
+of its internal cells shows the number of applicants with a particular
+combination of three variables: department, sex and admission status.
+For example, the frequency 207 in the top left corner indicates that
+there were 207 male applicants to department 2 who were not admitted.
+Table <a href="c-3waytables.html#tab:t-berkeley2">9.2</a> is presented in the form of a series of tables
+of sex vs. admission, just like in the original two-way table
+<a href="c-3waytables.html#tab:t-berkeley1">9.1</a>, but now with one table for each department. These are
+known as <strong>partial tables</strong> of sex vs. admission, <strong>controlling for</strong>
+department. The word “control” is used here in the same sense as before:
+each partial table summarises the data for the applicants to a single
+department, so the variable “department” is literally held constant
+within the partial tables.</p>
+<p>Table <a href="c-3waytables.html#tab:t-berkeley2">9.2</a> also contains the marginal distributions of sex
+and admission status within each department. They can be used to
+construct the other two possible two-way tables for these variables, for
+department vs. sex of applicant and department vs. admission status.
+This information, summarised in Table <a href="c-3waytables.html#tab:t-berkeley3">9.3</a>, is discussed
+further below.</p>
+<p>The association between sex and admission within each partial table can
+be examined using methods for two-way tables. For every one of them, the
+<span class="math inline">\(\chi^{2}\)</span> test shows that the hypothesis of independence cannot be
+rejected, so there is no evidence of sex bias within any department. The
+apparent association in Table <a href="c-3waytables.html#tab:t-berkeley1">9.1</a> is thus spurious, and
+disappears when we control for department. Why this happens can be
+understood by considering the distributions of sex and admissions across
+departments, as shown in Table <a href="c-3waytables.html#tab:t-berkeley3">9.3</a>. Department is clearly
+associated with sex of the applicant: for example, almost all of the
+applicants to department 2, but only a third of the applicants to
+department 5 are men. Similarly, there is an association between
+department and admission: for example, nearly two thirds of the
+applicants to department 2 but only a quarter of the applicants to
+department 5 were admitted. It is the combination of these associations
+which induces the spurious association between sex and admission in
+Table <a href="c-3waytables.html#tab:t-berkeley1">9.1</a>. In essence, women had a lower admission rate
+overall because relatively more of them applied to the more selective
+departments and fewer to the easy ones.</p>
+<table>
+<caption><span id="tab:t-berkeley3">Table 9.3: </span>Percentages of male applicants and applicants admitted by department
+in the Berkeley admissions data.</caption>
+<thead>
+<tr class="header">
+<th align="left">Of all applicants</th>
+<th align="right">Department 2</th>
+<th align="right">3</th>
+<th align="right">4</th>
+<th align="right">5</th>
+<th align="right">6</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">% Male</td>
+<td align="right">96</td>
+<td align="right">35</td>
+<td align="right">53</td>
+<td align="right">33</td>
+<td align="right">52</td>
+</tr>
+<tr class="even">
+<td align="left">% Admitted</td>
+<td align="right">63</td>
+<td align="right">35</td>
+<td align="right">34</td>
+<td align="right">25</td>
+<td align="right">6</td>
+</tr>
+<tr class="odd">
+<td align="left">Number of applicants</td>
+<td align="right">585</td>
+<td align="right">918</td>
+<td align="right">792</td>
+<td align="right">584</td>
+<td align="right">714</td>
+</tr>
+</tbody>
+</table>
+<p>One possible set of causal connections leading to a spurious association
+between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> was represented graphically by Figure <a href="c-regression.html#fig:f-xyzspurious">8.10</a>. There are, however, other possibilities which may
+be more appropriate in particular cases. In the admissions example,
+department (corresponding to the control variable <span class="math inline">\(Z\)</span>) cannot be
+regarded as the cause of the sex of the applicant. Instead, we may
+consider the causal chain Sex <span class="math inline">\(\longrightarrow\)</span> Department
+<span class="math inline">\(\longrightarrow\)</span> Admission. Here department is an <em>intervening
+variable</em> between sex and admission rather than a common cause of them.
+We can still argue that sex has an effect on admission, but it is an
+<em>indirect effect</em> operating through the effect of sex on choice of
+department. The distinction is important for the original research
+question behind these data, that of possible sex bias in admissions. A
+direct effect of sex on likelihood on admission might be evidence of
+such bias, because it might indicate that departments are treating male
+and female candidates differently. An indirect effect of the kind found
+here does not suggest bias, because it results from the applicants’ own
+choices of which department to apply to.</p>
+<p>In the admissions example a strong association in the initial two-way
+table was “explained away” when we controlled for a third variable. The
+next example is one where controlling leaves the initial association
+unchanged.</p>
+<p><strong>Example 9.2:</strong> <strong>Importance of short-term gains for investors
+(continued)</strong></p>
+<p>Table <a href="c-descr1.html#tab:t-investors">2.7</a> showed a
+relatively strong association between a person’s age group and his or
+her attitude towards short-term gains as an investment goal. This
+association is also strongly significant, with <span class="math inline">\(P&lt;0.001\)</span> for the
+<span class="math inline">\(\chi^{2}\)</span> test of independence. Table <a href="c-3waytables.html#tab:t-investors3">9.4</a> shows the
+crosstabulations of these variables, now controlling also for the
+respondent’s sex. The association is now still significant in both
+partial tables. An investigation of the row proportions suggests that
+the pattern of association is very similar in both tables, as is its
+strength as measured by the <span class="math inline">\(\gamma\)</span> statistic (<span class="math inline">\(\gamma=-0.376\)</span> among
+men and <span class="math inline">\(\gamma=-0.395\)</span> among women). The conclusions obtained from the
+original two-way table are thus unchanged after controlling for sex.</p>
+<table style="width:97%;">
+<caption><span id="tab:t-investors3">Table 9.4: </span>Frequencies of respondents by age group and attitude towards
+short-term gains in Example 9.2, controlling for sex of respondent.
+The numbers below the frequencies are proportions within rows. <span class="math inline">\(\chi^{2}=82.4\)</span>, <span class="math inline">\(df=9\)</span>, <span class="math inline">\(P&lt;0.001\)</span>. <span class="math inline">\(\gamma=-0.376\)</span>.</caption>
+<colgroup>
+<col width="21%" />
+<col width="20%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>MEN</strong>
+Age group</th>
+<th align="right"><br />
+Irrelevant</th>
+<th align="right">Slightly
+important</th>
+<th align="right"><br />
+Important</th>
+<th align="right">Very
+important</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Under 45</td>
+<td align="right">29</td>
+<td align="right">35</td>
+<td align="right">30</td>
+<td align="right">22</td>
+<td align="right">116</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.250</td>
+<td align="right">0.302</td>
+<td align="right">0.259</td>
+<td align="right">0.190</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">45–54</td>
+<td align="right">83</td>
+<td align="right">60</td>
+<td align="right">52</td>
+<td align="right">29</td>
+<td align="right">224</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.371</td>
+<td align="right">0.268</td>
+<td align="right">0.232</td>
+<td align="right">0.129</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">55–64</td>
+<td align="right">116</td>
+<td align="right">40</td>
+<td align="right">28</td>
+<td align="right">16</td>
+<td align="right">200</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.580</td>
+<td align="right">0.200</td>
+<td align="right">0.140</td>
+<td align="right">0.080</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">65 and over</td>
+<td align="right">150</td>
+<td align="right">53</td>
+<td align="right">16</td>
+<td align="right">12</td>
+<td align="right">231</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.649</td>
+<td align="right">0.229</td>
+<td align="right">0.069</td>
+<td align="right">0.052</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="right">378</td>
+<td align="right">188</td>
+<td align="right">126</td>
+<td align="right">79</td>
+<td align="right">771</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.490</td>
+<td align="right">0.244</td>
+<td align="right">0.163</td>
+<td align="right">0.102</td>
+<td align="right">1.000</td>
+</tr>
+</tbody>
+</table>
+<table style="width:97%;">
+<caption><span id="tab:t-investors3">Table 9.4: </span>Frequencies of respondents by age group and attitude towards
+short-term gains in Example 9.2, controlling for sex of respondent.
+The numbers below the frequencies are proportions within rows. <span class="math inline">\(\chi^{2}=27.6\)</span>, <span class="math inline">\(df=9\)</span>, <span class="math inline">\(P=0.001\)</span>. <span class="math inline">\(\gamma=-0.395\)</span>.</caption>
+<colgroup>
+<col width="21%" />
+<col width="20%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>WOMEN</strong>
+Age group</th>
+<th align="right"><br />
+Irrelevant</th>
+<th align="right">Slightly
+important</th>
+<th align="right"><br />
+Important</th>
+<th align="right">Very
+important</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Under 45</td>
+<td align="right">8</td>
+<td align="right">10</td>
+<td align="right">8</td>
+<td align="right">4</td>
+<td align="right">30</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.267</td>
+<td align="right">0.333</td>
+<td align="right">0.267</td>
+<td align="right">0.133</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">45–54</td>
+<td align="right">28</td>
+<td align="right">17</td>
+<td align="right">5</td>
+<td align="right">8</td>
+<td align="right">58</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.483</td>
+<td align="right">0.293</td>
+<td align="right">0.086</td>
+<td align="right">0.138</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">55–64</td>
+<td align="right">37</td>
+<td align="right">9</td>
+<td align="right">3</td>
+<td align="right">4</td>
+<td align="right">53</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.698</td>
+<td align="right">0.170</td>
+<td align="right">0.057</td>
+<td align="right">0.075</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">65 and over</td>
+<td align="right">43</td>
+<td align="right">11</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">60</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.717</td>
+<td align="right">0.183</td>
+<td align="right">0.050</td>
+<td align="right">0.050</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="right">116</td>
+<td align="right">47</td>
+<td align="right">19</td>
+<td align="right">19</td>
+<td align="right">201</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.577</td>
+<td align="right">0.234</td>
+<td align="right">0.095</td>
+<td align="right">0.095</td>
+<td align="right">1.000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 9.3</strong>: <strong><em>The Titanic</em></strong></p>
+<p>The passenger liner RMS <em>Titanic</em> hit an iceberg and sank in the North
+Atlantic on 14 April 1912, with heavy loss of life. Table
+<a href="c-3waytables.html#tab:t-titanic2">9.5</a> shows a crosstabulation of the people on board the
+<em>Titanic</em>, classified according to their status (as male passenger,
+female or child passenger, or member of the ship’s crew) and whether
+they survived the sinking.<a href="#fn56" class="footnote-ref" id="fnref56"><sup>56</sup></a> The <span class="math inline">\(\chi^{2}\)</span> test of independence has
+<span class="math inline">\(P&lt;0.001\)</span> for this table, so there are statistically significant
+differences in probabilities of survival between the groups. The table
+suggests, in particular, that women and children among the passengers
+were more likely to survive than male passengers or the ship’s crew.</p>
+<table style="width:83%;">
+<caption><span id="tab:t-titanic2">Table 9.5: </span>Survival status of the people aboard the <em>Titanic</em>, divided into
+three groups. The numbers in brackets are proportions of survivors and
+non-survivors within each group. <span class="math inline">\(\chi^{2}=418\)</span>, <span class="math inline">\(\text{df}=2\)</span>, <span class="math inline">\(P&lt;0.001\)</span>.</caption>
+<colgroup>
+<col width="40%" />
+<col width="15%" />
+<col width="13%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Group</th>
+<th align="right">Survivor:
+Yes</th>
+<th align="right"><br />
+No</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Male passenger</td>
+<td align="right">146</td>
+<td align="right">659</td>
+<td align="right">805</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">(0.181)</td>
+<td align="right">(0.819)</td>
+<td align="right">(1.000)</td>
+</tr>
+<tr class="odd">
+<td align="left">Female or child passenger</td>
+<td align="right">353</td>
+<td align="right">158</td>
+<td align="right">511</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">(0.691)</td>
+<td align="right">(0.309)</td>
+<td align="right">(1.000)</td>
+</tr>
+<tr class="odd">
+<td align="left">Crew member</td>
+<td align="right">212</td>
+<td align="right">673</td>
+<td align="right">885</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">(0.240)</td>
+<td align="right">(0.760)</td>
+<td align="right">(1.000)</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="right">711</td>
+<td align="right">1490</td>
+<td align="right">2201</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">(0.323)</td>
+<td align="right">(0.677)</td>
+<td align="right">(1.000)</td>
+</tr>
+</tbody>
+</table>
+<p>We next control also for the class in which a person was travelling,
+classified as first, second or third class. Since class does not apply
+to the ship’s crew, this analysis is limited to the passengers,
+classified as men vs. women and children. The two-way table of sex by
+survival status for them is given by Table <a href="c-3waytables.html#tab:t-titanic2">9.5</a>, ignoring
+the row for crew members. This association is strongly significant, with
+<span class="math inline">\(\chi^{2}=344\)</span> and <span class="math inline">\(P&lt;0.001\)</span>.</p>
+<table style="width:76%;">
+<colgroup>
+<col width="12%" />
+<col width="23%" />
+<col width="18%" />
+<col width="11%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Class</th>
+<th align="left"><br />
+Group</th>
+<th align="right">Survivor:
+Yes</th>
+<th align="right"><br />
+No</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">First</td>
+<td align="left">Man</td>
+<td align="right">57</td>
+<td align="right">118</td>
+<td align="right">175</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.326</td>
+<td align="right">0.674</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Woman or child</td>
+<td align="right">146</td>
+<td align="right">4</td>
+<td align="right">150</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.973</td>
+<td align="right">0.027</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Total</td>
+<td align="right">203</td>
+<td align="right">122</td>
+<td align="right">325</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.625</td>
+<td align="right">0.375</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Second</td>
+<td align="left">Man</td>
+<td align="right">14</td>
+<td align="right">154</td>
+<td align="right">168</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.083</td>
+<td align="right">0.917</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Woman or child</td>
+<td align="right">104</td>
+<td align="right">13</td>
+<td align="right">117</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.889</td>
+<td align="right">0.111</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Total</td>
+<td align="right">118</td>
+<td align="right">167</td>
+<td align="right">285</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.414</td>
+<td align="right">0.586</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Third</td>
+<td align="left">Man</td>
+<td align="right">75</td>
+<td align="right">387</td>
+<td align="right">462</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.162</td>
+<td align="right">0.838</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Woman or child</td>
+<td align="right">103</td>
+<td align="right">141</td>
+<td align="right">244</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.422</td>
+<td align="right">0.578</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Total</td>
+<td align="right">178</td>
+<td align="right">528</td>
+<td align="right">706</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.252</td>
+<td align="right">0.748</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left"></td>
+<td align="right">499</td>
+<td align="right">817</td>
+<td align="right">1316</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="right">0.379</td>
+<td align="right">0.621</td>
+<td align="right">1.000</td>
+</tr>
+</tbody>
+</table>
+<p>:(#tab:t-titanic3)Survival status of the passengers of the <em>Titanic</em>, classified by
+class and sex. The numbers below the frequencies are proportions
+within rows.</p>
+<p>Two-way tables involving class (not shown here) suggest that it is
+mildly associated with sex (with percentages of men 54%, 59% and 65% in
+first, second and third class respectively) and strongly associated with
+survival (with 63%, 41% and 25% of the passengers surviving). It is thus
+possible that class might influence the association between sex and
+survival. This is investigated in Table <a href="#tab:t-titanic3">9.6</a>, which shows
+the partial associations between sex and survival status, controlling
+for class. This association is strongly significant (with <span class="math inline">\(P&lt;0.001\)</span> for
+the <span class="math inline">\(\chi^{2}\)</span> test) in every partial table, so it is clearly not
+explained away by associations involving class. The direction of the
+association is also the same in each table, with women and children more
+likely to survive than men among passengers of every class.</p>
+<p>The presence and direction of the association in the two-way Table
+<a href="c-3waytables.html#tab:t-titanic2">9.5</a> are thus preserved and similar in every partial table
+controlling for class. However, there appear to be differences in the
+<em>strength</em> of the association between the partial tables. Considering,
+for example, the ratios of the proportions in each class, women and
+children were about 3.0 (<span class="math inline">\(=0.973/0.326\)</span>) times more likely to survive
+than men in first class, while the ratio was about 10.7 in second class
+and 2.6 in the third. The contrast of men vs. women and children was
+thus strongest among second-class passengers. This example differs in
+this respect from the previous ones, where the associations were similar
+in each partial table, either because they were all essentially zero
+(Example 9.1) or non-zero but similar in both direction and strength
+(Example 9.2).</p>
+<p>We are now considering three variables, class, sex and survival.
+Although it is not necessary for this analysis to divide them into
+explanatory and response variables, introducing such a distinction is
+useful for discussion of the results. Here it is most natural to treat
+survival as the response variable, and both class and sex as explanatory
+variables for survival. The associations in the partial tables in Table
+<a href="#tab:t-titanic3">9.6</a> are then partial associations between the response
+variable and one of the explanatory variables (sex), controlling for the
+other explanatory variable (class). As discussed above, the strength of
+this partial association is different for different values of class.
+This is an example of a statistical <strong>interaction</strong>. In general, there
+is an interaction between two explanatory variables if the strength and
+nature of the partial association of (either) one of them on a response
+variable depends on the value at which the other explanatory variable is
+controlled. Here there is an interaction between class and sex, because
+the association between sex and survival is different at different
+levels of class.</p>
+<p>Interactions are an important but challenging element of many
+statistical analyses. Important, because they often correspond to
+interesting and subtle features of associations in the data.
+Challenging, because understanding and interpreting them involves
+talking about (at least) three variables at once. This can seem rather
+complicated, at least initially. It adds to the difficulty that
+interactions can take many forms. In the <em>Titanic</em> example, for
+instance, the nature of the class-sex interaction was that the
+association between sex and survival was in the same direction but of
+different strengths at different levels of class. In other cases
+associations may disappear in some but not all of the partial tables, or
+remain strong but in different directions in different ones. They may
+even all or nearly all be in a different direction from the association
+in the original two-way table, as in the next example.</p>
+<p><strong>Example 9.4: Smoking and mortality</strong></p>
+<p>A health survey was carried out in Whickham near Newcastle upon Tyne in
+1972–74, and a follow-up survey of the same respondents twenty years
+later.<a href="#fn57" class="footnote-ref" id="fnref57"><sup>57</sup></a> Here we consider only the <span class="math inline">\(n=1314\)</span> female respondents who
+were classified by the first survey either as current smokers or as
+never having smoked. Table <a href="c-3waytables.html#tab:t-whickham1">9.7</a> shows the
+crossclassification of these women according to their smoking status in
+1972–74 and whether they were still alive twenty years later. The
+<span class="math inline">\(\chi^{2}\)</span> test indicates a strongly significant association (with
+<span class="math inline">\(P=0.003\)</span>), and the numbers suggest that a smaller proportion of smokers
+than of nonsmokers had died between the surveys. Should we thus conclude
+that smoking helps to keep you alive? Probably not, given that it is
+known beyond reasonable doubt that the causal relationship between
+smoking and mortality is in the opposite direction. Clearly the picture
+has been distorted by failure to control for some relevant further
+variables. One such variable is the age of the respondents.</p>
+<table>
+<caption><span id="tab:t-whickham1">Table 9.7: </span>Table of smoking status in 1972–74 vs. twenty-year survival among
+the respondents in Example 9.4. The numbers below the frequencies are
+proportions within rows.</caption>
+<thead>
+<tr class="header">
+<th align="left">Smoker</th>
+<th align="right">Dead</th>
+<th align="right">Alive</th>
+<th align="right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Yes</td>
+<td align="right">139</td>
+<td align="right">443</td>
+<td align="right">582</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.239</td>
+<td align="right">0.761</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">No</td>
+<td align="right">230</td>
+<td align="right">502</td>
+<td align="right">732</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.314</td>
+<td align="right">0.686</td>
+<td align="right">1.000</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="right">369</td>
+<td align="right">945</td>
+<td align="right">1314</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">0.281</td>
+<td align="right">0.719</td>
+<td align="right">1.000</td>
+</tr>
+</tbody>
+</table>
+<p>Table <a href="c-3waytables.html#tab:t-whickham2">9.8</a> shows the partial tables of smoking vs. survival
+controlling for age at the time of the first survey, classified into
+seven categories. Note first that this three-way table appears somewhat
+different from those shown in Tables <a href="c-3waytables.html#tab:t-berkeley2">9.2</a>,
+<a href="c-3waytables.html#tab:t-investors3">9.4</a> and <a href="#tab:t-titanic3">9.6</a>. This is because one variable,
+survival status, is summarised only by the percentage of survivors
+within each combination of age group and smoking status. This is a
+common trick to save space in three-way tables involving dichotomous
+variables like survival here. The full table can easily be constructed
+from these numbers if needed. For example, 98.4% of the nonsmokers aged
+18–24 were alive at the time of the second survey. Since there were a
+total of 62 respondents in this group (as shown in the last column),
+this means that 61 of them (i.e. 98.4%) were alive and 1 (or 1.6%) was
+not.</p>
+<p>The percentages in Table <a href="c-3waytables.html#tab:t-whickham2">9.8</a> show that in five of the
+seven age groups the proportion of survivors is higher among nonsmokers
+than smokers, i.e. these partial associations in the sample are in the
+opposite direction from the association in Table <a href="c-3waytables.html#tab:t-whickham1">9.7</a>. This
+reversal is known as <strong>Simpson’s paradox</strong>. The term is somewhat
+misleading, as the finding is not really paradoxical in any logical
+sense. Instead, it is again a consequence of a particular pattern of
+associations between the control variable and the other two variables.</p>
+<table style="width:98%;">
+<caption><span id="tab:t-whickham2">Table 9.8: </span>Percentage of respondents in Example 9.4 surviving at the time of
+the second survey, by smoking status and age group in 1972–74.</caption>
+<colgroup>
+<col width="17%" />
+<col width="28%" />
+<col width="13%" />
+<col width="24%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Age group</th>
+<th align="right">% Alive after 20 years:
+Smokers</th>
+<th align="right"><br />
+Nonsmokers</th>
+<th align="right">Number (in 1972–74):
+Smokers</th>
+<th align="right"><br />
+Nonsmokers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">18–24</td>
+<td align="right">96.4</td>
+<td align="right">98.4</td>
+<td align="right">55</td>
+<td align="right">62</td>
+</tr>
+<tr class="even">
+<td align="left">25–34</td>
+<td align="right">97.6</td>
+<td align="right">96.8</td>
+<td align="right">124</td>
+<td align="right">157</td>
+</tr>
+<tr class="odd">
+<td align="left">35–44</td>
+<td align="right">87.2</td>
+<td align="right">94.2</td>
+<td align="right">109</td>
+<td align="right">121</td>
+</tr>
+<tr class="even">
+<td align="left">45–54</td>
+<td align="right">79.2</td>
+<td align="right">84.6</td>
+<td align="right">130</td>
+<td align="right">78</td>
+</tr>
+<tr class="odd">
+<td align="left">55–64</td>
+<td align="right">55.7</td>
+<td align="right">66.9</td>
+<td align="right">115</td>
+<td align="right">121</td>
+</tr>
+<tr class="even">
+<td align="left">65–74</td>
+<td align="right">19.4</td>
+<td align="right">21.7</td>
+<td align="right">36</td>
+<td align="right">129</td>
+</tr>
+<tr class="odd">
+<td align="left">75–</td>
+<td align="right">0.0</td>
+<td align="right">0.0</td>
+<td align="right">12</td>
+<td align="right">64</td>
+</tr>
+<tr class="even">
+<td align="left">All age groups</td>
+<td align="right">76.1</td>
+<td align="right">68.6</td>
+<td align="right">582</td>
+<td align="right">732</td>
+</tr>
+</tbody>
+</table>
+<p>The two-way tables of age by survival and age by smoking are shown side
+by side in Table <a href="c-3waytables.html#tab:t-whickham3">9.9</a>. The table is somewhat elaborate and
+unconventional, so it requires some explanation. The rows of the table
+correspond to the age groups, identified by the second column, and the
+frequencies of respondents in each age group are given in the last
+column. The left-hand column shows the percentages of survivors within
+each age group. The right-hand side of the table gives the two-way table
+of age group and smoking status. It contains percentages calculated both
+within the rows (without parentheses) and columns (in parentheses) of
+the table. As an example, consider numbers for the age group 18–24.
+There were 117 respondents in this age group at the time of the first
+survey. Of them, 47% were then smokers and 53% were nonsmokers, and 97%
+were still alive at the time of the second survey. Furthermore, 10% of
+all the 582 smokers, 9% of all the 732 nonsmokers and 9% of the 1314
+respondents overall were in this age group.</p>
+<table style="width:98%;">
+<caption><span id="tab:t-whickham3">Table 9.9: </span>Two-way contingency tables of age group vs. survival (on the left)
+and age group vs. smoking (on the right) in Example 6.4. The
+percentages in parentheses are column percentages (within smokers or
+nonsmokers) and the ones without parentheses are row percentages
+(within age groups).</caption>
+<colgroup>
+<col width="14%" />
+<col width="15%" />
+<col width="27%" />
+<col width="18%" />
+<col width="12%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right"><br />
+% Alive</th>
+<th align="left"><br />
+Age group</th>
+<th align="center">Row and column %
+Smokers</th>
+<th align="center"><br />
+Nonsmokers</th>
+<th align="center"><br />
+Total %</th>
+<th align="right"><br />
+Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">97</td>
+<td align="left">18–24</td>
+<td align="center">47</td>
+<td align="center">53</td>
+<td align="center">100</td>
+<td align="right">117</td>
+</tr>
+<tr class="even">
+<td align="right"></td>
+<td align="left"></td>
+<td align="center">(10)</td>
+<td align="center">(9)</td>
+<td align="center">(9)</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">97</td>
+<td align="left">25–34</td>
+<td align="center">44</td>
+<td align="center">56</td>
+<td align="center">100</td>
+<td align="right">281</td>
+</tr>
+<tr class="even">
+<td align="right"></td>
+<td align="left"></td>
+<td align="center">(21)</td>
+<td align="center">(21)</td>
+<td align="center">(21)</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">91</td>
+<td align="left">35–44</td>
+<td align="center">47</td>
+<td align="center">53</td>
+<td align="center">100</td>
+<td align="right">230</td>
+</tr>
+<tr class="even">
+<td align="right"></td>
+<td align="left"></td>
+<td align="center">(19)</td>
+<td align="center">(17)</td>
+<td align="center">(18)</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">81</td>
+<td align="left">45–54</td>
+<td align="center">63</td>
+<td align="center">38</td>
+<td align="center">100</td>
+<td align="right">208</td>
+</tr>
+<tr class="even">
+<td align="right"></td>
+<td align="left"></td>
+<td align="center">(22)</td>
+<td align="center">(11)</td>
+<td align="center">(16)</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">61</td>
+<td align="left">55–64</td>
+<td align="center">49</td>
+<td align="center">51</td>
+<td align="center">100</td>
+<td align="right">236</td>
+</tr>
+<tr class="even">
+<td align="right"></td>
+<td align="left"></td>
+<td align="center">(20)</td>
+<td align="center">(17)</td>
+<td align="center">(13)</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">21</td>
+<td align="left">65–74</td>
+<td align="center">22</td>
+<td align="center">78</td>
+<td align="center">100</td>
+<td align="right">165</td>
+</tr>
+<tr class="even">
+<td align="right"></td>
+<td align="left"></td>
+<td align="center">(6)</td>
+<td align="center">(18)</td>
+<td align="center">(13)</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">0</td>
+<td align="left">75–</td>
+<td align="center">17</td>
+<td align="center">83</td>
+<td align="center">100</td>
+<td align="right">77</td>
+</tr>
+<tr class="even">
+<td align="right"></td>
+<td align="left"></td>
+<td align="center">(2)</td>
+<td align="center">(9)</td>
+<td align="center">(6)</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">72</td>
+<td align="left">Total %</td>
+<td align="center">44</td>
+<td align="center">56</td>
+<td align="center">100</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="right"></td>
+<td align="left"></td>
+<td align="center">(100)</td>
+<td align="center">(100)</td>
+<td align="center">(100)</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="right">945</td>
+<td align="left">Total count</td>
+<td align="center">582</td>
+<td align="center">732</td>
+<td align="center"></td>
+<td align="right">1314</td>
+</tr>
+</tbody>
+</table>
+<p>Table <a href="c-3waytables.html#tab:t-whickham3">9.9</a> shows a clear association between age and
+survival, for understandable reasons mostly unconnected with smoking.
+The youngest respondents of the first survey were highly likely and the
+oldest unlikely to be alive twenty years later. There is also an
+association between age and smoking: in particular, the proportion of
+smokers was lowest among the oldest respondents. The implications of
+this are seen perhaps more clearly by considering the column
+proportions, i.e. the age distributions of smokers and nonsmokers in the
+original sample. These show that the group of nonsmokers was
+substantially older than that of the smokers; for example, 27% of the
+nonsmokers but only 8% of the smokers belonged to the two oldest age
+groups. It is this imbalance which explains why nonsmokers, more of whom
+are old, appear to have lower chances of survival until we control for
+age.</p>
+<p>The discussion above refers to the <em>sample</em> associations between smoking
+and survival in the partial tables, which suggest that mortality is
+higher among smokers than nonsmokers. In terms of statistical
+significance, however, the evidence is fairly weak: the association is
+even borderline significant only in the 35–44 and 55–64 age groups, with
+<span class="math inline">\(P\)</span>-values of 0.063 and 0.075 respectively for the <span class="math inline">\(\chi^{2}\)</span> test. This
+is an indication not so much of lack of a real association but of the
+fact that these data do not provide much power for detecting it. Overall
+twenty-year mortality is a fairly rough measure of health status for
+comparisons of smokers and nonsmokers, especially in the youngest and
+oldest age groups where mortality is either very low or very high for
+everyone. Differences are likely to be have been further diluted by many
+of the original smokers having stopped smoking between the surveys. This
+example should thus not be regarded as a serious examination of the
+health effects of smoking, for which much more specific data and more
+careful analyses are required.<a href="#fn58" class="footnote-ref" id="fnref58"><sup>58</sup></a></p>
+<p>The Berkeley admissions data discussed earlier provide another example
+of a partial Simpson’s paradox. Previously we considered only
+departments 2–6, for none of which there was a significant partial
+association between sex and admission. For department 1, the partial
+table indicates a strongly significant difference in favour of women,
+with 82% of the 108 female applicants admitted, compared to 62% of the
+825 male applicants. However, the two-way association between sex and
+admission for departments 1–6 combined remains strongly significant and
+shows an even larger difference in favour of men than before. This
+result can now be readily explained as a result of imbalances in sex
+ratios and rates of admission between departments. Department 1 is both
+easy to get into (with 64% admitted) and heavily favoured by men (88% of
+the applicants). These features combine to contribute to higher
+admissions percentages for men overall, even though within department 1
+itself women are more likely to be admitted.</p>
+<p>In summary, the examples discussed above demonstrate that many things
+can happen to an association between two variables when we control for a
+third one. The association may disappear, indicating that it was
+spurious, or it may remain similar and unchanged in all of the partial
+tables. It may also become different in different partial tables,
+indicating an interaction. Which of these occurs depends on the patterns
+of associations between the control variable and the other two
+variables. The crucial point is that the two-way table alone cannot
+reveal which of these cases we are dealing with, because the counts in
+the two-way table could split into three-way tables in many different
+ways. The only way to determine how controlling for other variables will
+affect an association is to actually do so. This is the case not only
+for multiway contingency tables, but for all methods of statistical
+control, in particular multiple linear regression and other regression
+models.</p>
+<p>Two final remarks round off our discussion of multiway contingency
+tables:</p>
+<ul>
+<li><p>Extension of the ideas of three-way tables to four-way and larger
+contingency tables is obvious and straightforward. In such tables,
+every cell corresponds to the subjects with a particular combination
+of the values of four or more variables. This involves no new
+conceptual difficulties, and the only challenge is how to arrange
+the table for convenient presentation. When the main interest is in
+associations between a particular pair of two variables, the usual
+solution is to present a set of partial two-way tables for them, one
+for each combination of the other (control) variables. Suppose, for
+instance, that in the university admissions example we had obtained
+similar data at two different years, say 1973 and 2003. We would
+then have four variables: year, department, sex and
+admission status. These could be summarised as in Table
+<a href="c-3waytables.html#tab:t-berkeley2">9.2</a>, except that each partial table for sex
+vs. admission would now be conditional on the values of both year
+and department. The full four-way table would then consist of ten
+<span class="math inline">\(2\times 2\)</span> partial tables, one for each of the ten combinations of
+two years and five departments, (i.e. applicants to Department 2 in
+1973, Department 2 in 2003, and so on to Department 6 in 2003).</p></li>
+<li><p>The only inferential tool for multiway contingency tables discussed
+here was to arrange the table as a set of two-way partial tables and
+to apply the <span class="math inline">\(\chi^{2}\)</span> test of independence to each of them. This
+is a perfectly sensible approach and a great improvement over just
+analysing two-way tables. There are, however, questions which cannot
+easily be answered with this method. For example, when can we say
+that associations in different partial tables are different enough
+for us to declare that there is evidence of an interaction? Or what
+if we want to consider many different partial associations, either
+for a response variable with each of the other variables in turn, or
+because there is no single response variable? More powerful methods
+are required for such analyses. They are multiple regression models
+like the multiple linear regression of Section
+<a href="c-regression.html#s-regression-multiple">8.5</a>, but modified so that they become
+approriate for categorical response variables. Some of these models
+are introduced on the course MY452.</p></li>
+</ul>
+
+</div>
+<div class="footnotes">
+<hr />
+<ol start="55">
+<li id="fn55"><p>These data, which were produced by the Graduate Division of UC
+Berkeley, were first discussed in Bickel, P. J., Hammel, E. A., and
+O’Connell, J. W. (1975), “Sex bias in graduate admissions: Data from
+Berkeley”, <em>Science</em> <strong>187</strong>, 398–404. They have since become a
+much-used teaching example. The version of the data considered here
+are from Freedman, D., Pisani, R., and Purves, R., <em>Statistics</em>
+(W. W. Norton, 1978).<a href="c-3waytables.html#fnref55" class="footnote-back">↩</a></p></li>
+<li id="fn56"><p>The data are from the 1912 report of the official British Wreck
+Commissioner’s inquiry into the sinking, available at
+<a href="http://www.titanicinquiry.org" class="uri">http://www.titanicinquiry.org</a>.<a href="c-3waytables.html#fnref56" class="footnote-back">↩</a></p></li>
+<li id="fn57"><p>The two studies are reported in Tunbridge, W. M. G. et al. (1977).
+“The spectrum of thyroid disease in a community: The Whickham
+survey”. <em>Clinical Endocrinology</em> <strong>7</strong>, 481–493, and Vanderpump,
+M. P. J. et al. (1995). “The incidence of thyroid disorders in the
+community: A twenty-year follow-up of the Whickham survey”.
+<em>Clinical Endocrinology</em> <strong>43</strong>, 55–69. The data are used to
+illustrate Simpson’s paradox by Appleton, D. R. et al. (1996).
+“Ignoring a covariate: An example of Simpson’s paradox”. <em>The
+American Statistician</em> <strong>50</strong>, 340–341.<a href="c-3waytables.html#fnref57" class="footnote-back">↩</a></p></li>
+<li id="fn58"><p>For one remarkable example of such studies, see Doll, R. et
+al. (2004), “Mortality in relation to smoking: 50 years’
+observations on male British doctors”, <em>British Medical Journal</em>
+<strong>328</strong>, 1519–1528, and Doll, R. and Hill, A. B. (1954), “The
+Mortality of doctors in relation to their smoking habits: A
+preliminary report”, <em>British Medical Journal</em> <strong>228</strong>, 1451–1455.
+The older paper is reprinted together with the more recent one in
+the 2004 issue of <em>BMJ</em>.<a href="c-3waytables.html#fnref58" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c-regression.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="c-more.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/LSE-Methodology/MY464/edit/master/09-MY464-3waytables.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Coursepack-MY464.pdf", "Coursepack-MY464.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

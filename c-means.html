@@ -1,0 +1,2356 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Analysis of population means | MY464 Introduction to Quantitative Analysis for Media and Communications</title>
+  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Analysis of population means | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="github-repo" content="LSE-Methodology/MY464" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Analysis of population means | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  
+  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  
+
+<meta name="author" content="Department of Methodology, London School of Economics and Political Science" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="c-contd.html"/>
+<link rel="next" href="c-regression.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction<a href="c-intro.html#c-intro" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?<a href="c-intro.html#s-intro-purpose" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions<a href="c-intro.html#s-intro-definitions" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables<a href="c-intro.html#ss-intro-def-subj" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables<a href="c-intro.html#ss-intro-def-vartypes" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference<a href="c-intro.html#ss-intro-def-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation<a href="c-intro.html#ss-intro-def-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course<a href="c-intro.html#s-intro-outline" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing<a href="c-intro.html#s-intro-maths" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation<a href="c-intro.html#symbolic-mathematics-and-mathematical-notation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing<a href="c-intro.html#computing-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables<a href="c-more.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities<a href="c-more.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions<a href="c-more.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions<a href="c-more.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="c-means" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 7</span> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="s-means-intro" class="section level2 hasAnchor">
+<h2><span class="header-section-number">7.1</span> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This chapter introduces some basic methods of analysis for continuous,
+interval-level variables. The main focus is on statistical inference on
+population <em>means</em> of such variables, but some new methods of
+descriptive statistics are also described. The discussion draws on the
+general ideas that have already been explaned for inference in Chapters
+<a href="c-tables.html#c-tables">4</a> and <a href="c-probs.html#c-probs">5</a>, and for continuous distributions in
+Chapter <a href="c-contd.html#c-contd">6</a>. Few if any new concepts thus need to be
+introduced here. Instead, this chapter can focus on describing the
+specifics of these very commonly used methods for continuous variables.</p>
+<p>As in Chapter <a href="c-probs.html#c-probs">5</a>, questions on both a single group and on
+comparisons between two groups are discussed here. Now, however, the
+main focus is on the two-group case. There we treat the group as the
+explanatory variable <span class="math inline">\(X\)</span> and the continuous variable of interest as the
+response variable <span class="math inline">\(Y\)</span>, and assess the possible associations between <span class="math inline">\(X\)</span>
+and <span class="math inline">\(Y\)</span> by comparing the distributions (and especially the means) of <span class="math inline">\(Y\)</span>
+in the two groups.</p>
+<p>The following five examples will be used for illustration throughout
+this chapter. Summary statistics for them are shown in Table
+<a href="#tab:t-groupex">7.1</a>.</p>
+<p><strong>Example 7.1: Survey data on diet</strong></p>
+<p>The National Diet and Nutrition Survey of adults aged 19–64 living in
+private households in Great Britain was carried out in 2000–01.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a> One
+part of the survey was a food diary where the respondents recorded all
+food and drink they consumed in a seven-day period. We consider two
+variables derived from the diary: the consumption of fruit and
+vegetables in portions (of 400g) per day (with mean in the sample of
+size <span class="math inline">\(n=1724\)</span> of <span class="math inline">\(\bar{Y}=2.8\)</span>, and standard deviation <span class="math inline">\(s=2.15\)</span>), and
+the percentage of daily food energy intake obtained from fat and fatty
+acids (<span class="math inline">\(n=1724\)</span>, <span class="math inline">\(\bar{Y}=35.3\)</span>, and <span class="math inline">\(s=6.11\)</span>).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="63%" />
+<col width="7%" />
+<col width="11%" />
+<col width="7%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>One sample</strong></th>
+<th align="right"><span class="math inline">\(n\)</span></th>
+<th align="right"><span class="math inline">\(\bar{Y}\)</span></th>
+<th align="right"><span class="math inline">\(s\)</span></th>
+<th align="right">Diff.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><em>Example 7.1: Variables from the National Diet and Nutrition Survey</em></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">  Fruit and vegetable consumption (400g portions)</td>
+<td align="right">1724</td>
+<td align="right">2.8</td>
+<td align="right">2.15</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">  Total energy intake from fat (%)
+</td>
+<td align="right">1724</td>
+<td align="right">35.3</td>
+<td align="right">6.11</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Two independent samples</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left"><em>Example 7.2: Average weekly hours spent on housework</em></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">  Men</td>
+<td align="right">635</td>
+<td align="right">7.33</td>
+<td align="right">5.53</td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">  Women
+</td>
+<td align="right">469</td>
+<td align="right">8.49</td>
+<td align="right">6.14</td>
+<td align="right">1.16</td>
+</tr>
+<tr class="even">
+<td align="left"><em>Example 7.3: Perceived friendliness of a police officer</em></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">  No sunglasses</td>
+<td align="right">67</td>
+<td align="right">8.23</td>
+<td align="right">2.39</td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">  Sunglasses
+</td>
+<td align="right">66</td>
+<td align="right">6.49</td>
+<td align="right">2.01</td>
+<td align="right">-1.74</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Two dependent samples</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left"><em>Example 7.4: Father’s personal well-being</em></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">  Sixth month of wife’s pregnancy</td>
+<td align="right">109</td>
+<td align="right">30.69</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">  One month after the birth
+</td>
+<td align="right">109</td>
+<td align="right">30.77</td>
+<td align="right">2.58</td>
+<td align="right">0.08</td>
+</tr>
+<tr class="odd">
+<td align="left"><em>Example 7.5: Traffic flows on successive Fridays</em></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">  Friday the 6th</td>
+<td align="right">10</td>
+<td align="right">128,385</td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">  Friday the 13th</td>
+<td align="right">10</td>
+<td align="right">126,550</td>
+<td align="right">1176</td>
+<td align="right">-1835</td>
+</tr>
+</tbody>
+</table>
+<p>:(#tab:t-groupex)Examples of analyses of population means used in Chapter <a href="c-means.html#c-means">7</a>. Here <span class="math inline">\(n\)</span> and <span class="math inline">\(\bar{Y}\)</span> denote the sample size and sample mean respectively, in the two-group examples 7.2–7.5 separately for the two groups. “Diff.” denotes the between-group difference of means, and <span class="math inline">\(s\)</span> is the sample standard deviation of the response variable <span class="math inline">\(Y\)</span> for the whole sample (Example 7.1), of the response variable within each group (Examples 7.2 and 7.3), or of the within-pair differences (Examples 7.4 and 7.5).</p>
+<p><strong>Example 7.2: Housework by men and women</strong></p>
+<p>This example uses data from the 12th wave of the British Household Panel
+Survey (BHPS), collected in 2002. BHPS is an ongoing survey of UK
+households, measuring a range of socioeconomic variables. One of the
+questions in 2002 was</p>
+<p><em>“About how many hours do you spend on housework in an average week,
+such as time spent cooking, cleaning and doing the laundry?”</em></p>
+<p>The response to this question (recorded in whole hours) will be the
+response variable <span class="math inline">\(Y\)</span>, and the respondent’s sex will be the explanatory
+variable <span class="math inline">\(X\)</span>. We consider only those respondents who were less than 65
+years old at the time of the interview and who lived in single-person
+households (thus the comparisons considered here will not involve
+questions of the division of domestic work within families).<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a></p>
+<p>We can indicate summary statistics separately for the two groups by
+using subscripts 1 for men and 2 for women (for example). The sample
+sizes are <span class="math inline">\(n_{1}=635\)</span> for men and <span class="math inline">\(n_{2}=469\)</span> for women, and the sample
+means of <span class="math inline">\(Y\)</span> are <span class="math inline">\(\bar{Y}_{1}=7.33\)</span> and <span class="math inline">\(\bar{Y}_{2}=8.49\)</span>. These and
+the sample standard deviations <span class="math inline">\(s_{1}\)</span> and <span class="math inline">\(s_{2}\)</span> are also shown in
+Table <a href="#tab:t-groupex">7.1</a>.</p>
+<p><strong>Example 7.3: Eye contact and perceived friendliness of police officers</strong></p>
+<p>This example is based on an experiment conducted to examine the effects
+of some aspects of the appearance and behaviour of police officers on
+how members of the public perceive their encounters with the police.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a>
+The subjects of the study were 133 people stopped by the Traffic Patrol
+Division of a detachment of the Royal Canadian Mounted Police. When
+talking to the driver who had been stopped, the police officer either
+wore reflective sunglasses which hid his eyes, or wore no glasses at
+all, thus permitting eye contact with the respondent. These two
+conditions define the explanatory variable <span class="math inline">\(X\)</span>, coded 1 if the officer
+wore no glasses and 2 if he wore sunglasses. The choice of whether
+sunglasses were worn was made at random before a driver was stopped.</p>
+<p>While the police officer went back to his car to write out a report, a
+researcher asked the respondent some further questions, one of which is
+used here as the response variable <span class="math inline">\(Y\)</span>. It is a measure of the
+respondent’s perception of the friendliness of the police officer,
+measured on a 10-point scale where large values indicate high levels of
+friendliness.</p>
+<p>The article describing the experiment does not report all the summary
+statistics needed for our purposes. The statistics shown in Table
+<a href="#tab:t-groupex">7.1</a> have thus been partially made up for use here. They are,
+however, consistent with the real results from the study. In particular,
+the direction and statistical significance of the difference between
+<span class="math inline">\(\bar{Y}_{2}\)</span> and <span class="math inline">\(\bar{Y}_{1}\)</span> are the same as those in the published
+report.</p>
+<p><strong>Example 7.4: Transition to parenthood</strong></p>
+<p>In a study of the stresses and feelings associated with parenthood, 109
+couples expecting their first child were interviewed before and after
+the birth of the baby.<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> Here we consider only data for the fathers,
+and only one of the variables measured in the study. This variable is a
+measure of personal well-being, obtained from a seven-item attitude
+scale, where larger values indicate higher levels of well-being.
+Measurements of it were obtained for each father at three time points:
+when the mother was six months pregnant, one month after the birth of
+the baby, and six months after the birth. Here we will use only the
+first two of the measurements. The response variable <span class="math inline">\(Y\)</span> will thus be
+the measure of personal well-being, and the explanatory variable <span class="math inline">\(X\)</span>
+will be the time of measurement (sixth month of the pregnancy or one
+month after the birth). The means of <span class="math inline">\(Y\)</span> at the two times are shown in
+Table <a href="#tab:t-groupex">7.1</a>. As in Example 7.3, not all of the numbers needed
+here were given in the original article. Specifically, the standard
+error of the difference in Table <a href="#tab:t-groupex">7.1</a> has been made up in
+such a way that the results of a significance test for the mean
+difference agree with those in the article.</p>
+<p><strong>Example 7.5: Traffic patterns on Friday the 13th</strong></p>
+<p>A common superstition regards the 13th day of any month falling on a
+Friday as a particularly unlucky day. In a study examining the possible
+effects of this belief on people’s behaviour,<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> data were obtained on
+the numbers of vehicles travelling between junctions 7 and 8 and
+junctions 9 and 10 on the M25 motorway around London during every Friday
+the 13th in 1990–92. For comparison, the same numbers were also recorded
+during the previous Friday (i.e. the 6th) in each case. There are only
+ten such pairs here, and the full data set is shown in Table
+<a href="#tab:t-F13">7.2</a>. Here the explanatory variable <span class="math inline">\(X\)</span> indicates whether a day
+is Friday the 6th (coded as 1) or Friday the 13th (coded as 2), and the
+response variable is the number of vehicles travelling between two
+junctions.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Date</th>
+<th align="left">Junctions</th>
+<th align="right">Friday the 6th</th>
+<th align="right">Friday the 13th</th>
+<th align="right">Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">July 1990</td>
+<td align="left">7 to 8</td>
+<td align="right">139246</td>
+<td align="right">138548</td>
+<td align="right">-698</td>
+</tr>
+<tr class="even">
+<td align="left">July 1990</td>
+<td align="left">9 to 10</td>
+<td align="right">134012</td>
+<td align="right">132908</td>
+<td align="right">-1104</td>
+</tr>
+<tr class="odd">
+<td align="left">September 1991</td>
+<td align="left">7 to 8</td>
+<td align="right">137055</td>
+<td align="right">136018</td>
+<td align="right">-1037</td>
+</tr>
+<tr class="even">
+<td align="left">September 1991</td>
+<td align="left">9 to 10</td>
+<td align="right">133732</td>
+<td align="right">131843</td>
+<td align="right">-1889</td>
+</tr>
+<tr class="odd">
+<td align="left">December 1991</td>
+<td align="left">7 to 8</td>
+<td align="right">123552</td>
+<td align="right">121641</td>
+<td align="right">-1911</td>
+</tr>
+<tr class="even">
+<td align="left">December 1991</td>
+<td align="left">9 to 10</td>
+<td align="right">121139</td>
+<td align="right">118723</td>
+<td align="right">-2416</td>
+</tr>
+<tr class="odd">
+<td align="left">March 1992</td>
+<td align="left">7 to 8</td>
+<td align="right">128293</td>
+<td align="right">125532</td>
+<td align="right">-2761</td>
+</tr>
+<tr class="even">
+<td align="left">March 1992</td>
+<td align="left">9 to 10</td>
+<td align="right">124631</td>
+<td align="right">120249</td>
+<td align="right">-4382</td>
+</tr>
+<tr class="odd">
+<td align="left">November 1992</td>
+<td align="left">7 to 8</td>
+<td align="right">124609</td>
+<td align="right">122770</td>
+<td align="right">-1839</td>
+</tr>
+<tr class="even">
+<td align="left">November 1992</td>
+<td align="left">9 to 10</td>
+<td align="right">117584</td>
+<td align="right">117263</td>
+<td align="right">-321</td>
+</tr>
+</tbody>
+</table>
+<p>:(#tab:t-F13)Data for Example 7.5: Traffic flows between junctions of the M25 on
+each Friday the 6th and Friday the 13th in 1990-92.</p>
+<p>In each of these cases, we will regard the variable of interest <span class="math inline">\(Y\)</span> as a
+continuous, interval-level variable. The five examples illustrate three
+different situations considered in this chapter. Example 7.1 includes
+two separate <span class="math inline">\(Y\)</span>-variables (consumption of fruit and vegetables, and fat
+intake), each of which is considered for a single population. Questions
+of interest are about the mean of the variable in the population. This
+is analogous to the one-group questions on proportions in Sections
+<a href="c-probs.html#s-probs-test1sample">5.5</a> and <a href="c-probs.html#s-probs-1sampleci">5.6</a>. In this chapter
+the one-group case is discussed only relatively briefly, in Section
+<a href="c-means.html#s-means-1sample">7.4</a>.</p>
+<p>The main focus here is on the case illustrated by Examples 7.2 and 7.3.
+These involve samples of a response variable (hours of housework, or
+preceived friendliness) from two groups (men and women, or police with
+or without sunglasses). We are then interested in comparing the
+distributions, and especially the means, of the response variable
+between the groups. This case will be discussed first. Descriptive
+statistics for it are described in Section <a href="c-means.html#s-means-descr">7.2</a>, and
+statistical inference in Section <a href="c-means.html#s-means-inference">7.3</a>.</p>
+<p>Finally, examples 7.4 and 7.5 also involve comparisons between two
+groups, but of a slightly different kind than examples 7.2 and 7.3. The
+two types of cases differ in the nature of the two samples (groups)
+being compared.  In Examples 7.2 and 7.3, the
+samples can be considered to be <strong>independent</strong>. What this claim means
+will be discussed briefly later; informally, it is justified in these
+examples because the subjects in the two groups are separate and
+unrelated individuals. In Examples 7.4 and 7.5, in contrast, the samples
+(before and after the birth of a child, or two successive Fridays) must
+be considered <strong>dependent</strong>, essentially because they concern
+measurements on the same units at two distinct times. This case is
+discussed in Section <a href="c-means.html#s-means-dependent">7.5</a>.</p>
+<p>In each of the four two-group examples we are primarily interested in
+questions about possible association between the group variable <span class="math inline">\(X\)</span> and
+the response variable <span class="math inline">\(Y\)</span>. As before, this is the question of whether
+the conditional distributions of <span class="math inline">\(Y\)</span> are different at the two levels of
+<span class="math inline">\(X\)</span>. There is thus an association between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> if</p>
+<ul>
+<li><p>Example 7.2: The distribution of hours of housework is different for
+men than for women.</p></li>
+<li><p>Example 7.3: The distribution of perceptions of a police officer’s
+friendliness is different when he is wearing mirrored sunglasses
+than when he is not.</p></li>
+<li><p>Example 7.4: The distribution of measurements of personal well-being
+is different at the sixth month of the pregnancy than one month
+after the birth.</p></li>
+<li><p>Example 7.5: The distributions of the numbers of cars on the
+motorway differ between Friday the 6th and the following Friday
+the 13th.</p></li>
+</ul>
+<p>We denote the two values of <span class="math inline">\(X\)</span>, i.e. the two groups, by 1 and 2. The
+mean of the population distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=1\)</span> will be denoted
+<span class="math inline">\(\mu_{1}\)</span> and the standard deviation <span class="math inline">\(\sigma_{1}\)</span>, and the mean and
+standard deviation of the population distribution given <span class="math inline">\(X=2\)</span> are
+denoted <span class="math inline">\(\mu_{2}\)</span> and <span class="math inline">\(\sigma_{2}\)</span> similarly. The corresponding sample
+quantities are the conditional sample means <span class="math inline">\(\bar{Y}_{1}\)</span> and
+<span class="math inline">\(\bar{Y}_{2}\)</span> and sample standard deviations <span class="math inline">\(s_{1}\)</span> and <span class="math inline">\(s_{2}\)</span>. For
+inference, we will focus on the population difference
+<span class="math inline">\(\Delta=\mu_{2}-\mu_{1}\)</span> which is estimated by the sample difference
+<span class="math inline">\(\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}\)</span>. Some of the descriptive methods
+described in Section <a href="c-means.html#s-means-descr">7.2</a>, on the other hand, also aim to
+summarise and compare other aspects of the two conditional sample
+distributions.</p>
+</div>
+<div id="s-means-descr" class="section level2 hasAnchor">
+<h2><span class="header-section-number">7.2</span> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ss-means-descr-graphs" class="section level3 hasAnchor">
+<h3><span class="header-section-number">7.2.1</span> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There is an association between the group variable <span class="math inline">\(X\)</span> and the response
+variable <span class="math inline">\(Y\)</span> if the distributions of <span class="math inline">\(Y\)</span> in the two groups are not the
+same. To determine the extent and nature of any such association, we
+need to compare the two distributions. This section describes methods of
+doing so for observed data, i.e. for examining associations in a sample.
+We begin with graphical methods which can be used to detect differences
+in any aspects of the two distributions. We then discuss some
+non-graphical summaries which compare specific aspects of the sample
+distributions, especially their means.</p>
+<p>Although the methods of <em>inference</em> described later in this chapter will
+be limited to the case where the group variable <span class="math inline">\(X\)</span> is dichotomous, many
+of the descriptive methods discussed below can just as easily be applied
+when more than two groups are being compared. This will be mentioned
+wherever appropriate. For inference in the multiple-group case some of
+the methods discussed in Chapter <a href="c-regression.html#c-regression">8</a> are applicable.</p>
+<p>In Section <a href="c-descr1.html#ss-descr1-1cont-graphs">2.5.2</a> we described four graphical
+methods of summarizing the sample distribution of one continuous
+variable <span class="math inline">\(Y\)</span>: the histogram, the stem and leaf plot, the frequency
+polygon and the box plot. Each of these can be adapted for comparisons
+of two or more distributions, although some more conveniently than
+others. We illustrate the use three of the plots for this purpose, using
+the comparison of housework hours in Example 7.2 for illustration. Stem
+and leaf plots will not be shown, because they are less appropriate when
+the sample sizes are as large as they are in this example.</p>
+<p>Two sample distributions can be compared by displaying histograms of
+them side by side, as shown in Figure <a href="c-means.html#fig:f-hworkpyramid">7.1</a>. This is not
+a very common type of graph, and not ideal for visually comparing the
+two distributions, because the bars to be compared (here for men
+vs. women) end at opposite ends of the plot. A better alternative is to
+use frequency polygons. Since these represent a sample distribution by a
+single line, it is easy to include two of them in the same plot, as
+shown in Figure <a href="c-means.html#fig:f-hworkpolygons">7.2</a>. Finally, Figure
+<a href="c-means.html#fig:f-twoboxplots">7.3</a> shows two boxplots of reported housework hours, one
+for men and one for women.</p>
+<p>The plots suggest that the distributions are quite similar for men and
+women. In both groups, the largest proportion of respondents stated that
+they do between 4 and 7 hours of housework a week. The distributions are
+clearly positively skewed, since the reported number of hours was much
+higher than average for a number of people (whereas less than zero hours
+were of course not recorded for anyone). The proportions of observations
+in categories including values 5, 10, 15, 20, 25 and 30 tend to be
+relatively high, suggesting that many respondents chose to report their
+answers in such round numbers. The box plots show that the median number
+of hours is higher for women than for men (7 vs. 6 hours), and women’s
+responses have slightly less variation, as measured by both the IQR and
+the range of the whiskers. Both distributions have several larger,
+outlying observations (note that SPSS, which was used to produce Figure
+<a href="c-means.html#fig:f-twoboxplots">7.3</a>, divides outliers into moderate and “extreme” ones;
+the latter are observations more than 3 IQR from the end of the box, and
+are plotted with asterisks).</p>
+<div class="figure"><span style="display:block;" id="fig:f-hworkpyramid"></span>
+<img src="hworkpyramid.png" alt="Histograms of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men (n=635) and women (n=469)." style="width:130mm" />
+<p class="caption">Figure 7.1: Histograms of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men (<span class="math inline">\(n=635\)</span>) and women (<span class="math inline">\(n=469\)</span>).</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:f-hworkpolygons"></span>
+<img src="hwork.png" alt="Frequency polygons of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women. The points show the percentages of observations in the intervals of 0–3, 4–7, \dots, 32–35 hours (plus zero percentages at each end of the curve)." style="width:11.5cm" />
+<p class="caption">Figure 7.2: Frequency polygons of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women. The points show the percentages of observations in the intervals of 0–3, 4–7, <span class="math inline">\(\dots\)</span>, 32–35 hours (plus zero percentages at each end of the curve).</p>
+</div>
+<div class="figure"><span style="display:block;" id="fig:f-twoboxplots"></span>
+<img src="twoboxplots.png" alt="Box plots of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women." style="width:11cm" />
+<p class="caption">Figure 7.3: Box plots of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women.</p>
+</div>
+<p>Figures <a href="c-means.html#fig:f-hworkpyramid">7.1</a>–<a href="c-means.html#fig:f-twoboxplots">7.3</a> also illustrate an
+important general point about such comparisons. Typically we focus on
+comparing <em>means</em> of the conditional distributions. Here the difference
+between the sample means is 1.16, i.e. women in the sample spend, on
+average, over an hour longer on housework per week than men. The
+direction of the difference could also be guessed from Figure
+<a href="c-means.html#fig:f-hworkpolygons">7.2</a>, which shows that somewhat smaller proportions of
+women than of men report small numbers of hours, and larger proportions
+of women report large numbers. This difference will later be shown to be
+statistically significant, and it is also arguably relatively large in a
+substantive sense.</p>
+<p>However, it is equally important to note that the two distributions
+summarized by the graphs are nevertheless largely similar. For example,
+even though the mean is higher for women, there are clearly many women
+who report spending hardly any time on housework, and many men who spend
+a lot of time on it. In other words, the two distributions overlap to a
+large extent. This obvious point is often somewhat neglected in public
+discussions of differences between groups such as men and women or
+different ethnic groups. It is not uncommon to see reports of research
+indicating that (say) men have higher or lower values of something or
+other then women. Such statements usually refer to differences of
+averages, and are often clearly important and interesting. Less helpful,
+however, is the tendency to discuss the differences almost as if the
+corresponding distributions had no overlap at all, i.e. as if <em>all</em> men
+were higher or lower in some characteristic than all women. This is
+obviously hardly ever the case.</p>
+<p>Box plots and frequency polygons can also be used to compare more than
+two sample distributions. For example, the experimental conditions in
+the study behind Example 7.3 actually involved not only whether or not a
+police officer wore sunglasses, but also whether or not he wore a gun.
+Distributions of perceived friendliness given all four combinations of
+these two conditions could easily be summarized by drawing four box
+plots or frequency polygons in the same plot, one for each experimental
+condition.</p>
+</div>
+<div id="ss-means-descr-tables" class="section level3 hasAnchor">
+<h3><span class="header-section-number">7.2.2</span> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Main features of sample distributions, such as their central tendencies
+and variations, are described using the summary statistics introduced in
+Section <a href="c-descr1.html#s-descr1-nums">2.6</a>. These too can be compared between groups.
+Table <a href="#tab:t-groupex">7.1</a> shows such statistics for the examples of this
+chapter. Tables like these are routinely reported for initial
+description of data, even if more elaborate statistical methods are
+later used.</p>
+<p>Sometimes the association between two variables in a sample is
+summarized in a single <em>measure of association</em> calculated from the
+data. This is especially convenient when both of the variables are
+continuous (in which case the most common measure of association is
+known as the <em>correlation</em> coefficient). In this section we consider as
+such a summary the difference <span class="math inline">\(\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}\)</span> of
+the sample means of <span class="math inline">\(Y\)</span> in the two groups. These differences are also
+shown in Table <a href="#tab:t-groupex">7.1</a>.</p>
+<p>The difference of means is important because it is also the focus of the
+most common methods of inference for two-group comparisons. For purely
+descriptive purposes it may be as or more convenient to report some
+other statistic. For example, the difference of means of 1.16 hours in
+Example 7.2 could also be described in <em>relative</em> terms by saying that
+the women’s average is about 16 per cent higher than the men’s average
+(because <span class="math inline">\(1.16/7.33=0.158\)</span>, i.e. the difference represents 15.8 % of the
+men’s average).</p>
+</div>
+</div>
+<div id="s-means-inference" class="section level2 hasAnchor">
+<h2><span class="header-section-number">7.3</span> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ss-means-inference-intro" class="section level3 hasAnchor">
+<h3><span class="header-section-number">7.3.1</span> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Formulated as a statistical model in the sense discussed on page in Section <a href="c-contd.html#ss-contd-probdistrs-general">6.3.1</a>, the
+assumptions of the analyses considered in this section are as follows:</p>
+<ol style="list-style-type: decimal">
+<li><p> We have a sample of <span class="math inline">\(n_{1}\)</span> independent
+observations of a variable <span class="math inline">\(Y\)</span> in group 1, which have a population
+distribution with mean <span class="math inline">\(\mu_{1}\)</span> and standard deviation
+<span class="math inline">\(\sigma_{1}\)</span>.</p></li>
+<li><p>We have a sample of <span class="math inline">\(n_{2}\)</span> independent observations of <span class="math inline">\(Y\)</span> in group
+2, which have a population distribution with mean <span class="math inline">\(\mu_{2}\)</span> and
+standard deviation <span class="math inline">\(\sigma_{2}\)</span>.</p></li>
+<li><p>The two samples are independent, in the sense discussed following Example 7.5.</p></li>
+<li><p>For now, we further assume that the population standard deviations
+<span class="math inline">\(\sigma_{1}\)</span> and <span class="math inline">\(\sigma_{2}\)</span> are equal, with a common value denoted
+by <span class="math inline">\(\sigma\)</span>. This relatively minor assumption will be discussed
+further in Section <a href="c-means.html#ss-means-inference-variants">7.3.4</a>.</p></li>
+</ol>
+<p>We could have stated the starting points of the analyses in Chapters
+<a href="c-tables.html#c-tables">4</a> and <a href="c-probs.html#c-probs">5</a> also in such formal terms. It is not
+absolutely necessary to always do so, but we should at least remember
+that any statistical analysis is based on some such model. In
+particular, this helps to make it clear what our methods of analysis do
+and do not assume, so that we may critically examine whether these
+assumptions appear to be justified for the data at hand.</p>
+<p>The model stated above does not require that the population
+distributions of <span class="math inline">\(Y\)</span> should have the form of any particular probability
+distribution. It is often further assumed that these distributions are
+normal distributions, but this is not essential. Discussion of this
+question is postponed until Section <a href="c-means.html#ss-means-inference-variants">7.3.4</a>.</p>
+<p>The only new term in this model statement was the “independent” under
+assumptions 1 and 2. This statistical term can be roughly translated as
+“unrelated”. The condition can usually be regarded as satisfied when the
+units of analysis are different entities, as in Examples 7.2 and 7.3
+where the units within each group are distinct individual people. In
+these examples the individuals in the two groups are also distinct, from
+which it follows that the two <em>samples</em> are independent as required by
+assumption 3. The same assumption of independent observations is also
+required by all of the methods described in Chapters <a href="c-tables.html#c-tables">4</a> and
+<a href="c-probs.html#c-probs">5</a>, although we did not state this explicitly there.</p>
+<p>This situation is illustrated by Example 7.2, where <span class="math inline">\(Y\)</span> is the number of
+hours a person spends doing housework in a week, and the two groups are
+men (group 1) and women (group 2).</p>
+<p>The quantity of main interest is here the difference of population means
+<span class="math display" id="eq:DeltaB">\[\begin{equation}
+\Delta=\mu_{2}-\mu_{1}.
+\tag{7.1} 
+\end{equation}\]</span>
+In particular, if <span class="math inline">\(\Delta=0\)</span>, the population means in
+the two groups are the same. If <span class="math inline">\(\Delta\ne 0\)</span>, they are not the same,
+which implies that there is an association between <span class="math inline">\(Y\)</span> and the group in
+the population.</p>
+<p>Inference on <span class="math inline">\(\Delta\)</span> can be carried out using methods which are
+straightforward modifications of the ones introduced first in Chapter
+<a href="c-probs.html#c-probs">5</a>. For significance testing, the null hypothesis of interest
+is
+<span class="math display" id="eq:mH0a">\[\begin{equation}
+H_{0}: \; \Delta=0,
+\tag{7.2}
+\end{equation}\]</span>
+to be tested against a two-sided (<span class="math inline">\(H_{a}:\; \Delta\ne 0\)</span>)
+or one-sided (<span class="math inline">\(H_{a}:\; \Delta&gt; 0\)</span> or <span class="math inline">\(H_{a}:\; \Delta&lt; 0\)</span>) alternative
+hypothesis. The test statistic used to test (<a href="c-means.html#eq:mH0a">(7.2)</a>) is again of the
+form
+<span class="math display" id="eq:tma">\[\begin{equation}
+t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}
+\tag{7.3}
+\end{equation}\]</span>
+where <span class="math inline">\(\hat{\Delta}\)</span> is a sample estimate of <span class="math inline">\(\Delta\)</span>, and
+<span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span> its estimated standard error. Here the
+statistic is conventionally labelled <span class="math inline">\(t\)</span> rather than <span class="math inline">\(z\)</span> and called the
+<em>t-test statistic</em> because sometimes the <span class="math inline">\(t\)</span>-distribution rather than
+the normal is used as its sampling distribution. This possibility is
+discussed in Section <a href="c-means.html#ss-means-inference-variants">7.3.4</a>, and we can
+ignore it until then.</p>
+<p>Confidence intervals for the differences <span class="math inline">\(\Delta\)</span> are also of the
+familiar form
+<span class="math display" id="eq:ciDpa">\[\begin{equation}
+\hat{\Delta} \pm z_{\alpha/2}\, \hat{\sigma}_{\hat{\Delta}}
+\tag{7.4}
+\end{equation}\]</span>
+where <span class="math inline">\(z_{\alpha/2}\)</span> is the appropriate multiplier from
+the standard normal distribution to obtain the required confidence
+level, e.g. <span class="math inline">\(z_{0.025}=1.96\)</span> for 95% confidence intervals. The
+multiplier is replaced with a slightly different one if the
+<span class="math inline">\(t\)</span>-distribution is used as the sampling distribution, as discussed in
+Section <a href="c-means.html#ss-means-inference-variants">7.3.4</a>.</p>
+<p>The details of these formulas in the case of two-sample inference on
+means are described next, in Section <a href="c-means.html#ss-means-inference-test">7.3.2</a> for
+the significance test and in Section <a href="c-means.html#ss-means-inference-ci">7.3.3</a> for the
+confidence interval.</p>
+</div>
+<div id="ss-means-inference-test" class="section level3 hasAnchor">
+<h3><span class="header-section-number">7.3.2</span> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For tests of the difference of means <span class="math inline">\(\Delta=\mu_{2}-\mu_{1}\)</span> between
+two population distributions, we consider the null hypothesis of no
+difference
+<span class="math display" id="eq:H0m">\[\begin{equation}
+H_{0}: \; \Delta=0.
+\tag{7.5}
+\end{equation}\]</span>
+In the housework example, this is the hypothesis that
+average weekly hours of housework in the population are the same for men
+and women. It is tested against an alternative hypothesis, either the
+two-sided alternative hypotheses
+<span class="math display" id="eq:Hatwom">\[\begin{equation}
+H_{a}: \; \Delta\ne 0
+\tag{7.6}
+\end{equation}\]</span>
+or one of the one-sided alternative hypotheses
+<span class="math display">\[H_{a}:  \Delta&gt; 0 \text{ or } H_{a}:  \Delta&lt; 0\]</span> In the discussion below, we concentrate on the more
+common two-sided alternative.</p>
+<p>The test statistic for testing (<a href="c-means.html#eq:H0m">(7.5)</a>) is of the general form
+(<a href="c-means.html#eq:tma">(7.3)</a>). Here it depends on the data only through the sample means
+<span class="math inline">\(\bar{Y}_{1}\)</span> and <span class="math inline">\(\bar{Y}_{2}\)</span> and sample variances <span class="math inline">\(s_{1}^{2}\)</span> and
+<span class="math inline">\(s_{2}^{2}\)</span> of <span class="math inline">\(Y\)</span> in the two groups. A point estimate of <span class="math inline">\(\Delta\)</span> is
+<span class="math display" id="eq:Dhatmu">\[\begin{equation}
+\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}.
+\tag{7.7}
+\end{equation}\]</span>
+In terms of the population parameters, the standard
+error of <span class="math inline">\(\hat{\Delta}\)</span> is
+<span class="math display" id="eq:sigmaDmu">\[\begin{equation}
+\sigma_{\hat{\Delta}}=\sqrt{\sigma^{2}_{\bar{Y}_{2}}+\sigma^{2}_{\bar{Y}_{1}}}=\sqrt{\frac{\sigma^{2}_{2}}{n_{2}}+\frac{\sigma^{2}_{1}}{n_{1}}}.
+\tag{7.8}
+\end{equation}\]</span>
+When we assume that the population standard
+deviations <span class="math inline">\(\sigma_{1}\)</span> and <span class="math inline">\(\sigma_{2}\)</span> are equal, with a common value
+<span class="math inline">\(\sigma\)</span>, (<a href="c-means.html#eq:sigmaDmu">(7.8)</a>) simplifies to
+<span class="math display" id="eq:seDpop">\[\begin{equation}
+\sigma_{\hat{\Delta}} =\sigma\; \sqrt{\frac{1}{n_{2}}+\frac{1}{n_{1}}}.
+\tag{7.9}
+\end{equation}\]</span>
+The formula of the test statistic uses an estimate of
+this standard error, given by
+<span class="math display" id="eq:seD2">\[\begin{equation}
+\hat{\sigma}_{\hat{\Delta}} =\hat{\sigma} \; \sqrt{\frac{1}{n_{2}}+\frac{1}{n_{1}}}
+\tag{7.10}
+\end{equation}\]</span>
+where <span class="math inline">\(\hat{\sigma}\)</span> is an estimate of <span class="math inline">\(\sigma\)</span>,
+calculated from
+<span class="math display" id="eq:sehatjoint">\[\begin{equation}
+\hat{\sigma}=\sqrt{\frac{(n_{2}-1)s^{2}_{2}+(n_{1}-1)s^{2}_{1}}{n_{1}+n_{2}-2}}.
+\tag{7.11}
+\end{equation}\]</span>
+Substituting (<a href="c-means.html#eq:Dhatmu">(7.7)</a>) and (<a href="c-means.html#eq:seD2">(7.10)</a>) into
+the general formula (<a href="c-means.html#eq:tma">(7.3)</a>) gives the <strong>two-sample t-test statistic
+for means</strong>
+<span class="math display" id="eq:ztestmuDb">\[\begin{equation}
+t=\frac{\bar{Y}_{2}-\bar{Y}_{1}}
+{\hat{\sigma}\, \sqrt{1/n_{2}+1/n_{1}}}
+\tag{7.12}
+\end{equation}\]</span>
+where <span class="math inline">\(\hat{\sigma}\)</span> is given by (<a href="c-means.html#eq:sehatjoint">(7.11)</a>).</p>
+<p>For an illustration of the calculations, consider again the housework
+Example 7.2. Here, denoting men by 1 and women by 2, <span class="math inline">\(n_{1}=635\)</span>,
+<span class="math inline">\(n_{2}=469\)</span>, <span class="math inline">\(\bar{Y}_{1}=7.33\)</span>, <span class="math inline">\(\bar{Y}_{2}=8.49\)</span>, <span class="math inline">\(s_{1}=5.53\)</span> and
+<span class="math inline">\(s_{2}=6.14\)</span>. The estimated mean difference is thus
+<span class="math display">\[\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}=8.49-7.33=1.16.\]</span> The common
+value of the population standard deviation <span class="math inline">\(\sigma\)</span> is estimated from
+(<a href="c-means.html#eq:sehatjoint">(7.11)</a>) as <span class="math display">\[\begin{aligned}
+\hat{\sigma}&amp;=&amp;
+\sqrt{\frac{(n_{2}-1)s^{2}_{2}+(n_{1}-1)s^{2}_{1}}{n_{1}+n_{2}-2}}
+=
+\sqrt{\frac{(469-1) 6.14^{2}+(635-1) 5.53^{2}}{635+469-2}}\\
+&amp;=&amp; \sqrt{33.604}=5.797\end{aligned}\]</span> and the estimated standard error
+of <span class="math inline">\(\hat{\Delta}\)</span> is given by (<a href="c-means.html#eq:seD2">(7.10)</a>) as
+<span class="math display">\[\hat{\sigma}_{\hat{\Delta}} =
+\hat{\sigma} \; \sqrt{\frac{1}{n_{2}}+\frac{1}{n_{1}}}
+=5.797 \; \sqrt{\frac{1}{469}+\frac{1}{635}}=0.353.\]</span> The value of the
+t-test statistic (<a href="c-means.html#eq:ztestmuDb">(7.12)</a>) is then obtained as
+<span class="math display">\[t=\frac{1.16}{0.353}=3.29.\]</span> These values and other quantities
+explained later, as well as similar results for Example 7.3, are also
+shown in Table <a href="#tab:t-2testsY1">7.3</a>.</p>
+<table style="width:98%;">
+<colgroup>
+<col width="31%" />
+<col width="27%" />
+<col width="8%" />
+<col width="10%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right"><span class="math inline">\(\hat{\Delta}\)</span></th>
+<th align="right"><span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span></th>
+<th align="right"><span class="math inline">\(t\)</span></th>
+<th align="right"><span class="math inline">\(P\)</span>-value</th>
+<th align="right">95 % C.I.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">Example 7.2: Average weekly hours
+spent on housework</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="right">1.16</td>
+<td align="right">0.353</td>
+<td align="right">3.29</td>
+<td align="right">0.001</td>
+<td align="right">(0.47; 1.85)</td>
+</tr>
+<tr class="odd">
+<td align="right">Example 7.3: Perceived friendliness
+of a police officer</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="right"><span class="math inline">\(-1.74\)</span></td>
+<td align="right">0.383</td>
+<td align="right"><span class="math inline">\(-4.55\)</span></td>
+<td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
+<td align="right"><span class="math inline">\((-2.49; -0.99)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>:(#tab:t-2testsY1)Results of tests and confidence intervals for comparing means for
+two independent samples. For Example 7.2, the difference of means is
+between women and men, and for Example 7.3, it is between wearing and
+not wearing sunglasses. The test statistics and confidence intervals
+are obtained under the assumption of equal population standard
+deviations, and the <span class="math inline">\(P\)</span>-values are for a test with a two-sided
+alternative hypothesis. See the text for the definitions of the
+statistics.</p>
+<p> If necessary, calculations like these can be carried
+out even with a pocket calculator. It is, however, much more convenient
+to leave them to statistical software. Figure <a href="c-means.html#fig:f-spss2test">7.4</a> shows
+SPSS output for the two-sample t-test for the housework data. The first
+part of the table, labelled “Group Statistics”, shows the sample sizes
+<span class="math inline">\(n\)</span>, means <span class="math inline">\(\bar{Y}\)</span> and standard deviations <span class="math inline">\(s\)</span> separately for the two
+groups. The quantity labelled “Std. Error Mean” is <span class="math inline">\(s/\sqrt{n}\)</span>. This is
+an estimate of the standard error of the sample mean, which is the
+quantity <span class="math inline">\(\sigma/\sqrt{n}\)</span> discussed in Section <a href="c-contd.html#s-contd-clt">6.4</a>.</p>
+<p>The second part of the table in Figure <a href="c-means.html#fig:f-spss2test">7.4</a>, labelled
+“Independent Samples Test”, gives results for the t-test itself. The
+test considered here, which assumes a common population standard
+deviation <span class="math inline">\(\sigma\)</span> (and thus also variance <span class="math inline">\(\sigma^{2}\)</span>), is found on
+the row labelled “Equal variances assumed”. The test statistic is shown
+in the column labelled “<span class="math inline">\(t\)</span>”, and the difference
+<span class="math inline">\(\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}\)</span> and its standard error
+<span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span> are shown in the “Mean Difference” and
+“Std. Error Difference” columns respectively. Note that the difference
+(<span class="math inline">\(-1.16\)</span>) has been calculated in SPSS between men and women rather than
+vice versa as in Table <a href="#tab:t-2testsY1">7.3</a>, but this will make no
+difference to the conclusions from the test.</p>
+<div class="figure"><span style="display:block;" id="fig:f-spss2test"></span>
+<img src="spss2t.png" alt="SPSS output for a two-sample t-test in Example 7.2, comparing average weekly hours spent on housework between men and women." style="width:17cm" />
+<p class="caption">Figure 7.4: SPSS output for a two-sample <span class="math inline">\(t\)</span>-test in Example 7.2, comparing average weekly hours spent on housework between men and women.</p>
+</div>
+<p>In the two-sample situation with assumptions 1–4 at the beginning of Section <a href="c-means.html#ss-means-inference-intro">7.3.1</a>, the sampling distribution of the t-test
+statistic (<a href="c-means.html#eq:ztestmuDb">(7.12)</a>) is approximately a standard normal
+distribution when the null hypothesis
+<span class="math inline">\(H_{0}: \; \Delta=\mu_{2}-\mu_{1}=0\)</span> is true in the population and the
+sample sizes are large enough. This is again a consequence of the
+Central Limit Theorem. The requirement for “large enough” sample sizes
+is fairly easy to satisfy. A good rule of thumb is that the sample sizes
+<span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> in the two groups should both be at least 20 for the
+sampling distribution of the test statistic to be well enough
+approximated by the standard normal distribution. In the housework
+example we have data on 635 men and 469 women, so the sample sizes are
+clearly large enough. A variant of the test which relaxes the condition
+on the sample sizes is discussed in Section
+<a href="c-means.html#ss-means-inference-variants">7.3.4</a> below.</p>
+<p>The <span class="math inline">\(P\)</span>-value of the test is calculated from this sampling distribution
+in exactly the same way as for the tests of proportions in Section
+<a href="c-probs.html#ss-probs-test1sample-samplingd">5.5.3</a>. In the housework example the value
+of the <span class="math inline">\(t\)</span>-test statistic is <span class="math inline">\(t=3.29\)</span>. The <span class="math inline">\(P\)</span>-value for testing the
+null hypothesis against the two-sided alternative (<a href="c-means.html#eq:Hatwom">(7.6)</a>) is then
+the probability, calculated from the standard normal distribution, of
+values that are at least 3.29 or at most <span class="math inline">\(-3.29\)</span>. Each of these two
+probabilities is about 0.0005, so the <span class="math inline">\(P\)</span>-value is
+<span class="math inline">\(0.0005+0.0005=0.001\)</span>. In the SPSS output of Figure <a href="c-means.html#fig:f-spss2test">7.4</a> it
+is given in the column labelled “Sig. (2-tailed)”, where “Sig.” is short
+for “significance” and “2-tailed” is a synonym for “2-sided”.</p>
+<p>The <span class="math inline">\(P\)</span>-value can also be calculated approximately using the table of
+the standard normal distribution (see Table <a href="c-probs.html#tab:t-ttable">5.2</a>, as explained in Section
+<a href="c-probs.html#ss-probs-test1sample-samplingd">5.5.3</a>. Here the test statistic <span class="math inline">\(t=3.29\)</span>,
+which is larger than the critical values 1.65, 1.96 and 2.58 for the
+0.10, 0.05 and 0.01 significance levels for a two-sided test, so we can
+report that <span class="math inline">\(P&lt;0.01\)</span>. Here <span class="math inline">\(t\)</span> is by chance actually equal (to two
+decimal places) to the critical value for the 0.001 significance level,
+so we could also report <span class="math inline">\(P=0.001\)</span>. These findings agree, as they should,
+with the exact <span class="math inline">\(P\)</span>-value of 0.001 shown in the SPSS output.</p>
+<p>In conclusion, the two-sample <span class="math inline">\(t\)</span>-test in Example 7.2 indicates that
+there is very strong evidence (with <span class="math inline">\(P=0.001\)</span> for the two-sided test)
+against the claim that the hours of weekly housework are on average the
+same for men and women in the population.</p>
+<p>Here we showed raw SPSS output in Figure <a href="c-means.html#fig:f-spss2test">7.4</a> because we
+wanted to explain its contents and format. Note, however, that such
+unedited computer output is rarely if ever appropriate in research
+reports. Instead, results of statistical analyses should be given in
+text or tables formatted in appropriate ways for presentation. See Table
+<a href="#tab:t-2testsY1">7.3</a> and various other examples in this coursepack and
+textbooks on statistics.</p>
+<p>To summarise the elements of the test again, we repeat them briefly, now
+for Example 7.3, the experiment on the effect of eye contact on the
+perceived friendliness of police officers (c.f. Table <a href="#tab:t-groupex">7.1</a> for the summary statistics):</p>
+<ol style="list-style-type: decimal">
+<li><p>Data: samples from two groups, one with the experimental condition
+where the officer wore no sunglasses, with sample size <span class="math inline">\(n_{1}=67\)</span>,
+mean <span class="math inline">\(\bar{Y}_{1}=8.23\)</span> and standard deviation <span class="math inline">\(s_{1}=2.39\)</span>, and the
+second with the experimental condition where the officer did wear
+sunglasses, with <span class="math inline">\(n_{2}=66\)</span>, <span class="math inline">\(\bar{Y}_{2}=6.49\)</span> and <span class="math inline">\(s_{2}=2.01\)</span>.</p></li>
+<li><p>Assumptions: the observations are random samples of statistically
+independent observations from two populations, one with mean
+<span class="math inline">\(\mu_{1}\)</span> and standard deviation <span class="math inline">\(\sigma_{1}\)</span>, and the other with
+with mean <span class="math inline">\(\mu_{2}\)</span> and the same standard deviation <span class="math inline">\(\sigma_{2}\)</span>,
+where the standard deviations are equal, with value
+<span class="math inline">\(\sigma=\sigma_{1}=\sigma_{2}\)</span>. The sample sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span>
+are sufficiently large, say both at least 20, for the sampling
+distribution of the test statistic under the null hypothesis to be
+approximately standard normal.</p></li>
+<li><p>Hypotheses: These are about the difference of the population means
+<span class="math inline">\(\Delta=\mu_{2}-\mu_{1}\)</span>, with null hypothesis <span class="math inline">\(H_{0}: \Delta=0\)</span>.
+The two-sided alternative hypothesis <span class="math inline">\(H_{a}: \Delta\ne 0\)</span> is
+considered in this example.</p></li>
+<li><p>The test statistic: the two-sample <span class="math inline">\(t\)</span>-statistic
+<span class="math display">\[t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}=
+\frac{-1.74}{0.383}=-4.55\]</span> where
+<span class="math display">\[\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}=6.49-8.23=-1.74\]</span> and
+<span class="math display">\[\hat{\sigma}_{\hat{\Delta}}=
+\hat{\sigma} \; \sqrt{\frac{1}{n_{2}}+\frac{1}{n_{1}}}
+=2.210 \times \sqrt{
+\frac{1}{66}+\frac{1}{67}}=0.383\]</span> with <span class="math display">\[\hat{\sigma}=
+\sqrt{\frac{(n_{2}-1)s^{2}_{2}+(n_{1}-1)s^{2}_{1}}{n_{1}+n_{2}-2}}
+=
+\sqrt{\frac{65\times 2.01^{2}+66\times 2.39^{2}}{131}}
+=2.210\]</span></p></li>
+<li><p>The sampling distribution of the test statistic when <span class="math inline">\(H_{0}\)</span> is
+true: approximately the standard normal distribution.</p></li>
+<li><p>The <span class="math inline">\(P\)</span>-value: the probability that a randomly selected value from
+the standard normal distribution is at most <span class="math inline">\(-4.55\)</span> or at least
+4.55, which is about 0.000005 (reported as <span class="math inline">\(P&lt;0.001\)</span>).</p></li>
+<li><p>Conclusion: A two-sample <span class="math inline">\(t\)</span>-test indicates very strong evidence
+that the average perceived level of the friendliness of a police
+officer is different when the officer is wearing reflective
+sunglasses than when the officer is not wearing such glasses
+(<span class="math inline">\(P&lt;0.001\)</span>).</p></li>
+</ol>
+</div>
+<div id="ss-means-inference-ci" class="section level3 hasAnchor">
+<h3><span class="header-section-number">7.3.3</span> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A confidence interval for the mean difference <span class="math inline">\(\Delta=\mu_{1}-\mu_{2}\)</span>
+is obtained by substituting appropriate expressions into the general
+formula (<a href="c-means.html#eq:ciDpa">(7.4)</a>). Specifically, here
+<span class="math inline">\(\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}\)</span> and a 95% confidence interval for
+<span class="math inline">\(\Delta\)</span> is
+<span class="math display" id="eq:ciDmu2">\[\begin{equation}
+(\bar{Y}_{2}-\bar{Y}_{1}) \pm 1.96\;  \hat{\sigma} \;\sqrt{\frac{1}{n_{2}}+\frac{1}{n_{1}}}
+\tag{7.13}
+\end{equation}\]</span>
+where <span class="math inline">\(\hat{\sigma}\)</span> is obtained from equation
+<a href="c-means.html#eq:sehatjoint">(7.11)</a>. The validity of this again requires that the sample
+sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> from both groups are reasonably large, say
+both at least 20. For the housework Example 7.2, the 95% confidence
+interval is <span class="math display">\[1.16\pm 1.96\times 0.353 = 1.16 \pm 0.69 = (0.47; 1.85)\]</span>
+using the values of <span class="math inline">\(\bar{Y}_{2}-\bar{Y}_{1}\)</span> and its standard error
+calculated earlier. This interval is also shown in Table
+<a href="#tab:t-2testsY1">7.3</a> and in the SPSS output in
+Figure <a href="c-means.html#fig:f-spss2test">7.4</a> .
+In the latter, the interval is given as (-1.85; -0.47) because it is
+expressed for the difference defined in the opposite direction (men <span class="math inline">\(-\)</span>
+women instead of vice versa). For Example 7.3, the 95% confidence
+interval is <span class="math inline">\(-1.74\pm 1.96\times 0.383=(-2.49; -0.99)\)</span>.</p>
+<p>Based on the data in Example 7.2 we are thus 95 % confident that the
+difference between women’s and men’s average hours of reported weekly
+housework in the population is between 0.47 and 1.85 hours. In
+substantive terms this interval, from just under half an hour to nearly
+two hours, is arguably fairly wide in that its two end points might well
+be regarded as substantially different from each other. The difference
+between women’s and men’s average housework hours is thus estimated
+fairly imprecisely from this survey.</p>
+</div>
+<div id="ss-means-inference-variants" class="section level3 hasAnchor">
+<h3><span class="header-section-number">7.3.4</span> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="allowing-unequal-population-variances" class="section level4 unnumbered hasAnchor">
+<h4>Allowing unequal population variances<a href="c-means.html#allowing-unequal-population-variances" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The two-sample <span class="math inline">\(t\)</span>-test and confidence interval for the difference of
+means were stated above under the assumption that the standard
+deviations <span class="math inline">\(\sigma_{1}\)</span> and <span class="math inline">\(\sigma_{2}\)</span> of the variable of interest <span class="math inline">\(Y\)</span>
+are the same in both of the two groups being compared. This assumption
+is not in fact essential. If it is omitted, we obtain formulas which
+differ from the ones discussed above only in one part of the
+calculations.</p>
+<p>Suppose that we do allow the unknown values of <span class="math inline">\(\sigma_{1}\)</span> and
+<span class="math inline">\(\sigma_{2}\)</span> to be different from each other. In other words, we
+consider the model stated at the beginning of Section <a href="c-means.html#ss-means-inference-intro">7.3.1</a>, without
+assumption 4 that <span class="math inline">\(\sigma_{1}=\sigma_{2}\)</span>. The test statistic is then
+still of the same form as before,
+i.e. <span class="math inline">\(t=\hat{\Delta}/\hat{\sigma}_{\hat{\Delta}}\)</span>, with
+<span class="math inline">\(\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}\)</span>. The only change in the
+calculations is that the estimate of the standard error of
+<span class="math inline">\(\hat{\Delta}\)</span>, the formula of which is given by equation
+(<a href="c-means.html#eq:sigmaDmu">(7.8)</a>), now uses separate estimates
+of <span class="math inline">\(\sigma_{1}\)</span> and <span class="math inline">\(\sigma_{2}\)</span>. The obvious choices for these are the
+corresponding sample standard deviations, <span class="math inline">\(s_{1}\)</span> for <span class="math inline">\(\sigma_{1}\)</span> and
+<span class="math inline">\(s_{2}\)</span> for <span class="math inline">\(\sigma_{2}\)</span>. This gives the estimated standard error as
+<span class="math display" id="eq:seDmu-ne">\[\begin{equation}
+\hat{\sigma}_{\hat{\Delta}}=\sqrt{\frac{s_{2}^{2}}{n_{2}}+\frac{s_{1}^{2}}{n_{1}}}.
+\tag{7.14}
+\end{equation}\]</span>
+Substituting this to the formula of the test
+statistic yields the two-sample <span class="math inline">\(t\)</span>-test statistic without the
+assumption of equal population standard deviations,
+<span class="math display" id="eq:ztestmuD">\[\begin{equation}
+t=\frac{\bar{Y}_{2}-\bar{Y}_{1}}{\sqrt{s^{2}_{2}/n_{2}+s^{2}_{1}/n_{1}}}.
+\tag{7.15}
+\end{equation}\]</span>
+The sampling distribution of this under the null
+hypothesis is again approximately a standard normal distribution when
+the sample sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> are both at least 20. The <span class="math inline">\(P\)</span>-value
+for the test is obtained in exactly the same way as before, and the
+principles of interpreting the result of the test are also unchanged.</p>
+<p>For the confidence interval, the only change from Section
+<a href="c-means.html#ss-means-inference-ci">7.3.3</a> is again that the estimated standard error
+is changed, so for a 95% confidence interval we use
+<span class="math display" id="eq:ciDmu">\[\begin{equation}
+(\bar{Y}_{2}-\bar{Y}_{1}) \pm 1.96 \;\sqrt{\frac{s^{2}_{2}}{n_{2}}+\frac{s^{2}_{1}}{n_{1}}}.
+\tag{7.16}
+\end{equation}\]</span>
+In the housework example 7.2, the estimated standard error
+(<a href="c-means.html#eq:seDmu-ne">(7.14)</a>) is <span class="math display">\[\hat{\sigma}_{\hat{\Delta}}=
+\sqrt{
+\frac{6.14^{2}}{469}+
+\frac{5.53^{2}}{635}
+}=
+\sqrt{0.1285}=0.359,\]</span> the value of the test statistic is
+<span class="math display">\[t=\frac{1.16}{0.359}=3.23,\]</span> and the two-sided <span class="math inline">\(P\)</span>-value is now
+<span class="math inline">\(P=0.001\)</span>. Recall that when the population standard deviations were
+assumed to be equal, we obtained <span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}=0.353\)</span>,
+<span class="math inline">\(t=3.29\)</span> and again <span class="math inline">\(P=0.001\)</span>. The two sets of results are thus very
+similar, and the conclusions from the test are the same in both cases.
+The differences between the two variants of the test are even smaller in
+Example 7.3, where the estimated standard error
+<span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}=0.383\)</span> is the same (to three decimal
+places) in both cases, and the results are thus identical.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a> In both
+examples the confidence intervals obtained from (<a href="c-means.html#eq:ciDmu2">(7.13)</a>) and
+(<a href="c-means.html#eq:ciDmu">(7.16)</a>) are also very similar. Both variants of the two-sample
+analyses are shown in SPSS output (c.f. Figure <a href="c-means.html#fig:f-spss2test">7.4</a>), the ones assuming equal population standard
+deviations on the row labelled “Equal variances assumed” and the one
+without this assumption on the “Equal variances not assumed” row.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a></p>
+<p>Which methods should we then use, the ones with or without the
+assumption of equal population variances? In practice the choice rarely
+makes much difference, and the <span class="math inline">\(P\)</span>-values and conclusions from the two
+versions of the test are typically very similar.<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a> Not assuming the
+variances to be equal has the advantage of making fewer restrictive
+assumptions about the population. For this reason it should be used in
+the rare cases where the <span class="math inline">\(P\)</span>-values obtained under the different
+assumptions are substantially different. This version of the test
+statistic is also slightly easier to calculate by hand, since
+(<a href="c-means.html#eq:seDmu-ne">(7.14)</a>) is a slightly simpler formula than
+(<a href="c-means.html#eq:seD2">(7.10)</a>)–(<a href="c-means.html#eq:sehatjoint">(7.11)</a>). On the other hand, the test statistic
+which does assume equal standard deviations has the advantage that it is
+more closely related to analogous tests used in more general contexts
+(especially the method of linear regression modelling, discussed in
+Chapter <a href="c-regression.html#c-regression">8</a>). It is also preferable when the sample sizes
+are very small, as discussed below.</p>
+</div>
+<div id="using-the-t-distribution" class="section level4 unnumbered hasAnchor">
+<h4>Using the <span class="math inline">\(t\)</span> distribution<a href="c-means.html#using-the-t-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>As discussed in Section <a href="c-contd.html#s-contd-probdistrs">6.3</a>, it is often assumed
+that the population distributions of the variables under consideration
+are described by particular probability distributions. In this chapter,
+however, such assumptions have so far been avoided. This is a
+consequence of the Central Limit Theorem, which ensures that as long as
+the sample sizes are large enough, the sampling distribution of the
+two-sample <span class="math inline">\(t\)</span>-test statistic is approximately the standard normal
+distribution, irrespective of the forms of the population distributions
+of <span class="math inline">\(Y\)</span> in the two groups. In this section we briefly describe variants
+of the test and confidence interval which <em>do</em> assume that the
+population distributions are of a particular form, specifically that
+they are normal distributions. This changes the sampling distribution
+that is used for the test statistic and for the multiplier of the
+confidence interval, but the analyses are otherwise unchanged.</p>
+<p>For the significance test, there are again two variants depending on the
+assumptions about the the population standard deviations <span class="math inline">\(\sigma_{1}\)</span>
+and <span class="math inline">\(\sigma_{2}\)</span>. Consider first the case where these are assumed to be
+equal. The sampling distribution is then given by the following result,
+which now holds for <em>any</em> sample sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span>:</p>
+<ul>
+<li>In the two-sample situation specified by assumptions 1–4 at the beginning of Section <a href="c-means.html#ss-means-inference-intro">7.3.1</a> (including the assumption of equal population
+standard deviations, <span class="math inline">\(\sigma_{1}=\sigma_{2}=\sigma\)</span>), and if also
+the distribution of <span class="math inline">\(Y\)</span> is a normal distribution in both groups, the
+sampling distribution of the t-test statistic (<a href="c-means.html#eq:ztestmuDb">(7.12)</a>) is a
+<span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n_{1}+n_{2}-2\)</span> degrees of freedom when the
+null hypothesis <span class="math inline">\(H_{0}: \; \Delta=\mu_{2}-\mu_{1}=0\)</span> is true in the population.</li>
+</ul>
+<p>The <span class="math inline">\(\mathbf{t}\)</span> <strong>distributions</strong> mentioned in this result are a family
+of distributions with different degrees of freedom, in a similar way as
+the <span class="math inline">\(\chi^{2}\)</span> distributions discussed in Section
+<a href="c-tables.html#ss-tables-chi2test-sdist">4.3.4</a>. All <span class="math inline">\(t\)</span> distributions are symmetric
+around 0. Their shape is quite similar to that of the standard normal
+distribution, except that the variance of a <span class="math inline">\(t\)</span> distribution is somewhat
+larger and its tails thus heavier. The difference is noticeable only
+when the degrees of freedom are small, as seen in Figure
+<a href="c-means.html#fig:f-tdistr1">7.5</a>. This shows the curves for the <span class="math inline">\(t\)</span> distributions with 6
+and 30 degrees of freedom, compared to the standard normal distribution.
+It can be seen that the <span class="math inline">\(t_{30}\)</span> distribution is already very similar to
+the <span class="math inline">\(N(0,1)\)</span> distribution. With degrees of freedom larger than about 30,
+the difference becomes almost indistinguishable.</p>
+<div class="figure"><span style="display:block;" id="fig:f-tdistr1"></span>
+<img src="tdistr1.png" alt="Curves of two t distributions with small degrees of freedom, compared to the standard normal distribution." style="width:13cm" />
+<p class="caption">Figure 7.5: Curves of two <span class="math inline">\(t\)</span> distributions with small degrees of freedom, compared to the standard normal distribution.</p>
+</div>
+<p>If we use this result for the test, the <span class="math inline">\(P\)</span>-value is obtained from the
+<span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n_{1}+n_{2}-2\)</span> degrees of freedom (often denoted
+<span class="math inline">\(t_{n1+n2-2}\)</span>). The principles of doing this are exactly the same as
+those described in Section <a href="c-probs.html#ss-probs-test1sample-samplingd">5.5.3</a>, and can
+be graphically illustrated by plots similar to those in Figure
+<a href="c-probs.html#fig:f-pval-prob">5.1</a>. Precise <span class="math inline">\(P\)</span>-values are
+again obtained using a computer. In fact, <span class="math inline">\(P\)</span>-values in SPSS output for
+the two-sample <span class="math inline">\(t\)</span>-test (c.f. Figure <a href="c-means.html#fig:f-spss2test">7.4</a>) are actually those obtained from the <span class="math inline">\(t\)</span>
+distribution (with the degrees of freedom shown in the column labelled
+“df”) rather than the standard normal distribution. Differences between
+the two are, however, very small if the sample sizes are even moderately
+large, because then the degrees of freedom <span class="math inline">\(df=n_{1}+n_{2}-2\)</span> are large
+enough for the two distributions to be virtually identical. This is the
+case, for instance, in both of the examples considered so far in this
+chapter, where <span class="math inline">\(df=1102\)</span> in Example 7.2 and <span class="math inline">\(df=131\)</span> in Example 7.3.</p>
+<p>If precise <span class="math inline">\(P\)</span>-values from the <span class="math inline">\(t\)</span> distribution are not available, upper
+bounds for them can again be obtained using appropriate tables, in the
+same way as in Section <a href="c-probs.html#ss-probs-test1sample-samplingd">5.5.3</a>. Now,
+however, the critical values depend also on the degrees of freedom.
+Because of this, introductory text books on statistics typically include
+a table of critical values for <span class="math inline">\(t\)</span> distributions for a selection of
+degrees of freedom. A table of this kind is shown in the Appendix at the end of this course pack. Each row of the
+table corresponds to a <span class="math inline">\(t\)</span> distribution with the degrees of freedom
+given in the column labelled “df”. As here, such tables typically
+include all degrees of freedom between 1 and 30, plus a selection of
+larger values, here 40, 60 and 120.</p>
+<p>The last row is labelled “<span class="math inline">\(\infty\)</span>”, the mathematical symbol for
+infinity. This corresponds to the standard normal distribution, as a <span class="math inline">\(t\)</span>
+distribution with infinite degrees of freedom is equal to the standard
+normal. The practical implication of this is that the standard normal
+distribution is a good enough approximation for any <span class="math inline">\(t\)</span> distribution
+with reasonably large degrees of freedom. The table thus lists
+individual degrees of freedom only up to some point, and the last row
+will be used for any values larger than this. For degrees of freedom
+between two values shown in the table (e.g. 50 when only 40 and 60 are
+given), it is best to use the values for the nearest available degrees
+of freedom <em>below</em> the required ones (e.g. use 40 for 50). This will
+give a “conservative” approximate <span class="math inline">\(P\)</span>-value which may be slightly larger
+than the exact value.</p>
+<p>As for the standard normal distribution, the table is used to identify
+critical values for different significance levels (c.f. the information
+in Table <a href="c-probs.html#tab:t-ttable">5.2</a>). For example, if the degrees of freedom are 20,
+the critical value for two-sided tests at the significance level 0.05 in
+the “0.025” column on the row labelled “20”. This is 2.086. In general,
+critical values for <span class="math inline">\(t\)</span> distributions are somewhat larger than
+corresponding values for the standard normal distribution, but the
+difference between the two is quite small when the degrees of freedom
+are reasonably large.</p>
+<p>The <span class="math inline">\(t\)</span>-test and the <span class="math inline">\(t\)</span> distribution are among the oldest tools of
+statistical inference. They were introduced in 1908 by W. S. Gosset,<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a>
+initially for the one-sample case discussed in Section
+<a href="c-means.html#s-means-1sample">7.4</a>. Gosset was working as a chemist at the Guinness
+brewery at St. James’ Gate, Dublin. He published his findings under the
+pseudonym “Student”, and the distribution is often known as <em>Student’s
+<span class="math inline">\(t\)</span> distribution</em>.</p>
+<p>These results for the sampling distribution hold when the population
+standard deviations <span class="math inline">\(\sigma_{1}\)</span> and <span class="math inline">\(\sigma_{2}\)</span> are assumed to be
+equal. If this assumption is not made, the test statistic is again
+calculated using formulas (<a href="c-means.html#eq:seDmu-ne">(7.14)</a>) and (<a href="c-means.html#eq:ztestmuD">(7.15)</a>). This case is mathematically more difficult than the
+previous one, because the sampling distribution of the test statistic
+under the null hypothesis is then not exactly a <span class="math inline">\(t\)</span> distribution even
+when the population distributions are normal. One way of dealing with
+this complication (which is known as the Behrens–Fisher problem) is to
+find a <span class="math inline">\(t\)</span> distribution which is a good approximation of the true
+sampling distribution. The degrees of freedom of this approximating
+distribution are given by
+<span class="math display" id="eq:satter-df">\[\begin{equation}
+df=\frac{\left(\frac{s^{2}_{1}}{n_{1}}+\frac{s^{2}_{2}}{n_{2}}\right)^{2}}{\left(\frac{s_{1}^{2}}{n_{1}}\right)^{2}\;\left(\frac{1}{n_{1}-1}\right)+\left(\frac{s_{2}^{2}}{n_{2}}\right)^{2}\;\left(\frac{1}{n_{2}-1}\right)}.
+\tag{7.17}
+\end{equation}\]</span>
+This formula, which is known as the
+Welch-Satterthwaite approximation, is not particularly interesting or
+worth learning in itself. It is presented here purely for completeness,
+and to give an idea of how the degrees of freedom given in the SPSS
+output are obtained. In Example 7.2 (see Figure <a href="c-means.html#fig:f-spss2test">7.4</a>) these degrees of freedom are 945.777,
+showing that the approximate degrees of freedom from (<a href="c-means.html#eq:satter-df">(7.17)</a>)
+are often not whole numbers. If approximate <span class="math inline">\(P\)</span>-values are then obtained
+from a <span class="math inline">\(t\)</span>-table, we need to use values for the nearest whole-number
+degrees of freedom shown in the table. This problem does not arise if
+the calculations are done with a computer.</p>
+<p>Two sample <span class="math inline">\(t\)</span>-test statistics (in two variants, under equal and unequal
+population standard deviations) have now been defined under two
+different sets of assumptions about the population distributions. In
+each case, the formula of the test statistic is the same, so the only
+difference is in the form of its sampling distribution under the null
+hypothesis. If the population distributions of <span class="math inline">\(Y\)</span> in the two groups are
+assumed to be normal, the sampling distribution of the <span class="math inline">\(t\)</span>-statistic is
+a <span class="math inline">\(t\)</span> distribution with appropriate degrees of freedom. If the sample
+sizes are reasonably large, the sampling distribution is approximately
+standard normal, whatever the shape of the population distribution.
+Which set of assumptions should we then use? The following guidelines
+can be used to make the choice:</p>
+<ul>
+<li><p>The easiest and arguably most common case is the one where both
+sample sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> are large enough (both greater than
+20, say) for the standard normal approximation of the sampling
+distribution to be reasonably accurate. Because the degrees of
+freedom of the appropriate <span class="math inline">\(t\)</span> distribution are then also large, the
+two sampling distributions are very similar, and conclusions from
+the test will be similar in either case. It is then purely a matter
+of convenience which sampling distribution is used:</p>
+<ul>
+<li><p>If you use a computer (e.g. SPSS) to carry out the test or you
+are (e.g. in an exam) given computer output, use the <span class="math inline">\(P\)</span>-value
+in the output. This will be from the <span class="math inline">\(t\)</span> distribution.</p></li>
+<li><p>If you need to calculate the test statistic by hand and thus
+need to use tables of critical values to draw the conclusion,
+use the critical values for the standard normal distribution
+(see Table <a href="c-probs.html#tab:t-ttable">5.2</a>).</p></li>
+</ul></li>
+<li><p>When the sample sizes are small (e.g. if one or both of them are
+less than 20), only the <span class="math inline">\(t\)</span> distribution can be used, and even then
+only if <span class="math inline">\(Y\)</span> is approximately normally distributed in both groups in
+the population. For some variables (say weight or blood pressure) we
+might have some confidence that this is the case, perhaps from
+previous, larger studies. In other cases the normality of <span class="math inline">\(Y\)</span> can
+only be assessed based on its sample distribution, which of course
+is not very informative when the sample is small. In most cases,
+some doubt will remain, so the results of a <span class="math inline">\(t\)</span>-test from small
+samples should be treated with caution. An alternative is then to
+use <em>nonparametric</em> tests which avoid the assumption of normality,
+for example the so-called Wilcoxon–Mann–Whitney test. These,
+however, are not covered on this course.</p></li>
+</ul>
+<p>There are also situations where the population distribution of <span class="math inline">\(Y\)</span>
+cannot possibly be normal, so the possibility of referring to a <span class="math inline">\(t\)</span>
+distribution does not arise. One example are the tests on population
+proportions that were discussed in Chapter <a href="c-probs.html#c-probs">5</a>. There the only
+possibility we discussed was to use the approximate standard normal
+sampling distribution, as long as the sample sizes were large enough.
+Because the <span class="math inline">\(t\)</span>-distribution is never relevant there, the test statistic
+is conventionally called the <span class="math inline">\(z\)</span>-test statistic rather than <span class="math inline">\(t\)</span>.
+Sometimes the label <span class="math inline">\(z\)</span> instead of <span class="math inline">\(t\)</span> is used also for two-sample
+<span class="math inline">\(t\)</span>-statistics described in this chapter. This does not change the test
+itself.</p>
+<p>It is also possible to obtain a confidence interval for <span class="math inline">\(\Delta\)</span> which
+is valid for even very small sample sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span>, but only
+under the further assumption that the population distribution of <span class="math inline">\(Y\)</span> in
+both groups is normal. This affects only the multiplier of the standard
+errors, which is now based on a <span class="math inline">\(t\)</span> distribution. The appropriate
+degrees of freedom are again <span class="math inline">\(df=n_{1}+n_{2}-2\)</span> when the population
+standard deviations are assumed equal, and approximately given by
+equation (<a href="c-means.html#eq:satter-df">(7.17)</a>) if not. In this case the multiplier in
+(<a href="c-means.html#eq:ciDpa">(7.4)</a>) may be labelled <span class="math inline">\(t^{(df)}_{\alpha/2}\)</span> instead of
+<span class="math inline">\(z_{\alpha/2}\)</span> to draw attention to the fact that it comes from a
+<span class="math inline">\(t\)</span>-distribution and depends on the degrees of freedom <span class="math inline">\(df\)</span> as well as
+the significance level <span class="math inline">\(1-\alpha\)</span>.</p>
+<p>Any multiplier <span class="math inline">\(t_{\alpha/2}^{(df)}\)</span> is obtained from the relevant <span class="math inline">\(t\)</span>
+distribution using exactly the same logic as the one explained for the
+normal distribution in the previous section, using a computer or a table
+of <span class="math inline">\(t\)</span> distributions. For example, in the <span class="math inline">\(t\)</span> table in the Appendix, multipliers for a 95% confidence interval are
+the numbers given in the column labelled “0.025”. Suppose, for instance,
+that the sample sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> are both 10 and population
+standard deviations are assumed equal, so that <span class="math inline">\(df=10+10-2=18\)</span>. The
+table shows that a <span class="math inline">\(t\)</span>-based 95% confidence interval would then use the
+multiplier 2.101. This is somewhat larger than the corresponding
+multiplier 1.96 from the normal distribution, and the <span class="math inline">\(t\)</span>-based interval
+is somewhat wider than one based on the normal distribution. The
+difference between the two becomes very small when the sample sizes are
+even moderately large, because then <span class="math inline">\(df\)</span> is large and
+<span class="math inline">\(t_{\alpha/2}^{(df)}\)</span> is very close to 1.96.</p>
+<p>The choice between confidence intervals based on the normal or a <span class="math inline">\(t\)</span>
+distribution involves the same considerations as for the significance
+test. In short, if the sample sizes are not very small, the choice makes
+little difference and can be based on convenience. If you are
+calculating an interval by hand, a normal-based one is easier to use
+because the multiplier (e.g. 1.96 for 95% intervals) does not depend on
+the sample sizes. If, instead, a computer is used, it typically gives
+confidence intervals for differences of means based on the <span class="math inline">\(t\)</span>
+distribution, so these are easier to use. Finally, if one or both of the
+sample sizes are small, only <span class="math inline">\(t\)</span>-based intervals can safely be used, and
+then only if you are confident that the population distributions of <span class="math inline">\(Y\)</span>
+are approximately normal.</p>
+</div>
+</div>
+</div>
+<div id="s-means-1sample" class="section level2 hasAnchor">
+<h2><span class="header-section-number">7.4</span> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The task considered in this section is inference on the population mean
+of a continuous, interval-level variable <span class="math inline">\(Y\)</span> in a single population.
+This is thus analogous to the analysis of a single proportion in
+Sections <a href="c-probs.html#s-probs-test1sample">5.5</a>–<a href="c-probs.html#s-probs-1sampleci">5.6</a>, but with a
+continuous variable of interest.</p>
+<p>We use Example 7.1 on survey data on diet for illustration. We will
+consider two variables, daily consumption of portions of fruit and
+vegetables, and the percentage of total faily energy intake obtained
+from fat and fatty acids. These will be analysed separately, each in
+turn in the role of the variable of interest <span class="math inline">\(Y\)</span>. Summary statistics for
+the variables are shown in Table <a href="#tab:t-ttests1">7.4</a></p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="center">          <span class="math inline">\(P\)</span>-value <span class="math inline">\(P\)</span>-value \</td>
+</tr>
+<tr class="even">
+<td align="center">Two- One- 95% CI</td>
+</tr>
+<tr class="odd">
+<td align="center">Variable <span class="math inline">\(n\)</span> <span class="math inline">\(\bar{Y}\)</span> <span class="math inline">\(s\)</span> <span class="math inline">\(\mu_{0}\)</span> <span class="math inline">\(t\)</span> sided<span class="math inline">\(^{*}\)</span> sided<span class="math inline">\(^{\dagger}\)</span> for <span class="math inline">\(\mu\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Fruit and vegetable 1724 2.8 2.15 5 -49.49 <span class="math inline">\(&lt;0.001\)</span> <span class="math inline">\(&lt;0.001\)</span> (2.70; 2.90)
+consumption
+(400g portions)</p>
+<p>Total energy intake 1724 35.3 6.11 35 2.04 0.042 0.021 (35.01; 35.59)
+from fat (%)
+—————————————————————————————————————————————</p>
+<p>:(#tab:t-ttests1)Summary statistics, <span class="math inline">\(t\)</span>-tests and confidence intervals for the mean
+for the two variables in Example 7.1 (variables from the Diet and
+Nutrition Survey). <span class="math inline">\(n=\)</span>sample size; <span class="math inline">\(\bar{Y}=\)</span>sample mean; <span class="math inline">\(s=\)</span>sample standard
+deviation; <span class="math inline">\(\mu_{0}=\)</span>null hypothesis about the population mean; <span class="math inline">\(t=t\)</span>-test
+statistic; <span class="math inline">\(*\)</span>: Alternative hypothesis <span class="math inline">\(H_{a}: \mu\ne \mu_{0}\)</span>; <span class="math inline">\(\dagger\)</span>:
+Alternative hypotheses <span class="math inline">\(H_{a}: \mu&lt;5\)</span> and <span class="math inline">\(\mu&gt;35\)</span> respectively.</p>
+<p>The setting for the analysis of this section is summarised as a
+statistical model for observations of a variable <span class="math inline">\(Y\)</span> as follows:</p>
+<ol style="list-style-type: decimal">
+<li><p>The population distribution of <span class="math inline">\(Y\)</span> has some unknown mean <span class="math inline">\(\mu\)</span> and
+unknown standard deviation <span class="math inline">\(\sigma\)</span>.</p></li>
+<li><p>The observations <span class="math inline">\(Y_{1}, Y_{2}, \dots, Y_{n}\)</span> in the sample are a
+random sample from the population.</p></li>
+<li><p>The observations are statistically independent, as discussed at the beginning of Section <a href="c-means.html#ss-means-inference-intro">7.3.1</a>.</p></li>
+</ol>
+<p>It is not necessary to assume that the population distribution has a
+particular form. However, this is again sometimes assumed to be a normal
+distribution, in which case the analyses may be modified in ways
+discussed below.</p>
+<p>The only quantity of interest considered here is <span class="math inline">\(\mu\)</span>, the population
+mean of <span class="math inline">\(Y\)</span>. In the diet examples this is the mean number of portions of
+fruit and vegetables, or mean percentage of energy derived from fat
+(both on an average day for an individual) among the members of the
+population (which for this survey is British adults aged 19–64).</p>
+<p>Because no separate groups are being compared, questions of interest are
+now not about differences between different group means, but about the
+value of <span class="math inline">\(\mu\)</span> itself. The best single estimate (<em>point estimate</em>) of
+<span class="math inline">\(\mu\)</span> is the sample mean <span class="math inline">\(\bar{Y}\)</span>. More information is provided by a
+confidence interval which shows which values of <span class="math inline">\(\mu\)</span> are plausible
+given the observed data.</p>
+<p>Significance testing focuses on the question of whether it is plausible
+that the true value of <span class="math inline">\(\mu\)</span> is equal to a particular value <span class="math inline">\(\mu_{0}\)</span>
+specified by the researcher. The specific value of <span class="math inline">\(\mu_{0}\)</span> to be
+tested is suggested by the research questions. For example, we will
+consider <span class="math inline">\(\mu_{0}=5\)</span> for portions of fruit and vegetables and
+<span class="math inline">\(\mu_{0}=35\)</span> for the percentage of energy from fat. These values are
+chosen because they correspond to recommendations by the Department of
+Health that we should consume at least 5 portions of fruit and
+vegetables a day, and that fat should contribute no more than 35% of
+total energy intake. The statistical question is thus whether the
+average level of consumption in the population is at the recommended
+level.</p>
+<p>In this setting, the null hypothesis for a significance test will be of
+the form
+<span class="math display" id="eq:H01">\[\begin{equation}
+H_{0}: \; \mu=\mu_{0},
+\tag{7.18}
+\end{equation}\]</span>
+i.e. it claims that the unknown population mean <span class="math inline">\(\mu\)</span> is
+equal to the value <span class="math inline">\(\mu_{0}\)</span> specified by the null hypothesis. This will
+be tested against the two-sided alternative hypothesis
+<span class="math display" id="eq:Ha1two">\[\begin{equation}
+H_{a}: \; \mu\ne \mu_{0}
+\tag{7.19}
+\end{equation}\]</span>
+or one of the one-sided alternative hypotheses
+<span class="math display" id="eq:Ha1onegt">\[\begin{equation}
+H_{a}:  \mu&gt; \mu_{0}
+\tag{7.20}
+\end{equation}\]</span>
+or
+<span class="math display" id="eq:Ha1onelt">\[\begin{equation}
+H_{a}:  \mu&lt; \mu_{0}.
+\tag{7.21}
+\end{equation}\]</span>
+For example, we might consider the one-sided alternative hypotheses <span class="math inline">\(H_{a}:\; \mu&lt;5\)</span> for portions of fruit and vegetables and <span class="math inline">\(H_{a}:\;\mu&gt;35\)</span> for the percentage of energy from fat. For both of these, the
+alternative corresponds to a difference from <span class="math inline">\(\mu_{0}\)</span> in the unhealthy
+direction, i.e. less fruit and vegetables and more fat than are
+recommended.</p>
+<p>To establish a connection to the general formulas that have been stated
+previously, it is again useful to express these hypotheses in terms of
+<span class="math display" id="eq:D1mu">\[\begin{equation}
+\Delta=\mu-\mu_{0},
+\tag{7.22}
+\end{equation}\]</span>
+i.e. the difference between the unknown true mean <span class="math inline">\(\mu\)</span>
+and the value <span class="math inline">\(\mu_{0}\)</span> claimed by the null hypothesis. Because this is
+0 if and only if <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\mu_{0}\)</span> are equal, the null hypothesis
+(<a href="c-means.html#eq:H01">(7.18)</a>) can also be expressed as
+<span class="math display" id="eq:H0D">\[\begin{equation}
+H_{0}: \; \Delta=0,
+\tag{7.23}
+\end{equation}\]</span>
+and possible alternative hypotheses as
+<span class="math display" id="eq:HaDtwo">\[\begin{equation}
+H_{0}: \Delta\ne0,
+\tag{7.24}
+\end{equation}\]</span>
+<span class="math display" id="eq:HaDonegt">\[\begin{equation}
+H_{0}: \Delta&gt;0
+\tag{7.25}
+\end{equation}\]</span>
+and
+<span class="math display" id="eq:HaDonelt">\[\begin{equation}
+H_{0}:  \Delta&lt; 0,   
+\tag{7.26}
+\end{equation}\]</span>
+corresponding to
+(<a href="c-means.html#eq:Ha1two">(7.19)</a>), (<a href="c-means.html#eq:Ha1onegt">(7.20)</a>) and (<a href="c-means.html#eq:Ha1onelt">(7.21)</a>) respectively.</p>
+<p>The general formulas summarised in Section
+<a href="c-means.html#ss-means-inference-intro">7.3.1</a> can again be used, as long as their
+details are modified to apply to <span class="math inline">\(\Delta\)</span> defined as <span class="math inline">\(\mu-\mu_{0}\)</span>. The
+resulting formulas are listed briefly below, and then illustrated using
+the data from the diet survey:</p>
+<ul>
+<li><p>The point estimate of the difference <span class="math inline">\(\Delta=\mu-\mu_{0}\)</span> is
+<span class="math display" id="eq:Dhat1">\[\begin{equation}
+\hat{\Delta}=\bar{Y}-\mu_{0}.
+\tag{7.27}
+\end{equation}\]</span></p></li>
+<li><p>The standard error of <span class="math inline">\(\hat{\Delta}\)</span>, i.e. the standard deviation of
+its sampling distribution, is
+<span class="math inline">\(\sigma_{\hat{\Delta}}=\sigma/\sqrt{n}\)</span> (note that this is equal to
+the standard error <span class="math inline">\(\sigma_{\bar{Y}}\)</span> of the sample mean <span class="math inline">\(\bar{Y}\)</span>
+itself).<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a> This is estimated by
+<span class="math display" id="eq:seDhat1">\[\begin{equation}
+\hat{\sigma}_{\hat{\Delta}} = \frac{s}{\sqrt{n}}.
+\tag{7.28}
+\end{equation}\]</span></p></li>
+<li><p>The <span class="math inline">\(t\)</span>-test statistic for testing the null hypothesis (<a href="c-means.html#eq:H0D">(7.23)</a>) is
+<span class="math display" id="eq:tD1">\[\begin{equation}
+t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}} = \frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}.
+\tag{7.29}
+\end{equation}\]</span></p></li>
+<li><p>The sampling distribution of the <span class="math inline">\(t\)</span>-statistic, when the null
+hypothesis is true, is approximately a standard normal distribution,
+when the sample size <span class="math inline">\(n\)</span> is reasonably large. A common rule of thumb
+is that this sampling distribution is adequate when <span class="math inline">\(n\)</span> is at
+least 30.</p>
+<ul>
+<li>Alternatively, we may make the further assumption that the
+population distribution of <span class="math inline">\(Y\)</span> is normal, in which case no
+conditions on <span class="math inline">\(n\)</span> are required. The sampling distribution of <span class="math inline">\(t\)</span>
+is then a <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n-1\)</span> degrees of freedom. The
+choice of which sampling distribution to refer to is based on
+the considerations outlined in Section
+<a href="c-means.html#ss-means-inference-variants">7.3.4</a>. When <span class="math inline">\(n\)</span> is 30 or larger, the
+two approaches give very similar results.</li>
+</ul></li>
+<li><p><span class="math inline">\(P\)</span>-values are obtained and the conclusions drawn in the same way as
+for two-sample tests, with appropriate modifications to the wording
+of the conclusions.</p></li>
+<li><p>A confidence interval for <span class="math inline">\(\Delta\)</span>, with confidence level <span class="math inline">\(1-\alpha\)</span>
+and based on the approximate normal sampling distribution, is given
+by
+<span class="math display" id="eq:ciD1">\[\begin{equation}
+\hat{\Delta}\pm z_{\alpha/2}\, \hat{\sigma}_{\hat{\Delta}} = (\bar{Y}-\mu_{0}) \pm z_{\alpha/2} \, \frac{s}{\sqrt{n}}
+\tag{7.30}
+\end{equation}\]</span>
+where <span class="math inline">\(z_{\alpha/2}\)</span> is the multiplier from the
+standard normal distribution for the required significance level
+(see Table <a href="c-probs.html#tab:t-ciq">5.3</a>), most often 1.96 for
+a 95% confidence interval. If an interval based on the <span class="math inline">\(t\)</span>
+distribution is wanted instead, <span class="math inline">\(z_{\alpha/2}\)</span> is replaced by the
+corresponding multiplier <span class="math inline">\(t_{\alpha/2}^{(n-1)}\)</span> from the
+<span class="math inline">\(t_{n-1}\)</span> distribution.</p>
+<p>Instead of the interval (<a href="c-means.html#eq:ciD1">(7.30)</a>) for the difference
+<span class="math inline">\(\Delta=\mu-\mu_{0}\)</span>, it is usually more sensible to report a
+confidence interval for <span class="math inline">\(\mu\)</span> itself. This is given by
+<span class="math display" id="eq:cimu1">\[\begin{equation}
+\bar{Y} \pm z_{\alpha/2} \, \frac{s}{\sqrt{n}},
+\tag{7.31}
+\end{equation}\]</span>
+which is obtained by adding <span class="math inline">\(\mu_{0}\)</span> to both end
+points of (<a href="c-means.html#eq:ciD1">(7.30)</a>).</p></li>
+</ul>
+<p>For the fruit and vegetable variable in the diet example, the mean under
+the null hypothesis is the dietary recommendation <span class="math inline">\(\mu_{0}=5\)</span>. The
+estimated difference (<a href="c-means.html#eq:Dhat1">(7.27)</a>) is <span class="math display">\[\hat{\Delta}=2.8-5=-2.2\]</span> and
+its estimated standard error (<a href="c-means.html#eq:seDhat1">(7.28)</a>) is
+<span class="math display">\[\hat{\sigma}_{\hat{\Delta}}= \frac{2.15}{\sqrt{1724}} = 0.05178,\]</span> so
+the <span class="math inline">\(t\)</span>-test statistic (<a href="c-means.html#eq:tD1">(7.29)</a>) is
+<span class="math display">\[t=\frac{-2.2}{0.05178} = -42.49.\]</span> To obtain the <span class="math inline">\(P\)</span>-value for the
+test, <span class="math inline">\(t=-42.49\)</span> is referred to the sampling distribution under the null
+hypothesis, which can here be taken to be the standard normal
+distribution, as the sample size <span class="math inline">\(n=1723\)</span> is large. If we consider the
+two-sided alternative hypothesis <span class="math inline">\(H_{a}:\; \Delta\ne 0\)</span> (i.e. <span class="math inline">\(H_{a}:\; \mu\ne5\)</span>), the <span class="math inline">\(P\)</span>-value is the probability that a randomly selected
+value from the standard normal distribution is at most <span class="math inline">\(-42.49\)</span> or at
+least 42.49. This is a very small probability, approximately
+<span class="math inline">\(0.00\cdots019\)</span>, with 268 zeroes between the decimal point and the 1.
+This is, of course, to all practical purposes zero, and can be reported
+as <span class="math inline">\(P&lt;0.001\)</span>. The null hypothesis <span class="math inline">\(H_{0}:\; \mu=5\)</span> is rejected at any
+conventional level of significance. A <span class="math inline">\(t\)</span>-test for the mean indicates
+very strong evidence that the average daily number of portions of fruit
+and vegetables consumed by members of the population differs from the
+recommended minimum of five.</p>
+<p>If we considered instead the one-sided alternative hypothesis <span class="math inline">\(H_{a}:\;\Delta&lt;0\)</span> (i.e. <span class="math inline">\(H_{a}: \; \mu&lt;5\)</span>), the observed sample mean
+<span class="math inline">\(\bar{Y}=2.8&lt;5\)</span> is in the direction of this alternative. The <span class="math inline">\(P\)</span>-value
+is then the one-sided <span class="math inline">\(P\)</span>-value divided by 2, which is here a small
+value reported as <span class="math inline">\(P&lt;0.001\)</span> again. The null hypothesis <span class="math inline">\(H_{0}: \; \mu=5\)</span>
+(and by implication also the one-sided null hypothesis
+<span class="math inline">\(H_{0}:\; \mu\ge 5\)</span>, as discussed at the end of Section <a href="c-probs.html#ss-probs-test1sample-hypotheses">5.5.1</a>) is
+thus also rejected in favour of this one-sided alternative, at any
+conventional significance level.</p>
+<p>A 95% confidence interval for <span class="math inline">\(\mu\)</span> is obtained from (<a href="c-means.html#eq:cimu1">(7.31)</a>) as
+<span class="math display">\[2.8\pm 1.96 \times \frac{2.15}{\sqrt{1724}}
+=2.8\pm 1.96 \times 0.05178=
+2.8\pm 0.10 = (2.70; 2.90).\]</span> We are thus 95% confident that the average
+daily number of portions of fruit and vegetables consumed by members of
+the population is between 2.70 and 2.90.</p>
+<p>Figure <a href="c-means.html#fig:f-spsstest">7.6</a> shows how these results for the fruit and
+vegetable variable are displayed in SPSS output. The label “portions”
+refers to the name given to the variable in the SPSS data file, and
+“Test Value = 5” indicates the null hypothesis value <span class="math inline">\(\mu_{0}\)</span> being
+tested. Other parts of the SPSS output correspond to
+the information in Table <a href="#tab:t-ttests1">7.4</a> in fairly obvious ways, so “N”
+indicates the sample size <span class="math inline">\(n\)</span> (and not a population size, which is
+denoted by <span class="math inline">\(N\)</span> in our notation), “Mean” the sample mean <span class="math inline">\(\bar{Y}\)</span>,
+“Std. Deviation” the sample standard deviation <span class="math inline">\(s\)</span>, “Std. Error Mean”
+the estimate of the standard error of the mean given by
+<span class="math inline">\(s/\sqrt{n}=2.15/\sqrt{1724}=0.05178\)</span>, “Mean Difference” the difference
+<span class="math inline">\(\hat{\Delta}=\bar{Y}-\mu_{0}=2.8-5=-2.2\)</span>, and “t” the <span class="math inline">\(t\)</span>-test
+statistic (<a href="c-means.html#eq:tD1">(7.29)</a>). The <span class="math inline">\(P\)</span>-value against the two-sided alternative
+hypothesis is shown as “Sig. (2-tailed)” (reported in the somewhat
+sloppy SPSS manner as “.000”). This is actually obtained from the <span class="math inline">\(t\)</span>
+distribution, the degrees of freedom of which (<span class="math inline">\(n-1=1723\)</span>) are given
+under “df”. Finally, the output also contains a 95% confidence interval
+for the difference <span class="math inline">\(\Delta=\mu-\mu_{0}\)</span>, i.e. the interval
+(<a href="c-means.html#eq:ciD1">(7.30)</a>).<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a> This is given as <span class="math inline">\((-2.30; -2.10)\)</span>. To obtain the more
+convenient confidence interval (<a href="c-means.html#eq:cimu1">(7.31)</a>) for <span class="math inline">\(\mu\)</span> itself, we only
+need to add <span class="math inline">\(\mu_{0}=5\)</span> to both end points of the interval shown by
+SPSS, to obtain <span class="math inline">\((-2.30+5; -2.10+5)=(2.70; 2.90)\)</span> as before.</p>
+<div class="figure"><span style="display:block;" id="fig:f-spsstest"></span>
+<img src="ttestspss.png" alt="SPSS output for a t-test of a single mean. The output is for the variable on fruit and vegetable consumption in Table 7.4, with the null hypothesis H-{0}: \mu=5." style="width:130mm" />
+<p class="caption">Figure 7.6: SPSS output for a <span class="math inline">\(t\)</span>-test of a single mean. The output is for the variable on fruit and vegetable consumption in Table <a href="#tab:t-ttests1">7.4</a>, with the null hypothesis <span class="math inline">\(H-{0}: \mu=5\)</span>.</p>
+</div>
+<p>Similar results for the variable on the percentage of dietary energy
+obtained from fat are also shown in Table <a href="#tab:t-ttests1">7.4</a>. Here
+<span class="math inline">\(\mu_{0}=35\)</span>, <span class="math inline">\(\hat{\Delta}=35.3-35=0.3\)</span>,
+<span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}=6.11/\sqrt{1724}=0.147\)</span>, <span class="math inline">\(t=0.3/0.147\)</span>, and
+the two-sided <span class="math inline">\(P\)</span>-value is <span class="math inline">\(P=0.042\)</span>. Here <span class="math inline">\(P&lt;0.05\)</span>, so null hypothesis
+that the population average of the percentage of energy obtained from
+fat is 35 is rejected at the 5% level of significance. However, because
+<span class="math inline">\(P&gt;0.01\)</span>, the hypothesis would not be rejected at the next conventional
+significance level of 1%. The conclusions are the same if we considered
+the one-sided alternative hypothesis <span class="math inline">\(H_{a}:\; \mu&gt;35\)</span>, for which
+<span class="math inline">\(P=0.042/2=0.021\)</span> (as the observed sample mean <span class="math inline">\(\bar{Y}=35.3\)</span> is in the
+direction of <span class="math inline">\(H_{a}\)</span>). In this case the evidence against the null
+hypothesis is thus somewhat less strong than for the fruit and vegetable
+variable, for which the <span class="math inline">\(P\)</span>-value was extremely small. The 95%
+confidence interval for the population average of the fat variable is
+<span class="math inline">\(35.3\pm 1.96\times 0.147=(35.01; 35.59)\)</span>.</p>
+<p>Analysis of a single population mean is a good illustration of some of
+the advantages of confidence intervals over significance tests. First, a
+confidence interval provides a summary of all the plausible values of
+<span class="math inline">\(\mu\)</span> even when, as is very often the case, there is no obvious single
+value <span class="math inline">\(\mu_{0}\)</span> to be considered as the null hypothesis of the
+one-sample <span class="math inline">\(t\)</span>-test. Second, even when such a significance test is
+sensible, the conclusion can also be obtained from the confidence
+interval, as discussed at the end of Section <a href="c-probs.html#ss-means-ci-vstests">5.6.4</a>. In other words,
+<span class="math inline">\(H_{0}:\; \mu=\mu_{0}\)</span> is rejected at a given significance level against a
+two-sided alternative hypothesis, if the confidence interval for <span class="math inline">\(\mu\)</span>
+at the corresponding confidence level does not contain <span class="math inline">\(\mu_{0}\)</span>, and
+not rejected if the interval contains <span class="math inline">\(\mu_{0}\)</span>. Here the 95% confidence
+interval (2.70; 2.90) does not contain 5 for the fruit and vegetable
+variable, and the interval (35.01; 35.59) does not contain 35 for the
+fat variable, so the null hypotheses with these values as <span class="math inline">\(\mu_{0}\)</span> are
+rejected at the 5% level of significance.</p>
+<p>The width of a confidence interval also gives information on how precise
+the results of the statistical analysis are. Here the intervals seem
+quite narrow for both variables, in that it seems that their end points
+(e.g. 2.7 and 2.9 for portions of fruit and vegetables) would imply
+qualitatively similar conclusions about the level of consumption in the
+population. Analysis of the sample of 1724 respondents in the National
+Diet and Nutrition Survey thus appears to have given us quite precise
+information on the population averages for most practical purposes. Of
+course, what is precise enough ultimately depends on what those purposes
+are. If much higher precision was required, the sample size in the
+survey would have to be correspondingly larger.</p>
+<p>Finally, in cases where a null hypothesis is rejected by a significance
+test, a confidence interval has the additional advantage of providing a
+way to assess whether the observed deviation from the null hypothesis
+seems large in some <em>substantive</em> sense. For example, the confidence
+interval for the fat variable draws attention to the fact that the
+evidence against a population mean of 35 is not very strong. The lower
+bound of the interval is only 0.01 units above 35, which is very little
+relative to the overall width (about 0.60) of the interval. The
+<span class="math inline">\(P\)</span>-value (0.041) of the test, which is not much below the reference
+level of 0.05, also suggests this, but in a less obvious way. Even the
+upper limit (35.59) of the interval is arguably not very far from 35, so
+it suggests that we can be fairly confident that the population mean
+does not differ from 35 by very much in the substantive sense. This
+contrasts with the results for the fruit and vegetable variable, where
+all the values covered by the confidence interval (2.70; 2.90) are much
+more obviously far from the recommended value of 5.</p>
+</div>
+<div id="s-means-dependent" class="section level2 hasAnchor">
+<h2><span class="header-section-number">7.5</span> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the two-sample cases considered in Section <a href="c-means.html#s-means-inference">7.3</a>,
+the two groups being compared consisted of separate and presumably
+unrelated units (people, in all of these cases). It thus seemed
+justified to treat the groups as statistically independent. The third
+and last general case considered in this chapter is one where this
+assumption cannot be made, because there are some obvious connections
+between the groups. Examples 7.4 and 7.5 illustrate this situation. Specifically, in
+both cases we can find for each observation in one group a natural
+<em>pair</em> in the other group. In Example 7.4, the data consist of
+observations of a variable for a group of fathers at two time points, so
+the pairs of observations are clearly formed by the two measurements for
+each father. In Example 7.5 the basic observations are for separate
+days, but these are paired (<em>matched</em>) in that for each Friday the 13th
+in one group, the preceding Friday the 6th is included in the other. In
+both cases the existence of the pairings implies that we must treat the
+two groups as statistically <em>dependent</em>.</p>
+<p>Data with dependent samples are quite common, largely because they are
+often very informative. Principles of good research design suggest that
+one key condition for being able to make valid and powerful comparisons
+between two groups is that the groups should be as similar as possible,
+apart from differing in the characteristic being considered. Dependent
+samples represent an attempt to achieve this through intelligent data
+collection. In Example 7.4, the comparison of interest is between a
+man’s sense of well-being before and after the birth of his first child.
+It is likely that there are also other factors which affect well-being,
+such as personality and life circumstances unrelated to the birth of a
+child. Here, however, we can compare the well-being for the <em>same</em> men
+before and after the birth, which should mean that many of those other
+characteristics remain approximately unchanged between the two
+measurements. Information on the effects of the birth of a child will
+then mostly come not from overall levels of well-being but <em>changes</em> in
+it for each man.</p>
+<p>In Example 7.5, time of the year and day of the week are likely to have
+a very strong effect on traffic levels. Comparing, say, Friday, November
+13th to Friday, July 6th, let alone to Sunday, November 15th, would thus
+not provide much information about possible additional differences which
+were due specifically to a Friday being the 13th. To keep these other
+characteristics approximately constant and thus to focus on the effects
+of Friday the 13th, each such Friday has here been matched with the
+nearest preceding Friday. With this design, data on just ten matched
+pairs will (as seen below) allow us to conclude that the differences are
+statistically significant.</p>
+<p>Generalisations of the research designs illustrated by Examples 7.4 and
+7.5 allow for measurements at more than two occasions for each subject
+(so-called longitudinal or panel studies) and groups of more than two
+matched units (clustered designs). Most of these are analysed using
+statistical methods which are beyond the scope of this course. The
+paired case is an exception, for which the analysis is in fact easier
+than for two independent samples. This is because the pairing of
+observations allows us to reduce the analysis into a one-sample problem,
+simply by considering within-pair <em>differences</em> in the response variable
+<span class="math inline">\(Y\)</span>. Only the case where <span class="math inline">\(Y\)</span> is a continuous variable is considered
+here. There are also methods of inference for comparing two (or more)
+dependent samples of response variables of other types, but they are not
+covered here.</p>
+<p>The quantity of interest is again a population difference. This time it
+can be formulated as <span class="math inline">\(\Delta=\mu_{2}-\mu_{1}\)</span>, where <span class="math inline">\(\mu_{1}\)</span> is the
+mean of <span class="math inline">\(Y\)</span> for the first group (e.g. the first time point in Example
+7.4) and <span class="math inline">\(\mu_{2}\)</span> its mean for the second group. Methods of inference
+for <span class="math inline">\(\Delta\)</span> will again be obtained using the same general results which
+were previously applied to one-sample analyses and comparisons of two
+independent samples. The easiest way to do this is now to consider a new
+variable <span class="math inline">\(D\)</span>, defined for each <em>pair</em> <span class="math inline">\(i\)</span> as <span class="math inline">\(D_{i}=Y_{2i}-Y_{1i}\)</span>,
+where <span class="math inline">\(Y_{1i}\)</span> denotes the value of the first measurement of <span class="math inline">\(Y\)</span> for
+pair <span class="math inline">\(i\)</span>, and <span class="math inline">\(Y_{2i}\)</span> is the second measurement of <span class="math inline">\(Y\)</span> for the same
+pair. In Example 7.4 this is thus the difference between a man’s
+well-being after the birth of his first baby, and the same man’s
+well-being before the birth. In Example 7.5, <span class="math inline">\(D\)</span> is the difference in
+traffic flows on a stretch of motorway between a Friday the 13th and the
+Friday a week earlier (these values are shown in the last column of
+Table <a href="#tab:t-F13">7.2</a>). The number of observations of <span class="math inline">\(D\)</span> is the number of
+pairs, which is equal to the sample sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> in each of
+the two groups (the case where one of the two measurements might be
+missing for some pairs is not considered here). We will denote it by
+<span class="math inline">\(n\)</span>.</p>
+<p>The population mean of the differences <span class="math inline">\(D\)</span> is also
+<span class="math inline">\(\Delta=\mu_{2}-\mu_{1}\)</span>, so the observed values <span class="math inline">\(D_{i}\)</span> can be used for
+inference on <span class="math inline">\(\Delta\)</span>. An estimate of <span class="math inline">\(\Delta\)</span> is the sample average of
+<span class="math inline">\(D_{i}\)</span>,
+i.e.
+<span class="math display" id="eq:Dbar-dep">\[\begin{equation}
+\hat{\Delta}=\overline{D}=\frac{1}{n}\sum_{i=1}^{n} D_{i}.
+\tag{7.32}
+\end{equation}\]</span>
+In other words, this is the average of the
+within-pair differences between the two measurements of <span class="math inline">\(Y\)</span>. Its
+standard error is estimated by
+<span class="math display" id="eq:sDbar-dep">\[\begin{equation}
+\hat{\sigma}_{\hat{\Delta}} = \frac{s_{D}}{\sqrt{n}}
+\tag{7.33}
+\end{equation}\]</span>
+where <span class="math inline">\(s_{D}\)</span> is the sample standard deviation of
+<span class="math inline">\(D\)</span>, i.e.
+<span class="math display" id="eq:s2D-dep">\[\begin{equation}
+s_{D} = \sqrt{\frac{\sum (D_{i}-\overline{D})^{2}}{n-1}}.
+\tag{7.34}
+\end{equation}\]</span>
+A test statistic for the null hypothesis
+<span class="math inline">\(H_{0}: \Delta=0\)</span> is given by
+<span class="math display" id="eq:zD-dep">\[\begin{equation}
+t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}=\frac{\overline{D}}{s_{D}/\sqrt{n}}
+\tag{7.35}
+\end{equation}\]</span>
+and its <span class="math inline">\(P\)</span>-value is obtained either from the standard
+normal distribution or the <span class="math inline">\(t_{n-1}\)</span> distribution. A confidence interval
+for <span class="math inline">\(\Delta\)</span> with confidence level <span class="math inline">\(1-\alpha\)</span> is given by
+<span class="math display" id="eq:ciD-dep">\[\begin{equation}
+\hat{\Delta} \pm q_{\alpha/2} \times \hat{\sigma}_{\hat{\Delta}}=\overline{D} \pm q_{\alpha/2} \times \frac{s_{D}}{\sqrt{n}}
+\tag{7.36}
+\end{equation}\]</span>
+where the multiplier <span class="math inline">\(q_{\alpha/2}\)</span> is either
+<span class="math inline">\(z_{\alpha/2}\)</span> or <span class="math inline">\(t_{\alpha/2}^{(n-1)}\)</span>. These formulas are obtained by
+noting that this is simply a one-sample analysis with the differences
+<span class="math inline">\(D\)</span> in place of the variable <span class="math inline">\(Y\)</span>, and applying the formulas of Section
+<a href="c-means.html#s-means-1sample">7.4</a> to the observed values of <span class="math inline">\(D\)</span>.</p>
+<table style="width:99%;">
+<colgroup>
+<col width="25%" />
+<col width="18%" />
+<col width="15%" />
+<col width="20%" />
+<col width="18%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right"><br />
+<span class="math inline">\(\hat{\Delta}\)</span></th>
+<th align="right"><br />
+<span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span></th>
+<th align="right">Test of <span class="math inline">\(H_{0}: \Delta=0\)</span>
+<span class="math inline">\(t\)</span></th>
+<th align="right">Test of <span class="math inline">\(H_{0}: \Delta=0\)</span>
+<span class="math inline">\(P\)</span>-value</th>
+<th align="right"><br />
+95 % C.I. for <span class="math inline">\(\Delta\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">Example 7.4: Father’s personal well-being</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="right">0.08</td>
+<td align="right">0.247</td>
+<td align="right">0.324</td>
+<td align="right">0.75<span class="math inline">\(^{\dagger}\)</span></td>
+<td align="right">(-0.40; 0.56)</td>
+</tr>
+<tr class="odd">
+<td align="right">Example 7.5: Traffic flows on successive
+Fridays</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="right">-1835</td>
+<td align="right">372</td>
+<td align="right">-4.93</td>
+<td align="right">0.001<span class="math inline">\(^{*}\)</span></td>
+<td align="right">(-2676; -994)</td>
+</tr>
+</tbody>
+</table>
+<p>:(#tab:t-2tests-dep)Results of tests and confidence intervals for comparing means of two
+dependent samples. For Example 7.4, the difference is between after
+and before the birth of the child, and for Example 7.5 it is between
+Friday the 13th and the preceding Friday the 6th. See the text for the
+definitions of the statistics. (* Obtained from the <span class="math inline">\(t_{9}\)</span> distribution;
+<span class="math inline">\(\dagger\)</span> Obtained from the standard normal distribution.)</p>
+<p>Results for Examples 7.4 and 7.5 are shown in Table <a href="#tab:t-2tests-dep">7.5</a>.
+To illustrate the calculations, consider Example 7.5. The <span class="math inline">\(n=10\)</span> values
+of <span class="math inline">\(D_{i}\)</span> for it are shown in Table <a href="#tab:t-F13">7.2</a>, and the summary
+statistics <span class="math inline">\(\overline{D}=-1835\)</span> and <span class="math inline">\(s_{D}=1176\)</span> in Table
+<a href="#tab:t-groupex">7.1</a>. The standard error of <span class="math inline">\(\overline{D}\)</span> is thus
+<span class="math inline">\(s_{D}/\sqrt{n}=1176/\sqrt{10}=372\)</span> and the value of the test statistic
+(<a href="c-means.html#eq:zD-dep">(7.35)</a>) is
+<span class="math display">\[z=\frac{-1835}{1176/\sqrt{10}}=\frac{-1835}{372}=-4.93.\]</span> This example
+differs from others we have considered so far in that the sample size of
+<span class="math inline">\(n=10\)</span> is clearly too small for us to rely on large-sample results. It
+is thus not appropriate to refer the test statistic to a standard normal
+distribution. Instead, <span class="math inline">\(P\)</span>-values can be obtained from a <span class="math inline">\(t\)</span>
+distribution, but only if the population distribution of <span class="math inline">\(D\)</span> itself can
+be assumed to be approximately normal. Here we have only the ten
+observed values of <span class="math inline">\(D\)</span> to use for a rather informal assessment of
+whether this assumption appears to be reasonable. One value of <span class="math inline">\(D\)</span> is
+smaller than -4000, and 2, 5, 2 of them are in the ranges -3000 to
+-2001, -2000 to -1001, and -1000 to -1 respectively. Apart from the
+smallest observation, the sample distribution of <span class="math inline">\(D\)</span> is thus at least
+approximately symmetric. While this definitely does not prove that <span class="math inline">\(D\)</span>
+is normally distributed, it is at least not obviously inconsistent with
+such a claim. We thus feel moderately confident that we can apply here
+tests and confidence intervals based on the <span class="math inline">\(t\)</span> distribution.</p>
+<p>The <span class="math inline">\(P\)</span>-value, obtained from a <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n-1=9\)</span> degrees of
+freedom, for the test statistic <span class="math inline">\(-4.93\)</span> is approximately 0.001. Even
+with only ten pairs of observations, there is significant evidence that
+the volume of traffic on a Friday the 13th differs from that of the
+preceding Friday. A confidence interval for the difference is obtained
+from (<a href="c-means.html#eq:ciD-dep">(7.36)</a>) as <span class="math display">\[-1835 \pm 2.26 \times 372 = (-2676; -994)\]</span>
+where the multiplier 2.26 is the quantity
+<span class="math inline">\(t_{\alpha/2}^{(n-1)}=t_{0.975}^{(9)}\)</span>, obtained from a computer or a
+table of the <span class="math inline">\(t_{9}\)</span>-distribution. The interval shows that we are 95%
+confident that the average reduction in traffic on Friday the 13th on
+the stretches of motorway considered here is between 994 and 2676
+vehicles. This seems like a substantial systematic difference, although
+not particularly large as a proportion of the total volume of traffic on
+those roads. In the absence of other information we are tempted to
+associate the reduction with some people avoiding driving on a day they
+consider to be unlucky.</p>
+<p>In Example 7.4 the <span class="math inline">\(P\)</span>-value is 0.75, so we cannot reject the null
+hypothesis that <span class="math inline">\(\Delta=0\)</span>. There is thus no evidence that there was a
+difference in first-time fathers’ self-assessed level of well-being
+between the time their wives were six months pregnant, and a month after
+the birth of the baby. This is also indicated by the 95% confidence
+interval  for the difference, which clearly covers
+the value 0 of no difference.</p>
+</div>
+<div id="s-means-tests3" class="section level2 hasAnchor">
+<h2><span class="header-section-number">7.6</span> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Some further aspects of significance testing are dicussed here. These
+are not practical issues that need to be actively considered every time
+you carry out a test. Instead, they provide context and motivation for
+the principles behind significance tests.</p>
+<div id="ss-means-tests3-errors" class="section level3 hasAnchor">
+<h3><span class="header-section-number">7.6.1</span> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consider for the moment the approach to significance testing where the
+outcome is presented in the form of a discrete claim or decision about
+the hypotheses, stating that the null hypothesis was either rejected or
+not rejected. This claim can either be correct or incorrect, depending
+on whether the null hypothesis is true in the population. There are four
+possibilities, summarized in Table <a href="#tab:t-twoerrors">7.6</a>. Two of these are
+correct decisions and two are incorrect. The two kinds of incorrect
+decisions are traditionally called</p>
+<ul>
+<li><p><strong>Type I error:</strong> rejecting the null hypothesis when it is true</p></li>
+<li><p><strong>Type II error:</strong> not rejecting the null hypothesis when it is
+false</p></li>
+</ul>
+<p>The terms are unmemorably bland, but they do at least suggest an order
+of importance. Type I error is conventionally considered more serious
+than Type II, so what we most want to avoid is rejecting the null
+hypothesis unnecessarily. This implies that we will maintain the null
+hypothesis unless data provide strong enough evidence to justify
+rejecting it, a principle which is somewhat analogous to the “keep a
+theory until falsified” thinking of Popperian philosophy of science, or
+even the “innocent until proven guilty” principle of jurisprudence.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td align="left"><span class="math inline">\(H_{0}\)</span> is</td>
+<td align="left"><span class="math inline">\(H_{0}\)</span> is</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td align="left">Not Rejected</td>
+<td align="left">Rejected</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(H_{0}\)</span> is</td>
+<td>True</td>
+<td align="left">Correct decision</td>
+<td align="left">Type I error</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>False</td>
+<td align="left">Type II error</td>
+<td align="left">Correct decision</td>
+</tr>
+</tbody>
+</table>
+<p>:(#tab:t-twoerrors)The four possible combinations of the truth of a null hypothesis
+<span class="math inline">\(H_{0}\)</span> in a population and decision about it from a significance
+test.</p>
+<p>Dispite our dislike of Type I errors, we will not try to avoid them
+completely. The only way to guarantee that the null hypothesis is never
+incorrectly rejected is never to reject it at all, whatever the
+evidence. This is not a useful decision rule for empirical research.
+Instead, we will decide in advance how high a probability of Type I
+error we are willing to tolerate, and then use a test procedure with
+that probability. Suppose that we use a 5% level of significance to make
+decisions from a test. The null hypothesis is then rejected if the
+sample yields a test statistic for which the <span class="math inline">\(P\)</span>-value is less than
+0.05. If the null hypothesis is actually true, such values are, by the
+definition of the <span class="math inline">\(P\)</span>-value, obtained with probability 0.05. Thus the
+significance level (<span class="math inline">\(\alpha\)</span>-level) of a test is the probability of
+making a Type I error. If we use a large <span class="math inline">\(\alpha\)</span>-level (say
+<span class="math inline">\(\alpha=0.10\)</span>), the null hypothesis is rejected relatively easily
+(whenever <span class="math inline">\(P\)</span>-value is less than 0.10), but the chances of committing a
+Type I error are correspondingly high (also 0.10); with a smaller value
+like <span class="math inline">\(\alpha=0.01\)</span>, the error probability is lower because <span class="math inline">\(H_{0}\)</span> is
+rejected only when evidence against it is quite strong.</p>
+<p>This description assumes that the true probability of Type I error for a
+test <em>is</em> equal to its stated <span class="math inline">\(\alpha\)</span>-level. This is true when the
+assumptions of the test (about the population distribution, sample size
+etc.) are satisfied. If the assumptions fail, the true significance
+level will differ from the stated one, i.e. the <span class="math inline">\(P\)</span>-value calculated
+from the standard sampling distribution for that particular test will
+differ from the true <span class="math inline">\(P\)</span>-value which would be obtained from the exact
+sampling distribution from the population in question. Sometimes the
+difference is minor and can be ignored for most practical purposes (the
+test is then said to be <em>robust</em> to violations of some of its
+assumptions). In many situations, however, using an inappropriate test
+may lead to incorrect conclusions: for example, a test which claims that
+the <span class="math inline">\(P\)</span>-value is 0.02 when it is really 0.35 will clearly give a
+misleading picture of the strength of evidence against the null
+hypothesis. To avoid this, the task of statisticians is to develop valid
+(and preferably robust) tests for many different kinds of hypotheses and
+data. The task of the empirical researcher is to choose a test which is
+appropriate for his or her data.</p>
+<p>In the spirit of regarding Type I errors as the most serious, the worst
+kind of incorrect test is one which gives too low a <span class="math inline">\(P\)</span>-value,
+i.e. exaggerates the strength of evidence against the null hypothesis.
+Sometimes it is known that this is impossible or unlikely, so that the
+<span class="math inline">\(P\)</span>-value is either correct or too high. The significance test is then
+said to be <em>conservative</em>, because its true rate of Type I errors will
+be the same or lower than the stated <span class="math inline">\(\alpha\)</span>-level. A conservative
+procedure of statistical inference is regarded as the next best thing to
+one which has the correct level of significance. For example, when the
+sample size is relatively large, <span class="math inline">\(P\)</span>-values for all of the tests
+discussed in this chapter may be calculated from a standard normal or
+from a <span class="math inline">\(t\)</span> distribution. <span class="math inline">\(P\)</span>-values from a <span class="math inline">\(t\)</span> distribution are then
+always somewhat larger. This means that using the <span class="math inline">\(t\)</span> distribution is
+(very slightly) conservative when the population distributions are not
+normal, so that we can safely use the <span class="math inline">\(P\)</span>-values from SPSS output of a
+<span class="math inline">\(t\)</span>-test even in that case (this argument does not, however, justify
+using the <span class="math inline">\(t\)</span>-test when <span class="math inline">\(Y\)</span> is not normally distributed and the sample
+size is small, because the sampling distribution of the <span class="math inline">\(t\)</span>-test
+statistic may then be very far from normal).</p>
+</div>
+<div id="ss-means-tests3-power" class="section level3 hasAnchor">
+<h3><span class="header-section-number">7.6.2</span> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>After addressing the question of Type I error by selecting an
+appropriate test and deciding on the significance level to be used, we
+turn our attention to Type II errors. The probability that a
+significance test will reject the null hypothesis when it is in fact not
+true, i.e. the probability of <em>avoiding</em> a Type II error, is known as
+the <strong>power</strong> of the test. It depends, in particular, on</p>
+<ul>
+<li><p>The nature of the test. If several valid tests are available for a
+particular analysis, we would naturally prefer one which tends to
+have the highest power. One aim of theoretical statistics is to
+identify the most powerful test procedures for different problems.</p></li>
+<li><p>The sample size: other things being equal, larger samples mean
+higher power.</p></li>
+<li><p>The true value of the population parameter to be tested, here the
+population mean or proportion. The power of any test will be highest
+when the true value is very different from the value specified by
+the null hypothesis. For example, it will obviously be easier to
+detect that a population mean differs from a null value of
+<span class="math inline">\(\mu_{0}=5\)</span> when the true mean is 25 than when it is 5.1.</p></li>
+<li><p>The population variability of the variable. Since large population
+variance translates into large sampling variability and hence high
+levels of uncertainty, the power will be low when population
+variability is large, and high if the population variability is low.</p></li>
+</ul>
+<p>The last three of these considerations are often used at the design
+stage of a study to get an idea of the sample size required for a
+certain level of power, or of the power achievable with a given sample
+size. Since data collection costs time and money, we would not want to
+collect a much larger sample than is required for a level of certainty
+sufficient for the purposes of a study. On the other hand, if a
+preliminary calculation reveals that the largest sample we can afford
+would still be unlikely to give enough information to detect interesting
+effects, the study might be best abandoned.</p>
+<p>A power calculation requires the researcher to specify the kinds of
+differences from a null hypothesis which are large enough to be of
+practical or theoretical interest, so that she or he would want to be
+able to detect them with high probability (it must always be accepted
+that the power will be lower for smaller differences). For example,
+suppose that we are planning a study to compare the effects of two
+alternative teaching methods on the performance of students in an
+examination where possible scores are between 0 and 100. The null
+hypothesis is that average results are the same for students taught with
+each method. It is decided that we want enough data to be able to reject
+this with high probability if the true difference <span class="math inline">\(\Delta\)</span> of the
+average exam scores between the two groups is larger than 5 points,
+i.e. <span class="math inline">\(\Delta&lt;-5\)</span> or <span class="math inline">\(\Delta&gt;5\)</span>. The power calculation might then answer
+questions like</p>
+<ul>
+<li><p>What is the smallest sample size for which the probability of
+rejecting <span class="math inline">\(H_{0}: \Delta=0\)</span> is at least 0.9, when the true value of
+<span class="math inline">\(\Delta\)</span> is smaller than <span class="math inline">\(-5\)</span> or larger than 5?</p></li>
+<li><p>The largest sample sizes we can afford are 1000 in both groups,
+i.e. <span class="math inline">\(n_{1}=n_{2}=1000\)</span>. What is the probability this gives us of
+rejecting <span class="math inline">\(H_{0}: \Delta=0\)</span> when the true value of <span class="math inline">\(\Delta\)</span> is
+smaller than <span class="math inline">\(-5\)</span> or larger than 5?</p></li>
+</ul>
+<p>To answer these questions, we would also need a rough guess of the
+population standard deviations <span class="math inline">\(\sigma_{1}\)</span> and <span class="math inline">\(\sigma_{2}\)</span>, perhaps
+obtained from previous studies. Such calculations employ further
+mathematical results for test statistics, essentially using their
+sampling distributions under specific alternative hypotheses. The
+details are, however, beyond the scope of this course.</p>
+</div>
+<div id="ss-means-tests3-importance" class="section level3 hasAnchor">
+<h3><span class="header-section-number">7.6.3</span> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <span class="math inline">\(P\)</span>-value is a measure of the strength of evidence the data provide
+against the null hypothesis. This is not the same as the magnitude of
+the difference between sample estimates and the null hypothesis, or the
+practical importance of such differences. As noted above, the power of a
+test increases with increasing sampling size. One implication of this is
+that when <span class="math inline">\(n\)</span> is large, even quite small observed deviations from the
+values that correspond exactly to the null hypothesis will be judged to
+be statistically significant. Consider, for example, the two dietary
+variables in Table <a href="#tab:t-ttests1">7.4</a>. The
+sample mean of the fat variable is 35.3, which is significantly
+different (at the 5% level of significance) from <span class="math inline">\(\mu_{0}\)</span> of 35. It is
+possible, however, that a difference of 0.3 might be considered
+unimportant in practice. In contrast, the sample mean of the fruit and
+vegetable variable is 2.8, and the difference from <span class="math inline">\(\mu_{0}\)</span> of 5 seems
+not only strongly significant but also large for most practical
+purposes.</p>
+<p>In contrast to the large-sample case, in small samples even quite large
+apparent deviations from the null hypothesis might still result in a
+large <span class="math inline">\(P\)</span>-value. For example, in a very small study a sample mean of the
+fat variable of, say, 30 or even 50 might not be interpreted as
+sufficiently strong evidence against a population mean of 35. This is
+obviously related to the discussion of statistical power in the previous
+section, in that it illustrates what happens when the sample is too
+small to provide enough information for useful conclusions.</p>
+<p>In these and all other cases, decisions about what is or is not of
+practical importance are subject-matter questions rather than
+statistical ones, and would have to be based on information about the
+nature and implications of the variables in question. In our dietary
+examples this would involve at least medical considerations, and perhaps
+also financial implications of the public health costs of the observed
+situation or of possible efforts of trying to change it.</p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="28">
+<li id="fn28"><p>Conducted for the Food Standards Agency and the Department of
+Health by ONS and MRC Human Nutrition Research. The sample
+statistics used here are from the survey reports published by HMSO
+in 2002-04, aggregating results published separately for men and
+women. The standard errors have been adjusted for non-constant
+sampling probabilities using design factors published in the survey
+reports. We will treat these numbers as if they were from a simple
+random sample.<a href="c-means.html#fnref28" class="footnote-back">↩</a></p></li>
+<li id="fn29"><p>The data were obtained from the UK Data Archive. Three respondents
+with outlying values of the housework variable (two women and one
+man, with 50, 50 and 70 reported weekly hours) have been omitted
+from the analysis considered here.<a href="c-means.html#fnref29" class="footnote-back">↩</a></p></li>
+<li id="fn30"><p>Boyanowsky, E. O. and Griffiths, C. T. (1982). “Weapons and eye
+contact as instigators or inhibitors of aggressive arousal in
+police-citizen interaction”. <em>Journal of Applied Social Psychology</em>,
+<strong>12</strong>, 398–407.<a href="c-means.html#fnref30" class="footnote-back">↩</a></p></li>
+<li id="fn31"><p>Miller, B. C. and Sollie, D. L. (1980). “Normal stresses during
+the transition to parenthood”. <em>Family Relations</em>, <strong>29</strong>, 459–465.
+See the article for further information, including results for the
+mothers.<a href="c-means.html#fnref31" class="footnote-back">↩</a></p></li>
+<li id="fn32"><p>Scanlon, T. J. et al. (1993). “Is Friday the 13th bad for your
+health?”. <em>British Medical Journal</em>, <strong>307</strong>, 1584–1586. The data
+were obtained from The Data and Story Library at Carnegie Mellon
+University (<code>lib.stat.cmu.edu/DASL</code>).<a href="c-means.html#fnref32" class="footnote-back">↩</a></p></li>
+<li id="fn33"><p>In this case this is a consquence of the fact that the sample
+sizes (67 and 66) in the two groups are very similar. When they are
+exactly equal, formulas (<a href="c-means.html#eq:sehatjoint">(7.11)</a>)–(<a href="c-means.html#eq:ztestmuDb">(7.12)</a>) and
+(<a href="c-means.html#eq:seDmu-ne">(7.14)</a>) actually give exactly the same value for the
+standard error <span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span>, and <span class="math inline">\(t\)</span> is thus also
+the same for both variants of the test.<a href="c-means.html#fnref33" class="footnote-back">↩</a></p></li>
+<li id="fn34"><p>The output also shows, under “Levene’s test”, a test statistic and
+<span class="math inline">\(P\)</span>-value for testing the hypothesis of equal standard deviations
+(<span class="math inline">\(H_{0}: \, \sigma_{1}=\sigma_{2}\)</span>). However, we prefer not to rely on this
+because the test requires the additional assumption that the
+population distributions are normal, and is very sensitive to the
+correctness of this assumption.<a href="c-means.html#fnref34" class="footnote-back">↩</a></p></li>
+<li id="fn35"><p>In the MY464 examination and homework, for example, both variants
+of the test are equally acceptable, unless a question explicitly
+states otherwise.<a href="c-means.html#fnref35" class="footnote-back">↩</a></p></li>
+<li id="fn36"><p>Student (1908). “The probable error of a mean”. <em>Biometrika</em>
+<strong>6</strong>, 1–25.<a href="c-means.html#fnref36" class="footnote-back">↩</a></p></li>
+<li id="fn37"><p>The two are the same because <span class="math inline">\(\mu_{0}\)</span> in
+<span class="math inline">\(\hat{\Delta}=\bar{Y}-\mu_{0}\)</span> is a known number rather a
+data-dependent statistic, which means that it does not affect the
+standard error.<a href="c-means.html#fnref37" class="footnote-back">↩</a></p></li>
+<li id="fn38"><p>Except that SPSS uses the multiplier from <span class="math inline">\(t_{1723}\)</span> distribution
+rather than the normal distribution. This makes no difference here,
+as the former is 1.961 and the latter 1.960.<a href="c-means.html#fnref38" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c-contd.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="c-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/LSE-Methodology/MY464/edit/master/07-MY464-means.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Coursepack-MY464.pdf", "Coursepack-MY464.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

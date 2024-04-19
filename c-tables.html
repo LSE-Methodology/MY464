@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Statistical inference for two-way tables | MY464 Introduction to Quantitative Analysis for Media and Communications</title>
+  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Statistical inference for two-way tables | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="github-repo" content="LSE-Methodology/MY464" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Statistical inference for two-way tables | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  
+  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  
+
+<meta name="author" content="Department of Methodology, London School of Economics and Political Science" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="c-samples.html"/>
+<link rel="next" href="c-probs.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction<a href="c-intro.html#c-intro" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?<a href="c-intro.html#s-intro-purpose" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions<a href="c-intro.html#s-intro-definitions" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables<a href="c-intro.html#ss-intro-def-subj" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables<a href="c-intro.html#ss-intro-def-vartypes" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference<a href="c-intro.html#ss-intro-def-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation<a href="c-intro.html#ss-intro-def-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course<a href="c-intro.html#s-intro-outline" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing<a href="c-intro.html#s-intro-maths" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation<a href="c-intro.html#symbolic-mathematics-and-mathematical-notation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing<a href="c-intro.html#computing-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables<a href="c-more.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities<a href="c-more.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions<a href="c-more.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions<a href="c-more.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="c-tables" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 4</span> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="s-tables-intro" class="section level2 hasAnchor">
+<h2><span class="header-section-number">4.1</span> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section we continue the discussion of methods of analysis for
+two-way contingency tables that was begun in Section
+<a href="c-descr1.html#ss-descr1-2cat-tables">2.4.1</a>. We will use again the example from the
+European Social Survey that was introduced early in Section <a href="c-descr1.html#s-descr1-examples">2.2</a>. The two variables in the example are a person’s
+sex and his or her attitude toward income redistribution measured as an
+ordinal variable with five levels. The two-way table of these variables
+in the sample is shown again for convenience in Table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>, including both the frequencies and the
+conditional proportions for attitude given sex.</p>
+<table style="width:98%;">
+<caption><span id="tab:t-sex-attitude-ch4">Table 4.1: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Frequencies of respondents in the survey example, by sex and
+attitude towards income redistribution. The numbers in parentheses are
+conditional proportions of attitude given sex. Data: European Social Survey, Round 5, 2010, UK respondents only.</caption>
+<colgroup>
+<col width="13%" />
+<col width="18%" />
+<col width="11%" />
+<col width="18%" />
+<col width="12%" />
+<col width="12%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="center">Agree
+strongly</th>
+<th align="center">Agree</th>
+<th align="center">Neither agree
+nor disagree</th>
+<th align="center">Disagree</th>
+<th align="center">Disagree
+strongly</th>
+<th align="right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Male</td>
+<td align="center">160</td>
+<td align="center">439</td>
+<td align="center">187</td>
+<td align="center">200</td>
+<td align="center">41</td>
+<td align="right">1027</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.156)</td>
+<td align="center">(0.428)</td>
+<td align="center">(0.182)</td>
+<td align="center">(0.195)</td>
+<td align="center">(0.040)</td>
+<td align="right">(1.0)</td>
+</tr>
+<tr class="odd">
+<td align="left">Female</td>
+<td align="center">206</td>
+<td align="center">651</td>
+<td align="center">239</td>
+<td align="center">187</td>
+<td align="center">34</td>
+<td align="right">1317</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.156)</td>
+<td align="center">(0.494)</td>
+<td align="center">(0.182)</td>
+<td align="center">(0.142)</td>
+<td align="center">(0.026)</td>
+<td align="right">(1.0)</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="center">366</td>
+<td align="center">1090</td>
+<td align="center">426</td>
+<td align="center">387</td>
+<td align="center">75</td>
+<td align="right">2344</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.156)</td>
+<td align="center">(0.465)</td>
+<td align="center">(0.182)</td>
+<td align="center">(0.165)</td>
+<td align="center">(0.032)</td>
+<td align="right">(1.0)</td>
+</tr>
+</tbody>
+</table>
+<p>Unlike in Section <a href="c-descr1.html#ss-descr1-2cat-tables">2.4.1</a>, we will now go beyond
+description of sample distributions and into statistical inference. The
+observed data are thus treated as a sample from a population, and we
+wish to draw conclusions about the population distributions of the
+variables. In particular, we want to examine whether the sample provides
+evidence that the two variables in the table are associated in the
+population — in the example, whether attitude depends on sex in the
+population. This is done using a statistical significance test known as
+<span class="math inline">\(\chi^{2}\)</span> test of independence. We will use it also as a vehicle for
+introducing the basic ideas of significance testing in general.</p>
+<p>This initial explanation of significance tests is be lengthy and
+detailed, because it is important to gain a good understanding of these
+fundamental concepts from the beginning. From then on, the same ideas
+will be used repeatedly throughout the rest of the course, and in
+practically all statistical methods that you may encounter in the
+future. You will then be able to draw on what you will have learned in
+this chapter, and that learning will also be reinforced through repeated
+appearances of the same concepts in different contexts. It will then not
+be necessary to restate the basic ideas of the tools of inference in
+similar detail. A short summary of the <span class="math inline">\(\chi^{2}\)</span> test considered in
+this chapter is given again at the end of the chapter, in Section
+<a href="c-tables.html#s-tables-summary">4.4</a>.</p>
+</div>
+<div id="s-tables-tests" class="section level2 hasAnchor">
+<h2><span class="header-section-number">4.2</span> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A <strong>significance test</strong> is a method of statistical inference that is
+used to assess the plausibility of <em>hypotheses</em> about a population. A
+hypothesis is a question about population distributions, formulated as a
+<em>claim</em> about those distributions. For the test considered in this
+chapter, the question is whether or not the two variables in a
+contingency table are associated in the population. In the example we
+want to know whether men and women have the same distribution of
+attitudes towards income redistribution in the population. For
+significance testing, this question is expressed as the claim “The
+distribution of attitudes towards income redistribution <em>is</em> the same
+for men and women”, to which we want to identify the correct response,
+either “Yes, it is” or “No, it isn’t”.</p>
+<p>In trying to answer such questions, we are faced with the complication
+that we only have information from a sample. For example, in Table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> the conditional distributions of attitude are
+certainly not identical for men and women. According to the definition
+in Section <a href="c-descr1.html#ss-descr1-2cat-assoc">2.4.3</a>, this shows that sex and attitude
+are associated <em>in the sample</em>. This, however, does not prove that they
+are also associated <em>in the population</em>. Because of sampling variation,
+the two conditional distributions are very unlike to be exactly
+identical in a sample even if they are the same in the population. In
+other words, the hypothesis will not be exactly true in a sample even if
+it is true in the population.</p>
+<p>On the other hand, some sample values differ from the values claimed by
+the hypothesis by so much that it would be difficult to explain them as
+a result of sampling variation alone. For example, if we had observed a
+sample where 99% of the men but only 1% of the women disagreed with the
+attitude statement, it would seem obvious that this should be evidence
+against the claim that the corresponding probabilities were nevertheless
+equal in the population. It would certainly be stronger evidence against
+such a claim than the difference of 19.5% vs. 14.2% that was actually
+observed in our sample, which in turn would be stronger evidence than,
+say, 19.5% vs. 19.4%. But how are we to decide where to draw the line,
+i.e. when to conclude that a particular sample value is or is not
+evidence against a hypothesis? The task of statistical significance
+testing is to provide explicit and transparent rules for making such
+decisions.</p>
+<p>A significance test uses a statistic calculated
+from the sample data (a <em>test statistic</em>) which has the property that
+its values will be large if the sample provides evidence against the
+hypothesis that is being tested (the <em>null hypothesis</em>) and small
+otherwise. From a description (a <em>sampling distribution</em>) of what kinds
+of values the test statistic might have had if the null hypothesis was
+actually true in the population, we derive a measure (the <em>P-value</em>)
+that summarises in one number the strength of evidence against the null
+hypothesis that the sample provides. Based on this summary, we may then
+use conventional decision rules (<em>significance levels</em>) to make a
+discrete decision about the null hypothesis about the population. This
+decision will be either to <em>fail to reject</em> or <em>reject</em> the null
+hypothesis, in other words to conclude that the observed data are or are
+not consistent with the claim about the population stated by the null
+hypothesis.</p>
+<p>It only remains to put these general ideas into practice by defining
+precisely the steps of statistical significance tests. This is done in
+the sections below. Since some of the ideas are somewhat abstract and
+perhaps initially counterintuitive, we will introduce them slowly,
+discussing one at a time the following basic elements of significance
+tests:</p>
+<ul>
+<li><p>The hypotheses being tested</p></li>
+<li><p>Assumptions of a test</p></li>
+<li><p>Test statistics and their sampling distributions</p></li>
+<li><p><span class="math inline">\(P\)</span>-values</p></li>
+<li><p>Drawing and stating conclusions from tests</p></li>
+</ul>
+<p>The significance test considered in this chapter is known as the
+<span class="math inline">\(\boldsymbol{\chi^{2}}\)</span> <strong>test of independence</strong> (<span class="math inline">\(\chi^{2}\)</span> is
+pronounced “chi-squared”). It is also known as “Pearson’s <span class="math inline">\(\chi^{2}\)</span>
+test”, after Karl Pearson who first proposed it in 1900.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a> We use this
+test to explain the elements of significance testing. These principles
+are, however, not restricted to this case, but are entirely general.
+This means that all of the significance tests you will learn on this
+course or elsewhere have the same basic structure, and differ only in
+their details.</p>
+</div>
+<div id="s-tables-chi2test" class="section level2 hasAnchor">
+<h2><span class="header-section-number">4.3</span> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ss-tables-chi2test-null" class="section level3 hasAnchor">
+<h3><span class="header-section-number">4.3.1</span> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="the-null-hypothesis-and-the-alternative-hypothesis" class="section level4 unnumbered hasAnchor">
+<h4>The null hypothesis and the alternative hypothesis<a href="c-tables.html#the-null-hypothesis-and-the-alternative-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The technical term for the hypothesis that is tested in statistical
+significance testing is the <strong>null hypothesis</strong>. It is often denoted
+<span class="math inline">\(H_{0}\)</span>. The null hypothesis is a specific claim about population
+distributions. The <span class="math inline">\(\chi^{2}\)</span> test of independence concerns the
+association between two categorical variables, and its null hypothesis
+is that there is no such association in the population.</p>
+<p>In the context of this test, it is conventional to use alternative
+terminology where the variables are said to be <strong>statistically
+independent</strong> when there is no association between them, and
+<strong>statistically dependent</strong> when they are associated. Often the word
+“statistically” is omitted, and we talk simply of variables being
+independent or dependent. In this language, the null hypothesis of the
+<span class="math inline">\(\chi^{2}\)</span> test of independence is that
+<span class="math display" id="eq:H0-chi2">\[\begin{equation}
+H_{0}: \;\text{The variables are statistically independent in the population}.
+\tag{4.1}
+\end{equation}\]</span>
+In our example the null hypothesis is thus that a
+person’s sex and his or her attitude toward income redistribution are
+independent in the population of adults in the UK.</p>
+<p>The null hypothesis (<a href="c-tables.html#eq:H0-chi2">(4.1)</a>) and the <span class="math inline">\(\chi^{2}\)</span> test itself are
+symmetric in that there is no need to designate one of the variables as
+explanatory and the other as the response variable. The hypothesis can,
+however, also be expressed in a form which does make use of this
+distinction. This links it more clearly with the definition of
+associations in terms of conditional distributions. In this form, the
+null hypothesis (<a href="c-tables.html#eq:H0-chi2">(4.1)</a>) can also be stated as the claim that the
+conditional distributions of the response variable are the same at all
+levels of the explanatory variable, i.e. in our example as
+<span class="math display">\[H_{0}: \;\text{The conditional distribution of attitude is the same for
+men as for women}.\]</span> The hypothesis could also be expressed for the
+conditional distributions the other way round, i.e. here that the
+distribution of sex is the same at all levels of the attitude. All three
+versions of the null hypothesis mean the same thing for the purposes of
+the significance test. Describing the hypothesis in particular terms is
+useful purely for easy interpretation of the test and its conclusions in
+specific examples.</p>
+<p>As well as the null hypothesis, a significance test usually involves an
+<strong>alternative hypothesis</strong>, often denoted <span class="math inline">\(H_{a}\)</span>. This is in some sense
+the opposite of the null hypothesis, which indicates the kinds of
+observations that will be taken as evidence against <span class="math inline">\(H_{0}\)</span>. For the
+<span class="math inline">\(\chi^{2}\)</span> test of independence this is simply the logical opposite of
+(<a href="c-tables.html#eq:H0-chi2">(4.1)</a>),
+i.e.
+<span class="math display" id="eq:Ha-chi2">\[\begin{equation}
+H_{a}: \;\text{The variables are not statistically independent in the population}.
+\tag{4.2}
+\end{equation}\]</span>
+In terms of conditional distributions, <span class="math inline">\(H_{a}\)</span> is that
+the conditional distributions of one variable given the other are not
+all identical, i.e. that for at least one pair of levels of the
+explanatory variable the conditional probabilities of at least one
+category of the response variable are not the same.</p>
+</div>
+<div id="statistical-hypotheses-and-research-hypotheses" class="section level4 unnumbered hasAnchor">
+<h4>Statistical hypotheses and research hypotheses<a href="c-tables.html#statistical-hypotheses-and-research-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The word “hypothesis” appears also in research design and philosophy of
+science. There a <strong>research hypothesis</strong> means a specific claim or
+prediction about observable quantities, derived from subject-matter
+theory. The prediction is then compared to empirical observations. If
+the two are in reasonable agreement, the hypothesis and corresponding
+theory gain support or <em>corroboration</em>; if observations disagree with
+the predictions, the hypothesis is <em>falsified</em> and the theory must
+eventually be modified or abandoned. This role of research hypotheses
+is, especially in the philosophy of science originally associated with
+Karl Popper, at the heart of the scientific method. A theory which does
+not produce empirically falsifiable hypotheses, or fails to be modified
+even if its hypotheses are convincingly falsified, cannot be considered
+scientific.</p>
+<p>Research hypotheses of this kind are closely related to the kinds of
+<strong>statistical hypotheses</strong> discussed above. When empirical data are
+quantitative, decisions about research hypotheses are in practice
+usually made, at least in part, as decisions about statistical
+hypotheses implemented through sinificance tests. The falsification and
+corroboration of research hypotheses are then parallelled by rejection
+and non-rejection of statistical hypotheses. The connection is not,
+however, entirely straightforward, as there are several differences
+between research hypotheses and statistical hypotheses:</p>
+<ul>
+<li><p>Statistical significance tests are also often used for testing
+hypotheses which do not correspond to any theoretical
+research hypotheses. Sometimes the purpose of the test is just to
+identify those observed differences and regularities which are large
+enough to deserve further discussion. Sometimes claims stated as
+null hypotheses are interesting for reasons which have nothing to do
+with theoretical predictions but rather with, say, normative or
+policy goals.</p></li>
+<li><p>Research hypotheses are typically stated as predictions about
+theoretical concepts. Translating them into testable statistical
+hypotheses requires further operationalisation of these concepts.
+First, we need to decide how the concepts are to be measured.
+Second, any test involves also assumptions which are imposed not by
+substantive theory but by constraints of statistical methodology.
+Their appropriateness for the data at hand needs to be
+assessed separately.</p></li>
+<li><p>The conceptual connection is clearest when the research hypothesis
+matches the null hypothesis of a test in general form. Then the
+research hypothesis remains unfalsified as long as the null
+hypothesis remains not rejected, and gets falsified when the null
+hypothesis is rejected. Very often, however, the statistical
+hypotheses are for technical reasons defined the other way round. In
+particular, for significance tests that are about associations
+between variables, a research hypothesis is typically that there
+<em>is</em> an association between particular variables, whereas the null
+hypothesis is that there is <em>no</em> association
+(i.e. “null” association). This leads to the rather confusing
+situation where the research hypothesis is supported when the null
+hypothesis is rejected, and possibly falsified when the null
+hypothesis is not rejected.</p></li>
+</ul>
+</div>
+</div>
+<div id="ss-tables-chi2test-ass" class="section level3 hasAnchor">
+<h3><span class="header-section-number">4.3.2</span> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In the following discussion we will sometimes refer to Figure
+<a href="c-tables.html#fig:f-spsschi2">4.1</a>, which shows SPSS output for the <span class="math inline">\(\chi^{2}\)</span> test of
+independence for the data in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>. Output for
+the test is shown on the line labelled “Pearson Chi-Square”, and “N of
+valid cases” gives the sample size <span class="math inline">\(n\)</span>. The other entries in the table
+are output for other tests that are not discussed here, so they can be
+ignored.</p>
+<div class="figure"><span style="display:block;" id="fig:f-spsschi2"></span>
+<img src="chi2test_ess.png" alt="SPSS output of the \chi^{2} test of independence (here labelled “Pearson Chi-square”) for the data in Table 4.1." style="width:100mm" />
+<p class="caption">Figure 4.1: SPSS output of the <span class="math inline">\(\chi^{2}\)</span> test of independence (here labelled
+“Pearson Chi-square”) for the data in Table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>.</p>
+</div>
+<p>When we apply any significance test, we need to be aware of its
+<strong>assumptions</strong>. These are conditions on the data which are not
+themselves being tested, but which need to be approximately satisfied
+for the conclusions from the test to be valid. Two broad types of such
+assumptions are particularly common. The first kind are assumptions
+about the measurement levels and population distributions of the
+variables. For the <span class="math inline">\(\chi^{2}\)</span> test of independence these are relatively
+mild. The two variables must be categorical variables. They can have any
+measurement level, although in most cases this will be either nominal or
+ordinal. The test makes no use of the ordering of the categories, so it
+effectively treats all variables as if they were nominal.</p>
+<p>The second common class of assumptions are
+conditions on the sample size. Many significance tests are appropriate
+only if this is sufficiently large. For the <span class="math inline">\(\chi^{2}\)</span> test, the
+expected frequencies <span class="math inline">\(f_{e}\)</span> (which will be defined below) need to be
+large enough in <em>every cell</em> of the table. A common rule of thumb is
+that the test can be safely used if all expected frequencies are at
+least 5. Another, slightly more lenient rule requires only that no more
+than 20% of the expected frequencies are less than 5, and that none are
+less than 1. These conditions can easily be checked with the help of
+SPSS output for the <span class="math inline">\(\chi^{2}\)</span> test, as shown in Figure
+<a href="c-tables.html#fig:f-spsschi2">4.1</a>. This gives information on the number and proportion of
+expected frequencies (referred to as “expected counts”) less than five,
+and also the size of the smallest of them. In our example the smallest
+expected frequency is about 33, so the sample size condition is easily
+satisfied.</p>
+<p>When the expected frequencies do not satisfy these conditions, the
+<span class="math inline">\(\chi^{2}\)</span> test is not fully valid, and the results should be treated
+with caution (the reasons for this will be discussed below). There are
+alternative tests which do not rely on these large-sample assumptions,
+but they are beyond the scope of this course.</p>
+<p>In general, the hypotheses of a test define the questions it can answer,
+and its assumptions indicate the types of data it is appropriate for.
+Different tests have different hypotheses and assumptions, which need to
+be considered in deciding which test is appropriate for a given
+analysis. We will introduce a number of different significance tests in
+this coursepack, and give guidelines for choosing between them.</p>
+</div>
+<div id="ss-tables-chi2test-stat" class="section level3 hasAnchor">
+<h3><span class="header-section-number">4.3.3</span> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <strong>test statistic</strong> is a number calculated from the sample (i.e. a
+statistic in the sense defined at the beginning of Section <a href="c-descr1.html#s-descr1-nums">2.6</a>) which is
+used to test a null hypothesis. We we will describe the calculation of
+the <span class="math inline">\(\chi^{2}\)</span> test statistic step by step, using the data in Table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> for illustration. All of the elements of the
+test statistic for this example are shown in Table
+<a href="c-tables.html#tab:t-sex-attitude-chi2">4.2</a>. These elements are</p>
+<ul>
+<li><p>The <strong>observed frequencies</strong>, denoted <span class="math inline">\(f_{o}\)</span>, one for each cell of
+the table. These are simply the observed cell counts (compare the
+<span class="math inline">\(f_{o}\)</span> column of Table <a href="c-tables.html#tab:t-sex-attitude-chi2">4.2</a> to the counts in
+Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>).</p></li>
+<li><p>The <strong>expected frequencies</strong> <span class="math inline">\(f_{e}\)</span>, also one for each cell. These
+are cell counts in a hypothetical table which would show no
+association between the variables. In other words, they represent a
+table for a sample which would exactly agree with the null
+hypothesis of independence in the population. To explain how the
+expected frequencies are calculated, consider the cell in Table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> for Male respondents who strongly agree
+with the statement. As discussed above, if the null hypothesis of
+independence is true in the population, then the conditional
+probability of strongly agreeing is the same for both men and women.
+This also implies that it must then be equal to the
+overall (marginal) probability of strongly agreeing. The sample
+version of this is that the proportion who strongly agree should be
+the same for men as among all respondents overall. This overall
+proportion in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> is <span class="math inline">\(366/2344=0.156\)</span>. If
+this proportion applied also to the 1027 male respondents, the
+number of of them who strongly agreed would be
+<span class="math display">\[f_{e} = \left(\frac{366}{2344}\right)\times 1027 =
+\frac{366\times 1027}{2344}=160.4.\]</span> Here 2344 is the total sample
+size, and 366 and 1027 are the marginal frequencies of strongly
+agreers and male respondents respectively, i.e. the two marginal
+totals corresponding to the cell (Male, Strongly agree). The same
+rule applies also in general: the expected frequency for any cell in
+this or any other table is calculated as the product of the row and
+column totals corresponding to the cell, divided by the total
+sample size.</p></li>
+<li><p>The difference <span class="math inline">\(f_{o}-f_{e}\)</span> between observed and expected
+frequencies for each cell. Since <span class="math inline">\(f_{e}\)</span> are the cell counts in a
+table which exactly agrees with the null hypothesis, the differences
+indicate how closely the counts <span class="math inline">\(f_{o}\)</span> actually observed agree with
+<span class="math inline">\(H_{0}\)</span>. If the differences are small, the observed data are
+consistent with the null hypothesis, whereas large differences
+indicate evidence against it. The test statistic will be obtained by
+aggregating information about these differences across all the cells
+of the table. This cannot, however, be done by adding up the
+differences themselves, because positive (<span class="math inline">\(f_{o}\)</span> is larger than
+<span class="math inline">\(f_{e}\)</span>) and negative (<span class="math inline">\(f_{o}\)</span> is smaller than <span class="math inline">\(f_{e}\)</span>) differences
+will always exactly cancel each other out (c.f. their sum on the
+last row of Table <a href="c-tables.html#tab:t-sex-attitude-chi2">4.2</a>). Instead,
+we consider…</p></li>
+<li><p>…the squared differences <span class="math inline">\((f_{o}-f_{e})^{2}\)</span>. This removes the
+signs from the differences, so that the squares of positive and
+negative differences which are equally far from zero will be treated
+as equally strong evidence against the null hypothesis.</p></li>
+<li><p>Dividing the squared differences by the expected frequencies,
+i.e. <span class="math inline">\((f_{o}-f_{e})^{2}/f_{e}\)</span>. This is an essential but not
+particularly interesting scaling exercise, which expresses the sizes
+of the squared differences relative to the sizes of
+<span class="math inline">\(f_{e}\)</span> themselves.</p></li>
+<li><p>Finally, aggregating these quantities to get the <span class="math inline">\(\chi^{2}\)</span> test
+statistic
+<span class="math display" id="eq:chi2">\[\begin{equation}
+\chi^{2} = \sum \frac{(f_{o}-f_{e})^{2}}{f_{e}}.
+\tag{4.3}
+\end{equation}\]</span>
+Here the summation sign <span class="math inline">\(\Sigma\)</span> indicates that
+<span class="math inline">\(\chi^{2}\)</span> is obtained by adding up the quantities
+<span class="math inline">\((f_{o}-f_{e})^{2}/f_{e}\)</span> across all the cells of the table.</p></li>
+</ul>
+<table>
+<caption><span id="tab:t-sex-attitude-chi2">Table 4.2: </span>Calculating the <span class="math inline">\(\chi^{2}\)</span> test statistic for Table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>. In the second column, SA, A, 0, D, and SD
+are abbreviations for Strongly agree, Agree, Neither agree nor
+disagree, Disagree and Strongly disagree respectively.</caption>
+<colgroup>
+<col width="8%" />
+<col width="10%" />
+<col width="9%" />
+<col width="9%" />
+<col width="15%" />
+<col width="20%" />
+<col width="26%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Sex</th>
+<th align="center">Attitude</th>
+<th align="right"><span class="math inline">\(f_{o}\)</span></th>
+<th align="right"><span class="math inline">\(f_{e}\)</span></th>
+<th align="right"><span class="math inline">\(f_{o}-f_{e}\)</span></th>
+<th align="right"><span class="math inline">\((f_{o}-f_{e})^{2}\)</span></th>
+<th align="right"><span class="math inline">\((f_{o}-f_{e})^{2}/f_{e}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Male</td>
+<td align="center">SA</td>
+<td align="right">160</td>
+<td align="right">160.4</td>
+<td align="right"><span class="math inline">\(-0.4\)</span></td>
+<td align="right">0.16</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">Male</td>
+<td align="center">A</td>
+<td align="right">439</td>
+<td align="right">477.6</td>
+<td align="right"><span class="math inline">\(-38.6\)</span></td>
+<td align="right">1489.96</td>
+<td align="right">3.120</td>
+</tr>
+<tr class="odd">
+<td align="left">Male</td>
+<td align="center">0</td>
+<td align="right">187</td>
+<td align="right">186.6</td>
+<td align="right">0.4</td>
+<td align="right">0.16</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">Male</td>
+<td align="center">D</td>
+<td align="right">200</td>
+<td align="right">169.6</td>
+<td align="right">30.4</td>
+<td align="right">924.16</td>
+<td align="right">5.449</td>
+</tr>
+<tr class="odd">
+<td align="left">Male</td>
+<td align="center">SD</td>
+<td align="right">41</td>
+<td align="right">32.9</td>
+<td align="right">8.1</td>
+<td align="right">65.61</td>
+<td align="right">1.994</td>
+</tr>
+<tr class="even">
+<td align="left">Female</td>
+<td align="center">SA</td>
+<td align="right">206</td>
+<td align="right">205.6</td>
+<td align="right">0.4</td>
+<td align="right">0.16</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="odd">
+<td align="left">Female</td>
+<td align="center">A</td>
+<td align="right">651</td>
+<td align="right">612.4</td>
+<td align="right">38.6</td>
+<td align="right">1489.96</td>
+<td align="right">2.433</td>
+</tr>
+<tr class="even">
+<td align="left">Female</td>
+<td align="center">0</td>
+<td align="right">239</td>
+<td align="right">239.4</td>
+<td align="right"><span class="math inline">\(-0.4\)</span></td>
+<td align="right">0.16</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="odd">
+<td align="left">Female</td>
+<td align="center">D</td>
+<td align="right">187</td>
+<td align="right">217.4</td>
+<td align="right"><span class="math inline">\(-30.4\)</span></td>
+<td align="right">924.16</td>
+<td align="right">4.251</td>
+</tr>
+<tr class="even">
+<td align="left">Female</td>
+<td align="center">SD</td>
+<td align="right">34</td>
+<td align="right">42.1</td>
+<td align="right"><span class="math inline">\(-8.1\)</span></td>
+<td align="right">65.61</td>
+<td align="right">1.558</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="center">Sum</td>
+<td align="right">2344</td>
+<td align="right">2344</td>
+<td align="right">0</td>
+<td align="right">4960.1</td>
+<td align="right"><span class="math inline">\(\chi^{2}=18.81\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The calculations can be done even by hand, but we will usually leave
+them to a computer. The last column of Table <a href="c-tables.html#tab:t-sex-attitude-chi2">4.2</a>
+shows that for Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> the test statistic is
+<span class="math inline">\(\chi^{2}=18.81\)</span> (which includes some rounding error, the correct value
+is 18.862). In the SPSS output in Figure <a href="c-tables.html#fig:f-spsschi2">4.1</a>, it is given
+in the “Value” column of the “Pearson Chi-Square” row.</p>
+</div>
+<div id="ss-tables-chi2test-sdist" class="section level3 hasAnchor">
+<h3><span class="header-section-number">4.3.4</span> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We now know that the value of the <span class="math inline">\(\chi^{2}\)</span> test statistic in the
+example is 18.86. But what does that mean? Why is the test statistic
+defined as (<a href="c-tables.html#eq:chi2">(4.3)</a>) and not in some other form? And what does the
+number mean? Is 18.86 small or large, weak or strong evidence against
+the null hypothesis that sex and attitude are independent in the
+population?</p>
+<p>In general, a test statistic for any null hypothesis should satisfy two
+requirements:</p>
+<ol style="list-style-type: decimal">
+<li><p>The value of the test statistic should be small when evidence
+against the null hypothesis is weak, and large when this evidence
+is strong.</p></li>
+<li><p>The sampling distribution of the test statistic should be known and
+of convenient form when the null hypothesis is true.</p></li>
+</ol>
+<p>Taking the first requirement first, consider the form of (<a href="c-tables.html#eq:chi2">(4.3)</a>).
+The important part of this are the squared differences
+<span class="math inline">\((f_{o}-f_{e})^{2}\)</span> for each cell of the table. Here the expected
+frequencies <span class="math inline">\(f_{e}\)</span> reveal what the table would look like if the sample
+was in perfect agreement with the claim of independence in the
+population, while the observed frequencies <span class="math inline">\(f_{o}\)</span> show what the
+observed table actually does look like. If <span class="math inline">\(f_{o}\)</span> in a cell is close to
+<span class="math inline">\(f_{e}\)</span>, the squared difference is small and the cell contributes only a
+small addition to the test statistic. If <span class="math inline">\(f_{o}\)</span> is very different from
+<span class="math inline">\(f_{e}\)</span> — either much smaller or much larger than it — the squared
+difference and hence the cell’s contribution to the test statistic are
+large.</p>
+<p>Summing the contributions over all the cells, this implies that the
+overall value of the test statistic is small when the observed
+frequencies are close to the expected frequencies under the null
+hypothesis, and large when at least some of the observed frequencies are
+far from the expected ones. (Note also that the smallest possible value
+of the statistic is 0, obtained when the observed and the expected
+frequency are exactly equal in each cell.) It is thus <em>large</em> values of
+<span class="math inline">\(\chi^{2}\)</span> which should be regarded as evidence <em>against</em> the null
+hypothesis, just as required by condition 1 above.</p>
+<p>Turning then to condition 2, we first need to explain what is meant by
+“sampling distribution of the test statistic … when the null
+hypothesis is true”. This is really the conceptual crux of significance
+testing. Because it is both so important and relatively abstract, we
+will introduce the concept of a sampling distribution in some detail,
+starting with a general definition and then focusing on the case of test
+statistics in general and the <span class="math inline">\(\chi^{2}\)</span> test in particular.</p>
+<div id="sampling-distribution-of-statistic-general-definition" class="section level4 unnumbered hasAnchor">
+<h4>Sampling distribution of statistic: General definition<a href="c-tables.html#sampling-distribution-of-statistic-general-definition" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The <span class="math inline">\(\chi^{2}\)</span> test statistic (<a href="c-tables.html#eq:chi2">(4.3)</a>) is a <em>statistic</em> as defined
+defined at the beginning of Section <a href="c-descr1.html#s-descr1-nums">2.6</a>, that is a number calculated from
+data in a sample. Once we have observed a sample, the value of a
+statistic in that sample is known, such as the 18.862 for <span class="math inline">\(\chi^{2}\)</span> in
+our example.</p>
+<p>However, we also realise that this value would have been different if
+the sample had been different, and also that the sample could indeed
+have been different because the sampling is a process that involves
+randomness. For example, in the actually observed sample in Table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> we had 200 men who disagreed with the statement
+and 41 who strongly disagreed with it. It is easily imaginable that
+another random sample of 2344 respondents from the same population could
+have given us frequencies of, say, 195 and 46 for these cells instead.
+If that had happened, the value of the <span class="math inline">\(\chi^{2}\)</span> statistic would have
+been 19.75 instead of 18.86. Furthermore, it also seems intuitively
+plausible that not all such alternative values are equally likely for
+samples from a given population. For example, it seems quite improbable
+that the population from which the sample in Table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a> was drawn would instead produce a sample which
+also had 1027 men and 1317 women but where all the men strongly
+disagreed with the statement (which would yield <span class="math inline">\(\chi^{2}=2210.3\)</span>).</p>
+<p>The ideas that different possible samples would give different values of
+a sample statistic, and that some such values are more likely than
+others, are formalised in the concept of a sampling distribution:</p>
+<ul>
+<li>The <strong>sampling distribution of a statistic</strong> is the distribution of
+the statistic (i.e. its possible values and the proportions with
+which they occur) in the set of all possible random samples of the
+same size from the population.</li>
+</ul>
+<p>To observe a sampling distribution of a statistic, we would thus need to
+draw samples from the population over and over again, and calculate the
+value of the statistic for each such sample, until we had a good idea of
+the proportions with which different values of the statistic appeared in
+the samples. This is clearly an entirely hypothetical exercise in most
+real examples where we have just one sample of actual data, whereas the
+number of possible samples of that size is essentially or actually
+infinite. Despite this, statisticians can find out what sampling
+distributions would look like, under specific assumptions about the
+population. One way to do so is through mathematical derivations.
+Another is a <em>computer simulation</em> where we use a computer program to
+draw a large number of samples from an artificial population, calculate
+the value of a statistic for each of them, and examine the distribution
+of the statistic across these repeated samples. We will make use of both
+of these approaches below.</p>
+</div>
+<div id="sampling-distribution-of-a-test-statistic-under-the-null-hypothesis" class="section level4 unnumbered hasAnchor">
+<h4>Sampling distribution of a test statistic under the null hypothesis<a href="c-tables.html#sampling-distribution-of-a-test-statistic-under-the-null-hypothesis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The sampling distribution of any statistic depends primarily on what the
+population is like. For test statistics, note that requirement 2 above
+mentioned only the situation where the null hypothesis is true. This is
+in fact the central conceptual ingredient of significance testing. The
+basic logic of drawing conclusions from such tests is that we consider
+what we would expect to see if the null hypothesis was in fact true in
+the population, and compare that to what was actually observed in our
+sample. The null hypothesis should then be rejected if the observed data
+would be surprising (i.e. unlikely) if the null hypothesis was actually
+true, and not rejected if the observed data would not be surprising
+under the null hypothesis.</p>
+<p>We have already seen that the <span class="math inline">\(\chi^{2}\)</span> test statistic is in effect a
+measure of the discrepancy between what is expected under the null
+hypothesis and what is observed in the sample. All test statistics for
+any hypotheses have this property in one way or another. What then
+remains to be determined is exactly how surprising or otherwise the
+observed data are relative to the null hypothesis. A measure of this is
+derived from the sampling distribution of the test statistic <em>under the
+null hypothesis</em>. It is the only sampling distribution that is needed
+for carrying out a significance test.</p>
+</div>
+<div id="sampling-distribution-of-the-chi2-test-statistic-under-independence" class="section level4 unnumbered hasAnchor">
+<h4>Sampling distribution of the <span class="math inline">\(\chi^{2}\)</span> test statistic under independence<a href="c-tables.html#sampling-distribution-of-the-chi2-test-statistic-under-independence" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For the <span class="math inline">\(\chi^{2}\)</span> test, we need the sampling distribution of the test
+statistic (<a href="c-tables.html#eq:chi2">(4.3)</a>) under the independence null hypothesis
+(<a href="c-tables.html#eq:H0-chi2">(4.1)</a>). To make these ideas a little more concrete, the upper
+part of Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a> shows the crosstabulation of
+sex and attitude in our example for a finite population where the null
+hypothesis holds. We can see that it does because the two conditional
+distributions for attitude, among men and among women, are the same
+(this is the only aspect of the distributions that matters for this
+demonstration; the exact values of the probabilities are otherwise
+irrelevant). These are of course hypothetical population distributions,
+as we do not know the true ones. We also do not claim that this
+hypothetical population is even close to the true one. The whole point
+of this step of hypothesis testing is to set up a population where the
+null hypothesis holds as a fixed point of comparison, to see what
+samples from such a population would look like and how they compare with
+the real sample that we have actually observed.</p>
+<p><em>Population (frequencies are in millions of people):</em></p>
+<table style="width:98%;">
+<caption><span id="tab:t-sex-attitude-H0pop">Table 4.3: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Attitude towards income redistribution by sex (with row proportions
+in parentheses), in a hypothetical population of 50 million people
+where sex and attitude are independent, and in one random sample from
+this population.</caption>
+<colgroup>
+<col width="11%" />
+<col width="17%" />
+<col width="12%" />
+<col width="19%" />
+<col width="13%" />
+<col width="13%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="center">Agree
+strongly</th>
+<th align="center"><br />
+Agree</th>
+<th align="center">Neither agree
+nor disagree</th>
+<th align="center"><br />
+Disagree</th>
+<th align="center">Disagree
+strongly</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Male</td>
+<td align="center">3.744</td>
+<td align="center">11.160</td>
+<td align="center">4.368</td>
+<td align="center">3.960</td>
+<td align="center">0.768</td>
+<td align="right">24.00</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.156)</td>
+<td align="center">(0.465)</td>
+<td align="center">(0.182)</td>
+<td align="center">(0.165)</td>
+<td align="center">(0.032)</td>
+<td align="right">(1.0)</td>
+</tr>
+<tr class="odd">
+<td align="left">Female</td>
+<td align="center">4.056</td>
+<td align="center">12.090</td>
+<td align="center">4.732</td>
+<td align="center">4.290</td>
+<td align="center">0.832</td>
+<td align="right">26.00</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.156)</td>
+<td align="center">(0.465)</td>
+<td align="center">(0.182)</td>
+<td align="center">(0.165)</td>
+<td align="center">(0.032)</td>
+<td align="right">(1.0)</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="center">7.800</td>
+<td align="center">23.250</td>
+<td align="center">9.100</td>
+<td align="center">8.250</td>
+<td align="center">1.600</td>
+<td align="right">50</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.156)</td>
+<td align="center">(0.465)</td>
+<td align="center">(0.182)</td>
+<td align="center">(0.165)</td>
+<td align="center">(0.032)</td>
+<td align="right">(1.0)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Sample:</em></p>
+<table style="width:98%;">
+<caption><span id="tab:t-sex-attitude-H0pop">Table 4.3: </span><span class="math inline">\(\chi^{2}=2.8445\)</span></caption>
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="12%" />
+<col width="20%" />
+<col width="13%" />
+<col width="13%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><br />
+Sex</th>
+<th align="center">Agree
+strongly</th>
+<th align="center"><br />
+Agree</th>
+<th align="center">Neither agree
+nor disagree</th>
+<th align="center"><br />
+Disagree</th>
+<th align="center">Disagree
+strongly</th>
+<th align="right"><br />
+Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Male</td>
+<td align="center">181</td>
+<td align="center">505</td>
+<td align="center">191</td>
+<td align="center">203</td>
+<td align="center">41</td>
+<td align="right">1121</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.161)</td>
+<td align="center">(0.450)</td>
+<td align="center">(0.170)</td>
+<td align="center">(0.181)</td>
+<td align="center">(0.037)</td>
+<td align="right">(1.0)</td>
+</tr>
+<tr class="odd">
+<td align="left">Female</td>
+<td align="center">183</td>
+<td align="center">569</td>
+<td align="center">229</td>
+<td align="center">202</td>
+<td align="center">40</td>
+<td align="right">1223</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.150)</td>
+<td align="center">(0.465)</td>
+<td align="center">(0.187)</td>
+<td align="center">(0.165)</td>
+<td align="center">(0.033)</td>
+<td align="right">(1.0)</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="center">364</td>
+<td align="center">1074</td>
+<td align="center">420</td>
+<td align="center">405</td>
+<td align="center">81</td>
+<td align="right">2344</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center">(0.155)</td>
+<td align="center">(0.458)</td>
+<td align="center">(0.179)</td>
+<td align="center">(0.173)</td>
+<td align="center">(0.035)</td>
+<td align="right">(1.0)</td>
+</tr>
+</tbody>
+</table>
+<p>In the example we have a sample of 2344 observations, so to match that
+we want to identify the sampling distribution of the <span class="math inline">\(\chi^{2}\)</span>
+statistic in random samples of size 2344 from the population like the
+one in the upper part of Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a>. The lower
+part of that table shows one such sample. Even though it comes from a
+population where the two variables are independent, the same is not
+exactly true in the sample: we can see that the conditional sample
+distributions are not the same for men and women. The value of the
+<span class="math inline">\(\chi^{2}\)</span> test statistic for this simulated sample is 2.8445.</p>
+<p>Before we proceed with the discussion of the sampling distribution of
+the <span class="math inline">\(\chi^{2}\)</span> statistic, we should note that it will be a <em>continuous</em>
+probability distribution. In other words, the number of distinct values
+that the test statistic can have in different samples is so large that
+their distribution is clearly effectively continuous. This is true even
+though the two <em>variables</em> in the contingency table are themselves
+categorical. The two distributions, the population distribution of the
+variables and the sampling distribution of a test statistic, are quite
+separate entities and need not resemble each other. We will consider the
+nature of continuous probability distributions in more detail in Chapter
+<a href="c-means.html#c-means">7</a>. In this chapter we will discuss them relatively
+superficially and only to the extent that is absolutely necessary.</p>
+<p>Figure <a href="c-tables.html#fig:f-chisampld">4.2</a> shows what we observe if do a computer
+simulation to draw many more samples from the population in Table
+<a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a>. The figure shows the histogram of the values
+of the <span class="math inline">\(\chi^{2}\)</span> test statistic calculated from 100,000 such samples.
+We can see, for example, that <span class="math inline">\(\chi^{2}\)</span> is between 0 and 10 for most of
+the samples, and larger than that for only a small proportion of them.
+In particular, we note already that the value <span class="math inline">\(\chi^{2}=18.8\)</span> that was
+actually observed in the real sample occurs very rarely if samples are
+drawn from a population where the null hypothesis of independence holds.</p>
+<div class="figure"><span style="display:block;" id="fig:f-chisampld"></span>
+<img src="chi2sims.png" alt="Example of the sampling distribution of the \chi^{2} test statistic for independence. The plot shows a histogram of the values of the statistic in 100,000 simulated samples of size n=2344 drawn from the population distribution in the upper part of Table 4.3. Superimposed on the histogram is the curve of the approximate sampling distribution, which is the \chi^{2} distribution with 4 degrees of freedom." style="width:8.5cm" />
+<p class="caption">Figure 4.2: Example of the sampling distribution of the <span class="math inline">\(\chi^{2}\)</span> test statistic for independence. The plot shows a histogram of the values of the statistic in 100,000 simulated samples of size <span class="math inline">\(n=2344\)</span> drawn from the population distribution in the upper part of Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a>. Superimposed on the histogram is the curve of the approximate sampling distribution, which is the <span class="math inline">\(\chi^{2}\)</span> distribution with 4 degrees of freedom.</p>
+</div>
+<p>The form of the sampling distribution can also be derived through
+mathematical arguments. These show that for any two-way contingency
+table, the approximate sampling distribution of the <span class="math inline">\(\chi^{2}\)</span> statistic
+is a member of a class of continuous probability distributions known as
+the <span class="math inline">\(\boldsymbol{\chi}^{2}\)</span> <strong>distributions</strong> (the same symbol
+<span class="math inline">\(\chi^{2}\)</span> is rather confusingly used to refer both to the test
+statistic and its sampling distribution). The <span class="math inline">\(\chi^{2}\)</span> distributions
+are a family of individual distributions, each of which is identified by
+a number known as the <strong>degrees of freedom</strong> of the distribution. Figure
+<a href="c-tables.html#fig:f-chi2dists">4.3</a> shows the probability curves of some <span class="math inline">\(\chi^{2}\)</span>
+distributions (what such curves mean is explained in more detail below,
+and in Chapter <a href="c-means.html#c-means">7</a>). All of the distributions are skewed to
+the right, and the shape of a particular curve depends on its degrees of
+feedom. All of the curves give non-zero probabilites only for positive
+values of the variable on the horizontal axis, indicating that the value
+of a <span class="math inline">\(\chi^{2}\)</span>-distributed variable can never be negative. This is
+appropriate for the <span class="math inline">\(\chi^{2}\)</span> test statistic (<a href="c-tables.html#eq:chi2">(4.3)</a>), which is
+also always non-negative.</p>
+<div class="figure"><span style="display:block;" id="fig:f-chi2dists"></span>
+<img src="chi2dists.png" alt="Probability curves of some \chi^{2} distributions with different degrees of freedom (df)." style="width:115mm" />
+<p class="caption">Figure 4.3: Probability curves of some <span class="math inline">\(\chi^{2}\)</span> distributions with different
+degrees of freedom (df).</p>
+</div>
+<p>For the <span class="math inline">\(\chi^{2}\)</span> test statistic of independence we have the following
+result:</p>
+<ul>
+<li>When the null hypothesis (<a href="c-tables.html#eq:H0-chi2">(4.1)</a>) is true in the population,
+the sampling distribution of the test statistic (<a href="c-tables.html#eq:chi2">(4.3)</a>)
+calculated for a two-way table with <span class="math inline">\(R\)</span> rows and <span class="math inline">\(C\)</span> columns is
+approximately the <span class="math inline">\(\chi^{2}\)</span> distribution with <span class="math inline">\(df=(R-1)(C-1)\)</span>
+degrees of freedom.</li>
+</ul>
+<p>The degrees of freedom are thus given by the number of rows in the table
+minus one, multiplied by the number of columns minus one. Table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>, for example, has <span class="math inline">\(R=2\)</span> rows and <span class="math inline">\(C=5\)</span> columns,
+so its degrees of freedom are <span class="math inline">\(df=(2-1)\times(5-1)=4\)</span> (as indicated by
+the “df” column of the SPSS output of Figure <a href="c-tables.html#fig:f-spsschi2">4.1</a>). Figure
+<a href="c-tables.html#fig:f-chisampld">4.2</a> shows the curve of the <span class="math inline">\(\chi^{2}\)</span> distribution with
+<span class="math inline">\(df=4\)</span> superimposed on the histogram of the sampling distribution
+obtained from the computer simulation. The two are in essentially
+perfect agreement, as mathematical theory indicates they should be.</p>
+<p>These degrees of freedom can be given a further interpretation which
+relates to the structure of the table.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a> We can, however, ignore this
+and treat <span class="math inline">\(df\)</span> simply as a number which identifies the appropriate
+<span class="math inline">\(\chi^{2}\)</span> distribution to be used for the <span class="math inline">\(\chi^{2}\)</span> test for a
+particular table. Often it is convenient to use the notation
+<span class="math inline">\(\chi^{2}_{df}\)</span> to refer to a specific distribution, e.g. <span class="math inline">\(\chi^{2}_{4}\)</span>
+for the <span class="math inline">\(\chi^{2}\)</span> distribution with 4 degrees of freedom.</p>
+<p>The <span class="math inline">\(\chi^{2}\)</span> sampling distribution is “approximate” in that it is an
+<em>asymptotic approximation</em> which is exactly correct only if the sample
+size is infinite and approximately correct when it is sufficiently
+large. This is the reason for the conditions for the sizes of the
+expected frequencies that were discussed in Section <a href="c-tables.html#ss-tables-chi2test-ass">4.3.2</a>. When these conditions are satisfied, the
+approximation is accurate enough for all practical purposes and we use
+the appropriate <span class="math inline">\(\chi^{2}\)</span> distribution as the sampling distribution.</p>
+<p>In Section <a href="c-tables.html#ss-tables-chi2test-sdist">4.3.4</a>, under requirement 2 for a good test
+statistic, we mentioned that its sampling distribution under the null
+hypothesis should be “known” and “of convenient form”. We now know that
+for the <span class="math inline">\(\chi^{2}\)</span> test it is a <span class="math inline">\(\chi^{2}\)</span> distribution. The “convenient
+form” means that the sampling distribution should not depend on too many
+specific features of the data at hand. For the <span class="math inline">\(\chi^{2}\)</span> test, the
+approximate sampling distribution depends (through the degrees of
+freedom) only on the size of the table but not on the sample size or the
+marginal distributions of the two variables. This is convenient in the
+right way, because it means that we can use the same <span class="math inline">\(\chi^{2}\)</span>
+distribution for any table with a given number of rows and columns, as
+long as the sample size is large enough for the conditions in Section <a href="c-tables.html#ss-tables-chi2test-ass">4.3.2</a> to be satisfied.</p>
+</div>
+</div>
+<div id="ss-tables-chi2test-Pval" class="section level3 hasAnchor">
+<h3><span class="header-section-number">4.3.5</span> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The last key building block of significance testing operationalises the
+comparison between the observed value of a test statistic and its
+sampling distribution under the null hypothesis. In essence, it provides
+a way to determine whether the test statistic in the sample should be
+regarded as “large” or “not large”, and with this the measure of
+evidence against the null hypothesis that is the end product of the
+test:</p>
+<ul>
+<li>The <span class="math inline">\(\mathbf{P}\)</span><strong>-value</strong> is the probability, if
+the null hypothesis was true in the population, of obtaining a value
+of the test statistic which provides as strong or stronger evidence
+against the null hypothesis, and in the direction of the alternative
+hypothesis, as the the value of the test statistic in the sample
+actually observed.</li>
+</ul>
+<p>The relevance of the phrase “in the direction of the alternative
+hypothesis” is not apparent for the <span class="math inline">\(\chi^{2}\)</span> test, so we can ignore it
+for the moment. As argued above, for this test it is large values of the
+test statistic which indicate evidence against the null hypothesis of
+independence, so the values that correspond to “as strong or stronger
+evidence” against it are the ones that are as large or larger than the
+observed statistic. Their probability is evaluated from the <span class="math inline">\(\chi^{2}\)</span>
+sampling distribution defined above.</p>
+<p>Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a> illustrates this calculation. It shows the
+curve of the <span class="math inline">\(\chi^{2}_{4}\)</span> distribution, which is the relevant sampling
+distribution for the test for the <span class="math inline">\(2\times 5\)</span> table in our example.
+Suppose first, hypothetically, that we had actually observed the sample
+in the lower part of Table <a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a>, for which the
+value of the test statistic is <span class="math inline">\(\chi^{2}=2.84\)</span>. The <span class="math inline">\(P\)</span>-value of the
+test for this sample would then be the probability of values of 2.84 or
+larger, evaluated from the <span class="math inline">\(\chi^{2}_{4}\)</span> distribution.</p>
+<div class="figure"><span style="display:block;" id="fig:f-pvalchisq"></span>
+<img src="chi2_pval.png" alt="Illustration of the P-value for a \chi^{2} test statistic with 4 degrees of freedom and with values \chi^{2}=2.84 (area of the grey region under the curve) and \chi^{2}=18.86." style="width:8cm" />
+<p class="caption">Figure 4.4: Illustration of the <span class="math inline">\(P\)</span>-value for a <span class="math inline">\(\chi^{2}\)</span> test statistic with 4 degrees of freedom and with values <span class="math inline">\(\chi^{2}=2.84\)</span> (area of the grey region under the curve) and <span class="math inline">\(\chi^{2}=18.86\)</span>.</p>
+</div>
+<p>For a probability curve like the one in Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a>, areas
+under the curve correspond to probabilities. For example, the area under
+the whole curve from 0 to infinity is 1, because a variable which
+follows the <span class="math inline">\(\chi^{2}_{4}\)</span> distribution is certain to have one of these
+values. Similarly, the probability that we need for the <span class="math inline">\(P\)</span>-value for
+<span class="math inline">\(\chi^{2}=2.84\)</span> is the area under the curve to the right of the value
+2.84, which is shown in grey in Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a>. This is
+<span class="math inline">\(P=0.585\)</span>.</p>
+<p>The test statistic for the real sample in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>
+was <span class="math inline">\(\chi^{2}=18.86\)</span>, so the <span class="math inline">\(P\)</span>-value is the combined probability of
+this and all larger values. This is also shown in Figure
+<a href="c-tables.html#fig:f-pvalchisq">4.4</a>. However, this area is not really visible in the plot
+because 18.86 is far into the tail of the distribution where the
+probabilities are low. The <span class="math inline">\(P\)</span>-value is then also low, specifically
+<span class="math inline">\(P=0.0008\)</span>.</p>
+<p>In practice the <span class="math inline">\(P\)</span>-value is usually calculated by a
+computer. In the SPSS output of Figure <a href="c-tables.html#fig:f-spsschi2">4.1</a> is is shown in
+the column labelled “Asymp. Sig. (2-sided)” which is short for
+“Asymptotic significance level” (you can ignore the “2-sided” for this
+test). The value is listed as 0.001. SPSS reports, by default,
+<span class="math inline">\(P\)</span>-values rounded to three decimal places. Sometimes even the smallest
+of these is zero, in which case the value is displayed as “.000”. This
+is bad practice, as the <span class="math inline">\(P\)</span>-value for most significance tests is never
+<em>exactly</em> zero. <span class="math inline">\(P\)</span>-values given by SPSS as “.000” should be reported
+instead as “<span class="math inline">\(P&lt;0.001\)</span>”.</p>
+<p>Before the widespread availablity of statistical software, <span class="math inline">\(P\)</span>-values
+had to be obtained approximately using tables of distributions. Since
+you may still see this approach described in many text books, it is
+briefly explained here. You may also need to use the table method in the
+examination, where computers are not allowed. Otherwise, however, this
+approach is now of little interest: if the <span class="math inline">\(P\)</span>-value is given in the
+computer output, there is no need to refer to distributional tables.</p>
+<p>All introductory statistical text books include a table of <span class="math inline">\(\chi^{2}\)</span>
+distributions, although its format may vary slightly form book to book.
+Such a table is also included in the Appendix of
+this coursepack. An extract from the table is shown in Table
+<a href="c-tables.html#tab:t-chi2table">4.4</a>. Each row of the table corresponds to a <span class="math inline">\(\chi^{2}\)</span>
+distribution with the degrees of freedom given in the first column. The
+other columns show so-called “critical values” for the probability
+levels given on the first row. Consider, for example, the row for 4
+degrees of freedom. The figure 7.78 in the column for probability level
+0.100 indicates that the probability of a value of 7.78 or larger is
+exactly 0.100 for this distribution. The 9.49 in the next column shows
+that the probability of 9.49 or larger is 0.050. Another way of saying
+this is that if the appropriate degrees of freedom were 4, and the test
+statistic was 7.78, the <span class="math inline">\(P\)</span>-value would be exactly 0.100, and if the
+statistic was 9.49, <span class="math inline">\(P\)</span> would be 0.050.</p>
+<table>
+<caption><span id="tab:t-chi2table">Table 4.4: </span>An extract from a table of critical values for <span class="math inline">\(\chi^{2}\)</span>
+distributions. Row 2-5 show the right-hand tail probability.</caption>
+<thead>
+<tr class="header">
+<th align="left">df</th>
+<th align="right">0.100</th>
+<th align="right">0.050</th>
+<th align="right">0.010</th>
+<th align="right">0.001</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="right">2.71</td>
+<td align="right">3.84</td>
+<td align="right">6.63</td>
+<td align="right">10.83</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="right">4.61</td>
+<td align="right">5.99</td>
+<td align="right">9.21</td>
+<td align="right">13.82</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="right">6.25</td>
+<td align="right">7.81</td>
+<td align="right">11.34</td>
+<td align="right">16.27</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="right">7.78</td>
+<td align="right">9.49</td>
+<td align="right">13.28</td>
+<td align="right">18.47</td>
+</tr>
+<tr class="odd">
+<td align="left">…</td>
+<td align="right">…</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">…</td>
+</tr>
+</tbody>
+</table>
+<p>The values in the table also provide bounds for other values that are
+not shown. For instance, in the hypothetical sample in Table
+<a href="c-tables.html#tab:t-sex-attitude-H0pop">4.3</a> we had <span class="math inline">\(\chi^{2}=2.84\)</span>, which is smaller than
+7.78. This implies that the corresponding <span class="math inline">\(P\)</span>-value must be larger than
+0.100, which (of course) agrees with the precise value of <span class="math inline">\(P=0.585\)</span> (see
+also Figure <a href="c-tables.html#fig:f-pvalchisq">4.4</a>). Similarly, <span class="math inline">\(\chi^{2}=18.86\)</span> for the real
+data in Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>, which is larger than the 18.47
+in the “0.001” column of the table for the <span class="math inline">\(\chi^{2}_{4}\)</span> distribution.
+Thus the corresponding <span class="math inline">\(P\)</span>-value must be smaller than 0.001, again
+agreeing with the correct value of <span class="math inline">\(P=0.0008\)</span>.</p>
+</div>
+<div id="ss-tables-chi2test-conclusions" class="section level3 hasAnchor">
+<h3><span class="header-section-number">4.3.6</span> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <span class="math inline">\(P\)</span>-value is the end product of any significance test, in that it is
+a complete quantitative summary of the strength of evidence against the
+null hypothesis provided by the data in the sample. More precisely, the
+<span class="math inline">\(P\)</span>-value indicates how likely we would be to obtain a value of the test
+statistic which was as or more extreme as the value for the data, if the
+null hypothesis was true. Thus the <em>smaller</em> the <span class="math inline">\(P\)</span>-value, the stronger
+is the evidence <em>against</em> the null hypothesis. For example, in our
+survey example of sex and attitude toward income redistribution we
+obtained <span class="math inline">\(P=0.0008\)</span> for the <span class="math inline">\(\chi^{2}\)</span> test of independence. This is a
+small number, so it indicates strong evidence against the claim that the
+distributions of attitudes are the same for men and women in the
+population.</p>
+<p>For many purposes it is quite sufficient to simply report the <span class="math inline">\(P\)</span>-value.
+It is, however, quite common also to state the conclusion in the form of
+a more discrete decision of “rejecting” or “not rejecting” the null
+hypothesis. This is usually based on conventional reference levels,
+known as <strong>significance levels</strong> or <span class="math inline">\(\boldsymbol{\alpha}\)</span><strong>-levels</strong>
+(here <span class="math inline">\(\alpha\)</span> is the lower-case Greek letter “alpha”). The standard
+significance levels are 0.10, 0.05, 0.01 and 0.001 (also known as 10%,
+5%, 1% and 0.1% significance levels respectively), of which the 0.05
+level is most commonly used; other values than these are rarely
+considered. The values of the test statistic which correspond exactly to
+these levels are the critical shown in the table of the <span class="math inline">\(\chi^{2}\)</span>
+distribution in Table <a href="c-tables.html#tab:t-chi2table">4.4</a>.</p>
+<p>When the <span class="math inline">\(P\)</span>-value is <em>smaller</em> than a conventional level of
+significance (i.e. the test statistic is <em>larger</em> than the corresponding
+critical value), it is said that the null hypothesis is <strong>rejected</strong> at
+that level of significance, or that the results (i.e. evidence against
+the null hypothesis) are <strong>statistically significant</strong> at that level. In
+our example the <span class="math inline">\(P\)</span>-value was smaller than 0.001. The null hypothesis is
+thus “rejected at the 0.1 % level of significance”, i.e. the evidence
+that the variables are not independent in the population is
+“statistically significant at the 0.1% level” (as well as the 10%, 5%
+and 1% levels of course, but it is enough to state only the strongest
+level).</p>
+<p>The strict decision formulation of significance testing is much overused
+and misused. It is in fact quite rare that the statistical analysis will
+immediately be followed by some practical action which absolutely
+requires a decision about whether to act on the basis of the null
+hypothesis or the alternative hypothesis. Typically the analysis which a
+test is part of aims to examine some research question, and the results
+of the test simply contribute new information to add support for one or
+the other side of the argument about the question. The <span class="math inline">\(P\)</span>-value is the
+key measure of the strength and direction of that evidence, so it should
+<em>always</em> be reported. The standard significance levels used for
+rejecting or not rejecting null hypotheses, on the other hand, are
+merely useful conventional reference points for structuring the
+reporting of test results, and their importance should not be
+overemphasised. Clearly <span class="math inline">\(P\)</span>-values of, say, 0.049 and 0.051 (i.e. ones
+either side of the most common conventional significance level 0.05)
+indicate very similar levels of evidence against a null hypothesis, and
+acting as if one was somehow qualitatively more decisive is simply
+misleading.</p>
+<div id="how-to-state-the-conclusions" class="section level4 unnumbered hasAnchor">
+<h4>How to state the conclusions<a href="c-tables.html#how-to-state-the-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The final step of a significance test is describing its conclusions in a
+research report. This should be done with appropriate care:</p>
+<ul>
+<li><p>The report should make clear which test was used. For example, this
+might be stated as something like “The <span class="math inline">\(\chi^{2}\)</span> test of
+independence was used to test the null hypothesis that in the
+population the attitude toward income redistribution was independent
+of sex in the population”. There is usually no need to give
+literature references for the standard tests described on
+this course.</p></li>
+<li><p>The numerical value of the <span class="math inline">\(P\)</span>-value should be reported, rounded to
+two or three decimal places (e.g. <span class="math inline">\(P=0.108\)</span> or <span class="math inline">\(P=0.11\)</span>). It can
+also reported in an approximate way as, for example, “<span class="math inline">\(P&lt;0.05\)</span>” (or
+the same in symbols to save space, e.g.  for <span class="math inline">\(P&lt;0.1\)</span>, ** for
+<span class="math inline">\(P&lt;0.05\)</span>, and so on). Very small <span class="math inline">\(P\)</span>-values can always be reported
+as something like “<span class="math inline">\(P&lt;0.001\)</span>”.</p></li>
+<li><p>When (cautiously) discussing the results in terms of discrete
+decisions, the most common practice is to say that the null
+hypothesis was either <em>not rejected</em> or <em>rejected</em> at a given
+significance level. It is <em>not</em> acceptable to say that the null
+hypothesis was “accepted” as an alternative to “not rejected”.
+Failing to reject the hypothesis that two variables are independent
+in the population is not the same as proving that they actually
+<em>are</em> independent.</p></li>
+<li><p>A common mistake is to describe the <span class="math inline">\(P\)</span>-value as the probability
+that the null hypothesis is true. This is understandably tempting,
+as such a claim would seem more natural and convenient than the
+correct but convoluted interpretation of the <span class="math inline">\(P\)</span>-value as “the
+probability of obtaining a test statistic as or more extreme as the
+one observed in the data if the test was repeated many times for
+different samples from a population where the null hypothesis was
+true”. Unfortunately, however, the <span class="math inline">\(P\)</span>-value is <em>not</em> the
+probability of the null hypothesis being true. Such a probability
+does not in fact have any real meaning at all in the statistical
+framework considered here.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p></li>
+<li><p>The results of significance tests should be stated using the names
+and values of the variables involved, and not just in terms of
+“null” and “alternative” hypotheses. This also forces you to recall
+what the hypotheses actually were, so that you do not accidentally
+describe the result the wrong way round (e.g. that the data support
+a claim when they do just the opposite). There are no compulsory
+phrases for stating the conclusions, so it can be done in a number
+of ways. For example, a fairly complete and careful statement in our
+example would be</p>
+<ul>
+<li>“There is strong evidence that the distributions of attitudes
+toward income redistribution are not the same for men and women
+in the population (<span class="math inline">\(P&lt;0.001\)</span>).”</li>
+</ul>
+<p>Other possibilities are</p>
+<ul>
+<li><p>“The association between sex and attitude toward income
+redistribution in the sample is statistically significant
+(<span class="math inline">\(P&lt;0.001\)</span>).”</p></li>
+<li><p>“The analysis suggests that there is an association between sex
+and attitude toward income redistribution in the population
+(<span class="math inline">\(P&lt;0.001\)</span>).”</p></li>
+</ul>
+<p>The last version is slightly less clear than the other statements in
+that it relies on the reader recognizing that the inclusion of the
+<span class="math inline">\(P\)</span>-value implies that the word “differs” refers to a statistical
+claim rather a statement of absolute fact about the population. In
+many contexts it would be better to say this more explicitly.</p></li>
+</ul>
+<p>Finally, if the null hypothesis of independence is rejected, the test
+should not usually be the only statistical analysis that is reported for
+a two-way table. Instead, we would then go on to describe <em>how</em> the two
+variables appear to be associated, using the of descriptive methods
+discussed in Section <a href="c-descr1.html#s-descr1-2cat">2.4</a>.</p>
+</div>
+</div>
+</div>
+<div id="s-tables-summary" class="section level2 hasAnchor">
+<h2><span class="header-section-number">4.4</span> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have now described the elements of a significance test in some
+detail. Since it is easy to lose sight of the practical steps of a test
+in such a lengthy discussion, they are briefly repeated here for the
+<span class="math inline">\(\chi^{2}\)</span> test of independence. The test of the association between sex
+and attitude in the survey example is again used for illustration:</p>
+<ol style="list-style-type: decimal">
+<li><p>Data: observations of two categorical variables, here sex and
+attitude towards income redistribution for <span class="math inline">\(n=2344\)</span> respondents,
+presented in the two-way, <span class="math inline">\(2\times 5\)</span> contingency table
+<a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>.</p></li>
+<li><p>Assumptions: the variables can have any measurement level, but the
+expected frequencies <span class="math inline">\(f_{e}\)</span> must be large enough. A common rule of
+thumb is that <span class="math inline">\(f_{e}\)</span> should be at least 5 for every cell of
+the table. Here the smallest expected frequency is 32.9, so the
+requirement is comfortably satisfied.</p></li>
+<li><p>Hypotheses: null hypothesis <span class="math inline">\(H_{0}\)</span> that the two variables are
+statistically independent (i.e. not associated) in the population,
+against the alternative hypothesis that they are dependent.</p></li>
+<li><p>The test statistic: the <span class="math inline">\(\chi^{2}\)</span> statistic <span class="math display">\[\chi^{2} = \sum
+\frac{(f_{o}-f_{e})^{2}}{f_{e}}\]</span> where <span class="math inline">\(f_{o}\)</span> denotes observed
+frequencies in the cells of the table and <span class="math inline">\(f_{e}\)</span> the corresponding
+expected frequencies under the null hypothesis, and the summation is
+over all of the cells. For Table <a href="c-tables.html#tab:t-sex-attitude-ch4">4.1</a>,
+<span class="math inline">\(\chi^{2}=18.86\)</span>.</p></li>
+<li><p>The sampling distribution of the test statistic when <span class="math inline">\(H_{0}\)</span> is
+true: a <span class="math inline">\(\chi^{2}\)</span> distribution with <span class="math inline">\((R-1)\times(C-1)=1\times 4=4\)</span>
+degrees of freedom, where <span class="math inline">\(R\)</span> <span class="math inline">\((=2)\)</span> and <span class="math inline">\(C\)</span> <span class="math inline">\((=5)\)</span> denote the
+numbers of rows and columns in the table respectively.</p></li>
+<li><p>The <span class="math inline">\(P\)</span>-value: the probability that a randomly selected value from
+the <span class="math inline">\(\chi^{2}_{4}\)</span> distribution is at least 18.86. This is
+<span class="math inline">\(P=0.0008\)</span>, which may also be reported as <span class="math inline">\(P&lt;0.001\)</span>.</p></li>
+<li><p>Conclusion: the null hypothesis of independence is strongly
+rejected. The <span class="math inline">\(\chi^{2}\)</span> test indicates very strong evidence that
+sex and attitude towards income redistribution are associated in the
+population (<span class="math inline">\(P&lt;0.001\)</span>).</p></li>
+</ol>
+<p>When the association is judged to be statistically significant, its
+nature and magnitude can be further explored using the descriptive
+methods for two way tables discussed in Section <a href="c-descr1.html#s-descr1-2cat">2.4</a>.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="15">
+<li id="fn15"><p><em>Philosophical Magazine</em>, Series 5, <strong>5</strong>, 157–175.
+The thoroughly descriptive title of the article is
+“On the criterion that a given system of deviations from the
+probable in the case of a correlated system of variables is such
+that it can be reasonably supposed to have arisen from random
+sampling”.<a href="c-tables.html#fnref15" class="footnote-back">↩</a></p></li>
+<li id="fn16"><p>In short, they are the smallest number of cell frequencies such
+that they together with the row and column marginal totals are
+enough to determine all the remaining cell frequencies.<a href="c-tables.html#fnref16" class="footnote-back">↩</a></p></li>
+<li id="fn17"><p>There is an alternative framework, known as <em>Bayesian</em> statistics,
+where quantities resembling <span class="math inline">\(P\)</span>-values <em>can</em> be given this
+interpretation. The differences between the Bayesian approach and
+the so-called <em>frequentist</em> one discussed here are practically and
+philosophically important and interesting, but beyond the scope of
+this course.<a href="c-tables.html#fnref17" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c-samples.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="c-probs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/LSE-Methodology/MY464/edit/master/04-MY464-tables.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Coursepack-MY464.pdf", "Coursepack-MY464.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

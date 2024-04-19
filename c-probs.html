@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Inference for population proportions | MY464 Introduction to Quantitative Analysis for Media and Communications</title>
+  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Inference for population proportions | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  <meta name="github-repo" content="LSE-Methodology/MY464" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Inference for population proportions | MY464 Introduction to Quantitative Analysis for Media and Communications" />
+  
+  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY464 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
+  
+
+<meta name="author" content="Department of Methodology, London School of Economics and Political Science" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="c-tables.html"/>
+<link rel="next" href="c-contd.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction<a href="c-intro.html#c-intro" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?<a href="c-intro.html#s-intro-purpose" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions<a href="c-intro.html#s-intro-definitions" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables<a href="c-intro.html#ss-intro-def-subj" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables<a href="c-intro.html#ss-intro-def-vartypes" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference<a href="c-intro.html#ss-intro-def-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation<a href="c-intro.html#ss-intro-def-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course<a href="c-intro.html#s-intro-outline" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing<a href="c-intro.html#s-intro-maths" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation<a href="c-intro.html#symbolic-mathematics-and-mathematical-notation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing<a href="c-intro.html#computing-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables<a href="c-more.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities<a href="c-more.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions<a href="c-more.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+<li class="chapter" data-level="" data-path="c-more.html"><a href="c-more.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions<a href="c-more.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY464 Introduction to Quantitative Analysis for Media and Communications</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="c-probs" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 5</span> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="s-probs-intro" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.1</span> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this chapter we still consider statistical analyses which involve
+only discrete, categorical variables. In fact, we now focus on the
+simplest case of all, that of <strong>dichotomous</strong> (binary) variables which
+have only two possible values. Four examples which will be used for
+illustration throughout this chapter are introduced in Section
+<a href="c-probs.html#s-probs-examples">5.2</a>. In the first two of them we consider a binary
+variable in a single population, while in the last two examples the
+question of interest involves a comparison of the distributions of the
+variable between two populations (<em>groups</em>).</p>
+<p>The data for such analyses can be summarised in simple tables, the
+one-group case with a one-way table of two cells, and the two-group case
+with a <span class="math inline">\(2\times 2\)</span> contingency table. Here, however, we formulate the
+questions of interest slightly differently, with primary emphasis on the
+<em>probability</em> of one of the two values of the variable of interest. In
+the one-group case the questions of interest are then about the
+population value of a single probability, and in the two-group case
+about the comparison of the values of this probability between the two
+groups.</p>
+<p>While we describe specific methods of inference for these cases, we also
+use them to introduce some further general elements of statistical
+inference:</p>
+<ul>
+<li><p>Population <strong>parameters</strong> of probability distributions.</p></li>
+<li><p><strong>Point estimation</strong> of population parameters.</p></li>
+<li><p>Hypotheses anout the parameters, and significance tests for them.</p></li>
+<li><p><strong>Confidence intervals</strong> for population parameters.</p></li>
+</ul>
+<p>The comparisons in the two-group analyses again address questions about
+associations, now between the group and the dichotomous variable of
+interest. Here it will be useful to employ the terminology introduced in
+Section <a href="c-intro.html#ss-intro-def-assoc">1.2.4</a>, which distinguishes between the
+<strong>explanatory variable</strong> and the <strong>response variable</strong> in the
+association. Following a common convention, we will denote the
+explanatory variable by <span class="math inline">\(X\)</span> and the response variable by <span class="math inline">\(Y\)</span>. In the
+two-group cases of this chapter, <span class="math inline">\(X\)</span> will be the group (which is itself
+also binary) and <span class="math inline">\(Y\)</span> the binary variable whose probabilities we are
+interested in. We will use <span class="math inline">\(Y\)</span> to denote this binary variable also in
+the one-group examples.</p>
+</div>
+<div id="s-probs-examples" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.2</span> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The following four examples will be discussed in this chapter. Examples
+5.1 and 5.2 concern only one group, while in Examples 5.3 and 5.4 two
+groups are to be compared. Table <a href="c-probs.html#tab:t-probex">5.1</a> shows basic sample
+statistics for the examples, together with the results of the
+significance tests and confidence intervals described later.</p>
+<p><strong>Example 5.1</strong>: <strong>An EU referendum</strong></p>
+<p>A referendum about joining the European Union was held in Finland on the
+16th of October, 1994. Suppose that in an opinion poll conducted around
+October 4th (just before the beginning of postal voting), 330 of the
+<span class="math inline">\(n=702\)</span> respondents (47.0%) indicated that they would definitely vote
+Yes to joining the EU, 190 (27.1%) said they would definitely vote No,
+and 182 (25.9%) were still undecided.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a> Here we will consider the
+dichotomous variable with the values of Yes (330 respondents) versus No
+or Undecided (372 respondents, or 53.0%). The proportion of voters who
+definitely intend to vote Yes provides a lower bound for the proportion
+of Yes-votes in the referendum, even if all of the currently undecided
+voters eventually decided to vote No.</p>
+<p><strong>Example 5.2</strong>: <strong>Evidence of possible racial bias in jury selection</strong></p>
+<p>As part of an official inquiry into the extent of racial and gender bias
+in the justice system in the U.S. state of Pennsylvania, an
+investigation was made of whether people from minority racial groups
+were underrepresented in trial juries.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> One part of the assessment was a
+survey administered to all those called for the jury panel for criminal
+trials (from which the juries for actual trials will be selected) in
+Allegheny County, Pennsylvania (the city of Pittsburgh and its
+surrounding areas) between May and October, 2001. We will consider the
+dichotomous variable of whether a respondent to the survey identified
+his or her own race as Black (African American) or some other race
+category. Of the <span class="math inline">\(n=4950\)</span> respondents, 226 (4.57%) identified themselves
+as black. This will be compared to the the percentage of black people in the
+whole population of people aged 18 and over (those eligible for jury
+service) in the county, which is 12.4% (this is a census estimate which
+will here be treated as a known population quantity, ignoring any
+possible census error in it).</p>
+<table style="width:99%;">
+<caption><span id="tab:t-probex">Table 5.1: </span>Examples of analyses of population proportions used in Chapter
+<a href="c-probs.html#c-probs">5</a>. In addition to sample sizes <span class="math inline">\(n\)</span> and proportions
+<span class="math inline">\(\hat{\pi}\)</span>, the table shows for the one-sample examples 5.1 and 5.2
+the <span class="math inline">\(z\)</span>-test statistic for the hypothesis <span class="math inline">\(H_{0}: \pi=\pi_{0}\)</span>, its
+<span class="math inline">\(P\)</span>-value against a two-sided alternative, and a 95% confidence
+interval for <span class="math inline">\(\pi\)</span>. For the two-sample examples 5.3 and 5.4, the table
+shows the estimated between-group difference of proportions
+<span class="math inline">\(\hat{\Delta}\)</span>, the <span class="math inline">\(z\)</span>-test statistic for the hypothesis
+<span class="math inline">\(H_{0}: \Delta=0\)</span>, its <span class="math inline">\(P\)</span>-value against a two-sided alternative, and
+a 95% confidence interval for <span class="math inline">\(\Delta\)</span>.</caption>
+<colgroup>
+<col width="35%" />
+<col width="6%" />
+<col width="5%" />
+<col width="8%" />
+<col width="15%" />
+<col width="7%" />
+<col width="7%" />
+<col width="12%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>One sample</strong></td>
+<td align="right"><br />
+</td>
+<td align="right"><br />
+</td>
+<td align="right"><br />
+</td>
+<td align="right"><br />
+</td>
+<td align="right"><br />
+</td>
+<td align="right"><br />
+</td>
+<td align="right"><br />
+</td>
+</tr>
+<tr class="even">
+<td align="left">Example 5.1: Voting intention in an EU referendum</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="right"><span class="math inline">\(n\)</span></td>
+<td align="right">Yes</td>
+<td align="right"><span class="math inline">\(\hat{\pi}\)</span></td>
+<td align="right"><span class="math inline">\(\pi_{0}\)</span></td>
+<td align="right"><span class="math inline">\(z\)</span></td>
+<td align="right"><span class="math inline">\(P\)</span></td>
+<td align="right">95% CI</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">702</td>
+<td align="right">330</td>
+<td align="right">0.470</td>
+<td align="right">0.5</td>
+<td align="right"><span class="math inline">\(-1.59\)</span></td>
+<td align="right">0.112</td>
+<td align="right">(0.433;
+0.507)</td>
+</tr>
+<tr class="odd">
+<td align="left">Example 5.2: Race of members of jury panel</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right"><span class="math inline">\(n\)</span></td>
+<td align="right">Black</td>
+<td align="right"><span class="math inline">\(\hat{\pi}\)</span></td>
+<td align="right"><span class="math inline">\(\pi_{0}\)</span></td>
+<td align="right"><span class="math inline">\(z\)</span></td>
+<td align="right"><span class="math inline">\(P\)</span></td>
+<td align="right">95% CI</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="right">4950</td>
+<td align="right">226</td>
+<td align="right">0.0457</td>
+<td align="right">0.124</td>
+<td align="right"><span class="math inline">\(-16.71\)</span></td>
+<td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
+<td align="right">(0.040;
+0.052)</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Two Independent samples</strong></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="odd">
+<td align="left">Example 5.3: Polio diagnoses in a vaccine trial</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right"><span class="math inline">\(n\)</span></td>
+<td align="right">Yes</td>
+<td align="right"><span class="math inline">\(\hat{\pi}\)</span></td>
+<td align="right">Diff. (<span class="math inline">\(\hat{\Delta}\)</span>)</td>
+<td align="right"><span class="math inline">\(z\)</span></td>
+<td align="right"><span class="math inline">\(P\)</span></td>
+<td align="right">95% CI</td>
+</tr>
+<tr class="odd">
+<td align="left">Control group
+(placebo)</td>
+<td align="right">201,229</td>
+<td align="right">142</td>
+<td align="right">0.000706</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">Treatment group
+(vaccine)</td>
+<td align="right">200,745</td>
+<td align="right">57</td>
+<td align="right">0.000284</td>
+<td align="right"><span class="math inline">\(-0.000422\)</span></td>
+<td align="right"><span class="math inline">\(-6.01\)</span></td>
+<td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
+<td align="right"><span class="math inline">\((-0.000560;\)</span>
+<span class="math inline">\(-0.000284)\)</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Example 5.4: Optimistic about young people’s future</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right"><span class="math inline">\(n\)</span></td>
+<td align="right">Yes</td>
+<td align="right"><span class="math inline">\(\hat{\pi}\)</span></td>
+<td align="right">Diff. (<span class="math inline">\(\hat{\Delta}\)</span>)</td>
+<td align="right"><span class="math inline">\(z\)</span></td>
+<td align="right"><span class="math inline">\(P\)</span></td>
+<td align="right">95% CI</td>
+</tr>
+<tr class="odd">
+<td align="left">Negative question</td>
+<td align="right">921</td>
+<td align="right">257</td>
+<td align="right">0.279</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right"></td>
+</tr>
+<tr class="even">
+<td align="left">Positive question</td>
+<td align="right">929</td>
+<td align="right">338</td>
+<td align="right">0.364</td>
+<td align="right">0.085</td>
+<td align="right">3.92</td>
+<td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
+<td align="right">(0.043;
+0.127)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example 5.3: The Salk polio vaccine field trial of 1954</strong></p>
+<p>The first large-scale field trials of the “killed virus” polio
+vaccination developed by Dr. Jonas Salk were carried out in the U.S. in
+1954.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a> In the randomized, double-blind placebo-control part of the
+trial, a sample of schoolchildren were randomly assigned to receive
+either three injections of the polio vaccine, or three injections of a
+placebo, inert saltwater which was externally indistinguishable from the
+real vaccine. The explanatory variable <span class="math inline">\(X\)</span> is thus the group (vaccine or
+“treatment” group vs. placebo or “control” group). The response variable
+<span class="math inline">\(Y\)</span> is whether the child was diagnosed with polio during the trial
+period (yes or no). There were <span class="math inline">\(n_{1}=201,229\)</span> children in the control
+group, and 142 of them were diagnosed with polio; in the treatment
+group, there were 57 new polio cases among <span class="math inline">\(n_{2}=200,745\)</span> children (in
+both cases only those children who received all three injections are
+included here). The proportions of cases of polio were thus <span class="math inline">\(0.000706\)</span>
+in the control group and <span class="math inline">\(0.000284\)</span> in the vaccinated group (i.e. 7.06
+and 2.84 cases per 10,000 subjects, respectively).</p>
+<p><strong>Example 5.4: Split-ballot experiment on acquiescence bias</strong></p>
+<p>Survey questions often ask whether respondents agree or disagree with
+given statements on opinions or attitudes. <em>Acquiescence bias</em> means the
+tendency of respondents to agree with such statements, regardless of
+their contents. If it is present, we will overestimate the proportion of
+people holding the opinion corresponding to agreement with the
+statement. The data used in this example come from a study which
+examined acquiescence bias through a randomized experiment.<a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> In a
+survey carried out in Kazakhstan, the respondents were presented with a
+number of attitude statements, with four response categories: “Fully
+agree”, “Somewhat agree”, “Somewhat disagree”, and “Fully disagree”.
+Here we combine the first two and the last two, and consider the
+resulting dichotomous variable, with values labelled “Agree” and
+“Disagree”.</p>
+<p>We consider one item from the survey, concerning the respondents’
+opinions on the expectations of today’s young people. There were two
+forms of the question:</p>
+<ul>
+<li><p>“A young person today can expect little of the future”</p></li>
+<li><p>“A young person today can expect much of the future”</p></li>
+</ul>
+<p>We will call these the “Negative” and “Positive” question respectively.
+Around half of the respondents were randomly assigned to receive the
+positive question, and the rest got the negative question. The
+explanatory variable <span class="math inline">\(X\)</span> indicates the type of question, with Negative
+and Positive questions coded here as 1 and 2 respectively. The
+dichotomous response variable <span class="math inline">\(Y\)</span> is whether the respondent gave a
+response which was optimistic about the future (i.e. agreed with the
+positive or disagreed with the negative question) or a pessimistic
+response. The sample sizes and proportions of optimistic responses in
+the two groups are reported in Table <a href="c-probs.html#tab:t-probex">5.1</a>. The proportion is
+higher when the question was worded positively, as we would expect if
+there was acquiescence bias. Whether this difference is statistically
+significant remains to be determined.</p>
+</div>
+<div id="s-probs-distribution" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.3</span> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The response variables <span class="math inline">\(Y\)</span> considered in this section have only two
+possible values. It is common to code them as 0 and 1. In our examples,
+we will define the values of the variable of interest as follows:</p>
+<ul>
+<li><p>Example 5.1: 1 if a person says that he or she will definitely vote
+Yes, and 0 if the respondent will vote No or is undecided</p></li>
+<li><p>Example 5.2: 1 for black respondents and 0 for all others</p></li>
+<li><p>Example 5.3: 1 if a child developed polio, 0 if not</p></li>
+<li><p>Example 5.4: 1 if the respondent gave an optimistic response, 0 if
+not</p></li>
+</ul>
+<p>The population distribution of such a variable is completely specified
+by one number, the <strong>probability</strong> that a randomly selected member of
+the population will have the value <span class="math inline">\(Y=1\)</span> rather than 0. It can also be
+thought of as the <strong>proportion</strong> of units in the population with <span class="math inline">\(Y=1\)</span>;
+we will use the two terms interchangeably. This probability is denoted
+here <span class="math inline">\(\pi\)</span> (the lower-case Greek letter “pi”).<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a> The value of <span class="math inline">\(\pi\)</span> is
+between 0 (no-one in the population has <span class="math inline">\(Y=1\)</span>) and 1 (everyone has
+<span class="math inline">\(Y=1\)</span>). Because <span class="math inline">\(Y\)</span> can have only two possible values, and the sum of
+probabilities must be one, the population probability of <span class="math inline">\(Y=0\)</span> is
+<span class="math inline">\(1-\pi\)</span>.</p>
+<p> The probability distribution which corresponds to this
+kind of population distribution is the <em>Binomial distribution</em>. For
+later use, we note already here that the mean of this distribution is
+<span class="math inline">\(\pi\)</span> and its variance is <span class="math inline">\(\pi(1-\pi)\)</span>.</p>
+<p>In Example 5.1, the population is that of eligible voters at the time of
+the opinion poll, and <span class="math inline">\(\pi\)</span> is the probability that a randomly selected
+eligible voter definitely intended to vote Yes. In Example 5.2, <span class="math inline">\(\pi\)</span> is
+the probability that a black person living in the county will be
+selected to the jury panel. In Example 5.3, <span class="math inline">\(\pi\)</span> is the probability
+(possibly different in the vaccinated and unvaccinated groups) that a
+child will develop polio, and in Example 5.4 it is the probability
+(which possibly depends on how the question was asked) that a respondent
+will give an optimistic answer to the survey question.</p>
+<p>The probability <span class="math inline">\(\pi\)</span> is the <strong>parameter</strong> of the binomial distribution.
+In general, the parameters of a probability distribution are one or more
+numbers which fully determine the distribution. For example, in the
+analyses of Chapter <a href="c-tables.html#c-tables">4</a> we considered conditional
+distributions of a one variable in a contingency table given the other
+variable. Although we did not make use of this terminology there, these
+distributions also have their parameters, whcih are the probabilities of
+(all but one of) the categories of the response variable. Another case
+will be introduced in Chapter <a href="c-means.html#c-means">7</a>, where we consider a
+probability distribution for a continuous variable, and its parameters.</p>
+</div>
+<div id="s-probs-pointest" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.4</span> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Questions and hypotheses about population distributions are usually most
+conveniently formulated in terms of the parameters of the distributions.
+For a binary variable <span class="math inline">\(Y\)</span>, this means that statistical inference will be
+focused on the probability <span class="math inline">\(\pi\)</span>.</p>
+<p>The most obvious question about a parameter is “what is our best guess
+of the value of the parameter in the population?” The answer will be
+based on the information in the sample, using some sample statistic as
+the best guess or <strong>estimate</strong> of the population parameter.
+Specifically, this is a <strong>point estimate</strong>, because it is expressed as a
+single value or a “point”, to distinguish it from <em>interval</em> estimates
+defined later.</p>
+<p>We denote a point estimate of <span class="math inline">\(\pi\)</span> by <span class="math inline">\(\hat{\pi}\)</span>. The “<span class="math inline">\(\; \hat{\;}\;\)</span>” or “hat” is often used to denote an estimate of a parameter
+indicated by the symbol under the hat; <span class="math inline">\(\hat{\pi}\)</span> is read as “pi-hat”.
+As <span class="math inline">\(\pi\)</span> for a binomial distribution is the population proportion of
+<span class="math inline">\(Y=1\)</span>, the obvious choice for a point estimate of it is the <em>sample</em>
+proportion of units with <span class="math inline">\(Y=1\)</span>. If we denote the <em>number</em> of such units
+by <span class="math inline">\(m\)</span>, the proportion is thus <span class="math inline">\(\hat{\pi}=m/n\)</span>, i.e. <span class="math inline">\(m\)</span> divided by the
+sample size <span class="math inline">\(n\)</span>. In Example 5.1, <span class="math inline">\(m=330\)</span> and <span class="math inline">\(n=702\)</span>, and
+<span class="math inline">\(\hat{\pi}=330/702=0.47\)</span>. This and the estimated proportions in the
+other examples are shown in Table <a href="c-probs.html#tab:t-probex">5.1</a>, in the two-sample
+examples 5.3 and 5.4 separately for the two groups.</p>
+<p>When <span class="math inline">\(Y\)</span> is coded with values 0 and 1, <span class="math inline">\(\hat{\pi}\)</span> is also equal to the
+sample mean of <span class="math inline">\(Y\)</span>, since
+<span class="math display" id="eq:pihat-as-ybar">\[\begin{equation}
+\bar{Y}=\frac{Y_{1}+Y_{2}+\dots+Y_{n}}{n}=\frac{0+0+\dots+0+\overbrace{1+1+\dots+1}^{m \text{ ones}}}{n}=\frac{m}{n}=\hat{\pi}.
+\tag{5.1}
+\end{equation}\]</span></p>
+</div>
+<div id="s-probs-test1sample" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.5</span> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="ss-probs-test1sample-hypotheses" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.5.1</span> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A null hypothesis about a single population probability <span class="math inline">\(\pi\)</span> is of the
+form
+<span class="math display" id="eq:H0p">\[\begin{equation}
+H_{0}:\; \pi=\pi_{0}
+\tag{5.2}
+\end{equation}\]</span>
+where <span class="math inline">\(\pi_{0}\)</span> is a given number which is either of
+specific interest or in some other sense a suitable benchmark in a given
+application. For example, in the voting example 5.1 we could consider
+<span class="math inline">\(\pi_{0}=0.5\)</span>, i.e. that the referendum was too close to call. In the
+jury example 5.2 the value of interest would be <span class="math inline">\(\pi_{0}=0.124\)</span>, the
+proportion of black people in the general adult population of the county.</p>
+<p>An alternative but equivalent form of (<a href="c-probs.html#eq:H0p">(5.2)</a>) is expressed in terms
+of the difference
+<span class="math display" id="eq:Dp">\[\begin{equation}
+\Delta=\pi-\pi_{0}
+\tag{5.3}
+\end{equation}\]</span>
+(<span class="math inline">\(\Delta\)</span> is the upper-case Greek letter “Delta”). Then
+(@<a href="c-probs.html#eq:H0p">(5.2)</a>) can also be written as
+<span class="math display" id="eq:H0p2">\[\begin{equation}
+H_{0}: \; \Delta=0,
+\tag{5.4}
+\end{equation}\]</span>
+i.e. that there is no difference between the true
+population probability and the hypothesised value <span class="math inline">\(\pi_{0}\)</span>. This
+version of the notation allows us later to draw attention to the
+similarities between different analyses in this chapter and in
+Chapter <a href="c-means.html#c-means">7</a>. In all of these cases the quantities of interest
+turn out to be differences of some kind, and the formulas for test
+statistics and confidence intervals will be of essentially the same
+form.</p>
+<p>The alternative hypothesis to the null hypothesis (<a href="c-probs.html#eq:H0p2">(5.4)</a>) requires
+some further comments, because there are some new possibilities that did
+not arise for the <span class="math inline">\(\chi^{2}\)</span> test of independence in Chapter
+<a href="c-tables.html#c-tables">4</a>. For the difference <span class="math inline">\(\Delta\)</span>, we may consider two basic
+kinds of alternative hypotheses. The first is a <strong>two-sided alternative
+hypothesis</strong>
+<span class="math display" id="eq:Hatwo">\[\begin{equation}
+H_{a}: \; \Delta\ne 0
+\tag{5.5}
+\end{equation}\]</span>
+(where “<span class="math inline">\(\ne\)</span>” means “not equal to”). This claims that
+the true value of the population difference <span class="math inline">\(\Delta\)</span> is some unknown
+value which is <em>not</em> 0 as claimed by the null hypothesis. With a
+two-sided <span class="math inline">\(H_{a}\)</span>, sample evidence that the true difference differs from
+0 will be regarded as evidence against the null hypothesis, irrespective
+of whether it suggests that <span class="math inline">\(\Delta\)</span> is actually smaller or larger than
+0 (hence the word “two-sided”). When <span class="math inline">\(\Delta=\pi-\pi_{0}\)</span>, this means
+that we are trying to assess whether the true probability <span class="math inline">\(\pi\)</span> is
+different from the claimed value <span class="math inline">\(\pi_{0}\)</span>, but without any expectations
+about whether <span class="math inline">\(\pi\)</span> might be smaller or larger than <span class="math inline">\(\pi_{0}\)</span>.</p>
+<p>The second main possibility is one of the two <strong>one-sided alternative
+hypotheses</strong>
+<span class="math display" id="eq:Haonegt">\[\begin{equation}
+H_{a}:  \Delta&gt; 0
+\tag{5.6}
+\end{equation}\]</span>
+or
+<span class="math display" id="eq:Haonelt">\[\begin{equation}
+H_{a}:  \Delta &lt; 0
+\tag{5.7}
+\end{equation}\]</span>
+Such a hypothesis is only interested in
+values of <span class="math inline">\(\Delta\)</span> to one side of 0, either larger or smaller than it.
+For example, hypothesis (<a href="c-probs.html#eq:Haonegt">(5.6)</a>) in the referendum example 5.1,
+with <span class="math inline">\(\pi_{0}=0.5\)</span>, is <span class="math inline">\(H_{a}:\; \pi&gt;0.5\)</span>, i.e. that the proportion who
+intend to vote Yes is <em>greater</em> than one half. Similarly, in the jury
+example 5.2, with <span class="math inline">\(\pi_{0}=0.124\)</span>, (<a href="c-probs.html#eq:Haonelt">(5.7)</a>) is the hypothesis
+<span class="math inline">\(H_{a}:\; \pi&lt;0.124\)</span>, i.e. that the probability that an eligible black
+person is selected to a jury panel is <em>smaller</em> than the proportion of
+black people in the general population.</p>
+<p>Whether we choose to consider a one-sided or a two-sided alternative
+hypothesis depends largely on the research questions. In general, a
+one-sided hypothesis would be used when deviations from the null
+hypothesis only in one direction would be interesting and/or surprising.
+This draws on background information about the variables. A two-sided
+alternative hypothesis is neutral in this respect. Partly for this
+reason, two-sided hypotheses are in practice used more often than
+one-sided ones. Choosing a two-sided alternative hypothesis is not wrong
+even when a one-sided one could also be considered; this will simply
+lead to a more cautious (conservative) approach in that it takes
+stronger evidence to reject the null hypothesis when the alternative is
+two-sided than when it is one-sided. Such conservatism is typically
+regarded as a desirable feature in statistical inference (this will be
+discussed further in Section <a href="c-means.html#ss-means-tests3-errors">7.6.1</a>).</p>
+<p>The two-sided alternative hypothesis
+(<a href="c-probs.html#eq:Hatwo">(5.5)</a>) is clearly the logical opposite of the null hypothesis
+(<a href="c-probs.html#eq:H0p2">(5.4)</a>): if <span class="math inline">\(\Delta\)</span> is not equal to 0, it must be “not equal” to
+0. So a two-sided alternative hypothesis must correspond to a “point”
+null hypothesis (<a href="c-probs.html#eq:H0p2">(5.4)</a>). For a one-sided alternative hypothesis,
+the same logic would seem to imply that the null hypothesis should also
+be one-sided: for example, <span class="math inline">\(H_{0}: \; \Delta\le 0\)</span> and
+<span class="math inline">\(H_{a}:\; \Delta&gt;0\)</span> would form such a logical pair. Often such
+“one-sided” null hypothesis is also closest to our research questions:
+for example, it would seem more interesting to try to test the
+hypothesis that the proportion of Yes-voters is less than or equal to
+0.5 than that it is exactly 0.5. It turns out, however, that when the
+alternative hypothesis is, say, <span class="math inline">\(H_{a}: \Delta&gt;0\)</span>, the test will be the
+same when the null hypothesis is <span class="math inline">\(H_{0}: \; \Delta\le 0\)</span> as when it is
+<span class="math inline">\(H_{0}: \Delta= 0\)</span>, and rejecting or not rejecting one of them is
+equivalent to rejecting or not rejecting the other. We can thus here
+always take the null hypothesis to be technically of the form
+(<a href="c-probs.html#eq:H0p2">(5.4)</a>), even if we are really interested in a corresponding
+“one-sided” null hypothesis. It is then only the alternative hypothesis
+which is explicitly either two-sided or one-sided.</p>
+</div>
+<div id="ss-probs-test1sample-teststatistic" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.5.2</span> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The test statistic used to test hypotheses of the form (<a href="c-probs.html#eq:H0p">(5.2)</a>) is
+the <strong>z-test statistic</strong>[^
+]
+<span class="math display" id="eq:ttest-gen">\[\begin{equation}
+z=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}}=\frac{\text{Estimate of the population difference $\Delta$}}{\text{Estimated standard error of the estimate of $\Delta$}}.
+\tag{5.8}
+\end{equation}\]</span>
+The statistic is introduced first in this form in
+order to draw attention to its generality. Null hypotheses in many
+ostensibly different situations can be formulated as hypotheses of the
+form (<a href="c-probs.html#eq:H0p2">(5.4)</a>) about population differences of some kind, and each
+can be tested with the test statistic (<a href="c-probs.html#eq:ttest-gen">(5.8)</a>). For example,
+all of the test statistics discussed in Chapters <a href="c-probs.html#c-probs">5</a>,
+<a href="c-means.html#c-means">7</a> and <a href="c-regression.html#c-regression">8</a> of this course pack will be of this
+type (but the <span class="math inline">\(\chi^{2}\)</span> test statistic of Chapter <a href="c-tables.html#c-tables">4</a> is
+not). The principles of the use and interpretation of the test that are
+introduced in this section apply almost unchanged also in these other
+contexts, and only the exact formulas for calculating <span class="math inline">\(\hat{\Delta}\)</span> and
+<span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span> will need to be defined separately for
+each of them. In some applications considered in Chapter <a href="c-means.html#c-means">7</a>
+the test statistic is typically called the <strong>t-test statistic</strong> instead
+of the <span class="math inline">\(z\)</span>-test statistic, but its basic idea is still the same.</p>
+<p>In (<a href="c-probs.html#eq:ttest-gen">(5.8)</a>), <span class="math inline">\(\hat{\Delta}\)</span> denotes a sample estimate of
+<span class="math inline">\(\Delta\)</span>. For a test of a single proportion, this is
+<span class="math display" id="eq:Dhatp">\[\begin{equation}
+\hat{\Delta} = \hat{\pi}-\pi_{0},
+\tag{5.9}
+\end{equation}\]</span>
+i.e. the difference between the sample proportion and
+<span class="math inline">\(\pi_{0}\)</span>. This is the core of the test statistic. Although the forms of
+the two statistics seem rather different, (<a href="c-probs.html#eq:Dhatp">(5.9)</a>) contains the
+comparison of the observed and expected sample values that was also at
+the heart of the <span class="math inline">\(\chi^{2}\)</span> test statistic (see formula at end of Section <a href="c-tables.html#ss-tables-chi2test-stat">4.3.3</a>) in Chapter
+<a href="c-tables.html#c-tables">4</a>. Here the “observed value” is the sample estimate
+<span class="math inline">\(\hat{\pi}\)</span> of the probability parameter, “expected value” is the value
+<span class="math inline">\(\pi_{0}\)</span> claimed for it by the null hypothesis, and
+<span class="math inline">\(\hat{\Delta}=\hat{\pi}-\pi_{0}\)</span> is their difference. (Equivalently, we
+could also say that the expected value of <span class="math inline">\(\Delta=\pi-\pi_{0}\)</span> under the
+null hypothesis (<a href="c-probs.html#eq:H0p2">(5.4)</a>) is 0, its observed value is <span class="math inline">\(\hat{\Delta}\)</span>,
+and <span class="math inline">\(\hat{\Delta}=\hat{\Delta}-0\)</span> is their difference.)</p>
+<p>If the null hypothesis was true, we would expect the observed difference
+<span class="math inline">\(\hat{\Delta}\)</span> to be close to 0. If, on the other hand, the true <span class="math inline">\(\pi\)</span>
+was different from <span class="math inline">\(\pi_{0}\)</span>, we would expect the same to be true of
+<span class="math inline">\(\hat{\pi}\)</span> and thus <span class="math inline">\(\hat{\Delta}\)</span> to be different from 0. In other
+words, the difference <span class="math inline">\(\hat{\Delta}=\hat{\pi}-\pi_{0}\)</span> tends to be small
+(close to zero) when the null hypothesis is true, and large (far from
+zero) when it is not true, thus satisfying one of the requirements for a
+good test statistic that were stated at the beginning of Section <a href="c-tables.html#ss-tables-chi2test-sdist">4.3.4</a>. (Whether
+in this we count as “large” both large positive and large negative
+values, or just one or the other, depends on the form of the alternative
+hypothesis, as explained in the next section.)</p>
+<p>The <span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span> in (<a href="c-probs.html#eq:ttest-gen">(5.8)</a>) denotes an
+estimate of the standard deviation of the sampling distribution of
+<span class="math inline">\(\hat{\Delta}\)</span>, which is also known as the estimated <strong>standard error</strong>
+of <span class="math inline">\(\hat{\Delta}\)</span>. For the test statistic (<a href="c-probs.html#eq:ttest-gen">(5.8)</a>), it is
+evaluated under the null hypothesis. The concept of a standard error of
+an estimate will be discussed in more detail in Section
+<a href="c-contd.html#s-contd-clt">6.4</a>. Its role in the test statistic is to provide an
+interpretable scale for the size of <span class="math inline">\(\hat{\Delta}\)</span>, so that the sampling
+distribution discussed in the next section will be of a convenient form.</p>
+<p>For a test of the hypothesis (<a href="c-probs.html#eq:H0p">(5.2)</a>) about a single proportion, the
+estimated standard error under the null hypothesis is
+<span class="math display" id="eq:seDhatp">\[\begin{equation}
+\hat{\sigma}_{\hat{\Delta}} = \sqrt{\frac{\pi_{0}(1-\pi_{0})}{n}},
+\tag{5.10}
+\end{equation}\]</span>
+and the specific formula of the test statistic
+(<a href="c-probs.html#eq:ttest-gen">(5.8)</a>) is then[^
+]
+<span class="math display" id="eq:ztestp">\[\begin{equation}
+z=\frac{\hat{\pi}-\pi_{0}}{\sqrt{\pi_{0}(1-\pi_{0})/n}}.
+\tag{5.11}
+\end{equation}\]</span>
+This is the <strong>one-sample <span class="math inline">\(z\)</span>-test statistic for a
+population proportion</strong>.</p>
+<p>In Example 5.1 we have <span class="math inline">\(\hat{\pi}=0.47\)</span>, <span class="math inline">\(\pi_{0}=0.5\)</span>, and <span class="math inline">\(n=702\)</span>, so
+<span class="math display">\[z=\frac{\hat{\pi}-\pi_{0}}{\sqrt{\pi_{0}(1-\pi_{0})/n}}=
+\frac{0.47-0.50}{\sqrt{0.50\times(1-0.50)/702}}=-1.59.\]</span> Similarly, in
+Example 5.2 we have <span class="math inline">\(\hat{\pi}=0.0457\)</span>, <span class="math inline">\(\pi_{0}=0.124\)</span>, <span class="math inline">\(n=4950\)</span>, and
+<span class="math display">\[z=\frac{0.0457-0.124}{\sqrt{0.124\times(1-0.124)/4950}}
+=
+\frac{-0.0783}{\sqrt{0.10862/4950}}=-16.71.\]</span> Strangely, SPSS does not
+provide a direct way of calculating this value. However, since the
+formula (<a href="c-probs.html#eq:ztestp">(5.11)</a>) is very simple, we can easily calculate it with a
+pocket calculator, after first using SPSS to find out <span class="math inline">\(\hat{\pi}\)</span>. This
+approach will be used in the computer classes.</p>
+</div>
+<div id="ss-probs-test1sample-samplingd" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.5.3</span> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Like the <span class="math inline">\(\chi^{2}\)</span> test of Chapter <a href="c-tables.html#c-tables">4</a>, the
+<span class="math inline">\(z\)</span>-test for a population proportion requires some conditions on the
+sample size in order for the approximate sampling distribution of the
+test statistic to be appropriate. These depend also on the value of
+<span class="math inline">\(\pi\)</span>, which we can estimate by <span class="math inline">\(\hat{\pi}\)</span>. One rule of thumb is that
+<span class="math inline">\(n\)</span> should be larger than 10 divided by <span class="math inline">\(\pi\)</span> or <span class="math inline">\(1-\pi\)</span>, whichever is
+smaller. When <span class="math inline">\(\pi\)</span> is not very small or very large, e.g. if it is
+between 0.3 and 0.7, this essentially amounts to the condition that <span class="math inline">\(n\)</span>
+should be at least 30. In the voting example 5.1, where
+<span class="math inline">\(\hat{\pi}=0.47\)</span>, the sample size of <span class="math inline">\(n=702\)</span> is clearly large enough. In
+the jury example 5.2, <span class="math inline">\(\hat{\pi}=0.0457\)</span> is much closer to zero, but
+since <span class="math inline">\(10/0.0457\)</span> is a little over 200, a sample of <span class="math inline">\(n=4950\)</span> is again
+sufficient.</p>
+<p>When the sample size is large enough, the sampling distribution of <span class="math inline">\(z\)</span>
+defined by (<a href="c-probs.html#eq:ztestp">(5.11)</a>) is approximately the <strong>standard normal
+distribution</strong>. The probability curve of this distribution is shown in
+Figure <a href="c-probs.html#fig:f-pval-prob">5.1</a>. For now we just take it as given, and postpone
+a general discussion of the normal distribution until Chapter
+<a href="c-means.html#c-means">7</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:f-pval-prob"></span>
+<img src="pval_zp.png" alt="Illustration of the calculation of P-values from the standard normal distribution. Here the value of the z-test statistic is z=-1.59 (as in the referendum example 5.1). The areas in grey indicate the two-sided P-values, i.e. the probabilities of values at least as far from 0 as the observed value of z." style="width:10cm" />
+<p class="caption">Figure 5.1: Illustration of the calculation of <span class="math inline">\(P\)</span>-values from the standard normal distribution. Here the value of the <span class="math inline">\(z\)</span>-test statistic is <span class="math inline">\(z=-1.59\)</span> (as in the referendum example 5.1). The areas in grey indicate the two-sided <span class="math inline">\(P\)</span>-values, i.e. the probabilities of values at least as far from 0 as the observed value of <span class="math inline">\(z\)</span>.</p>
+</div>
+<p>The <span class="math inline">\(P\)</span>-value of the test is calculated from this distribution using the
+general principles introduced in Section <a href="c-tables.html#ss-tables-chi2test-Pval">4.3.5</a>.
+In other words, the <span class="math inline">\(P\)</span>-value is the probability that the test statistic
+<span class="math inline">\(z\)</span> has a value that is as or more extreme than the value of <span class="math inline">\(z\)</span> in the
+observed sample. Now, however, the details of this calculation depend
+also on the alternative hypothesis, so some additional explanation is
+needed.</p>
+<p>Consider first the more common case of a two-sided alternative
+hypothesis (<a href="c-probs.html#eq:Hatwo">(5.5)</a>), that <span class="math inline">\(\Delta\ne 0\)</span>. As discussed in the
+previous section, it is <em>large</em> values of the test statistic which
+indicate evidence against the null hypothesis, because a large <span class="math inline">\(z\)</span> is
+obtained when the sample difference <span class="math inline">\(\hat{\Delta}=\hat{\pi}-\pi_{0}\)</span> is
+very different from the zero difference claimed by the null hypothesis.
+When the alternative is two-sided, “large” is taken to mean any value of
+<span class="math inline">\(z\)</span> far from zero, i.e. either large positive or large negative values,
+because both indicate that the sample difference is far from 0. If <span class="math inline">\(z\)</span>
+is large and positive, <span class="math inline">\(\hat{\Delta}\)</span> is much <em>larger</em> than 0. In
+example 5.1 this would indicate that a much larger proportion than 0.5
+of the sample say they intend to vote Yes. If <span class="math inline">\(z\)</span> is large and negative,
+<span class="math inline">\(\hat{\Delta}\)</span> is much <em>smaller</em> than 0, indicating a much smaller
+sample proportion than 0.5. Both of these cases would count as evidence
+against <span class="math inline">\(H_{0}\)</span> when the alternative hypothesis is two-sided.</p>
+<p>The observed value of the <span class="math inline">\(z\)</span>-test statistic in Example 5.1 was actually
+<span class="math inline">\(z=-1.59\)</span>. Evidence would thus be “as strong” against <span class="math inline">\(H_{0}\)</span> as the
+observed <span class="math inline">\(z\)</span> if we obtained a <span class="math inline">\(z\)</span>-test statistic of <span class="math inline">\(-1.59\)</span> or 1.59, the
+value exactly as far from 0 as the observed <span class="math inline">\(z\)</span> but above rather than
+below 0. Similarly, evidence against the null would be even stronger if
+<span class="math inline">\(z\)</span> was further from zero than 1.59, i.e. larger than 1.59 or smaller
+than <span class="math inline">\(-1.59\)</span>. To obtain the <span class="math inline">\(P\)</span>-value, we thus need to calculate the
+probability of observing a <span class="math inline">\(z\)</span>-test statistic which is at most <span class="math inline">\(-1.59\)</span>
+or at least 1.59 when the null hypothesis is true in the population. In
+general, the <span class="math inline">\(P\)</span>-value for testing the null hypothesis against a
+two-sided alternative is the probability of obtaining a value at least
+<span class="math inline">\(z\)</span> or at most <span class="math inline">\(-z\)</span> (when <span class="math inline">\(z\)</span> is positive, vice versa when it is
+negative), where <span class="math inline">\(z\)</span> here denotes the value of the test statistic in the
+sample. Such probabilities are calculated from the approximately
+standard normal sampling distribution of the test statistic under
+<span class="math inline">\(H_{0}\)</span>.</p>
+<p>This calculation of the <span class="math inline">\(P\)</span>-value is illustrated graphically in Figure
+<a href="c-probs.html#fig:f-pval-prob">5.1</a>. The curve in the plot is that of the standard normal
+distribution. Two areas are shown in grey under the curve, one on each
+tail of the distribution. The one on the left corresponds to values of
+<span class="math inline">\(-1.59\)</span> and smaller, and the one on the right to values of 1.59 or
+larger. Each of these areas is about 0.056, and the <span class="math inline">\(P\)</span>-value for a test
+against a two-sided alternative is their combined area,
+i.e. <span class="math inline">\(P=0.056+0.056=0.112\)</span>. This means that even if the true population
+proportion of Yes-voters was actually exactly 0.5, there would be a
+probability of 0.112 of obtaining a test statistic as or more extreme
+than the <span class="math inline">\(z=-1.59\)</span> that was actually observed in Example 5.1.</p>
+<p>In example 5.2 the observed test statistic was <span class="math inline">\(z=-16.71\)</span>. The two-sided
+<span class="math inline">\(P\)</span>-value is then the probability of values that are at most <span class="math inline">\(-16.71\)</span> or
+at least 16.71. These areas are not shown in Figure <a href="c-probs.html#fig:f-pval-prob">5.1</a>
+because they would not be visible in it. The horizontal axis of the
+figures runs from <span class="math inline">\(-4\)</span> to <span class="math inline">\(+4\)</span>, so <span class="math inline">\(-16.71\)</span> is clearly far in the tail
+of the distribution and the corresponding probability is very small; we
+would report it as <span class="math inline">\(P&lt;0.001\)</span>.</p>
+<p>Consider now the case of a one-sided alternative
+hypothesis. For example, in the referendum example we might have decided
+beforehand to focus only on the possiblity that the proportion of people
+who intend to vote Yes is smaller than 0.5, and hence consider the
+alternative hypothesis that <span class="math inline">\(\Delta&lt;0\)</span>. Two situations might then arise.
+First, suppose that the observed value of the sample difference is in
+the direction indicated by the alternative hypothesis. This is the case
+in the example, where the sample difference <span class="math inline">\(\hat{\Delta}=-0.03\)</span> is
+indeed smaller than zero, and the test statistic <span class="math inline">\(t=-1.59\)</span> is negative.
+The possible values of <span class="math inline">\(z\)</span> contributing to the <span class="math inline">\(P\)</span>-value are then those
+of <span class="math inline">\(-1.59\)</span> or smaller. Values of <span class="math inline">\(1.59\)</span> and larger are now not included,
+because positive values of the test statistic (corresponding to sample
+differences greater than 0) would not be regarded as evidence in favour
+of the claim that <span class="math inline">\(\Delta\)</span> is smaller than 0. The <span class="math inline">\(P\)</span>-value is thus only
+the probability corresponding to the area on the left tail of the curve
+in Figure <a href="c-probs.html#fig:f-pval-prob">5.1</a>, and the corresponding area on the right
+tail is not included. Since both areas have the same size, the one-sided
+<span class="math inline">\(P\)</span>-value is half the two-sided value, i.e. 0.056 instead of 0.112. In
+general, the one-sided <span class="math inline">\(P\)</span>-value for a <span class="math inline">\(z\)</span>-test of a proportion and
+other similar tests is always obtained by dividing the two-sided value
+by 2, if the sample evidence is in the direction of the one-sided
+alternative hypothesis.</p>
+<p>The second case occurs when the sample difference is not in the
+direction indicated by a one-sided alternative hypothesis. For example,
+suppose that the sample proportion of Yes-voters had actually been 0.53,
+i.e. 0.03 larger than 0.5, so that we had obtained <span class="math inline">\(z=+1.59\)</span> instead.
+The possible values of the test statistic which contributed to the
+<span class="math inline">\(P\)</span>-value would then be <span class="math inline">\(z=1.59\)</span> and all smaller values. These are “as
+strong or stronger evidence against the null hypothesis and in the
+direction of the alternative hypothesis” as required by the definition
+at the beginning of Section <a href="c-tables.html#ss-tables-chi2test-Pval">4.3.5</a>, since they agree with the alternative
+hypothesis (negative values of <span class="math inline">\(z\)</span>) or at least disagree with it less
+than the observed <span class="math inline">\(z\)</span> (positive values from 0 to 1.59). In Figure
+<a href="c-probs.html#fig:f-pval-prob">5.1</a>, these values would correspond to the area under the
+whole curve, apart from the region to the right of <span class="math inline">\(1.59\)</span> on the right
+tail. Since the probability of the latter is 0.056 and the total
+probability under the curve is 1, the required probability is
+<span class="math inline">\(P=1-0.0.56=0.944\)</span>. However, calculating the <span class="math inline">\(P\)</span>-value so precisely is
+hardly necessary in this case, as it is clearly going to be closer to 1
+than to 0. The conclusion from such a large <span class="math inline">\(P\)</span>-value will always be
+that the null hypothesis should not be rejected. This is also
+intuitively obvious, as a sample difference in the opposite direction
+from the one claimed by the alternative hypothesis is clearly not to be
+regarded as evidence in favour of that alternative hypothesis. In short,
+if the sample difference is in a different direction than a one-sided
+alternative hypothesis, the <span class="math inline">\(P\)</span>-value can be reported simply as <span class="math inline">\(P&gt;0.5\)</span>
+without further calculations.</p>
+<p>If a statistical software package is used to carry out the test, it will
+also report the <span class="math inline">\(P\)</span>-value and no further calculations are needed (except
+dividing a two-sided <span class="math inline">\(P\)</span>-value by 2, if a one-sided value is needed and
+only a two-sided one is reported). However, since SPSS does not
+currently provide a procedure for this test, and for exam purposes, we
+will briefly outline how an approximate <span class="math inline">\(P\)</span>-value is obtained using
+critical values from a table. This is done in a very similar way as for
+the <span class="math inline">\(\chi^{2}\)</span> test in Section <a href="c-tables.html#ss-tables-chi2test-Pval">4.3.5</a>.</p>
+<p>The first part of Table <a href="c-probs.html#tab:t-ttable">5.2</a> shows a table of critical values
+for the standard normal distribution. These values are also shown in the Appendix at the end of this course pack, on the
+last row of a larger table (the other parts of this table will be
+explained later, in Section <a href="c-means.html#ss-means-inference-variants">7.3.4</a>). A
+version of this table is included in all introductory text books on
+statistics, although its format may be slightly different in different
+books.</p>
+<table>
+<caption><span id="tab:t-ttable">Table 5.2: </span>A table of critical values for the standard normal distribution. The
+upper part of the table shows the critical values in one row, as in
+standard statistical tables (see the last row of the table in the Appendix). The lower part of the table includes the
+same numbers rearranged to show critical values for conventional
+significance levels for one- and two-sided tests.</caption>
+<tbody>
+<tr class="odd">
+<td></td>
+<td align="right">0.100</td>
+<td align="right">0.050</td>
+<td align="right">0.025</td>
+<td align="right">0.01</td>
+<td align="right">0.005</td>
+<td align="right">0.001</td>
+<td align="right">0.0005</td>
+</tr>
+<tr class="even">
+<td>Critical value</td>
+<td align="right">1.282</td>
+<td align="right">1.645</td>
+<td align="right">1.960</td>
+<td align="right">2.326</td>
+<td align="right">2.576</td>
+<td align="right">3.090</td>
+<td align="right">3.291</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">Alternative hypothesis</td>
+<td align="right">Significance levels 0.10</td>
+<td align="right">0.05</td>
+<td align="right">0.01</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">Two-sided</td>
+<td align="right">1.65</td>
+<td align="right">1.96</td>
+<td align="right">2.58</td>
+<td align="right">3.29</td>
+</tr>
+<tr class="odd">
+<td align="left">One-sided</td>
+<td align="right">1.28</td>
+<td align="right">1.65</td>
+<td align="right">2.33</td>
+<td align="right">3.09</td>
+</tr>
+</tbody>
+</table>
+<p>The columns of the first part of Table <a href="c-probs.html#tab:t-ttable">5.2</a> are labelled
+“Right-hand tail probabilities”, with separate columns for some values
+from 0.100 to 0.0005. This means that the probability that a value from
+the standard normal distribution is at least as large as the value given
+in a particular column is the number given at the top of that column.
+For example, the value in the column labelled “0.025” is 1.960,
+indicating that the probability of obtaining a value equal to or greater
+than 1.960 from the standard normal distribution is 0.025. Because the
+distribution is symmetric, the probability of values of at most <span class="math inline">\(-1.960\)</span>
+is also 0.025, and the total probability that a value is at least 1.960
+units from zero is <span class="math inline">\(0.025+0.025=0.05\)</span>.</p>
+<p>These values can be used to obtain bounds for <span class="math inline">\(P\)</span>-values, expressed in
+terms of conventional significance levels of 0.10, 0.05, 0.01 and 0.001.
+The values at which these tail probabilities are obtained are the
+corresponding critical values for the test statistic. They are shown in
+the lower part of Table <a href="c-probs.html#tab:t-ttable">5.2</a>, slightly rearranged for clarity
+of presentation and rounded to two decimal places (which is accurate
+enough for practical purposes). The basic idea of using the critical
+values is that if the observed (absolute value of) the <span class="math inline">\(z\)</span>-test
+statistic is <em>larger</em> than a critical value (for the required kind of
+alternative hypothesis) shown in the lower part of Table <a href="c-probs.html#tab:t-ttable">5.2</a>,
+the <span class="math inline">\(P\)</span>-value is <em>smaller</em> than the significance level corresponding to
+that critical value.</p>
+<p>The table shows only positive critical values. If the observed test
+statistic is actually negative, its negative (<span class="math inline">\(-\)</span>) sign is omitted and
+the resulting positive value (i.e. the absolute value of the statistic)
+is compared to the critical values. Note also that the critical value
+for a given significance level depends on whether the alternative
+hypothesis is two-sided or one-sided. In the one-sided case, the test
+statistic is compared to the critical values only if it is actually in
+the direction of the alternative hypothesis; if not, we can simply
+report <span class="math inline">\(P&gt;0.5\)</span> as discussed above.</p>
+<p>The <span class="math inline">\(P\)</span>-value obtained from the table is reported as being smaller than
+the smallest conventional significance level for which the corresponding
+critical value is exceeded by the observed test statistic. For instance,
+in the jury example 5.2 we have <span class="math inline">\(z=-16.71\)</span>. Considering a two-sided
+alternative hypothesis, 16.71 is larger than the critical values 1.65,
+1.96, 2.58 and 3.29 for all the standard significance levels, so we can
+report that <span class="math inline">\(P&lt;0.001\)</span>. For Example 5.1, in contrast, <span class="math inline">\(z=-1.59\)</span>, the
+absolute value of which is smaller than even the critical value 1.65 for
+the 10% significance level. For this example, we would report <span class="math inline">\(P&gt;0.1\)</span>.</p>
+<p>The intuitive idea of the critical values and their connection to the
+<span class="math inline">\(P\)</span>-values is illustrated for Example 5.1 by Figure <a href="c-probs.html#fig:f-pval-prob">5.1</a>. Here the observed test statistic is
+<span class="math inline">\(t=-1.59\)</span>, so the two-sided <span class="math inline">\(P\)</span>-value is the probability of values at
+least 1.59 or at most <span class="math inline">\(-1.59\)</span>, which correspond to the two gray areas in
+the tails of the distribution. Also shown in the plot is one of the
+critical values for two-sided tests, the 1.96 for significance level
+0.05. By definition of the critical values, the combined tail
+probability of values at least 1.96 from 0, i.e. the probability of
+values at least 1.96 or at most <span class="math inline">\(-1.96\)</span>, is 0.05. It is clear from the
+plot that since 1.59 is smaller than 1.96, these areas are smaller than
+the tail areas corresponding to 1.59 and <span class="math inline">\(-1.59\)</span>, and the combined area
+of the latter must be more than 0.05, i.e. it must be that <span class="math inline">\(P&gt;0.05\)</span>.
+Similar argument for the 10% critical value of 1.65 shows that <span class="math inline">\(P\)</span> is
+here also larger than 0.1.</p>
+</div>
+<div id="ss-probs-test1sample-conclusions" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.5.4</span> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The general principles of drawing and stating conclusions from a
+significance test have already been explained in Section
+<a href="c-tables.html#ss-tables-chi2test-conclusions">4.3.6</a>, so they need not be repeated here.
+Considering two-sided alternative hypotheses, the conclusions in our two
+examples are as follows:</p>
+<ul>
+<li><p>In the referendum example 5.1, <span class="math inline">\(P=0.112\)</span> for the null hypothesis
+that <span class="math inline">\(\pi=0.5\)</span> in the population of eligible voters. The null
+hypothesis is not rejected at conventional levels of significance.
+There is not enough evidence to conclude that the proportion of
+voters who definitely intend to vote Yes differs from one half.</p></li>
+<li><p>In the jury example 5.2, <span class="math inline">\(P&lt;0.001\)</span> for the null hypothesis that
+<span class="math inline">\(\pi=0.124\)</span>. The null hypothesis is thus overwhelmingly rejected at
+any conventional level of significance. There is very strong
+evidence that the probability of a black person being selected to
+the jury pool differs from the proportion of black people in the
+population of the county.</p></li>
+</ul>
+</div>
+<div id="ss-probs-test1sample-summary" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.5.5</span> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As a summary, let us again repeat the main steps of the test described
+in this section in a concise form, using the voting variable of Example
+5.1 for illustration:</p>
+<ol style="list-style-type: decimal">
+<li><p>Data: a sample of size <span class="math inline">\(n=702\)</span> of a dichotomous variable <span class="math inline">\(Y\)</span> with
+values 1 (Yes) and 0 (No or undecided), with the sample proportion
+of ones <span class="math inline">\(\hat{\pi}=0.47\)</span>.</p></li>
+<li><p>Assumptions: the observations are a random sample from a population
+distribution with some population proportion (probability) <span class="math inline">\(\pi\)</span>,
+and the sample size <span class="math inline">\(n\)</span> is large enough for the test to be valid
+(for example, <span class="math inline">\(n\ge 30\)</span> when <span class="math inline">\(\pi_{0}\)</span> is between about 0.3 and 0.7,
+as it is here).</p></li>
+<li><p>Hypotheses: null hypothesis <span class="math inline">\(H_{0}: \pi=\pi_{0}\)</span> against the
+alternative hypothesis <span class="math inline">\(H_{a}: \pi\ne \pi_{0}\)</span>, where <span class="math inline">\(\pi_{0}=0.5\)</span>.</p></li>
+<li><p>The test statistic: the <span class="math inline">\(z\)</span>-statistic
+<span class="math display">\[z=\frac{\hat{\pi}-\pi_{0}}{\sqrt{\pi_{0}(1-\pi_{0})/n}}=
+\frac{0.47-0.50}{\sqrt{0.50\times(1-0.50)/702}}=-1.59.\]</span></p></li>
+<li><p>The sampling distribution of the test statistic when <span class="math inline">\(H_{0}\)</span> is
+true: a standard normal distribution.</p></li>
+<li><p>The <span class="math inline">\(P\)</span>-value: the probability that a randomly selected value from
+the the standard normal distribution is at most <span class="math inline">\(-1.59\)</span> or at least
+1.59, which is <span class="math inline">\(P=0.112\)</span>.</p>
+<ul>
+<li>If the precise <span class="math inline">\(P\)</span>-value is not available, we can observe that
+1.59 is smaller than the two-sided critical value 1.65 for the
+10% level of significance. Thus it must be that <span class="math inline">\(P&gt;0.1\)</span>.</li>
+</ul></li>
+<li><p>Conclusion: The null hypothesis is not rejected (<span class="math inline">\(P=0.112\)</span>). There
+is not enough evidence to conclude that the proportion of eligible
+voters who definitely intend to vote Yes differs from one half.
+Based on this opinion poll, the referendum remains too close
+to call.</p></li>
+</ol>
+</div>
+</div>
+<div id="s-probs-1sampleci" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.6</span> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-probs-1sampleci-intro" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.6.1</span> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A significance test assesses whether it is plausible, given the evidence
+in the observed data, that a population parameter or parameters have a
+specific set of values claimed by the null hypothesis. For example, in
+Section <a href="c-probs.html#s-probs-test1sample">5.5</a> we asked such a question about the
+probability parameter of a binary variable in a single population.</p>
+<p>In many ways a more natural approach would be try to identify all of
+those values of a parameter which <em>are</em> plausible given the data. This
+leads to a form of statistical inference known as <strong>interval
+estimation</strong>, which aims to present not only a single best guess (i.e. a
+point estimate) of a population parameter, but also a range of plausible
+values (an <strong>interval estimate</strong>) for it. Such an interval is known as a
+<strong>confidence interval</strong>. This section introduces the idea of confidence
+intervals, and shows how to construct them for a population probability.
+In later sections, the same principles will be used to calculate
+confidence intervals for other kinds of population parameters.</p>
+<p>Interval estimation is an often underused part of statistical inference,
+while significance testing is arguably overused or at least often
+misused. In most contexts it would be useful to report confidence
+intervals in addition to, or instead of, results of significance tests.
+This is not done often enough in research publications in the social
+sciences.</p>
+</div>
+<div id="s-probs-1sampleci-calc" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.6.2</span> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Our aim is again to draw inference on the difference
+<span class="math inline">\(\Delta=\pi-\pi_{0}\)</span> or, equivalently, the population probability <span class="math inline">\(\pi\)</span>.
+The point estimate of <span class="math inline">\(\Delta\)</span> is <span class="math inline">\(\hat{\Delta}=\hat{\pi}-\pi_{0}\)</span> where
+<span class="math inline">\(\hat{\pi}\)</span> is the sample proportion corresponding to <span class="math inline">\(\pi\)</span>. Suppose
+that the conditions on the sample size <span class="math inline">\(n\)</span> that were discussed in
+Section <a href="c-probs.html#ss-probs-test1sample-samplingd">5.5.3</a> are again satisfied.</p>
+<p>Consider now Figure @ref(fig:f-pval-prob}. One of
+the results illustrated by it is that if <span class="math inline">\(\pi_{0}\)</span> is the true value of
+of the population probability <span class="math inline">\(\pi\)</span>, so that <span class="math inline">\(\Delta=\pi-\pi_{0}=0\)</span>,
+there is a probability of 0.95 that for a randomly drawn sample from the
+population the <span class="math inline">\(z\)</span>-test statistic
+<span class="math inline">\(z=\hat{\Delta}/\hat{\sigma}_{\hat{\Delta}}\)</span> is between <span class="math inline">\(-1.96\)</span> and
+<span class="math inline">\(+1.96\)</span>. This also implies that the probability is 0.95 that in such a
+sample the observed value of <span class="math inline">\(\hat{\Delta}\)</span> will be between
+<span class="math inline">\(\Delta-1.96\,\hat{\sigma}_{\hat{\Delta}}\)</span> and
+<span class="math inline">\(\Delta+1.96\,\hat{\sigma}_{\hat{\Delta}}\)</span>. Furthermore, it is clear
+from the figure that all of the values within this interval are more
+likely to occur than any of the values outside the interval (i.e. those
+in the two tails of the sampling distribution). The interval thus seems
+like a sensible summary of the “most likely” values that the estimate
+<span class="math inline">\(\hat{\Delta}\)</span> may have in random samples.</p>
+<p>A confidence interval essentially turns this around, into a statement
+about the unknown true value of <span class="math inline">\(\Delta\)</span> in the population, even in
+cases where <span class="math inline">\(\Delta\)</span> is not 0. This is done by substituting
+<span class="math inline">\(\hat{\Delta}\)</span> for <span class="math inline">\(\Delta\)</span> above, to create the interval
+<span class="math display" id="eq:cim0">\[\begin{equation}
+\text{from  }\hat{\Delta} -1.96\times \hat{\sigma}_{\hat{\Delta}}\text{  to  }\hat{\Delta}+1.96\times \hat{\sigma}_{\hat{\Delta}}.
+\tag{5.12}
+\end{equation}\]</span>
+This is the <strong>95 % confidence interval</strong> for the
+population difference <span class="math inline">\(\Delta\)</span>. It is usually written more concisely as
+<span class="math display" id="eq:cim1">\[\begin{equation}
+\hat{\Delta}\pm 1.96\, \hat{\sigma}_{\hat{\Delta}}
+\tag{5.13}
+\end{equation}\]</span>
+where the “plusminus” symbol <span class="math inline">\(\pm\)</span> indicates that we
+calculate the two endpoints of the interval as in (<a href="c-probs.html#eq:cim0">(5.12)</a>), one
+below and one above <span class="math inline">\(\hat{\Delta}\)</span>.</p>
+<p>Expression (<a href="c-probs.html#eq:cim1">(5.13)</a>) is general in the sense that many different
+quantities can take the role of <span class="math inline">\(\Delta\)</span> in it. Here we consider for now
+the case of <span class="math inline">\(\Delta=\pi-\pi_{0}\)</span>. The estimated standard error
+<span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span> is analogous to (<a href="c-probs.html#eq:seDhatp">(5.10)</a>) used for
+the <span class="math inline">\(z\)</span>-test, but not the same. This is because the confidence interval
+is not calculated under the null hypothesis <span class="math inline">\(H_{0}:\; \pi=\pi_{0}\)</span>, so
+we cannot use <span class="math inline">\(\pi_{0}\)</span> for <span class="math inline">\(\pi\)</span> in the standard error. Instead, <span class="math inline">\(\pi\)</span>
+is estimated by the sample proportion <span class="math inline">\(\hat{\pi}\)</span>, giving the estimated
+standard error[^
+]
+<span class="math display" id="eq:sephat2">\[\begin{equation}
+\hat{\sigma}_{\hat{\Delta}} = \sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}}
+\tag{5.14}
+\end{equation}\]</span>
+and thus the 95% confidence interval
+<span class="math display">\[(\hat{\pi}-\pi_{0}) \pm 1.96 \;
+\sqrt{
+\frac{\hat{\pi}(1-\hat{\pi})}{n}}\]</span> for <span class="math inline">\(\Delta=\pi-\pi_{0}\)</span>.
+Alternatively, a confidence interval for <span class="math inline">\(\pi\)</span> itself is given by
+<span class="math display" id="eq:cip2">\[\begin{equation}
+\hat{\pi} \pm 1.96 \;\sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}}.
+\tag{5.15}
+\end{equation}\]</span>
+This is typically the most useful interval for use in
+practice. For instance, in the referendum example 5.1 this gives a 95%
+confidence interval of
+<span class="math display">\[0.470\pm 1.96\times \sqrt{\frac{0.470\times(1-0.470)}{702}}
+=0.470\pm 0.0369=(0.433, 0.507)\]</span> for the proportion of definite
+Yes-voters in the population. Similarly, in Example 5.2 the 95%
+confidence interval for the probability of a black person being selected
+for the jury pool is (0.040, 0.052). These intervals are also shown in
+Table <a href="c-probs.html#tab:t-probex">5.1</a>.</p>
+</div>
+<div id="s-probs-1sampleci-int" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.6.3</span> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As with the <span class="math inline">\(P\)</span>-value of a significance test, the precise interpretation
+of a confidence interval refers to probabilities calculated from a
+sampling distribution, i.e. probabilities evaluated from a hypothetical
+exercise of repeated sampling:</p>
+<ul>
+<li>If we obtained many samples from the population and calculated the
+confidence interval for each such sample using the formula
+(<a href="c-probs.html#eq:cip2">(5.15)</a>), approximately 95% of these intervals would contain the
+true value of the population proportion <span class="math inline">\(\pi\)</span>.</li>
+</ul>
+<p>This is undeniably convoluted, even more so than the precise
+interpretation of a <span class="math inline">\(P\)</span>-value. In practise a confidence interval would
+not usually be described in exactly these words. Instead, a research
+report might, for example, write that (in the referendum example) “the
+95 % confidence interval for the proportion of eligible voters in the
+population who definitely intend to vote Yes is (0.433, 0.507)”, or that
+“we are 95 % confident that the proportion of eligible voters in the
+population who definitely intend to vote Yes is between 43.3% and
+50.7%”. Such a statement in effect assumes that the readers will be
+familiar enough with the idea of confidence intervals to understand the
+claim. It is nevertheless useful to be aware of the more careful
+interpretation of a confidence interval, if only to avoid
+misunderstandings. The most common error is to claim that “there is a
+95% probability that the proportion in the population is between 0.433
+and 0.507”. Although the difference to the interpretation given above
+may seem small, the latter statement is not really true, or strictly
+speaking even meaningful, in the statistical framework considered here.</p>
+<p>In place of the 1.96 in (<a href="c-probs.html#eq:cim1">(5.13)</a>), we may also use other numbers. To
+allow for this in the notation, we can also write
+<span class="math display" id="eq:ci-D-gen">\[\begin{equation}
+\hat{\Delta} \pm z_{\alpha/2}\; \hat{\sigma}_{\hat{\Delta}}.
+\tag{5.16}
+\end{equation}\]</span>
+where the multiplier <span class="math inline">\(z_{\alpha/2}\)</span> is a number which
+depends on two things. One of them is the sampling distribution of
+<span class="math inline">\(\hat{\Delta}\)</span>, which is here assumed to be the normal distribution
+(another possibility is discussed in Section
+<a href="c-means.html#ss-means-inference-variants">7.3.4</a>). The second is the <strong>confidence
+level</strong> which we have chosen for the confidence interval. For example,
+the probability of 0.95 in the interpretation of a 95% confidence
+interval discussed above is the confidence level of that interval.
+Conventionally the 0.95 level is most commonly used, while other
+standard choices are 0.90 and 0.99, i.e. 90% and 99% confidence
+intervals.</p>
+<p>In the symbol <span class="math inline">\(z_{\alpha/2}\)</span>, <span class="math inline">\(\alpha\)</span> is a number such that <span class="math inline">\(1-\alpha\)</span>
+equals the required confidence level. In other words, <span class="math inline">\(\alpha=0.1\)</span>,
+0.05, and 0.01 for confidence levels of <span class="math inline">\(1-\alpha=0.90\)</span>, 0.95 and 0.99
+respectively. The values that are required for the conventional levels
+are <span class="math inline">\(z_{0.10/2}=z_{0.05}=1.64\)</span>, <span class="math inline">\(z_{0.05/2}=z_{0.025}=1.96\)</span>, and
+<span class="math inline">\(z_{0.01/2}=z_{0.005}=2.58\)</span>, which correspond to intervals at the
+confidence levels of 90%, 95% and 99% respectively. These values are
+also shown in Table <a href="c-probs.html#tab:t-ciq">5.3</a>.</p>
+<table style="width:88%;">
+<caption><span id="tab:t-ciq">Table 5.3: </span>Multipliers <span class="math inline">\(z_{\alpha/2}\)</span> used to obtain confidence intervals based
+on the normal distribution, for three standard confidence levels.
+These values are substituted for <span class="math inline">\(z_{\alpha/2}\)</span> in formula
+(<a href="c-probs.html#eq:ci-D-gen">(5.16)</a>) to obtain the confidence interval.</caption>
+<colgroup>
+<col width="38%" />
+<col width="29%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"><br />
+</td>
+<td align="right">Confidence levels:</td>
+<td align="right"><br />
+</td>
+<td align="right"><br />
+</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="right">90%</td>
+<td align="right">95%</td>
+<td align="right">99%</td>
+</tr>
+<tr class="odd">
+<td align="left">Multiplier <span class="math inline">\(z_{\alpha/2}\)</span></td>
+<td align="right">1.64</td>
+<td align="right">1.96</td>
+<td align="right">2.58</td>
+</tr>
+</tbody>
+</table>
+<p>A confidence interval contains, loosely speaking, those numbers which
+are considered plausible values for the unknown population difference
+<span class="math inline">\(\Delta\)</span> in the light of the evidence in the data. The <em>width</em> of the
+interval thus reflects our uncertainty about the exact value of
+<span class="math inline">\(\Delta\)</span>, which in turn is related to the amount of information the data
+provide about <span class="math inline">\(\Delta\)</span>. If the interval is wide, many values are
+consistent with the observed data, so there is still a large amount of
+uncertainty; if the interval is narrow, we have much information about
+<span class="math inline">\(\Delta\)</span> and thus little uncertainty. Another way of stating this is
+that when the confidence interval is narrow, estimates of <span class="math inline">\(\Delta\)</span> are
+very <em>precise</em>.</p>
+<p>The width of the interval (<a href="c-probs.html#eq:ci-D-gen">(5.16)</a>) is
+<span class="math inline">\(2\times z_{\alpha/2}\times \hat{\sigma}_{\hat{\Delta}}\)</span>. This depends
+on</p>
+<ul>
+<li><p>The confidence level: the higher the level, the wider the interval.
+Thus a 99% confidence interval is always wider than a 95% interval
+for the same data, and wider still than a 90% interval. This is
+logically inevitable: if we want to state with high level of
+confidence that a parameter is within a certain interval, we must
+allow the interval to contain a wide range of values. It also
+explains why we do not consider a 100% confidence interval: this
+would contain all possible values of <span class="math inline">\(\Delta\)</span> and exclude none,
+making no use of the data at all. Instead, we aim for a high but not
+perfect level of confidence, obtaining an interval which contains
+some but not all possible values, for the price of a small chance of
+incorrect conclusions.</p></li>
+<li><p>The standard error <span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span>, which in the case
+of a single proportion is (<a href="c-probs.html#eq:sephat2">(5.14)</a>). This in turn depends on</p>
+<ul>
+<li><p>the sample size <span class="math inline">\(n\)</span>: the larger this is, the narrower the
+interval. Increasing the sample size thus results (other things
+being equal) in reduced uncertainty and higher precision.</p></li>
+<li><p>the true population proportion <span class="math inline">\(\pi\)</span>: the closer this is to 0.5,
+the wider the interval. Unlike the sample size, this determinant
+of the estimation uncertainty is not in our control.</p></li>
+</ul></li>
+</ul>
+<p>Opinion polls of the kind illustrated by the referendum example are
+probably where non-academic audiences are most likely to encounter
+confidence intervals, although not under that label. Media reports of
+such polls typically include a <em>margin of error</em> for the results. For
+example, in the referendum example it might be reported that 47% of the
+respondents said that they would definitely vote Yes, and that “the
+study has a margin of error of plus or minus four percentage points”. In
+most cases the phrase “margin of error” refers to a 95% confidence
+interval. Unless otherwise mentioned, we can thus take a statement like
+the one above to mean that the 95% confidence interval for the
+proportion of interest is approximately <span class="math inline">\(47\pm 4\)</span> percentage points. For
+a realistic interpretation of the implications of the results, the width
+of this interval is at least as important as the point estimate of the
+proportion. This is often neglected in media reports of opinion polls,
+where the point estimate tends to be headline news, while the margin of
+error is typically mentioned only in passing or omitted altogether.</p>
+</div>
+<div id="ss-means-ci-vstests" class="section level3 hasAnchor">
+<h3><span class="header-section-number">5.6.4</span> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are some obvious similarities between the conclusions from
+significance tests and confidence intervals. For example, a <span class="math inline">\(z\)</span>-test in
+the referendum example 5.1 showed that the null hypothesis that the
+population proportion <span class="math inline">\(\pi\)</span> was 0.5 was not rejected (<span class="math inline">\(P=0.112\)</span>). Thus
+0.5 is a plausible value for <span class="math inline">\(\pi\)</span> in light of the observed data. The
+95% confidence interval for <span class="math inline">\(\pi\)</span> showed that, at this level of
+confidence, plausible values for <span class="math inline">\(\pi\)</span> are those between 0.433 and
+0.507. In particular, these include 0.5, so the confidence interval also
+indicates that a proportion of 0.5 is plausible. This connection between
+the test and the confidence interval is in fact exact:</p>
+<ul>
+<li>If the hypothesis <span class="math inline">\(H_{0}: \Delta=0\)</span> about a population quantity
+<span class="math inline">\(\Delta\)</span> is rejected at the 5% level of significance using the
+<span class="math inline">\(z\)</span>-test against a <em>two-sided</em> alternative hypothesis, the 95 %
+confidence interval for <span class="math inline">\(\Delta\)</span> will not contain 0, and vice versa.
+Similarly, if <span class="math inline">\(H_{0}\)</span> is not rejected, the confidence interval will
+contain 0, and vice versa.</li>
+</ul>
+<p>The same is true for other matching pairs of levels of significance and
+confidence, e.g. for a test with a 1% level of significance and a 99%
+(i.e. (100-1)%) confidence interval. In short, the significance test and
+the confidence interval will in these cases always give the same answer
+about whether or not a parameter value is plausible (consistent with the
+data) at a given level of significance/confidence.</p>
+<p>These pairs of a test and an interval are exactly comparable in that
+they concern the same population parameter, estimate all parameters in
+the same way, use the same sampling distribution for inference, and use
+the same level of significance/confidence. Not all tests and confidence
+intervals have exact pairs in this way. Also, some tests are for
+hypotheses about more than one parameter at once, so there is no
+corresponding single confidence interval. Nevertheless, the connection
+stated above is useful for understanding the ideas of both tests and
+confidence intervals.</p>
+<p>These results also illustrate how confidence
+intervals are inherently more informative than significance tests. For
+instance, in the jury example 5.2, both the test and the confidence
+interval agree on the implausibility of the claim that the population
+probability of being selected to the jury panel is the same as the
+proportion (0.124) of black people in the population, since the claim
+that <span class="math inline">\(\pi=0.124\)</span> is rejected by the test (with <span class="math inline">\(P&lt;0.001\)</span>) and outside
+the interval <span class="math inline">\((0.040; 0.052)\)</span>. Unlike the test, however, the confidence
+interval summarizes the plausibility of <em>all</em> possible values of <span class="math inline">\(\pi\)</span>
+and not just <span class="math inline">\(\pi_{0}=0.124\)</span>. One way to describe this is to consider
+what would have happened if we had carried out a series of significance
+tests of null hypotheses of the form <span class="math inline">\(H_{0}: \pi=\pi_{0}\)</span> for a range of
+values of <span class="math inline">\(\pi_{0}\)</span>. The confidence interval contains all those values
+<span class="math inline">\(\pi_{0}\)</span> which would not have been rejected by the test, while all the
+values outside the interval would have been rejected. Here
+<span class="math inline">\(H_{0}: \pi=\pi_{0}\)</span> would thus not have been rejected at the 5% level
+if <span class="math inline">\(\pi_{0}\)</span> had been between 0.040 and 0.052, and rejected otherwise.
+This, of course, is not how significance tests are actually conducted,
+but it provides a useful additional interpretation of confidence
+intervals.</p>
+<p>A confidence interval is particularly useful when the parameter of
+interest is measured in familiar units, such as the proportions
+considered so far. We may then try to judge, in substantive terms, how
+wide the interval is and how far it is from particular values of
+interest. In the jury example the 95% confidence interval ranges from
+4.0% to 5.2%, which suggests that the population probability is
+estimated fairly precisely by this survey. The interval also reveals
+that even its upper bound is less than half of the figure of 12.4% which
+would correspond to proportional representation of black people in the jury
+pool, a result which suggests quite substantial underrepresentation in
+the pool.</p>
+</div>
+</div>
+<div id="s-probs-2samples" class="section level2 hasAnchor">
+<h2><span class="header-section-number">5.7</span> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In Examples 5.3 and 5.4, the aim is to compare the proportion of a
+dichotomous response variable <span class="math inline">\(Y\)</span> between two groups of a dichotomous
+explanatory variable <span class="math inline">\(X\)</span>:</p>
+<ul>
+<li><p>Example 5.3: compare the proportion of polio cases among the
+unvaccinated (<span class="math inline">\(\pi_{1}\)</span>) and vaccinated (<span class="math inline">\(\pi_{2}\)</span>) children.</p></li>
+<li><p>Example 5.4: compare the proportion of optimistic responses to a
+negative (<span class="math inline">\(\pi_{1}\)</span>) vs. positive wording of the question
+(<span class="math inline">\(\pi_{2}\)</span>).</p></li>
+</ul>
+<p>The quantity of interest is then the population difference
+<span class="math display" id="eq:Dp2sample">\[\begin{equation}
+\Delta=\pi_{2}-\pi_{1}.
+\tag{5.17}
+\end{equation}\]</span>
+For a significance test of this, the null hypothesis
+will again be <span class="math inline">\(H_{0}:\; \Delta=0\)</span>, which is in this case equivalent to
+the hypothesis of equal proportions
+<span class="math display" id="eq:H0pD">\[\begin{equation}
+H_{0}:\; \pi_{1} = \pi_{2}.
+\tag{5.18}
+\end{equation}\]</span>
+The null hypothesis thus claims that there is no
+association between the group variable <span class="math inline">\(X\)</span> and the dichotomous response
+variable <span class="math inline">\(Y\)</span>, while the alternative hypothesis (e.g.  the two-sided one
+<span class="math inline">\(H_{a}:\; \pi_{1}\ne \pi_{2}\)</span>, i.e. <span class="math inline">\(H_{a}:\; \Delta\ne 0\)</span>) implies that there is an association.</p>
+<p>The obvious estimates of <span class="math inline">\(\pi_{1}\)</span> and <span class="math inline">\(\pi_{2}\)</span> are the corresponding
+sample proportions <span class="math inline">\(\hat{\pi}_{1}\)</span> and <span class="math inline">\(\hat{\pi}_{2}\)</span>, calculated from
+samples of sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> respectively, and the estimate of
+<span class="math inline">\(\Delta\)</span> is then
+<span class="math display" id="eq:Dhatpi">\[\begin{equation}
+\hat{\Delta}=\hat{\pi}_{2} - \hat{\pi}_{1}.
+\tag{5.19}
+\end{equation}\]</span>
+This gives <span class="math inline">\(\hat{\Delta}=0.000284-0.000706=-0.000422\)</span>
+in Example 5.3 and <span class="math inline">\(\hat{\Delta}=0.364-0.279=0.085\)</span> in Example 5.4. In
+the samples, the proportion of polio cases is thus lower in the
+vaccinated group, and the proportion of optimistic answers is higher in
+response to a positively worded question. Note also that although the
+inference discussed below focuses on the difference of the proportions,
+for purely descriptive purposes we might prefer to use some other
+statistic, such as the ratio of the proportions. For example, the
+difference of 0.000422 in polio incidence between vaccine and control
+groups may seem small, because the proportions in both groups are small.
+A better idea of the the magnitude of the contrast is given by their
+ratio of <span class="math inline">\(0.000706/0.000284=2.49\)</span> (this is known as the <em>risk ratio</em>).
+In other words, the rate of polio infection in the unvaccinated group
+was two and a half times the rate in the vaccinated group.</p>
+<p> The tests and confidence intervals discussed below are
+again based on the assumption that the relevant sampling distributions
+are approximately normal, which is true when the sample sizes <span class="math inline">\(n_{1}\)</span>
+and <span class="math inline">\(n_{2}\)</span> are large enough. The conditions for this are not very
+demanding: one rule of thumb states that the methods described in this
+section are reasonably valid if in both groups the number of
+observations with <span class="math inline">\(Y\)</span> having the value 1, and of ones with the value 0,
+are both more than 5. This condition is satisfied in both of the
+examples considered here.</p>
+<p>The validity of the test, as well as the amount of information the data
+provide about <span class="math inline">\(\pi_{1}\)</span> and <span class="math inline">\(\pi_{2}\)</span> in general, thus depends not just
+on the overall sample sizes but on having enough observations of both
+values of <span class="math inline">\(Y\)</span>. The critical quantity is then the number of observations
+in the rarer category of <span class="math inline">\(Y\)</span>. In Example 5.3 this means the numbers of
+children diagnosed with polio, because the probability of polio was low
+in the study population. The numbers of eventual polio cases were 142
+and 57 in the control and treatment groups respectively, so the rule of
+thumb stated above was satisfied. With such low probabilities of polio
+incidence, sufficient numbers of cases were achieved only by making the
+overall sample sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> large enough. That is why the
+trial had to be very large, involving hundreds of thousands of
+participants.</p>
+<p>The standard error of <span class="math inline">\(\hat{\Delta}\)</span> is
+<span class="math display" id="eq:sigmaDpi">\[\begin{equation}
+\sigma_{\hat{\Delta}} =\sqrt{\frac{\pi_{2}(1-\pi_{2})}{n_{2}}+\frac{\pi_{1}(1-\pi_{1})}{n_{1}}}.
+\tag{5.20}
+\end{equation}\]</span>
+As in the one-sample case above, the best way to
+estimate this is different for a significance test than for a confidence
+interval. For a test, the standard error can be estimated under
+assumption that the null hypothesis (<a href="c-probs.html#eq:H0pD">(5.18)</a>) is true, in which case
+the population proportion is the same in both groups. A good estimate of
+this common proportion, denoted below by <span class="math inline">\(\hat{\pi}\)</span>, is the proportion
+of observations with value 1 for <span class="math inline">\(Y\)</span> in the total sample of
+<span class="math inline">\(n_{1}+n_{2}\)</span> observations, pooling observations from both groups
+together; expressed in terms of the group-specific estimates, this is
+<span class="math display" id="eq:phat2sample">\[\begin{equation}
+\hat{\pi} = \frac{n_{1}\hat{\pi}_{1}+n_{2}\hat{\pi}_{2}}{n_{1}+n_{2}}.
+\tag{5.21}
+\end{equation}\]</span>
+Using this for both <span class="math inline">\(\pi_{1}\)</span> and <span class="math inline">\(\pi_{2}\)</span> in
+(<a href="c-probs.html#eq:sigmaDpi">(5.20)</a>) gives the estimated standard error
+<span class="math display" id="eq:seDpi">\[\begin{equation}
+\hat{\sigma}_{\hat{\Delta}}=\sqrt{\hat{\pi}(1-\hat{\pi}) \; \left(\frac{1}{n_{2}}+\frac{1}{n_{1}}\right),}
+\tag{5.22}
+\end{equation}\]</span>
+and using (<a href="c-probs.html#eq:Dhatpi">(5.19)</a>) and (<a href="c-probs.html#eq:seDpi">(5.22)</a>) in the
+general formula (<a href="c-probs.html#eq:ttest-gen">(5.8)</a>) gives the <strong>two-sample <span class="math inline">\(z\)</span>-test
+statistic for proportions</strong>
+<span class="math display" id="eq:ztestDpi">\[\begin{equation}
+z=\frac{\hat{\pi}_{2}-\hat{\pi}_{1}}{\sqrt{\hat{\pi}(1-\hat{\pi})(1/n_{2}+1/n_{1})}}
+\tag{5.23}
+\end{equation}\]</span>
+where <span class="math inline">\(\hat{\pi}\)</span> is given by (<a href="c-probs.html#eq:phat2sample">(5.21)</a>).
+When the null hypothesis is true, the sampling distribution of this test
+statistic is approximately standard normal when the sample sizes are
+large enough.</p>
+<p>For a confidence interval, the calculation of the estimated standard
+error cannot assume that (<a href="c-probs.html#eq:H0pD">(5.18)</a>) is true. Instead, we use the
+estimate
+<span class="math display" id="eq:seDpi2">\[\begin{equation}
+\hat{\sigma}_{\hat{\Delta}} =\sqrt{\frac{\hat{\pi}_{2}(1-\hat{\pi}_{2})}{n_{2}}\frac{\hat{\pi}_{1}(1-\hat{\pi}_{1})}{n_{1}}}
+\tag{5.24}
+\end{equation}\]</span>
+and, substituting this to the general formula
+(<a href="c-probs.html#eq:ci-D-gen">(5.16)</a>), we get
+<span class="math display" id="eq:ciDpi">\[\begin{equation}
+(\hat{\pi}_{2}-\hat{\pi}_{1}) \pm z_{\alpha/2} \;\sqrt{\frac{\hat{\pi}_{2}(1-\hat{\pi}_{2})}{n_{2}} +\frac{\hat{\pi}_{1}(1-\hat{\pi}_{1})}{n_{1}}}
+\tag{5.25}
+\end{equation}\]</span>
+as the confidence interval for <span class="math inline">\(\Delta=\pi_{2}-\pi_{1}\)</span>,
+with confidence level <span class="math inline">\(1-\alpha\)</span>.</p>
+<p>For an illustration of the calculations, consider Example 5.4. Denoting
+the group of respondents answering the negatively worded question by 1
+and those with the positive question by 2, the basic quantities are
+<span class="math inline">\(n_{1}=921\)</span>, <span class="math inline">\(\hat{\pi}_{1}=0.279\)</span>, <span class="math inline">\(n_{2}=929\)</span> and
+<span class="math inline">\(\hat{\pi}_{2}=0.364\)</span>. The estimated difference in the proportions of
+respondents giving an optimistic answer is thus
+<span class="math display">\[\hat{\Delta} = \hat{\pi}_{2}-\hat{\pi}_{1} = 0.364-0.279 = 0.085.\]</span>
+For a significance test, the estimated standard error of <span class="math inline">\(\hat{\Delta}\)</span>
+uses the pooled estimate (<a href="c-probs.html#eq:phat2sample">(5.21)</a>) of the population
+proportion, which is given by
+<span class="math display">\[\hat{\pi} = \frac{921\times 0.279+929\times 0.364}{921+929}=
+\frac{257+338}{921+929} = 0.322.\]</span> The standard error from (<a href="c-probs.html#eq:seDpi">(5.22)</a>)
+is then <span class="math display">\[\hat{\sigma}_{\hat{\Delta}}
+=
+\sqrt{
+0.322\times(1-0.322) \times \left(
+\frac{1}{929}+
+\frac{1}{921}
+\right)
+}
+=
+\sqrt{
+\frac{0.2182}{462.5}
+}=0.0217,\]</span> and the test statistic (<a href="c-probs.html#eq:ztestDpi">(5.23)</a>) is
+<span class="math display">\[z=\frac{0.085}{0.0217}=3.92.\]</span> For the confidence interval, the
+standard error of <span class="math inline">\(\hat{\Delta}\)</span> is estimated from (<a href="c-probs.html#eq:seDpi2">(5.24)</a>) as
+<span class="math display">\[\begin{aligned}
+\hat{\sigma}_{\hat{\Delta}} &amp;=&amp;
+\sqrt{
+\frac{0.364\times (1-0.364)}{929} +
+\frac{0.279\times (1-0.279)}{921}
+} \\
+&amp;=&amp;
+\sqrt{
+\frac{0.2315}{929}
++\frac{0.2012}{921}
+}=0.0216\end{aligned}\]</span> and a 95% confidence interval from (<a href="c-probs.html#eq:ciDpi">(5.25)</a>)
+is <span class="math display">\[0.085 \pm 1.96 \times 0.0216 = 0.085\pm 0.042 = (0.043; 0.127).\]</span>
+The <span class="math inline">\(P\)</span>-value for the test statistic is clearly very low (in fact about
+<span class="math inline">\(0.00009\)</span>), so the null hypothesis of equal proportions is convincingly
+rejected. There is very strong evidence that the probability that a
+respondent will give an answer indicating optimism for the future is
+different for the two differently worded questions. The confidence
+interval indicates that we are 95% confident that the proportion of
+optimistic answers is between 4.3 and 12.7 percentage points higher when
+the question is worded positively than when it is worded negatively.
+This suggests quite a substantial acquiescence bias arising from
+changing just one word in the survey question, as described in the
+introduction to Example 5.4 at the beginning of this chapter.</p>
+<p>In Example 5.3, the estimated difference is <span class="math inline">\(\hat{\Delta}=-0.000422\)</span>
+(see Table <a href="c-probs.html#tab:t-probex">5.1</a>, i.e. 422 fewer
+polio cases per million children in the vaccinated group than in the
+unvaccinated group. Similar calculations as above show that the value of
+the test statistic is <span class="math inline">\(z=-6.01\)</span>, so the <span class="math inline">\(P\)</span>-value is again very small
+(in fact about 0.000000001) and the null hypothesis of equal
+probabilities is strongly rejected. There is thus overwhelming evidence
+that the proportion of polio cases was different among the vaccinated
+children than among the unvaccinated ones. The 95% confidence interval
+for the difference shows that we are 95% confident that this difference
+was a reduction of between 284 and 560 polio cases per million
+children.<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> This was acknowledged as a convincing demonstration that
+the Salk vaccine worked (see Figure <a href="c-probs.html#fig:f-nytimes">5.2</a>), and it (and later
+other types of polio vaccination) was soon put to widespread use. The
+resulting dramatic decline in the incidence of polio is one of the great
+success stories of modern medicine. Compared to the 199 children with
+polio in 1954 among the less than half a million participants of the
+vaccine trial alone, in 2014 there were 414 confirmed cases of polio in
+the whole world (see
+<a href="http://www.polioeradication.org/Dataandmonitoring/Poliothisweek.aspx" class="uri">http://www.polioeradication.org/Dataandmonitoring/Poliothisweek.aspx</a>). There
+is hope that that number will reach 0 in a not-too-distant future, so
+that the once devastating disease will one day be entirely eradicated.</p>
+<div class="figure"><span style="display:block;" id="fig:f-nytimes"></span>
+<img src="salk_nytimes.png" alt="Public reaction to statistical inference." style="width:150mm" />
+<p class="caption">Figure 5.2: Public reaction to statistical inference.</p>
+</div>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="18">
+<li id="fn18"><p>This example is based on a newspaper report of a real poll for
+which the percentages were reported only as 47, 27, and 26 out of
+“about 700” respondents. The exact numbers used here for
+illustration have been made up to correspond to these real results.<a href="c-probs.html#fnref18" class="footnote-back">↩</a></p></li>
+<li id="fn19"><p>The Pennsylvania Supreme Court Committee on racial and gender bias
+in the justice system; the example used here is from the survey by
+J. F. Kairns published as part of the final report of the committee
+(March 2003).<a href="c-probs.html#fnref19" class="footnote-back">↩</a></p></li>
+<li id="fn20"><p>The data used here are from the official evaluation of the trials
+in Francis, T. et al. (1955). “An evaluation of the 1954
+poliomyelitits vaccine trials: summary report”. <em>American Journal of
+Public Health</em>, <strong>45</strong>, 1–50. For some background information about
+the trials, see Meldrum, M. (1998), “ ‘A calculated risk’: the Salk
+polio vaccine field trials of 1954”. <em>British Medical Journal</em>,
+<strong>317</strong>, 1233–1236.<a href="c-probs.html#fnref20" class="footnote-back">↩</a></p></li>
+<li id="fn21"><p>Javeline, D. (1999). “Response effects in polite cultures: A test
+of acquiescence in Kazakhstan”. <em>Public Opinion Quarterly</em>, <strong>63</strong>,
+1–28.<a href="c-probs.html#fnref21" class="footnote-back">↩</a></p></li>
+<li id="fn22"><p>In this context the letter does <em>not</em> refer to the mathematical
+constant <span class="math inline">\(\pi=3.14159\dots\)</span>, for which the same symbol is also used.<a href="c-probs.html#fnref22" class="footnote-back">↩</a></p></li>
+<li id="fn23"><p>Note that incidence was not zero even in the vaccinated group,
+because the Salk vaccine — like most vaccines — is not 100%
+effective. Despite this, it is possible for a broad enough
+vaccination programme to eliminate a disease completely, by
+depriving it the chance to spread and conferring so-called herd
+immunity for the whole population. Conversely, if vaccination rates
+drop too low, herd immunity is removed and the disease may reappear
+at a higher rate than implied by the reduction in vaccination alone.<a href="c-probs.html#fnref23" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="c-tables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="c-contd.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/LSE-Methodology/MY464/edit/master/05-MY464-probs.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Coursepack-MY464.pdf", "Coursepack-MY464.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
