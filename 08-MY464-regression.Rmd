@@ -1059,14 +1059,15 @@ limited to the range of values of $X$ actually observed in the data, and
 extrapolation beyond these values should be avoided.
 
 The most common estimate of the remaining parameter of the model, the
-residual standard deviation $\sigma$, is \begin{equation}
+residual standard deviation $\sigma$, is
+\begin{equation}
 \hat{\sigma}=\sqrt{\frac{\sum \left ( Y_{i}-\hat{Y}_{i}\right ) ^{2}}{n- \left ( k+1 \right )}}=\sqrt{\frac{SSE}{n- \left ( k+1 \right )}}
-(\#eq:sigma-linreg)
+(\#eq:sigmalinreg)
 \end{equation}
 where $k$ is here set equal to 1. This bears an
 obvious resemblance to the formula for the basic sample standard
 deviation, shown for $Y_{i}$ in (\@ref(eq:sdyx)). One difference to that
-formula is that the denominator of (\@ref(eq:sigma-linreg)) is shown as
+formula is that the denominator of (\@ref(eq:sigmalinreg)) is shown as
 $n-(k+1)$ rather than $n-1$. Here $k=1$ is the number of explanatory
 variables in the model, and $k+1=2$ is the number of regression
 coefficients ($\alpha$ and $\beta$) including the constant term
