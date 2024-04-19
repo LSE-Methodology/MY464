@@ -33,3 +33,384 @@ Section \@ref(s-regression-dummies).
 
 The following example will be used for illustration throughout this
 chapter:
+
+**Example 8.1: Indicators of Global Civil Society**
+
+The *Global Civil Society 2004/5* yearbook gives tables of a range of
+characteristics of the countries of the world.^[Anheier, H., Glasius, M. and Kaldor, M. (eds.) (2005). *Global
+Civil Society 2004/5*. London: Sage. The book gives detailed
+references to the indices considered here. Many thanks to Sally
+Stares for providing the data in an electronic form.] The following
+measures will be considered in this chapter:
+
+-   Gross Domestic Product (**GDP**) per capita in 2001 (in current
+    international dollars, adjusted for purchasing power parity)
+
+-   **Income level** of the country in three groups used by the
+    Yearbook, as Low income, Middle income or High income
+
+-   **Income inequality** measured by the Gini index (with 0
+    representing perfect equality and 100 perfect inequality)
+
+-   A measure of **political rights and civil liberties** in 2004,
+    obtained as the average of two indices for these characteristics
+    produced by the Freedom House organisation (1 to 7, with higher
+    values indicating more rights and liberties)
+
+-   World Bank Institute’s measure of control of **corruption** for 2002
+    (with high values indicating low levels of corruption)
+
+-   Net **primary school enrolment** ratio 2000-01 (%)
+
+-   **Infant mortality rate** 2001 (% of live births)
+
+We will discuss various associations between these variables. It should
+be noted that the analyses are mainly illustrative examples, and the
+choices of explanatory and response variables do not imply any strong
+claims about causal connections between them. Also, the fact that
+different measures refer to slightly different years is ignored; in
+effect, we treat each variable as a measure of “recent” situation in the
+countries. The full data set used here includes 165 countries. Many of
+the variables are not available for all of them, so most of the analyses
+below use a smaller number of countries.
+
+## Describing association between two continuous variables {#s-regression-descr}
+
+### Introduction {#ss-regression-descr-intro}
+
+Suppose for now that we are considering data on two continuous
+variables. The descriptive techniques discussed in this section do not
+strictly speaking require a distinction between an explanatory variable
+and a response variable, but it is nevertheless useful in many if not
+most applications. We will reflect this in the notation by denoting the
+variables $X$ (for the explanatory variable) and $Y$ (for the response
+variable). The observed data consist of the pairs of observations
+$(X_{1}, Y_{1}), (X_{2}, Y_{2}), \dots, (X_{n}, Y_{n})$ of $X$ and $Y$
+for each of the $n$ subjects in a sample, or, with more concise
+notation, $(X_{i}, Y_{i})$ for $i=1,2,\dots,n$.
+
+We are interested in analysing the association between $X$ and $Y$.
+Methods for *describing* this association in the sample are first
+described in this section, initially with some standard graphical
+methods in Section \@ref(ss-regression-descr-plots). This leads to a
+discussion in Section \@ref(ss-regression-descr-assoc) of what we
+actually mean by associations in this context, and then to a definion of
+numerical summary measures for such associations in Section
+\@ref(ss-regression-descr-corr). Statistical *inference* for the
+associations will be considered in Section \@ref(s-regression-simple).
+
+### Graphical methods {#ss-regression-descr-plots}
+
+#### Scatterplots {-}
+
+The standard statistical graphic for summarising the association between
+two continuous variables is a **scatterplot**. An example of it is given
+in Figure \@ref(fig:f-corruption1), which shows a scatterplot of Control of
+corruption against GDP per capita for 61 countries for which the
+corruption variable is at least 60 (the motivation of this restriction
+will be discussed later). The two axes of the plot show possible values
+of the two variables. The horizontal axis, here corresponding to Control
+of corruption, is conventionally used for the explanatory variable $X$,
+and is often referred to as the **X-axis**. The vertical axis, here used
+for GDP per capita, then corresponds to the response variable $Y$, and
+is known as the **Y-axis**.
+
+![(\#fig:f-corruption1)A scatterplot of Control of corruption vs. GDP per capita in the Global Civil Society data set, for 61 countries with Control of corruption at least 60. The dotted lines are drawn to the point corresponding to the United Kingdom.](corruption1){width="13.5cm"}
+
+The observed data are shown as points in the scatterplot, one for each
+of the $n$ units. The location of each point is determined by its values
+of $X$ and $Y$. For example, Figure \@ref(fig:f-corruption1) highlights the
+observation for the United Kingdom, for which the corruption measure
+($X$) is 94.3 and GDP per capita ($Y$) is \$24160. The point for UK is
+thus placed at the intersection of a vertical line drawn from 94.3 on
+the $X$-axis and a horizontal line from 24160 on the $Y$-axis, as shown
+in the plot.
+
+The principles of good graphical presentation on clear labelling,
+avoidance of spurious decoration and so on (c.f. Section
+\@ref(s-descr1-presentation)) are the same for scatterplots as for any
+statistical graphics. Because the crucial visual information in a
+scatterplot is the shape of the cloud of the points, it is now often not
+necessary for the scales of the axes to begin at zero, especially if
+this is well outside the ranges of the observed values of the variables
+(as it is for the $X$-axis of Figure \@ref(fig:f-corruption1)). Instead, the
+scales are typically selected so that the points cover most of the
+plotting surface. This is done by statistical software, but there are
+many situations were it is advisable to overrule the automatic selection
+(e.g. for making scatterplots of the same variables in two different
+samples directly comparable).
+
+The main purpose of a scatterplot is to examine possible associations
+between $X$ and $Y$. Loosely speaking, this means considering the shape
+and orientation of the cloud of points in the graph. In Figure
+\@ref(fig:f-corruption1), for example, it seems that most of the points are
+in a cluster sloping from lower left to upper right. This indicates that
+countries with low levels of Control of corruption (i.e. high levels of
+corruption itself) tend to have low GDP per capita, and those with
+little corruption tend to have high levels of GDP. A more careful
+discussion of such associations again relates them to the formal
+definition in terms of conditional distributions, and also provides a
+basis for the methods of inference introduced later in this chapter. We
+will resume the discussion of these issues in Section
+\@ref(ss-regression-descr-assoc) below. Before that, however, we will
+digress briefly from the main thrust of this chapter in order to
+describe a slightly different kind of scatterplot.
+
+#### Line plots for time series {-}
+
+A very common special case of a scatterplot is one where the
+observations correspond to measurements of a variable for the same unit
+at several occasions over time. This is illustrated by the following
+example (another one is Figure \@ref(fig:f-houseprices)):
+
+*Example: Changes in temperature, 1903–2004*
+
+Figure \@ref(fig:f-temperatures) summarises data on average annual
+temperatures over the past century in five locations. The data were
+obtained from the GISS Surface Temperature (GISTEMP) database maintained
+by the NASA Goddard Institute for Space Studies.^[Accessible at `data.giss.nasa.gov/gistemp/`. The temperatures used
+here are those listed in the data base under “after combining
+sources at same location”.] The database
+contains time series of average monthly surface temperatures from
+several hundred meterological stations across the world. The five sites
+considered here are Haparanda in Northern Sweden, Independence, Kansas
+in the USA, Choshi on the east coast of Japan, Kimberley in South
+Africa, and the Base Orcadas Station on Laurie Island, off the coast of
+Antarctica. These were chosen rather haphazardly for this illustration,
+with the aim of obtaining a geographically scattered set of rural or
+small urban locations (to avoid issues with the heating effects of large
+urban areas). The temperature for each year at each location is here
+recorded as the difference from the temperature at that location in
+1903.^[More specifically, the differences are between 11-year *moving
+averages*, where each year is represented by the average of the
+temperature for that year and the five years before and five after
+it (except at the ends of the series, where fewer observations are
+used). This is done to smooth out short-term fluctuations from the
+data, so that longer-term trends become more clearly visible.]
+
+![(\#fig:f-temperatures)Changes of average annual temperature (11-year moving averages) from 1903 in five locations. See the text for further details. Source: The GISTEMP database <data.giss.nasa.gov/gistemp/>](temperplot){width="13cm"}
+
+
+Consider first the data for Haparanda only. Here we have two variables,
+year and temperature, and 102 pairs of observations of them, one for
+each year between 1903 and 2004. These pairs could now be plotted in a
+scatterplot as described above. Here, however, we can go further to
+enhance the visual effect of the plot. This is because the observations
+represent measurements of a variable (temperature difference) for the
+same unit (the town of Haparanda) at several successive times (years).
+These 102 measurements form a *time series* of temperature differences
+for Haparanda over 1903–2004. A standard graphical trick for such series
+is to connect the points for successive times by lines, making it easy
+for the eye to follow the changes over time in the variable on the
+$Y$-axis. In Figure \@ref(fig:f-temperatures) this is done for Haparanda
+using a solid line. Note that doing this would make no sense for scatter
+plots like the one in Figure \@ref(fig:f-corruption1), because all the points
+there represent different subjects, in that case countries.
+
+We can easily include several such series in the same graph. In Figure
+\@ref(fig:f-temperatures) this is done by plotting the temperature
+differences for each of the five locations using different line styles.
+The graph now summarises data on three variables, year, temperature and
+location. We can then examine changes over time for any one location,
+but also compare patterns of changes between them. Here there is clearly
+much variation within and between locations, but also some common
+features. Most importantly, the temperatures have all increased over the
+past century. In all five locations the average annual temperatures at
+the end of the period were around 1–2$^{\circ}$C higher than in 1903.
+
+A set of time series like this is an example of dependent data in the
+sense discussed in Section \@ref(s-means-dependent). There we considered
+cases with pairs of observations, where the two observations in each
+pair had to be treated as statistically dependent. Here all of the
+temperature measurements for one location are dependent, probably with
+strongest dependence between adjacent years and less dependence between
+ones further apart. This means that we will not be able to analyse these
+data with the methods described later in this chapter, because these
+assume statistically independent observations. Methods of statistical
+modelling and inference for dependent data of the kind illustrated by
+the temperature example are beyond the scope of this course. This,
+however, does not prevent us from using a plot like Figure
+\@ref(fig:f-temperatures) to *describe* such data.
+
+### Linear associations {#ss-regression-descr-assoc}
+
+Consider again statistically independent observations of $(X_{i},
+Y_{i})$, such as those displayed in Figure \@ref(fig:f-corruption1). Recall
+the definition that two variables are associated if the conditional
+distribution of $Y$ given $X$ is different for different values of $X$.
+In the two-sample examples of Chapter \@ref(c-means) this could be
+examined by comparing two conditional distributions, since $X$ had only
+two possible values. Now, however, $X$ has many (in principle,
+infinitely many) possible values, so we will need to somehow define and
+compare conditional distributions given each of them. We will begin with
+a rather informal discussion of how this might be done. This will lead
+directly to a more precise and formal definition introduced in Section
+\@ref(s-regression-simple).
+
+![(\#fig:f-corruption2)The same scatterplot of Control of corruption vs. GDP per capita as in Figure \@ref(fig:f-corruption1), augmented by the best-fitting (least squares) straight line (solid line) and reference lines for two example values of Control of corruption (dotted lines).](corruption2){width="13.5cm"}
+
+Figure \@ref(fig:f-corruption2) shows the same scatterplot as Figure
+\@ref(fig:f-corruption1). Consider first one value of $X$ (Control of
+corruption), say 65. To get a rough idea of the conditional distribution
+of $Y$ (GDP per capita) given this value of $X$, we could examine the
+sample distribution of the values of $Y$ for the units for which the
+value of $X$ is close to 65. These correspond to the points near the
+vertical line drawn at $X=65$ in Figure \@ref(fig:f-corruption2). This can be
+repeated for any value of $X$; for example, Figure \@ref(fig:f-corruption2)
+also includes a vertical reference line at $X=95$, for examining the
+conditional distribution of $Y$ given $X=95$.^[This discussion is obviously rather approximate. Strictly
+speaking, the conditional distribution of $Y$ given, say, $X=65$
+refers only to units with $X$ exactly rather than approximately
+equal to 65. This, however, is difficult to illustrate using a
+sample, because most values of a continuous $X$ appear at most once
+in a sample. For reasons discussed later in this chapter, the
+present approximate treatment still provides a reasonable general
+idea of the nature of the kinds of associations considered here.]
+
+As in Chapter \@ref(c-means), associations between variables will here be
+considered almost solely in terms of differences in the *means* of the
+conditional distributions of $Y$ at different values of $X$. For
+example, Figure \@ref(fig:f-corruption2) suggests that the conditional mean
+of $Y$ when X is 65 is around or just under 10000. At $X=95$, on the
+other hand, the conditional mean seems to be between 20000 and 25000.
+The mean of $Y$ is thus higher at the larger value of X. More generally,
+this finding is consistent across the scatterplot, in that the
+conditional mean of $Y$ appears to increase when we consider
+increasingly large values of $X$, indicating that higher levels of
+Control of corruption are associated with higher average levels of GDP.
+This is often expressed by saying that the conditional mean of $Y$
+increases when we “increase” $X$.^[This wording is commonly used for convenience even in cases where
+the nature of $X$ is such that its values can never actually be
+manipulated.] This is the sense in which we will
+examine associations between continuous variables: does the conditional
+mean of $Y$ change (increase or decrease) when we increase $X$? If it
+does, the two variables are associated; if it does not, there is no
+association of this kind. This definition also agrees with the one
+linking association with prediction: if the mean of $Y$ is different for
+different values of $X$, knowing the value of $X$ will clearly help us
+in making predictions about likely values of $Y$. Based on the
+information in Figure \@ref(fig:f-corruption2), for example, our best guesses
+of the GDPs of two countries would clearly be different if we were told
+that the control of corruption measure was 65 for one country and 95 for
+the other.
+
+The *nature* of the association between $X$ and $Y$ is characterised by
+*how* the values of $Y$ change when $X$ increases. First, it is almost
+always reasonable to conceive these changes as reasonably smooth and
+gradual. In other words, if two values of $X$ are close to each other,
+the conditional means of $Y$ will be similar too; for example, if the
+mean of $Y$ is 5 when $X=10$, its mean when $X=10.01$ is likely to be
+quite close to 5 rather than, say, 405. In technical terms, this means
+that the conditional mean of $Y$ will be described by a smooth
+mathematical function of $X$. Graphically, the means of $Y$ as $X$
+increases will then trace a smooth curve in the scatterplot. The
+simplest possibility for such a curve is a straight line. This
+possibility is illustrated by plot (a) of Figure \@ref(fig:f-scatterplots)
+(this and the other five plots in the figure display artificial data,
+generated for this illustration). Here all of the points fall on a line,
+so that when $X$ increases, the values of $Y$ increase at a constant
+rate. A relationship like this is known as a **linear association**
+between $X$ and $Y$. Linear associations are the starting point for
+examining associations between continuous variables, and often the only
+ones considered. In this chapter we too will focus almost completely on
+them.
+
+![(\#fig:f-scatterplots)Scatterplots of artificial data sets of two variables. Each plot also shows the best-fitting (least squares) straight line and the correlation coefficient $r$.](scatterplots){width="13.5cm"}
+
+In plot (a) of Figure \@ref(fig:f-scatterplots) all the points are exactly on
+the straight line. This indicates a *perfect* linear association, where
+$Y$ can be predicted exactly if $X$ is known, so that the association is
+*deterministic*. Such a situation is neither realistic in practice, nor
+necessary for the association to be described as linear. All that is
+required for the latter is that the conditional *means* of $Y$ given
+different values of $X$ fall (approximately) on a straight line. This is
+illustrated by plot (b) of Figure \@ref(fig:f-scatterplots), which shows a
+scatterplot of individual observations together with an approximation of
+the line of the means of $Y$ given $X$ (how the line was drawn will be
+explained later). Here the linear association is not perfect, as the
+individual points are not all on the same line but scattered around it.
+Nevertheless, the line seems to capture an important systematic feature
+of the data, which is that the *average* values of $Y$ increase at an
+approximately constant rate as $X$ increases. This combination of
+systematic and random elements is characteristic of all statistical
+associations, and it is also central to the formal setting for
+statistical inference for linear associations described in Section
+\@ref(s-regression-simple) below.
+
+The **direction** of a linear association can be either **positive** or
+**negative**. Plots (a) and (b) of Figure \@ref(fig:f-scatterplots) show a
+positive association, because increasing $X$ is associated with
+increasing average values of $Y$. This is indicated by the upward slope
+of the line describing the association. Plot (c) shows an example of a
+negative association, where the line slopes downwards and increasing
+values of $X$ are associated with decreasing values of $Y$. The third
+possibility, illustrated by plot (d), is that the line slopes neither up
+nor down, so that the mean of $Y$ is the same for all values of $X$. In
+this case there is no (linear) association between the variables.
+
+Not all associations between continuous variables are linear, as shown
+by the remaining two plots of Figure \@ref(fig:f-scatterplots). These
+illustrate two kinds of **nonlinear** associations. In plot (e), the
+association is still clearly *monotonic*, meaning that average values of
+$Y$ change in the same direction — here increase — when $X$ increases.
+The rate of this increase, however, is not constant, as indicated by the
+slightly curved shape of the cloud of points. The values of $Y$ seem to
+increase faster for small values of $X$ than for large ones. A straight
+line drawn through the scatterplot captures the general direction of the
+increase, but misses its nonlinearity. One practical example of such a
+relationship is the one between years of job experience and salary: it
+is often found that salary increases fastest early on in a person’s
+career and more slowly later on.
+
+Plot (f) shows a nonlinear and nonmonotonic relationship: as $X$
+increases, average values of $Y$ first decrease to a minimum, and then
+increase again, resulting in a U-shaped scatterplot. A straight line is
+clearly an entirely inadequate description of such a relationship. A
+nonmonotonic association of this kind might be seen, for example, when
+considering the dependence of the failure rates of some electrical
+components ($Y$) on their age ($X$). It might then be that the failure
+rates were high early (from quick failures of flawed components) and
+late on (from inevitable wear and tear) and lowest in between for
+“middle-aged but healthy” components.
+
+![(\#fig:f-corruption3)A scatterplot of Control of corruption vs. GDP per capita for 163 countries in the Global Civil Society data set. The solid line is the best-fitting (least squares) straight line for the points.](corruption3){width="13.5cm"}
+
+Returning to real data, recall that we have so far considered control of
+corruption and GDP per capita only among countries with a Control of
+corruption score of at least 60. The scatterplot for these, shown in
+Figure \@ref(fig:f-corruption2), also includes a best-fitting straight line.
+The observed relationship is clearly positive, and seems to be fairly
+well described by a straight line. For countries with relatively low
+levels of corruption, the association between control of corruption and
+GDP can be reasonably well characterised as linear.
+
+Consider now the set of all countries, including also those with high
+levels of corruption (scores of less than 60). In a scatterplot for
+them, shown in Figure \@ref(fig:f-corruption3), the points with at least 60
+on the $X$-axis are the same as those in Figure \@ref(fig:f-corruption2), and
+the new points are to the left of them. The plot now shows a nonlinear
+relationship comparable to the one in plot (e) of Figure
+\@ref(fig:f-scatterplots). The linear relationship which was a good
+description for the countries considered above is thus not adequate for
+the full set of countries. Instead, it seems that the association is
+much weaker for the countries with high levels of corruption,
+essentially all of which have fairly low values of GDP per capita. The
+straight line fitted to the plot identifies the overall positive
+association, but cannot describe its nonlinearity. This example further
+illustrates how scatterplots can be used to examine relationships
+between variables and to assess whether they can be best described as
+linear or nonlinear associations.^[In this particular example, a more closely linear association is
+obtained by considering the logarithm of GDP as the response
+variable instead of GDP itself. This approach, which is common in
+dealing with skewed variables such as income, is, however, beyond
+the scope of this course.]
+
+So far we have said nothing about how the exact location and direction
+of the straight lines shown in the figures have been selected. These are
+determined so that the fitted line is in a certain sense the best
+possible one for describing the data in the scatterplot. Because the
+calculations needed for this are also (and more importantly) used in the
+context of statistical inference for such data, we will postpone a
+description of them until Section \@ref(ss-regression-simple-est). For
+now we can treat the line simply as a visual summary of the linear
+association in a scatterplot.
