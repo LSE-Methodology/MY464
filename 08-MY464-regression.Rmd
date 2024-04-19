@@ -1028,11 +1028,7 @@ candidate values for $\hat{\alpha}$ and $\hat{\beta}$ lead to different
 values of $\hat{Y}_{i}$ and thus of $SSE$. The final estimates are the
 ones which give the smallest value of $SSE$. Their formulas are
 \begin{equation}
-\hat{\beta}=
-\frac{
-\sum (X_{i}-\bar{X})(Y_{i}-\bar{Y})}
-{\sum (X_{i}-\bar{X})^{2}}
-=\frac{s_{xy}}{s_{x}^{2}}
+\hat{\beta}=\frac{\sum (X_{i}-\bar{X})(Y_{i}-\bar{Y})}{\sum (X_{i}-\bar{X})^{2}}=\frac{s_{xy}}{s_{x}^{2}}
 (\#eq:ols-b)
 \end{equation}
 and \begin{equation}
@@ -1256,7 +1252,7 @@ population which is parallel to the $X$-axis (see plot (d) of Figure
 \@ref(fig:f-scatterplots) for an illustration of such a line in a sample).
 The hypothesis (\@ref(eq:H0betasimple)) can thus be expressed in words as
 \begin{equation}
-H_{0}:\; \text{\emph{There is no linear association between }}X \text{\emph{and }}Y\text{ \emph{in the population}}.
+H_{0}:\; \text{\emph{There is no linear association between }} X \text{\emph{and }} Y \text{ \emph{in the population}}.
 (\#eq:H0betasimple2)
 \end{equation}
 Tests of this are usually carried out against a two-sided alternative hypothesis $H_{a}: \; \beta\ne 0$, and we will also concentrate on this case.
