@@ -441,18 +441,4 @@ s_{x} = \sqrt{\frac{\sum(X_{i}-\bar{X})^{2}}{n-1}} \text{and} s_{y} = \sqrt{\fra
 \end{equation} where the subscripts $x$ and $y$ identify the two
 variables, and $\bar{X}$ and $\bar{Y}$ are their sample means. A new
 statistic is the **sample covariance** between $X$ and $Y$, defined as
-\begin{equation}
-s_{xy} = \frac{\sum (X_{i}-\bar{X})(Y_{i}-\bar{Y})}{n-1}.
-(\#eq:sxy)
-\end{equation} This is a measure of linear association between $X$ and
-$Y$. It is positive if the sample association is positive and negative
-if the association is negative.
 
-In theoretical statistics, covariance is the fundamental summary of
-sample and population associations between two continuous variables. For
-descriptive purposes, however, it has the inconvenient feature that its
-magnitude depends on the units in which $X$ and $Y$ are measured. This
-makes it difficult to judge whether a value of the covariance for
-particular variables should be regarded as large or small. To remove
-this complication, we can standardise the sample covariance by dividing
-it by the standard deviations, to obtain the statistic
