@@ -1,0 +1,35 @@
+# Linear regression models {#c-regression}
+
+## Introduction {#s-regression-intro}
+
+This chapter continues the theme of analysing statistical associations
+between variables. The methods described here are appropriate when the
+response variable $Y$ is a continuous, interval level variable. We will
+begin by considering bivariate situations where the only explanatory
+variable $X$ is also a continuous variable. Section
+\@ref(s-regression-descr) first discusses graphical and numerical
+descriptive techniques for this case, focusing on two very commonly used
+tools: a *scatterplot* of two variables, and a measure of association
+known as the *correlation* coefficient. Section
+\@ref(s-regression-simple) then describes methods of statistical
+inference for associations between two continuous variables. This is
+done in the context of a statistical model known as the *simple linear
+regression model*.
+
+The ideas of simple linear regression modelling can be extended to a
+much more general and powerful set methods known as *multiple linear
+regression models*. These can have several explanatory variables, which
+makes it possible to examine associations between any explanatory
+variable and the response variable, while controlling for other
+explanatory variables. An important reason for the usefulness of these
+models is that they play a key role in statistical analyses which
+correspond to research questions that are causal in nature. As an
+interlude, we discuss issues of causality in research design and
+analysis briefly in Section \@ref(s-regression-causality). Multiple
+linear models are then introduced in Section
+\@ref(s-regression-multiple). The models can also include categorical
+explanatory variables with any number of categories, as explained in
+Section \@ref(s-regression-dummies).
+
+The following example will be used for illustration throughout this
+chapter:
