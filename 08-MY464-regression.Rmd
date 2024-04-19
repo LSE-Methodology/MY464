@@ -436,7 +436,5 @@ we treat one or the other of them as explanatory for the other. First,
 recall from equation of standard deviation towards the end of Section \@ref(ss-descr1-nums-variation) that the sample standard deviations of
 the two variables are calculated as
 \begin{equation}
-s_{x} = \sqrt{\frac{\sum(X_{i}-\bar{X})^{2}}{n-1}}
-\text{and}
-s_{y} = \sqrt{\frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}}
-\end{equation} 
+s_{x} = \sqrt{\frac{\sum(X_{i}-\bar{X})^{2}}{n-1}} \text{and} s_{y} = \sqrt{\frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}}
+\end{equation}
