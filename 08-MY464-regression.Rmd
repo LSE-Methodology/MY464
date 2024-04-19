@@ -457,15 +457,7 @@ particular variables should be regarded as large or small. To remove
 this complication, we can standardise the sample covariance by dividing
 it by the standard deviations, to obtain the statistic
 \begin{equation}
-r=\frac{s_{xy}}{s_{x}s_{y}} =
-\frac
-{
-\sum (X_{i}-\bar{X})(Y_{i}-\bar{Y})
-}{
-\sqrt{
-\sum\left(X_{i}-\bar{X}\right)^{2}
-\sum\left(Y_{i}-\bar{Y}\right)^{2}}
-}.
+r=\frac{s_{xy}}{s_{x}s_{y}} = \frac{\sum (X_{i}-\bar{X})(Y_{i}-\bar{Y})}{\sqrt{\sum\left(X_{i}-\bar{X}\right)^{2} \sum\left(Y_{i}-\bar{Y}\right)^{2}}}.
 (\#eq:corr)
 \end{equation} This is the (sample) **correlation** coefficient, or
 correlation for short, between $X$ and $Y$. It is also often (e.g. in
