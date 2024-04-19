@@ -438,7 +438,8 @@ the two variables are calculated as
 \begin{equation}
 s_{x} = \sqrt{\frac{\sum(X_{i}-\bar{X})^{2}}{n-1}} \text{and} s_{y} = \sqrt{\frac{\sum (Y_{i}-\bar{Y})^{2}}{n-1}}
 (\#eq:sdyx)
-\end{equation} where the subscripts $x$ and $y$ identify the two
+\end{equation}
+where the subscripts $x$ and $y$ identify the two
 variables, and $\bar{X}$ and $\bar{Y}$ are their sample means. A new
 statistic is the **sample covariance** between $X$ and $Y$, defined as
 
